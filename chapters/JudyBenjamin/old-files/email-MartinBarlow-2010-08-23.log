@@ -1,0 +1,162 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2010.5.11)  23 AUG 2010 09:46
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**email-MartinBarlow-2010-08-23.tex
+(./email-MartinBarlow-2010-08-23.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, croatian, bulgarian, ukrainian, russian, czech, slovak, danish, dut
+ch, finnish, french, basque, ngerman, german, german-x-2009-06-19, ngerman-x-20
+09-06-19, ibycus, monogreek, greek, ancientgreek, hungarian, italian, latin, mo
+ngolian2a, mongolian, bokmal, nynorsk, romanian, irish, coptic, serbian, turkis
+h, welsh, esperanto, uppersorbian, estonian, indonesian, interlingua, icelandic
+, kurmanji, slovenian, polish, portuguese, spanish, galician, catalan, swedish,
+ loaded.
+(/usr/share/texmf-texlive/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/size11.clo
+File: size11.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf-texlive/tex/latex/natbib/natbib.sty
+Package: natbib 2009/07/16 8.31 (PWD, AO)
+\bibhang=\skip43
+\bibsep=\skip44
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count87
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2009/06/22 v3.00 Basic AMSFonts support
+\@emptytoks=\toks14
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 96.
+)
+(/usr/share/texmf-texlive/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2009/06/22 v3.00
+)
+(./email-MartinBarlow-2010-08-23.aux)
+\openout1 = `email-MartinBarlow-2010-08-23.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Try loading font information for U+msa on input line 47.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2009/06/22 v3.00 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 47.
+
+(/usr/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2009/06/22 v3.00 AMS symbols B
+) [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2] (./email-MartinBarlow-
+2010-08-23.bbl
+Underfull \hbox (badness 1983) in paragraph at lines 27--33
+[]\OT1/cmr/m/n/10.95 G. Chaitin.  Information-theoretic com-pu-ta-tion com-plex
+-ity.  \OT1/cmr/m/it/10.95 In-for-
+ []
+
+
+Underfull \hbox (badness 1490) in paragraph at lines 27--33
+\OT1/cmr/m/it/10.95 ma-tion The-ory, IEEE Trans-ac-tions on\OT1/cmr/m/n/10.95 ,
+ 20(1):10--15, 1974.  URL
+ []
+
+
+Underfull \hbox (badness 4647) in paragraph at lines 35--41
+[]\OT1/cmr/m/n/10.95 B. S. Clarke and A. R. Bar-ron.  Information-theoretic asy
+mp-
+ []
+
+
+Underfull \hbox (badness 3701) in paragraph at lines 35--41
+\OT1/cmr/m/n/10.95 totics of bayes meth-ods.  \OT1/cmr/m/it/10.95 In-for-ma-tio
+n The-ory, IEEE Trans-ac-
+ []
+
+
+Underfull \hbox (badness 2980) in paragraph at lines 35--41
+\OT1/cmr/m/it/10.95 tions on\OT1/cmr/m/n/10.95 , 36(3):453--471, 1990.  doi: 10
+.1109/18.54897.  URL
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 80--86
+[]\OT1/cmr/m/n/10.95 A. Kol-mogorov.  Log-i-cal ba-sis for in-for-ma-tion the-o
+ry
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--86
+\OT1/cmr/m/n/10.95 and prob-a-bil-ity the-ory.  \OT1/cmr/m/it/10.95 In-for-ma-t
+ion The-ory, IEEE
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 80--86
+\OT1/cmr/m/it/10.95 Trans-ac-tions on\OT1/cmr/m/n/10.95 , 14(5):662--664, Jan-u
+ary 2003.  URL
+ []
+
+
+Underfull \hbox (badness 4391) in paragraph at lines 98--103
+[]\OT1/cmr/m/n/10.95 Timothy Williamson.  \OT1/cmr/m/it/10.95 Knowl-edge and it
+s lim-its\OT1/cmr/m/n/10.95 .  Ox-ford Uni-
+ []
+
+
+Underfull \hbox (badness 7326) in paragraph at lines 98--103
+\OT1/cmr/m/n/10.95 ver-sity Press, Ox-ford, 2000.  ISBN 9780198250432.  URL
+ []
+
+) [4] (./email-MartinBarlow-2010-08-23.aux) ) 
+Here is how much of TeX's memory you used:
+ 918 strings out of 493911
+ 10688 string characters out of 1155272
+ 58636 words of memory out of 3000000
+ 4228 multiletter control sequences out of 15000+50000
+ 9407 words of font info for 36 fonts, out of 3000000 for 9000
+ 706 hyphenation exceptions out of 8191
+ 24i,5n,32p,179b,215s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/ty
+pe1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/
+amsfonts/cm/cmex10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
+/cmmi10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
+</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-texlive/fonts/type1
+/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
+/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on email-MartinBarlow-2010-08-23.pdf (4 pages, 149447 bytes).
+PDF statistics:
+ 63 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

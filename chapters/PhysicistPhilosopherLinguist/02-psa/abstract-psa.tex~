@@ -1,0 +1,19 @@
+When we come to know a conditional, we cannot
+straightforwardly apply Jeffrey conditioning to gain an updated
+probability distribution. Carl Wagner has proposed a natural
+generalization of Jeffrey conditioning to accommodate this case
+(Wagner conditioning). The generalization rests on an ad hoc but
+plausible intuition (W). Wagner shows how the principle of maximum
+(M) entropy disagrees with intuition (W). This article presents a
+natural generalization of Wagner conditioning which is derived from
+(M) and implied by it. (M) does therefore not only not disagree with
+(W), it seamlessly and elegantly generalizes it (just as it
+generalizes standard conditioning and Jeffrey conditioning).
+Wagner's inconsistency result between (M) and (W) rests on Wagner's
+rejection of (L), the Laplacean Principle. The article explains (L)
+and why all advocates of (M) accept it. Therefore, Wagner only shows
+that one cannot hold (W) and (M) while rejecting (L). Since all
+advocates of (M) accept (L), (W) and (M) are consistent and,
+furthermore, (M) provides a much less ad hoc and much more
+integrated generalization of Jeffrey conditioning than Wagner
+conditioning.

@@ -1,0 +1,91 @@
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+\frenchspacing % no extra space at the end of a sentence
+
+% \setlength{\parskip}{.1in}
+% \raggedright
+\raggedbottom
+\setlength{\parindent}{.2in}
+
+% \pagestyle{empty}
+
+% 	PACKAGES
+\usepackage[small,bf]{caption}
+% \let\bcode\textbgreek
+% \usepackage[bgreek,english]{babel}
+\usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+\definecolor{lightgray}{gray}{0.9}
+% \usepackage{german}
+% \usepackage{hebtex}
+\usepackage{graphicx}
+% \usepackage[german]{babel}
+% \usepackage{endnotes}
+% \let\footnote=\endnote
+% \usepackage{rotating}
+\usepackage{enumerate}
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+
+% \newcommand{\kapt}[1]{\noindent \textbf{{\thechap}. #1}\addtocounter{chap}{1}}
+% \newcommand{\nootag}{}
+\newcommand{\tbd}[1]{}
+\newcommand{\nonsc}[1]{}
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+\newcommand{\erf}[0]{\mbox{erf}}
+\newcommand{\anum}[0]{a'}
+\newcommand{\bnum}[0]{b'}
+\newcommand{\cnum}[0]{c'}
+\newcommand{\hnum}[0]{h'}
+\newcommand{\knum}[0]{k'}
+\newcommand{\wnum}[0]{w'}
+\newcommand{\aden}[0]{a''}
+\newcommand{\bden}[0]{b''}
+\newcommand{\cden}[0]{c''}
+\newcommand{\hden}[0]{h''}
+\newcommand{\kden}[0]{k''}
+\newcommand{\wden}[0]{w''}
+\newcommand{\lwv}[0]{0.6}
+\newcommand{\qvu}[0]{\vartheta}
+
+\newif\ifNumericalOrYear
+\NumericalOrYeartrue
+\NumericalOrYearfalse
+\ifNumericalOrYear
+\usepackage[numbers,colon]{natbib}
+\else
+\usepackage[round,colon]{natbib}
+\fi
+\newif\ifPageP
+\PagePtrue
+\PagePfalse
+\ifPageP
+\newcommand{\PageP}{p.~}
+\else
+\newcommand{\PageP}{}
+\fi
+
+% \newcommand{\nias}{\noindent} % no indent after new section
+\newcommand{\nial}{\noindent} % no indent after equation, list, or whatever
+
+\newcommand{\scite}[3]{\ifnum#1=1\ifNumericalOrYear\citep{#2}\else\citeyearpar{#2}\fi\else
+\ifnum#1=2\ifNumericalOrYear\citep[#3]{#2}\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=4\ifNumericalOrYear\citet{#2}\else\citet{#2}\fi\else
+\ifnum#1=5\ifNumericalOrYear(\citet{#2})\else\citep{#2}\fi\else
+\ifnum#1=6\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=7\ifNumericalOrYear\citep{#2}\else\citealp{#2}\fi\else
+\ifnum#1=8\ifNumericalOrYear\citep[#3]{#2}\else\citealp[{\PageP}#3]{#2}\fi\else
+\ifnum#1=9\ifNumericalOrYear\citep[#3]{#2}\else{}loc.\ cit., {\PageP}#3\fi\else
+\textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
+% \newenvironment{quotex}{\begin{quote}\begin{footnotesize}\begin{singlespace}}{\end{singlespace}\end{footnotesize}\end{quote}}

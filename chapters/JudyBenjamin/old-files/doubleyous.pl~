@@ -1,0 +1,66 @@
+use Math::Cephes qw(:all);
+use Math::Trig;
+
+open(doubleyous,">./doubleyous.R");
+$tbeg=3;
+$tend=20;
+$tint=1;
+$sbeg=1;
+$send=1000;
+$sint=1;
+
+print doubleyous "xvals <- seq(from=$sbeg,to=$send,by=$sint)\n";
+for ($t=$tbeg;$t<=$tend;$t=$t+$tint)
+{
+print doubleyous "yvalsone$t <- c(";
+for ($s=$sbeg;$s<=$send;$s=$s+$sint)
+{
+    $n=$s*$t;
+    $wone=sqrt(2/$n)*($s+(.5*(1-$n)));
+    $expr1=(sqrt(2/(\pi*$n))*exp(-($wone**2)))/(1+erf($wone));
+print doubleyous "$wone";
+unless ($s==$send)
+{
+print doubleyous ",";
+}
+}
+print doubleyous ")\n";
+
+print doubleyous "yvalstwo$t <- c(";
+for ($s=$sbeg;$s<=$send;$s=$s+$sint)
+{
+    $n=$s*$t;
+    $wtwo=($n+1)/(n*sqrt(2));
+    $expr2=(sqrt(2/(\pi*$n))*exp(-($wtwo**2)))/(1+erf($wtwo));
+print doubleyous "$expr2";
+unless ($s==$send)
+{
+print doubleyous ",";
+}
+}
+print doubleyous ")\n";
+
+print doubleyous "yvalsthr$t <- c(";
+for ($s=$sbeg;$s<=$send;$s=$s+$sint)
+{
+    $n=$s*$t;
+    $wthr=((2*$n)+1)/(2*sqrt($n));
+    $expr3=(sqrt(1/(\pi*$n))*exp(-($wthr**2)))/(1+erf($wthr));
+print doubleyous "$expr3";
+unless ($s==$send)
+{
+print doubleyous ",";
+}
+}
+print doubleyous ")\n";
+}
+print doubleyous "plot(xvals,yvalsone$tend,type=\"n\",xlim=c($sbeg,$send))\n";
+for ($t=$tbeg;$t<=$tend;$t=$t+$tint)
+{
+print doubleyous "lines(xvals,yvalsone$t,xlab=\"s values (t=$tbeg,...,$tend)\",ylab=\"w values\",type=\"l\",col=\"$t\")\n";
+print doubleyous "lines(xvals,yvalstwo$t,xlab=\"s values (t=$tbeg,...,$tend)\",ylab=\"w values\",type=\"l\",col=\"$t\")\n";
+print doubleyous "lines(xvals,yvalsthr$t,xlab=\"s values (t=$tbeg,...,$tend)\",ylab=\"w values\",type=\"l\",col=\"$t\")\n";
+}
+print doubleyous "dev.print(device=pdf, \"doubleyous.pdf\", onefile=FALSE)\n";
+close(doubleyous);
+print "INFO: Now R the file doubleyous.R ...\n";

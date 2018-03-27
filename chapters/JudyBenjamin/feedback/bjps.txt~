@@ -1,0 +1,140 @@
+Referee: 1
+Comments to the Author
+
+MAXENT is a principle for updating probabilities on types of evidence that more standard update principles cannot handle. The Judy Benjamin problem is frequently cited as a reason for believing that MAXENT sometimes gives counterintuitive results. The author argues that, on closer inspection, the result in the JB case is not counterintuitive at all, but exactly as it should be.
+
+The paper is well written and also well informed. However, the author's argument for the claim that MAXENT gives the right result in the JB case is unconvincing. According to the author, the information that Judy receives may well be based on considerations that would make it unreasonable to assume that the conditions under which Adams conditioning applies are satisfied. The author gives three scenarios, on pages 8 and 9, which are supposed to buttress this claim. That any of these scenarios may underlie the message transferred to Judy creates a kind of uncertainty that MAXENT takes into consideration (page 17). But, first, if Judy considered these possibilities, she could simply update classically on a richer algebra of the type Halpern and various co-authors have studied. Second, there is nothing in the original story to suggest that Judy is, or should be, aware of such possibilities. And if she is not -- and need not be -- aware of them, then the intuition stands that by being informed that if she is in A, then it is n times as likely that she is in A&B as that she is in A¬-B, Judy does not obtain any information relevant to the question whether she is in A rather than in not-A, and so her probability for being in A should not change. Also note that if MAXENT really took into account the uncertainty on Judy's part about what might underlie the message she received, one would expect it to take into account the *degree* of that uncertainty. But obviously it is not able to do so.
+
+In addition, I should note that the intuition underlying T2 (on page 6) has been challenged in the literature -- in some of the papers the author refers to -- mostly on grounds having to do with the semantics of conditionals. The author has conveniently chosen to ignore these arguments.
+
+For these reasons, I recommend that this paper be rejected.
+
+Referee: 2
+Comments to the Author
+
+This paper gives a defense of the use of MaxEnt as a general tool in
+probability kinematics, based on showing that an intuitive approach to
+the Judy Benjamin (JB) problem is in line with the MaxEnt procedure.
+
+The paper is very well-written, but still I think that there are
+severe problems with this paper, so I have to recommend
+rejection. Let me explain why:
+
+You (i.e., the author(s)) nicely summarize the main contribution, a
+central claim and a central conclusion on page 4 of the paper:
+
+(A) MAIN CONTRIBUTION: You write `what is lacking in the literature is
+an explanation by MaxEnt advocates of the counterintuitive behaviour
+of MaxEnt in the cases (such as JB) repeatedly quoted by their
+adversaries' . You then go on to provide such an explanation, by
+showing that, under a reasonable scenario about how the message
+provided in the JB problem actually arises, the MaxEnt solution is
+actually quite intuitive.
+
+(B) CENTRAL CLAIM
+Further, you claim (right below the previous quotation) that `we are
+not dealing  with an array of counter-examples but only a handful, the
+JB problem being prime among them'.
+
+(C) CENTRAL CONCLUSION
+Finally, still on page 4, you conclude that there are not sufficient
+grounds for the eclecticism (for each separate problem, you might need
+a different updating method) advocated by Halpern in his book.
+
+I will now explain my problems with (A), (B) and (C).
+
+My problem with A is that there is nothing in the JB problem which
+says that your scenario (III in Section 3) is the `right' one (and of
+course, there is nothing in there either that says that scenarios I or
+II, which conflict with MaxEnt, are the right one). Thus, the only
+thing that would follow is that `MaxEnt should not be dismissed out of
+hand as a solution' - it is not a priori worse than the solutions for
+scenario I and II; more information would be needed to decide. So from
+your analysis it does not follow that MaxEnt is *superior* to other
+proposed solutions in the JB problem. It only follows that MaxEnt
+isn't necessarily worse than the others, because it also has nice,
+intuitive properties. But then, you're saying nothing new: it has been
+long known that MaxEnt has several nice properties for all problems in
+which the given constraints are convex, as they are in the JB
+problem. For example, (a) there is Jaynes' entropy concentration
+phenomenon, which Jaynes' himself used as the prime justification - I
+am quite surprised you don't mention this at all, it may in fact be
+the case that your powerset approach is simply an instance of this
+phenomenon - it is definitely related and a comparison should be
+given; (b) there is the the fact that the MaxEnt probabilities, when
+used to make predictions whose quality is measured by a logarithmic
+score functions, give you the minimax optimal decisions (this has been
+found, apparently independently, by at least three people: Topsoe
+(Information-theoretical optimization techniques, Kybernetica, 1979),
+Grunwald (Maximum Entropy and the Glasses You are Looking Through, UAI
+2000) and Walley (Statistical Reasoning with Imprecise Probabilities,
+Chapman & Hall, 1991). So under a logarithmic scoring rule the MaxEnt
+solution to the JB problem is in some sense optimal. Thus we already
+know that MaxEnt has nice propreties in the JB problem. What exactly is
+still new then?
+
+My problem with B, the central claim, is that it is simply not true.
+As many practitioners can tell you, MaxEnt approaches often simply
+don't work very well in practice! See, for example
+
+http://letterstonature.wordpress.com/2008/12/29/where-do-i-stand-on-maximum-entropy/
+
+Then, there are the problems of MaxEnt being inconsistent with
+Bayesian inference in a variety of settings. These are indications
+that in a whole *class* of settings, not just in individual
+problems, MaxEnt may not do something unreasonable. While such results
+(or rather their interpretation) were controversial in the 1980s, under Bayesian and objective
+Bayesian statisticians (the community where MaxEnt was most popular)
+they are not controversial any more.
+
+In this respect, I should note that the authors seem to have a
+misunderstanding about the results in the Grunwald and Halpern paper
+which first introduced the `naive' and `sophisticated' spaces mentioned in the paper.
+The first point is that in the naive space, even standard
+conditioning (and hence MaxEnt, which is a generalization of it) can
+fail - you seem to agree with this. The second point is that, when
+used in the sophisticated space (in which the set of messages/pieces
+of information that can be provided partitions the sample space),
+standard conditioning is uncontroversial and generally viewed as the
+right thing to do; I guess you would also agree with this. But now, as
+I understood it, Grunwald and Halpern show that for many naive spaces
+there can be *no* corresponding sophisticated space such that MaxEnt
+in the naive space is equivalent to standard conditioning in the
+corresponding sophisticated space. So if we agree that standard
+conditioning in the sophisticated space is uncontroversial, then it
+essentially follows that MaxEnt in the naive space must be the wrong thing to do
+- because even if we don't know what the sophisticated space is, we
+do know that, whatever it is, if we use MaxEnt then our results will
+be incompatible with conditioning. On page 14 you write `the naive
+space is all we have, and MAXENT is the appropriate tool to deal with
+this lack of information'. I find this very strange - Is it really the appropriate tool if in
+*every* possible extension to a sophisticated space, MAXENT in the
+naive space becomes inconsistent with conditioning in the
+sophisticated space?
+
+And this brings me to (C): I don't think the central conclusion
+follows at all. You simply give three scenarios in Section III. The JB
+problem, as usually stated, gives no clue at all about which of these
+three (or yet other) scenarios gave rise to the rather unusual piece
+of information that is provided to Judy. Since all three scenarios
+give rise to a different probability update, the logical conclusion
+of your analysis must be that *one cannot say any more what the probabilities are*
+(unless one is explicitly willing to make additional assumptions), and not
+anything else. It is correct that one of the three scenarios (the
+third one), when taken to the fine-partition limit, becomes equivalent
+to MaxEnt, so one might perhaps argue that the MaxEnt solution is a
+member of the set of all `solutions which may be correct given further
+assumptions'. But why should it have a special status?  Whether or not
+it will be useful in practical applications depends on what is the
+underlying scenario, and as long as one doesn't know it, it seems
+dangerous to commit to any of the `potentially reasonable
+solutions'. It is true that MaxEnt solutions have some nice properties
+(entropy concentration, minimax optimality under a log scoring rule),
+but they also have some bad properties (inconsistency with
+Bayesian inference and/or standard conditioning in the sophisticated
+space). So why should they have a special status? It seems that
+eclecticism is called for, unless one can unambiguously represent the
+problem in a sophisticated space in which all possible pieces of
+information form a partition of the outcome space. Perhaps there are
+valid counterarguments against this position, but I have not seen them
+in this paper.

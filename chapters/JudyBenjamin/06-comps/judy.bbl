@@ -1,0 +1,123 @@
+\begin{thebibliography}{21}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+
+\bibitem[{Bovens(2010)}]{bovens10}
+Bovens, Luc.
+\newblock \enquote{Judy Benjamin is a Sleeping Beauty.}
+\newblock \emph{Analysis} 70, ~1: (2010) 23--26.
+
+\bibitem[{Bradley(2005)}]{bradley05}
+Bradley, R.
+\newblock \enquote{Radical Probabilism and Bayesian Conditioning.}
+\newblock \emph{Philosophy of Science} 72, ~2: (2005) 342--364.
+
+\bibitem[{Caticha and Giffin(2006)}]{catichagiffin06}
+Caticha, Ariel, and Adom Giffin.
+\newblock \enquote{Updating Probabilities.}
+\newblock In \emph{MaxEnt 2006, the 26th International Workshop on Bayesian
+  Inference and Maximum Entropy Methods}. 2006.
+
+\bibitem[{Cover and Thomas(2006)}]{coverthomas06}
+Cover, T.M., and J.A. Thomas.
+\newblock \emph{Elements of Information Theory}, volume~6.
+\newblock Hoboken, NJ: Wiley, 2006.
+
+\bibitem[{Csisz{\'a}r(1967)}]{csiszar67}
+Csisz{\'a}r, I.
+\newblock \enquote{Information-Type Measures of Difference of Probability
+  Distributions and Indirect Observations.}
+\newblock \emph{Studia Scientiarum Mathematicarum Hungarica} 2: (1967)
+  299--318.
+
+\bibitem[{Diaconis and Zabell(1982)}]{diaconiszabell82}
+Diaconis, P., and S.L. Zabell.
+\newblock \enquote{Updating Subjective Probability.}
+\newblock \emph{Journal of the American Statistical Association} 822--830.
+
+\bibitem[{Douven and Romeijn(2009)}]{douvenromeijn09}
+Douven, I., and J.W. Romeijn.
+\newblock \enquote{A New Resolution of the Judy Benjamin Problem.}
+\newblock \emph{CPNSS Working Paper} 5, ~7: (2009) 1--22.
+
+\bibitem[{Gardner(1959)}]{gardner59}
+Gardner, Martin.
+\newblock \enquote{Mathematical Games.}
+\newblock \emph{Scientific American} 201, ~4: (1959) 174--182.
+
+\bibitem[{Grove and Halpern(1997)}]{grovehalpern97}
+Grove, A., and J.Y. Halpern.
+\newblock \enquote{Probability Update: Conditioning Vs. Cross-Entropy.}
+\newblock In \emph{Proceedings of the Thirteenth Conference on Uncertainty in
+  Artificial Intelligence}. Providence, Rhode Island: Citeseer, 1997.
+
+\bibitem[{Gr{\"u}nwald and Halpern(2003)}]{gruenwaldhalpern03}
+Gr{\"u}nwald, P., and J.Y. Halpern.
+\newblock \enquote{Updating Probabilities.}
+\newblock \emph{Journal of Artificial Intelligence Research} 19: (2003)
+  243--278.
+
+\bibitem[{Gr{\"u}nwald(2000)}]{grunwald00a}
+Gr{\"u}nwald, Peter.
+\newblock \enquote{Maximum Entropy and the Glasses You Are Looking Through.}
+\newblock In \emph{Proceedings of the Sixteenth conference on Uncertainty in
+  artificial intelligence}. Morgan Kaufmann Publishers, 2000, 238--246.
+
+\bibitem[{Halpern(2003)}]{halpern03}
+Halpern, Joseph~Y.
+\newblock \emph{{Reasoning About Uncertainty}}.
+\newblock Cambridge, MA: MIT Press, 2003.
+
+\bibitem[{Hobson(1971)}]{hobson71}
+Hobson, A.
+\newblock \emph{Concepts in Statistical Mechanics}.
+\newblock New York, NY: Gordon and Beach, 1971.
+
+\bibitem[{Jaynes and Bretthorst(1998)}]{jaynes98}
+Jaynes, E.T., and G.L. Bretthorst.
+\newblock \emph{Probability Theory: the Logic of Science}.
+\newblock Cambridge, UK: Cambridge University Press, 1998.
+
+\bibitem[{Jeffrey(1965)}]{jeffrey65}
+Jeffrey, R.C.
+\newblock \emph{The Logic of Decision}.
+\newblock New York, NY: McGraw-Hill, 1965.
+
+\bibitem[{Shore and Johnson(1980)}]{shorejohnson80}
+Shore, J., and RW~Johnson.
+\newblock \enquote{Axiomatic Derivation of the Principle of Maximum Entropy and
+  the Principle of Minimum Cross-Entropy.}
+\newblock \emph{IEEE Transactions on Information Theory} 26, ~1: (1980) 26--37.
+
+\bibitem[{Tops{\o}e(1979)}]{topsoe79}
+Tops{\o}e, F.
+\newblock \enquote{Information-Theoretical Optimization Techniques.}
+\newblock \emph{Kybernetika} 15, ~1: (1979) 8--27.
+
+\bibitem[{Uffink(1996)}]{uffink96}
+Uffink, J.
+\newblock \enquote{The Constraint Rule of the Maximum Entropy Principle.}
+\newblock \emph{Studies In History and Philosophy of Science Part B: Studies In
+  History and Philosophy of Modern Physics} 27, ~1: (1996) 47--79.
+
+\bibitem[{Van~Fraassen(1986)}]{fraassenetal86}
+Van~Fraassen, Bas.
+\newblock \enquote{A Problem for Relative Information Minimizers, Continued.}
+\newblock \emph{The British Journal for the Philosophy of Science} 37, ~4:
+  (1986) 453--463.
+
+\bibitem[{Van~Fraassen(1981)}]{fraassen81}
+Van~Fraassen, B.C.
+\newblock \enquote{A Problem for Relative Information Minimizers in Probability
+  Kinematics.}
+\newblock \emph{The British Journal for the Philosophy of Science} 32, ~4:
+  (1981) 375--379.
+
+\bibitem[{Walley(1991)}]{walley91}
+Walley, P.
+\newblock \emph{Statistical Reasoning with Imprecise Probabilities}.
+\newblock Chapman and Hall London, 1991.
+
+\end{thebibliography}

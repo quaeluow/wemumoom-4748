@@ -1,0 +1,131 @@
+\begin{thebibliography}{23}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+
+\bibitem[{Bertsekas(1982)}]{bertsekas82}
+Bertsekas, Dimitri.
+\newblock \emph{Constrained Optimization and Lagrange Multiplier Methods}.
+\newblock Boston, MA: Academic, 1982.
+
+\bibitem[{Caticha and Giffin(2006)}]{catichagiffin06}
+Caticha, Ariel, and Adom Giffin.
+\newblock \enquote{Updating Probabilities.}
+\newblock In \emph{MaxEnt 2006, the 26th International Workshop on Bayesian
+  Inference and Maximum Entropy Methods}. 2006.
+
+\bibitem[{Cover and Thomas(2006)}]{coverthomas06}
+Cover, T.M., and J.A. Thomas.
+\newblock \emph{Elements of Information Theory}, volume~6.
+\newblock Hoboken, NJ: Wiley, 2006.
+
+\bibitem[{Dempster(1967)}]{dempster67}
+Dempster, Arthur.
+\newblock \enquote{Upper and Lower Probabilities Induced by a Multivalued
+  Mapping.}
+\newblock \emph{The Annals of Mathematical Statistics} 38, ~2: (1967) 325--339.
+
+\bibitem[{Dias and Shimony(1981)}]{diasshimony81}
+Dias, Penha Maria~Cardozo, and Abner Shimony.
+\newblock \enquote{A Critique of Jaynes' Maximum Entropy Principle.}
+\newblock \emph{Advances in Applied Mathematics} 2: (1981) 172--211.
+
+\bibitem[{Friedman and Shimony(1971)}]{friedmanshimony71}
+Friedman, Kenneth, and Abner Shimony.
+\newblock \enquote{Jaynes's Maximum Entropy Prescription and Probability
+  Theory.}
+\newblock \emph{Journal of Statistical Physics} 3, ~4: (1971) 381--384.
+
+\bibitem[{Grove and Halpern(1997)}]{grovehalpern97}
+Grove, A., and J.Y. Halpern.
+\newblock \enquote{Probability Update: Conditioning Vs. Cross-Entropy.}
+\newblock In \emph{Proceedings of the Thirteenth Conference on Uncertainty in
+  Artificial Intelligence}. Providence, Rhode Island: Citeseer, 1997.
+
+\bibitem[{Gr{\"u}nwald and Halpern(2003)}]{gruenwaldhalpern03}
+Gr{\"u}nwald, P., and J.Y. Halpern.
+\newblock \enquote{Updating Probabilities.}
+\newblock \emph{Journal of Artificial Intelligence Research} 19: (2003)
+  243--278.
+
+\bibitem[{Guia{\c{s}}u(1977)}]{guiasu77}
+Guia{\c{s}}u, Silviu.
+\newblock \emph{Information Theory with Application}.
+\newblock New York: McGraw-Hill, 1977.
+
+\bibitem[{Halpern(2003)}]{halpern03}
+Halpern, Joseph.
+\newblock \emph{Reasoning About Uncertainty}.
+\newblock Cambridge, MA: MIT, 2003.
+
+\bibitem[{Jaynes(1979)}]{jaynes79}
+Jaynes, E.T.
+\newblock \enquote{Where Do We Stand on Maximum Entropy?}
+\newblock In \emph{The Maximum Entropy Formalism}, edited by R.D. Levine, and
+  M.~Tribus, Cambridge, MA: MIT, 1979.
+
+\bibitem[{Jaynes and Bretthorst(1998)}]{jaynes98}
+Jaynes, E.T., and G.L. Bretthorst.
+\newblock \emph{Probability Theory: the Logic of Science}.
+\newblock Cambridge, UK: Cambridge University Press, 1998.
+
+\bibitem[{Jeffrey(1990)}]{jeffrey90}
+Jeffrey, Richard.
+\newblock \emph{The Logic of Decision}.
+\newblock University of Chicago, 1990.
+
+\bibitem[{MacKay(2003)}]{mackay03}
+MacKay, David.
+\newblock \emph{Information Theory, Inference and Learning Algorithms}.
+\newblock Cambridge, 2003.
+
+\bibitem[{Shimony(1985)}]{shimony85}
+Shimony, Abner.
+\newblock \enquote{The Status of the Principle of Maximum Entropy.}
+\newblock \emph{Synthese} 63, ~1: (1985) 35--53.
+
+\bibitem[{Shore and Johnson(1980)}]{shorejohnson80}
+Shore, J., and R.W. Johnson.
+\newblock \enquote{Axiomatic Derivation of the Principle of Maximum Entropy and
+  the Principle of Minimum Cross-Entropy.}
+\newblock \emph{IEEE Transactions on Information Theory} 26, ~1: (1980) 26--37.
+
+\bibitem[{Skyrms(1985)}]{skyrms85}
+Skyrms, Brian.
+\newblock \enquote{Maximum Entropy Inference as a Special Case of
+  Conditionalization.}
+\newblock \emph{Synthese} 63, ~1: (1985) 55--74.
+
+\bibitem[{Skyrms(1987{\natexlab{a}})}]{skyrms87dynamic}
+\rule[.6ex]{3em}{.05ex}.
+\newblock \enquote{Dynamic Coherence and Probability Kinematics.}
+\newblock \emph{Philosophy of Science} 1--20.
+
+\bibitem[{Skyrms(1987{\natexlab{b}})}]{skyrms87updating}
+\rule[.6ex]{3em}{.05ex}.
+\newblock \enquote{Updating, Supposing, and Maxent.}
+\newblock \emph{Theory and Decision} 22, ~3: (1987{\natexlab{b}}) 225--246.
+
+\bibitem[{Skyrms(1990)}]{skyrms90}
+\rule[.6ex]{3em}{.05ex}.
+\newblock \emph{The Dynamics of Rational Deliberation}.
+\newblock Cambridge, 1990.
+
+\bibitem[{Spohn(2012)}]{spohn12}
+Spohn, Wolfgang.
+\newblock \emph{The Laws of Belief: Ranking Theory and Its Philosophical
+  Applications}.
+\newblock Oxford University, 2012.
+
+\bibitem[{Wagner(1992)}]{wagner92}
+Wagner, Carl~G.
+\newblock \enquote{Generalized Probability Kinematics.}
+\newblock \emph{Erkenntnis} 36, ~2: (1992) 245--257.
+
+\bibitem[{Zubarev et~al.(1996)Zubarev, Morozov, and R{\"o}pke}]{zubarev96}
+Zubarev, Dmitrii, Vladimir Morozov, and Gerd R{\"o}pke.
+\newblock \emph{Statistical Mechanics of Nonequilibrium Processes}.
+\newblock Berlin: Akademie, 1996.
+
+\end{thebibliography}

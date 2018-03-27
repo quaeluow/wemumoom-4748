@@ -1,0 +1,23 @@
+# links:
+# https://en.wikipedia.org/wiki/User:Skinnerd/Simplex_Point_Picking
+# http://mathworld.wolfram.com/SimplexPointPicking.html
+# http://software.techassistbox.com/generate-n-random-numbers-whose-sum-is-constant-k---excel_282285.html
+
+print "How many sides does the die have? ";
+$ds = <STDIN>;
+chomp($ds);
+
+# h[$i] is H's bet, v[$i] is V's, plus minus $imph
+srand;
+$t1=rand;
+$c=0;
+$iv=1/$ds;
+for ($i1=1;$i1<$ds;++$i1)
+{
+if (($t1<$i1*$iv)&&($c==0))
+{
+    $res=$i1-1;
+    $c=1;
+}
+}
+print "$res\n";

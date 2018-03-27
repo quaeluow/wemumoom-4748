@@ -1,0 +1,174 @@
+% This is NOT the official version. The official version is jeco.tex
+
+\documentclass[11pt]{article} \usepackage{october}
+% For BJPS \hyphenpenalty=10000 \hbadness=10000
+
+\begin{document}
+% For BJPS \raggedright \doublespacing
+\onehalfspacing
+
+% y=3;z=4;pdftk A=epsa-jeffrey-conditioning\ \($y\).pdf cat A1-$z
+% output wc-out.pdf
+
+\title{Jeffrey Conditioning and the Geometry of Reason}
+\author{Stefan Lukits} 
+\date{}
+\maketitle
+\newcounter{expls}
+% \doublespacing
+
+\begin{abstract}
+  {\noindent}Defenders of the epistemic utility approach to Bayesian
+  epistemology use the geometry of reason to justify the foundational
+  Bayesian tenets of probabilism and standard conditioning. The
+  geometry of reason is the view that the underlying topology for
+  credence functions is a metric space, on the basis of which axioms
+  and theorems of epistemic utility for partial beliefs are
+  formulated. It implies that Jeffrey conditioning must cede to an
+  alternative form of conditioning. The latter fails five plausible
+  expectations, which Jeffrey conditioning fulfills, and brings with
+  it unacceptable results in certain cases. The solution to this
+  problem is to reject the geometry of reason and accept information
+  theory in its stead. Information theory comes fully equipped with an
+  axiomatic approach which covers probabilism, standard conditioning,
+  and Jeffrey conditioning. It is not based on an underlying topology
+  of a metric space, but uses asymmetric divergences instead of a
+  symmetric distance measure.
+\end{abstract}
+
+The \qnull{geometry of reason,} a term coined by Richard Pettigrew and
+Hannes Leitgeb, refers to a view of epistemic utility in which the
+underlying topology for credence functions on a finite number of
+events is a metric space. The metric space is the basis for a distance
+relation between credence functions which is used to formulate axioms
+relating credences to epistemic utility. These axioms serve to
+justify, differentiate, and criticize contentious positions such as
+Bayesian conditionalization, the principle of indifference, other
+forms of conditioning, or probabilism itself. My claim is that given
+an epistemic utility approach and some intuitive axioms, the geometry
+of reason leads itself ad absurdum. There is a viable alternative to
+the geometry of reason which avoids the problematic implications:
+information theory. For information theory, as opposed to the geometry
+of reason, the underlying topology for credence functions is not a
+metric space.
+
+Epistemic utility in Bayesian epistemology has attracted some
+attention in the past few years. Patrick Maher provides a compelling
+acceptance-based account of epistemic utility (see
+\scite{8}{maher93}{182--207}). James Joyce defends probabilism
+supported by epistemic utility rather than the pragmatic utility we
+are used to in Dutch-book style arguments (see \scite{7}{joyce98}{}).
+For Joyce, norms of gradational accuracy characterize the epistemic
+utility approach to partial beliefs, analogous to norms of truth for
+full beliefs. Pettigrew and Leitgeb argue that probabilism and
+standard conditioning (which together give epistemology a distinct
+Bayesian flavor) minimize inaccuracy, thereby providing maximal
+epistemic utility (see Leitgeb and Pettigrew,
+2010a\fixref{7}{leitgebpettigrew10i}{} and
+2010b\fixref{7}{leitgebpettigrew10ii}{}).
+
+Leitgeb and Pettigrew show, given the geometry of reason and other
+axioms inspired by Joyce (for example normality and dominance), that
+in order to avoid epistemic dilemmas we must commit ourselves to a
+Brier score measure of inaccuracy and subsequently to probabilism and
+standard conditioning (but not to a principle of indifference).
+Jeffrey conditioning (also called probability kinematics), although
+controversial, is widely considered to be a common sense extension of
+standard conditioning. On Leitgeb and Pettigrew's account, it fails to
+provide maximal epistemic utility. Another type of conditioning, which
+we will call LP conditioning, takes the place of Jeffrey conditioning.
+
+LP conditioning violates all of the following plausible expectations
+for an amujus, an \qnull{alternative method of updating for
+  Jeffrey-type updating scenarios.}
+
+\begin{itemize}
+\item \textsc{continuity} An amujus ought to be continuous with
+  standard conditioning as a limiting case.
+\item \textsc{invariance} An amujus ought to be partition invariant.
+\item \textsc{levinstein} An amujus ought not to give \qeins{extremely
+    unattractive} results in a Levinstein scenario (see
+  \scite{7}{levinstein12}{}).
+\item \textsc{regularity} An amujus ought not to assign a posterior
+  probability of $0$ to an event which has a positive prior
+  probability and about which the intervening evidence says nothing
+  except that a strictly weaker event has a positive posterior
+  probability.
+\item \textsc{asymmetry} An amujus ought to reflect epistemic
+  asymmetries.
+\end{itemize}
+
+Violating all five of these undermines LP conditioning and, if we
+follow the reasoning of Leitgeb and Pettigrew, the geometry of reason.
+Fortunately, there is a live alternative to the geometry of reason:
+information theory. Information theory has its own axiomatic approach
+to justifying probabilism and standard conditioning (see
+\scite{7}{williams80}{}; and \scite{7}{shorejohnson80}{}).
+Furthermore, information theory provides a justification for Jeffrey
+conditioning and generalizes it (see \scite{7}{wagner02}{};
+\scite{7}{catichagiffin06}{}; and \scite{7}{lukits15}{}).
+
+Information theory is not a geometry of reason in the sense that it
+measures divergences, not distances, between distributions of partial
+belief. A divergence is not symmetric, and the underlying topology is
+not a metric space. Updating methods based on information theory
+(standard conditioning, Jeffrey conditioning, the principle of maximum
+entropy) fulfill the five expectations.
+
+It remains to provide more detail for the five expectations and to
+show how LP conditioning violates them. The full-length paper does so
+with formal rigor and by giving simple hands-on examples. Here is a
+short synopsis. LP conditioning violates \textsc{continuity} because
+standard conditioning gives a different recommendation than a series
+of Jeffrey-type updating scenarios which get arbitrarily close to
+standard event observation. This is especially troubling considering
+how important the case for standard conditioning is to Leitgeb and
+Pettigrew.
+
+LP conditioning violates \textsc{invariance} because two agents who
+have identical credences with respect to a partition of the event
+space may disagree about this partition after LP conditioning, even
+when the Jeffrey-type updating scenario provides no new information
+about the more finely grained partitions on which the two agents
+disagree.
+
+LP conditioning violates \textsc{levinstein} because of \qeins{the
+  potentially dramatic effect [LP conditioning] can have on the
+  likelihood ratios between different propositions}
+\scite{3}{levinstein12}{419}. Benjamin Levinstein gives an example
+where a surprising observation (such as seeing a red car, which one
+had assumed to be blue, after the opening of an opaque door) raises a
+reasonable materialist's tiny prior credence in the existence of
+ghosts to a posterior credence of 47\%. Levinstein proposes a
+logarithmic inaccuracy measure as a foundation to avoid violation of
+\textsc{levinstein} (vaguely related to the Kullback-Leibler
+divergence), but his account falls far short of the formal scope,
+substance, and integrity of information theory.
+
+LP conditioning violates \textsc{regularity} because formerly positive
+probabilities can be reduced to $0$ even though the new information in
+the Jeffrey-type updating scenario makes no such requirements (as is
+usually the case for standard conditioning). Ironically, Jeffrey-type
+updating scenarios are meant to be a better reflection of real-life
+updating because they avoid extreme probabilities. Whereas the
+geometry of reason considers extreme probabilities to be easily
+accessible by non-extreme probabilities under new information (much
+like a marble rolling off a table or a bowling ball heading for the
+gutter), information theory envisions extreme probabilities more like
+an event horizon. The nearer you are to the extreme probabilities, the
+more information you need to move on. For an observer, the horizon is
+never reached.
+
+LP conditioning violates \textsc{asymmetry} for reasons related to
+\textsc{regularity}. Even the scrupulous about partial beliefs (such
+as Isaac Levi in Jeffrey's \qeins{Dracula Meets Wolfman: Acceptance
+  vs. Partial Belief}) concede that extreme probabilities are special
+and induce asymmetries in updating: moving in direction from certainty
+to uncertainty is asymmetrical to moving in direction from uncertainty
+to certainty. Geometry of reason's metric topology, however, allows
+for no asymmetries.
+
+% \nocite{*}
+\bibliographystyle{ChicagoReedweb} \bibliography{bib-2902}
+
+\end{document}

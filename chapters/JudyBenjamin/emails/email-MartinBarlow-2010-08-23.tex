@@ -1,0 +1,153 @@
+\documentclass[11pt]{article}
+
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{.3in}
+
+\raggedbottom
+
+%\pagestyle{empty}
+
+% 	PACKAGES
+\usepackage[colon,round]{natbib}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{german}
+%\usepackage{hebtex}
+%\usepackage{graphicx}
+%\usepackage[german]{babel}
+%\usepackage{endnotes}
+%\usepackage{rotating}
+
+% \newcommand{\kapt}[1]{\bigskip\noindent\textbf{{\thechap}. #1}\addtocounter{chap}{1}\medskip}
+\newcommand{\kapt}[1]{\textbf{{\thechap}. #1}\addtocounter{chap}{1}}
+
+% \input{./zz-ReferencesAtBeg-InformationEpistemology.tex}
+
+\newcommand{\tbd}[1]{}
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
+
+\begin{document}
+
+The idea was originally to show that it would be more intuitive to
+rest one's epistemology, especially experimental design in science, on
+information theory rather than probability theory. It turns out that
+information theory and probability theory may just be two sides of the
+same coin, however. Information (if in bits, then use base 2 for the
+logarithm) and probability can be related to each other by a simple
+formula \citep[37]{guiasu77}:
+\begin{equation}
+  P(X)={2^{-I(X)}}
+\label{eq:probdef}
+\end{equation}
+
+It may then be vacuous to decide which of the two is the primary
+epistemological notion, although it is worth pointing out that
+that the use of probabilities among epistemologists is ubiquitous,
+whereas few epistemologists seem to concern themselves with
+information theory.
+
+I thought it would be interesting to show how far we can get by basing
+our probabilistic notions on the concepts of information theory rather
+than the reverse. I found out that there are precedents in the
+literature: \citep{ingardenurbanik62} and \citep{kampe67} developed
+their own ways of doing this. 
+
+My strategy looks basically like this:
+\begin{enumerate}
+\item Show that ({\ref{eq:probdef}}) is a consequence of the intuition
+  in counterfactuals that probability is the number of possible worlds
+  where $X$ is true divided by the number of possible worlds in toto.
+  Information, on the other hand, is related to the reciprocal of this
+  quantity because information `constrains' the real world by
+  shrinking the number of possible worlds (the car is now blue rather
+  than any colour).
+\item Both the concept of evidence and the concept of knowledge could
+  be interpreted to mean that they no longer yield up information: $X$
+  is evidence, $X$ is knowledge iff $I(X)=0$. This is a rather bold
+  claim, but there is also precedent for it in \citep{williamson00}.
+\item Then defend the thesis that when choosing the hypothesis which
+  is optimally related to the evidence (or `epistemically justified')
+  one should either take into account or definitely choose the one
+  which is minimally informative based on the evidence.
+\end{enumerate}
+
+If the probabilities are numerically defined, Bayesian
+conditionalization will give you the hypothesis that is epistemically
+justified. If there are $n$ hypotheses exhausting the event
+space then their posterior probability is:
+\begin{equation}
+  \label{eq:bayes}
+Q(H_{i})=P(H_{i}|E)=\frac{P(E|H_{i})P(H_{i})}{\sum_{k=1}^{n}P(E|H_{k})}  
+\end{equation}
+
+Now, here is my question: can I show that the posterior probability
+given by Bayes' formula is also the one that is informatively minimal?
+If I don't start out with probabilities I need to start out with a
+mathematical notion of information. Shannon's Entropy comes to mind:
+\begin{equation}
+    H(X)=-\sum_{i=1}^{n}p(x_{i})\log p(x_{i})
+\label{eq:shannon}
+  \end{equation}
+
+Shannon's Entropy, however, is ill-defined for continuous random
+variables. There appear to be several ways of doing this. I found the
+Kullback-Leibler Divergence to be the most promising candidate. It
+measures the additional information needed if a probability
+distribution $Q$ differs from the `true' probability distribution $P$:
+\begin{equation}
+  \label{eq:kulei}
+  D_{\mbox{\tiny{KL}}}(P\|Q)=\int_{\Omega}p\log\frac{p}{q}d\mu
+\end{equation}
+($\mu$ is any measure on the event space $\Omega$ for which
+$p$ and $q$ are the Radon-Nikodym derivatives $\frac{dP}{d\mu}$ and
+$\frac{dQ}{d\mu}$ respectively.) I am now entering the realm of
+measure theory where my footing is very loose and where I need your
+help. It would be nice to show conclusively that (a) $Q$ (the
+posterior probability distribution provided by Bayes' formula) is
+informatively minimal, given the evidence; and (b) that any other
+probability distribution $Q'$ which is also informatively minimal,
+given the evidence, is equal to $Q$ wherever it matters (for all
+events except those whose measure is $0$, for example).
+
+Here is my attempt at (a), although I can only imagine that it's full
+of holes:
+
+For any $F\subset E$,
+\begin{displaymath}
+  \frac{P(F)}{Q(F)}=\frac{P(F)}{\frac{P(F|E)P(F)}{P(E)}}=\frac{P(E)}{P(F|E)}=P(E)
+\end{displaymath}
+Now take any countable set $\mathcal{F}=\{F_{i}\}$ of disjoint subsets
+of $E$. Then
+\begin{displaymath}
+  \int_{\cup F_{i}}p\log\frac{p}{q}d\mu=\sum_{i}P(F_{i}|\cup F_{i})\log\frac{P(F_{i}|\cup F_{i})}{Q(F_{i}|\cup F_{i})}=
+\end{displaymath}
+\begin{displaymath}
+  \sum_{i}P(F_{i}|\cup F_{i})\log P(E|\cup F_{i})=0
+\end{displaymath}
+No probability distribution $Q'$ can beat this, although I haven't
+been able to show (b), that $Q'$ must basically be the same as $Q$.
+The probability distribution $Q$ given by Bayes' formula delivers a
+probability distribution which is informatively minimal. More
+strongly, Bayesian conditionalization adds no information to the prior
+probability distribution and the evidence.
+
+My question is: does this proof hold water, where does it need
+improvement, and how do I show that basically only $Q$, the Bayesian
+posterior probability distribution, is informatively minimal and not
+others?
+
+\nocite{*}
+\bibliographystyle{plainnat}
+\bibliography{email-MartinBarlow-2010-08-23}
+
+
+\end{document}

@@ -1,0 +1,256 @@
+% The original version of this paper is in ppl.tex
+
+% I put the old introduction which pays more attention to the
+% synchronic/diachronic problem into org
+\documentclass[11pt]{article}
+\usepackage{october}
+\hyphenation{Hal-pern}
+
+% This article http://tinyurl.com/ly2szc6
+% Wagner's article http://tinyurl.com/pgaflyw 
+
+% For BJPS
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+\begin{document}
+% For BJPS
+% \raggedright
+% \doublespacing
+
+\title{A Natural Generalization of Jeffrey Conditioning}
+% Conditioning on Conditonals ?
+\author{Stefan Lukits}
+
+% probability kinematics
+% probability update
+% conditionals
+% Evidence;
+% bayesian epistemology
+% maximum entropy
+% infomin
+% formal epistemology
+
+\date{}
+
+% \maketitle
+
+% \doublespacing
+
+% \begin{abstract} 
+%   {\noindent}
+% \end{abstract}
+
+% for abstract see abstract.txt
+
+\section{Introduction}
+\label{Introduction}
+
+Standard conditioning in Bayesian probability theory gives us a
+relatively well-accepted tool to update on the observation of an
+event. Jeffrey conditioning provides another tool which updates
+probability distributions (or densities, from now on omitted) given
+uncertain evidence. Jeffrey conditioning generalizes standard
+conditioning. Evidence can be viewed as imposing a constraint on
+acceptable probability distributions, often one with which the prior
+probability distribution is inconsistent. If it is a conditional which
+constitutes this constraint, standard conditioning and Jeffrey
+conditioning do not always apply. Carl Wagner presents such a case
+(see \scite{7}{wagner92}{}) together with a solution based on a
+plausible intuition. We will call this intuition (W). Wagner's (W)
+solution, or Wagner conditioning, in its turn generalizes Jeffrey
+conditioning.
+
+Twenty years earlier, E.T. Jaynes had already proposed a
+generalization of Jeffrey conditioning, the principle of maximum
+entropy (M). This generalization is more sweeping than Wagner's and
+includes partial information cases (using the moments of a
+distribution as evidence). It uses information theory to suggest that
+one should (a) always choose prior probabilities which are minimally
+informative, and (b) update to the probability distribution which is
+minimally informative relative to the prior probability distribution
+while obeying the constraints imposed by the observation or the
+evidence. Again, there was a plausible intuition at work, but (M) soon
+ran into counter-examples and conceptual difficulties.
+
+The question for Wagner was therefore whether his generalization (W)
+agreed with (M) or not. Wagner found that it did not. Wagner then used
+his method not only to present a \qeins{natural generalization of
+  Jeffrey conditioning} (see \scite{8}{wagner92}{250}), but also to
+deepen criticism of (M). I will show that (M) not only generalizes
+Jeffrey conditioning (as is well known, for a formal proof see
+\scite{7}{catichagiffin06}{}) but also Wagner conditioning. Wagner's
+intuition (W) is plausible, and his method works. His derivation of a
+disagreement with (M), however, is conceptually more complex than he
+assumed. Below, we will show that (M) and (W) are consistent given
+(L). (L) is what I call the Laplacean principle which requires a
+rational agent, besides other standard Bayesian commitments, to hold
+sharp credences with respect to well-defined events under
+consideration. (I), which is inconsistent with (L) and which some
+Bayesians accept, allows a rational agent to have indeterminate or
+imprecise credences (see \scite{7}{ellsberg61}{}; \scite{7}{levi85}{};
+\scite{7}{walley91}{}; and \scite{7}{joyce10}{}).
+
+\medskip
+
+\begin{tabular}{|c|c|c|c|c|l|}\hline
+(M) & (W) & (I) & (L) & & \\ \hline
+$\bullet$ & $\bullet$ &  & & $\times$ & according to Wagner's article \\ \hline
+$\bullet$ & $\bullet$ &  & & \checkmark & according to this article \\ \hline
+& & $\bullet$ & $\bullet$ & $\times$ & disagree over permitting mushy credences \\ \hline
+$\bullet$ & $\bullet$ & $\bullet$ & & $\times$ & formally shown in Wagner's article \\ \hline
+$\bullet$ & $\bullet$ & & $\bullet$ & \checkmark & formally shown in this article \\ \hline 
+\end{tabular}
+
+\medskip
+
+If there were an advocate of (M) sympathetic to (I), Wagner's result
+would indeed force her to choose. Wagner's criticism of (M) is
+misplaced, however, since it rests on a hidden assumption that someone
+who believes in (M) would tend not to hold. Wagner does not give an
+independent argument for (I). This paper shows how elegantly (M)
+generalizes not only standard conditioning and Jeffrey conditioning
+but also Wagner conditioning, once we accept (L).
+
+Before we generalize Wagner conditioning by using (M), let us
+articulate (L) and (M). (L) is what I call the Laplacean principle and
+in addition to standard Bayesian commitments states that a rational
+agent assigns a determinate precise probability to a well-defined
+event under consideration (for a defence of (L) against (I) see
+\scite{7}{white10}{}; and \scite{7}{elga10}{}).
+
+To avoid excessive apriorism (see \scite{7}{seidenfeld79}{414}), (L)
+does not require that a rational agent has probabilities assigned to
+all events in an event space, only that, once an event has been
+brought to attention, and sometimes retrospectively, the rational
+agent is able to assign a sharp probability. Newton did not need to
+have a prior probability for Einstein's theory in order to have a
+posterior probability for his theory of gravity.
+
+(L) also does not require objectivity in the sense that all rational
+agents must agree in their probability distributions if they have the
+same information. It is important to distinguish between type I and
+type II prior probabilities. The former precede any information at all
+(so-called ignorance priors). The latter are simply prior relative to
+posterior probabilities in probability kinematics. They may themselves
+be posterior probabilities with respect to an earlier instance of
+probability kinematics. 
+
+The case for objectivity in probability kinematics, where prior
+probabilities are of type II, is consistent with and dependent on a
+subjectivist interpretation of probabilities, making for some
+terminological confusion. Interpretations of the evidence and how it
+is to be cast in terms of formal constraints may vary. Once we agree
+on a prior distribution (type II), however, and on a set of formal
+constraints representing our evidence, (M) claims that posterior
+probabilities follow mechanically. To standard Bayesian commitments
+and (L), (M) adds
+
+\begin{quotex}
+  Update type II prior distributions under formalized constraints in
+  accordance with information theory and a commitment to keep the
+  entropy maximal, if constraints are synchronic, and the
+  cross-entropy minimal, if they are diachronic.
+\end{quotex}
+
+This corresponds to the intuition that we ought not to gain
+information where the additional information is not warranted by the
+evidence. Some want to drive a wedge between the synchronic rule to
+keep the entropy maximal (\textsc{maxent}) and the diachronic rule to
+keep the cross-entropy minimal (\emph{Infomin}) (for this objection
+see \scite{8}{walley91}{270f}). I will dispel this worry elsewhere and
+assume here that \textsc{maxent} and \emph{Infomin} are compatible and
+part of the toolkit at the disposal of (M), the principle of maximum
+entropy.
+
+Some advocates of (M) may find (L) too weak in its claims, but none
+think it is too strong. Once (L) is assumed, Wagner's diagnosis of
+disagreement between (W) and (M) fails. Moreover, (M) and (L) together
+seamlessly generalize Wagner conditioning.
+
+\section{Wagner's Natural Generalization of Jeffrey Conditioning}
+\label{NatGen}
+
+Wagner claims that he has found a relatively common case of
+probability kinematics in which (M) delivers the wrong result so that
+we must develop an ad hoc generalization of Jeffrey conditioning (see
+the \emph{Linguist} example in \scite{8}{wagner92}{252} and
+\scite{8}{spohn12}{197}). I am in agreement with Wagner, but Wagner's
+scathing verdict about (M) (see \scite{8}{wagner92}{255}) is not
+really a verdict about (M) in the Laplacean tradition but about the
+curious conjunction of (M) and (I). Let us contrast what Wagner
+considers to be the solution of (M) for a simplified \emph{Linguist}
+problem, \qnull{Wagner's (M) solution,} and Wagner's own, much more
+plausible solution, \qnull{Wagner's (W) solution.} I will show why
+Wagner's (M) solution misrepresents (M).
+
+\begin{quotex}
+  The \emph{Simplified Linguist} problem. Imagine the native from
+  Wagner's \emph{Linguist} example is either Protestant or Catholic
+  (50:50). Further imagine that the utterance of the native to the
+  linguist either entails that the native is a Protestant (60\%) or
+  provides no information about the religious affiliation of the
+  native (40\%).
+\end{quotex}
+
+
+Wagner's (W) solution (and, surely, the correct solution) is the
+posterior probability distribution 80:20. Wagner's (M) solution for
+this radically simplified problem is 60:40, clearly a more entropic
+solution than Wagner's (W) solution. From the perspective of an (M)
+advocate, there are only two explanations for this difference in
+cross-entropy. Either Wagner's (W) solution illegitimately uses
+information not contained in the problem, or Wagner's (M) solution has
+failed to include information that is contained in the problem. The
+problem is that Wagner's (M) solution does not take into account (L),
+which an (M) advocate would naturally accept, and therefore the latter
+is the case.
+
+For a Laplacean, the prior joint probability distribution is not left
+unspecified for the calculation of the posteriors. Before the native
+makes the utterance, the event space is unspecified. After the
+utterance, however, the event space is defined (or brought to
+attention) and populated by prior probabilities according to (L). That
+this happens retrospectively may or may not be a problem: Bayes'
+theorem is frequently used retrospectively, for example when the
+anomalous precession of Mercury's perihelion, discovered in the
+mid-1800s, was used to confirm Albert Einstein's General Theory of
+Relativity in 1915. I shall bracket for now that this procedure is
+controversial and refer the reader to the literature on Old Evidence.
+
+Following (L) we shall populate the joint probability matrix using
+\textsc{maxent} and update the joint probability using \emph{Infomin}.
+For the \emph{Simplified Linguist} problem, this procedure gives us
+the correct result, agreeing with Wagner's (W) solution (80:20). More
+detailed calculations reveal that it also gives us the correct result
+for Wagner's more involved \emph{Linguist} problem. The mathematically
+detailed general proof is complex and connected to an inversion of a
+problem presented by Vladim{\'\i}r Majern{\'\i}k (see
+\scite{7}{majernik00}{}; and \scite{7}{lukits15}{}).
+
+Because maximum entropy and minimum cross-entropy solutions are unique
+(see \scite{7}{shorejohnson80}{}), (M) agrees with (W). To get there,
+we have assumed (L), namely that the joint probability matrices are
+populated by determinate probabilities. Wagner ostensibly disagrees
+with (L) and follows Peter Walley's recommendation in
+\emph{Statistical Reasoning with Imprecise Probabilities} that
+marginals do not determine a unique product (see
+\scite{8}{walley91}{456}). While Wagner is welcome to deny (L), my
+sense is that advocates of (M) would already naturally tend to accept
+it. Wagner's result makes clear that not to do so would be
+inconsistent. Wagner's result, however, does not show that (M) on its
+own is undermined without independent arguments that defend the hidden
+assumption (I) or impugn what advocates of (M) would naturally
+assume, i.e.\ (L).
+
+\newpage
+
+\section{References}
+\label{References}
+
+% \nocite{*} 
+% \bibliographystyle{stefan-2010-08-28}
+\bibliographystyle{ChicagoReedweb}
+\bibliography{bib-0861}
+
+\end{document} 

@@ -1,0 +1,147 @@
+* collator
+** affine constraints
+paris04:66
+howsonfranklin94:456
+williamson11:5
+** Akaike
+howsonurbach06:292
+** begin with conditionals
+gillies00:30
+** Bertrand's paradox
+paris04:71
+** Brandeis dice problem
+paris04:72
+** conclusive remarks about ME
+halpern03:110
+diaconiszabell82:829
+howsonfranklin94:465
+howsonurbach06:287
+skyrms87:237
+douvenromeijn09:16 (Bradley)
+** counterfactuals
+see footnote in howsonurbach06
+chalmers11:3
+** Cox's Theorem
+halpern03:65
+spohn12:183
+paris04:24
+howsonurbach06:85
+** Dempster-Shafer
+paris04:7 paris04:35
+** diachronic Dutch-book
+howsonfranklin94:458
+** epistemic entrenchment
+douvenromeijn09:14 (Hellinger's Distance)
+** excessive apriorism
+seidenfeld79:414
+williamson11:11
+gillies00:81
+gillies00:84
+gillies00:57 (quoting de Finetti)
+hempel45:107
+earman92:139f
+** exchangability
+howsonurbach06:87
+** formal methods
+popper59:410
+** frequentism
+howsonurbach06:131fff
+** full employment
+douvenromeijn09:16 (Bradley)
+fraassen93:306
+** inductive logic
+hempel45:98
+** information versus probability
+kolmogorov68a:158
+ingardenurbanik62:136
+guiasu77:36f
+kolmogorov68:663f
+** Jaynes' Well-Posed Problem
+howsonurbach06:284f (criticism)
+** JC solves affine constraints
+douvenromeijn09:1
+** Kullback-Leibler measures information
+guiasu77:28
+** language invariance
+paris04:76 (of ME)
+howsonurbach06:273f
+** ME contradicts SC
+howsonurbach06:278
+shimony85
+seidenfeld79
+** ME is SC/JC extension
+paris04:119f
+** ME produces unwarranted information
+howsonurbach06:286 (williamson04)
+** ME throws away information
+howsonurbach06:297
+** ME versus PI
+jaynes57:623
+** Old Evidence
+howsonurbach06:297
+** Paris' renaming principle
+howsonurbach06:286 (criticism)
+** principal principle
+howsonurbach06:76
+** principle of indifference
+howsonurbach06:266f
+** raven's paradox
+howsonurbach06:99
+clarke10
+** representation theorems
+howsonurbach06:57
+kaplan96:ix
+** retrospective conditioning
+grovehalpern97
+diaconiszabell82:822
+** rule of succession
+howsonurbach06:269
+** second tier
+skyrms85:64
+gillies00:21
+paris04:38 (for DS belief functions)
+earman92:52
+hempel45:114
+haack: not 0.5 but I don't know
+** Solomonoff
+wallacedowe99:271f
+solomonov64:7 (very similar approach in Jeffreys, marked with sticky :) )
+kolmogorov68:662
+howsonurbach06:296
+kaplan96:27
+** SC solves affine constraints
+skyrms86:237
+grovehalpern97
+howsonfranklin94:461
+** SC is the problem, not ME
+williamson11:1
+** Seidenfeld's nuisance
+seidenfeld79:434
+** semantic information
+burgin09:316ff
+** standard conditioning
+howsonurbach06:81 (it is inconsistent)
+** stopping rule
+howsonurbach06:250
+** supposing
+skyrms87
+** synchronic Dutch-book
+paris04:21
+howsonurbach06:67f
+** the Shimony problem
+skyrms87:236
+** thought experiments
+*** Kate and Henry
+douvenromeijn09:12
+*** sundowners at the Westcliff
+douvenromeijn09:7
+** two epistemological dimensions
+earman92:33
+kyburg95
+spohn12:201
+spohn12:46
+jeffrey70:183
+jeffrey70:171f
+morton99:507
+** Watts assumption
+paris04:67

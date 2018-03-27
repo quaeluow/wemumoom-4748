@@ -1,0 +1,8 @@
+mrr <- 1/3
+mss <- 1/2
+mst <- 1/6
+tot <- c(mrr,mss,mst)
+lbl <- c("P(Mr. R)=1/3","P(Ms. S)=1/2","P(Ms. T)=1/6")
+pie(tot,labels=lbl)
+## dev.print(device=eps, "j1.eps", width=650)
+postscript("j1.eps", width=7, height=7, onefile=TRUE, horizontal=FALSE)

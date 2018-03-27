@@ -1,0 +1,46 @@
+Dear Stefan,
+
+Thanks again for sending me your paper which I read with a lot of
+pleasure.
+
+I do have a few things to say about it:
+
+- The parallel you draw to the Carnapian continuum is not quite
+  correct: his is really not about inference rules. In fact Carnap's
+  logics are best understood as relying on conditionalisation; see my
+  paper in the Handbook for the Philosophy of Statistics. You might
+  argue that Carnap is also worried about epistemic entrenchments, in
+  which case you'd have to say more about the parallel than you do
+  now.
+
+- Igor Douven and I should perhaps have been less emphatic about the
+  intuitions that drive people's answers to the Judy puzzle. We are
+  not exactly wedded to the idea that P(Blue) is invariant. Our point
+  is rather that, whatever your intuitions on that, those intuitions
+  can be slotted into Jeffrey's rule. In other words, our arguments do
+  not really hinge on MaxEnt bringing out the wrong intuition in Judy.
+
+- As I guess you realise, showing that the result of MaxEnt is backed
+  by another method does not yet show that MaxEnt is our best
+  candidate for a universal inference rule. (I would, for example, not
+  claim that it is "arguably outperforming all others".)
+
+- I had not seen the powerset approach before and I think it has its
+  own appeal. But of course there are issues with representing or
+  portraying MaxEnt as, or at least paralleling it with
+  conditionalisation, mostly to do with non-conglomerability. I also
+  urge you to look at Halpern and Grunwald's paper on CAR.
+
+- Quite apart from that, as you will be aware, the powerset approach
+  hinges on assuming a particular probability over the sets C that
+  realise the constraint. You should spend much more time motivating
+  this assumption, because it drives your result on E[X]. (There is
+  some irony in the fact that, to defend MaxEnt, you rely on a method
+  that seems to presuppose a uniform probability over the C's.)
+
+I hope these comments are of help to you and I wish you the best of
+luck with the paper!
+
+Kind regards,
+
+Jan-Willem

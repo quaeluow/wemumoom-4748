@@ -1,0 +1,88 @@
+use Text::Balanced qw (
+                        extract_delimited
+                        extract_bracketed
+                        extract_quotelike
+                        extract_codeblock
+                        extract_variable
+                        extract_tagged
+                        extract_multiple
+                        gen_delimited_pat
+                        gen_extract_tagged
+                       );
+
+# $string = '(a + b) * (c + d)';
+# @substring = extract_bracketed($string,"()");
+# print "$substring[1]\n";
+
+# record[0]=address
+# record[1]=author
+# record[2]=booktitle
+# record[3]=editor
+# record[4]=journal
+# record[5]=number
+# record[6]=pages
+# record[7]=pdfconv
+# record[8]=publisher
+# record[9]=stefancomment
+# record[10]=title
+# record[11]=volume
+# record[12]=year
+
+@field=( "address", "author", "booktitle", "editor", "journal",
+"number", "pages", "pdfconv", "publisher", "stefancomment", "title",
+"volume", "year");
+
+open(bibdata,"<./inbib.bib");
+@bibdata=<bibdata>;
+close(bibdata);
+foreach $bibdata (@bibdata)
+{
+    chomp($bibdata);
+}
+open(csvdata,">./outbib.csv");
+for ($i1=0;$i1<=$#bibdata;++$i1)
+{
+
+if ($bibdata[$i1]=~m/^\@/)
+{
+@t1=split("{",$bibdata[$i1]);
+@t2=split(",",$t1[1]);
+$identifier=$t2[0];
+@t3=split("\@",$t1[0]);
+$type=$t3[1];
+}
+
+if ($bibdata[$i1]=~m/=/)
+{
+for ($i2=0;$i2<=$#field;++$i2)
+{
+if ($bibdata[$i1]=~m/^$field[$i2]/)
+{
+@t3=split("=",$bibdata[$i1]);
+@t4 = extract_bracketed($t3[1],"{}");
+$lmo=length($t4[0])-2;
+$record[$i2]=substr($t4[0],1,$lmo);
+}
+}
+}
+
+if ($bibdata[$i1] eq "}")
+{
+# print "INFO: recording $identifier ...\n";
+print csvdata "$identifier,$type,";
+for ($i3=0;$i3<=$#field;++$i3)
+{
+print csvdata "$record[$i3],";
+}
+print csvdata "\n";
+undef(@record);
+}
+
+}
+
+# @book{walley91,
+# title={Statistical Reasoning with Imprecise Probabilities},
+# author={Walley, P.},
+# year={1991},
+# publisher={Chapman and Hall London}
+# }

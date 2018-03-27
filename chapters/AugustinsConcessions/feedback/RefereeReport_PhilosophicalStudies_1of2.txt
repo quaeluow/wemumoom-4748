@@ -1,0 +1,197 @@
+From em.phil.0.4d6649.7d511045@editorialmanager.com Wed Aug 24 02:26:55 2016
+From: "Philosophical Studies (PHIL)" <em@editorialmanager.com>
+To: Stefan Lukits <sediomyle@gmail.com>
+Date: 23 Aug 2016 22:27:34 -0400
+Subject: Your Submission PHIL-D-16-00054
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset=utf-8
+Status: RO
+
+Dear Professor Lukits,
+
+With regret, I must inform you that the Editors have decided that your manuscript PHIL-D-16-00054 "Augustin's Concessions: A Problem for Indeterminate Credal States",
+cannot be accepted for publication in Philosophical Studies.
+
+I would like to thank you very much for forwarding your manuscript to us for consideration and wish you every success in finding an alternative place of publication.
+With kind regards,
+Springer Journals Editorial Office
+Philosophical Studies
+
+The Editorial Manager is at: http://phil.edmgr.com/.
+
+Please Note : Given the volume of submissions to Philosophical Studies, it is not always possible to send comments to authors.
+
+
+COMMENTS TO THE AUTHOR:
+
+Reviewer #2: 
+This is a well written paper on an interesting topic.  Some
+interesting points are raised, but it is, on the whole, a confused
+piece, and not ready for publication.  In outline, the argument of the
+paper is that advocates of imprecise or indeterminate credences are
+guilty of an equivocation: there are two imprecise views, one of which
+is intuitively compelling but flawed, and one of which is not flawed,
+but not intuitively compelling.  I'm sympathetic with the author's
+(henceforth @'s) position that the intuitive view is flawed (though @
+does not do a good job of demonstrating this) but I do not find the
+arguments against the sophisticated view at all convincing.  I should
+add that I reviewed this paper before for a different journal, and so
+some of these criticisms may strike the author as familiar.  The
+criticisms are no less damaging for having been ignored once.
+
+My first complaint is that @ equivocates over what sort of thing an
+"instate" or "credal state" is.  On p. 2 @ is pretty clear that
+"'instates' ... mean[s]... a set of charp credence functions", and
+later on the same page "credal states are sets of probability
+functions".  But later, on p.17, @ says "Credal states keep track only
+of the committee's aggregate credal state, whereas doxastic states
+keep track of each committee member's individual sharp credences."
+And also (p.12) @ talks of "Blake's credence in H_iv dilates to an
+instate of [0,1]", but whether Blake learns "match" or "no match" she
+updates to *different* sets of probabilities, so it isn't clear that
+relfection has any purchase.  @'s discussion of this issue doesn't
+seem to have taken on board the discussion of the cited Bradley and
+Steele paper, nor of Topey's paper: Topey, Brett. "Coin flips,
+credences and the Reflection Principle." Analysis(2012).
+
+(Here I borrow from my earlier report, to outline some problems that
+remain problems in this newer version).
+
+The second problem is that the precise ("Laplacean") alternative to
+which the Boolean positions are ultimately compared is unclear. It
+seems to be an objectivist/entropy-maximising type view of subjective
+(precise) credence. Is this objectivity part of its appeal as an
+alternative to Bool-B? That is, could a hardcore de Finetti-style
+subjectivist not provide a precise alternative that plays the same
+role as a precise alternative to Bool-B?
+
+The third problem (and this is related to the second) is that @ makes
+use of a distinction between credal state and doxastic state that is
+never made clear, and seems very important. It seems to be a complex
+thing that involves the agent's evidence... What is a precise
+probabilist's doxastic state? And how does this differ from an
+imprecise doxastic state? Or are they the same, and the question is
+whether imprecise or precise credal states are the better companion to
+the complex doxastic state?
+
+Fourth, it's just not clear to me that AC1 and AC2 are desiderata for
+a formal model of rational belief. And if they aren't, then they
+aren't what's at stake in the debate between Booleans and Laplaceans.
+
+Here are some minor comments
+
+p.2 C_X is defined as a set of probability functions on algebra X, but
+this formalism is rarely used again.  Later C_1 and C_2 are apparently
+representing two sets of probabilities on the same algebra, sometimes
+the subscript is dropped, in short, the formalism in the paper is a
+mess.
+
+"[Booleans] may require [the credal set] to be a Borel set on the
+associated vector space if Omega is finite."  This is only ever a
+technical convenience, not a requirement of rationality, and it's one
+that @ never refers to again.  Why bother making such a recondite
+technical comment in an otherwise non-technical paper?
+
+p.3 @'s characterisation of "INTERN" is clearly mistaken.  Even
+Booleans think that one can learn about the bias of a coin from
+observing the outcome of tosses (OBTUSE worries aside for now).  But
+if Booleans stuck to the idea that only possible chance hypotheses
+were in the instate, then they could not learn by conditioning since
+the tosses are independent!  This is why it's important that the CGT
+is in terms of covering the spread of the chances, not in only
+containing the chances.
+
+p.5--6 the couple of pages on imprecise information theory seem
+needlessly detailed.  What point is being made here?  It is unclear.
+(@ may feel frustrated with me here, given that I was the one who
+suggested @ mention the extant work on generalised information theory
+at this juncture in my last review, but the point is not that I don't
+think it's worth mentioning, but rather that I think it needs to be
+fit into the narrative of the paper, rather than just dumped at the
+end of a section.)  The dialectic in this section is just really
+unclear.  Klir's best measure doesn't satisfy the constraints Joyce
+suggests, but it satisfies some other set of desiderata.  Mork's
+measure might not satisfy one of Klir's desiderata (although this is
+open as far as we know), but it *does* satisfy Joyce's constraints?
+Doesn't it?  This is something @ is disingenuously silent on.  So
+what's the upshot?  Work is ongoing and it's open whether we can find
+a perfect information measure for sets of probabilities.
+
+p.6 Lewis didn't claim his "summation" formula was original to him,
+and it's silly to attribute it to him.  Averaging over a parameter
+value is a pretty common practice in statistics.
+
+p.7 John Norton is another name that deserves mention in the providing
+arguments against precise probabilities.  He doesn't think imprecise
+credences can do the trick either, but others disagree.
+
+Example 3.  This seems like a good example of a case where we have
+good information about the chance process and we should all have sharp
+credences.  It would be unwise for @ to build @'s case around such a
+tendentious example.  It's totally unclear why a Boolean would not be
+entitled to reason in the way the precise probabilist can in this
+example.
+
+p.8 I'm not sure I agree with @'s analysis of the Hajek and Smithson
+example.  H&S are not saying that the agent has full belief in the
+chance hypothesis ch = 0.5381.  The point is, wouldn't it be weird to
+have such precise attitudes with respect to various bets on whether
+you'll get cancer given the imprecise nature of the information the
+doctor gave you.  It's not about full beliefs in chances: it's about
+the weirdly specific nature of the behaviour sanctioned by imprecise
+evidence on the precise view.
+
+p.10--11 The description of dilation is an utter mess.  The definition
+of the "c" function is a little vague.  We then see something of the
+form "c(X|Y)" which would only be defined if "X|Y" were a proposition,
+which it isn't (in the standard theory).  Though in fact, @ refers to
+"the proposition H_v|H_iv = H_v" at the top of page 11.  Knowing the
+argument, as I do, I can see what @ is trying to say in this passage.
+But the passage is a disaster.  Roger White nicely spells out the
+premises of the argument.  See also Topey, the SEP article on
+imprecise probabilities...
+
+p.11--12 REPETITION First, given that we start with the assumption
+that Blake has good reason to think coin iv fair and yet dilation
+still occurs, how would further evidence of the same thing convince
+Blake of anything?  Also, it's kind of unclear what information Blake
+is getting.  If Blake is learning both whether the coins match, and
+also whether coin_iv lands heads or tails on each toss, then Blake can
+inductively learn about coin_v.  So what is Blake actually learning?
+
+p.12--13 The description of the OBTUSE problem is insufficient.  @
+should at least refer to Rinard's paper on the topic, or the SEP
+section on "belief inertia".
+
+p.13 I expect Walley at least discussed (if not endorsed) versions of
+both of "Augustin's" concessions.  I really encourage @ to read
+Walley. At least chapters 1, parts of 2 and 5.
+
+p.14 @'s comment on Example 8 is misguided.  Note that C'' is also
+constrained by c(Z) > 1/2.  So Joyce is right that C' and C'' deliver
+the same sets of values.
+
+p.17 @'s comments that precise probabilities cooperate better with
+information theory seems at odds with the in depth discussion of
+generalised information theory earlier in the paper.
+
+I think the final part of the paper, on the broadly epistemicist view
+of credal states is an interesting one, and deserves further
+elaboration.  (This is, to me, the most interesting part of the
+paper).  One thing I'd encourage @ to engage with in this context is
+the idea that, just like supervaluationism seems like the right logic
+for what an epistemicist could know, imprecise credences seems like
+the right representation for a credal epistemicist's access to her
+belief states.
+
+
+
+Reviewer #3: see attached file
+
+
+
+There is additional documentation related to this decision letter. To access the file(s), please click the link below. You may also login to the system and click the 'View Attachments' link in the Action column. 
+
+http://phil.edmgr.com/l.asp?i=69482&l=FQG83UOS
+

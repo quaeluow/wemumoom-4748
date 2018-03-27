@@ -1,0 +1,1277 @@
+1,6c1,15
+< % This is the version submitted to Synthese. It is currently
+< % authoritative. However, there are no appendices. For those, consult
+< % the october version in 04-bjps. I used Springer style sheets for this
+< % version, so unfortunately for the next version you have to change
+< % things back to the way they are in the october version. I recommend to
+< % use eps files and latex from now on instead of pdf files and pdflatex.
+---
+> % This is our new authoritative version, with comments by Paul B
+> % integrated and now latexable rather than pdflatexable. Note, however,
+> % further below that some formal passages are missing. The october
+> % version in the 04-bjps folder still has this content.
+> 
+> % present the powerset approach as an experiment confirming intuition T2
+> 
+> % This is the Synthese version, which is the BJPS version edited for
+> % publication in Synthese. The file submitted to Synthese is
+> % synthese.tex in this directory, but it is this file which is the
+> % authoritative depository. Things are complicated now. This should be
+> % the better text. However, there are things missing, especially the
+> % more formal content (see below, appendices, differentiation of DKL
+> % etc.). The october version (not the bjps version) in the folder
+> % 04-bjps should still have all the formal content.
+27,28c36,37
+< \documentclass[12pt]{article}
+< \usepackage{december}
+---
+> \documentclass[11pt]{article}
+> \usepackage{october}
+31a41,54
+> % keywords: judy benjamin, principle of maximum entropy, coarsening at random, full employment theorem, probability kinematics, epistemic entrenchment
+> 
+> \title{The Principle of Maximum Entropy and a Problem in Probability Kinematics}
+> 
+> \author{Stefan Lukits}
+> \date{}
+> 
+> \maketitle
+> 
+> % \doublespacing
+> 
+> % {\noindent}\textsc{The Principle of Maximum Entropy \newline and a Problem in
+> % Probability Kinematics}
+> 
+33,50c56,68
+<   \noindent Given a set of probabilities on an event space and a new
+<   observation, it is common to form updated probabilities by using
+<   rules of conditioning. Some observations pose constraints that
+<   cannot be addressed by standard conditional probabilities or Jeffrey
+<   conditioning. The principle of maximum entropy claims that it is
+<   then appropriate to form an updated probability assessment by
+<   minimizing information gain consistent with the observation.
+<   Opposition to the principle of maximum entropy leans heavily on a
+<   counterexample: the Judy Benjamin problem. The article shows that an
+<   intuitive approach, which on account of independence assumptions
+<   should support the opponents, turns out to support the principle of
+<   maximum entropy instead. The main target of the article is
+<   independence assumptions that opponents improperly apply to give the
+<   appearance that the solution provided by the principle of maximum
+<   entropy is implausible.
+<   % \keywords{Judy Benjamin \and Principle of Maximum Entropy \and
+<   %   Coarsening at Random \and Full Employment Theorem \and Probability
+<   %   Kinematics \and Epistemic Entrenchment}
+---
+>   \noindent Given a more general type of evidence than Bayes' formula
+>   will accommodate, the principle of maximum entropy (\textsc{maxent})
+>   provides a unique solution for the posterior probability
+>   distribution based on the intuition that the information gain
+>   consistent with assumptions and evidence should be minimal.
+>   Opponents of objective methods to determine these probabilities
+>   prominently cite van Fraassen's Judy Benjamin case to undermine the
+>   generality of \textsc{maxent}. This article shows that an intuitive
+>   approach to Judy Benjamin's case supports \textsc{maxent}. This is
+>   surprising because based on independence assumptions the anticipated
+>   result is that it would support the opponents. It also demonstrates
+>   that opponents improperly apply independence assumptions to the
+>   problem.
+52a71,133
+> % \begin{abstract}
+> %   \noindent Given a set of probabilities on an event space and a new
+> %   observation, it is common to form updated probabilities by using
+> %   rules of conditioning. Some observations pose constraints that
+> %   cannot be addressed by standard conditional probabilities or Jeffrey
+> %   conditioning. The principle of maximum entropy (abbreviated
+> %   \textsc{maxent}) claims that it is then appropriate to form an
+> %   updated probability assessment by minimizing information gain
+> %   consistent with the observation. Opposition to the \textsc{maxent}
+> %   leans heavily on one counterexample: the Judy Benjamin problem. This
+> %   article shows that an intuitively plausible approach that should
+> %   support the opponents' case turns out to support the
+> %   \textsc{maxent}. It becomes apparent that the opponents improperly
+> %   apply independence assumptions to the problem.
+> % \end{abstract}
+> 
+> % \begin{abstract}
+> %   When we have a set of prior probabilities and make an observation,
+> %   we use probability updating or conditioning to provide a set of
+> %   posterior probabilities. If we attain the new information in the
+> %   form of an event, the use of conditional probabilities is a widely
+> %   accepted form of arriving at appropriate posterior probabilities.
+> %   Sometimes the information does not come in the form of an event and
+> %   Jeffrey conditioning can be used. Some observations pose affine
+> %   constraints that cannot even be addressed by Jeffrey conditioning.
+> %   The Principle of Maximum Entropy (PME) claims that in this case it
+> %   is appropriate to form a posterior probability assessment by
+> %   minimizing the information gain with respect to the prior
+> %   probabilities that is consistent with the evidence. There is strong
+> %   opposition to the PME, some of which leans heavily on one particular
+> %   counterexample: the Judy Benjamin problem. This article shows that a
+> %   new approach that, based on its independence assumptions, should
+> %   support the opponents' case turns out to support the PME. In
+> %   addition, the article demonstrates by providing counterexamples that
+> %   independence assumptions commonly made by opponents are improperly
+> %   applied to the problem.
+> % \end{abstract}
+> 
+> % word count (* 456 13.7) 6247
+> % abstract: 104
+> % main text: 4378
+> % references: 489
+> % appendix: 332
+> 
+> % \newpage
+> 
+> % \noindent \textsc{The Principle of Maximum Entropy \newline and a Problem in Probability Kinematics}
+> 
+> % \bigskip
+> 
+> % \begin{quotex}
+> %   Acknowledgments: Thanks to James Baugh at the Mathematics Department
+> %   at GCSU in Milledgeville, GA, for helping me when I was stuck with
+> %   an integral. Somebody hiding behind the pseudonym micromass helped
+> %   me with a binomial identity on physicsforums.com. Thanks to
+> %   Jan-Willem Romeijn, Adom Giffin, and Paul Bartha for comments in
+> %   writing and the many verbal comments from participants at the 2011
+> %   meeting of the Canadian Society for the History and Philosophy of
+> %   Science in Fredericton, NS. Thank you to my students at Vancouver
+> %   Community College. Thank you to Donat Berghuber, who taught me 0.95
+> %   of the mathematical skills I needed for this paper.
+> % \end{quotex}
+> 
+54c135
+< \label{intro}
+---
+> \label{Introduction}
+56,59c137,140
+< \nias Probability kinematics is the field of inquiry asking how we
+< should update a probability distribution in the light of evidence. If
+< the evidence comes as an event, it is relatively uncontroversial to
+< use conditional probabilities (call this standard conditioning).
+---
+> Probability kinematics is the field of inquiry asking how we should
+> update a probability distribution in the light of evidence. If the
+> evidence comes as an event, it is relatively uncontroversial to use
+> conditional probabilities (call this standard conditioning).
+63,69c144,151
+< expressible in a shift in expectation (see \scite{7}{hobson71}{}). Bas
+< van Fraassen has come up with an example from the 1980 comedy film
+< \emph{Private Benjamin} 
+< (see van Fraassen, 1981)\nonsc{}, 
+< % (see \scite{7}{fraassen81}{})\nonsc{}, 
+< in which Goldie Hawn portrays a Jewish-American woman (Judy Benjamin)
+< who joins the U.S. Army.
+---
+> expressible in a shift in expectation (see \scite{7}{hobson71}{}).
+> Jeffrey conditionalization can deal with some of these cases, but not
+> with all of them (see figure~\ref{fig:aff}). Bas van Fraassen has come
+> up with an example for a case in which we cannot apply Jeffrey
+> conditionalization. The example is from the 1980 comedy film
+> \emph{Private Benjamin} (see \scite{7}{fraassen81}{})\nonsc{}, in
+> which Goldie Hawn portrays a Jewish-American woman (Judy Benjamin) who
+> joins the U.S. Army.
+71c153,174
+< \begin{figure}[h]
+---
+> \begin{figure}[h!]
+>   \begin{flushright}
+>     \begin{minipage}[h]{.8\linewidth}
+>       \includegraphics[width=\textwidth]{affine1.eps}
+>       \caption{Information that leads to unique solutions for
+>         probability updating using \textsc{maxent} must come in the
+>         form of an affine constraint (a constraint in the form of an
+>         informationally closed and convex space of probability
+>         distributions consistent with the information). All
+>         information that can be processed by Jeffrey conditioning
+>         comes in the form of an affine constraint, and all information
+>         that can be processed by standard conditioning can also be
+>         processed by Jeffrey conditioning. The solutions of
+>         \textsc{maxent} are consistent with the solutions of Jeffrey
+>         conditioning and standard conditioning where the latter two
+>         are applicable.}
+>       \label{fig:aff}
+>     \end{minipage}
+>   \end{flushright}
+> \end{figure}
+> 
+> \begin{figure}[h!]
+74d176
+<       % \includegraphics[width=\textwidth]{judy.pdf}
+86,104c188,205
+< She is on team Blue. Because of the map, her probability of being in
+< Blue territory equals the probability of being in Red territory, and
+< being in the Red Second Company area equals the probability of being
+< in the Red Headquarters area. Her commanders inform Judy by radio that
+< in case she is in Red territory, her chance of being in the Red
+< Headquarters area is three times the chance of being in the Red Second
+< Company area.
+< 
+< At the heart of our investigation are two incompatible but independently
+< plausible intuitions regarding Judy's choice of updated probabilities for her
+< location (much more in the next section). First we note, however, that there
+< is no immediately obvious event space in which we can condition on an event
+< of which we are certain. Grove and Halpern have written an article
+< \scite{1}{grovehalpern97}{} on how to construct such event spaces and then
+< condition on the event that Judy Benjamin receives the information that she
+< receives from her commanders. They admit, however, that the construction of
+< such spaces (sometimes called retrospective conditioning) is an exercise in
+< filling in missing details and supplying information not contained in the
+< original problem.
+---
+> She is on team Blue. Because of the map, initially the probability of
+> being in Blue territory equals the probability of being in Red
+> territory, and the probability of being in the Red Second Company area
+> equals the probability of being in the Red Headquarters area. Her
+> commanders then inform Judy by radio that in case she is in Red
+> territory, her chance of being in the Red Headquarters area is three
+> times the chance of being in the Red Second Company area. The question
+> is what Judy's appropriate response is to this new evidence.
+> 
+> We cannot apply standard conditioning, because there is no immediately
+> obvious event space in which we can condition on an event of which we
+> are certain. Grove and Halpern \scite{1}{grovehalpern97}{} have
+> offered a proposal for constructing such event spaces and then
+> conditioning on the event that Judy Benjamin receives the information
+> that she receives from her commanders. They admit, however, that the
+> construction of such spaces (sometimes called retrospective
+> conditioning) is an exercise in filling in missing details and
+> supplying information not contained in the original problem.
+116c217,218
+< to solve the Judy Benjamin problem.
+---
+> to solve the Judy Benjamin problem. For reasons provided in the body
+> of the paper their case is implausible.
+119,123c221,224
+< conditioning and Jeffrey's rule) is to consult a highly contested
+< procedure to find an objective updating procedure in case the first
+< two scenarios do not apply: the principle of maximum entropy (from now
+< on \textsc{maxent} for abbreviation). \textsc{maxent} can be applied
+< to any situation in which we have a completely quantified probability
+---
+> conditioning and Jeffrey conditioning) is to consult a highly
+> contested updating procedure: the principle of maximum entropy
+> (\textsc{maxent} for short). \textsc{maxent} can be applied to any
+> situation in which we have a completely quantified probability
+142,145c243,246
+< is an important tool of probability kinematics, but that results of
+< \textsc{maxent} that are difficult to accept (such as in the Judy
+< Benjamin case) urge us to embrace a more pluralistic,
+< situation-specific methodology.
+---
+> is an important tool of probability kinematics. Noting that some
+> results of \textsc{maxent} are difficult to accept (such as in the
+> Judy Benjamin case), however, they urge us to embrace a more
+> pluralistic, situation-specific methodology.
+156,171c257,271
+< \scite{2}{diaconiszabell82}{829}. \qeins{Great caution}
+< \scite{2}{howsonfranklin94}{456} is also what Colin Howson and Allan
+< Franklin advise about the more basic claim that the updated
+< probabilities provided by \textsc{maxent} are as like the original
+< probabilities as it is possible to be given the constraints imposed by
+< the data.
+< 
+< Igor Douven and Jan-Willem Romeijn agree with Richard Bradley that
+< \qeins{even Bayes' rule \qzwei{should not be thought of as a universal
+<     and mechanical rule of updating, but as a technique to be applied
+<     in the right circumstances, as a tool in what Jeffrey terms
+<     \emph{the art of judgment}.} In the same way, determining and
+<   adapting the weights {\ldots} may be an art, or a skill, rather than
+<   a matter of calculation or derivation from more fundamental
+<   epistemic principles} \scite{2}{douvenromeijn09}{16} (for the
+< Bradley quote see \scite{8}{bradley05}{362}).
+---
+> \scite{2}{diaconiszabell82}{829}. \qeins{Great caution} (1994,
+> 456)\nonsc{} is also what Colin Howson and Allan Franklin advise about
+> the more basic claim that the updated probabilities provided by
+> \textsc{maxent} are as like the original probabilities as it is
+> possible to be given the constraints imposed by the data.
+> 
+> In the same vein, Igor Douven and Jan-Willem Romeijn agree with
+> Richard Bradley that \qeins{even Bayes' rule \qzwei{should not be
+>     thought of as a universal and mechanical rule of updating, but as
+>     a technique to be applied in the right circumstances, as a tool in
+>     what Jeffrey terms \emph{the art of judgment}.} In the same way,
+>   determining and adapting the weights {\ldots} may be an art, or a
+>   skill, rather than a matter of calculation or derivation from more
+>   fundamental epistemic principles} \scite{2}{douvenromeijn09}{16}
+> (for the Bradley quote see \scite{8}{bradley05}{362}).
+173,174c273,274
+< What is lacking in the literature is an explanation by \textsc{maxent}
+< advocates of the counterintuitive behaviour of the cases repeatedly
+---
+> What is lacking in the literature is a response by \textsc{maxent}
+> advocates to the counterintuitive behaviour of the cases repeatedly
+189,200c289,302
+< We will undermine the notion that \textsc{maxent}'s solution for the
+< Judy Benjamin problem is counterintuitive. The intuition that
+< \textsc{maxent}'s solution for the Judy Benjamin problem violates
+< (call it T1) is based on fallacious independence and uniformity
+< assumptions. There is another powerful intuition (call it T2) in
+< direct contradiction to T1 which \textsc{maxent} obeys. Therefore,
+< Halpern does not give us sufficient grounds for the eclecticism
+< advocated throughout his book. We will show that another intuitive
+< approach, the powerset approach, lends significant support to the
+< solution provided by \textsc{maxent} for the Judy Benjamin problem,
+< especially in comparison to intuition T1, many of whose independence
+< and uniformity assumptions it shares. 
+---
+> At the heart of our investigation are two incompatible but
+> independently plausible intuitions regarding Judy's choice of updated
+> probabilities for her location. We will undermine the notion that
+> \textsc{maxent}'s solution for the Judy Benjamin problem is
+> counterintuitive. The intuition that \textsc{maxent}'s solution for
+> the Judy Benjamin problem violates (call it T1) is based on fallacious
+> independence and uniformity assumptions. There is another powerful
+> intuition (call it T2) that conflicts with T1 and obeys
+> \textsc{maxent}. Therefore, Halpern does not give us sufficient
+> grounds for the eclecticism advocated throughout his book. We will
+> show that another intuitive approach, the powerset approach, lends
+> significant support to the solution provided by \textsc{maxent} for
+> the Judy Benjamin problem, especially in comparison to intuition T1,
+> many of whose independence and uniformity assumptions it shares. 
+205,222c307,324
+<   properties} (so-called by an anonymous reviewer) of \textsc{maxent}:
+< It seamlessly generalizes standard conditioning and Jeffrey's rule
+< where they are applicable (see \scite{7}{catichagiffin06}{}). It is
+< essential to the entropy concentration phenomenon described in Jaynes'
+< standard work \emph{Probability Theory: the Logic of Science}, which
+< contains other arguments in favour of \textsc{maxent}, some of which
+< you may recognize by family resemblance in the rest of this paper.
+< Entropy concentration refers to the unique property of the
+< \textsc{maxent} solution to have other distributions which obey the
+< affine constraint cluster around it. Shore and Johnston have shown
+< that under certain rationality assumptions \textsc{maxent} is the
+< unique solution to problems of probability update (see
+< \scite{7}{shorejohnson80}{}). When used to make predictions whose
+< quality is measured by a logarithmic score functions, posterior
+< probabilities provided by \textsc{maxent} result in minimax optimal
+< decisions (see \scite{7}{topsoe79}{}, \scite{7}{walley91}{}, and
+< \scite{7}{grunwald00a}{}). Under a logarithmic scoring rule these
+< posterior probabilities are in some sense optimal.
+---
+>   properties} of \textsc{maxent}. It seamlessly generalizes standard
+> conditioning and Jeffrey's rule where they are applicable (see
+> \scite{7}{catichagiffin06}{}). It underlies the entropy concentration
+> phenomenon described in Jaynes' standard work \emph{Probability
+>   Theory: the Logic of Science}, which contains other arguments in
+> favour of \textsc{maxent} (some of which you may recognize by family
+> resemblance in the rest of this paper). Entropy concentration refers
+> to the unique property of the \textsc{maxent} solution to have other
+> distributions which obey the affine constraint cluster around it.
+> Shore and Johnston have shown that under certain rationality
+> assumptions \textsc{maxent} provides the unique solution to problems
+> of probability updating (see \scite{7}{shorejohnson80}{}). When used
+> to make predictions whose quality is measured by a logarithmic score
+> functions, posterior probabilities provided by \textsc{maxent} result
+> in minimax optimal decisions (see \scite{7}{topsoe79}{},
+> \scite{7}{walley91}{}, and \scite{7}{grunwald00a}{}). Under a
+> logarithmic scoring rule these posterior probabilities are in some
+> sense optimal.
+228,244c330,347
+< necessary. There are numerous problems here that need addressing. What
+< do we mean by rationality? What are the semantics of the word
+< \qnull{minimal}? What are the formal properties of such posterior
+< probabilities? Are they unique? Are they compatible with other
+< intuitive methods of updating? Are there counter-intuitive examples
+< that would encourage us to give up on this line of thought rather than
+< live with its consequences? Given persuasive answers to these
+< questions, however, \textsc{maxent} cuts a good figure as a first pass
+< to provide objective solutions to these types of problems. The burden
+< on opponents who deny that there are such objective solutions exist
+< grows heavy.
+< 
+< One particular emphasis in this paper is that the reasoning of the
+< opponents of \textsc{maxent} in the Judy Benjamin case is flawed
+< because they make independence assumptions that on closer inspection
+< do not hold up. We provide a number of scenarios which easily pass the
+< information given in the problem which violate these independence
+---
+> necessary. We are the first to admit that there are numerous problems
+> here that need addressing. What do we mean by rationality? What are
+> the semantics of the word \qnull{minimal}? What are the formal
+> properties of such posterior probabilities? Are they unique? Are they
+> compatible with other intuitive methods of updating? Are there
+> counter-intuitive examples that would encourage us to give up on this
+> line of thought rather than live with its consequences? Given some
+> decent answers to these questions, however, we feel that
+> \textsc{maxent} cuts a good figure as a first pass to provide
+> objective solutions to these types of problems, and the burden on
+> opponents who usually deny that there are such objective solutions
+> exist grows heavy.
+> 
+> The distinctive contribution of this paper is to show why the
+> reasoning of the opponents of \textsc{maxent} in the Judy Benjamin
+> case is flawed. They make independence assumptions that on closer
+> inspection do not hold up. We provide a number of scenarios consistent
+> with the information in the problem which violate these independence
+247,256c350,359
+< entitled to make independence assumptions. That, in turn, does not
+< privilege the \textsc{maxent} solution, although \textsc{maxent} does
+< not lean on independence assumptions that other solutions
+< illegitimately make. For \textsc{maxent} confronts us with a much
+< stronger claim than merely providing a passable or useful solution to
+< the Judy Benjamin problem: it lays claim to much greater generality
+< and, abhorred by many formal epistemologists, to objectivity. These
+< claims must be motivated elsewhere---we are only showing that
+< opponents cannot claim an easy victory by pulling out old Judy
+< Benjamin, although this is still widely practised.
+---
+> entitled to make those independence assumptions. That, in turn, does
+> not privilege the \textsc{maxent} solution, although \textsc{maxent}
+> does not lean on independence assumptions that other solutions
+> illegitimately make. \textsc{maxent}, however, confronts us with a
+> much stronger claim than merely providing a passable or useful
+> solution to the Judy Benjamin problem: it lays claim to much greater
+> generality and, to use a term abjured by many formal epistemologists,
+> to objectivity. These claims must be motivated elsewhere. We are only
+> showing that opponents cannot claim an easy victory by pulling out old
+> Judy Benjamin.
+261,268c364,371
+< irreducibly accompanied by thoughtful deliberation choosing between
+< approaches depending on individual problems, or (the physicists)
+< problems are ill-posed if they do not contain the information
+< necessary to let a non-arbitrary, objective process arrive at a
+< unique updated probability distribution. In the literature, Judy
+< Benjamin serves as an example to defend in favour of the philosophers
+< what I shall call the full employment theorem of probability
+< kinematics.
+---
+> irreducibly accompanied by thoughtful deliberation with the choice
+> between approaches depending on individual problems, or (the
+> physicists) problems are ill-posed if they do not contain the
+> information necessary to let a non-arbitrary, objective process arrive
+> at a unique updated probability distribution. In the literature, Judy
+> Benjamin serves as an example widely taken to count in favour of the
+> philosophers. It is taken to support what I shall call the full
+> employment theorem of probability kinematics.
+281,286c384
+< that no such proof is forthcoming in probability kinematics. The case
+< rests in a significant measure (see Halpern's book) on a
+< counterexample to \textsc{maxent}, the Judy Benjamin problem. We show
+< in this article that our intuitions are initially misguided about the
+< Judy Benjamin problem because we make independence and uniformity
+< assumptions that on closer examination are not tenable.
+---
+> that no such proof is forthcoming in probability kinematics. 
+289c387
+< \label{sec:2}
+---
+> \label{TwoIntuitions}
+291c389
+< \nias There are two pieces of information relevant to Judy Benjamin
+---
+> There are two pieces of information relevant to Judy Benjamin
+301,305c399,403
+< \item[({\ref{eq:map}})] Judy has no idea where she is. She is on team Blue.
+<   Because of the map, her probability of being in Blue territory
+<   equals the probability of being in Red territory, and being in the Red
+<   Second Company area equals the probability of being in the Red
+<   Headquarters area.
+---
+> \item[({\ref{eq:map}})] Judy has no idea where she is. Because of the
+>   map, her probability of being in Blue territory equals the
+>   probability of being in Red territory, and the probability of being
+>   in the Red Second Company area equals the probability of being in
+>   the Red Headquarters area.
+320c418
+<   q=P(A_{2}|A_{1}\cup{}A_{2})=\frac{3}{4}\tag{\mbox{HDQ}}
+---
+>   {\qvu}=P(A_{2}|A_{1}\cup{}A_{2})=\frac{3}{4}\tag{\mbox{HDQ}}
+345c443
+<   t=\frac{q}{1-q}
+---
+>   t=\frac{{\qvu}}{1-{\qvu}}
+350,351c448,449
+< Judy's particular case, $t=3$ and $q=0.75$. Van Fraassen found out
+< with various audiences that they have the following intuition:
+---
+> Judy's particular case, $t=3$ and ${\qvu}=0.75$. Two intuitions guide
+> the way people think about Judy Benjamin's situation.
+358,361c456,458
+< \nial There is another, conflicting intuition (due to Peter Williams via
+< personal communication with van Fraassen, 
+< see van Fraassen, 1981, 379)\nonsc{}:
+< % see \scite{8}{fraassen81}{379})\nonsc{}:
+---
+> \nial There is another, conflicting intuition (due to Peter Williams
+> via personal communication with van Fraassen, see
+> \scite{8}{fraassen81}{379})\nonsc{}:
+364c461
+< \item[\textbf{T2}] If the value of $q$ approaches $1$ (in other words,
+---
+> \item[\textbf{T2}] If the value of ${\qvu}$ approaches $1$ (in other words,
+369,373c466
+<   ({\ref{eq:map}}), $q_{3}$ should approach $2/3$. Continuity
+<   considerations pose a contradiction to T1. (These considerations are
+<   strong enough that Luc Bovens uses them as an assumption to solve
+<   Adam Elga's Sleeping Beauty problem by parity of reasoning in
+<   \scite{7}{bovens10}{}.)
+---
+>   ({\ref{eq:map}}), $q_{3}$ should approach $2/3$. 
+376,382c469,480
+< \nial To parse these conflicting intuitions, we will introduce several
+< methods to provide $G$, the function that maps $q$ to the appropriate
+< normalized updated odds vector $(q_{1},q_{2},q_{3})$. The first
+< method is extremely simple and accords with intuition T1:
+< $G_{\mbox{{\tiny ind}}}(q)=(0.5(1-q),0.5q,0.5)$. In Judy's particular
+< case with $t=3$ the normalized odds vector is (ind stands for
+< independent):
+---
+> \nial Continuity considerations pose a contradiction to T1. (These
+> considerations are strong enough that Luc Bovens uses them as an
+> assumption to solve Adam Elga's Sleeping Beauty problem by parity of
+> reasoning in \scite{7}{bovens10}{}.) To parse these conflicting
+> intuitions, we will introduce several methods to provide $G$, the
+> function that maps ${\qvu}$ to the appropriate normalized updated odds
+> vector $(q_{1},q_{2},q_{3})$. 
+> 
+> The first method is extremely simple and accords with intuition T1:
+> $G_{\mbox{{\tiny ind}}}({\qvu})=(0.5(1-{\qvu}),0.5{\qvu},0.5)$. In
+> Judy's particular case with $t=3$ the normalized odds vector is (ind
+> stands for independent):
+387,388c485,486
+< \nial Both Grove and Halpern \scite{1}{grovehalpern97}{} as well as
+< Douven and Romeijn \scite{1}{douvenromeijn09}{} make a case for this
+---
+> \nial Both Grove and Halpern \scite{1}{grovehalpern97}{} and Douven
+> and Romeijn \scite{1}{douvenromeijn09}{} make a case for this
+393,415c491,513
+< and (\ref{eq:hdq}), yielding a Jeffrey partition). T1, however,
+< conflicts with the symmetry requirements outlined in van Fraassen et.\
+< al.\ \scite{1}{fraassenetal86}{}.
+< 
+< Van Fraassen introduces various updating methods which do not conflict
+< with those symmetry requirements, the most notable of which is
+< \textsc{maxent}. Shore and Johnson have already shown that, given
+< certain assumptions (which have been heavily criticized, however,
+< e.g.\ \scite{7}{uffink96}{}), \textsc{maxent} produces the unique
+< updated probability assignment according with these assumptions. The
+< minimum information discrimination theorem of Kullback and Leibler
+< (see for example \scite{7}{csiszar67}{}, section 3) demonstrates how
+< Shannon's entropy and the Kullback-Leibler Divergence formula can
+< provide the least informative updated probability assignment (with
+< reference to the prior probability assignment) obeying the constraint
+< posed by the evidence. The idea is to define a space of probability
+< distributions, make sure that the constraint identifies a closed,
+< convex subset in this space, and then determine which of the
+< distributions in the closed, convex subset is least distant from the
+< prior probability distribution in terms of information (using the
+< minimum information discrimination theorem). It is necessary for the
+< uniqueness of this least distant distribution that the subset be
+< closed and convex (in other words, that the constraint be affine, see
+---
+> and (\ref{eq:hdq}), yielding a Jeffrey partition). 
+> 
+> T1, however, conflicts with the symmetry requirements outlined in van
+> Fraassen et.\ al.\ \scite{1}{fraassenetal86}{}. Van Fraassen
+> introduces various updating methods which do not conflict with those
+> symmetry requirements, the most notable of which is \textsc{maxent}.
+> Shore and Johnson have already shown that, given certain assumptions
+> (which have been heavily criticized, e.g.\ in \scite{7}{uffink96}{}),
+> \textsc{maxent} produces the unique updated probability assignment
+> according with these assumptions. The minimum information
+> discrimination theorem of Kullback and Leibler (see for example
+> \scite{7}{csiszar67}{}, section 3) demonstrates how Shannon's entropy
+> and the Kullback-Leibler Divergence formula can provide the least
+> informative updated probability assignment (with reference to the
+> prior probability assignment) obeying the constraint posed by the
+> evidence. The idea is to define a space of probability distributions,
+> make sure that the constraint identifies a closed, convex subset in
+> this space, and then determine which of the distributions in the
+> closed, convex subset is least distant from the prior probability
+> distribution in terms of information (using the minimum information
+> discrimination theorem). It is necessary for the uniqueness of this
+> least distant distribution that the subset be closed and convex (in
+> other words, that the constraint be affine, see
+438,449c536,545
+< \nias There are two ways in which we can arrive at result
+< ({\ref{eq:vmax}}).
+< 
+< We may use Jaynes' constraint rule and find the updated probability
+< distribution that is both least informative with respect to Shannon's
+< entropy and in accordance with the constraint (using Dempster's Rule
+< of Combination, which together with the constraint rule is equivalent
+< to the principle of minimum cross-entropy, see
+< \scite{8}{coverthomas06}{409}, exercise 12.2.). Alternatively, if
+< circumstances are favourable (as they are in Judy Benjamin's case), we
+< may use the Kullback-Leibler Divergence and differentiate it to obtain
+< where it is minimal.
+---
+> \nial There are two ways in which we can arrive at result
+> ({\ref{eq:vmax}}). We may use Jaynes' constraint rule and find the
+> updated probability distribution that is both least informative with
+> respect to Shannon's entropy and in accordance with the constraint
+> (using Dempster's Rule of Combination, which together with the
+> constraint rule is equivalent to the principle of minimum
+> cross-entropy, see \scite{8}{coverthomas06}{409}, exercise 12.2.).
+> Alternatively, if circumstances are favourable (as they are in Judy
+> Benjamin's case), we may use the Kullback-Leibler Divergence and
+> differentiate it to obtain where it is minimal.
+472c568
+< %   G_{\mbox{\tiny max}}(q)=\left(\frac{C}{1+Ct+C},t\frac{C}{1+Ct+C},1-(t+1)\frac{C}{1+Ct+C}\right)
+---
+> %   G_{\mbox{\tiny max}}({\qvu})=\left(\frac{C}{1+Ct+C},t\frac{C}{1+Ct+C},1-(t+1)\frac{C}{1+Ct+C}\right)
+480c576
+< distribution of $(q_{1},q_{2},q_{3})$ depending on the value of $q$
+---
+> distribution of $(q_{1},q_{2},q_{3})$ depending on the value of ${\qvu}$
+484c580
+< $q$ approaching 0 or 1.
+---
+> ${\qvu}$ approaching 0 or 1.
+486c582
+< \begin{figure}[h]
+---
+> \begin{figure}[h!]
+489d584
+<       % \includegraphics[width=\textwidth]{zeroone-unif.pdf}
+492c587
+<         according to intuition T1. $0<q<1$ forms the horizontal axis,
+---
+>         according to intuition T1. $0<{\qvu}<1$ forms the horizontal axis,
+495c590
+<         vertical line at $q=0.75$ shows the specific updated
+---
+>         vertical line at ${\qvu}=0.75$ shows the specific updated
+503c598
+< \begin{figure}[h]
+---
+> \begin{figure}[h!]
+506d600
+<       % \includegraphics[width=\textwidth]{zeroone-mxnt.pdf}
+509c603
+<         \textsc{maxent}. $0<q<1$ forms the horizontal axis, the
+---
+>         \textsc{maxent}. $0<{\qvu}<1$ forms the horizontal axis, the
+512c606
+<         vertical line at $q=0.75$ shows the specific updated
+---
+>         vertical line at ${\qvu}=0.75$ shows the specific updated
+520,521c614,656
+< \section{Epistemic Entrenchment and Coarsening at Random}
+< \label{sec:3}
+---
+> \section{Epistemic Entrenchment}
+> \label{epent}
+> 
+> Consider two future events $A$ and $B$. You have partial belief in
+> whether they will occur and assign probabilities to them. Then you
+> learn that $A$ entails $B$. How does this information affect your
+> probability assignment for event $A$? If $A$ is causally independent
+> of $B$ then your updated probability for it should equal the original
+> probability. For example, whether Sarah and Marian have sundowners at
+> the Westcliff hotel tomorrow may initially not depend on the weather
+> at all, but if they learn that there will be a wedding and the hotel's
+> indoor facilities will be closed to the public, then rainfall tomorrow
+> implies no sundowners. Learning this conditional does not affect the
+> probability of the antecedent (rainfall tomorrow), because the
+> antecedent is causally independent of the consequent.
+> 
+> Here is another example (the two examples are from
+> \scite{7}{douvenromeijn09}{}). A jeweler has been robbed, and Kate has
+>   reason to assume that Henry might be the robber. Kate knows that he
+>   is not capable of actually injuring another person, but he may very
+>   well engage in robbery. When Kate hears from the investigator that
+>   the robber also shot the jeweler she concludes that Henry is not the
+>   robber. She has learned a conditional and adjusted the probability
+>   for the antecedent. The reason for this is that Kate was
+>   epistemically entrenched to uphold her belief in Henry's nonviolent
+>   nature. Updating probabilities upon learning a conditional depends
+>   on epistemic entrenchments.
+> 
+> In Judy Benjamin's case, (HDQ) is also a conditional. If Judy is in
+> Red territory, she is more likely to be in the Headquarters area.
+> According to \textsc{maxent}, the updated probability for the
+> antecedent of this conditional is raised. It appears that
+> \textsc{maxent} preempts our epistemic entrenchments and nolens volens
+> assigns a certain degree of confirmation to the antecedent of a
+> learned conditional. This degree of confirmation depends on the causal
+> dependency of the antecedent on the consequent. The compatibility of
+> epistemic entrenchments and \textsc{maxent} is material for another
+> paper, but in this section we will focus on the independence
+> assumptions that are improperly imported into the Judy Benjamin case
+> by detractors of \textsc{maxent}. We will be particularly critical of
+> Douven and Romeijn, who hold that the Judy Benjamin case is a case for
+> Adam's conditioning, where the antecedent is left alone in the
+> updating of probabilities. 
+523c658
+< \nias Even though T1 is an understandably strong intuition, it does
+---
+> Even though T1 is an understandably strong intuition, it does
+525,528c660,663
+< commanders may be dependent on whether she is in Blue or in Red
+< territory. To underline this objection to intuition T1 we want to
+< consider three scenarios, any of which may form the basis of the
+< partial information provided by her commanders.
+---
+> commanders may indeed be dependent on whether she is in Blue or in Red
+> territory. To underline this objection to intuition T1 consider three
+> scenarios, any of which may form the basis of the partial information
+> provided by her commanders.
+536c671
+<   is biased $q:1-q$ toward H with $q=0.75$. The normalized odds
+---
+>   is biased ${\qvu}:1-{\qvu}$ toward H with ${\qvu}=0.75$. The normalized odds
+560,573c695,708
+< {\nial}I--III demonstrate the contrast between scenarios when
+< independence is true and when it is not. Douven and Romeijn's capital
+< mistake in their paper is that they assume that the Judy Benjamin
+< problem is analogous to their example of Sarah and the sundowners at
+< the Westcliff (see \scite{8}{douvenromeijn09}{7}). Sarah, however,
+< knows that whether it rains or not is independent of her activity the
+< next night, whereas in Judy Benjamin we have no evidence of such
+< independence, as scenario II makes clear. This is not to say that
+< scenario II is the scenario that pertains in Judy Benjamin's case. It
+< only says that there is no natural assumption in Judy Benjamin's case
+< that the probabilities are independent of each other in light of the
+< new evidence, for scenario II is perfectly natural (whether it is true
+< or not is a completely different question) and reveals how dependence
+< can naturally flow from the information that Judy Benjamin receives.
+---
+> I--III demonstrate the contrast between scenarios when independence is
+> true and when it is not. Douven and Romeijn's capital mistake in their
+> paper is that they assume that the Judy Benjamin problem is analogous
+> to their example of Sarah and sundowners at the Westcliff (see
+> \scite{8}{douvenromeijn09}{7}). Sarah, however, knows that whether it
+> rains or not is independent of her activity the next night, whereas in
+> Judy Benjamin we have no evidence of such independence, as scenario II
+> makes clear. This is not to say that scenario II is the scenario that
+> pertains in Judy Benjamin's case. It only says that there is no
+> natural assumption in Judy Benjamin's case that the probabilities are
+> independent of each other in light of the new evidence, for scenario
+> II is perfectly natural (whether it is true or not is a completely
+> different question) and reveals how dependence is consistent with the
+> information that Judy Benjamin receives.
+619,637d753
+< % \begin{table}
+< % % table caption is above the table
+< % % \caption{Please write your table caption here}
+< % \label{tab:1}       % Give a unique label
+< % % For LaTeX tables use
+< % \rowcolors{4}{lightgray}{lightgray}
+< % \begin{tabular}{|l|c|c|c|}
+< % \hline\noalign{\smallskip}
+< % Epistemic entrenchment & $q_{1}$ & $q_{2}$ & $q_{3}$ \\
+< % \noalign{\smallskip}\hline\noalign{\smallskip}
+< % with respect to $A_{1}$ & 1/4 & 3/4 & 0 \\
+< % with respect to $A_{2}$ & 1/12 & 1/4 & 2/3 \\
+< % with respect to $A_{3}$ & 1/8 & 3/8 & 1/2 \\
+< % \noalign{\smallskip}\hline
+< % \end{tabular}
+< % \end{table}
+< 
+< \bigskip
+< 
+646c762
+< \bigskip
+---
+> \section{Coarsening at Random}
+648c764
+< \nias Another at first blush forceful argument that \textsc{maxent}'s
+---
+> Another at first blush forceful argument that \textsc{maxent}'s
+650,661c766,780
+< with coarsening at random, or CAR for short. It is spelled out in
+< \scite{4}{gruenwaldhalpern03}{}, where the authors see a parallel
+< between the Judy Benjamin problem and Martin Gardner's Three Prisoners
+< problem (see \scite{8}{gardner59}{180f}). In the Three Prisoners
+< problem, three men (A, B, and C) are under sentence of death when the
+< governor decides to pardon one of them. The warden of the prison knows
+< which of the three men is pardoned, but none of the men do. In a
+< private conversation, A says to the warden, Tell me the name of one of
+< the others who will be executed---it will not give anything away
+< whether I will be executed or not. The warden agrees and tells A that
+< B will be executed. For the puzzling consequences, see the wealth of
+< literature on the Three Prisoners problem or the Monty Hall problem.
+---
+> with coarsening at random, or CAR for short. CAR involves using more
+> naive (or coarse) event spaces in order to arrive at solutions to
+> probability updating problems. The mechanics are spelled out in
+> \scite{1}{gruenwaldhalpern03}{}\nonsc{}. Gr{\"u}nwald and Halpern see
+> a parallel between the Judy Benjamin problem and Martin Gardner's
+> Three Prisoners problem (see \scite{8}{gardner59}{180f}). In the Three
+> Prisoners problem, three men (A, B, and C) are under sentence of death
+> when the governor decides to pardon one of them. The warden of the
+> prison knows which of the three men is pardoned, but none of the men
+> do. In a private conversation, A says to the warden, Tell me the name
+> of one of the others who will be executed---it will not give anything
+> away whether I will be executed or not. The warden agrees and tells A
+> that B will be executed. For the puzzling consequences, see the wealth
+> of literature on the Three Prisoners problem or the Monty Hall
+> problem.
+763,768c882,888
+< it is set up by Gr{\"u}nwald and Halpern fails. A successful criticism
+< would be directed at the construction of the \qnull{naive} space: this
+< is what we just accomplished for the Three Prisoners problem. There is
+< no parallel procedure for the Judy Benjamin problem. The \qnull{naive}
+< space is all we have, and \textsc{maxent} is the appropriate tool to
+< deal with this lack of information.
+---
+> it is set up by Gr{\"u}nwald and Halpern fails because of this crucial
+> difference. A successful criticism would be directed at the
+> construction of the \qnull{naive} space: this is what we just
+> accomplished for the Three Prisoners problem. There is no parallel
+> procedure for the Judy Benjamin problem. The \qnull{naive} space is
+> all we have, and \textsc{maxent} is the appropriate tool to deal with
+> this lack of information.
+771c891
+< \label{sec:4}
+---
+> \label{powerset}
+773c893
+< \nias In this section, we will focus on scenario III and consider what
+---
+> In this section, we will focus on scenario III and consider what
+775,782c895,901
+< the powerset approach. Two remarks are in order: First, the powerset
+< approach has little independent appeal. The reason behind using
+< \textsc{maxent} is that we want our evidence to have just the right
+< influence on our updated probabilities, i.e.\ neither over-inform
+< nor under-inform. There is no corresponding reason why we should
+< update our probabilities using the powerset approach.
+< 
+< Second, what the powerset approach does is lend support to another
+---
+> the powerset approach. Two remarks are in order. On the one hand, the
+> powerset approach has little independent appeal. The reason behind
+> using \textsc{maxent} is that we want our evidence to have just the
+> right influence on our updated probabilities, i.e.\ neither
+> over-inform nor under-inform. There is no corresponding reason why we
+> should update our probabilities using the powerset approach. On the
+> other hand, what the powerset approach does is lend support to another
+786,795c905,921
+< information. It would be especially interesting if the powerset
+< approach did not support the independence and uniformity assumptions
+< of intuition T1, because both of these features are strongly
+< represented in the powerset approach. On its own the powerset approach
+< is just what Gr{\"u}nwald and Halpern call a naive space, for which
+< CAR does not hold. Hence the powerset approach will not give us a
+< precise solution for the problem, although it may with some
+< plausibility guide us in the right direction---especially if despite
+< all its independence and uniformity assumptions it significantly
+< disagrees with intuition T1.
+---
+> information.
+> 
+> In the process of arriving at the formal result, the powerset approach
+> resembles an empirical experiment. We are making many assumptions
+> favouring T1, but when the result comes in it supports T2 in
+> astonishingly non-trivial ways. The powerset approach provides support
+> for \textsc{maxent} against T1 because it combines the assumptions
+> grounding T1 with a limit construction and still yields a solution
+> that closely approximates the one generated by \textsc{maxent} rather
+> than the one generated by T1.
+> 
+> On its own the powerset approach is just what Gr{\"u}nwald and Halpern
+> call a naive space, for which CAR does not hold. Hence the powerset
+> approach will not give us a precise solution for the problem, although
+> it may with some plausibility guide us in the right
+> direction---especially if despite all its independence and uniformity
+> assumptions it significantly disagrees with intuition T1.
+815c941
+< Let's assume a partition of the Blue and Red territories into sets of
+---
+> Let us assume a partition of the Blue and Red territories into sets of
+823c949
+< ourselves to rectangles) in $A_{2}$ than there are in $A_{1}$. In
+---
+> ourselves to rectangles) in $A_{2}$ as there are in $A_{1}$. In
+828c954
+< \begin{figure}[h]
+---
+> \begin{figure}[h!]
+831d956
+<       % \includegraphics[width=\textwidth]{partition-2.pdf}
+842c967
+< \begin{figure}[h]
+---
+> \begin{figure}[h!]
+845d969
+<       % \includegraphics[width=\textwidth]{partition-1.pdf}
+857c981
+< number of partition elements (rectangles) that are in $A_{3}$ and the
+---
+> number of partition elements (rectangles) that are in $A_{3}$ to the
+883c1007
+< farther apart in the middle, as $t=q/(1-q)$. Comparing the graphs of
+---
+> farther apart in the middle, as $t={\qvu}/(1-{\qvu})$. Comparing the graphs of
+890c1014
+< \begin{figure}[h]
+---
+> \begin{figure}[h!]
+893d1016
+<       % \includegraphics[width=\textwidth]{zeroone-pwst.pdf}
+896c1019
+<         according to the powerset approach. $0<q<1$ forms the
+---
+>         according to the powerset approach. $0<{\qvu}<1$ forms the
+899c1022
+<         $(q_{1},q_{2},q_{3})$. The vertical line at $q=0.75$ shows the
+---
+>         $(q_{1},q_{2},q_{3})$. The vertical line at ${\qvu}=0.75$ shows the
+910d1032
+< % find out that in the mathematical analysis $\alpha_{t,s}$ converges to
+912,915c1034,1035
+< a non-trivial factor and do not tend to negative or positive infinity,
+< enabling a graph of the normalized odds vector that is not of the
+< simple nature of the graph suggested by Grove and Halpern. Most
+< surprisingly, the powerset approach, prima facie unrelated to an
+---
+> a non-trivial factor and do not tend to negative or positive infinity.
+> Most surprisingly, the powerset approach, prima facie unrelated to an
+928c1048
+< in \scite{7}{fraassenetal86}{} and intuition T2. The uniformity
+---
+> in \scite{1}{fraassenetal86}{} and intuition T2. The uniformity
+930,955c1050,1362
+< intuition which most people have when they first hear the story. Two
+< arguments attenuate the position of the uniformity approach in
+< comparison with the others. 
+< 
+< First, T1 rests on an independence assumption which is not reflected
+< in the problem. Although there is no indication that what Judy's
+< commanders tell her is in any way dependent on her probability of
+< being in Blue territory, it is not excluded either (see scenarios
+< I--III earlier in this paper). \textsc{maxent} takes this uncertainty
+< into consideration. Second, when we investigate the problem using the
+< powerset approach it turns out that a division into equally probable,
+< independent, and increasingly fine bits of information supports not
+< intuition T1 but rather intuition T2. \textsc{maxent}, for now, is
+< vindicated. We need to look for full employment not by cleverly
+< manipulating prior probabilities, but by making fresh observations,
+< designing better experiments, and partitioning the theory space more
+< finely.
+< 
+< % \section{References}
+< % \label{references}
+< 
+< % BibTeX users please use one of
+< % \bibliographystyle{spbasic}      % basic style, author-year citations
+< % \bibliographystyle{spmpsci}      % mathematics and physical sciences
+< % \bibliographystyle{spphys}       % APS-like style for physics
+< % \bibliography{}   % name your BibTeX data base
+---
+> intuition which most people have when they first hear the story. 
+> 
+> Two arguments attenuate the position of the uniformity approach in
+> comparison with the others. First, T1 rests on an independence
+> assumption which is not reflected in the problem. Although there is no
+> indication that what Judy's commanders tell her is in any way
+> dependent on her probability of being in Blue territory, it is not
+> excluded either (see scenarios II and III earlier in this paper).
+> \textsc{maxent} takes this uncertainty into consideration. Second,
+> when we investigate the problem using the powerset approach it turns
+> out that a division into equally probable, independent, and
+> increasingly fine bits of information supports not intuition T1 but
+> rather intuition T2. \textsc{maxent}, for now, is vindicated. We need
+> to look for full employment not by cleverly manipulating prior
+> probabilities, but by making fresh observations, designing better
+> experiments, and partitioning the theory space more finely.
+> 
+> % \newpage
+> 
+> % \kapt{Appendix I}
+> 
+> % \nias Appendix I provides a concise but comprehensive summary of
+> % Jaynes' constraint rule not easily obtainable in the literature.
+> % Jaynes applied it to the Brandeis Dice Problem (see
+> % \scite{8}{jaynes89}{243}), but does not give a mathematical
+> % justification.
+> 
+> % Let $f$ be a probability distribution on a finite space
+> % $x_{1},\ldots,x_{m}$ that fulfills the constraint 
+> % \begin{equation}
+> %   \label{eq:constraint}
+> % \sum_{i=1}^{m}r(x_{i})f(x_{i})=\alpha
+> % \end{equation}
+> 
+> % An affine constraint can always be expressed by assigning a value to
+> % the expectation of a probability distribution (see
+> % \scite{7}{hobson71}{}). In Judy Benjamin's case, for example, let
+> % $r(x_{1})=0, r(x_{2})=1, r(x_{3})={\qvu}\mbox{ and }\alpha={\qvu}$. Because $f$
+> % is a probability distribution it fulfills
+> % \begin{equation}
+> %   \label{eq:unity}
+> % \sum_{i=1}^{m}f(x_{i})=1
+> % \end{equation}
+> 
+> % We want to maximize Shannon's entropy, given the constraints
+> % ({\ref{eq:constraint}}) and ({\ref{eq:unity}}),
+> % \begin{equation}
+> %   \label{eq:entropy}
+> % -\sum_{i=1}^{m}f(x_{i})\ln(x_{i})
+> % \end{equation}
+> 
+> % We use Lagrange multipliers to define the functional
+> % \begin{equation}
+> %   \label{eq:functional}
+> % J(f)=-\sum_{i=1}^{m}f(x_{i})\ln{}f(x_{i})+\lambda_{0}\sum_{i=1}^{m}f(x_{i})+\lambda_{1}\sum_{i=1}^{m}r(x_{i})f(x_{i})\notag
+> % \end{equation}
+> % and differentiate it with respect to $f(x_{i})$
+> % \begin{equation}
+> %   \label{eq:funder}
+> % \frac{\partial{}J}{\partial{}f(x_{i})}=-\ln(f(x_{i}))-1+\lambda_{0}+\lambda_{1}r(x_{i})
+> % \end{equation}
+> 
+> % Set ({\ref{eq:funder}}) to $0$ to find the necessary condition to
+> % maximize ({\ref{eq:entropy}})
+> % \begin{equation}
+> %   \label{eq:coverthomas}
+> % g(x_{i})=e^{\lambda_{0}-1+\lambda_{1}r(x_{i})}\notag
+> % \end{equation}
+> 
+> % This is the Gibbs distribution. We still need to do two things: (a)
+> % show that the entropy of $g$ is maximal, and (b) show how to find
+> % $\lambda_{0}$ and $\lambda_{1}$. (a) is shown in Theorem 12.1.1 in
+> % Cover and Thomas \scite{1}{coverthomas06}{} and there is no reason to
+> % copy it here. 
+> 
+> % For (b), let
+> % \begin{equation}
+> %   \label{eq:l1}
+> % \lambda_{1}=-\beta\notag
+> % \end{equation}
+> % \begin{equation}
+> %   \label{eq:zet}
+> % Z(\beta)=\sum_{i=1}^{m}e^{-\beta{}r(x_{i})}\notag
+> % \end{equation}
+> % \begin{equation}
+> %   \label{eq:l0}
+> % \lambda_{0}=1-\ln(Z(\beta))\notag
+> % \end{equation}
+> 
+> % To find $\lambda_{0}$ and $\lambda_{1}$ we introduce the constraint
+> % \begin{equation}
+> %   \label{eq:logcon}
+> % -\frac{\partial}{\partial{}\beta}\ln(Z(\beta))=\alpha\notag
+> % \end{equation}
+> 
+> % To see how this constraint gives us $\lambda_{0}$ and $\lambda_{1}$,
+> % Jaynes' solution of the Brandeis Dice Problem (see
+> % \scite{8}{jaynes89}{243}) is a helpful example. We are, however,
+> % interested in a general proof that this choice of $\lambda_{0}$ and
+> % $\lambda_{1}$ gives us the probability distribution maximizing the
+> % entropy. That $g$ so defined maximizes the entropy is shown in (a). We
+> % need to make sure, however, that with this choice of $\lambda_{0}$ and
+> % $\lambda_{1}$ the constraints ({\ref{eq:constraint}}) and
+> % ({\ref{eq:unity}}) are also fulfilled.
+> 
+> % First, we show
+> % % \begin{align}
+> % % &\mathbb{R}^{3}\mbox{ can be endowed with a metric }l_{2}\notag
+> % % \\
+> % % &\mbox{with constant positive curvature }K=k\label{carmor2}\tag{C2}
+> % % \end{align}
+> % \begin{align}
+> % &\sum_{i=1}^{m}g(x_{i})=\sum_{i=1}^{m}e^{\lambda_{0}-1+\lambda_{1}r(x_{i})}=e^{\lambda_{0}-1}\sum_{i=1}^{m}e^{\lambda_{1}r(x_{i})}=\notag\\
+> % &e^{-\ln(Z(\beta))}Z(\beta)=1\label{eq:unishow}\notag
+> % \end{align}
+> 
+> % Then, we show, by differentiating $\ln(Z(\beta))$ using the
+> % substitution $x=e^{-\beta}$
+> % \begin{align}
+> % &\alpha=-\frac{\partial}{\partial{}\beta}\ln(Z(\beta))=-\frac{1}{\sum_{i=1}^{m}x^{r(x_{i})}}\left(\sum_{i=1}^{m}r(x_{i})x^{r(x_{i})-1}\right)(-x)=\notag\\
+> % &\frac{\sum_{i=1}^{m}r(x_{i})x^{r(x_{i})}}{\sum_{i=1}^{m}x^{r(x_{i})}}\notag
+> % \end{align}
+> 
+> % And, finally,
+> % \begin{align}
+> % &\sum_{i=1}^{m}r(x_{i})g(x_{i})=\sum_{i=1}^{m}r(x_{i})e^{\lambda_{0}-1+\lambda_{1}r(x_{1})}=e^{\lambda_{0}-1}\sum_{i=1}^{m}r(x_{i})e^{\lambda_{1}r(x_{1})}=\notag\\
+> % &e^{\lambda_{0}-1}\sum_{i=1}^{m}r(x_{i})x^{r(x_{i})}=\alpha{}e^{\lambda_{0}-1}\sum_{i=1}^{m}x^{r(x_{i})}=\alpha{}e^{\lambda_{0}-1}\sum_{i=1}^{m}e^{-\beta{}r(x_{i})}=\notag\\
+> % &\alpha{}Z(\beta)e^{\lambda_{0}-1}=\alpha{}Z(\beta))e^{-\ln(Z(\beta))}=\alpha\notag
+> % \end{align}
+> 
+> % Filling in the variables from Judy Benjamin's scenario gives us result
+> % ({\ref{eq:vmax}}). The lambdas are:
+> %   \begin{displaymath}
+> %     \lambda_{0}=1-\ln\left(\sum_{i=1}^{m}e^{\lambda_{1}r(x_{i})}\right)\hspace{.3in}
+> %     \lambda_{1}=\ln{}{\qvu}-\ln(1-{\qvu})\notag
+> %   \end{displaymath}
+> 
+> %   We combine the normalized odds vector $(0.16,0.48,0.36)$ following
+> %   from these lambdas using Dempster's Rule of Combination with
+> %   ({\ref{eq:map}}) and get result ({\ref{eq:vmax}}).
+> 
+> % \medskip
+> 
+> % \kapt{Appendix II}
+> 
+> % \nias The binomial distribution dictates the value of $EX$, using
+> % simple combinatorics. In this case we require, again for convenience,
+> % that $n$ be divisible by $t$ and the \qnull{grain} of the partition
+> % $A$ be $s=n/t$. We introduce a few variables which later on will help
+> % for abbreviation:
+> % \begin{displaymath}
+> % n=ts\hspace{.5in}
+> % 2m=n\hspace{.5in}
+> % 2j=n-1\hspace{.5in}
+> % {T}=t^{2}+1
+> % \end{displaymath}
+> % $EX$, of course, depends both on the grain of $A$ and the value of
+> % $t$. It makes sense to make it independent of the grain by letting the
+> % grain become increasingly finer and by determining $EX$ as
+> % $s\rightarrow\infty$. This cannot be done for the binomial
+> % distribution, as it is notoriously uncomputable for large numbers
+> % (even with a powerful computer things get dicey around $s=10$). But,
+> % equally notorious, the normal distribution provides a good
+> % approximation of the binomial distribution and will help us arrive at
+> % a formula for $G_{\mbox{\tiny pws}}$ (corresponding to 
+> % $G_{\mbox{\tiny ind}}$ and $G_{\mbox{\tiny max}}$), determining the value $q_{3}$
+> % dependent on ${\qvu}$ as suggested by the powerset approach.
+> 
+> % First, we express the random variable $X$ by the two independent
+> % random variables $X_{12}$ and $X_{3}$. $X_{12}$ is the number of
+> % partition elements in the randomly chosen $C$ which are either in
+> % $A_{1}$ or in $A_{2}$ (the random variable of the number of partition
+> % elements in $A_{1}$ and the random variable of the number of partition
+> % elements in $A_{2}$ are decisively not independent, because they need
+> % to obey ({\ref{eq:hdq}})); $X_{3}$ is the number of partition elements
+> % in the randomly chosen $C$ which are in $A_{3}$. A relatively simple
+> % calculation shows that $EX_{3}=n$, which is just what we would expect
+> % (either the powerset approach or the uniformity approach would give us
+> % this result):
+> % \begin{displaymath}
+> %   EX_{3}=2^{-2n}\sum_{i=0}^{2n}i\binom{2n}{i}=n\mbox{ (use }\binom{n}{k}=\frac{n}{k}\binom{n-1}{k-1}\mbox{)}
+> % \end{displaymath}
+> 
+> % The expectation of $X$, $X$ being the random variable expressing the
+> % ratio of the number of sets covering $A_{3}$ and the number of sets
+> % covering $A_{1}\cup{}A_{2}\cup{}A_{3}$, is
+> % \begin{displaymath}
+> %   EX=\frac{EX_{3}}{EX_{12}+EX_{3}}=\frac{n}{EX_{12}+n}
+> % \end{displaymath}
+> % If we were able to use uniformity and independence, $EX_{12}=n$ and
+> % $EX=1/2$, just as Grove and Halpern suggest (although their uniformity
+> % approach is admittedly less crude than the one used here). Will the
+> % powerset approach concur with the uniformity approach, will it support
+> % the principle of maximum entropy, or will it make another suggestion
+> % on how to update the prior probabilities? To answer this question, we
+> % must find out what $EX_{12}$ is, for a given value $t$ and
+> % $s\rightarrow\infty$, using the binomial distribution and its
+> % approximation by the normal distribution.
+> 
+> % Using combinatorics,
+> % \begin{displaymath}
+> %   EX_{12}=(t+1)\frac{\sum_{i=1}^{s}i\binom{ts}{i}\binom{ts}{ti}}{\sum_{i=0}^{s}\binom{ts}{i}\binom{ts}{ti}}
+> % \end{displaymath}
+> 
+> % Let us call the numerator of this fraction NUM and the denominator
+> % DEN. According to the de Moivre-Laplace Theorem,
+> % \begin{displaymath}
+> %   \mbox{DEN}=\sum_{i=0}^{s}\binom{ts}{i}\binom{ts}{ti}\approx{}2^{2n}\sum_{i=0}^{s}\int_{i-\frac{1}{2}}^{i+\frac{1}{2}}\mathcal{N}(\frac{n}{2},\frac{n}{4})(i)\mathcal{N}(\frac{n}{2},\frac{n}{4})(ti)di
+> % \end{displaymath}
+> % where
+> % \begin{displaymath}
+> %   \mathcal{N}(\mu,\sigma^{2})(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left(-\frac{(x-\mu)^{2}}{2\sigma^{2}}\right)
+> % \end{displaymath}
+> % Substitution yields
+> % \begin{displaymath}
+> %   \mbox{DEN}\approx{}2^{2n}\frac{1}{\pi{}m}\sum_{i=0}^{s}\int_{i-\frac{1}{2}}^{i+\frac{1}{2}}\exp\left(-\frac{\left(x-m\right)^{2}}{m}-\frac{t^{2}\left(x-\frac{m}{t}\right)^{2}}{m}\right)dx
+> % \end{displaymath}
+> % Consider briefly the argument of the exponential function:
+> % \begin{displaymath}
+> %   -\frac{\left(x-m\right)^{2}}{m}-\frac{t^{2}\left(x-\frac{m}{t}\right)^{2}}{m}=-\frac{t^{2}}{m}({\aden}x^{2}+{\bden}x+{\cden})=-\frac{t^{2}}{m}\left({\aden}(x-{\hden})^{2}+{\kden}\right)
+> % \end{displaymath}
+> % with (the double prime sign corresponds to the simple prime sign for
+> % the numerator later on)
+> % \begin{displaymath}
+> % {\aden}=\frac{1}{t^{2}}{T}\notag\hspace{.5in}
+> % {\bden}=(-2m)\frac{1}{t^{2}}(t+1)\hspace{.5in}
+> % {\cden}=2m^{2}\frac{1}{t^{2}}
+> % \end{displaymath}
+> % \begin{displaymath}
+> % {\hden}=-{\bden}/2{\aden}\hspace{.5in}
+> % {\kden}={\aden}{\hden}^{2}+{\bden}{\hden}+{\cden}
+> % \end{displaymath}
+> % Consequently,
+> % \begin{displaymath}
+> % \mbox{DEN}\approx{}2^{2n}\exp\left(-\frac{t^{2}}{m}{\kden}\right)\sqrt{\frac{1}{\pi{}{\aden}mt^{2}}}\int_{-\infty}^{s+\frac{1}{2}}\mathcal{N}\left({\hden},\frac{m}{2{\aden}t^{2}}\right)dx
+> % \end{displaymath}
+> % And, using the error function for the cumulative density function of
+> % the normal distribution,
+> % \begin{equation}
+> %   \label{eq:den}
+> %   \mbox{DEN}\approx{}2^{2n-1}\sqrt{\frac{1}{\pi{}{\aden}mt^{2}}}\exp\left(-\frac{{\kden}t^{2}}{m}\right)\left(1-\erf({\wden})\right)
+> % \end{equation}
+> % with
+> % \begin{displaymath}
+> %   {\wden}=\frac{t\sqrt{{\aden}}\left(s+\frac{1}{2}-{\hden}\right)}{\sqrt{m}}
+> % \end{displaymath}
+> 
+> % We proceed likewise with the numerator, although the additional factor
+> % introduces a small complication:
+> %   \begin{eqnarray*}
+> %   \mbox{NUM}&=&\sum_{i=1}^{s}i\binom{ts}{i}\binom{ts}{ti}=\sum_{i=1}^{s}s\binom{ts}{i}\binom{ts-1}{ti-1}\\
+> % &\approx&s2^{2n-1}\sum_{i=1}^{s}\mathcal{N}\left(m,\frac{m}{2}\right)(i)\mathcal{N}\left(j,\frac{j}{2}\right)(ti-1)
+> % \end{eqnarray*}
+> % Again, we substitute and get
+> % \begin{displaymath}
+> %   \mbox{NUM}\approx{}s2^{2n-1}\left(\pi\sqrt{mj}\right)^{-1}\sum_{0}^{s-1}\int_{i-\frac{1}{2}}^{i+\frac{1}{2}}\exp\left({\anum}(x-{\hnum})^{2}+{\knum}\right)
+> % \end{displaymath}
+> % where the argument for the exponential function is
+> % \begin{displaymath}
+> %   -\frac{1}{mj}\left(j(x-m)^{2}+mt^{2}\left(x-\frac{j+1}{t}\right)^{2}\right)
+> % \end{displaymath}
+> % and therefore
+> % \begin{displaymath}
+> % {\anum}=j+mt^{2}\hspace{.5in}
+> % {\bnum}=2j(1-m)+2mt\left(t-j\right)\hspace{.5in}
+> % {\cnum}=j(1-m)^{2}+m\left(t-j-1\right)^{2}
+> % \end{displaymath}
+> % \begin{displaymath}
+> % {\hnum}=-{\bnum}/2{\anum}\hspace{.5in}
+> % {\knum}={\anum}{\hnum}^{2}+{\bnum}{\hnum}+{\cnum}
+> % \end{displaymath}
+> % Using the error function, 
+> % \begin{equation}
+> %   \label{eq:num}
+> %   \mbox{NUM}\approx{}2^{2n-2}\frac{s}{\sqrt{\pi{}{\anum}}}\exp\left(-\frac{{\knum}}{mj}\right)\left(1+\erf({\wnum})\right)
+> % \end{equation}
+> % with
+> % \begin{displaymath}
+> %   {\wnum}=\frac{\sqrt{{\anum}}\left(s-\frac{1}{2}-{\hnum}\right)}{\sqrt{mj}}
+> % \end{displaymath}
+> 
+> % Combining ({\ref{eq:den}}) and ({\ref{eq:num}}),
+> % \begin{eqnarray*}
+> %   EX_{12}&=&(t+1)\frac{\mbox{NUM}}{\mbox{DEN}}\\
+> % &\approx&\frac{1}{2}(t+1)\sqrt{\frac{{T}{}ts}{{T}{}ts-1}}se^{\alpha_{t,s}}
+> % \end{eqnarray*}
+> % for large $s$, because the arguments for the error function $w'$ and
+> % $w''$ escape to positive infinity in both cases (NUM and DEN) so that
+> % their ratio goes to 1. The argument for the exponential function is
+> % \begin{displaymath}
+> %   \alpha_{t,s}=-\frac{{\knum}}{mj}+\frac{{\kden}t^{2}}{m}
+> % \end{displaymath}
+> % and, for $s\rightarrow\infty$, goes to
+> % \begin{displaymath}
+> %   \alpha_{t}=\frac{1}{2}{T}^{-2}(2t^{3}-3t^{2}+4t-5)
+> % \end{displaymath}
+> 
+> % Notice that, for $t\rightarrow\infty$, $\alpha_{t}$ goes to $0$ and
+> % \begin{displaymath}
+> %   EX=\frac{n}{EX_{12}+n}\rightarrow\frac{2}{3}
+> % \end{displaymath}
+> % in accordance with intuition T2.
+> 
+> % \noindent\textbf{Endnotes}
+> 
+> % \theendnotes
+> 
+> \bigskip
+> 
+> % \newpage
+> 
+> \section{References}
+> \label{References}
+957c1364,1365
+< \bibliographystyle{april} 
+---
+> % \nocite{*} 
+> \bibliographystyle{ChicagoReedweb} 
+960c1368
+< \end{document}
+---
+> \end{document}
+\ No newline at end of file

@@ -1,0 +1,570 @@
+% This is the official version. For shorter versions, see directory
+% diff.
+
+% http://tinyurl.com/nrhqdxg
+
+% What exactly is Linda's evidence differential compared to
+% Betsy -- the analytic expression may help.
+
+\documentclass[11pt]{article}
+\usepackage{october}
+% For BJPS
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+\begin{document}
+% For BJPS
+% \raggedright
+% \doublespacing
+
+\title{Augustin's Concessions: A Problem for Indeterminate Credal States}
+\author{Stefan Lukits}
+\date{}
+\maketitle
+
+% \begin{abstract} 
+% \end{abstract}
+
+\section{Introduction}
+\label{Introduction}
+
+The claim is that rational agents are subject to a norm requiring
+sharp credences. I defend this claim in spite of the initially
+promising features of indeterminate credal states (from now on
+instates) to address problems which sharp credences have as they
+reflect the evidence at the foundation of a doxastic state.
+Traditionally, Bayesians have maintained that a rational agent, when
+holding a credence, holds a sharp credence. It has recently become
+popular to drop the requirement for credence functions to be sharp.
+There are now Bayesians who permit a rational agent to hold instates
+based on incomplete or ambiguous evidence. I will refer to Bayesians
+who continue to adhere to the classical theory of sharp credences for
+rational agents as \qnull{Laplaceans} (e.g.\ Adam Elga and Roger
+White). I will refer to Bayesians who do not believe that a rational
+agent's credences are sharp as \qnull{Booleans} (e.g.\ Peter Walley
+and James Joyce).\fcut{1}
+
+There is some terminological confusion around the adjectives
+\qnull{imprecise,} \qnull{indeterminate,} and \qnull{mushy} credences.
+In the following, I will exclusively refer to indeterminate credences
+or credal states (abbreviated \qnull{instates}) and mean by them a set
+of sharp credence functions (which some Booleans require to be convex)
+which it may be rational for an agent to hold within an otherwise
+orthodox Bayesian framework.\bcut{1}
+
+Instates represent in one credal state both degree of belief and
+properties of the evidence. Instates thus incorporate distinct
+features of the doxastic state. Representing multiple features of a
+state is not per se a bad thing when we fix the terms of a theory, in
+this case the terms of our theory of partial beliefs. In colour
+theory, the term \qnull{red} represents both a phenomenological
+quality and a neighbourhood on the visible light spectrum. When we say
+one thing is more red than another thing, we effectively describe a
+relation based on both phenomenological and physical properties.
+
+When we first hear of the advantages of instates, two of them sound
+particularly persuasive.
+
+\begin{itemize}
+\item \textsc{range} Instates represent the possibility range for
+  objective chances.
+\item \textsc{incomplete} Instates represent incompleteness or ambiguity
+  of the evidence.\bcut{3}
+\end{itemize}
+
+Let a \textit{coin}$_{\mbox{\tiny{x}}}$ be a Bernoulli generator that
+produces successes and failures with probability $p_{\mbox{\tiny{x}}}$
+for success, labeled $H_{\mbox{\tiny{x}}}$, and
+$1-p_{\mbox{\tiny{x}}}$ for failure, labeled $T_{\mbox{\tiny{x}}}$.
+Physical coins may serve as examples, if we are willing to set aside
+that most of them are approximately fair.
+
+\begin{quotex}
+  \beispiel{Range}\label{ex:range} Bob has two Bernoulli Generators in
+  his lab, \textit{coin}$_{\mbox{\tiny{i}}}$ and
+  \textit{coin}$_{\mbox{\tiny{ii}}}$. Bob has a database of
+  \textit{coin}$_{\mbox{\tiny{i}}}$ results and concludes on excellent
+  evidence that \textit{coin}$_{\mbox{\tiny{i}}}$ is fair. Bob has no
+  evidence about the bias of \textit{coin}$_{\mbox{\tiny{ii}}}$. As a
+  Boolean, Bob assumes a sharp credence of $\{0.5\}$ for
+  $H_{\mbox{\tiny{i}}}$ and an indeterminate credal state of $[0,1]$
+  for $H_{\mbox{\tiny{ii}}}$. He feels bad for Larry, his Laplacean
+  colleague, who cannot distinguish between the two cases and who must
+  assign a sharp credence of $\{0.5\}$ for both $H_{\mbox{\tiny{i}}}$
+  and $H_{\mbox{\tiny{ii}}}$.
+\end{quotex}
+
+\begin{quotex}
+  \beispiel{Incomplete}\label{ex:incomp} Bob has another Bernoulli
+  Generator, \textit{coin}$_{\mbox{\tiny{iii}}}$, in his lab. His
+  graduate student has submitted \textit{coin}$_{\mbox{\tiny{iii}}}$
+  to countless experiments and emails Bob the resulting bias, but
+  fails to include whether the bias of $2/3$ is in favour of
+  $H_{\mbox{\tiny{iii}}}$ or in favour of $T_{\mbox{\tiny{iii}}}$. As
+  a Boolean, Bob assumes an indeterminate credal state of $[1/3,2/3]$
+  (or $\{1/3,2/3\}$, depending on whether convexity is required) for
+  $H_{\mbox{\tiny{iii}}}$. He feels bad for Larry who must assign a
+  sharp credence of $\{0.5\}$ for $H_{\mbox{\tiny{iii}}}$ when Larry
+  concurrently knows that his credence gets the bias wrong.
+\end{quotex}
+
+Against the force of \textsc{range} and \textsc{incomplete}, I
+maintain that the Laplacean approach of assigning subjective
+probabilities to partitions of the event space (e.g.\ objective
+chances) and then aggregating them by David Lewis' summation formula
+into a single precise credence function is conceptually tidy and
+shares many of the formal virtues of Boolean theories. To put it
+provocatively, this paper defends a $0.5$ sharp credence in heads in
+all three cases: for a coin of whose bias we are completely ignorant;
+for a coin whose fairness is supported by a lot of evidence; and even
+for a coin about whose bias we know that it is either 1/3 or 2/3 for
+heads. 
+
+\section{Augustin's Concessions}
+\label{AugustinsConcessions}
+
+Here are two potential problems for Booleans:
+
+\begin{itemize}
+\item \textsc{dilation} Instates are vulnerable to dilation.
+\item \textsc{obtuse} Instates do not permit learning.
+\end{itemize}
+
+Again, these are best explained by examples. First, here is an example
+for \textsc{dilation} (see \scite{8}{white10}{175f} and
+\scite{8}{joyce10}{296f}).
+
+\begin{quotex}
+  \beispiel{Dilation}\label{ex:dilation} Larry has two Bernoulli
+  Generators, \textit{coin}$_{\mbox{\tiny{iv}}}$ and
+  \textit{coin}$_{\mbox{\tiny{v}}}$. He has excellent evidence that
+  \textit{coin}$_{\mbox{\tiny{iv}}}$ is fair and no evidence about the
+  bias of \textit{coin}$_{\mbox{\tiny{v}}}$. Larry's graduate student
+  independently tosses both \textit{coin}$_{\mbox{\tiny{iv}}}$ and
+  \textit{coin}$_{\mbox{\tiny{v}}}$. Then she tells Larry whether the
+  two tosses are correlated or not
+  ($H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}}$ or
+  $H_{\mbox{\tiny{iv}}}\equiv{}T_{\mbox{\tiny{v}}}$, where
+  $X\equiv{}Y$ means
+  $(X\wedge{}Y)\vee(\urcorner{}X\wedge\urcorner{}Y)$). Larry, who has
+  a sharp credence for $H_{\mbox{\tiny{v}}}$, takes this information
+  in stride, but he feels bad for Bob, whose credence in
+  $H_{\mbox{\tiny{iv}}}$ dilates to $[0.1]$ even though Bob shares
+  Larry's excellent evidence that \textit{coin}$_{\mbox{\tiny{iv}}}$
+  is fair.
+\end{quotex}
+
+Here is why Bob's credence in $H_{\mbox{\tiny{iv}}}$ must dilate. His
+credence in $H_{\mbox{\tiny{v}}}$ is $[0,1]$, by stipulation. Let
+$c(X)$ be the set of sharp credences representing Bob's instate, for
+example $c(H_{\mbox{\tiny{v}}})=[0,1]$. Then
+
+\begin{equation}
+  \label{eq:d1}
+  c(H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})=c(H_{\mbox{\tiny{iv}}}\equiv{}T_{\mbox{\tiny{v}}})=\{0.5\}
+\end{equation}
+
+because the tosses are independent and
+$c(H_{\mbox{\tiny{iv}}})=\{0.5\}$ by stipulation. Next,
+
+\begin{equation}
+  \label{eq:d2}
+  c(H_{\mbox{\tiny{iv}}}|H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})=c(H_{\mbox{\tiny{v}}}|H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})
+\end{equation}
+
+where $c(X|Y)$ is the updated instate after finding out $Y$. Booleans
+accept (\ref{eq:d2}) because they are Bayesians and update by standard
+conditioning. Therefore,
+
+\begin{align}
+  \label{eq:d3}
+  &c(H_{\mbox{\tiny{iv}}}|H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})=c(H_{\mbox{\tiny{v}}}|H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})=\frac{c(H_{\mbox{\tiny{iv}}})c(H_{\mbox{\tiny{v}}})}{c(H_{\mbox{\tiny{iv}}})c(H_{\mbox{\tiny{v}}})+c(T_{\mbox{\tiny{iv}}})c(T_{\mbox{\tiny{v}}})} \notag \\
+  &=c(H_{\mbox{\tiny{v}}})=[0,1].
+\end{align}
+
+Bob's updated instate for $H_{\mbox{\tiny{iv}}}$ has dilated from
+$\{0.5\}$ to $[0,1]$.
+
+This does not sound like a knock-down argument against Booleans (it is
+investigated in detail in \scite{7}{seidenfeldwasserman93}{}), but
+Roger White uses it to derive implications from instates which are
+worrisome.
+
+\begin{quotex}
+  \beispiel{Chocolates}\label{ex:chocolates} Four out of five
+  chocolates in the box have cherry fillings, while the rest have
+  caramel. Picking one at random, what should my credence be that it
+  is cherry-filled? Everyone, including the staunchest [Booleans],
+  seems to agree on the answer $4/5$. Now of course the chocolate I've
+  chosen has many other features, for example this one is circular
+  with a swirl on top [{\ldots}] while my credence that the chosen
+  chocolate is cherry-filled should be $4/5$ prior to viewing it, once
+  I see its shape [{\ldots}] my credence that it is cherry-filled
+  should dilate to become [indeterminate]. But this is just not the
+  way we think about such matters. (Quoted verbatim from
+  \scite{8}{white10}{183}.)
+\end{quotex}
+
+Second, here is an example for \textsc{obtuse} (see Susanna Rinard's
+objection cited in \scite{8}{white10}{84} and addressed in
+\scite{8}{joyce10}{290f}). It presumes Joyce's supervaluationist
+semantics of instates (see \scite{8}{joyce10}{288}; and
+\scite{7}{rinard15}{}), for which Joyce uses the helpful metaphor of
+committee members, each of whom holds a sharp credence. The instate
+consists then of the set of sharp credences from each committee
+member: for the purposes of updating, for example, each committee
+member updates as if she were holding a sharp credence. The aggregate
+of the committee members' updated sharp credences forms the updated
+instate. Supervaluationist semantics also permits comparisons, when
+for example a partial belief in $X$ is stronger than a partial belief
+in $Y$ because all committee members have sharp credences in $X$ which
+exceed all the sharp credences held by committee members with respect
+to $Y$.
+
+\begin{quotex}
+  \beispiel{Obtuse}\label{ex:obtuse} Bob has a Bernoulli
+  Generator in his lab, \textit{coin}$_{\mbox{\tiny{vi}}}$, of whose
+  bias he knows nothing and which he submits to experiments. At first,
+  Bob's instate for $H_{\mbox{\tiny{vi}}}$ is $[0.1]$. After a few
+  experiments, it looks like \textit{coin}$_{\mbox{\tiny{vi}}}$ is
+  fair. However, as committee members crowd into the centre and update
+  their sharp credences to something closer to $0.5$, they are
+  replaced by extremists on the fringes. The instate remains at
+  $[0,1]$. 
+\end{quotex}
+
+Joyce, an authoritative Boolean voice, has defended instates against
+\textsc{dilation} and \textsc{obtuse}, making Augustin's concessions
+(AC1) and (AC2). I am naming them after Thomas Augustin, who has some
+priority over Joyce in the matter.
+
+\begin{description}
+\item[{\bf (AC1)}] Credences do not adequately represent a doxastic
+  state. The same instate can reflect different doxastic states.
+\item[{\bf (AC2)}] Instates do not represent knowledge claims about
+  objective chances. White's \emph{Chance Grounding Thesis} is not an
+  appropriate characterization of the Boolean position.
+\end{description}
+
+I agree with Joyce that (AC1) and (AC2) are both necessary and
+sufficient to resolve \textsc{dilation} and \textsc{obtuse} for
+instates. I will address this in more detail in a moment. I disagree
+with Joyce what this means for an overall recommendation to accept the
+Boolean rather than the Laplacean position. I will show that (AC1) and
+(AC2) neutralize both \textsc{range} and \textsc{incomplete}, the two
+major impulses for rejecting the Laplacean position. Laplaceans, more
+modestly, consider a credence to reflect the doxastic state while
+filtering out some evidential features, which need to be independently
+represented. Overall, a sharp credence reflects the doxastic state and
+does not represent it (cashing out the difference in the sense that a
+credence which reflects the doxastic state is not sufficient for
+inference, updating, and decision making; whereas a credence which
+represents the doxastic state would be sufficient). If instates could
+successfully integrate all relevant features of the doxastic state,
+they would represent it. (AC1) and (AC2) manifest that they
+cannot.\bcut{4}\bcut{5}
+
+Indeterminacy imposes a double task on credences (representing both
+uncertainty and available evidence) that they cannot coherently
+fulfill. I will present several examples where this double task
+stretches instates to the limits of plausibility. Joyce's idea that
+credences can represent balance, weight, and specificity of the
+evidence (in \scite{7}{joyce05}{}) is inconsistent with the use of
+indeterminacy. Joyce himself, in response to \textsc{dilation} and
+\textsc{obtuse}, gives the argument why this is the case (see
+\scite{8}{joyce10}{290ff} for \textsc{obtuse}; and
+\scite{8}{joyce10}{296ff} for \textsc{dilation}).\bcut{12} Let us look
+more closely at how (AC1) and (AC2) protect the Boolean position from
+\textsc{dilation} and \textsc{obtuse}.
+
+\subsection{Augustin's Concession (AC1)}
+\label{jj1}
+
+(AC1) says that credences do not adequately represent a doxastic state.
+The same instate can reflect different doxastic states.
+
+Augustin recognizes the problem of inadequate representation before
+Joyce, with specific reference to instates: \qeins{The imprecise
+  posterior does no longer contain all the relevant information to
+  produce optimal decisions. Inference and decision do not coincide
+  any more} \scite{2}{augustin03}{41} (see also an example for
+inadequate representation of evidence by instates in
+\scite{8}{bradleysteele13}{16}). Joyce rejects the notion that
+identical instates encode identical beliefs by giving a simple
+example:
+
+\begin{quotex}
+  \beispiel{Three-Sided Die}\label{ex:die} Let $\mathcal{C}'$ and
+  $\mathcal{C}''$ be sets of credence functions defined on a partition
+  $\{X,Y,Z\}$ corresponding to the result of a roll of a three
+  sided-die. $\mathcal{C}'$ contains all credence functions $c$ for
+  which $c(Z)\geq{}1/2$. $\mathcal{C}''$ contains all credence
+  functions $c$ for which $c(X)=c(Y)$ (see \scite{8}{joyce10}{294}).
+\end{quotex}
+
+$\mathcal{C}'$ and $\mathcal{C}''$ represent the same instates, but
+they surely differ in the doxastic states that they encode. The
+doxastic state corresponding to $\mathcal{C}'$ regards $X$ and $Y$ as
+equiprobable, the doxastic state corresponding to $\mathcal{C}''$ does
+not. Joyce's contention is that Example \ref{ex:dilation} shares
+features with Example \ref{ex:die} in the sense that
+$H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}}$ is inadmissible
+evidence so that the Principal Principle does not hold. To unpack this
+claim, note that the problem with \textsc{dilation} in Example
+\ref{ex:dilation} is that on the surface we consider
+$H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}}$ to be admissible so
+that Lewis' Principal Principle holds: (*)
+$H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}}$ does not give
+anything away about $H_{\mbox{\tiny{iv}}}$, therefore (**)
+$c(H_{\mbox{\tiny{iv}}}|H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})=c(H_{\mbox{\tiny{iv}}})$
+by the Principal Principle and in contradiction to (\ref{eq:d3}). The
+Principal Principle requires that my knowledge of objective chances is
+reflected in my credence, unless there is inadmissible evidence (such
+as knowing the outcome of a coin toss, in which case of course I do
+not need to have a credence for it corresponding to the bias of the
+coin).
+
+Joyce attacks (*), but he cannot do so unless he makes concession
+(AC1). For $H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}}$ is
+information that changes the doxastic state without changing the
+credence, just as in Example \ref{ex:die}. As such
+$H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}}$ is inadmissible
+information, and the argument for (**) fails.\bcut{15} On this point,
+I agree with Joyce: given (AC1),
+$H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}}$ is inadmissible and
+\textsc{dilation} ceases to be a problem for the Boolean position.
+(AC1), however, undermines \textsc{incomplete}, an important argument
+which Joyce has used to reject the Laplacean position.
+
+\subsection{Augustin's Concession (AC2)}
+\label{jj2}
+
+(AC2) says that instates do not reflect knowledge claims about
+objective chances. White's \emph{Chance Grounding Thesis} is not an
+appropriate characterization of the Boolean position.
+
+\begin{quotex}
+  \textbf{Chance Grounding Thesis:} Only on the basis of known chances
+  can one legitimately have sharp credences. Otherwise one's spread of
+  credence should cover the range of possible chance hypotheses left
+  open by your evidence. \scite{2}{white10}{174}\bcut{13}
+\end{quotex}
+
+Joyce considers (AC2) to be as necessary for a coherent Boolean view
+of partial beliefs, blocking \textsc{obtuse}, as (AC1) is, blocking
+\textsc{dilation} (see \scite{8}{joyce10}{289f}).\bcut{16} 
+
+\textsc{obtuse} is related to \textsc{vacuity}, another problem for
+Booleans:
+
+\begin{itemize}
+\item \textsc{vacuity} If one were to be committed to the principle of
+  regularity, that all states of the world considered possible have
+  positive probability (for a defence see \scite{7}{edwardsetal63}{});
+  and to the solution of Henry Kyburg's lottery paradox, that what is
+  rationally accepted should have probability 1 (for a defence of this
+  principle see \scite{7}{douvenwilliamson06}{}); and the CGT, that
+  one's spread of credence should cover the range of possible chance
+  hypotheses left open by the evidence (implied by much of Boolean
+  literature); then one's instate would always be vacuous.
+\end{itemize}
+
+Booleans must deny at least one of the premises to avoid the
+conclusion. Joyce denies the CGT, giving us (AC2). 
+
+\section{The Double Task}
+\label{TheDoubleTask}
+
+Sharp credences have one task: to represent epistemic uncertainty and
+serve as a tool for updating, inference, and decision making. They
+cannot fulfill this task without continued reference to the evidence
+which operates in the background. To use an analogy, credences are not
+sufficient statistics with respect to updating, inference, and
+decision making. What is remarkable about Joyce's response to
+\textsc{dilation} and \textsc{obtuse} is that Joyce recognizes that
+instates are not sufficient statistics either. But this means that
+they fail at the double task which has been imposed on them: to
+represent both epistemic uncertainty and relevant features of the evidence.
+
+In the following, I will provide a few examples where it becomes clear
+that instates have difficulty representing uncertainty because they
+are tangled in a double task which they cannot fulfill.
+
+\begin{quotex}
+  \beispiel{Aggregating Expert Opinion}\label{ex:aggreg} Bob has no
+  information whether it will rain tomorrow ($R$) or not except the
+  predictions of two weather forecasters. One of them forecasts 0.3 on
+  channel GPY, the other 0.6 on channel QCT. Bob considers the QCT
+  forecaster to be significantly more reliable, based on past
+  experience.
+\end{quotex}
+
+An instate corresponding to this situation may be $[0.3,0.6]$ (see
+\scite{8}{walley91}{214}), but it will have a difficult time
+representing the difference in reliability of the experts. We could
+try $[0.2,0.8]$ (since the greater reliability of QCT suggests that
+the chance of rain tomorrow is higher rather than lower) or
+$[0.1,0.7]$ (since the greater reliability of QCT suggests that its
+estimate is more precise), but it remains obscure what the criteria
+might be.
+
+A sharp credence of $P(R)=0.53$, for example, does the right thing.
+Such a credence says nothing about any beliefs that the objective
+chance is restricted to a subset of the unit interval, but it
+accurately reflects the degree of uncertainty that the rational agent
+has over the various possibilities. As we will see in the next
+example, it is an advantage of sharp credences that they do not
+exclude objective chances, even extreme ones, because they are fully
+committed to partial belief and do not suggest, as indeterminate
+credences do, that there is full belief knowledge that the objective
+chance is a member of a proper subset of the possibilities.
+
+\begin{quotex}
+  \beispiel{Precise Credences}\label{ex:preccre} Larry's credence for
+  rain tomorrow, based on the expert opinion of channel GPY and
+  channel QCT (he has no other information) is $0.53$. Is it
+  reasonable for Larry, considering how little evidence he has, to
+  reject the belief that the chance of rain tomorrow is $0.52$ or
+  $0.54$; or to prefer a $52.9$ cent bet on rain to a $47.1$ cent bet
+  on no rain?
+\end{quotex}
+
+The first question in Example \ref{ex:preccre} is confused, but in
+instructive ways (a display of this confusion is found in
+\scite{8}{hajeksmithson12}{38f}, and their doctor and their time of
+the day analogy). A sharp credence rejects no hypothesis about
+objective chances (unlike an instate, unless (AC2) is firmly in
+place). It often has a subjective probability distribution operating
+in the background, over which it integrates to yield the sharp
+credence (it would do likewise in H{\'a}jek and Smithson's example for
+the prognosis of the doctor or the time of the day, without any
+problems).
+
+A sharp credence constrains partial beliefs in objective chances by
+Lewis' summation formula. No objective chance is excluded by it
+(principle of regularity) and any updating will merely change the
+partial beliefs, but no full beliefs. Instates, on the other hand, by
+giving ranges of acceptable objective chances suggest that there is a
+full belief that the objective chance does not lie outside what is
+indicated by the instate. A Boolean can avoid this situation by
+accepting (AC2).
+
+Here is a brief example to illustrate the difference between the
+Laplacean theory of partial beliefs based on the principle of
+regularity and the Boolean position which introduces an obscure grey
+zone between partial beliefs and full belief, update and revision,
+traditional epistemology and formal epistemology.
+
+\begin{quotex}
+  \beispiel{Bavarian King}\label{ex:king} Matthias Perth, an Austrian
+  civil servant, observes the Bavarian king at the Congress of Vienna
+  in 1815 and writes in his diary that the king \qeins{appears to be a
+    man between 45 and 47 years old} (see
+  \texttt{http://www.das-perth-projekt.at}).
+\end{quotex}
+
+If Perth learns that the king was 49 years old, he must revise, not
+just update, his earlier judgment. The appropriate formal instrument
+is belief revision, not probability update, requiring a substantial
+reconciliation project between formal and traditional epistemology
+operating in the background. I do not see this project articulated in
+the Boolean literature (for an example of such a project see
+\scite{7}{spohn12}{}, especially chapter 10). Sarah Moss also
+undertakes it and assumes the Boolean approach (see
+\scite{7}{moss13}{}), but I fail to see how the Boolean approach is
+essential to her reconciliation or how her reconciliation gives
+independent arguments for the Boolean approach. If Perth had wanted to
+express a sharp credence, he would have said, \qeins{my best guess is
+  that the king is 46 years old,} and the information that the king
+was 49 would have triggered the appropriate update, without any
+revision of full beliefs.
+
+The second question in Example \ref{ex:preccre} is also instructive:
+why would we prefer a $52.9$ cent bet on rain to a $47.1$ cent bet on
+no rain, given that we do not possess the power of descrimination
+between these two bets? The answer to this question ties in with the
+issue of incomplete preference structure referred to above as
+motiviation (B) for instates.
+
+The development of representation theorems beginning with Frank Ramsey
+(followed by increasingly more compelling representation theorems in
+\scite{7}{savage54}{}; and \scite{7}{jeffrey65}{}; and numerous other
+variants in contemporary literature) puts the horse before the cart
+and bases probability and utility functions of an agent on her
+preferences, not the other way around. Once completeness as an axiom
+for the preferences of an agent is jettisoned, indeterminacy follows
+automatically. Indeterminacy may thus be a natural consequence of the
+proper way to think about credences in terms of the preferences that
+they represent.
+
+In response, preferences may very well logically and psychologically
+precede an agent's probability and utility functions, but that does
+not mean that we cannot inform the axioms we use for a rational
+agent's preferences by undesirable consequences downstream.
+Completeness may sound like an unreasonable imposition at the outset,
+but if incompleteness has unwelcome consequences for credences
+downstream, it is not illegitimate to revisit the issue. Timothy
+Williamson goes through this exercise with vague concepts, showing
+that all upstream logical solutions to the problem fail and that it
+has to be solved downstream with an epistemic solution (see
+\scite{7}{williamson96}{}). Vague concepts, like sharp credences, are
+sharply bounded, but not in a way that is luminous to the agent (for
+anti-luminosity see chapter 4 in \scite{7}{williamson00}{}).
+Anti-luminosity answers the original question: the rational agent
+prefers the $52.9$ cent bet on rain to a $47.1$ cent bet on no rain
+based on her sharp credence without being in a position to have this
+preference necessarily or have it based on physical or psychological
+ability (for the analogous claim about knowledge see
+\scite{8}{williamson00}{95}).
+
+In a way, advocates of indeterminacy have solved this problem for us.
+There is strong agreement among most of them that the issue of
+determinacy for credences is not an issue of elicitation (sometimes
+the term \qnull{indeterminacy} is used instead of \qnull{imprecision}
+to underline this difference; see \scite{8}{levi85}{395}). The appeal
+of preferences is that we can elicit them more easily than assessments
+of probability and utility functions. The indeterminacy issue has been
+raised to the probability level (or moved downstream) by indeterminacy
+advocates themselves who feel justifiably uncomfortable with an
+interpretation of their theory in behaviourist terms. So it shall be
+solved there, and this paper makes an appeal to reject indeterminacy
+on this level. The solution then has to be carried upstream (or
+lowered to the logically more basic level of preferences), where we
+recognize that completeness for preferences is after all a desirable
+axiom for rationality. Isaac Levi agrees with me on this point: when
+he talks about indeterminacy, it proceeds from the level of
+probability judgment to preferences, not the other way around (see
+\scite{8}{levi81}{533}).
+
+\begin{quotex}
+  \beispiel{Monkey-Filled Urns}\label{ex:monkey} Let urn $A$ contain 4
+  balls, two red and two black. A monkey randomly fills urn $B$ from
+  urn $A$ with two balls. We draw from urn $B$ (a precursor to this
+  example is in \scite{8}{jaynesbretthorst03}{160}).
+\end{quotex}
+
+The sharp credence of drawing a red ball is $0.5$, following Lewis'
+summation formula for the different combinations of balls in urn $B$.
+This solution is more intuitive in terms of further inference,
+decision making, and betting behaviour than a credal state of
+$\{0,1/2,1\}$ or $[0,1]$ (depending on the convexity requirement),
+since this instate would licence an exorbitant bet in favour of one
+colour, for example one that costs \$9,999 and pays \$10,000 if red is
+drawn and nothing if black is drawn.
+
+To conclude, a Boolean in the light of Joyce's two Augustinian
+concessions has three alternatives, of which I favour the third: (a)
+to find fault with Joyce's reasoning as he makes those concessions;
+(b) to think (as Joyce presumably does) that the concessions are
+compatible with the promises of Booleans, such as \textsc{range} and
+\textsc{incomplete}, to solve prima facie problems of sharp credences;
+or (c) to abandon the Boolean position because (AC1), (AC2), and an
+array of examples in which sharp credences are conceptually and
+pragmatically more appealing show that the initial promise of the
+Boolean position is not fulfilled.
+
+% \nocite{*} 
+\bibliographystyle{ChicagoReedweb} 
+\bibliography{bib-7293}
+
+\end{document} 

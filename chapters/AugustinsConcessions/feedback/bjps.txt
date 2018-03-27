@@ -1,0 +1,401 @@
+From onbehalfof+bjps+leeds.ac.uk@manuscriptcentral.com Thu Jan  7 19:00:39 2016
+Date: Thu, 7 Jan 2016 14:00:38 -0500 (EST)
+From: bjps@leeds.ac.uk
+To: sediomyle@gmail.com
+Subject: Decision on Manuscript ID BJPS-2015-403
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset=utf-8
+Status: RO
+X-Status: F
+
+Dear Dr. Lukits,
+
+Thank you for submitting your paper, "Augustin's Concessions: A Problem for Indeterminate Credal States" (BJPS-2015-403), to British Journal for the Philosophy of Science.
+
+We regret to inform you that we have decided not to accept your paper for publication.  As you will appreciate, the Journal receives a large number of high quality submissions every year, and consequently competition for space in the journal is intense.  Some comments from our referees are below, which we hope you will find helpful.
+
+Yours sincerely,
+
+Professor Steven French and Professor Michela Massimi
+Editors in Chief
+British Journal for the Philosophy of Science
+bjps@leeds.ac.uk
+
+Auxiliary Hypotheses, the BJPS blog
+http://thebjps.typepad.com/
+
+Follow us on Twitter @TheBJPS and www.facebook.com/thebjps
+
+--------------
+Comments
+--------------
+
+Referee: 1
+Comments to the Author
+
+This paper argues that proponents of imprecise credences (which @
+calls "Booleans") are guilty of an equivocation, and that one
+Boolean position has intuitive appeal but is best by problems,
+while the other sidesteps the problems, but loses the intuitive
+appeal (@ calls these Bool-A and Bool-B respectively). There are
+some interesting arguments made in the paper, but it is not yet
+ready for publication.
+
+There are a number of changes that need to be made before this
+should be considered acceptable. The first problem is that the
+structure and dialectic of the paper are a little confused.
+Section 3 refers time and again to Bool-A and Bool-B, and keeps
+promising that these terms will be defined in a later section.
+This just makes it hard to follow until one reads section 5 and
+comes back. Why not just present examples that make Bool-A seem
+attractive in section 3, show how this is unteable in section 4,
+and only introduce Bool-B in section 5?
+
+The second problem is that the precise ("Laplacean") alternative
+to which the Boolean positions are ultimately compared is unclear.
+It seems to be an objectivist/entropy-maximising type view of
+subjective (precise) credence. Is this objectivity part of its
+appeal as an alternative to Bool-B? That is, could a hardcore de
+Finetti-style subjectivist not provide a precise alternative that
+plays the same role as a precis alternative to Bool-B?
+
+The third problem (and this is related to the second) is that @
+makes use of a distinction between credal state and doxastic state
+that is never made clear, and seems very important. It seems to be
+a complex thing that involves the agent's evidence... What is a
+precise probabilist's doxastic state? And how does this differ
+from an imprecise doxastic state? Or are they the same, and the
+question is whether imprecise or precise credal states are the
+better companion to the complex doxastic state?
+
+Fourth, there are a couple of places where @ seems to gloss over
+topics that have been covered in the literature, topics that @
+really should engage with better. (I'll point these out in my
+detailed comments).
+
+Fifth, @ takes the Boolean position to be that credal states are
+characterised by set-valued functions. I don't know of any
+philosophically sophisticated defender of such a position. Joyce,
+for example, is very clear that it is *sets of functions* that do
+the work, and not the derived set-valued function. Levi and
+Bradley and Steele are also explicit about this point. It also
+seems reasonable to read van Fraassen this way.
+
+Sixth, it's just not clear to me that AC1 and AC2 are desiderata
+for a formal model of rational belief. And if they aren't, then
+they aren't what's at stake in the debate between Booleans and
+Laplaceans.
+
+Here are some detailed page-by-page comments.
+
+p.2 C is a function into an algebra *of subsets* of R+. Not an
+algebra on R+. That is, the objects C maps propositions to are
+*subsets* of R+, not elements of R+. Also, why not just define C
+as a function onto subsets of [0,1]?
+
+p.4 Here's an example of @'s implict commitment to entropy
+maximisation: In example 2, Logan could have a credence of 1/3, or
+of 2/3 or of an precise value between those two. Logan is required
+to have a credence of exactly 1/2 only if some further higher
+order symmetry constraint forces the issue.
+
+p.4 @ says "to compare instates and sharp credences
+informationally, we would need a non-additive set function obeying
+Shannon's axioms for information". @ then goes on to say that @ is
+aware of no such work. There are a number of things to say here.
+First, what work is "non-additive" doing in the quoted sentence?
+For independent variables, entropy is additive, so isn't this a
+contradiction in terms? Second, are Shannon's conditions
+absolutely necessary? Third, there *is* work on this topic.
+Searching google scholar for "imprecise probability information
+theory" led me to George Klir's book "Uncertainty and Information,
+Foundations of Generalized Information Theory" which looks like an
+excellent discussion of precisely this point. There is also the
+following paper that is on precisely this topic: Mork, Jonas
+Clausen. "Uncertainty, credal sets and second order
+probability."Synthese (2013): 1-26. Now, I *think* that Mork's
+measure does satisfy both of Joyce's constraints.
+
+p.5 Example 5 is a bad example. When you have evidence about the
+chance generating process (like you have in the skittles case) why
+ought you have imprecise beliefs? There's no motivation to go
+imprecise in this example.
+
+p.7 This is one of @'s few comments explicitly laying out the
+precise alternative to the Boolean positions. There are a number
+of things to say here. First, the sort of integrating over
+probability values does not start with Lewis, but has quite a
+history in statistics: @ should look at hierarchical Bayes models,
+which do this sort of thing all the time. Second, the integral is
+relative to a measure (d-zeta). Where does this measure come from
+in the lung cancer example? (Likewise, in example 2, Logan is only
+obliged to have credence 1/2 if the measure is a certain way, e.g.
+symmetric or uniform). Or think of a more complex case where there
+are different ways to parametrise the probability distribution:
+uniform measures of the different parametrisations lead to
+different first order distributions.
+
+p.9 @ shouldn't refer to learning whether H_iv = H_v as learning
+whether the tosses are "correlated". By hypothesis, the tosses are
+independent.
+
+p.9 equation 6 is confused. If c(H_iv) and c(H_v) are subsets of
+[0,1], what does it mean to multiply them together? Or to divide
+them or add them? Meaning can be given to such expressions (look
+up interval arithmetic) but it is not that common and @ should say
+something about it. In any case, what I think @ meant to do was
+say that for every (precise) probability function consistent with
+the evidence, the manipulations of equation 6 are valid, and for
+each r in [0,1] there is a prior consistent with the evidence such
+that the posterior = r. But this move means accepting that the set
+valued function description of the credal state is inadequate.
+
+p.10 The sentence that starts "For REPETITION, White uses..."
+doesn't make sense. What is this sentence supposed to say?
+
+p.11 Several authors have discussed reflection in the context of
+imprecise probabilities. Joyce, for one. Brett Topey responds to
+Joyce (along the lines that @ seems to favour) [Topey, Brett.
+"Coin flips, credences and the Reflection Principle."
+Analysis(2012): ans077.] And the Bradley and Steele paper that @
+cites contains a discussion of this topic. So it's a little
+disingenuous of @ to just dismiss this topic as @ does.
+
+p.11 The learning problem needs further discussion. First, @
+should note that this is only a problem for vacuous (i.e. [01,] or
+(0,1)) priors. Second, @ should draw out what precisely the
+problem is. Why is the instate continuing to be a superset of
+(0,1) after conditioning a problem?
+
+p.12 While it's right to say that Augustin got there before Joyce,
+Walley got there before either of them. And arguably Levi and
+Kyburg got there even earlier.
+
+p.12 AC1 does not seem sufficient to solve the problems that
+follow from dilation for the value of information. See:
+
+- Kadane, Joseph B., Mark Schervish, and Teddy Seidenfeld. "Is
+  ignorance bliss?." The Journal of Philosophy 105.1 (2008): 5-36.
+
+- Grünwald, Peter D., and Joseph Y. Halpern. "When ignorance is
+  bliss."Proceedings of the 20th conference on Uncertainty in
+  artificial intelligence. AUAI Press, 2004.
+
+- Bradley, Seamus, and Katie Steele. "Can free evidence be bad?
+  Value of information for the imprecise probabilist." Philosophy
+  of Science (2015).The Laplacean can't roll back on these sorts
+  of judgements when it su
+
+p.13 I had a look at page 16 of Bradley and Steele and couldn't
+find what @ meant by "inadequate representation of evidence by
+instates". Also, presumably @ should reference the page number of
+the published version.
+
+p.15 @ complains that the Boolean views do not have well-developed
+connections to information theory. In the light of my earlier
+comment (second comment on p.4) this claim is false. Also, the
+Boolean picture does have well developed *subjectivist*
+foundations in terms of natural weakenings of the standard Dutch
+book argument. See: Smith, Cedric AB. "Consistency in statistical
+inference and decision." Journal of the Royal Statistical Society.
+Series B (Methodological) (1961): 1-37. Also the Walley book, and
+the recent Augustin et al. *Introduction to Imprecise
+Probabilities*, as well as the appendix to the Stanford
+Encyclopedia of Philosophy article on Imprecise Probabilities.
+
+p.16 It seems like @ should make more of the point that the
+denials of AC1 and AC2 are supposed to be things that are points
+in favour of Bool-A. This seems to be how @'s argument goes. I'm
+not convinced myself that either of AC1 or AC2 are things that
+anyone should be committed to.
+
+p.16 The VACUITY point needs cashing out. I don't see how
+commitment to the three things @ lists entail vacuous priors.
+
+p.16 What does @ mean by saying that precise probabilities are not
+sufficient for updating and decision? Conditionalisation requires
+only the event learned and the probability function: nothing else
+is necessary for updating. Likewise, as far as the belief
+component of decision making goes, all that gets into the expected
+utility formula is the probability function. So in what sense is
+this not sufficient?
+
+p.17 @'s point about the precise/imprecise responses to the two
+forecasters is a very interesting one.
+
+p.17/8 Following on from my last point from p.16, the question in
+example 10 seems like it has a perfectly good answer. It is
+reasonable for Logan to accept the 52.9 cent bet over the 47.1
+cent bet against if and only if it has higher expected value by
+the lights of her credences. That's the sort of judgement that is
+supposed to immediately follow from @'s credences being a
+particular way. That note of doubt about whether such precise
+preferences are warranted is exactly what makes imprecise views
+attractive: they allow you to have the sort of indeterminacy @
+seems to want here.
+
+p.19 @ seems to be suggesting a sort of epistemicist position to
+credal indeterminacy. This is an interesting position, but I'm not
+sure I see how it would unfold. I don't have access to precisely
+what my credal state is. This means that I might, in some
+circumstances, choose an option that does not maximise my expected
+utility? In what sense is this my credence if that link to
+decision is severed? And in what sense is this not simply the same
+as an imprecise view? (compare with supervaluationist responses to
+epistemicism: "sure OK, there's a fact about the extension of the
+predicate, but as far as behavioural consequences go, you'll act
+like a supervaluationist".)
+
+p.20 The credence for example 11 is only 0.5 for some choices of
+d-zeta.
+
+p.20 Only some decision rules for Boolean views license the bet.
+Gamma-maximin, for instance, doesn't.
+
+p.20 The hand urn example is bizarre. Doesn't the Laplacean have
+the same problem? If not, why can't the Boolean say exactly the
+same thing in response that the Laplacean says?
+
+p.21 "independence of sharp credences does not imply independence
+of variables" What does this mean? Does @ mean causal independence
+by "independence of variables"? And if so, then the converse is
+not true either. Consider: the warden's announcement is presumably
+causally independent of X_2's execution, and yet, on hearing the
+warden's announcement, X_1's credence in X_2's execution goes
+down. I'm also just puzzled as to what the discussion of the three
+prisoner's puzzle actually adds to the paper.
+
+
+Referee: 2 Comments to the Author
+
+The paper argues against the view that rationality sometimes
+requires imprecise credences. That view, which the author calls
+"Boolean,'' is motivated by three considerations: (i) that one's
+credence in a hypothesis p should include all epistemically
+possible chances for p, (ii) that precise credences don't
+adequately capture the incompleteness of some bodies of evidence,
+and (iii) that precise credences sometimes contain too much
+information. The author (henceforth "@") argues that the boolean
+view faces a dilemma: either it must take on wildly
+counterintuitive commitments about inductive learning, or else it
+must make concessions that undermine its initial motivations over
+the precise view.
+
+This paper contains a number of elegant and compelling arguments
+and examples, but it is not without problems. The most important
+points where it could use some improvement are presentational.
+Some threads of the paper are a bit difficult to follow. Let me
+start, however, with a point about content.
+
+On p. 2, @ outlines the notion of imprecise credences that the
+paper will use. This notion is puzzling: @ identifies ``credal
+states (abbreviated ‘instates’)'' with: ``a set of sharp credence
+functions (which some Booleans require to be convex) which it may
+be rational for an agent to hold within an otherwise orthodox
+Bayesian framework.''
+
+Two problems: first, if a Boolean thinks that, in some contexts,
+all precise credences are irrational, then the Boolean can't
+define rational "instates'' in terms of the rational precise
+credences functions. There are none! Of course, some Booleans
+(including Joyce 2010), talk like this. But this notion of
+rationally required imprecise credences is incoherent. Booleans
+need a better way of characterizing which precise credence
+functions belong in imprecise credal states.
+
+Second, @'s model for imprecise credences in the next paragraph is
+at odds with this informal characterization. Rather than a set of
+precise credence functions, @ represents credal states with an
+imprecise credence function, C, from propositions to sets of
+reals. This is the view Joyce calls ``PSET''. Sets of precise
+credence functions will determine a unique imprecise credal
+function, but not vice versa.
+
+For most of the paper, @ refers frequently to a distinction
+between credal states and doxastic states without making clear
+what this distinction amounts to. Some candidates I entertained,
+reading the paper:
+
+- credal states = sets of credence functions; doxastic states =
+- binary belief states credal states = sets of credence functions;
+- doxastic states = sets of credence functions + binary belief
+- states credal states = first-order cognitive attitudes; doxastic
+- states = any order cognitive attitudes. credal states = function
+- from propositions to sets of real numbers ("imprecise credence
+- functions''); doxastic states = sets of credence functions.
+
+Finally, at the end of a paragraph of p. 14, @ writes: "Credal
+states keep track only of the committee’s aggregate credal state,
+whereas doxastic states keep track of each committee member’s
+individual sharp credences.''
+
+The substantive problem here: @ claims that Joyce's way of dealing
+with White's Reflection-based challenge is by making the
+concession that @ calls (AC1): that credal states do not
+adequately represent doxastic states. Then @ argues that this
+concession undermines a major motivation for imprecise credences
+over precise credences: that only the former can adequately
+represent doxastic states.
+
+What I find confusing is this: Joyce rejects the model for
+imprecise credences that @ calls "credal states'' or "instates''
+and Joyce calls "PSET''. The models that Joyce prefers for what he
+calls "credal states'' just are what I take @ to be calling
+"doxastic states'': sets of precise credences functions. These
+sets do capture what's relevant for update, rational choice, etc.
+In @'s terminology: Joycean credal states do adequately represent
+doxastic states (because they just are doxastic states!). So Joyce
+is not making the sort of concession that would undermine his
+motivations for imprecise credences. He is not conceding that what
+he calls "credal states'' are representationally inadequate. He
+does accept that the PSET model is inadequate; but that's why he
+replaces it with a better model.
+
+Note also: the formal characterization of credal states on p. 2
+seems to me to be a considerable weakening of bayesianism, since
+there's nothing that plays the role of additivity.
+
+A more minor content point: @'s example 7 is a bit confusing. If
+Blake's instate toward X is [0,1], and if we assume with Joyce
+that all committee members in the instate update by
+conditionalization, then we're guaranteed that that lower and
+upper credences remain 0 and 1. The more interesting case, which
+Joyce focuses on, is the case where the instate is (0,1)---or more
+interestingly, any arbitrary open interval included in the unit
+interval.
+
+Presentational points:
+
+I had a bit of trouble following the thread of the paper. The
+presentation of the double task was a bit unclear: I was unsure
+about what @ had in mind w.r.t. the second task, of "representing
+available evidence.'' For the fan of imprecise credences, I don't
+think their role is to represent features of the evidence; rather,
+Joyce thinks their role is to represent the agent's *assessment*
+of the relevant features of the evidence. Whether they're rational
+or not depends on whether the agent is right in her assessment of
+the evidence.
+
+p 18, paragraph 1: I don't understand how the second half of this
+paragraph relates to the first. paragraph 3: The view discussed
+here sounds like epistemic permissivism; so why not say that?
+Also: what is a psychological distinction between bets?
+
+Throughout this section, I had the sense that @ wasn't
+distinguishing an agent's uncertainty about what credences they
+have and an agent's uncertainty about what bets are rational to
+accept (independent of what credences the agent happens to have).
+For example, on p. 19, @ writes:
+
+"Anti-luminosity answers the second question in example 10: the
+rational agent prefers the 52.9 cent bet on rain to a 47.1 cent
+bet on no rain based on her sharp credence without being in a
+position to have this preference necessarily or have it based on
+physical or psychological ability (for the analogous claim about
+knowledge see Williamson, 2000, 95).''
+
+I don't know what this sentence means. (What is it to have a
+preference necessarily or to have a preference based on a physical
+or psychological ability?)
+

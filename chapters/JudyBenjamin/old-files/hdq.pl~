@@ -1,0 +1,13 @@
+sub dec2bin 
+{ 
+my $str = unpack("B32", pack("N", shift)); 
+return $str; 
+}
+
+$n=24;
+$ex=2**$n;
+for ($i1=0;$i1<$ex;++$i1)
+{
+    $bin=dec2bin($i1);
+    print "$bin\n";
+}

@@ -1,0 +1,82 @@
+* ideas
+** main idea
+must read Levinstein see also Wronski's ppt presentation here: https://www.tilburguniversity.edu/upload/861f0d62-c6f2-43f7-a361-262499f05250_Presentation%20Wronski.pdf
+
+Here is something interesting in Joyce that seems to appeal to the
+same discomfort with LP's ``by the lights of'' that I had:
+
+we cannot hope to justify probabilism by assuming that rational agents
+should maximize the ex- pected accuracy of their opinions because the
+concept of an expectation really only makes sense for agents whose
+partial beliefs already obey the laws of probability. (Joyce, 1998,
+590)
+
+Note also that Joyce warns of equating accuracy with epistemic
+utility, see 592. 
+
+You may want to refer to Maher's criticism of Weak Convexity and
+Symmetry in Maher 2002.
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+IMPORTANT notes in Schmierbuch, 1358--1364.
+
+Some notes from 2015-01-25:
+
+The asymmetry needs to be shown to be already there for standard
+conditioning.
+
+The midpoint between P(X)=0 and P(X)=0.2 is NOT P(X)=0.1.
+
+How do you argue against the geometry of reason without assuming the
+importance of information?
+
+Is there a parallel here to Poincare Cassirer about the simplicity of
+Euclidean geometry?
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+what is the epistemic benefit of using the ``geometry of reason''?
+
+Here are some question collated <2015-01-18 Sun>:
+
+(1) Show that JC is continuous with SC and LP is not.
+
+(2) What is deficient about -\sum p_i log frac p_i q_i as a measure of
+accuracy compared to squared? Consult LP I. Is there an analog in the
+deductive case to using entropy as a measure of inaccuracy?
+
+(3) Consider the immense information gain when some X_k's probability
+is reduced to nil by LP.
+
+(4) It makes a difference to LP whether you include some X_j in the
+prior probability distribution whose prior probability is nil. Why
+exclude those events -- they don't make a difference to JC.
+
+This paper is a response to Leitgeb/Pettigrew. They claim that JC is
+not minimally inaccurate, as their own updating rule is. My contention
+is that their claim is implausible, since the accuracy of an updated
+belief function needs to be measured by its own lights, not by the
+lights of the now outdated belief function. Note the comments on the
+hard copy of the paper. 
+
+I did the calculations (Schmierbuch p. 1313) and it turns out that
+their notion of accuracy is better than evaluating by the lights of
+the updated belief function. JC only does slightly worse than the LP
+rule. Here are the problems with LP: (1) why call their notion
+``accuracy''? The virtue of accuracy is derived from the
+propositional logic case, but the use of the outdated belief function
+attenuates this virtue. It's at best accuracy-ish, it does only
+slightly better than JC (contra their calculations), and it is NOT
+continuous with SC.
+** collator from dissertation.org
+there are notes on Joyce's nonpragmatic vindication on Schmierbuch p. 1349f
+investigate Richard Pettigrew and Hans Leitgeb's criticism of JC based on rigidity, see ReadingGroup-FormalEpistemology
+there is more on this now in jeco.org, the literature should be reviewed there as well
+diaconiszabell82:824
+halpern03:105
+Skyrms has a Dutch-book argument for JC, but I don't know where (what about David Lewis's Why Conditionalize?)
+fraassen93:297ff (JC is better than ME)
+levi67
+* quotes
+* buffer

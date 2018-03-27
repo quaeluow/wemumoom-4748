@@ -1,0 +1,160 @@
+Given prior probabilities and an observation, it is common to form
+posterior probabilities by using rules of conditioning. Some
+observations pose affine constraints that cannot be addressed by
+standard conditional probabilities or Jeffrey conditioning. The
+Principle of Maximum Entropy (PME) claims that it is appropriate to
+form a posterior probability assessment by minimizing information gain
+consistent with the observation. Opposition to the PME leans heavily
+on one counterexample: the Judy Benjamin problem. This article shows
+that an intuitively plausible approach that should support the
+opponents' case turns out to support the PME. The article demonstrates
+that opponents improperly apply independence assumptions to the
+problem.
+
+Given a special type of evidence, the Principle of Maximum Entropy
+(PME) provides a solution for the posterior probability assignment
+based on the intuition that the information gain consistent with
+assumptions and evidence should be minimal. For one example (Judy
+Benjamin) the results provided by the PME are supported by an
+intuitive approach that prima facie should support the case of
+opponents of PME; and independence assumptions rendering results
+counter-intuitive are improperly applied by opponents.
+
+Given a set of probabilities on an event space and a new observation,
+it is common to form updated probabilities by using rules of
+conditioning. Some observations pose constraints that cannot be
+addressed by standard conditional probabilities or Jeffrey
+conditioning. The principle of maximum entropy (abbreviated maxent)
+claims that it is then appropriate to form an updated probability
+assessment by minimizing information gain consistent with the
+observation. Opposition to the maxent leans heavily on one
+counterexample: the Judy Benjamin problem. This article shows that an
+intuitively plausible approach that should support the opponents' case
+turns out to support the maxent. It becomes apparent that the
+opponents improperly apply independence assumptions to the problem.
+
+How much philosophy in the philosophy of science? I will show that for
+probability kinematics (the question how observations change rational
+probability assessments) the majority view of philosophers can be
+undermined in favour of the majority view of statistical physicists.
+At issue is what I am calling the full employment theorem in
+probability kinematics (FET). It states that in order to reassess a
+probability distribution in the light of new evidence one needs a
+trained epistemologist to apply situation-appropriate tools from a
+wide range of methods in a pluralistically arranged toolbox.
+
+FET may not be false, but, more weakly, the main avenues of argument
+for FET fail. The converse of FET states that there are formal methods
+we can successfully apply to all cases in which a probability
+assessment needs to be adjusted in view of new evidence, without the
+need for a case-by-case interpretation by an epistemological expert.
+Advocates of FET usually present counterexamples, predominantly Bas
+van Fraassen's Judy Benjamin problem (often this will be their only
+counterexample). It produces under the application of the formal
+method counterintuitive results. Therefore, so goes the reasoning, the
+universal claim of the opponents fails and FET stands.
+
+If your observation comes in the form of an event, a plausible way to
+update your probabilities is by conditioning. If your observation
+comes in the form of a redistribution of probabilities over a
+partition of the event space, it's plausible to use Jeffrey
+conditioning. Observation can be even more general and come in the
+form of affine constraints (the Judy Benjamin problem is a simple
+example). If Jeffrey conditioning cannot be applied to an affine
+constraint, we can use the principle of maximum entropy, based on the
+intuition that the observation should minimally affect the
+probabilities without being inconsistent with it. Some say that the
+principle of maximum entropy delivers the unique solution to this
+problem fulfilling a set of basic rationality requirements. Advocates
+of FET believe that the principle of maximum entropy is only one of
+many different strategies to update probabilities rationally,
+depending on individual cases. They cite the Judy Benjamin problem to
+undermine the generality of the principle of maximum entropy.
+
+I will show various ways in which their arguments go awry. The results
+provided by the principle of maximum entropy for the Judy Benjamin
+problem are supported, not contradicted, by an intuitive approach that
+prima facie should support the advocates of FET. The independence
+assumptions which render the results counterintuitive are improperly
+applied by advocates of FET (in particular, they do not make the Judy
+Benjamin problem a case for Jeffrey conditioning). The method of
+coarsening at random does not apply to the Judy Benjamin problem once
+the analogy to the Three Prisoners problem is fully appreciated. In
+conclusion, the philosophers have not made a persuasive case for full
+employment. Scientists who use the principle of maximum entropy (whose
+applications span a variety of disciplines) can do so without worry
+about this instance of "philosophy in the philosophy of science."
+
+."
+
+yment theorem. The independence assumptions which render the results
+counterintuitive are improperly applied by advocates of the FET (in
+particular, they do not make the Judy Benjamin problem a case for
+Jeffrey conditioning, as claimed by Igor Douven and Jan-Willem
+Romeijn). Peter Grünwald and Joseph Halpern's method of coarsening at
+random does not apply to the Judy Benjamin problem once the analogy to
+the Three Prisoners problem is fully appreciated.
+
+In conclusion, the philosophers have not made a persuasive case for
+full employment. Scientists who use the principle of maximum entropy
+(whose applications span a surprising variety of disciplines) can do
+so without too much worry about this particular instance of
+"philosophy in the philosophy of science." y of science." d and Joseph
+Halpern's method of coarsening at random does not apply to the Judy
+Benjamin problem once the analogy to the Three Prisoners problem is
+fully appreciated.
+
+In conclusion, the philosophers have not made a persuasive case for
+full employment. Scientists who use the PME (whose applications span a
+surprising variety of disciplines) can do so without too much worry
+about this particular instance of "philosophy in the philosophy of
+science."
+."
+The Full Employment Theorem in Probability Kinematics
+
+The aim is to undermine the full employment theorem in probability
+kinematics, which is widely assumed to be true. Imagine you have a
+fully quantified probability assessment of a situation, and then you
+make an observation. If your observation comes in the form of an
+event, a plausible way to update your probabilities is by
+conditioning. If your observation comes in the form of a
+redistribution of probabilities over a partition of the event space (a
+more general type of evidence), it's plausible to use Jeffrey
+conditioning. Observation can be even more general, so that all you
+observe is what's called an affine constraint. If Jeffrey conditioning
+cannot be applied to an affine constraint, we can use the principle of
+maximum entropy (PME), based on the intuition that the observation
+should minimally affect your probabilities without being inconsistent
+with it.
+
+There are some (very few philosophers, more statistical physicists)
+who say that the PME delivers the unique solution to this problem
+which fulfills some basic rationality requirements. Opponents of this
+approach (a majority view among philosophers) believe in something I
+am calling the full employment theorem for probability kinematics. In
+their view, the PME is only one of many different strategies to update
+your probabilities, and to decide which strategy is the most
+appropriate you need a resident formal epistemologist to do the
+thinking and weigh the intuitions for you, for a fee, of course (thus
+formal epistemologists will always be fully employed; there is an
+analogous full employment theory in computer science about writing
+computer programs which has been formally proved to be true).
+
+Opponents of objective methods prominently cite van Fraassen's Judy
+Benjamin case to undermine the generality of the PME. I will show that
+the results provided by the PME are supported by an intuitive approach
+that prima facie should support the opponents. The independence
+assumptions which render the results counterintuitive are improperly
+applied by opponents. We'll also do some ``coarsening at random'' so
+make sure you bring the proper gear (employ your imagination).
+Given a more general type of evidence than required for Bayes'
+formula, the Principle of Maximum Entropy (PME) provides a unique
+solution for the posterior probability assignment based on the
+intuition that the information gain consistent with assumptions and
+evidence should be minimal. Opponents of objective methods to
+determine these probabilities prominently cite van Fraassen's Judy
+Benjamin case to undermine the generality of the PME. The article
+shows that the results provided by the PME are supported by an
+intuitive approach that prima facie should support the opponents. The
+independence assumptions which render the results counter-intuitive
+are improperly applied by opponents.

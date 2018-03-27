@@ -1,0 +1,4 @@
+z=lambertw(1/exp(1))
+z
+gamma=4*log(4)-3*log(12)-3-log(4)-1
+gamma

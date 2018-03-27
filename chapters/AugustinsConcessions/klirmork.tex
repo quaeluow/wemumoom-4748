@@ -1,0 +1,108 @@
+The rest of the paper emphasizes \textsc{intern} and
+\textsc{incomp}. Here is my argument against \textsc{inform}: not only
+is it not clear how Joyce's imprecise minimum information requirement
+might be formulated, I see no reason why it should give the results
+that Joyce envisions. To compare instates and sharp credences
+informationally, we would need a set function obeying Shannon's axioms
+for information (for an excellent summary see \scite{7}{klir06}{}).
+Attempts for such a generalized Shannon measure have been made, but
+they are all unsatisfactory. George Klir lists the requirements on
+page 235 (loc.\ cit.), and they are worth calling to mind here (a
+similar list is in \scite{8}{mork13}{363}):
+
+\begin{enumerate}[(S1)]
+\item \textbf{Probability Consistency} When $\mathcal{D}$ contains
+  only one probability distribution, $\overline{S}$ assumes the form of
+  the Shannon entropy.
+\item \textbf{Set Consistency} When $\mathcal{D}$ consists of the set
+  of all possible probability distributions on $A\subseteq{}X$, then
+  $\overline{S}(\mathcal{D})=\log_{2}|A|$.
+\item \textbf{Range} The range of $\overline{S}$ is $[0,\log_{2}|X|]$
+  provided that uncertainty is measured in bits.
+\item \textbf{Subadditivity} If $\mathcal{D}$ is an arbitrary convex
+  set of probability distributions on $X\times{}Y$ and
+  $\mathcal{D}_{X}$ and $\mathcal{D}_{Y}$ are the associated sets of
+  marginal probability distributions on $X$ and $Y$, respectively,
+  then
+  $\overline{S}(\mathcal{D})\leq\overline{S}(\mathcal{D}_{X})+\overline{S}(\mathcal{D}_{Y})$.
+\item \textbf{Additivity} If $\mathcal{D}$ is the set of joint
+  probability distributions on $X\times{}Y$ that is associated with
+  independent marginal sets of probability distributions,
+  $\mathcal{D}_{X}$ and $\mathcal{D}_{Y}$, which means that
+  $\mathcal{D}$ is the convex hull of the set
+  $\mathcal{D}_{X}\otimes\mathcal{D}_{Y}$, then
+  $\overline{S}(\mathcal{D})=\overline{S}(\mathcal{D}_{X})+\overline{S}(\mathcal{D}_{Y})$.
+\end{enumerate}
+
+Several things need an explanation here (I have retained Klir's
+nomenclature). $\mathcal{D}$ is the set of probability distributions
+constituting the instate. $\overline{S}$ is the proposed generalized
+Shannon measure defined on the set of possible instates. I will give
+an example below in (\ref{eq:iefukufe}). $X$ is the event space.
+$\mathcal{D}_{X}\otimes\mathcal{D}_{Y}$ is defined as follows:
+
+\begin{equation}
+  \label{eq:xoofahee}
+\mathcal{D}_{X}\otimes\mathcal{D}_{Y}=\{p(x,y)=p_{X}(x)\cdot{}p_{Y}(y)|x\in{}X,y\in{}Y,p_{X}\in\mathcal{D}_{X},p_{Y}\in\mathcal{D}_{Y}\}.
+\end{equation}
+
+One important requirement not listed is that indeterminateness should
+give us higher entropy (otherwise Joyce's and Walley's argument
+fails). Klir's most hopeful contender for a generalized Shannon
+measure (see his equation 6.61) does not fulfill this requirement:
+
+\begin{equation}
+  \label{eq:iefukufe}
+\overline{S}(\mathcal{D})=\max_{p\in\mathcal{D}}\left\{-\sum_{x\in{}X}p(x)\log_{2}p(x)\right\}.
+\end{equation}
+
+Notice that for any convex instate there is a sharp credence contained
+in the instate whose generalized Shannon measure according to
+(\ref{eq:iefukufe}) equals the generalized Shannon measure of the
+instate, but we would expect the entropy of the sharp credence to be
+lower than the entropy of the instate if it is indeterminate. Jonas
+Clausen Mork has noticed this problem as well and proposes a modified
+measure to reflect that more indeterminacy ought to mean higher
+entropy, all else being equal. He adds the following requirements to
+Klir's list above (the labels are mine; Mork calls them NC1 and NC2 in
+\scite{8}{mork13}{363}):
+
+\begin{enumerate}[(S1)]
+\setcounter{enumi}{5}
+\item \textbf{Weak Monotonicity} If $P$ is a superset of $P'$, then
+  $U(P)\geq{}U(P')$. A set containing another has at least as great
+  uncertainty value.
+\item \textbf{Strong Monotonicity} If (i) the lower envelope of $P$ is
+  dominated strongly by the lower envelope of $P'$ and (ii) $P$ is a
+  strict superset of $P'$, then $U(P)>U(P')$. When one set strictly
+  contains another with a strictly higher lower bound for at least one
+  hypothesis, the greater set has strictly higher uncertainty value.
+\end{enumerate}
+
+I have retained Mork's nomenclature and trust that the reader can see
+how it lines up with Klir's. Klir's generalized Shannon measure
+(\ref{eq:iefukufe}) fulfills weak monotonicity, but violates strong
+monotonicity. Mork's proposed alternative is
+the following (see \scite{8}{mork13}{364}):
+
+\begin{equation}
+  \label{eq:aeghapoo}
+  \mbox{CSU}(\Pi,P)=\max_{p^{*}\in{}P}\left\{-\sum_{i=1}^{n}p^{*}(h_{i})\min_{q^{*}\in{}P}\{\log_{2}q^{*}(h_{i})\}\right\}.
+\end{equation}
+
+Mork fails to establish subadditivity, however, and it is more
+fundamentally unclear if Klir has not already shown with his
+disaggregation theory that fulfilling all desiderata (S1)--(S7) is
+impossible. Some of Klir's remarks seem to suggest this (see, for
+example, \scite{8}{klir06}{218}), but I was unable to discern a
+full-fledged impossibility theorem in his account. This would be an
+interesting avenue for further research.
+
+% This is a non-trivial task. I have not succeeded in solving it (nor do
+% I need to carry the Booleans' water), but I am not convinced that it
+% will result in an information measure which assigns, for instance,
+% less entropy to a sharp credence such as $\{0.5\}$ than to an instate
+% such as $\{x|1/3\leq{}x\leq{}2/3\}$. The challenge is in the Booleans'
+% court to produce such a non-additive set function. I doubt that they
+% will succeed and hope to produce more formal constraints for it in the
+% future, if not an impossibility theorem.

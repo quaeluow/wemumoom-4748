@@ -1,0 +1,137 @@
+\begin{thebibliography}{23}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+
+\bibitem[{Caticha and Giffin(2006)}]{catichagiffin06}
+Caticha, Ariel, and Adom Giffin.
+\newblock \enquote{Updating Probabilities.}
+\newblock In \emph{MaxEnt 2006, the 26th International Workshop on Bayesian
+  Inference and Maximum Entropy Methods}. 2006.
+
+\bibitem[{Cover and Thomas(2006)}]{coverthomas06}
+Cover, T.M., and J.A. Thomas.
+\newblock \emph{Elements of Information Theory}, volume~6.
+\newblock Hoboken, NJ: Wiley, 2006.
+
+\bibitem[{Debbah and M{\"u}ller(2005)}]{debbahmueller05}
+Debbah, M{\'e}rouane, and Ralf M{\"u}ller.
+\newblock \enquote{MIMO Channel Modeling and the Principle of Maximum Entropy.}
+\newblock \emph{IEEE Transactions on Information Theory} 51, ~5: (2005)
+  1667--1690.
+
+\bibitem[{Dempster(1967)}]{dempster67}
+Dempster, Arthur.
+\newblock \enquote{Upper and Lower Probabilities Induced by a Multivalued
+  Mapping.}
+\newblock \emph{The Annals of Mathematical Statistics} 38, ~2: (1967) 325--339.
+
+\bibitem[{Kamp{\'e}~de F{\'e}riet and Forte(1967)}]{kampe67}
+Kamp{\'e}~de F{\'e}riet, J., and B.~Forte.
+\newblock \enquote{Information et probabilit{\'e}.}
+\newblock \emph{Comptes rendus de l'Acad{\'e}mie des sciences} A 265: (1967)
+  110--114.
+
+\bibitem[{Friedman and Shimony(1971)}]{friedmanshimony71}
+Friedman, Kenneth, and Abner Shimony.
+\newblock \enquote{Jaynes's Maximum Entropy Prescription and Probability
+  Theory.}
+\newblock \emph{Journal of Statistical Physics} 3, ~4: (1971) 381--384.
+
+\bibitem[{Guia{\c{s}}u(1977)}]{guiasu77}
+Guia{\c{s}}u, Silviu.
+\newblock \emph{Information Theory with Application}.
+\newblock New York: McGraw-Hill, 1977.
+
+\bibitem[{Howson and Franklin(1994)}]{howsonfranklin94}
+Howson, Colin, and Allan Franklin.
+\newblock \enquote{Bayesian Conditionalization and Probability Kinematics.}
+\newblock \emph{The British Journal for the Philosophy of Science} 45, ~2:
+  (1994) 451--466.
+
+\bibitem[{Ingarden and Urbanik(1962)}]{ingardenurbanik62}
+Ingarden, R.~S., and K.~Urbanik.
+\newblock \enquote{Information Without Probability.}
+\newblock \emph{Colloquium Mathematicum} 9: (1962) 131--150.
+
+\bibitem[{Jaynes(1978)}]{jaynes78}
+Jaynes, E.T.
+\newblock \enquote{Where Do We Stand on Maximum Entropy.}
+\newblock In \emph{The Maximum Entropy Formalism}, edited by R.D. Levine, and
+  M.~Tribus, Cambridge, MA: MIT, 1978, 15--118.
+
+\bibitem[{Jaynes(1988)}]{jaynes88}
+\rule[.6ex]{3em}{.05ex}.
+\newblock \enquote{Optimal Information Processing and Bayes's Theorem:
+  Comment.}
+\newblock \emph{The American Statistician} 42, ~4: (1988) 280--281.
+
+\bibitem[{Jeffrey(1965)}]{jeffrey65}
+Jeffrey, Richard.
+\newblock \emph{The Logic of Decision}.
+\newblock New York, NY: Gordon and Breach, 1965.
+
+\bibitem[{Khinchin(1957)}]{khinchin57}
+Khinchin, Aleksandr.
+\newblock \emph{Mathematical Foundations of Information Theory}.
+\newblock New York: Dover Publications, 1957.
+
+\bibitem[{Kolmogorov(1968)}]{kolmogorov68}
+Kolmogorov, Andrey.
+\newblock \enquote{Logical Basis for Information Theory and Probability
+  Theory.}
+\newblock \emph{IEEE Transactions on Information Theory} 14, ~5: (1968)
+  662--664.
+
+\bibitem[{Majern{\'\i}k(2000)}]{majernik00}
+Majern{\'\i}k, Vladim{\'\i}r.
+\newblock \enquote{Marginal Probability Distribution Determined by the Maximum
+  Entropy Method.}
+\newblock \emph{Reports on Mathematical Physics} 45, ~2: (2000) 171--181.
+
+\bibitem[{Palmieri and Ciuonzo(2013)}]{palmiericiuonzo13}
+Palmieri, Francesco, and Domenico Ciuonzo.
+\newblock \enquote{Objective Priors from Maximum Entropy in Data
+  Classification.}
+\newblock \emph{Information Fusion} 14, ~2: (2013) 186--198.
+
+\bibitem[{Spohn(2012)}]{spohn12}
+Spohn, Wolfgang.
+\newblock \emph{The Laws of Belief: Ranking Theory and Its Philosophical
+  Applications}.
+\newblock Oxford, 2012.
+
+\bibitem[{Teller(1973)}]{teller73}
+Teller, Paul.
+\newblock \enquote{Conditionalization and Observation.}
+\newblock \emph{Synthese} 26, ~2: (1973) 218--258.
+
+\bibitem[{Van~Fraassen et~al.(1986)Van~Fraassen, Hughes, and
+  Harman}]{fraassenetal86}
+Van~Fraassen, Bas, R.I.G. Hughes, and Gilbert Harman.
+\newblock \enquote{A Problem for Relative Information Minimizers, Continued.}
+\newblock \emph{The British Journal for the Philosophy of Science} 37, ~4:
+  (1986) 453--463.
+
+\bibitem[{Veveakis and Regenauer-Lieb(2015)}]{veveakisregenauer15}
+Veveakis, Emmanuil, and Klaus Regenauer-Lieb.
+\newblock \enquote{Review of Extremum Postulates.}
+\newblock \emph{Current Opinion in Chemical Engineering} 7: (2015) 40--46.
+
+\bibitem[{Wagner(1992)}]{wagner92}
+Wagner, Carl.
+\newblock \enquote{Generalized Probability Kinematics.}
+\newblock \emph{Erkenntnis} 36, ~2: (1992) 245--257.
+
+\bibitem[{Wagner(2002)}]{wagner02}
+\rule[.6ex]{3em}{.05ex}.
+\newblock \enquote{Probability Kinematics and Commutativity.}
+\newblock \emph{Philosophy of Science} 69, ~2: (2002) 266--278.
+
+\bibitem[{Zellner(1988)}]{zellner88}
+Zellner, Arnold.
+\newblock \enquote{Optimal Information Processing and Bayes's Theorem.}
+\newblock \emph{The American Statistician} 42, ~4: (1988) 278--280.
+
+\end{thebibliography}

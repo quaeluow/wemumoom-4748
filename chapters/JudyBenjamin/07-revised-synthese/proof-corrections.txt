@@ -1,0 +1,46 @@
+There are very few things that need to be changed, and I am listing all of them here.
+
+First, answers to your query.
+
+(1) Please insert the following citation for Howson and Franklin: 
+
+@article{howsonfranklin94,
+  title =	 {Bayesian Conditionalization and Probability Kinematics},
+  author =	 {Howson, C. and Franklin, A.},
+  journal =	 {The British Journal for the Philosophy of Science},
+  volume =	 {45},
+  number =	 {2},
+  pages =	 {451--466},
+  year =	 {1994}
+}
+
+or
+
+Howson, Colin, and Allan Franklin. "Bayesian conditionalization and probability kinematics." The British journal for the philosophy of science 45, no. 2 (1994): 451-466.
+
+(2) Yes, please add “colour figure online” to the caption.
+
+Here are a few more points that I am raising:
+
+(3) Please change the sentence in the abstract:
+
+>>Given a more general type of evidence than Bayes’ formula will accommodate, the principle of maximum entropy (MAXENT) provides a unique solution for the posterior probability distribution based on the intuition that the information gain consistent with assumptions and evidence should be minimal.<<
+
+to the following two sentences (much easier to read):
+
+>>Sometimes we receive evidence in a form that standard conditioning (or Jeffrey conditioning) cannot accommodate. The principle of maximum entropy (MAXENT) provides a unique solution for the posterior probability distribution based on the intuition that the information gain consistent with assumptions and evidence should be minimal.<<
+
+(4) Please change my postal address from 
+
+University of British Columbia 
+20 22nd Avenue East
+Vancouver, BC V5V 1T4, Canada
+
+to 
+
+University of British Columbia
+1866 Main Mall 
+Buchanan E370
+Vancouver, BC V6T 1Z1, Canada 
+
+Thank you!

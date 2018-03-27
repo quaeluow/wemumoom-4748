@@ -1,0 +1,67 @@
+There are two remaining issues:
+
+(1) Reviewer's first comment: About the definition of the so-called
+joint probabilities. According to notation in Sec.2, w_i are simply
+coarser partitions of the set of events given by \theta_j. Then, isn't
+P(w_i \int theta_j) = P(\theta_j)? The author should carefully justify
+such an aspect.
+
+Author's first response: I didn't follow the reviewer's comment here.
+I checked everything, and I think my procedure is sound. 
+
+Reviewer's second comment: The author should provide a justification
+(at least in the reply letter) for the taken procedure and elaborate
+on my objection.
+
+Author's second response: The reviewer makes a valid point here that
+the reader should be alerted that this is the relevant difference
+between Jeffrey conditioning and Wagner conditioning. For Jeffrey
+conditioning, the w_i are simply coarser partitions of the set of
+events given by \theta_j, as the reviewer says. And yes, P(w_i \int
+theta_j) = P(\theta_j). In the paper, the presentation of the Jeffrey
+conditioning case is more complex than it needs to be, for a good
+reason. The notation that makes Jeffrey conditioning look
+unnecessarily complex is just the right notation for the Wagner
+conditioning case. This notation, while it shouldn't be used to
+describe Jeffrey conditioning on its own, aptly demonstrates the
+parallels between Jeffrey conditioning and Wagner conditioning. The
+triple (\kappa, \beta, \hat{\alpha}) characterizes both the
+Jeffrey-type updating problem AND the Wagner-type updating problem,
+even though in the latter case the w_i no longer range over the
+\theta_j. In response to the reviewer's comments, I have made this
+more clear in a few places: In section (3), I am explaining the
+"unnecessary" complexity of the notation for Jeffrey conditioning,
+which however becomes useful once we consider the more general case of
+Wagner conditioning. Both in section (3) and in section (4), I have
+inserted explanations about the changing relationship between the
+w_i's and the \theta_j's in the Jeffrey-type updating scenario and the
+Wagner-type updating scenario respectively.
+
+(2) Reviewer's first comment: The author can also help himself/herself
+in exposition following analogous lines as in:
+
+M. Debbah and R. Muller. "MIMO channel modeling and the principle of
+maximum entropy." Information Theory, IEEE Transactions on 51.5
+(2005): 1667-1690.
+
+F. Palmieri and D. Ciuonzo. "Objective priors from maximum entropy in
+data classification." Information Fusion 14.2 (2013): 186-198.
+
+Author's first response: I appreciate what the reviewer has to say
+here. I have worked with Bernardo's Reference Posterior Distributions
+before. I am afraid that introducing them would take us too far
+afield, so I have chosen not to make any changes here. Similar
+reasoning leads me not to include any reference to Veveakis and
+Regenauer-Lieb, as suggested by C1, and to Debbah, Muller, Palmieri,
+and Ciuonzo, as suggested by A13.
+
+Reviewer's second comment: I personally think that an adequate
+discussion on related literature is important for manuscript
+contextualization. Therefore I encourage the author to add and discuss
+all the aforementioned references.
+
+Author's second response: Debbah/Muller has indeed turned out to be a
+valuable resource for this paper, and I can also see the contribution
+of Palmieri/Ciuonzo (which is an excellent article in its own right).
+Unfortunately, I have not been able to make use of
+Veveakis/Regenauer-Lieb. 

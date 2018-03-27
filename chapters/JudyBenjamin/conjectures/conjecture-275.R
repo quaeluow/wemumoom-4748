@@ -1,0 +1,13 @@
+xvals <- seq(-1,4,by=.1)
+n <- c(6)
+t <- c(3)
+a <- (2/n)*(1+(t^2))
+b <- -2*(t+1)
+h <- (-b)/(2*a)
+k <- (a*(h^2))+(b*h)+n
+pi <- c(acos(-1))
+yvals <- (2/((pi^.5)*n*exp(k)*(a^.5)))*dnorm(xvals,mean=h,sd=(1/((2*a)^.5)))
+zvals <- (sqrt(2/(n*pi))*exp(-(2/n)*((xvals-(n/2))^2)))*(sqrt(2/(pi*n))*exp(-(2/n)*(((t*xvals)-(n/2))^2)))
+plot(xvals,yvals,type="n")
+lines(xvals,zvals,type="l",col="2")
+lines(xvals,yvals,type="l",col="1")

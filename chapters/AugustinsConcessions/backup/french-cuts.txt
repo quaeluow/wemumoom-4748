@@ -1,0 +1,26 @@
+1 
+see Boole, 1854, chapters 16--21, for alternative methods to the
+ones suggested by Laplace which result in imprecise epistemic
+probabilities).
+
+2
+\texttt{<x1.1>}Sharp credences confront a genuine conceptual
+crisis with intuitions about betting behaviour, completeness for
+preferences, and how reasonable it is to demand precision from
+agents, even if they are rational. Indeterminacy appears to
+provide an elegant solution to overcome this crisis as well as a
+powerful formal theory to uphold what many find so compelling
+about the Bayesian legacy. In the face of these virtues, I
+maintain that indeterminacy adds an unnecessary layer to the
+semantics of partial belief which has in its wake
+counter-intuitive consequences and solves nothing that cannot be
+solved by a carefully articulated version of the classical
+Bayesian commitment to sharp credences.\texttt{</x1.1>}
+
+\texttt{<x1.2>}A sharp credence, as much as the term suggests
+precision and a measure of certainty, is a representation of an
+epistemic state chracterized by uncertainty and lack of
+information. Importantly, it does not represent the evidence which
+informs the epistemic state, and it makes no claim of such a
+representation.\texttt{</x1.2>} 
+

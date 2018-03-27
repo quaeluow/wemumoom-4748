@@ -1,0 +1,157 @@
+* Reviews
+** Review 1
+*** evaluation
+High  Average  Low  No Answer
+Originality / Novelty ( )      (x)      ( )      ( )     
+Significance of Content ( )      (x)      ( )      ( )     
+Quality of Presentation ( )      ( )      (x)      ( )     
+Scientific Soundness ( )      ( )      (x)      ( )     
+Interest to the readers ( )      ( )      (x)      ( )     
+Overall Merit ( )      ( )      (x)      ( )   
+*** review
+**** The paper studies a nice problem 
+related to the application of maximum-entropy principle (MEP) to
+Wagner classic examples. In particular, it is shown that in the latter
+example MEP does not contradict Jeffrey’s updating principle. This
+confirms the MEP as a general criterion for dealing with inference in
+partially specified models.
+
+As a general comment, the idea is relevant for this journal. However,
+I have found the paper too descriptive and lacking some mathematical
+rigour in many parts. Therefore, in my opinion the author should
+revise thoroughly its manuscript in order to improve its clarity of
+exposition. More specifically:
+**** The title seems misleading. I do not get the meaning of the use of
+the term “probability kinematics”. I understand that this is the same
+term used in 12, but at least the author should clarify its meaning.
+**** The introduction is too descriptive and has the structure of an
+informal speech. I would encourage the author to be more formal when
+describing the related literature and the contributions of the present
+manuscript. In particular, I would suggest: (i) a bullet list for
+describing the contributions given in this manuscript and (ii) to move
+the paragraph of paper organization at the end of the introduction.
+**** Sec. II – About Eq. (2). It is apparent, after reading Eq. (1), (2)
+and so on, that a matrix-form notation is possible for the problem
+under investigation. This would help keeping the notation compact, add
+possible insights with respect to the given considerations and
+understanding the structural differences between Wagner’s conditioning
+and application of PME.
+**** Eq. (2) – Please define carefully notation for the sum in the
+denominator.
+**** After Eq. (2): “I will soon introduce an example which makes the
+notation more perspicuous…”. Please avoid an informal writing style
+(please change the entire paper accordingly).
+**** The sentence “Some distinguish between MAXENT, the synchronic rule,
+and Infomin, the diachronic rule, but I have shown elsewhere that the
+two are compatible and both follow PME (see also 13)”. It is
+necessary that you provide a published reference for such a statement,
+or you just give clarify the meaning of this sentence. Additionally,
+you should clarify in detail the difference the meaning of
+“synchronic” and “diachronic” rules.
+**** Pag. 4 – “I will do this in a more epistemological companion
+paper…”. First, this sentence follows an informal style which is
+inadequate for a journal paper. Secondly, after reading the entire
+manuscript, it seems that the present paper relies too much on the
+mentioned “companion paper”.Therefore, I am asking whether it could be
+useful adding part of the material (or even joining the two papers) in
+order to make the paper self-contained.
+**** Sec. 4 – About the definition of the so-called “joint
+probabilities”. According to notation in Sec.2, w_i are simply coarser
+partitions of the set of events given by \theta_j. Then, isn’t P(w_i
+\int theta_j) = P(\theta_j)? The author should carefully justify such
+an aspect.
+**** Pag. 5 – “ where x depends on your prior knowledge”. Again, this is
+too informal. I would rather suggest “…depends on the specific prior
+knowledge”.
+**** Pag. 6 – “…but maximize the entropy for the joint probability
+matrix M and the minimize the cross-entropy between the prior
+probability matrix M and posterior probability matrix \hat{M} “. This
+seems more a Kullback-Leibler divergence minimixization between M and
+\hat{M}. In the latter case, the author should also explore possible
+connections with well-known “reference framework” proposed by J.M.
+Bernardo.
+**** “Other may want to sky the conclusion”. Please avoid such informal
+statements.
+**** Eqs. (8-16): I am firmly convinced that this derivation is very
+important for the paper. Indeed I would suggest to use it as a
+starting point and then show the compatibility of Wagner rule as a
+case of MEP under a particular structural assumption (i.e. Eq. (14)).
+The author can also help himself/herself in exposition following
+analogous lines as in:
+
+- M. Debbah and R. Muller. "MIMO channel modeling and the principle of
+   maximum entropy." Information Theory, IEEE Transactions on 51.5
+   (2005): 1667-1690.
+
+- F. Palmieri and D. Ciuonzo. "Objective priors from maximum entropy
+  in data classification." Information Fusion 14.2 (2013): 186-198.
+** Review 2
+see entropy-70486-review.pdf
+** Review 3
+*** evaluation
+High  Average  Low  No Answer
+Originality / Novelty ( )      (x)      ( )      ( )     
+Significance of Content ( )      (x)      ( )      ( )     
+Quality of Presentation (x)      ( )      ( )      ( )     
+Scientific Soundness ( )      ( )      (x)      ( )     
+Interest to the readers ( )      ( )      (x)      ( )     
+Overall Merit ( )      ( )      (x)      ( )     
+*** review
+I have read the aforementioned manuscript with interest. I have to
+admit in full honesty that this type of "philosophical" papers is hard
+to be reviewed, since the recommendation is unavoidably influenced by
+personal taste and "scientific beliefs", although the latter is a
+contradiction in terms. These papers, according to my opinion, can
+only be recommended for publication as is or to be rejected, since
+there is no major research component that would justify a
+recommendation in between.
+
+Having said all that, I am a strong believer of not allowing
+personal beliefs interfeer with science, and for this reason I
+will recommend the paper to be accepted in its present form and
+leave the editor make the final decision. I would however like to
+provide an alternative point of view to the author, for his future
+works.
+
+In the paragraph in-between lines 116-123 the author emphatically
+dismisses Wagner's conclusion that the PME is not a reliable
+principle as incorrect. He relegates the support information for
+his claim in another paper that he will write in the future, and I
+don't doubt that.
+
+There is, however, a different point of view, that says that
+Wagner is correct. We have encountered several times problems
+where PME is insuffient to describe and some communities know that
+PME is nothing more than a postulate, a limiting case of the
+energy and entropy production conservation laws. The most famous
+community is the chemical engineering, where Prigogine proved that
+higher-information systems tend to favor the minimum entropy
+production as the principle that describes their response. A nice
+and short review just got published in that community, that
+summarizes these concepts. Although not entirely written in
+philosophical-mathematical jargon, I would recommend the author to
+read it for his future works:
+
+E. Veveakis, K Regenauer-Lieb, Review of extremum postulates, Current
+Opinion in Chemical Engineering, Volume 7, February 2015, Pages 40-46,
+ISSN 2211-3398, http://dx.doi.org/10.1016/j.coche.2014.10.006.
+
+I wouldn't want to enter in a philosophical and endless debate on
+which principle describes best what; I just wanted to emphasize
+that the manuscript is written in a somehow imperative language,
+which I consider not appropriate for a scientific topic that
+torments the community for quite a few years. Therefore, maybe the
+author wants to relax the strong conclusions and allow some
+flexibility in his discussion. That aside, I wish the best to the
+author for his future research.
+* Buffer
+@article{debbah2005mimo,
+  title={MIMO channel modeling and the principle of maximum entropy},
+  author={Debbah, Merouane and Muller, Ralf},
+  journal={Information Theory, IEEE Transactions on},
+  volume={51},
+  number={5},
+  pages={1667--1690},
+  year={2005},
+  publisher={IEEE}
+}

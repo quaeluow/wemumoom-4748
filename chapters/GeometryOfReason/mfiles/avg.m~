@@ -1,0 +1,5 @@
+function retval = avg (v)
+  if (isvector (v))
+    retval = sum (v) / length (v);
+  endif
+endfunction

@@ -1,0 +1,49 @@
+* ideas
+** email to Jan-Willem Romeijn
+Ironically, I don't even think I am done responding to your paper.
+What you say about epistemic entrenchment, Hellinger's Distance etc.
+sounds super-plausible, but it's really incompatible with the
+Principle of Maximum Entropy (not that you would mind, as you don't
+subscribe to it). I'd say that philosophers who know something about
+this are currently 99:1 in your favour that besides a probability
+distribution one also needs to have some kind of epistemic
+entrenchment in order to update probabilities uniquely following an
+observation. This is especially well-articulated in Spohn's book on
+ranking functions. It's almost like there is a first layer reflecting
+my probability distribution and then a second layer reflecting to what
+degree I am entrenched about these probabilities. If I want to defend
+the PME, I must show that this second layer is really either part of
+the background information or part of the new evidence. It is
+evidential, not epistemological. When I say 99:1 I mean that I haven't
+found a single philosopher yet who shares my intuition that the PME
+does not need to be guarded (and constrained) by the labour of
+epistemologists, epistemologists just need to understand it better.
+But there are quite a few physicists ...
+** see extensive notes in Schmierbuch, beginning p767
+Solution for the Linguist using Bertsekas on page 783. Pair it down to
+three element partitions p795. Pair it down to two p801. 
+** use Sundowners at the Westcliff
+see page 804 in Schmierbuch.
+
+Sarah and Marian have arranged to go for sundowners at the Westcliff
+hotel tomorrow. Sarah feels there is some chance that it will rain,
+but thinks they can always enjoy the view from inside. To make sure,
+Marian consults the staff at the Westcliff hotel and finds out that in
+the event of rain, the inside area will be occupied by a wedding
+party. So she tells Sarah: ``If it rains tomorrow, we cannot have
+sundowners at the Westcliff.'' Upon learning this conditional, Sarah
+sets her probability for sundowners and rain to zero, but she does not
+adapt her probability for rain.
+
+A jeweller has been shot in his store and robbed of a golden watch.
+How- ever, it is not clear at this point what the relation between
+these two events is; perhaps someone shot the jeweller and then
+someone else saw an opportunity to steal the watch. Kate thinks there
+is some chance that Henry is the robber (R). On the other hand, she
+strongly doubts that he is capable of shooting someone, and thus, that
+he is the shooter (S). Now the inspector, after hearing the
+testimonies of several witnesses, tells Kate: ``If Henry robbed the
+jeweller, then he also shot him.'' As a result, Kate becomes more
+confident that Henry is not the robber, while her probability for
+Henry having shot the jeweller does not change.
+* quotes

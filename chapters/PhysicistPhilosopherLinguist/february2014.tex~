@@ -1,0 +1,13 @@
+\documentclass[11pt]{article}
+
+\begin{document}
+
+This summarizes work done in February 2014. Sudelbuch around page 900.
+The problem is that we have an $m\times{}n$ joint prior probability
+matrix $p_{ij}$ with some zeroes in it (Wagner's constraints) that we want to
+transform into a joint posterior probability matrix $(q_{ij}$.
+
+For $p_{ij}$, we use the constraints and \textsc{maxent}. For
+$q_{ij}$, we use the observation and \emph{Infomin}. 
+
+\end{document} 

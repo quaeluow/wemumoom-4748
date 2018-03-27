@@ -1,0 +1,41 @@
+* quotes
+* ideas
+* material
+** books to read
+* structure
+** first pass
+relationship information and probability -- what kind of commodity is
+information (primary, derivative)
+
+define IT in terms of PT (A. Khinchin) or the other way around
+(Ingarden; Kolmogorov; de Feriet)
+
+axiomatizations of IT: Shannon; Fadeev; Khinchin
+
+read Guiasu
+
+continuity of standard conditioning, Jeffrey conditioning, and the PME
+
+read Skyrms, Higher Order Degrees of Belief
+
+Lagrange multipliers and the Radon-Nikodym Theorem
+
+remark: interesting how information and ranks resemble each other
+here: The certain event does not contain any information, while the
+impossible event contains infinite information: I(omega) = 0, I(empty
+set) = +inf
+
+Bayesian assumptions (Deb Mayo, Wolfgang Spohn, Halpern, Wagner)
+
+Prior probabilities
+
+The detractors: Carnap, Jeffrey, van Fraassen, Judy Benjamin, Shimony,
+Seidenfeld, Wagner (see Spohn, 197), epistemic entrenchment (Douven
+and Romeijn) and conditionals
+
+The attractors: Cox, Shore and Johnston (there is an equivalent for
+ranking theory), Caticha and Giffin, Jaynes
+
+belief change and probability kinematics
+* buffer
+

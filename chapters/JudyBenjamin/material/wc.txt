@@ -1,0 +1,438 @@
+Information Epistemology
+1. Introduction
+In pursuit of the question of what we know, how we know, and what the lim-
+its of knowledge are, one approach is to take into account that belief comes
+in degrees, is variously supported by evidence, and connects to knowledge
+in ways that we like to call rational and consistent. Advocates of Bayesian
+probability view the process as one of prior probability assignment and up-
+dating, with the emphasis on updating. The hope is that the evidence will
+ultimately dominate our degree of belief and that the prior probabilities will
+fade into the background.
+According to Bayes’ formula, given mutually exclusive and exhaustive hy-
+potheses { H1, H2, . . ., Hn } and a new piece of evidence E, it is rational and
+consistent to revise the probabilistic weight given to the hypotheses by the
+following formula or otherwise be liable to a Dutch book (see [13]):
+Q(Hi) = P (Hi | E) =
+P (E | Hi)P (Hi)
+P n
+k=1
+P (E | Hk)
+(1)
+Q (the ‘posterior probability distribution’) is the updated probability assign-
+ment after considering evidence E. P is the probability distribution that pre-
+cedes our consideration of evidence E. Knowledge, as far as we can achieve
+it, is the systematic application of these epistemological principles. There is
+a host of problems with Bayesian epistemology, but they are not our concern
+here.
+We will instead focus on the epistemological concept of probability in Bayes-
+ian epistemology. Our proposition is that information is another, more basic
+epistemological concept, from which probabilities and Bayesian epistemol-
+ogy flow naturally. Information theory can be used to create the foundations
+for probability theory. Usually, it is done the other way around and infor-
+mation theory based on probability theory. There are, however, substantial
+epistemological results in putting the horse before the cart that cannot be
+obtained by using probability theory without reference to information the-
+ory. The implication is that information theory solely based on probability
+theory is not a complete account of the theory. A proof at the heart of this
+paper will show, based on nothing but measure theory, information theory,
+and our understanding of evidence as a narrowing of epistemic space, that
+Bayesian updating and the principle of minimal discrimination (using the
+Kullback-Leibler Divergence) are compatible.
+1We will make explicit what it means to say that information theory and prob-
+ability theory are equivalent and how in the light of this equivalence it makes
+sense to consider information theory epistemologically prior to probability
+theory. For example, belief revision is not always tidily quantifiable, and so
+there is currently a great interest in alternatives to probability measures,
+such as Dempster-Shafer belief functions, plausibility functions, possibility
+functions, ranking functions, as  well as  relative likelihoods (for all these
+see an introduction in Halpern [21]). Considerations of information may be
+equally or more helpful in determining rational, epistemically justifiable, or
+just pragmatically workable belief. There is some evidence that our brains
+are successful this way: compression of data may be related to intelligence
+(see Friston [16]), whereas it is unclear how effective or accurate we are with
+our probability assessments.
+2. Information and Probability
+For a finite, discrete set of hypotheses (Hi)i=1,...,n an application of Laplace’s
+principle of indifference will often provide a reasonable assignment of prior
+probabilities:  P (Hi)  =  n− 1.  It  is  less  certain  what  to  do  in  the  infinite
+case, in the continuous case, or when Bertrand’s paradox strikes. The prin-
+ciple of maximum entropy, however, developed by E. T. Jaynes, generalizes
+Laplace’s principle of indifference to the continuous case, where the nor-
+mal distribution is the one that is maximally noncommittal with regard to
+missing information (see [24, 622f]).
+The constraints most naturally imposed on prior probabilities originate in
+information theory. Entropy is just a way of measuring the reciprocal of
+information. For example, there is a detailed and concise proof that the
+normal distribution contains the largest amount of uncertainty in Kamp´e de
+F´eriet [25] (in English [20, 298ff]). For a proof of similar significance for the
+Poisson distribution with respect to information theory see Ingarden and
+Kossakowski [22].
+Information theory, however, is often defined on the basis and in the context
+of probability theory. Aleksandr Khinchin calls information theory an “im-
+portant and interesting chapter of the general theory of probability” [28, 1].
+One of the stock formulas of information theory is Shannon’s Information
+Entropy and defines the entropy of a probability distribution where the xi
+are the elements of a finite event space with cardinality n:
+H(X) = −
+n X i=1
+p(xi) log p(xi)
+2One of the first to voice discontent about this dependence of information
+theory on probability theory is Andrey Kolmogorov. For formal attempts to
+define information theory without recourse to probability theory (and then
+constructing probability theory as a consequence) see Ingarden and Urbanik
+[23], Kolmogorov [29], and Kamp´e de F´eriet and Forte [26]. First, here is a
+more intuitive approach using possible worlds.
+If we had a measure on the set of worlds (we can come up with a stylized set
+of worlds where we have such a measure), it would be intuitive to say that
+the more a proposition constrains which possible worlds are consistent with
+the actual world, the more information it gives us. Let X be a proposition.
+Then
+I∗(X) =
+µ(set of all possible worlds)
+µ(set of all possible worlds in which X is true)
+gives us a first approximation how we might measure information.
+We rewrite this definition for notational convenience:
+I∗(X) =
+µ(Ω)
+µ(Ω | X)
+I∗  is on an awkward scale, does not accord with the bit (binary digit) of
+information theory, and needs to be normalized. Call I(X) the information
+density of the proposition X:
+I(X) = log2(I∗(X)) (2)
+One eighth of possible worlds is consistent with the actual world if it is
+constrained by the result of three independent tosses of a fair coin. If X is
+this result, I(X) = 3, which corresponds nicely to the fact that X contains
+3 bits of information.
+In a stylized set of a finite number of possible worlds, it seems intuitive to
+say that the information in X and Y  is unrelated if
+µ(Ω | X ∧ Y ) =
+µ(Ω | X) · µ(Ω | Y )
+µ(Ω)
+Consequently,
+I∗(X ∧ Y ) = I∗(X) · I∗(Y )
+and so, using (2),
+I(X ∧ Y ) = I(X) + I(Y )
+3The joint information density of unrelated information is additive, and to
+whatever degree the information is redundant it is less additive.
+Information density is intuitively related to probability. The relation must
+be intuitive, as we have no realistic measure of possible worlds (we do not
+even know what the cardinality of the set of possible worlds is, see [27, 44f]).
+Basing probability theory on counterfactuals harbours all kinds of systematic
+problems. Ignoring these warnings, the same intuitions as above give us:
+P (X) =
+µ(Ω | X)
+µ(Ω)
+which translates into:
+P (X) = 2− I(X)
+Now, shedding all the problems with possible worlds, we will consider in-
+formation density our primary epistemological notion so that information
+density is numerically defined in mathematically stylized scenarios (as prob-
+abilities are often numerically defined in mathematically stylized scenarios)
+and otherwise defined (let’s say, ‘epistemologically defined’) if no mathemat-
+ical stylization is accessible (which is usually the case). We should always be
+aware that the way we construct the set of possible worlds already encodes
+assumptions made about the domain of the construction (see [21, 13]). In-
+formation, the way we understand it here, is a narrowing of epistemic space
+implicitly embedding these assumptions. (For epistemic space see Chalmers
+[11].)
+Rationality constraints on the epistemological definition of information den-
+sity are analogous to rationality constraints on subjective probabilities, fol-
+lowing Kolmogorov’s axioms of probability theory. The information density
+of a proposition X  should in analogy to Kolmogorov’s axioms (i) be be-
+tween 0 and ∞ (0 ≤ I(X) ≤ ∞ ), (ii) be 0 if X yields no information, ∞ if
+X constrains the set of possible worlds to a set measuring 0, whatever that
+may mean in context, and (iii) be countably additive with other propositions
+X0, X00, . . . if all those propositions together with X are pairwise unrelated
+to each other in terms of yielding information (I(X ∧ X0  ∧ X00  ∧ . . .)  =
+P m
+I(Xm)). (For mostly equivalent axiomatizations of information theory
+in the literature see [36]; [15]; and [28].)
+Once information density is axiomatized in this way, we define probability
+in terms of information density (in accordance with our intuitions based on
+possible worlds above):
+P (X) = 2− I(X)
+4It follows immediately that P is a probability measure and two propositions
+X and Y  are independent if and only if P (X ∧ Y ) = P (X)P (Y ).
+If choosing from an alternative hypothesis set { H1, H2, . . . } , the hypothesis
+H∗  commanding the highest amount of epistemic warrant is the one (not
+necessarily unique) for which
+I( E ∧ H∗) = min( { I( E ∧ H1), I( E ∧ H2), . . . } ) (3)
+where E is one’s body of evidence.
+An early formulation of Jaynes’s principle of maximum entropy is in Richard
+Avenarius’ telling book title Philosophie als Denken der Welt gem¨aß dem
+Princip des kleinsten Kraftmaßes: Prolegomena zu einer Kritik der reinen
+Erfahrung [2]. Avenarius inspired Ernst Mach, who described the economy
+of thought in physics (and the sciences generally) as a result of the desire to
+master the sum of one’s experience by the smallest possible effort (see [33]).
+The philosopher who pursued this project most systematically was Rudolf
+Carnap in Der logische Aufbau der Welt [6], whose plan it was “that qualities
+should be assigned to point-instants in such a way as to achieve the laziest
+world compatible with our experience . . .  the principle of least action was
+to be our guide in constructing a world from experience” [34, 37]. Carnap’s
+project in relation to our concerns is spelled out in An Outline of a Theory
+of Semantic Information [7], where, unsurprisingly, logically true sentences
+do not contain information (theorem 4.2.24 and 4.2.33), while false sentences
+contain maximal information (theorem 4.2.23 and 4.2.33) (for more detail
+see [5, 319f]). The project, however, is generally considered to have failed.
+The metaphysical debate that it created is applicable to our epistemological
+concerns via the relationship between information and probability, but here
+is not the place for a detailed account.
+The rest of the paper is a mopping up operation thinking about what (3)
+might mean as a definition and in scientific practice. It states that the hy-
+pothesis, explanation, or model is the best which is minimally informative
+with respect to the evidence. Knowledge is those propositions which provide
+no new information in context, as in the rejoinder, ‘I already knew that.’
+If the proposition is false or a Gettier proposition (see [17]), the rejoinder
+is inappropriate (although the speaker may not recognize it). Thus knowl-
+edge depends on both internal and external factors and the epistemological
+debate can continue as we are used to it.
+Probabilistic language provides us with an intuitive inventory that is further
+backed up by rich mathematical notions where (in rare cases, such as coin-
+5flipping and dice-rolling) the probabilities are quantitatively precise. The
+same is true for information: where the assignment of quantitative informa-
+tion is not available we still have good intuitions about what is informative
+and what is not. Operating in the background and supportive of our intu-
+itions, there is a substantial body of mathematics where the information
+density is numerically defined. This body of mathematics, information the-
+ory, differs from probability theory in interesting ways and yields substantial
+results not achievable by probability theory.
+There is no debate in information theory analogous to the debate about
+subjective, objective, and frequentist views of probability. Instead there are
+well-established theorems about what information theory cannot do for us,
+for example provide an algorithm for computing the complexity of infor-
+mation. Using the proof that Turing’s halting problem cannot be solved
+(see [39]), which bears a resemblance to G¨odel’s incompleteness theorem,
+we know that there is no such algorithm (see Chaitin [10]). There is then
+no algorithm giving us a solution for (3) other than the continued labour of
+human thought and experience. In information theory, this is known as the
+full employment theorem.
+Because Chaitin’s incompleteness theorem shows that complexity (mathe-
+matically formalized as Kolmogorov Complexity) cannot be algorithmically
+assessed, there are heavy methodological limits on what information theory
+can do for us in scientific practice. Solomonoff’s theory of inductive infer-
+ence (see [38]) and Wallace’s theory of minimum message length (see [41]
+and [42]) are only of limited use to practicioners. There is a strand of non-
+Bayesian inference methods, however, which appears to have methodological
+import, especially dealing with simplicity, for example Hirotsugu Akaike’s
+information criterion (see [1] and [4]) or Jorma Rissanen’s theory of min-
+imum description length (see [35] and [19]). For a Bayesian response see
+Dowe et al. [14].
+3. Information and Divergence
+The Kullback-Leibler divergence, in its most general measure-theoretic terms,
+is
+D KL (P k Q) = Z X
+p log
+p
+q
+dµ
+µ is any measure on the event space X for which p and q are the Radon-
+Nikodym derivatives
+dP
+dµ
+and
+dQ
+dµ
+respectively. The Kullback-Leibler Diver-
+gence was introduced specifically for expressing what we have called (after
+Jaynes) the principle of maximum entropy, which Solomon Kullback calls
+6the principle of minimum discrimination: given new facts, a new distribu-
+tion Q should be chosen which is as hard to discriminate from the original
+distribution P as possible so that the new data produces as small an infor-
+mation gain (D KL (P k Q)) as possible. The Kullback-Leibler Divergence also
+provides a link between Shannon’s Entropy in the discrete case and Boltz-
+mann’s continuous entropy: a concise and illuminating proof for this is in
+section 2.2 of Guia¸su [20]. For practical applications of the Kullback-Leibler
+Divergence see Clarke and Barron [12].
+The Kullback-Leibler Divergence, which is the unique divergence to mini-
+mize for minimum discrimination in Kullback’s sense, will serve as our formal
+link between information theory and probability distributions. Now we want
+to show that Bayesian updating reflects the principle of maximum entropy.
+In other words, Bayesian conditionalization gives us the posterior probabil-
+ity distribution that is least informative given the evidence. We arrive at
+this result not by using the axioms of probability theory but rather by using
+the axioms of information theory.
+Let P  be the prior probability distribution, Ω the event space, E ⊂ Ω our
+evidence with P (E) 6 = 0. Using the Radon-Nikodym theorem, there is a
+non-negative, real-valued, measurable function p such that
+P (X) = Z X
+p(ω)dP (ω) for all X ⊂ Ω
+(We will from now on abbreviate dP (ω) by dP .) The evidence restricts the
+event space from Ω to E. The successor probability distribution of P , given
+evidence E, is
+PE(X) =
+P (X)
+P (E)
+for X ⊂ E
+It is easy to show that PE  is a probability measures for E. Let
+pE(ω) =
+p(ω)
+P (E)
+pE  is the Radon-Nikodym derivative of PE  with respect to P :
+PE(X) =
+P (X)
+P (E)
+=
+1
+P (E) Z X
+p(ω)dP = Z X
+pEdP for X ⊂ E
+Now let us define the function:
+qE(ω) =
+χE(ω)p(ω)
+P (E)
+7χE  is the characteristic function of E for which χE(ω) = 1 if ω ∈ E and
+χE(ω) = 0 otherwise. qE  renders the following expression minimal (zero, in
+fact):
+Z E
+pE(ω) log
+pE(ω)
+qE(ω)
+dP (4)
+Now define Q(X) = R X
+qE(ω)dP for all X ⊂ Ω, which is easily shown to be
+a probability distribution on Ω, and QE(X) = R X
+qE(ω)dP  for all X ⊂ E,
+which is easily shown to be a probability distribution on E, for example
+QE(E) = Z E
+χE(ω)p(ω)
+P (E)
+dP = 1
+Q(Ω) = Z Ω
+χE(ω)p(ω)
+P (E)
+dP = 1
+QE  = Q on E and, because of (4), D KL (PE k QE) is minimal. It remains to
+show that Q(X)P (E) = P (X ∧ E) for X ⊂ Ω, which is just Bayes’ formula
+(multiply both sides by P (X)(P (X)P (E))− 1  and compare to formula (1)):
+Q(X)P (E) = P (E) Z X
+χE(ω)p(ω)
+P (E)
+dP =
+Z X ∧ E
+χE(ω)p(ω)dP + Z X ∧ Ec
+χE(ω)p(ω)dP = P (X ∧ E)
+We used what we know from probability theory, i.e. the particular form
+of  the  Bayesian  posterior  probability  distribution,  and  it  turns  out  that
+this particular form fulfills the principle of maximum entropy (or minimal
+discrimination). While specifically taylored to Bayesian updating, this type
+of proof is analogous to two independent attempts of basing information
+theory on probability theory rather than the reverse (see [23] and [26]).
+A completely different proof using Lagrange multipliers and not the Radon-
+Nikodym theorem is given in Caticha and Giffin [8] and Giffin [18]. Ariel
+Caticha and Adom Giffin show that “Bayes updating is a special case of
+ME (the maximum relative entropy method) updating” [8, 11]. In his PhD
+thesis  [18],  Giffin  shows  that  “ME  is  capable  of  producing  every  aspect
+of orthodox Bayesian inference and proves the complete compatibility of
+Bayesian and entropy methods” [18, 62]. He furthermore shows that ME
+can handle updating with data and constraints simultaneously, which neither
+Bayesian updating nor MaxEnt can do on their own, but only in cooperation.
+4. Information and Complexity
+8Kolmogorov’s frustration with the priority of probability theory comes from
+a different place than Ingarden’s or Kamp´e de F´eriet’s. He wants an informa-
+tion density measure that applies to individual sequences of symbols rather
+than to the probability distributions behind the sequences of symbols. This
+approach leads us away from probability to a different intuition connected
+with information. The series 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 contains less information
+than the series 3, 1, 4, 1, 5, 9, 2, 6, 5, 3. If one of the elements of a series is
+missing the epistemically justified belief is that we should supply the one
+that is least informative, i.e. the one which coheres with the pattern.
+As the name suggests, in Three Approaches to the Quantitative Definition
+of Information [30] Kolmogorov suggests that there are a couple of alterna-
+tives to the probabilistic quantification of information: one combinatorial,
+the other algorithmic. He admits that the combinatorial approach is out-
+stripped by the probabilistic approach, but contends that this is not so for
+the algorithmic approach. Even a “superficial discourse” [29, 663] reveals
+the truth of
+two  general  theses:  (1)  Basic  information  theory  concepts  must  and  can
+be founded without recourse to the probability theory in such a manner
+that ‘entropy’ and ‘mutual information’ concepts are applicable to individual
+values. (2) Thus introduced, information theory concepts can form the basis
+of the term random, which naturally suggests that random is the absence of
+periodicity. (Kolmogorov [29, 663])
+Algorithmic information in a sequence of symbols is the length of its shortest
+description. For descriptions, we will use Turing machines. A description for
+a string s is a program that will output the string s as input to a given
+Turing machine. This principle was independently articulated in 1964 by
+Solomonoff, in 1965 by Kolmogorov, and in 1965 by Chaitin.
+For formalization we use universal Turing machines (UTMs). A Turing ma-
+chine U is universal if it can simulate an arbitrary Turing machine on arbi-
+trary input. (For a proof that UTMs exist see [9, 14].) Solomonoff proved the
+invariance theorem of information theory which states that a UTM provides
+an optimal means of description, up to a constant. Formally,
+CU (s) ≤ CM (s) + c
+The proof is relatively simple using the universality of U  (see [31, 104]).
+This is good news for information theory: complexity does not depend on
+9the particular Turing machine we use. A string is random if its complexity
+is approximately the same as its length.
+There are two questions that arise as an immediate consequence of this defi-
+nition of complexity: are most sequences of symbols complex or simple, and is
+there an algorithm which will tells us how complex a given sequence of sym-
+bols is? Gregory Chaitin gives a detailed answer to the first question in [9]
+(the upshot is that nearly all sequences of symbols are random) and supplies
+a proof for Chaitin’s incompleteness theorem: whether a specific string is
+complex cannot be formally proved, if the string’s complexity is above a cer-
+tain threshold. The most accessible proofs for Chaitin’s incompleteness the-
+orem are online, e.g. http://wapedia.mobi/en/Kolmogorov complexity.
+5. Information and Epistemology
+Considering the results of the last section, information epistemology has the
+virtue of being more an epistemology of ignorance as well as an epistemol-
+ogy of knowledge. There are efforts to use Kullback’s principle of minimum
+relative entropy in certain fields of Artificial Intelligence, but there is also
+the sober recognition that while there is a “very strong and solid mathemat-
+ical foundation, the problem is that it is often very hard or even impossible
+to compute” [40, 1]. As we saw in the last section, there are principled ob-
+stacles to assessing it from a general perspective. Computer programs that
+compress data must do so on a case by case basis, and there is no optimal
+algorithm.
+Yet it is intuitively right that given the data we should not maintain beliefs
+that add more information than necessary. As Jaynes notes, “there is noth-
+ing in the general laws of motion that can provide us with any additional
+information about the state of a system beyond what we have obtained
+from measurement” [24, 624]. We take this for granted about our laws of
+motion, so it may be considered reasonable to have similar expectations for
+epistemology in general. It is not enough to say that our beliefs should rest
+on evidence: they must rest on evidence in the right way, which appears
+to be most concisely summarized by saying that our beliefs should not add
+information where there is no need to do so.
+Consider an example from experimental design. The principle of maximum
+entropy suggests that we should design experiments that make our evidence
+information-rich, followed up by a hypothesis choice that is information-
+poor. Jose M. Bernardo [3] has devised an algorithm for prior probability
+distributions that measures and maximizes missing information: the Ref-
+10erence Posterior Distribution (based on a measure of information provided
+by experiments in [32]). Let p(θ) be our prior density. Then the expected
+information is: Z p(x) Z p(θ | x) log
+p(θ | x)
+p(θ)
+dθ dx
+where p(x) = R p(x | θ)p(θ)dθ and p(θ | x) = p(x | θ)p(θ)/p(x). Maximizing this
+information yields a prior probability distribution that agrees with what we
+have learned about information theory so far, giving us the uniform distri-
+bution pk  = n− 1  for the discrete case ( P k ∈{ 1,...,n }
+pk  = 1) and the normal
+distribution  for  the  continuous  case.  It  is  largely  invariant  to  parameter
+transformations (see [43]) and ensures that the expected information of the
+experiment will be maximal. This is no longer a principle of ‘indifference’:
+it is pragmatic with a view to Jeffreys’ tempering condition, “assign to each
+seriously proposed hypothesis sufficiently high prior probability to allow the
+possibility that it will achieve a higher posterior probability than any rival
+hypothesis as a result of the envisaged observations” [37, 267].
+The principle of maximum entropy has as little practicality to it as Bayesian
+epistemology. Scientists are not known to hunker down with their calcu-
+lators,  plugging  in  priors  and  likelihoods  to  figure  out  posteriors.  What
+Bayesian epistemology does is give us a pattern of thought, belief revision,
+and some intelligent ideas about experimental design and hypothesis choice.
+What this paper tries to achieve is to understand a similar pattern inspired
+by information theory.
+In conclusion, I want to leave the reader with a triangle of theories that are
+closely related, whose relationship is underdescribed, and that have a high
+potential of informing both our naive and our scientific epistemology. Prob-
+ability theory (PT) is one vertex of this triangle. Information theory (IT-1)
+as viewed by Shannon’s Entropy and the Kullback-Leibler Divergence is the
+second vertex. Information theory (IT-2) viewed in terms of Kolmogorov
+or Solomonoff Complexity is the third vertex. The relationship between PT
+and IT-1 is clearly one of equivalence, as we have shown. IT-1 and IT-2
+share something in common but are not easily accessible to each other. The
+claim of this paper is that the relationship between PT and IT-2 is of prime
+epistemological value. Much more inquiry will have to go into determining
+what precisely this value is.

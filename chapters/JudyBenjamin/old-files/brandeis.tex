@@ -1,0 +1,196 @@
+\documentclass[11pt]{article}
+
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+\frenchspacing % no extra space at the end of a sentence
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{.1in}
+
+\raggedbottom
+
+%\pagestyle{empty}
+
+% 	PACKAGES
+% \usepackage[small,bf]{caption}
+% \let\bcode\textbgreek
+% \usepackage[bgreek,english]{babel}
+% \usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+% \usepackage{german}
+% \usepackage{hebtex}
+% \usepackage{graphicx}
+% \usepackage[german]{babel}
+% \usepackage{endnotes}
+% \let\footnote=\endnote
+% \usepackage{rotating}
+% \usepackage{enumerate}
+
+\newcommand{\kapt}[1]{\textbf{{\thechap}. #1}\addtocounter{chap}{1}}
+
+\newcommand{\tbd}[1]{}
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+
+\newif\ifNumericalOrYear
+\NumericalOrYeartrue
+% \NumericalOrYearfalse
+\ifNumericalOrYear
+\usepackage[numbers,colon]{natbib}
+\else
+\usepackage[round,colon]{natbib}
+\fi
+\newif\ifPageP
+\PagePtrue
+% \PagePfalse
+\ifPageP
+\newcommand{\PageP}{p.~}
+\else
+\newcommand{\PageP}{}
+\fi
+
+\newcommand{\scite}[3]{\ifnum#1=1\ifNumericalOrYear\citep{#2}\else\citeyearpar{#2}\fi\else
+\ifnum#1=2\ifNumericalOrYear\citep[#3]{#2}\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=4\ifNumericalOrYear\citet{#2}\else\citet{#2}\fi\else
+\ifnum#1=5\ifNumericalOrYear(\citet{#2})\else\citep{#2}\fi\else
+\ifnum#1=6\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=7\ifNumericalOrYear\citep{#2}\else\citealp{#2}\fi\else
+\ifnum#1=8\ifNumericalOrYear\citep[#3]{#2}\else\citealp[{\PageP}#3]{#2}\fi\else
+\textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
+% \newenvironment{quotex}{\begin{quote}\begin{footnotesize}\begin{singlespace}}{\end{singlespace}\end{footnotesize}\end{quote}}
+
+\begin{document}
+
+\title{Probability Kinematics and Halpern's Full Employment Theory}
+
+\author{Stefan Lukits}
+
+\maketitle
+
+\newcounter{chap}
+
+\setcounter{chap}{1}
+
+\kapt{Introduction}
+
+Let $f$ be a probability distribution on a finite space
+$x_{1},\ldots,x_{m}$ that fulfills the constraint
+\begin{equation}
+  \label{eq:constraint}
+\sum_{i=1}^{m}r(x_{i})f(x_{i})=\alpha
+\end{equation}
+
+Because $f$ is a probability distribution it fulfills
+\begin{equation}
+  \label{eq:unity}
+\sum_{i=1}^{m}f(x_{i})=1
+\end{equation}
+
+We want to maximize the entropy, given the constraints
+({\ref{eq:constraint}}) and ({\ref{eq:unity}}),
+\begin{equation}
+  \label{eq:entropy}
+-\sum_{i=1}^{m}f(x_{i})\ln(x_{i})
+\end{equation}
+
+We use Lagrange multipliers to define the functional
+\begin{equation}
+  \label{eq:functional}
+J(f(x_{i}))=-\sum_{i=1}^{m}f(x_{i})\ln{}f(x_{i})+\lambda_{0}\sum_{i=1}^{m}f+\lambda_{1}\sum_{i=1}^{m}r(x_{1})f(x_{i})
+\end{equation}
+and differentiate it with respect to $x_{i}$
+\begin{equation}
+  \label{eq:funder}
+\frac{\partial{}J}{\partial{}f(x_{i})}=-\ln(f(x_{i}))-1+\lambda_{0}+\lambda_{1}r(x_{i})
+\end{equation}
+
+Set ({\ref{eq:funder}}) to $0$ to find the necessary condition to
+maximize ({\ref{eq:entropy}})
+\begin{equation}
+  \label{eq:coverthomas}
+g(x_{i})=e^{\lambda_{0}-1+\lambda_{1}r(x_{1})}
+\end{equation}
+
+This is the Gibbs distribution. We still need to do two things: (a)
+show that the entropy of $g$ is maximal, and (b) show how to find
+$\lambda_{0}$ and $\lambda_{1}$. (a) is shown in Theorem 12.1.1 in
+Cover and Thomas \scite{1}{coverthomas91}{} and there is no reason to
+copy it here. I was not able to find (b) in the literature and will
+show it here. A faint suggestion on how to do it is in Jaynes'
+treatment of the Brandeis Dice Problem (see \scite{8}{jaynes89}{243}). 
+
+Let
+\begin{equation}
+  \label{eq:l1}
+\lambda_{1}=-\beta
+\end{equation}
+\begin{equation}
+  \label{eq:zet}
+Z(\beta)=\sum_{i=1}^{m}e^{-\beta{}r(x_{i})}
+\end{equation}
+\begin{equation}
+  \label{eq:l0}
+\lambda_{0}=1-Z(\beta)
+\end{equation}
+
+To find $\lambda_{0}$ and $\lambda_{1}$ we introduce the constraint
+\begin{equation}
+  \label{eq:logcon}
+-\frac{\partial}{\partial{}\beta}\ln(Z(\beta))=\alpha
+\end{equation}
+
+To see how this constraint gives us $\lambda_{0}$ and $\lambda_{1}$
+Jaynes' solution of the Brandeis Dice Problem is a helpful example. We
+are, however, interested in a general proof that this choice of
+$\lambda_{0}$ and $\lambda_{1}$ gives us the probability distribution
+maximizing the entropy. That $g$ so defined maximizes the entropy is
+shown in (a). We need to make sure, however, that with this choice of
+$\lambda_{0}$ and $\lambda_{1}$ the constraints
+({\ref{eq:constraint}}) and ({\ref{eq:unity}}) are also fulfilled.
+
+First, we show
+% \begin{align}
+% &\mathbb{R}^{3}\mbox{ can be endowed with a metric }l_{2}\notag
+% \\
+% &\mbox{with constant positive curvature }K=k\label{carmor2}\tag{C2}
+% \end{align}
+\begin{align}
+&\sum_{i=1}^{m}g(x_{i})=\sum_{i=1}^{m}e^{\lambda_{0}-1+\lambda_{1}r(x_{i})}=e^{\lambda_{0}}\sum_{i=1}^{m}e^{\lambda_{1}r(x_{i})}=\notag\\
+&e^{-\ln(Z(\beta))}Z(\beta)=1\label{eq:unishow}
+\end{align}
+
+Then, we show, by differentiating $\ln(Z(\beta))$ using the
+substitution $x=e^{-\beta}$
+\begin{align}
+&\alpha=-\frac{\partial}{\partial{}\beta}\ln(Z(\beta))=-\frac{1}{\sum_{i=1}^{m}x^{r(x_{i})}}\left(\sum_{i=1}^{m}r(x_{i})x^{r(x_{i})-1}\right)(-x)=\notag\\
+&\frac{\sum_{i=1}^{m}r(x_{i})x^{r(x_{i})}}{\sum_{i=1}^{m}x^{r(x_{i})}}\label{eq:alphashow}
+\end{align}
+
+And, finally,
+\begin{align}
+&\sum_{i=1}^{m}r(x_{i})g(x_{i})=\sum_{i=1}^{m}r(x_{i})e^{\lambda_{0}-1+\lambda_{1}r(x_{1})}=e^{\lambda_{0}-1}\sum_{i=1}^{m}r(x_{i})e^{\lambda_{1}r(x_{1})}=\notag\\
+&e^{\lambda_{0}-1}\sum_{i=1}^{m}r(x_{i})x^{r(x_{i})}=\alpha{}e^{\lambda_{0}-1}\sum_{i=1}^{m}x^{r(x_{i})}=\alpha{}e^{\lambda_{0}-1}\sum_{i=1}^{m}e^{-\beta{}r(x_{i})}=\notag\\
+&\alpha{}Z(\beta)e^{\lambda_{0}-1}=\alpha{}Z(\beta))e^{-\ln(Z(\beta))}=\alpha\label{eq:finalshow}
+\end{align}
+% \noindent\textbf{Endnotes}
+
+% \theendnotes
+
+% \medskip
+
+% \noindent\textbf{References}
+
+% \nocite{*} 
+\bibliographystyle{stefan-2010-08-28}
+\bibliography{bib-3306}
+
+\end{document}

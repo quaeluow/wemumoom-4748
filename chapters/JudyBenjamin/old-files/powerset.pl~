@@ -1,0 +1,5 @@
+use Math::BigInt;
+$x=Math::BigInt->new("12");
+$y=Math::BigInt->new("6");
+$x->bnok($y);
+print "$x\n";

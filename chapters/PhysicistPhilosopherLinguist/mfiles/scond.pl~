@@ -1,0 +1,31 @@
+open(data,"<./scond1.R");
+print data "x=c(";
+
+$xleft=-1;
+$xright=1;
+$grain=1000;
+
+for ($i1=0;$i1<=$grain;++$i1)
+{
+    $x=$xleft+(($i1/$grain)*($xright-$xleft));
+print data "$x";
+unless ($i1==$grain)
+{
+print data ",";
+}
+}
+
+print data ")\nv=c(";
+
+for ($i2=0;$i2<=$grain;++$i2)
+{
+    $x=$xleft+(($i2/$grain)*($xright-$xleft));
+    $y=($x*(log(x/0.08)))+((.4-$x)*(log((.4-$x)/(0.12))));
+print data "$y";
+unless ($i2==$grain)
+{
+print data ",";
+}
+}
+
+print data ")\nplot(t,v,ylim=c(-1,1),xlab=\"\",ylab=\"\",type=\"h\",col=\"blue\")\ndev.print(device=jpeg, \"plotq.jpg\", width=600)";

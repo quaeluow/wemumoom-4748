@@ -1,0 +1,19 @@
+Holly,
+
+It was nice to meet you over lunch at the Sage Bistro. I found your presentation very compelling and wanted to remark on a few things in your project, coming from my area using information theory in probability kinematics. You mentioned the conceptual and the substantive debate in causation with respect to patterns. If I understand it correctly, the substantive debate identifies the patterns so that they are not arbitrary. This is where algorithmic compressibility comes in (I must read Dennett's paper! -- as you said, it was under my radar because I don't work on the metaphysics of mental states). Algorithmic compressibility is important to me because there is an incompleteness theorem by Chaitin showing that compressibility problems are not generally decidable. My claim goes something like this:
+
+(1) Information is a more basic notion than probability and provides a formal apparatus which is well-suited to solve problems in probability kinematics that probability theory cannot solve (the famous Kullback-Leibler Divergence plays a big role here, as does the principle of maximum entropy, which I seek to defend against many counterexamples and conceptual objections).
+
+(2) Unfortunately, however, there is Chaitin's incompleteness theorem. Almost all formal epistemologists believe that information has failed to provide a general solution to the kinematics problem, and that we will continue to be dependent on the ingenuity of epistemologists to solve it for particular cases. I think that information does provide a general solution to the problem but that we will have to live with the incompleteness.
+
+Be that as it may, incompleteness may have implications for your substantive debate as well. There is no algorithm that can resolve the question which patterns will serve to provide (or represent?) the causal nexus which is at the base of your causal relata.
+
+The conceptual debate seems to revolve around the question of how the causal relata are causally related. As you said, information theory provides some promising tools for how this could be done. More entropy means less causal relationship. I can think of several other analogies between causation and probability here. In the philosophy of science, we distinguish between partial belief and acceptance; your model suggests that causal relationships should be viewed more like partial beliefs, ``probabilistically,'' with quantitative measures of causal connection, rather than in terms of acceptance (either a relationship is causal or not).
+
+More interestingly, however, your model seeks to mediate between the view that causation needs to be tracked in the ``real world'' (process theory) and the neo-Humean view that it can only be understood conceptually in terms of possible worlds and counterfactuals. This maps onto a very similar contest between frequentism and Bayesianism. Frequentists seek to track probability in the real world, whereas Bayesians understand probability strictly in terms of an agent's uncertainty (or lack of information). The real world aspect of frequentism is initially appealing, but it turns out to be ultimately severely limiting and possibly inconsistent. Limiting because it cannot deal with ``robust'' phenomena such as the probability of life on Mars, just like process theory is limiting with respect to causal relata such as ``a higher minimum wage causes greater unemployment.''
+
+I am mostly concerned with formal methods and challenges relating to the use of information in probability kinematics. The Kullback-Leibler Divergence has been a faithful friend over the years :) -- it can just about solve anything if you feed it properly (never put the cutlery on the wrong side of the plate). I would be very interested to see how you put it to work more formally in the context of causation.
+
+Inspiring talk! Thank you,
+
+Stefan

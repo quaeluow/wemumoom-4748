@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: majernik-analysis.aux
+The style file: analysis.bst
+Database file #1: bib-5908.bib
+ptr=1, stack=
+
+---the literal stack isn't empty for entry catichagiffin06
+while executing---line 1650 of file analysis.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry coverthomas06
+while executing---line 1650 of file analysis.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry friedmanshimony71
+while executing---line 1650 of file analysis.bst
+ptr=1, stack=
+
+---the literal stack isn't empty for entry howsonfranklin94
+while executing---line 1650 of file analysis.bst
+You've used 13 entries,
+            2860 wiz_defined-function locations,
+            699 strings with 6450 characters,
+and the built_in function-call counts, 7874 in all, are:
+= -- 671
+> -- 450
+< -- 2
++ -- 124
+- -- 172
+* -- 614
+:= -- 1471
+add.period$ -- 40
+call.type$ -- 13
+change.case$ -- 69
+chr.to.int$ -- 13
+cite$ -- 13
+duplicate$ -- 250
+empty$ -- 553
+format.name$ -- 188
+if$ -- 1435
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 17
+newline$ -- 68
+num.names$ -- 132
+pop$ -- 65
+preamble$ -- 1
+purify$ -- 160
+quote$ -- 0
+skip$ -- 258
+stack$ -- 0
+substring$ -- 466
+swap$ -- 80
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 220
+warning$ -- 0
+while$ -- 148
+width$ -- 0
+write$ -- 178
+(There were 4 error messages)

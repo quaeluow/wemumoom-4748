@@ -1,0 +1,332 @@
+\documentclass[11pt]{article}
+\usepackage{october}
+\newcommand{\anderson}[0]{\textit{Bool-A}}
+\newcommand{\augustin}[0]{\textit{Bool-B}}
+
+\begin{document}
+
+% \title{Augustin's Concessions: A Problem for Indeterminate Credal States}
+
+% \subtitle{American Philosophical Association, Eastern Division
+%   Meeting, Washington DC}
+
+% \author{Stefan Lukits, University of British Columbia}
+
+% \date{January 8, 2016}
+
+% \maketitle
+
+\textbf{Augustin's Concessions: A Problem for Indeterminate Credal States}
+
+\emph{Stefan Lukits, University of British Columbia}
+
+Traditionally, Bayesians have maintained that a rational agent, when
+holding a credence, holds a sharp credence. It has recently become
+popular to drop the requirement for credence functions to be sharp.
+There are now Bayesians who permit a rational agent to hold
+indeterminate credal states based on incomplete or ambiguous evidence.
+I will refer to Bayesians who continue to adhere to the classical
+theory of sharp credences for rational agents as \qnull{Laplaceans}
+(e.g.\ Adam Elga and Roger White). I will refer to Bayesians who do
+not believe that a rational agent's credences need to be sharp as
+\qnull{Booleans} (e.g.\ Richard Jeffrey, Peter Walley, Brian
+Weatherson, and James Joyce).
+
+I will introduce a \emph{divide et impera} argument in favour of the
+Laplacean position. I assume that the appeal of the Boolean position
+is immediately obvious. Not only is it psychologically implausible
+that agents who strive for rationality should have all their credences
+worked out to crystal-clear precision; it seems epistemically doubtful
+to assign exact credences to propositions about which the agent has
+little or no information, incomplete or ambiguous evidence. The
+\emph{divide et impera} argument runs like this: I show that the
+Boolean position is really divided into two mutually incompatible
+camps, {\anderson} and {\augustin}.
+
+\begin{quotex}
+  \beispiel{INTERN}\label{ex:range} Blake has two Bernoulli generators in
+  her lab, \textit{coin}$_{\mbox{\tiny{i}}}$ and
+  \textit{coin}$_{\mbox{\tiny{ii}}}$. Blake has a database of
+  \textit{coin}$_{\mbox{\tiny{i}}}$ results and concludes on excellent
+  evidence that \textit{coin}$_{\mbox{\tiny{i}}}$ is fair. Blake has no
+  evidence about the bias of \textit{coin}$_{\mbox{\tiny{ii}}}$. As a
+  Boolean, Blake assumes a sharp credence of $\{0.5\}$ for
+  $H_{\mbox{\tiny{i}}}$ and an indeterminate credal state of $[0,1]$
+  for $H_{\mbox{\tiny{ii}}}$. She feels bad for Logan, her Laplacean
+  colleague, who cannot distinguish between the two cases and who must
+  assign a sharp credence of $\{0.5\}$ to both $H_{\mbox{\tiny{i}}}$
+  and $H_{\mbox{\tiny{ii}}}$.
+\end{quotex}
+
+\begin{quotex}
+  \beispiel{INCOMP}\label{ex:incomp} Blake has another Bernoulli
+  generator, \textit{coin}$_{\mbox{\tiny{iii}}}$, in her lab. Her
+  graduate student has submitted \textit{coin}$_{\mbox{\tiny{iii}}}$
+  to countless experiments and emails Blake the resulting bias, but
+  fails to include whether the bias of $2/3$ is in favour of
+  $H_{\mbox{\tiny{iii}}}$ or in favour of $T_{\mbox{\tiny{iii}}}$. As
+  a Boolean, Blake assumes an indeterminate credal state of
+  $[1/3,2/3]$ (or $\{1/3,2/3\}$, depending on the convexity
+  requirement) for $H_{\mbox{\tiny{iii}}}$. She feels bad for Logan
+  who must assign a sharp credence of $\{0.5\}$ for
+  $H_{\mbox{\tiny{iii}}}$ when Logan concurrently knows that her
+  credence gets the bias wrong.
+\end{quotex}
+
+Example \ref{ex:range} also serves as an example for \textsc{inform}:
+one way in which Blake feels bad for Logan is that Logan's $\{0.5\}$
+credence for $H_{\mbox{\tiny{ii}}}$ is based on very little
+information, a fact not reflected in Logan's credence. 
+
+Against the force of \textsc{intern}, \textsc{incomp}, and
+\textsc{inform}, I maintain that the Laplacean approach of assigning
+subjective probabilities to partitions of the event space (e.g.\
+objective chances) and then aggregating them by David Lewis' summation
+formula (see \scite{8}{lewis81}{266f}) into a single precise credence
+function is conceptually tidy and shares many of the formal virtues of
+Boolean theories. To put it provocatively, this paper defends a $0.5$
+sharp credence in heads in all three cases: for a coin of whose bias
+we are completely ignorant; for a coin whose fairness is supported by
+a lot of evidence; and even for a coin about whose bias we know that
+it is either 1/3 or 2/3 for heads.
+
+My \emph{divide et impera} argument rests on the distinction between
+two Boolean positions. The difference is best captured by a simple
+example to show how epistemologists advocate for {\anderson} or
+relapse into it, even when they have just advocated the more refined
+{\augustin}.
+
+\begin{quotex}
+  \beispiel{Skittles}\label{ex:skittles} Every skittles bag contains
+  42 pieces of candy. It is filled by robots from a giant randomized
+  pile of candies in a warehouse, where the ratio of five colours is
+  8:8:8:9:9, orange being the last of the five colours. Logan picks
+  one skittle from a bag and tries to guess what colour it is before
+  she looks at it. She has a sharp credence of $9/42$ that the skittle
+  is orange.
+\end{quotex}
+
+{\anderson} Booleans reject Logan's sharp credence on the basis
+that she does not know that there are 9 orange skittles in her
+particular bag. A $9/42$ credence suggests to them a knowledge claim
+on Logan's part, based on very thin evidence, that her bag contains 9
+orange skittles. Logan's doxastic state, however, is much more
+complicated than her credal state. She knows about the robots and the
+warehouse. Therefore, her credences that there are $k$ orange skittles
+in the bag conform to the Bernoulli distribution:
+
+\begin{equation}
+  \label{eq:bern}
+  C(k)=\binom{42}{k}\left(\frac{9}{42}\right)^{k}\left(\frac{33}{42}\right)^{42-k}
+\end{equation}
+
+For instance, her sharp credence that there are in fact $9$ orange
+skittles in the bag is approximately 14.9\%. One of Augustin's
+concessions, the refinements that {\augustin} makes to {\anderson},
+clarifies that a coherent Boolean position must agree with the
+Laplacean position that doxastic states are not fully captured by
+credal states.
+
+Here is an illustration in H{\'a}jek and Smithson.
+
+\begin{quotex}
+  \beispiel{Lung Cancer}\label{ex:crude} Your doctor is your
+  sole source of information about medical matters, and she assigns a
+  credence of $[0.4,0.6]$ to your getting lung cancer.
+\end{quotex}
+
+H{\'a}jek and Smithson go on to say that 
+
+\begin{quotex}
+  it would be odd, and arguably irrational, for you to assign this
+  proposition a sharper credence---say, $0.5381$. How would you defend
+  that assignment? You could say, I don't have to defend it, it just
+  happens to be my credence. But that seems about as unprincipled as
+  looking at your sole source of information about the time, your
+  digital clock, which tells that the time rounded off to the nearest
+  minute is 4:03---and yet believing that the time is in fact 4:03 and
+  36 seconds. Granted, you may just happen to believe that; the point
+  is that you have no business doing so.
+  \scite{3}{hajeksmithson12}{38f}
+\end{quotex}
+
+This is an argument against Laplaceans by {\anderson} because it
+conflates partial belief and full belief. The precise credences in
+H{\'a}jek and Smithson's example, on any reasonable Laplacean
+interpretation, do not represent full beliefs that the objective
+chance of getting lung cancer is $0.5381$ or that the time of the day
+is 4:03:36. A sharp credence rejects no hypothesis about objective
+chances (unlike an instate for {\anderson}). It often has a subjective
+probability distribution operating in the background, over which it
+integrates to yield the sharp credence (it would do likewise in
+H{\'a}jek and Smithson's example for the prognosis of the doctor or
+the time of the day).\bcut{22} The integration proceeds by Lewis'
+summation formula (see \scite{8}{lewis81}{266f}),
+
+\begin{equation}
+  \label{eq:s2}
+  C(R)=\int_{0}^{1}\zeta{}P\left(\pi(R)=\zeta\right)\,d\zeta{}.\bcut{21}
+\end{equation}
+
+{\noindent}If, for example, $S$ is the proposition that Logan's
+randomly drawn skittle in example \ref{ex:skittles} is orange, then
+
+\begin{equation}
+  \label{eq:skit}
+  C(S)=\sum_{k=0}^{42}\frac{k}{42}\binom{42}{k}\left(\frac{9}{42}\right)^{k}\left(\frac{33}{42}\right)^{42-k}=9/42.
+\end{equation}
+
+No objective chance $\pi(S)$ needs to be excluded by it. Any updating
+will merely change the partial beliefs, but no full beliefs. 
+
+Here are two potential problems for Booleans:
+
+\begin{itemize}
+\item \textsc{dilation} Instates are vulnerable to dilation.
+\item \textsc{obtuse} Instates do not permit learning.
+\end{itemize}
+
+Both of these can be resolved by making Augustin's concessions. 
+
+Consider the following example for \textsc{dilation} (see
+\scite{8}{white10}{175f} and \scite{8}{joyce10}{296f}).
+
+\begin{quotex}
+  \beispiel{Dilation}\label{ex:dilation} Logan has two Bernoulli
+  generators, \textit{coin}$_{\mbox{\tiny{iv}}}$ and
+  \textit{coin}$_{\mbox{\tiny{v}}}$. She has excellent evidence that
+  \textit{coin}$_{\mbox{\tiny{iv}}}$ is fair and no evidence about the
+  bias of \textit{coin}$_{\mbox{\tiny{v}}}$. Logan's graduate student
+  independently tosses both \textit{coin}$_{\mbox{\tiny{iv}}}$ and
+  \textit{coin}$_{\mbox{\tiny{v}}}$. Then she tells Logan whether the
+  two tosses are correlated or not
+  ($H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}}$ or
+  $H_{\mbox{\tiny{iv}}}\equiv{}T_{\mbox{\tiny{v}}}$, where
+  $X\equiv{}Y$ means
+  $(X\wedge{}Y)\vee(\urcorner{}X\wedge\urcorner{}Y)$). Logan, who has
+  a sharp credence for $H_{\mbox{\tiny{v}}}$, takes this information
+  in stride, but she feels bad for Blake, whose credence in
+  $H_{\mbox{\tiny{iv}}}$ dilates to $[0,1]$ even though Blake shares
+  Logan's excellent evidence that \textit{coin}$_{\mbox{\tiny{iv}}}$
+  is fair.
+\end{quotex}
+
+Here is why Blake's credence in $H_{\mbox{\tiny{iv}}}$ must dilate. Her
+credence in $H_{\mbox{\tiny{v}}}$ is $[0,1]$, by stipulation. Let
+$c(X)$ be the set of sharp credences representing Blake's instate, for
+example $c(H_{\mbox{\tiny{v}}})=[0,1]$. Then
+
+\begin{equation}
+  \label{eq:d1}
+  c(H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})=c(H_{\mbox{\tiny{iv}}}\equiv{}T_{\mbox{\tiny{v}}})=\{0.5\}
+\end{equation}
+
+because the tosses are independent and
+$c(H_{\mbox{\tiny{iv}}})=\{0.5\}$ by stipulation. Next,
+
+\begin{equation}
+  \label{eq:d2}
+  c(H_{\mbox{\tiny{iv}}}|H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})=c(H_{\mbox{\tiny{v}}}|H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})
+\end{equation}
+
+where $c(X|Y)$ is the updated instate after finding out $Y$. Booleans
+accept (\ref{eq:d2}) because they are Bayesians and update by standard
+conditioning. Therefore,
+
+\begin{align}
+  \label{eq:d3}
+  &c(H_{\mbox{\tiny{iv}}}|H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})=c(H_{\mbox{\tiny{v}}}|H_{\mbox{\tiny{iv}}}\equiv{}H_{\mbox{\tiny{v}}})=\frac{c(H_{\mbox{\tiny{iv}}})c(H_{\mbox{\tiny{v}}})}{c(H_{\mbox{\tiny{iv}}})c(H_{\mbox{\tiny{v}}})+c(T_{\mbox{\tiny{iv}}})c(T_{\mbox{\tiny{v}}})} \notag \\
+  &=c(H_{\mbox{\tiny{v}}})=[0,1].
+\end{align}
+
+Blake's updated instate for $H_{\mbox{\tiny{iv}}}$ has dilated from
+$\{0.5\}$ to $[0,1]$.
+
+I will characterize the problems that dilation causes for the Boolean
+position by three aspects (all of which originate in
+\scite{7}{white10}{}): retention, repetition, and reflection.
+
+\begin{quotex}
+  \beispiel{Learning}\label{ex:learning} Blake has a Bernoulli
+  generator in her lab, \textit{coin}$_{\mbox{\tiny{vi}}}$, of whose
+  bias she knows nothing and which she submits to experiments. At first,
+  Blake's instate for $H_{\mbox{\tiny{vi}}}$ is $[0,1]$. After a few
+  experiments, it looks like \textit{coin}$_{\mbox{\tiny{vi}}}$ is
+  fair. However, as committee members crowd into the centre and update
+  their sharp credences to something closer to $0.5$, they are
+  replaced by extremists on the fringes. The instate remains at
+  $[0,1]$. 
+\end{quotex}
+
+Here, then, are Augustin's concessions:
+
+\begin{description}
+\item[{\bf (AC1)}] Credal states do not adequately represent doxastic
+  states. The same instate can reflect different doxastic states, even
+  when the difference in the doxastic states matters for updating,
+  inference, and decision making.
+\item[{\bf (AC2)}] Instates do not represent full belief claims about
+  objective chances. White's \emph{Chance Grounding Thesis} is not an
+  appropriate characterization of the Boolean position.
+\end{description}
+
+(AC1) and (AC2) are both necessary and sufficient to resolve
+\textsc{dilation} and \textsc{obtuse} for instates. 
+
+Sharp credences have a single task: to reflect epistemic uncertainty
+as a tool for updating, inference, and decision making. They cannot
+fulfill this task without continued reference to the evidence which
+operates in the background.
+
+In the following, I will provide a few examples where it becomes clear
+that instates have difficulty representing uncertainty because they
+are tangled in a double task which they cannot fulfill.
+
+\begin{quotex}
+  \beispiel{Aggregating Expert Opinion}\label{ex:aggreg} Blake has no
+  information whether it will rain tomorrow ($R$) or not except the
+  predictions of two weather forecasters. One of them forecasts 0.3 on
+  channel GPY, the other 0.6 on channel QCT. Blake considers the QCT
+  forecaster to be significantly more reliable, based on past
+  experience.
+\end{quotex}
+
+An instate corresponding to this situation may be $[0.3,0.6]$ (see
+\scite{8}{walley91}{214}), but it will have a difficult time
+representing the difference in reliability of the experts. We could
+try $[0.2,0.8]$ (since the greater reliability of QCT suggests that
+the chance of rain tomorrow is higher rather than lower) or
+$[0.1,0.7]$ (since the greater reliability of QCT suggests that its
+estimate is more precise), but it remains obscure what the criteria
+are.
+
+\begin{quotex}
+  \beispiel{Monkey-Filled Urns}\label{ex:monkey} Let urn $A$ contain 4
+  balls, two red and two yellow. A monkey randomly fills urn $B$ from
+  urn $A$ with two balls. We draw from urn $B$ (a precursor to this
+  example is in \scite{8}{jaynesbretthorst03}{160}).
+\end{quotex}
+
+The sharp credence of drawing a red ball is $0.5$, following Lewis'
+summation formula for the different combinations of balls in urn $B$.
+This solution is more intuitive in terms of further inference,
+decision making, and betting behaviour than a credal state of
+$\{0,1/2,1\}$ or $[0,1]$ (depending on the convexity requirement),
+since this instate would licence an exorbitant bet in favour of one
+colour, for example one that costs \$9,999 and pays \$10,000 if red is
+drawn and nothing if yellow is drawn. 
+
+How a bet is licenced is different on various Boolean accounts.
+Rinard, for example, contrasts a moderate account with a liberal
+account (see \scite{8}{rinard15}{7}). According to the liberal
+account, the \$9,999 bet is licenced, whereas according to the
+moderate account, it is only indeterminate whether the bet is
+licenced. The moderate account does not take away from the force of
+example \ref{ex:monkey}, where it should be determinate that a \$9,999
+bet is not licenced.
+
+% \nocite{*} 
+\bibliographystyle{ChicagoReedweb} 
+\bibliography{bib-7293}
+
+\end{document} 

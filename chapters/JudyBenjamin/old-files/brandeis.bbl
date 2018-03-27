@@ -1,0 +1,14 @@
+\begin{thebibliography}{2}
+\providecommand{\natexlab}[1]{#1}
+
+\bibitem[{Cover and Thomas(2006)}]{coverthomas91}
+Cover, T. and Thomas, J., 2006.
+\newblock \emph{Elements of Information Theory}, volume~6.
+\newblock Wiley, Hoboken, NJ.
+
+\bibitem[{Jaynes(1989)}]{jaynes89}
+Jaynes, E., 1989.
+\newblock \emph{Papers on Probability, Statistics and Statistical Physics}.
+\newblock Springer, Dordrecht.
+
+\end{thebibliography}

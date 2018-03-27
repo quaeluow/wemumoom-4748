@@ -1,0 +1,41 @@
+$x1=.3;
+$x2=.4;
+$x3=.3;
+    $entx=($x1*log($x1))+($x2*log($x2))+($x3*log($x3));
+open(s1804,">./s1804.htm");
+print s1804 "<html><head><title>Testing Sudelbuch Page 1804 Inequality</title><body bgcolor=\"ffffff\" text=\"000000\"></head><body><tt>x=($x1,$x2,$x3)</tt><p>)";
+print s1804 "<table border=\"5\"><tr><td></td>";
+for ($i3=2;$i3<=98;++$i3)
+{
+    $yy1=$i3/100;
+print s1804 "<td><tt>y1=$yy1</tt></td>";
+}
+print s1804 "</tr>";
+
+
+
+
+
+for ($i1=2;$i1<=98;++$i1)
+{
+    $y1=$i1/100;
+for ($i2=2;$i2<=98;++$i2)
+{
+    $y2=$i2/100;
+    $y3=1-$y1-$y2;
+    $enty=($y1*log($y1))+($y2*log($y2))+($y3*log($y3));
+if ($enty>$entx)
+{
+    $cole="green";
+}
+elsif ($enty==$entx)
+{
+    $cole="red";
+}
+else
+{
+    $cole="blue";
+}
+print s1804 "<tr><td><tt>y2=$y2</tt></td>";
+}
+}

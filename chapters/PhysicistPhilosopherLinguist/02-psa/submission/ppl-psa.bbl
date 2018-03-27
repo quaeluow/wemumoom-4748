@@ -1,0 +1,76 @@
+\begin{thebibliography}{12}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+
+\bibitem[{Bertsekas(1982)}]{bertsekas82}
+Bertsekas, Dimitri.
+\newblock \emph{Constrained Optimization and Lagrange Multiplier Methods}.
+\newblock Boston, MA: Academic, 1982.
+
+\bibitem[{Caticha and Giffin(2006)}]{catichagiffin06}
+Caticha, Ariel, and Adom Giffin.
+\newblock \enquote{Updating Probabilities.}
+\newblock In \emph{MaxEnt 2006, the 26th International Workshop on Bayesian
+  Inference and Maximum Entropy Methods}. 2006.
+
+\bibitem[{Dempster(1967)}]{dempster67}
+Dempster, Arthur.
+\newblock \enquote{Upper and Lower Probabilities Induced by a Multivalued
+  Mapping.}
+\newblock \emph{The Annals of Mathematical Statistics} 38, ~2: (1967) 325--339.
+
+\bibitem[{Friedman and Shimony(1971)}]{friedmanshimony71}
+Friedman, Kenneth, and Abner Shimony.
+\newblock \enquote{Jaynes's Maximum Entropy Prescription and Probability
+  Theory.}
+\newblock \emph{Journal of Statistical Physics} 3, ~4: (1971) 381--384.
+
+\bibitem[{Joyce(2005)}]{joyce05}
+Joyce, James.
+\newblock \enquote{How Probabilities Reflect Evidence.}
+\newblock \emph{Philosophical Perspectives} 19, ~1: (2005) 153--178.
+
+\bibitem[{Lukits(2014)}]{lukits14}
+Lukits, Stefan.
+\newblock \enquote{The Principle of Maximum Entropy and a Problem in
+  Probability Kinematics.}
+\newblock \emph{Synthese} (forthcoming) (2014).
+
+\bibitem[{Majern{\'\i}k(2000)}]{majernik00}
+Majern{\'\i}k, Vladim{\'\i}r.
+\newblock \enquote{Marginal Probability Distribution Determined by the Maximum
+  Entropy Method.}
+\newblock \emph{Reports on Mathematical Physics} 45, ~2: (2000) 171--181.
+
+\bibitem[{Seidenfeld(1979)}]{seidenfeld79}
+Seidenfeld, Teddy.
+\newblock \enquote{Why I Am Not an Objective Bayesian; Some Reflections
+  Prompted by Rosenkrantz.}
+\newblock \emph{Theory and Decision} 11, ~4: (1979) 413--440.
+
+\bibitem[{Shore and Johnson(1980)}]{shorejohnson80}
+Shore, J., and R.W. Johnson.
+\newblock \enquote{Axiomatic Derivation of the Principle of Maximum Entropy and
+  the Principle of Minimum Cross-Entropy.}
+\newblock \emph{IEEE Transactions on Information Theory} 26, ~1: (1980) 26--37.
+
+\bibitem[{Spohn(2012)}]{spohn12}
+Spohn, Wolfgang.
+\newblock \emph{The Laws of Belief: Ranking Theory and Its Philosophical
+  Applications}.
+\newblock Oxford, 2012.
+
+\bibitem[{Wagner(1992)}]{wagner92}
+Wagner, Carl~G.
+\newblock \enquote{Generalized Probability Kinematics.}
+\newblock \emph{Erkenntnis} 36, ~2: (1992) 245--257.
+
+\bibitem[{Zabell(2005)}]{zabell05}
+Zabell, Sandy.
+\newblock \emph{Symmetry and Its Discontents: Essays on the History of
+  Inductive Probability}.
+\newblock Cambridge University Press, 2005.
+
+\end{thebibliography}

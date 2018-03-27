@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- <!DOCTYPE article PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" "http://docbook.org/xml/4.2/docbookx.dtd"> -->
+<!-- <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN" -->
+<!--   "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" > -->
+
+<!-- ;; (global-set-key [f7] 'nxml-complete) also in temp.el -->
+
+<!-- BOILERPLATE -->
+
+<!-- Open the file assignment-.ppt. -->
+<!-- Use the following instructions for the assignment. -->
+<!-- Make sure to save all your completed work on your H drive. Make sure that all your files have names that can be clearly associated with this assignment. Don't overwrite original files, but add your initials to filenames. -->
+
+<book>
+
+<bookinfo>
+
+  <title>Dissertation Revisions</title>
+
+  <author><firstname>Stefan</firstname><surname>Lukits</surname></author>
+
+  <!-- <copyright><year>2016</year><holder>Stefan Lukits</holder></copyright> -->
+
+</bookinfo>
+
+<chapter><title>Chapter 1</title>
+
+<para>Page numbers refer to the version used at the Final Oral Defence.</para>
+
+<itemizedlist>
+<listitem><para>[page 003] kinematicsis <emphasis>to</emphasis> kinematics is</para></listitem>
+<listitem><para>[page 003] There is a formally proven equivalent for the full employment theorem in computer science <emphasis>to</emphasis> There are formally proven equivalents for the full employment theorem in computer science</para></listitem>
+<listitem><para>[page 003] <emphasis>add</emphasis> Here is a naive characterization what full employment theorems are able to show in computer science</para></listitem>
+<listitem><para>[page 004] <emphasis>add to first paragraph</emphasis></para></listitem>
+<listitem><para>[page 005] <emphasis>add in second paragraph</emphasis>In chapter 7, I will give a detailed description of the Judy Benjamin problem.</para></listitem>
+</itemizedlist>
+
+<para>From now on, I will no longer make reference to the full employment theorems in computer science, which only provide us with a suggestive metaphor for what is at stake in epistemology. The full employment in probability kinematics is the position that intuitions about particular cases are necessary in order to find epistemically justified solutions to certain updating problems for partial beliefs. These intuitions cannot be contained by general updating procedures.</para>
+
+</chapter>
+
+<chapter><title>Chapter 2</title>
+
+<itemizedlist>
+<listitem><para>[page 029] application of pme on a naive space <emphasis>to</emphasis> application of pme to a naive space (and again in next clause)</para></listitem>
+<listitem><para>[page 033] epistemologists, who are Bayesians, currently <emphasis>to</emphasis> epistemologists who are Bayesians currently</para></listitem>
+</itemizedlist>
+
+</chapter>
+
+<chapter><title>Chapter 3</title>
+
+<itemizedlist>
+<listitem><para>[page 046] <emphasis>delete</emphasis> Like the likelihood principle</para></listitem>
+<listitem><para>[page 063] <emphasis>add the following two paragraphs at the end of chapter 3</emphasis></para></listitem>
+</itemizedlist>
+
+<para>I have so far used the term `intuition' without much reflection what its role is in the justification of epistemic norms. There is a sense in which this dissertation is subject to a certain tension with respect to intuitions: on the one hand, I express skepticism about the intuitions on which the full employment theorem relies when it gives primacy to the epistemologist's intuitions about particular cases over general updating procedures. On the other hand, I repeatedly take recourse to intuitions to defend my own approach.</para>
+
+<para>There are two types of intuitions at play. The first type concerns our views about the plausibility of rules and their implications on particular cases. The second type is restricted to particular cases and by definition escapes the general rule. My argument is skeptical towards the second type. The first type is what gets our thinking about the justification of epistemic norms off the ground in so far as these norms are ampliative with respect to logical coherence. First type intuitions are as necessary in epistemic justification as axioms are in mathematics, but they also share with axioms that it is a fruitful endeavour to consider varying sets of intuitions, what their logical consequences are, and how these consequences square with other intuitions we might have.</para>
+
+</chapter>
+
+<chapter><title>Chapter 4</title>
+
+<itemizedlist>
+<listitem><para>[page 074] an alternative method of updating <emphasis>to</emphasis> short for a method of updating</para></listitem>
+<listitem><para>[page 106] event space with three atoms <emphasis>to</emphasis> event space with three mutually exclusive atoms</para></listitem>
+</itemizedlist>
+
+</chapter>
+
+<chapter><title>Chapter 5</title>
+
+<itemizedlist>
+<listitem><para>[page 125] pme solution <emphasis>to</emphasis> the pme solution (twice)</para></listitem>
+</itemizedlist>
+
+</chapter>
+
+<chapter><title>Chapter 6</title>
+
+<itemizedlist>
+<listitem><para>[page 131] <emphasis>fixed</emphasis> missing parenthesis</para></listitem>
+<listitem><para>[page 139] <emphasis>delete</emphasis> on the other hand</para></listitem>
+</itemizedlist>
+
+</chapter>
+
+<chapter><title>Bibliography</title>
+
+<itemizedlist>
+<listitem><para>[page 208 and 209] <emphasis>fixed Weisberg and Williams references</emphasis></para></listitem>
+</itemizedlist>
+
+</chapter>
+
+<!-- <chapter><title>Chapter 8</title> -->
+
+<!-- <itemizedlist> -->
+<!-- <listitem><para>[page ] <emphasis></emphasis></para></listitem> -->
+<!-- </itemizedlist> -->
+
+<!-- </chapter> -->
+
+</book>

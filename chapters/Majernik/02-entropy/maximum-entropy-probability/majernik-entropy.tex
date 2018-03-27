@@ -1,0 +1,1009 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% The official version is now in entropy-70486-edited.tex      %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% [no longer true] the official file is in majernik-overleaf.tex -- a
+% file for local compilation is in majernik-revised.tex
+
+% do not compile this file locally, compile in https://www.overleaf.com/
+
+%  LaTeX support: latex@mdpi.com
+%  In case you need support, please attach any log files that you could have, and specify the details of your LaTeX setup (which operating system and LaTeX version / tools you are using).
+
+%=================================================================
+
+% LaTeX Class File and Rendering Mode (choose one)
+% You will need to save the "mdpi.cls" and "mdpi.bst" files into the same folder as this template file.
+
+%=================================================================
+
+\documentclass[entropy,article,accept,oneauthor,pdftex,12pt,a4paper]{mdpi} 
+%--------------------
+% Class Options:
+%--------------------
+% journal
+%----------
+% Choose between the following MDPI journals:
+% actuators, administrativesciences, aerospace, agriculture, agronomy, algorithms, animals, antibiotics, antibodies, antioxidants, appliedsciences, arts, atmosphere, atoms, axioms, behavioralsciences, bioengineering, biology, biomedicines, biomolecules, biosensors, brainsciences, buildings, cancers, catalysts, cells, challenges, chemosensors, children, chromatography, climate, coatings, computation, computers, cosmetics, crystals, dentistryjournal, diagnostics, diseases, diversity, econometrics, economies, education, electronics, energies, entropy, environmentalsciences, environments, fibers, foods, forests, futureinternet, galaxies, games, genes, geosciences, healthcare, humanities, informatics, information, inorganics, insects, ijerph, ijfs, ijms, ijgi, jcdd, jcm, jdb, jfb, joi, jlpea, jmse, jpcg, jpm, jrfm, jsan, land, laws, life, lubricants, machines, marinedrugs, materials, mathematics, medicalsciences, membranes, metabolites, metals, microarrays, micromachines, microorganisms, minerals, molbank, molecules, nanomaterials, ncrna, nutrients, pathogens, pharmaceuticals, pharmaceutics, pharmacy, photonics, plants, polymers, processes, proteomes, publications, religions, remotesensing, resources, risks, robotics, sensors, socialsciences, societies, sports, sustainability, symmetry, systems, technologies, toxics, toxins, vaccines, veterinarysciences, viruses, water
+%---------
+% article
+%---------
+% The default type of manuscript is article, but could be replaced by using one of the class options: 
+% article, review, communication, commentary, bookreview, correction, addendum, editorial, changes, supfile, casereport, comment, conceptpaper, conferencereport, meetingreport, discussion, essay, letter, newbookreceived, opinion, projectreport, reply, retraction, shortnote, technicalnote, creative
+%----------
+% submit
+%----------
+% The class option "submit" will be changed to "accept" by the Editorial Office when the paper is accepted. This will only make changes to the frontpage (e.g. the logo of the journal will get visible), the headings, and the copyright information. Journal info and pagination for accepted papers will also be assigned by the Editorial Office.
+% Please insert a blank line is before and after all equation and eqnarray environments to ensure proper line numbering when option submit is chosen
+%------------------
+% moreauthors
+%------------------
+% If there is only one author the class option oneauthor should be used. Otherwise use the class option moreauthors.
+%---------
+% pdftex
+%---------
+% The option "pdftex" is for use with pdfLaTeX only. If eps figure are used, use the optioin "dvipdfm", with LaTeX and dvi2pdf only.
+
+%=================================================================
+\setcounter{page}{1}
+ \lastpage{x}
+ \doinum{10.3390/------}
+ \pubvolume{xx}
+ \pubyear{2014}
+ \history{Received: 15 November 2014 / Accepted: 25 March 2015 / Published: xx}
+%------------------------------------------------------------------
+% The following line should be uncommented if the LaTeX file is uploaded to arXiv.org
+%\pdfoutput=1
+
+%=================================================================
+
+% Add packages and commands to include here
+% The amsmath, amsthm, amssymb, hyperref, caption, float and color packages are loaded by the MDPI class.
+%\usepackage{graphicx}
+%\usepackage{subfigure,psfig}
+% \usepackage{october}
+\usepackage{amsfonts,soul}
+
+%=================================================================
+%% Please use the following mathematics environments:
+%\theoremstyle{mdpi}
+%\newcounter{thm}
+%\setcounter{thm}{0}
+%\newcounter{ex}
+%\setcounter{ex}{0}
+%\newcounter{re}
+%\setcounter{re}{0}
+%\newtheorem{Theorem}[thm]{Theorem}
+%\newtheorem{Lemma}[thm]{Lemma}
+%\newtheorem{Characterization}[thm]{Characterization}
+%\newtheorem{Proposition}[thm]{Proposition}
+%\newtheorem{Property}[thm]{Property}
+%\newtheorem{Problem}[thm]{Problem}
+%\newtheorem{Example}[ex]{Example}
+%\newtheorem{Remark}[re]{Remark}
+%\newtheorem{Corollary}[thm]{Corollary}
+%\newtheorem{Definition}[thm]{Definition}
+%% For proofs, please use the proof environment (the amsthm package is loaded by the MDPI class).
+
+%=================================================================
+
+% Full title of the paper (Capitalized)
+\Title{Maximum Entropy and Probability Kinematics Constrained by Conditionals}
+
+% Authors (Add full first names)
+\Author{Stefan Lukits}
+
+% Affiliations / Addresses (Add [1] after \address if there is only one affiliation.)
+\address[1]{%
+Philosophy Department, University of British Columbia, 1866 Main Mall, Buchanan E370, Vancouver BC V6T 1Z1, Canada
+}
+
+\externaleditor{External Editor: Juergen Landes, Jon Williamson}  
+
+% Contact information of the corresponding author (Add [2] after \corres if there are more than one corresponding author.)
+\corres{sediomyle@gmail.com, +1-604-321-3440.}
+
+% Abstract (Do not use inserted blank lines, i.e. \\) 
+\abstract{Two open questions of inductive reasoning are solved: (1) does the principle of maximum entropy (\textsc{pme}) give a solution to the obverse Majern{\'\i}k problem; and (2) is Wagner correct when he claims that Jeffrey's updating principle (\textsc{jup}) contradicts \textsc{pme}?  Majern{\'\i}k shows that \textsc{pme} provides unique and plausible marginal probabilities, given conditional probabilities.  The obverse problem posed here is whether \textsc{pme} also provides such conditional probabilities, given certain marginal probabilities. The theorem developed to solve the obverse Majern{\'\i}k problem demonstrates that in the special case introduced by Wagner \textsc{pme} does not contradict \textsc{jup}, but elegantly generalizes it and offers a more integrated approach to probability updating.}
+
+% Keywords: add 3 to 10 keywords
+\keyword{Probability update; Jeffrey conditioning; principle of maximum entropy; formal epistemology; conditionals; probability kinematics.}
+
+% The fields PACS, MSC, and JEL may be left empty or commented out if not applicable
+%\PACS{}
+%\MSC{}
+%\JEL{}
+
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\intercal}{t}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+\newcommand{\tbd}[1]{$^{\mbox{\textsc{tbd}}}$}
+\newcommand{\tr}[1]{}
+\newcommand{\kantian}[0]{Kantian}
+\newcommand{\Kantian}[0]{Kantian}
+\newcommand{\mthree}[0]{CM}
+\newcommand{\nias}{\noindent} % no indent after new section
+\newcommand{\nial}{\noindent} % no indent after equation, list, or whatever
+
+\newif\ifPageP
+\PagePtrue
+\PagePfalse
+\ifPageP
+\newcommand{\PageP}{p.~}
+\else
+\newcommand{\PageP}{}
+\fi
+
+% \newcommand{\scite}[3]{\ifnum#1=1\ifNumericalOrYear\citep{#2}\else\citeyearpar{#2}\fi\else
+% \ifnum#1=2\ifNumericalOrYear\citep[#3]{#2}\else\citep[{\PageP}#3]{#2}\fi\else
+% \ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+% \ifnum#1=4\ifNumericalOrYear\citet{#2}\else\citet{#2}\fi\else
+% \ifnum#1=5\ifNumericalOrYear(\citet{#2})\else\citep{#2}\fi\else
+% \ifnum#1=6\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+% \ifnum#1=7\ifNumericalOrYear\citep{#2}\else\citealp{#2}\fi\else
+% \ifnum#1=8\ifNumericalOrYear\citep[#3]{#2}\else\citealp[{\PageP}#3]{#2}\fi\else
+% \ifnum#1=9\ifNumericalOrYear\citep[#3]{#2}\else{}loc.\ cit., {\PageP}#3\fi\else
+% \ifnum#1=10\ifNumericalOrYear\citep{#2}\else\citeyear{#2}\fi\else
+% \textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+
+\newcommand{\scite}[3]{\ifnum#1=1\ifNumericalOrYear\cite{#2}\else\citeyearpar{#2}\fi\else
+\ifnum#1=2\ifNumericalOrYear\cite[#3]{#2}\else\cite[{\PageP}#3]{#2}\fi\else
+\ifnum#1=3\ifNumericalOrYear(\cite[#3]{#2})\else\cite[{\PageP}#3]{#2}\fi\else
+\ifnum#1=4\ifNumericalOrYear\cite{#2}\else\cite{#2}\fi\else
+\ifnum#1=5\ifNumericalOrYear(\cite{#2})\else\cite{#2}\fi\else
+\ifnum#1=6\ifNumericalOrYear(\cite[#3]{#2})\else\cite[{\PageP}#3]{#2}\fi\else
+\ifnum#1=7\ifNumericalOrYear\cite{#2}\else\citealp{#2}\fi\else
+\ifnum#1=8\ifNumericalOrYear\cite[#3]{#2}\else\citealp[{\PageP}#3]{#2}\fi\else
+\ifnum#1=9\ifNumericalOrYear\cite[#3]{#2}\else{}loc.\ cit., {\PageP}#3\fi\else
+\ifnum#1=10\ifNumericalOrYear\cite{#2}\else\citeyear{#2}\fi\else
+\textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
+
+\begin{document}
+
+% This article http://streetgreek.com/lpublic/various/majernik.pdf or http://tinyurl.com/kxeu2vy
+
+% \title{}
+% \author{Stefan Lukits}
+% \date{}
+% \maketitle
+% \doublespacing
+
+% probability kinematics
+% probability update
+% conditionals
+% evidence
+% Bayesian epistemology
+% maximum entropy
+% infomin
+% formal epistemology
+
+% \begin{abstract} 
+%   {\noindent}
+% \end{abstract}
+
+% save body beginning here
+
+\section{Introduction}
+\label{Introduction}
+
+Jeffrey conditioning is a method of update (recommended first by
+Richard Jeffrey in \cite{ref-13}) which generalizes standard conditioning and
+operates in probability kinematics where evidence is uncertain
+($P(E)\neq{}1$). Sometimes, when we reason inductively, outcomes that
+are observed have entailment relationships with partitions of the
+possibility space that pose challenges that Jeffrey conditioning
+cannot meet. As we will see, it is not difficult to resolve these
+challenges by generalizing Jeffrey conditioning. There are claims in
+the literature that the principle of maximum entropy, from now on
+\textsc{pme}, conflicts with this generalization. I will show under
+which conditions this conflict obtains. Since proponents of
+\textsc{pme} are unlikely to subscribe to these conditions, the
+position of \textsc{pme} in the larger debate over inductive logic and
+reasoning is not undermined.
+
+In Section \ref{juppme}, I will introduce the obverse Majern{\'\i}k
+problem and sketch how it ties in with two natural generalizations of
+Jeffrey conditioning: Wagner conditioning and the \textsc{pme}. In
+Section \ref{jc}, I will introduce Jeffrey conditioning in a notation
+that will later help us to solve the obverse Majern{\'\i}k problem. In
+Section \ref{wc}, I will introduce Wagner conditioning and show how it
+naturally generalizes Jeffrey conditioning. In Section
+\ref{Generalization}, I will show that \textsc{pme} does so as well
+under conditions that are straightforward to accept for proponents of
+\textsc{pme}. This solves the obverse Majern{\'\i}k problem and makes
+Wagner conditioning unnecessary as a generalization of Jeffrey
+conditioning, since the \textsc{pme} seamlessly incorporates it. The
+conclusion in Section \ref{Conclusion} summarizes my claims and
+briefly refers to epistemological consequences. An appendix gives
+proofs how \textsc{pme} generalizes standard conditioning and Jeffrey
+conditioning, providing a template for a simplified proof of the claim
+in the body of the paper.
+
+\section{Jeffrey's Updating Principle and the Principle of Maximum Entropy}
+\label{juppme}
+
+In his paper \qeins{Marginal Probability Distribution Determined by
+  the Maximum Entropy Method} (see \cite{ref-21}), Vladim{\'\i}r Majern{\'\i}k
+asks the following question: If we had two partitions of an event
+space and knew all the conditional probabilities (any conditional
+probability of one event in the first partition conditional on another
+event in the second partition), would we be able to calculate the
+marginal probabilities for the two partitions? The answer is yes, if
+we commit ourselves to \textsc{pme}:
+
+\begin{quotex}
+  [\textsc{pme}] Keep the information entropy of your probability
+  distribution maximal within the constraints that the evidence
+  provides (in the synchronic case), or your cross-entropy minimal (in
+  the diachronic case).
+\end{quotex}
+
+For Majern{\'\i}k's question, \textsc{pme} provides us with a unique
+and plausible answer (see Majern{\'\i}k's paper). We may also be
+interested in the obverse question: if the marginal probabilities of
+the two partitions were given, would we similarly be able to calculate
+the conditional probabilities? The answer is yes: given \textsc{pme},
+Theorems 2.2.1. and 2.6.5. in  \cite{ref-2} reveal that the joint probabilities
+are the product of the marginal probabilities (see also \cite{ref-4}).
+Once the joint probabilities and the marginal probabilities are
+available, it is trivial to calculate the conditional probabilities.
+
+It is important to note that these joint probabilities do not
+legislate independence, even though they allow it \cite{ref-4}
+(p.1670). M{\'e}rouane Debbah and Ralf M{\"u}ller correctly describe
+these joint probabilities as a model with as many degrees of freedom
+as possible, which leaves free degrees for correlation to exist or not
+\cite{ref-4}(p.1674). This avoids the introduction of unjustified
+information \cite{ref-4}(p.1672) corresponding to the simple intuition
+behind \textsc{pme}: when updating your probabilities, waste no useful
+information and do not gain information unless the evidence compels
+you to gain it (see \cite{ref-30} (p.376), \cite{ref-12,ref-35},
+\cite{ref-4} (p.1685f), \cite{ref-22} (p.186)). The principle comes
+with its own formal apparatus, not unlike probability theory itself:
+Shannon's information entropy \cite{ref-25}, the Kullback-Leibler
+divergence (see \cite{ref-20, ref-19}, \cite{ref-7} (p.308ff),
+\cite{ref-24}(p.262ff)), the use of Lagrange multipliers (see
+\cite{ref-7}(p.327f), \cite{ref-24} (p.281),\cite{ref-2}(p.409ff)), and
+the log-inverse relationship between information and probability (see
+\cite{ref-17, ref-16, ref-15, ref-18}).
+
+There is an older problem by Carl Wagner \cite{ref-31} which can be cast in
+similar terms as Majern{\'\i}k's. If we were given some of the
+marginal probabilities in an updating problem as well as some logical
+relationships between the two partitions, would we be able to
+calculate the remaining marginal probabilities? This problem is best
+understood by example (see Wagner's \emph{Linguist} problem in section
+\ref{wc}). Wagner solves it using a natural generalization of Jeffrey
+conditioning, which I will call Wagner conditioning. It is not based
+on \textsc{pme}, but on what I call Jeffrey's updating principle, or
+\textsc{jup} for short:
+
+\begin{quotex}
+  [\textsc{jup}] In a diachronic updating process, keep the ratio of
+  probabilities constant as long as they are unaffected by the
+  constraints that the evidence poses.
+\end{quotex}
+
+As is the case for \textsc{pme}, there is a debate whether updating on
+evidence by rational agents is bound by \textsc{jup} (for a defence
+see \cite{ref-28}; for detractors see \cite{ref-9}). Our interest in this paper is the
+relationship between \textsc{pme} and \textsc{jup}, both of which are
+updating principles. Wagner contends that his natural generalization
+of Jeffrey conditioning, based on \textsc{jup}, contradicts
+\textsc{pme}. Among formal epistemologists, there is a widespread view
+that, while \textsc{pme} is a generalization of Jeffrey conditioning,
+it is an inappropriate updating method in certain cases and does not
+enjoy the generality of Jeffrey conditioning. Wagner's claims support
+this view inasmuch as Wagner conditioning is based on the relatively
+plausible \textsc{jup} and naturally generalizes Jeffrey conditioning,
+but according to Wagner it contradicts \textsc{pme}, which gives wrong
+results in these cases.
+
+%I am generally suspicious of the widespread view that there are
+%problems with \textsc{pme} which go beyond the problems of a more
+%general Bayesian viewpoint with respect to probability updating.
+%Although a dominant majority of Bayesians does not accept \textsc{pme}
+%to be a generally valid updating method, I believe that there are
+%persuasive arguments that Bayesian commitments, especially if they are
+%coupled with commitments to \textsc{jup}, should lead to adherence to
+%\textsc{pme}. Once one accepts \textsc{jup}, counterexamples to
+%\textsc{pme} and their attendant conceptual problems can be
+%successfully addressed. This is a larger project, which receives
+%support in the more specific claims advanced in this paper, although
+%the more specific claims can be independently and profitably evaluated
+%without reference to the larger project.
+
+This paper resists Wagner's conclusions and shows that \textsc{pme}
+generalizes both Jeffrey conditioning and Wagner conditioning,
+providing a much more integrated approach to probability updating.
+This integrated approach also gives a coherent answer to the obverse
+Majern{\'\i}k problem posed above.
+
+\section{Jeffrey Conditioning}
+\label{jc}
+
+Richard Jeffrey proposes an updating method for cases in which the
+evidence is uncertain, generalizing standard probabilistic
+conditioning. I will present this method in unusual notation,
+anticipating using my notation to solve Wagner's \emph{Linguist}
+problem and to give a general solution for the obverse Majern{\'\i}k
+problem. Let $\Omega$ be a finite event space and
+$\{\theta_{j}\}_{j=1,\ldots,n}$ a partition of $\Omega$. Let $\kappa$
+be an $m\times{}n$ matrix for which each column contains exactly one
+$1$, otherwise $0$. Let $P=P_{\mbox{\tiny{prior}}}$ and
+$\hat{P}=P_{\mbox{\tiny{posterior}}}$. Then
+$\{\omega_{i}\}_{i=1,\ldots,m}$, for which
+
+\begin{equation}
+  \label{eq:m1}
+  \omega_{i}=\bigcup_{j=1,\dots,n}\theta^{*}_{ij},
+\end{equation}
+
+{\noindent}is likewise a partition of $\Omega$ (the $\omega$ are
+basically a more coarsely grained partition than the $\theta$).
+$\theta^{*}_{ij}=\emptyset$ if $\kappa_{ij}=0$,
+$\theta^{*}_{ij}=\theta_{j}$ otherwise. Let $\beta$ be the vector of
+prior probabilities for $\{\theta_{j}\}_{j=1,\ldots,n}
+(P(\theta_{j})=\beta_{j})$ and $\hat{\beta}$ the vector of posterior
+probabilities $(\hat{P}(\theta_{j})=\hat{\beta}_{j})$; likewise for
+$\alpha$ and $\hat{\alpha}$ corresponding to the prior and posterior
+probabilities for $\{\omega_{i}\}_{i=1,\ldots,m}$, respectively.
+
+A Jeffrey-type problem is when $\beta$ and $\hat{\alpha}$ are given
+and we are looking for $\hat{\beta}$. A mathematically more concise
+characterization of a Jeffrey-type problem is the triple
+$(\kappa,\beta,\hat{\alpha})$. The solution, using Jeffrey
+conditioning, is
+
+\begin{equation}
+  \label{eq:m2}
+  \hat{\beta_{j}}=\beta_{j}\sum_{i=1}^{n}\frac{\kappa_{ij}\hat{\alpha_{i}}}{\sum_{l=1}^{m}\kappa_{il}\beta_{l}}\mbox{ for all }j=1,\ldots,n.
+\end{equation}
+
+{\noindent}The notation is more complicated than it needs to be for Jeffrey
+conditioning. In Section \ref{Generalization}, however, I will take
+full advantage of it to present a generalization where the
+$\omega_{i}$ do not range over the $\theta_{j}$. In the meantime, here
+is an example to illustrate (\ref{eq:m2}).
+
+\begin{quotex}
+  A token is pulled from a bag containing 3 yellow tokens, 2 blue
+  tokens, and 1 purple token. You are colour blind and cannot
+  distinguish between the blue and the purple token when you see it.
+  When the token is pulled, it is shown to you in poor lighting and
+  then obscured again. You come to the conclusion based on your
+  observation that the probability that the pulled token is yellow is
+  $1/3$ and that the probability that the pulled token is blue or
+  purple is $2/3$. What is your updated probability that the pulled
+  token is blue?
+\end{quotex}
+
+{\noindent}Let $P(\mbox{blue})$ be the prior subjective probability
+that the pulled token is blue and $\hat{P}(\mbox{blue})$ the
+respective posterior subjective probability. Jeffrey conditioning,
+based on \textsc{jup} (which mandates, for example, that
+$\hat{P}(\mbox{blue}|\mbox{blue or}\mbox{
+  purple})=P(\mbox{blue}|\mbox{blue or purple})$) recommends
+
+\begin{align}
+  \label{eq:jcs}
+&\hat{P}(\mbox{blue})&=&\hat{P}(\mbox{blue}|\mbox{blue or purple})\hat{P}(\mbox{blue or
+  purple})+\notag \\
+&&&\hat{P}(\mbox{blue}|\mbox{neither blue nor
+  purple})\hat{P}(\mbox{neither blue nor purple})\notag \\
+&&=&P(\mbox{blue}|\mbox{blue or purple})\hat{P}(\mbox{blue or
+  purple})=4/9
+\end{align}
+
+{\noindent}In the notation of (\ref{eq:m2}), the example is calculated
+with $\beta=(1/2,1/3,1/6)^{\top},\hat{\alpha}=(1/3,2/3)^{\top}$,
+
+\begin{equation}
+  \label{eq:kappa}
+  \kappa=\left[
+  \begin{array}{ccc}
+    1 & 0 & 0 \\
+    0 & 1 & 1
+  \end{array}\right]
+\end{equation}
+
+{\noindent}and yields the same result as (\ref{eq:jcs}) with
+$\hat{\beta}_{2}=4/9$.
+
+\section{Wagner Conditioning}
+\label{wc}
+
+Carl Wagner uses \textsc{jup} (explained in more detail in \cite{ref-32}) to
+solve a problem which cannot be solved by Jeffrey conditioning. Here
+is the narrative (call this the \emph{Linguist} problem):
+
+\begin{quotex}
+  You encounter the native of a certain foreign country and wonder
+  whether he is a Catholic northerner ($\theta_{1}$), a Catholic
+  southerner ($\theta_{2}$), a Protestant northerner ($\theta_{3}$),
+  or a Protestant southerner ($\theta_{4}$). Your prior probability
+  $p$ over these possibilities (based, say, on population statistics
+  and the judgment that it is reasonable to regard this individual as
+  a random representative of his country) is given by
+  $p(\theta_{1})=0.2,p(\theta_{2})=0.3,p(\theta_{3})=0.4,\mbox{ and
+  }p(\theta_{4})=0.1$. The individual now utters a phrase in his
+  native tongue which, due to the aural similarity of the phrases in
+  question, might be a traditional Catholic piety ($\omega_{1}$), an
+  epithet uncomplimentary to Protestants ($\omega_{2}$), an innocuous
+  southern regionalism ($\omega_{3}$), or a slang expression used
+  throughout the country in question ($\omega_{4}$). After reflecting
+  on the matter you assign subjective probabilities
+  $u(\omega_{1})=0.4,u(\omega_{2})=0.3,u(\omega_{3})=0.2,\mbox{ and
+  }u(\omega_{4})=0.1$ to these alternatives. In the light of this new
+  evidence how should you revise $p$? (See \cite{ref-31} (p.252), and
+  \cite{ref-27}(p197).)
+\end{quotex}
+
+Let us call a problem of this type a Wagner-type problem. It is an
+instance of the more general obverse Majern{\'\i}k problem where partitions
+are given with logical relationships between them as well as some
+marginal probabilities. Wagner-type problems seek as a solution
+missing marginals, while obverse Majern{\'\i}k problems seek the
+conditional probabilities as well, both of which I will eventually
+provide using \textsc{pme}.
+
+Wagner's solution for such problems (from now on Wagner conditioning)
+rests on \textsc{jup} and a formal apparatus established by Arthur
+Dempster in \cite{ref-5}, which is quite different from our notational
+approach. Wagner legitimately calls his solution a \qeins{natural
+  generalization of Jeffrey conditioning} \cite{ref-31} (p.250). There is,
+however, another natural generalization of Jeffrey conditioning, E.T.
+Jaynes' principle of maximum entropy in \cite{ref-10}. \textsc{pme} does not
+rest on \textsc{jup}, but rather claims that one should keep one's
+entropy maximal within the constraints that the evidence provides (in
+the synchronic case) and one's cross-entropy minimal (in the
+diachronic case).
+
+It is important to distinguish between type I and type II prior
+probabilities. The former precede any information at all (so-called
+ignorance priors). The latter are simply prior relative to posterior
+probabilities in probability kinematics. They may themselves be
+posterior probabilities with respect to an earlier instance of
+probability kinematics. Although Jaynes' original claims are concerned
+with type I prior probabilities, this paper works on the assumptions
+of Jaynes' later work focusing on type II prior probabilities. Some
+distinguish between \textsc{maxent}, the synchronic rule, and
+\emph{Infomin}, the diachronic rule. The understanding here is that
+both operate on type II prior probabilities: \textsc{maxent} considers
+uniform prior probabilities (however this uniformity may have arisen)
+and a set of synchronic constraints on them; \emph{Infomin}, in a more
+standard sense of updating, considers type II prior probabilities that
+are not necessarily uniform and updates them given evidence
+represented as new (diachronic) constraints on acceptable posterior
+probability distributions. Some say that \textsc{maxent} and
+\emph{Infomin} contradict each other, but I disagree and maintain that
+they are compatible. I will have to defer this problem to future work,
+but a core argument for compatibility is already accessible in \cite{ref-32}
+
+One advantage of \textsc{pme} is that it works on the wide domain of
+updating problems where the evidence corresponds to an affine
+constraint (for affine constraints see \cite{ref-3}; for problems with
+evidence not in the form of affine constraints see \cite{ref-23}).
+Updating problems where standard conditioning and Jeffrey conditioning
+are applicable are a subset of this domain. Some partial information
+cases (using the moment(s) of a distribution as evidence), such as Bas
+van Fraassen's \emph{Judy Benjamin} problem and Jaynes' \emph{Brandeis
+  Dice} problem, are not amenable to either standard conditioning or
+Jeffrey conditioning. \textsc{pme} generalizes Jeffrey conditioning
+(and, a fortiori, standard conditioning) and therefore absorbs
+\textsc{jup} on the more narrow domain of problems that we can solve
+using Jeffrey conditioning (for a proof see the appendix, although it
+can also be gleaned from \cite{ref-1}).
+
+Wagner's contention is that on the wider domain of problems where we
+must use Wagner conditioning (and which he does not cast in terms of
+affine constraints), \textsc{jup} and \textsc{pme} contradict each
+other. We are now in the awkward position of being confronted with two
+plausible intuitions, \textsc{jup} and \textsc{pme}, and it appears
+that we have to let one of them go. Wagner adduces other conceptual
+problems for \textsc{pme} (see \cite{ref-6, ref-26, ref-24, ref-29},
+\cite{ref-33}(p.270), \cite{ref-8}(p.107)) to reinforce his conclusion
+that \textsc{pme} is not a principle on which we should rely in
+general.
+
+\section{A Natural Generalization of Jeffrey and Wagner Conditioning}
+\label{Generalization}
+
+In order to show how \textsc{pme} generalizes Jeffrey conditioning (in
+the appendix) and Wagner conditioning to boot, I use the notation that
+I have already introduced for Jeffrey conditioning. We can
+characterize Wagner-type problems analogously to Jeffrey-type problems
+by a triple $(\kappa,\beta,\hat{\alpha})$.
+$\{\theta_{j}\}_{j=1,\ldots,n}$ and $\{\omega_{i}\}_{i=1,\ldots,m}$
+now refer to independent partitions of $\Omega$, i.e.\ (\ref{eq:m1})
+need not be true. Besides the marginal probabilities
+$P(\theta_{j})=\beta_{j}, \hat{P}(\theta_{j})=\hat{\beta}_{j},
+P(\omega_{i})=\alpha_{i},\hat{P}(\omega_{i})=\hat{\alpha}_{i}$, we
+therefore also have joint probabilities
+$\mu_{ij}=P(\omega_{i}\cap\theta_{j})$ and
+$\hat{\mu}_{ij}=\hat{P}(\omega_{i}\cap\theta_{j})$.
+
+Given the specific nature of Wagner-type problems, there are a few
+constraints on the triple $(\kappa,\beta,\hat{\alpha})$. The last row
+$(\mu_{mj})_{j=1,\ldots,n}$ is special because it represents the
+probability of $\omega_{m}$, which is the negation of the events
+deemed possible after the observation. In the \emph{Linguist} problem,
+for example, $\omega_{5}$ is the event (initially highly likely, but
+impossible after the observation of the native's utterance) that the
+native does not make any of the four utterances. The native may have,
+after all, uttered a typical Buddhist phrase, asked where the nearest
+bathroom was, complimented your fedora, or chosen to be silent.
+$\kappa$ will have all $1$s in the last row. Let
+$\hat{\kappa}_{ij}=\kappa_{ij}$ for $i=1,\ldots,m-1$ and
+$j=1,\ldots,n$; and $\hat{\kappa}_{mj}=0$ for $j=1,\ldots,n$.
+$\hat{\kappa}$ equals $\kappa$ except that its last row are all $0$s,
+and $\hat{\alpha}_{m}=0$. Otherwise the $0$s are distributed over
+$\kappa$ (and equally over $\hat{\kappa}$) so that no row and no
+column has all $0$s, representing the logical relationships between
+the $\omega_{i}$s and the $\theta_{j}$s ($\kappa_{ij}=0$ if and only
+if $\hat{P}(\omega_{i}\cap\theta_{j})=\mu_{ij}=0$). We set
+$P(\omega_{m})=x$ ($\hat{P}(\omega_{m})=0$), where $x$ depends on the
+specific prior knowledge. Fortunately, the value of $x$ cancels out
+nicely and will play no further role. For convenience, we define
+
+\begin{equation}
+\label{eq:zeta}
+\zeta=(0,\ldots,0,1)^{\top}
+\end{equation}
+
+{\noindent}with $\zeta_{m}=1$ and $\zeta_{i}=0$ for $i\neq{}m$.
+
+The best way to visualize such a problem is by providing the joint
+probability matrix $M=(\mu_{ij})$ together with the marginals $\alpha$
+and $\beta$ in the last column/row, here for example as for the
+\emph{Linguist} problem with $m=5$ and $n=4$ (note that this is not
+the matrix $M$, which is $m\times{}n$, but $M$ expanded with the
+marginals in improper matrix notation):
+
+\begin{equation}
+  \label{eq:m3}
+      \left[
+      \begin{array}{ccccc}
+        \mu_{11} & \mu_{12} & 0 & 0 & \alpha_{1} \\
+        \mu_{21} & \mu_{22} & 0 & 0 & \alpha_{2} \\
+        0 & \mu_{32} & 0 & \mu_{34} & \alpha_{3} \\
+        \mu_{41} & \mu_{42} & \mu_{43} & \mu_{44} & \alpha_{4} \\
+        \mu_{51} & \mu_{52} & \mu_{53} & \mu_{54} & x \\
+        \beta_{1} & \beta_{2} & \beta_{3} & \beta_{4} & 1.00
+      \end{array}
+\right].
+\end{equation}
+
+{\noindent}The $\mu_{ij}\neq{}0$ where $\kappa_{ij}=1$. Ditto, mutatis mutandis,
+for $\hat{M},\hat{\alpha},\hat{\beta}$. To make this a little less
+abstract, Wagner's \emph{Linguist} problem is characterized by the
+triple $(\kappa,\beta,\hat{\alpha})$,
+
+\begin{equation}
+  \label{eq:m4}
+  \kappa=\left[
+  \begin{array}{cccc}
+    1 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 1 \\
+    1 & 1 & 1 & 1 \\
+    1 & 1 & 1 & 1
+  \end{array}
+\right]\mbox{ and }
+  \hat{\kappa}=\left[
+  \begin{array}{cccc}
+    1 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 1 \\
+    1 & 1 & 1 & 1 \\
+    0 & 0 & 0 & 0
+  \end{array}
+\right]
+\end{equation}
+
+\begin{equation}
+  \label{eq:m5}
+  \beta=(0.2,0.3,0.4,0.1)^{\top}\mbox{ and }\hat{\alpha}=(0.4,0.3,0.2,0.1,0)^{\top}.
+\end{equation}
+
+Wagner's solution, based on \textsc{jup}, is
+
+\begin{equation}
+  \label{eq:m6}
+  \hat{\beta_{j}}=\beta_{j}\sum_{i=1}^{m-1}\frac{\hat{\kappa}_{ij}\hat{\alpha_{i}}}{\sum_{\hat{\kappa}_{il}=1}\beta_{l}}\mbox{ for all }j=1,\ldots,n.
+\end{equation}
+
+{\noindent}In numbers,
+
+\begin{equation}
+  \label{eq:m7}
+  \hat{\beta_{j}}=(0.3,0.6,0.04,0.06)^{\top}.
+\end{equation}
+
+{\noindent}The posterior probability that the native encountered by
+the linguist is a northerner, for example, is 34\%. Wagner's notation
+is completely different and never specifies or provides the joint
+probabilities, but I hope the reader appreciates both the analogy to
+(\ref{eq:m2}) underlined by this notation as well as its efficiency in
+delivering a correct \textsc{pme} solution for us. The solution that
+Wagner attributes to \textsc{pme} is misleading because of Wagner's
+Dempsterian setup which does not take into account that proponents of
+\textsc{pme} are likely to be proponents of the classical Bayesian
+position that type II prior probabilities are specified and
+determinate once the agent attends to the events in question. Some
+Bayesians in the current discussion explicitly disavow this
+requirement for (possibly retrospective) determinacy (especially James
+Joyce in \cite{ref-14} and other papers). Proponents of \textsc{pme} (a proper
+subset of Bayesians), however, are unlikely to follow Joyce---if they
+did, they would indeed have to address Wagner's example to show
+that their allegiances to \textsc{pme} and to indeterminacy are
+compatible. 
+
+That (\ref{eq:m6}) follows from \textsc{jup} is well-documented in
+Wagner's paper. For the \textsc{pme} solution for this problem, I
+will not use (\ref{eq:m6}) or \textsc{jup}, but maximize the entropy
+for the joint probability matrix $M$ and then minimize the
+cross-entropy between the prior probability matrix $M$ and the
+posterior probability matrix $\hat{M}$. The \textsc{pme} solution,
+despite its seemingly different ancestry in principle, formal method,
+and assumptions, agrees with (\ref{eq:m6}). This completes our
+argument.
+
+What follows may only be accessible to \textsc{pme} cognoscenti, since
+it involves the Lagrange multiplier method (see \cite{ref-7}(p.327ff)
+and\cite{ref-11}(p.244)). Others may read the conclusion and find a
+sketch for an easier, but much less rigorous proof in the appendix. To
+maximize the Shannon entropy of $M$ and minimize the Kullback-Leibler
+divergence between $\hat{M}$ and $M$, consider the Lagrangian
+functions:
+
+\begin{flalign}
+\label{eq:m8}
+& \Lambda(\mu_{ij},\xi)= & \notag \\
+& \sum_{\kappa_{ij}=1}\mu_{ij}\log{}\mu_{ij}+\sum_{j=1}^{n}\xi_{j}\left(\beta_{j}-\sum_{\kappa_{kj}=1}\mu_{kj}\right)+ & \notag \\
+& \lambda_{m}\left(x-\sum_{j=1}^{n}\mu_{mj}\right) &
+\end{flalign}
+
+and
+
+\begin{flalign}
+\label{eq:m9}
+& \hat{\Lambda}(\hat{\mu}_{ij},\hat{\lambda})= & \notag \\
+& \sum_{\hat{\kappa}_{ij}=1}\hat{\mu}_{ij}\log{}\frac{\hat{\mu}_{ij}}{\mu_{ij}}+\sum_{i=1}^{m}\hat{\lambda}_{i}\left(\hat{\alpha}_{i}-\sum_{\hat{\kappa}_{il}=1}\hat{\mu}_{il}\right). &
+\end{flalign}
+
+{\noindent}For the optimization, we set the partial derivatives to
+$0$, which results in
+
+\begin{equation}
+  \label{eq:m10}
+  M=rs^{\top}\circ\kappa
+\end{equation}
+
+\begin{equation}
+  \label{eq:m11}
+  \hat{M}=\hat{r}s^{\top}\circ\hat{\kappa}
+\end{equation}
+
+\begin{equation}
+  \label{eq:m12}
+  \beta=S\kappa^{\top}r
+\end{equation}
+
+\begin{equation}
+  \label{eq:m13}
+  \hat{\alpha}=\hat{R}\kappa{}s
+\end{equation}
+
+{\noindent}where
+$r_{i}=e^{\zeta_{i}\lambda_{m}},s_{j}=e^{-1-\xi_{j}},\hat{r}_{i}=e^{-1-\hat{\lambda}_{i}}$
+represent factors arising from the Lagrange multiplier method ($\zeta$
+was defined in (\ref{eq:zeta})). The
+operator $\circ$ is the entry-wise Hadamard product in linear algebra.
+$r,s,\hat{r}$ are the vectors containing the
+$r_{i},s_{j},\hat{r}_{i}$, respectively. $R,S,\hat{R}$ are the
+diagonal matrices with
+$R_{il}=r_{i}\delta_{il},S_{kj}=s_{j}\delta_{kj},\hat{R}_{il}=\hat{r}_{i}\delta_{il}$
+($\delta$ is Kronecker delta).
+
+Note that 
+
+\begin{equation}
+  \label{eq:m14}
+  \frac{\beta_{j}}{\sum_{\hat{\kappa}_{il}=1}\beta_{l}}=\frac{s_{j}}{\sum_{\hat{\kappa}_{il}=1}s_{l}}\mbox{ for all }(i,j)\in\{1,\ldots,m-1\}\times\{1,\ldots,n\}.
+\end{equation}
+
+{\noindent}(\ref{eq:m13}) implies
+
+\begin{equation}
+  \label{eq:m15}
+  \hat{r}_{i}=\frac{\hat{\alpha_{i}}}{\sum_{\hat{\kappa}_{il}=1}s_{l}}\mbox{ for all }i=1,\ldots,m-1.
+\end{equation}
+
+{\noindent}Consequently,
+
+\begin{equation}
+  \label{eq:m16}
+  \hat{\beta}_{j}=s_{j}\sum_{i=1}^{m-1}\frac{\hat{\kappa}_{ij}\hat{\alpha_{i}}}{\sum_{\kappa_{il}=1}s_{l}}\mbox{ for all }j=1,\ldots,n.
+\end{equation}
+
+{\noindent}(\ref{eq:m16}) gives us the same solution as (\ref{eq:m6}),
+taking into account (\ref{eq:m14}). Therefore, Wagner conditioning and
+\textsc{pme} agree.
+
+\section{Conclusion}
+\label{Conclusion}
+
+Wagner-type problems (but not obverse Majern{\'\i}k-type problems) can
+be solved using \textsc{jup} and Wagner's ad hoc method. Obverse
+Majern{\'\i}k-type problems, and therefore all Wagner-type problems,
+can also be solved using \textsc{pme} and its established and
+integrated formal method. What at first blush looks like serendipitous
+coincidence, namely that the two approaches deliver the same result,
+reveals that \textsc{jup} is safely incorporated in \textsc{pme}. Not
+to gain information where such information gain is unwarranted and to
+process all the available and relevant information is the intuition at
+the foundation of \textsc{pme}. My results show that this more
+fundamental intuition generalizes the more specific intuition that
+ratios of probabilities should remain constant unless they are
+affected by observation or evidence. Wagner's argument that
+\textsc{pme} conflicts with \textsc{jup} is ineffective because it
+rests on assumptions that proponents of \textsc{pme} naturally reject. \\
+
+\appendix
+
+\section{Appendix: PME generalizes Jeffrey Conditioning}
+\label{appendix}
+
+A proof that \textsc{pme} generalizes standard conditioning is in
+\cite{ref-34}. A proof that \textsc{pme} generalizes Jeffrey conditioning is in
+\cite{ref-1}. I will give my own simple proofs here that are more in keeping
+with the notation in the paper. An interested reader can also apply
+these proofs to show that \textsc{pme} generalizes Wagner
+conditioning, but not without simplifications that compromise
+mathematical rigour. The more rigorous proof for the generalization of
+Wagner conditioning is in the body of the paper.
+
+I assume finite (and therefore discrete) probability distributions.
+For countable and continuous probability distributions, the reasoning
+is largely analogous (for an introduction to continuous entropy see
+\cite{ref-7} (p.16ff); for an example of how to do a proof of this section for
+continuous probability densities see \cite{ref-1,ref-11}; for a proof that the
+stationary points of the Lagrange function are indeed the desired
+extrema see \cite{ref-36} (p.55) and \cite{ref-2} (p.410); for the pioneer of the method
+applied in this section see \cite{ref-11} (p.241ff)).
+
+\subsection{Standard Conditioning}
+\label{sc}
+
+Let $y_{i}$ (all $y_{i}\neq{}0$) be a finite type II prior probability
+distribution summing to $1$, $i\in{}I$. Let $\hat{y}_{i}$ be the
+posterior probability distribution derived from standard conditioning
+with $\hat{y}_{i}=0$ for all $i\in{}I'$ and $\hat{y}_{i}\neq{}0$ for
+all $i\in{}I''$, $I'\cup{}I''=I$. $I'$ and $I''$ specify the standard
+event observation. Standard conditioning requires that
+
+\begin{equation}
+  \label{eq:sc}
+  \hat{y}_{i}=\frac{y_{i}}{\sum_{k\in{}I''}y_{k}}.
+\end{equation}
+
+{\noindent}To solve this problem using \textsc{pme}, we want to minimize the
+cross-entropy with the constraint that the non-zero $\hat{y}_{i}$ sum to
+$1$. The Lagrange function is (writing in vector form
+$\hat{y}=(\hat{y}_{i})_{i\in{}I''}$)
+
+\begin{equation}
+  \label{eq:sclag}
+  \Lambda(\hat{y},\lambda)=\sum_{i\in{}I''}\hat{y}_{i}\ln\frac{\hat{y}_{i}}{y_{i}}+\lambda\left(1-\sum_{i\in{}I''}\hat{y}_{i}\right).
+\end{equation}
+
+{\noindent}Differentiating the Lagrange function with respect to $\hat{y}_{i}$ and
+setting the result to zero gives us
+
+\begin{equation}
+  \label{eq:sc1}
+  \hat{y}_{i}=y_{i}e^{\lambda-1}
+\end{equation}
+
+{\noindent}with $\lambda$ normalized to
+
+\begin{equation}
+  \label{eq:sc2}
+  \lambda=-1+\ln{}\sum_{i\in{}I''}y_{i}.
+\end{equation}
+
+{\noindent}(\ref{eq:sc}) follows immediately. \textsc{pme} generalizes standard conditioning.
+
+\subsection{Jeffrey Conditioning}
+\label{jco}
+
+Let $\theta_{i},i=1,\ldots,n$ and $\omega_{j},j=1,\ldots,m$ be finite
+partitions of the event space with the joint prior probability matrix
+$(y_{ij})$ (all $y_{ij}\neq{}0$). Let $\kappa$ be defined as in
+Section \ref{jc}, with (\ref{eq:m1}) true (remember that in Section
+\ref{Generalization}, (\ref{eq:m1}) is no longer required). Let $P$ be
+the type II prior probability distribution and $\hat{P}$ the posterior
+probability distribution.
+
+Let $\hat{y}_{ij}$ be the posterior probability distribution derived
+from Jeffrey conditioning with
+
+\begin{equation}
+  \label{eq:jc1}
+  \sum_{i=1}^{n}\hat{y}_{ij}=\hat{P}(\omega_{j})\mbox{ for all }j=1,\ldots,m
+\end{equation}
+
+{\noindent}Jeffrey conditioning requires that for all $i=1,\ldots,n$
+
+\begin{equation}
+  \label{eq:jc2}
+  \hat{P}(\theta_{i})=\sum_{j=1}^{m}P(\theta_{i}|\omega_{j})\hat{P}(\omega_{j})=\sum_{j=1}^{m}\frac{y_{ij}}{P(\omega_{j})}\hat{P}(\omega_{j})
+\end{equation}
+
+{\noindent}Using \textsc{pme} to get the posterior distribution
+$(\hat{y}_{ij})$, the Lagrange function is (writing in vector form
+$\hat{y}=(x_{11},\ldots,x_{n1},\ldots,x_{nm})^{\top}$ and
+$\lambda=(\lambda_{1},\ldots,\lambda_{m})^{\top}$)
+
+\begin{equation}
+  \label{eq:jclag}
+  \Lambda(\hat{y},\lambda)=\sum_{i=1}^{n}\sum_{j=1}^{m}\hat{y}_{ij}\ln\frac{\hat{y}_{ij}}{y_{ij}}+\sum_{j=1}^{m}\lambda_{j}\left(\hat{P}(\omega_{j})-\sum_{i=1}^{n}\hat{y}_{ij}\right).
+\end{equation}
+
+{\noindent}Consequently,
+
+\begin{equation}
+  \label{eq:jc4}
+  \hat{y}_{ij}=y_{ij}e^{\lambda_{j}-1}
+\end{equation}
+
+{\noindent}with the Lagrangian parameters $\lambda_{j}$ normalized by
+
+\begin{equation}
+  \label{eq:jc5}
+  \sum_{i=1}^{n}y_{ij}e^{\lambda_{j}-1}=\hat{P}(\omega_{j})
+\end{equation}
+
+{\noindent}(\ref{eq:jc2}) follows immediately. \textsc{pme}
+generalizes Jeffrey conditioning.
+
+\conflictofinterests{Conflicts of Interest}
+
+The author declares no conflict of interest. 
+
+%\section*{\noindent References}
+%\label{References}
+
+ \bibliographystyle{mdpi}
+ \makeatletter
+ \renewcommand\@biblabel[1]{#1. }
+ \makeatother
+
+\begin{thebibliography}{----}
+
+\bibitem{ref-13} Jeffrey, R. \emph{The Logic of Decision}; Gordon and Breach: New York, NY, USA, 1965.
+
+\bibitem{ref-21} Majern{\'\i}k, V. Marginal Probability Distribution Determined by the Maximum Entropy Method. \emph{Rep. Math. Phys.} {\bf2000}, {\emph45},   171--181.
+
+\bibitem{ref-2}
+Cover, T.M.; Thomas, J.A.  \emph{Elements of Information Theory}; Wiley: Hoboken, NJ, USA, 2006. Volume 6.
+
+\bibitem{ref-4} Debbah, M{\'e}rouane, and Ralf M{\"u}ller. MIMO Channel Modeling and the Principle of Maximum Entropy. \emph{IEEE Trans. Inform. Theor.} {\bf 2005}, {\emph51}, 1667--1690.
+
+\bibitem{ref-30} Van Fraassen, B., Hughes, R.I.G.; Harman, G. A Problem for Relative Information Minimizers, Continued. \emph{Br. J. Philos. Sci.} {\bf1986},  {\emph37}, 453--463.
+
+\bibitem{ref-12} Jaynes, E.T. Optimal Information Processing and Bayes's Theorem: Comment. \emph{Am. Stat.} {\bf1988}, {\emph42}, 280--281.
+
+\bibitem{ref-35} Zellner, A. Optimal Information Processing and Bayes's Theorem. \emph{Am. Stat.} {\bf1988}, {\emph42}, 278--280.
+
+\bibitem{ref-22} Palmieri, F.;Domenico, C. Objective Priors from Maximum Entropy in Data Classification.\emph{Inform. Fusion}  {\bf2013}, {\emph14}, 186--198.
+
+\bibitem{ref-25} Shannon, C. A Mathematical Theory of Communication. \emph{Bell Sys. Tech. J.} {\bf1948}, {\emph27}, 379--423, 623--656.
+
+\bibitem{ref-19} Kullback, S. \emph{Infor. Theor. Stat.}. Dover: London, UK, 1959.
+
+\bibitem{ref-20} Kullback, S.;  Leibler, R. On Information and Sufficiency. \emph{Ann. Math. Stat.} {\bf1951}, {\emph22}, 79--86.
+
+\bibitem{ref-7} Guia{\c{s}}u, Silviu. \emph{Information Theory with Application}; McGraw-Hill: New York, NY, USA, 1977. 
+
+\bibitem{ref-24} Seidenfeld, T. Entropy and Uncertainty. In \emph{Advances in the Statistical Sciences: Foundations of Statistical Inference}; Springer: Berilin, Germany, 1986; pp. 259--287.
+
+\bibitem{ref-15} Kamp{\'e} de F{\'e}riet, J., and B. Forte. ``Information et probabilit{\'e}.'' \emph{Comptes rendus de l'Acad{\'e}mie des sciences} {\bf1967}, {\emph A 265}, 110--114.
+
+\bibitem{ref-16} Ingarden, R.S.; Urbanik, K.  Information Without Probability. \emph{Colloq. Math.} {\bf1962}, {\emph9}, 131--150.
+
+\bibitem{ref-17} Khinchin, A. \emph{Mathematical Foundations of Information Theory}; Dover: New York, NY, USA, 1957.
+
+\bibitem{ref-18} Kolmogorov, A. Logical Basis for Information Theory and Probability Theory. \emph{IEEE Trans.  Infor. Theor.} {\bf1968}, {\emph 14},  662--664.
+
+\bibitem{ref-31} Wagner, C. Generalized Probability Kinematics. \emph{Erkenntnis} {\bf1992}, {\emph36}, 245--257.
+
+\bibitem{ref-28} Teller, P. Conditionalization and Observation. \emph{Synthese} {\bf1973}, {\emph26}, 218--258.
+
+\bibitem{ref-9} Howson, C.; Franklin, A. Bayesian Conditionalization and Probability Kinematics. \emph{Br. J. Philos. Sci.} {\bf1994}, \emph{45},  451--466.
+
+\bibitem{ref-32}Wagner, C. Probability Kinematics and Commutativity. \emph{Phil. Sci.}  {\bf2002}, {\emph69}, 266--278.
+
+\bibitem{ref-27} Spohn, W. \emph{The Laws of Belief: Ranking Theory and Its Philosophical Applications}; Oxford University: Oxford, UK, 2012.
+
+\bibitem{ref-5} Dempster, A. Upper and Lower Probabilities Induced by a Multi-Valued Mapping. \emph{Ann. Math Stat.} {\bf1967}, {\emph38}, 325--339.
+
+\bibitem{ref-10} Jaynes, E.T. Information Theory and Statistical Mechanics. \emph{Phys. Rev.} {\bf1957}, \emph{106}, 620--630.
+
+\bibitem{ref-3} Csisz{\'a}r, Imre. Information-Type Measures of Difference of Probability Distributions and Indirect Observations. \emph{Studia Scientiarum Mathematicarum Hungarica} {\bf 1967}, {\emph 2}, 299--318.
+
+\bibitem{ref-23} Paris, J. \emph{The Uncertain Reasoner's Companion: A Mathematical Perspective}.  Cambridge University: Cambridge, UK, 2006.
+
+\bibitem{ref-1} Caticha, A.; Giffin, Adom. Updating Probabilities. In \emph{Max-Ent 2006, the 26th International Workshop on Bayesian Inference and Maximum Entropy Methods}; University at Albany: Albany, NY, USA, 2006.
+
+\bibitem{ref-6}Friedman, K.;Abner, S. Jaynes's Maximum Entropy Prescription and Probability Theory.'\emph{J. Stat. Phys.} {\bf1971}, {\emph3}, 381--384.
+
+\bibitem{ref-26} Skyrms, B. Updating, Supposing, and Maxent. \emph{Theor. Decis.} {\bf1987}, {\emph22}, 225--246.
+
+\bibitem{ref-29} Uffink, J. Can the Maximum Entropy Principle Be Explained as a Consistency Requirement? \emph{Stud. Hist. Philos. Sci.} {\bf1995}, {\emph26}, 223--261.
+
+\bibitem{ref-33} Walley, P. \emph{Statistical Reasoning with Imprecise Probabilities}; Chapman and Hall: London, UK, 1991.
+
+\bibitem{ref-8} Halpern, J. \emph{Reasoning About Uncertainty}.  MIT: Cambridge, MA, USA, 2003.
+
+\bibitem{ref-14} Joyce, J. A Defense of Imprecise Credences in Inference and Decision Making. \emph{Phil. Pers.} {\bf2010}, {\emph24}, 281--323.
+
+\bibitem{ref-11} Jaynes, E.T. Where Do We Stand on Maximum Entropy. In \emph{The Maximum Entropy Formalism};  Levine, R.D.;  Tribus, M., Eds.;  MIT: Cambridge, MA, USA, 1978; pp. 15--118.
+
+\bibitem{ref-34} Williams, P. Bayesian Conditionalisation and the Principle of Minimum Information.\emph{Br. J. Philos. Sci.} {\bf1980}, \emph{31},  131--144.
+
+\bibitem{ref-36} Zubarev, D, Vladimir, M.;  Gerd, R. \emph{Statistical Mechanics of Nonequilibrium Processes}; Akademie: Berlin, Germany, 1996.
+\end{thebibliography}
+% save body ending here
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \acknowledgements{Acknowledgements}
+
+% Main text.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \authorcontributions{Author Contributions}
+
+% Main text.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%=================================================================
+% References: Variant A
+%=================================================================
+% Back Matter (References and Notes)
+%----------------------------------------------------------
+% Style and layout of the references
+% \bibliographystyle{mdpi}
+% \makeatletter
+% \renewcommand\@biblabel[1]{#1. }
+% \makeatother
+
+% \begin{thebibliography}{999} % if there are less than 10 entries, enter a one digit number
+
+% Reference 1
+% \bibitem{ref-journal}
+% Lastname, F.; Author, T. The title of the cited article. {\em Journal Abbreviation} {\bf 2008}, {\em 10}, 142-149.
+
+% Reference 2
+% \bibitem{ref-book}
+% Lastname, F.F.; Author, T. The title of the cited contribution. In {\em The Book Title}; Editor, F., Meditor, A., Eds.; Publishing House: City, Country, 2007; pp. 32-58.
+
+% \end{thebibliography}
+
+%=================================================================
+% References:  Variant B
+%=================================================================
+% Use the following option to include external BibTeX files:
+%\bibliography{bib-5908}
+%\bibliographystyle{mdpi}
+
+\end{document}

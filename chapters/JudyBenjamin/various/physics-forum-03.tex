@@ -1,0 +1,21 @@
+Clarifying and rephrasing this post:
+http://www.physicsforums.com/showthread.php?t=511549&highlight=divisible+binomial.
+I have two finite sets A_{1} and A_{2} with the same number of
+elements (let their cardinality be s times t, where t is a fixed
+positive integer). Let me randomly pick elements from these two sets,
+with one constraint, however: the number of elements picked from A_{2}
+must be a t-multiple of the number of elements picked from A_{1}. If
+t=3, for example, and s=2, there are six elements in A_{i} and I can
+either pick 0 elements from A_{1} and 0 from A_{2} (there is only one
+way of doing this), or 1 element from A_{1} and 3 elements from A_{2}
+(there are 120 ways of doing this), or 2 element from A_{1} and 6
+elements from A_{2} (there are 15 ways of doing this). Let X be the
+random variable counting the elements picked from both sets. In
+the example, X can be 0, 4, or 8, and the associated probabilities are
+1/136, 120/136, and 15/136, so that the expectation for X is EX=4.41.
+
+I want to know what this expectation is for fixed t and variable s as
+s increases. I can provide the formula for fixed s and t, but I have
+no idea how to investigate the behaviour of this formula as s increases.
+
+[tex]EX=(1+t)\frac{\sum_{i=0}^{s}i\binom{ts}{i}\binom{ts}{ti}}{\sum_{i=0}^{s}\binom{ts}{i}\binom{ts}{ti}}[/tex]

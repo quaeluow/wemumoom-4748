@@ -1,0 +1,11 @@
+Given a more general type of evidence than required for Bayes'
+formula, the Principle of Maximum Entropy (PME) provides a unique
+solution for the posterior probability assignment based on the
+intuition that the information gain consistent with assumptions and
+evidence should be minimal. Opponents of objective methods to
+determine these probabilities prominently cite van Fraassen's Judy
+Benjamin case to undermine the generality of the PME. The article
+shows that the results provided by the PME are supported by an
+intuitive approach that prima facie should support the opponents. The
+independence assumptions which render the results counter-intuitive
+are improperly applied by opponents.

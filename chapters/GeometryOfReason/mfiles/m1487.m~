@@ -1,0 +1,16 @@
+## see https://www.physicsforums.com/threads/equation-of-circle-in-3-dimensions.693967
+q=[0.50876,0.13934,0.35190]
+r=[1/3,1/3,1/3]
+s=[0.792615,0.173989,0.033396]
+rs=.70121
+ll=.7
+
+## s1, s2, s3 must fulfill the following equations:
+
+## s1+s2+s3=1
+## (r1-s1)^2+(r2-s2)^2+(r3-s3)^2=rs^2
+## (q1-s1)^2+(q2-s2)^2+(q3-s3)^2=(q1-r1)^2+(q2-r2)^2+(q3-r3)^2
+
+## see function finds
+
+

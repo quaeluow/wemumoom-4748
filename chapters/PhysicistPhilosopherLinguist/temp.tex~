@@ -1,0 +1,17 @@
+It is well-known that with known marginal probabilities $a_{i}$ and
+$b_{j}$ the joint probability distribution maximizing the entropy
+
+$H(P)=-\sum_{i=1}^{m}\sum_{j=1}^{n}p_{ij}\log{}p_{ij}$
+
+is $p_{ij}=a_{i}b_{j}$. For $i=3,j=3,a=(0.2,0.3,0.5),b=(0.1,0.6,0.3)$, for example,
+
+\begin{equation}
+  \label{eq:r1}
+P=\left(
+  \begin{array}{rrr}
+    0.02 & 0.12 & 0.06 \\
+    0.03 & 0.18 & 0.09 \\
+    0.05 & 0.30 & 0.15
+  \end{array}
+\right)
+\end{equation}

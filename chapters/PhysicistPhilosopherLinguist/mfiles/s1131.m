@@ -1,0 +1,13 @@
+ee=exp(1)
+a=60
+b=ee+60
+c=ee*(-5)
+r=roots([a,b,c])
+dd=r(1,1)
+gg=ee/(5+(5*dd))
+ll=(-1)*log(gg)
+mu=(-1)*log(dd)
+x=exp(-1-ll)
+y=exp(-1-ll-mu)
+z=exp(-1-mu)
+w=exp(-1-mu)

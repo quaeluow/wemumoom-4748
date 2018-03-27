@@ -1,0 +1,778 @@
+The Principle of Maximum Entropy
+and a Problem in Probability Kinematics
+1. Introduction
+There are cases in which, given evidence, we cannot use Bayes’ formula to
+deliver a set of posterior probabilities given a set of prior probabilities. The
+Bayesian method presupposes that evidence comes in the form of an event. As
+Richard Jeﬀrey observes, however, the evidence may not relate the certainty
+of an event but a reassessment of its uncertainty or its probabilistic relation
+to other events (see Jeﬀrey 1965, 153ﬀ), expressible in a shift in expectation
+(see Hobson 1971). Bas van Fraassen has come up with a good example from
+the 1980 comedy ﬁlm Private Benjamin (see Van Fraassen 1981), in which
+Goldie Hawn portrays a Jewish-American woman (Judy Benjamin) who joins
+the U.S. Army.
+In the movie, Judy Benjamin is on an assignment and lands in a place where
+she is not sure of her location. She is on team Blue. Because of the map,
+her probability of being in Blue territory equals the probability of being
+in Red territory, and being in the Red Second Company area equals the
+probability of being in the Red Headquarters area. Her commanders inform
+Judy by radio that in case she is in Red territory, her chance of being in
+their Headquarters area is three times the chance of being in their Second
+Company area. A straightforward use of the Bayesian formula is not in the
+cards, because there is no immediately obvious event space in which we can
+Blue (Second Company) Blue (Headquarters)
+Red (Second Company) Red (Headquarters)
+A 1 A 2
+A 3
+Figure 1: Judy Benjamin’s map. Blue territory (A 3 ) is friendly
+and does not need to be divided into a Headquarters and a
+Second Company area.
+condition on an event E.
+Largely in the ﬁeld of physical statistics (but also in others, for an impres-
+sive (and outdated) list see Shore and Johnson 1980, 26), problems like the
+Judy Benjamin problem occur frequently and are usually solved using the
+principle of maximum entropy, maxent from now on. The idea is that the
+constraint imposed by the evidence should transform the prior probability
+distribution in a way that secures minimal information gain. In other words,
+we want a posterior probability distribution that reﬂects the evidence but
+does not provide more information than necessary. If the prior probability
+distribution is uniform, this principle is called the principle of maximum en-
+tropy; if it is not uniform, it is also called the infomin principle, the principle
+of minimal discrimination, or the principle of minimum cross-entropy. The
+mathematics leading to the solution of these types of problems is elegant and
+has compelling properties, outlined in a seminal article by John E. Shore and
+Rodney W. Johnson (1980).
+The goal of this paper is to undermine the notion that maxent ’s suggested
+solution for the Judy Benjamin problem is counter-intuitive. We will show
+that another intuitive approach, the powerset approach, lends signiﬁcant sup-
+port to the solution provided by maxent for the Judy Benjamin problem.
+Our argument is vaguely related to Jaynes’ use of the Wallis derivation to
+justify maxent in Jaynes and Bretthorst 1998, 351ﬀ. The intuition that
+maxent ’s solution for the Judy Benjamin problem violates (we will call it
+T1) is based on fallacious independence and uniformity assumptions. There
+is another powerful intuition (we will call it T2) in direct contradiction to
+T1 which maxent obeys.
+2. Two Intuitions
+There are two pieces of information relevant to Judy Benjamin when she
+decides on her posterior probability assignment. We will call them (MAP)
+and (HDQ). As in ﬁgure 1, A 1 is Red’s Second Company area, A 2 is Red’s
+Headquarters area, A 3 is Blue territory. Judy presumably wants to be in Blue
+territory, but if she is in Red territory, she would prefer their Second Company
+area (where enemy soldiers are not as well-trained as in the Headquarters
+area).
+(MAP)  Judy has no idea where she is. She is on team Blue. Because of the
+map, her probability of being in Blue territory equals the probability
+of being in Red territory, and being in the Red Second Company area
+equals the probability of being in the Red Headquarters area.
+(HDQ)  Her commanders inform Judy that in case she is in Red territory, her
+chance of being in their Headquarters area is three times the chance of
+being in their Second Company area.
+In formal terms (sloppily writing A i for the event of Judy being in A i ),
+2 · P (A 1 ) = 2 · P (A 2 ) = P (A 3 ) (MAP)
+q = P (A 2 |A 1 ∪ A 2 ) =
+3
+4
+(HDQ)
+(HDQ) is partial information  because in contrast to the kind of evidence
+we are used to in Bayes’ formula (such as ‘an even number was rolled’),
+and to the kind of evidence needed for Jeﬀrey’s rule (where a partition of
+the whole event space and its probability reassignment is required, not only
+A 1 ∪ A 2 , but see here the objections of Douven and Romeijn in Douven and
+Romeijn 2009), the scenario suggests that Bayesian conditionalization and
+Jeﬀrey’s rule are inapplicable. We are interested in the most defensible poste-
+rior probability assignment(s) (it is highly contentious if there is only one of
+them and if it or they can be called reasonable) and will express them in the
+form of a normalized odds vector (q 1 , q 2 , q 3 ), following van Fraassen (1981). q i
+is the posterior probability Q(A i ) that Judy Benjamin is in A i (let P be the
+prior probability distribution and p i the individual prior probabilities). The
+q i sum to 1 (this diﬀers from van Fraassen’s canonical odds vector, which is
+proportional to the normalized odds vector but has 1 as its ﬁrst element).
+We deﬁne
+t =
+q
+1 − q
+t is the factor by which (HDQ) indicates that Judy’s chance of being in A 2
+is greater than being in A 1 . In Judy’s particular case, t = 3 and q = 0.75.
+Van Fraassen found out with various audiences that they have the following
+intuition:
+T1  (HDQ) does not refer to Blue territory and should not aﬀect P (A 3 ):
+q 3 = p 3 (= 0.50).
+There is another, conﬂicting intuition (due to Peter Williams via personal
+communication with van Fraassen, see Van Fraassen 1981, 379):
+T2  If the value of q approaches 1 (in other words, t approaches inﬁnity)
+then q 3 should approach 2/3. (HDQ) would turn into ‘if you are in
+Red territory you are almost certainly in the Red Headquarters area.’
+Considering (MAP), q 3 should approach 2/3. Continuity considerations
+pose a contradiction to T1.
+To parse these conﬂicting intuitions, we will introduce several methods to
+provide G, the function that maps q to the appropriate normalized posterior
+odds vector (q 1 , q 2 , q 3 ). The ﬁrst method is extremely simple and accords with
+intuition T1: G ind (q) = (0.5(1 − q), 0.5q, 0.5). In Judy’s particular case with
+t = 3 the normalized odds vector is (ind stands for independent):
+G ind (0.75) = (0.125, 0.375, 0.500)
+Both Grove and Halpern (1997) as well as Douven and Romeijn (2009) make
+a case for this distribution, Grove and Halpern by using Bayesian condition-
+alization on the event of the message being transmitted to Judy, Douven and
+Romeijn by using Jeﬀrey’s rule (because they believe that T1 is in this case
+so strong that Q(A 3 ) = P (A 3 ) is as much of a constraint as (MAP) and
+(HDQ), yielding a Jeﬀrey partition). T1, however (and not unbeknownst to
+these authors), conﬂicts with the symmetry requirements outlined in van
+Fraassen et. al. (1986).
+Van Fraassen introduces various updating methods which do not conﬂict with
+those symmetry requirements, the most notable of which is maxent . Shore
+and  Johnson  have  already  shown  that,  given  certain  assumptions  (which
+have been heavily criticized, however, e.g. Uﬃnk 1996), maxent produces
+a unique posterior probability assignment. The minimum information dis-
+crimination theorem of Kullback and Leibler (see, for example, Csisz´ar 1967,
+section 3) demonstrates how Shannon’s entropy and the Kullback-Leibler
+Divergence formula can provide the least informative posterior probability
+assignment (with reference to the prior probability assignment) obeying the
+constraint posed by the evidence. We will show how this is done in the next
+section. The idea is to deﬁne a space of probability distributions, make sure
+that the constraint identiﬁes a closed, convex subset in this space, and then
+determine which of the distributions in the closed, convex subset is least dis-
+tant from the prior probability distribution in terms of information (using
+the minimum information discrimination theorem). It is necessary for the
+uniqueness of this least distant distribution that the subset be closed and
+convex (in other words, that the constraints be aﬃne, see Csisz´ar 1967).
+For Judy Benjamin, maxent suggests the following normalized odds vector:
+G max (0.75) ≈ (0.12, 0.35, 0.53) (1)
+The posterior probability of being on Blue territory (A 3 ) has increased from
+50% to approximately 53%. Grove and Halpern ﬁnd this result “highly counter-
+intuitive” (Grove and Halpern 1997, 2). Van Fraassen summarizes the worry:
+It is hard not to speculate that the dangerous implications of being in the
+enemy’s Headquarters area are causing Judy Benjamin to indulge in wishful
+thinking, her indulgence becoming stronger as her conditional estimate of
+the danger increases. (Van Fraassen 1981, 379)
+There are two ways in which we can arrive at result (1). We may either use
+Jaynes’ constraint rule and ﬁnd the posterior probability distribution that is
+both least informative with respect to Shannon’s entropy and in accordance
+with the constraint (using Dempster’s Rule of Combination, which together
+with the constraint rule is equivalent to the principle of minimum cross-
+entropy, see Cover and Thomas Cover and Thomas 2006, 409, exercise 12.2.),
+or use the Kullback-Leibler Divergence and diﬀerentiate it to obtain where
+it is minimal.
+3. Epistemic Entrenchment
+Even though T1 is an understandably strong intuition, it does not take into
+account that the information given to Judy by her commanders may be
+dependent on whether she is in Blue or in Red territory. To underline this
+objection to intuition T1 we want to consider three scenarios, any of which
+may form the basis of the partial information provided by her commanders.
+I  Judy was dropped oﬀ by a pilot who ﬂipped two coins. If the ﬁrst coin
+landed H, then Judy was dropped oﬀ in Blue territory, otherwise in
+Red territory. If the second coin landed H, she was dropped oﬀ in the
+Headquarters area, otherwise in the Second Company area. Judy’s com-
+manders ﬁnd out that the second coin was biased q : 1−q toward H with
+q = 0.75. The normalized odds vector is G I (0.75) = (0.125, 0.375, 0.500)
+and agrees with T1, because the choice of Blue or Red is completely
+independent from the choice of the Headquarters area or the Second
+Company area.
+II  The pilot randomly lands in any of the four quadrants and rolls a die.
+If she rolls an even number, she drops oﬀ Judy. If not, she takes her to
+another (or the same, the choice happens with replacement) randomly
+selected quadrant to repeat the procedure. Judy’s commanders ﬁnd
+out, however, that for A 1 , the pilot requires a six to drop oﬀ Judy, not
+just an even number. The normalized odds vector in this scenario is
+G II (0.75) = (0.1, 0.3, 0.6) and does not accord with T1.
+III  Judy’s commanders have divided the map into 24 congruent rectangles,
+A 3 into twelve, and A 1 and A 2 into six rectangles each (see ﬁgures 2 and
+3). They have information that the only subsets of the 24 rectangles
+in which Judy Benjamin may be located are such that they contain
+three times as many A 2 rectangles than A 1 rectangles. The normalized
+odds vector in this scenario is G III (0.75) ≈ (.108, .324, .568) (evaluating
+almost 17 million subsets).
+I–III demonstrate the contrast between scenarios when independence is true
+and when it is not. Douven and Romeijn’s capital mistake in their paper is
+that they assume that the Judy Benjamin problem is analogous to their ex-
+ample of Sarah and the sundowners at the Westcliﬀ (see Douven and Romeijn
+2009, 7). Sarah, however, knows that whether it rains or not is independent of
+her activity the next night, whereas in Judy Benjamin we have no evidence
+of such independence, as scenario II demonstrates. Douven and Romeijn’s
+reliance on intuition T1 leads them to apply Jeﬀrey’s rule to the Judy Ben-
+jamin problem with the additional constraint Q(A 3 ) = P (A 3 ). They claim
+that in most cases “the learning of a conditional is or would be irrelevant to
+one’s degree of belief for the conditional’s antecedent . . . the learning of the
+relevant conditional should intuitively leave the probability of the antecedent
+unaltered” (Douven and Romeijn 2009, 9). This, according to Douven and
+Romeijn, is the usual epistemic entrenchment and applies in full force to
+the Judy Benjamin problem. They give an example where the epistemic en-
+trenchment could go the other way and leave the consequent rather than the
+antecedent unaltered (Kate and Henry, see Douven and Romeijn 2009, 13).
+4. The Powerset Approach
+In this section, we will focus on scenario III and consider what happens when
+the grain of the partition becomes ﬁner. We call this the powerset approach.
+Two remarks are in order: (1) The powerset approach has little independent
+appeal. The reason behind using maxent is that we want our evidence to
+have just the right inﬂuence on our posterior probabilities, i.e. neither over-
+inform nor under-inform. There is no corresponding reason why we should
+update our probabilities using the powerset approach.
+(2) What the powerset approach does is lend support to another approach.
+In this task, it is persuasive because it tells us what would happen if we were
+to divide the event space into inﬁnitesimally small, uniformly weighed, and
+independent ‘atomic’ bits of information. It would be especially interesting
+if the powerset approach did not support the independence and uniformity
+assumptions of intuition T1, because both of these features are strongly rep-
+resented in the powerset approach.
+Let’s assume a partition {B i } i=1,...,4n of A 1 ∪ A 2 ∪ A 3 into sets that are of
+equal  measure  µ  and  whose  intersection  with  A i is  either  the  empty set
+or the whole set itself (this is the division into rectangles of scenario III).
+(MAP) dictates that the number of sets covering A 3 equals the number of
+sets covering A 1 ∪A 2 . For convenience, we assume the number of sets covering
+A 1 to be n. Let C, a subset of the powerset of {B i } i=1,...,4n , be the collection
+of sets which agree with the constraint imposed by (HDQ), i.e.
+C ∈ C iﬀ C = {C j } and tµ
+
+[
+C j ∩ A 1
+
+= µ
+
+[
+C j ∩ A 2
+
+In ﬁgures 2 and 3 there are diagrams of two elements of the powerset of
+{B i } i=1,...,4n . One of them (ﬁgure 2) is not a member of C, the other one
+(ﬁgure 3) is.
+Let X be the random variable that corresponds to the ratio of the number
+of partition elements (rectangles) that are in A 3 and the total number of
+partition elements (rectangles) for a randomly chosen C ∈ C. We would now
+anticipate that the expectation of X  (which we will call EX) gives us an
+indication of the posterior probability that Judy is in A 3 (so EX ≈ q 3 ). The
+powerset approach is often superior to the uniformity approach (Grove and
+Halpern use uniformity, with all the necessary qualiﬁcations): if you have
+played Monopoly, you will know that the frequencies for rolling a 2, a 7, or a
+A 3 A 1
+A 2
+Figure 2: This choice of rectangles is not a
+member of C  because the number of rectan-
+gles in A 2 is not a t-multiple of the number of
+rectangles in A 1 , here with s = 2, t = 3 as in
+scenario III.
+10 with two dice tend to conform more closely to the binomial distribution
+(based on a powerset approach) rather than to the uniform distribution with
+P (rolling i) = 1/11 for i = 2, . . ., 12.
+The binomial distribution dictates the value of EX, using simple combina-
+torics. In this case we require, again for convenience, that n be divisible by t
+and the ‘grain’ of the partition A be s = n/t. We introduce a few variables
+which later on will help for abbreviation:
+n = ts 2m = n 2j = n − 1 T = t 2 + 1
+EX, of course, depends both on the grain of A and the value of t. It makes
+A 3 A 1
+A 2
+Figure 3: This choice of rectangles is a member
+of C because the number of rectangles in A 2
+is a t-multiple of the number of rectangles in
+A 1 , here with s = 2, t = 3 as in scenario III.
+sense to make it independent of the grain by letting the grain become in-
+creasingly ﬁner and by determining EX as s → ∞. This cannot be done for
+the binomial distribution, as it is notoriously uncomputable for large num-
+bers (even with a powerful computer things get dicey around s = 10). But,
+equally notorious, the normal distribution provides a good approximation of
+the binomial distribution and will help us arrive at a formula for G pws (cor-
+responding to G ind and G max ), determining the value q 3 dependent on q as
+suggested by the powerset approach.
+First, we express the random variable X  by the two independent random
+variables X 12 and X 3 . X 12 is the number of partition elements in the randomly
+chosen C which are either in A 1 or in A 2 (the random variable of the number
+of partition elements in A 1 and the random variable of the number of partition
+elements in A 2 are decisively not independent, because they need to obey
+(HDQ)); X 3 is the number of partition elements in the randomly chosen C
+which are in A 3 . A relatively simple calculation shows that EX 3 = n, which
+is just what we would expect (either the powerset approach or the uniformity
+approach would give us this result):
+EX 3 = 2
+−2n
+2n
+X
+i=0
+i
+ 2n
+i
+
+= n (use
+ n
+k
+
+=
+n
+k
+ n − 1
+k − 1
+
+)
+The expectation of X, X being the random variable expressing the ratio of
+the number of sets covering A 3 and the number of sets covering A 1 ∪A 2 ∪A 3 ,
+is
+EX =
+EX 3
+EX 12 + EX 3
+=
+n
+EX 12 + n
+If we were able to use uniformity and independence, EX 12 = n and EX =
+1/2, just as Grove and Halpern suggest (although their uniformity approach
+is admittedly less crude than the one used here). Will the powerset approach
+concur with the uniformity approach, will it support the principle of maxi-
+mum entropy, or will it make another suggestion on how to update the prior
+probabilities? To answer this question, we must ﬁnd out what EX 12 is, for
+a given value t and s → ∞, using the binomial distribution and its approxi-
+mation by the normal distribution.
+Using combinatorics,
+EX 12 = (t + 1)
+P
+s
+i=1
+i  ts
+i
+ ts
+ti
+
+P
+s
+i=0
+ ts
+i
+ ts
+ti
+
+Let us call the numerator of this fraction NUM and the denominator DEN.
+According to the de Moivre-Laplace Theorem,
+DEN =
+s
+X
+i=0
+ ts
+i
+ ts
+ti
+
+≈ 2 2n
+s
+X
+i=0
+Z
+i+
+1
+2
+i−
+1
+2
+N (
+n
+2
+,
+n
+4
+)(i)N (
+n
+2
+,
+n
+4
+)(ti)di
+where
+N (µ, σ 2 )(x) =
+1
+√
+2πσ 2
+exp
+
+−
+(x − µ) 2
+2σ 2
+
+Substitution yields
+DEN ≈ 2 2n 1
+πm
+s
+X
+i=0
+Z
+i+
+1
+2
+i−
+1
+2
+exp
+ 
+−
+(x − m)
+2
+m
+−
+t 2   x − m
+t
+
+2
+m
+!
+dx
+Consider brieﬂy the argument of the exponential function:
+−
+(x − m)
+2
+m
+−
+t 2   x − m
+t
+
+2
+m
+= −
+t 2
+m
+(a
+00
+x 2 + b
+00
+x + c
+00
+) = −
+t 2
+m
+  a
+00
+(x − h
+00
+) 2 + k
+00
+with (the double prime sign corresponds to the simple prime sign for the
+numerator later on)
+a
+00
+=
+1
+t 2
+T b
+00
+= (−2m)
+1
+t 2
+(t + 1) c
+00
+= 2m 2
+1
+t 2
+h
+00
+= −b
+00
+/2a
+00
+k
+00
+= a
+00
+h
+002
++ b
+00
+h
+00
++ c
+00
+Consequently,
+DEN ≈ 2 2n exp
+
+−
+t 2
+m
+k
+00
+
+r
+1
+πa 00 mt 2
+Z
+s+
+1
+2
+−∞
+N
+
+h
+00
+,
+m
+2a 00 t 2
+
+dx
+And, using the error function for the cumulative density function of the
+normal distribution,
+DEN ≈ 2 2n−1
+r
+1
+πa 00 mt 2
+exp
+
+−
+k 00 t 2
+m
+
+(1 − erf(w
+00
+)) (2)
+with
+w
+00
+=
+t
+√
+a 00   s + 1
+2
+− h 00
+√
+m
+We proceed likewise with the numerator, although the additional factor in-
+troduces a small complication:
+NUM   =
+s
+X
+i=1
+i
+ ts
+i
+ ts
+ti
+
+=
+s
+X
+i=1
+s
+ ts
+i
+ ts − 1
+ti − 1
+
+≈   s2 2n−1
+s
+X
+i=1
+N
+
+m,
+m
+2
+
+(i)N
+
+j,
+j
+2
+
+(ti − 1)
+Again, we substitute and get
+NUM ≈ s2 2n−1
+
+π
+p
+mj
+
+−1
+s−1
+X
+0
+Z
+i+
+1
+2
+i−
+1
+2
+exp   a
+0
+(x − h
+0
+) 2 + k
+0
+where the argument for the exponential function is
+−
+1
+mj
+ 
+j(x − m) 2 + mt 2
+
+x −
+j + 1
+t
+
+2!
+and therefore
+a
+0
+= j+mt 2 b
+0
+= 2j(1−m)+2mt (t − j) c
+0
+= j(1−m) 2 +m (t − j − 1)
+2
+h
+0
+= −b
+0
+/2a
+0
+k
+0
+= a
+0
+h
+02
++ b
+0
+h
+0
++ c
+0
+Using the error function,
+NUM ≈ 2 2n−2
+s
+√
+πa 0
+exp
+
+−
+k 0
+mj
+
+(1 + erf(w
+0
+)) (3)
+with
+w
+0
+=
+√
+a 0   s − 1
+2
+− h 0
+√
+mj
+Combining (2) and (3),
+EX 12 =   (t + 1)
+NUM
+DEN
+≈
+1
+2
+(t + 1)
+r
+T ts
+T ts − 1
+se αt,s
+for large s, because the arguments for the error function w 0 and w 00 escape
+to positive inﬁnity in both cases (NUM and DEN) so that their ratio goes to
+1. The argument for the exponential function is
+α t,s = −
+k 0
+mj
++
+k 00 t 2
+m
+and, for s → ∞, goes to
+α t =
+1
+2
+T
+−2 (2t 3 − 3t 2 + 4t − 5)
+Notice that, for t → ∞, α t goes to 0 and
+EX =
+n
+EX 12 + n
+→
+2
+3
+in accordance with intuition T2.
+We now have a formula for the powerset approach corresponding to the for-
+mula for the maxent approach, giving us q 3 dependent on t. Notice that this
+formula is for t = 2, 3, 4, . . .. For t = 1 use the Chu-Vandermonde identity to
+ﬁnd that
+EX 12 = (t + 1)
+P
+s
+i=1
+i  ts
+i
+ ts
+ti
+
+P
+s
+i=0
+ ts
+i
+ ts
+ti
+
+= (t + 1)
+s
+2
+and consequently EX = 1/2, as one would expect. For t = 1/2, 1/3, 1/4, . . .
+we can simply reverse the roles of A 1 and A 2 . These results give us G pws and
+a graph of the normalized odds vector (see ﬁgure 4), a bit bumpy around the
+middle because the t-values are discrete and farther apart in the middle, as
+t = q/(1 − q). Comparing the graphs of the normalized odds vector under
+Grove and Halpern’s uniformity approach (G ind ), Jaynes’ maxent approach
+(G max ), and the powerset approach suggested in this paper (G pws ), it is clear
+that the powerset approach supports maxent .
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.0 0.2 0.4 0.6 0.8 1.0
+q 1
+q 2
+q 3
+Figure 4: Judy Benjamin’s posterior probabil-
+ity assignment according to the powerset ap-
+proach. 0 < q < 1 forms the horizontal axis,
+the vertical axis shows the posterior probabil-
+ity distribution (or the normalized odds vec-
+tor) (q 1 , q 2 , q 3 ). The vertical line at q = 0.75
+shows the speciﬁc posterior probability distri-
+bution G pws for the Judy Benjamin problem.
+Going through the calculations, it seems at many places that the powerset
+approach should give its support to Grove and Halpern’s uniformity approach
+in keeping with intuition T1. It was unexpected to ﬁnd out that in the math-
+ematical analysis α t,s converges to a non-trivial factor and did not tend to
+negative or positive inﬁnity, enabling a graph of the normalized odds vec-
+tor that was not of the simple nature of the graph suggested by Grove and
+Halpern. Most surprisingly, the powerset approach, prima facie unrelated to
+an approach using information, supports the idea that a set of events about
+which nothing is known (such as A 3 ) gains in probability in the posterior
+probability distribution compared to the set of events about which some-
+thing is known (such as A 1 and A 2 ), even if it is only partial information.
+Unless independence is speciﬁed, as in Sarah and sundowners at the Westcliﬀ,
+the area of ignorance gains compared to the area of knowledge.
+5. References
+Cover, T. and Thomas, J., 2006. Elements of Information Theory, volume 6.
+Wiley, Hoboken, NJ.
+Csisz´ar, I., 1967.   Information-Type Measures of Diﬀerence of Probability
+Distributions and Indirect Observations.  Studia Scientiarum Mathemati-
+carum Hungarica, 2:299–318.
+Douven, I. and Romeijn, J., 2009. A New Resolution of the Judy Benjamin
+Problem. CPNSS Working Paper, 5(7):1–22.
+Grove, A. and Halpern, J., 1997. Probability Update: Conditioning Vs. Cross-
+Entropy.  In Proceedings of the Thirteenth Conference on Uncertainty in
+Artiﬁcial Intelligence. Citeseer, Providence, Rhode Island.
+Hobson, A., 1971.  Concepts in Statistical Mechanics.  Gordon and Beach,
+New York, NY.
+Jaynes, E. and Bretthorst, G., 1998. Probability Theory: the Logic of Science.
+Cambridge University Press, Cambridge, UK.
+Jeﬀrey, R., 1965. The Logic of Decision. McGraw-Hill, New York, NY.
+Shore, J. and Johnson, R., 1980.  Axiomatic Derivation of the Principle of
+Maximum Entropy and the Principle of Minimum Cross-Entropy.  IEEE
+Transactions on Information Theory, 26(1):26–37.
+Uﬃnk, J., 1996.  The Constraint Rule of the Maximum Entropy Principle.
+Studies In History and Philosophy of Science Part B: Studies In History
+and Philosophy of Modern Physics, 27(1):47–79.
+Van Fraassen, B., 1981.  A Problem for Relative Information Minimizers in
+Probability Kinematics. The British Journal for the Philosophy of Science,
+32(4):375–379.
+Van Fraassen, B.; Hughes, R.; and Harman, G., 1986. A Problem for Relative
+Information Minimizers, Continued.  The British Journal for the Philoso-
+phy of Science, 37(4):453–463.

@@ -1,0 +1,836 @@
+\documentclass[11pt]{article}
+\usepackage{october}
+\hyphenation{Hal-pern}
+
+% This article http://tinyurl.com/ly2szc6
+% Wagner's article http://tinyurl.com/pgaflyw 
+
+\begin{document}
+% \raggedright
+% \onehalfspacing
+
+\title{A Natural Generalization of Jeffrey Conditioning}
+% Conditioning on Conditonals ?
+\author{Stefan Lukits}
+
+\date{}
+
+\maketitle
+
+% \doublespacing
+
+\begin{abstract} 
+  {\noindent}When we come to know a conditional, we cannot
+  straightforwardly apply Jeffrey conditioning to gain an updated
+  probability distribution. Carl Wagner has proposed a natural
+  generalization of Jeffrey conditioning to accommodate this case. The
+  generalization rests on an ad hoc but plausible intuition. Wagner
+  shows how the principle of maximum entropy disagrees with this
+  intuition, thus casting further doubt on the principle of maximum
+  entropy as a generally valid updating mechanism that generalizes
+  Jeffrey conditioning. This article demonstrates that Wagner's
+  application of the principle of maximum entropy is incorrect and
+  that a correct application agrees with his intuition. It presents a
+  formal proof that the principle of maximum entropy seamlessly and
+  elegantly generalizes not only standard conditioning and Jeffrey
+  conditioning (as is well-documented in the literature) but also
+  Wagner's generalization.
+\end{abstract}
+
+\section{Introduction}
+\label{Introduction}
+
+There are problems of probability update which cannot be addressed
+effectively by means of standard conditioning or Jeffrey conditioning.
+Usually, the evidence (or observation, or new information) arises in
+the form of an event (standard conditioning) or the redistribution of
+probabilities over a complete partition of events (Jeffrey
+conditioning). Sometimes the evidence arises in the form of a
+constraint which falls into neither of the above categories. Bas van
+Fraassen's \emph{Judy Benjamin} problem and E.T. Jaynes'
+\emph{Brandeis Dice} problem are two examples. Jaynes has suggested
+the principle of maximum entropy (we will from now on call the
+principle of maximum entropy \textsc{maxent}) to solve these cases.
+The idea is to update a prior probability distribution, given a
+constraint, by finding a posterior probability distribution which
+fulfills the constraint and is information-theoretically speaking as
+close as possible to the prior probability distribution.
+
+Note that the word \qnull{prior} is used comparatively and refers to a
+probability distribution which precedes a piece of new information and
+therefore the posterior probability distribution; it is not used
+superlatively and does not refer to a probability distribution which
+precedes any information at all. We are concerned with what Richard
+Jeffrey terms \qnull{probability kinematics,} the rules or guidelines
+when moving from a given probability distribution to a posterior
+probability distribution in the wake of new information.
+
+While \textsc{maxent} initially attracted attention and was confirmed
+especially by the work of Shore and Johnston (\textsc{maxent} uniquely
+solves probability update problems provided one signs on to relatively
+intuitive axioms, see \scite{7}{shorejohnson80}{}), there were vexing
+counterexamples. Although there is formal proof that \textsc{maxent}
+generalizes standard conditioning and Jeffrey conditioning, there are
+problems where standard conditioning and Jeffrey conditioning do not
+apply.
+
+The consensus emerged in the 1980s that \textsc{maxent} was a helpful
+algorithm, but not a generally valid rule of probability update. There
+are dissenting voices to this day, mostly among statistical
+physicists, but the consensus has been strong enough to be
+incorporated in important textbooks.
+
+\begin{itemize}
+\item Brian Skyrms states, \qeins{\textsc{maxent} is not a generally
+    valid updating rule} \scite{2}{skyrms87updating}{237}, based
+  primarily on the counterexample provided by Abner Shimony (for
+  example in \scite{7}{friedmanshimony71}{},
+  \scite{7}{diasshimony81}{}, and \scite{7}{shimony85}{}). Skyrms
+  makes this view known in several articles (see also
+  \scite{7}{skyrms85}{} and \scite{7}{skyrms87dynamic}{}). In his
+  textbook \emph{The Dynamics of Rational Deliberation}
+  (\scite{10}{skyrms90}{}), there is a section on probability
+  kinematics, but no reference to \textsc{maxent}.
+\item Joseph Halpern argues in his textbook \emph{Reasoning About
+    Uncertainty} (\scite{10}{halpern03}{}) that \textsc{maxent} is a
+  promising candidate which delivers unique updated probability
+  distributions, but there is counterintuitive behaviour in one
+  specific case, the \emph{Judy Benjamin} case (see \scite{8}{halpern03}{110,
+    119}). Therefore, \textsc{maxent} is a valuable tool that should
+  be used with care and not be applied across the board (see
+  \scite{8}{grovehalpern97}{110}).
+\item In his textbook about ranking functions, called \emph{The Laws
+    of Belief} (\scite{10}{spohn12}{}), Wolfgang Spohn admiringly
+  refers to Wagner's \qeins{generalization of Jeffrey
+    conditionalization} \scite{2}{spohn12}{41} and shows how well it
+  accords with his own conditions for the dynamics of belief in terms
+  of ranking functions (see \scite{8}{spohn12}{196ff}). Spohn cites
+  Jeffrey's \emph{Linguist} problem at length and points out that
+  \textsc{maxent}, another generalization of Jeffrey conditioning, is
+  not compatible with Wagner's (and, we are led to conclude, also not
+  compatible with Spohn's theory of ranking functions).
+\end{itemize}
+
+We will consider the above three counterexamples to be the main
+arguments against \textsc{maxent} in practice (there are also more
+theoretical objections, such as Skyrms' claim that \textsc{maxent} is
+not an inductive rule but rather a rule for supposing; or the widely
+shared anti-Bayesian view, for example by Spohn and Halpern, that
+numerical probabilities are even formally not always the most helpful
+way to represent beliefs; or alleged incompatibilities between
+epistemic entrenchment and \textsc{maxent}---all of these would need
+to be addressed for a more systematic defence of \textsc{maxent}
+against its competitors). Here is a fourth example from a textbook,
+however, which underlines the influence that the three counterexamples
+above have had in the literature. 
+
+\begin{itemize}
+\item Without citing or engaging any one of them, David MacKay writes
+  in his textbook \emph{Information Theory, Inference, and Learning
+    Algorithms} (\scite{10}{mackay03}{}), \qeins{Maximum entropy is
+    also sometimes proposed as a method for solving inference problems
+    [\ldots] I think it is a bad idea to use maximum entropy in this
+    way; it can give very silly answers} \scite{2}{mackay03}{308}.
+\end{itemize}
+
+Against the tide of scholarly consensus, I maintain that
+\textsc{maxent} is defensible across all counterexamples and survives
+as a unifying normative principle in probability update based on a
+very simple intuition: that one should not illegitimately gain
+information where the evidence does not provide it, and one should not
+refuse to incorporate available information in updated beliefs. Bayes'
+theorem works because it conforms to \textsc{maxent}, not vice versa.
+% Recent work with respect to van Fraassen's counterexample (\emph{Judy
+%   Benjamin}) and Shimony's counterexample (about a Lagrangian
+% parameter) supports this position.
+I have set myself the task of responding to Wagner's
+\emph{Linguist} counterexample in this paper as part of a
+systematic effort to revive interest among philosophers in
+\textsc{maxent} as an objective updating method.
+
+Wagner's counterexample is in many ways the easiest counterexample to
+respond to, as it is based on some fundamental misunderstandings and
+as \textsc{maxent} provides an elegant solution if
+properly applied. As such a response is not available in the
+literature, however, it is worth spelling out here, especially in view
+of the fact that Wagner's counterexample is used in textbooks to
+support the scholarly consensus that \textsc{maxent}
+is not a generally valid updating rule.
+
+\section{Wagner's Natural Generalization of Jeffrey Conditioning}
+\label{NatGen}
+
+Wagner claims that he has found a relatively common case of
+probability update in which \textsc{maxent} delivers the wrong result
+so that we must develop an ad hoc generalization of Jeffrey
+conditioning. This is best explained by example. Wagner refers to
+Richard Jeffrey's \emph{Linguist} problem (see
+\scite{7}{jeffrey90}{}).
+
+% Wagner's argument helps us to discriminate between advocacy of
+% \qnull{full employment} (for the term \qnull{full employment} see
+% \scite{8}{lukits13}{7}) and advocates of objective updating methods in
+% probability kinematics. The former does not believe that statistical
+% practice can be unified. It takes the genius of the practitioner to
+% address the various ways in which probability according with
+% intuitions and rational norms is tracked down. This compares to the
+% genius of the scientist, who tracks down scientific truths about the
+% world.
+
+% The latter cherishes no illusions about tracking down frequencies in
+% the world. It seeks to determine the current state of knowledge and
+% ignorance, the degrees of certainty and uncertainty. Probability
+% distributions represent ignorance and inevitable prior assumptions as
+% much as they represent data and observations.
+
+% Wagner's claim of having naturally generalized Jeffrey conditioning,
+% clearly meant to support full employment claims, involves observation
+% of conditionals. 
+
+\begin{quotex}
+  You encounter the native of a certain foreign country and wonder
+  whether he is a Catholic northerner ($\theta_{1}$), a Catholic
+  southerner ($\theta_{2}$), a Protestant northerner ($\theta_{3}$),
+  or a Protestant southerner ($\theta_{4}$). Your prior probability
+  $p$ over these possibilities (based, say, on population statistics
+  and the judgment that it is reasonable to regard this individual as
+  a random representative of his country) is given by
+  $p(\theta_{1})=0.2,p(\theta_{2})=0.3,p(\theta_{3})=0.4,\mbox{ and
+  }p(\theta_{4})=0.1$. The individual now utters a phrase in his
+  native tongue which, due to the aural similarity of the phrases in
+  question, might be a traditional Catholic piety ($\omega_{1}$), an
+  epithet uncomplimentary to Protestants ($\omega_{2}$), an innocuous
+  southern regionalism ($\omega_{3}$), or a slang expression used
+  throughout the country in question ($\omega_{4}$). After reflecting
+  on the matter you assign subjective probabilities
+  $u(\omega_{1})=0.4,u(\omega_{2})=0.3,u(\omega_{3})=0.2,\mbox{ and
+  }u(\omega_{4})=0.1$ to these alternatives. In the light of this new
+  evidence how should you revise $p$? (see \scite{8}{wagner92}{252}
+  and \scite{8}{spohn12}{197})
+\end{quotex}
+
+Let $\Theta=\{\theta_{i}:i=1,\ldots,4\},\Omega=\{\omega_{i}:i=1,\ldots,4\}$.
+Let $\Gamma:\Omega\rightarrow{}2^{\Theta}-\{\emptyset\}$ be the function
+which maps $\omega$ to $\Gamma(\omega)$, the narrowest event in
+$\Theta$ entailed by the outcome $\omega\in\Omega$. Here are two
+definitions that take advantage of the apparatus established by Arthur
+Dempster (see \scite{7}{dempster67}{}). We will need $m$ and $b$ to
+articulate Wagner's ad hoc solution for \emph{Linguist} type problems.
+
+\begin{equation}
+  \mbox{For all }E\subseteq{}\Theta, m(E)=u(\{\omega\in\Omega:\Gamma(\omega)=E\})\label{eq:mof}.
+\end{equation}
+
+\begin{equation}
+  \mbox{For all }E\subseteq{}\Theta, b(E)=\sum_{H\subseteq{}E}m(H)=u(\{\omega\in\Omega:\Gamma(\omega)\subseteq{}E\})\label{eq:bof}.
+\end{equation}
+
+Let $Q$ be the posterior joint probability measure on
+$\Theta\times\Omega$, and $Q_{\Theta}$ the marginalization of $Q$ to
+$\Theta$, $Q_{\Omega}$ the marginalization of $Q$ to $\Omega$ (often,
+we will write lower case $p$ or $q$ for the marginal probabilities
+without spelling out the margin to which they refer; we will write
+upper case $P$ and $Q$ for the joint probabilities). Wagner plausibly
+suggests that $Q$ is compatible with $u$ and $\Gamma$ if and only if
+
+\begin{equation}
+  \label{eq:entail}
+  \mbox{for all }\theta\in\Theta\mbox{ and for all
+  }\omega\in\Omega,\theta\notin\Gamma(\omega)\mbox{ implies that }Q(\theta,\omega)=0
+\end{equation}
+
+and
+
+\begin{equation}
+  \label{eq:marg}
+  Q_{\Omega}=u.
+\end{equation}
+
+The two conditions (\ref{eq:entail}) and (\ref{eq:marg}), however, are
+not sufficient to identify a \qeins{uniquely acceptable revision of a
+  prior} \scite{2}{wagner92}{250}. Wagner's proposal includes a third
+condition, which extends Jeffrey's rule to the situation at hand. To
+articulate the condition, we need an additional formal apparatus. For
+all $E\subseteq{}\Theta$, let
+$E_{\bigstar}=\{\omega\in\Omega:\Gamma(\omega)=E\}$, so that
+$m(E)=u(E_{\bigstar})$. For all $A\subseteq\Theta$ and all
+$B\subseteq\Omega$, let $\mbox{``A''}=A\times\Omega$ and
+$\mbox{``B''}=\Theta\times{}B$, so that
+$Q(\mbox{``A''})=Q_{\Theta}(A)$ for all $A\subseteq\Theta$ and
+$Q(\mbox{``B''})=Q_{\Omega}(B)$ for all $B\subseteq\Omega$. Let also
+$\mathcal{E}=\{E\subseteq\Theta:m(E)>0\}$ be the family of evidentiary
+focal elements.
+
+According to Wagner only those $Q$ satisfying the condition
+
+\begin{equation}
+  \label{eq:wagn}
+  \mbox{for all }A\subseteq\Theta\mbox{ and for all }E\in\mathcal{E},Q(\mbox{``A''}|\mbox{``E$_{\bigstar}$''})=p(A|E)
+\end{equation}
+
+are eligible candidates for updated joint probabilities in
+\emph{Linguist} type problems. Other joint probability distributions
+would use information not provided in the problem or discount
+information that is provided in the problem (especially the
+conditionals). To adopt (\ref{eq:wagn}), says Wagner, is to make sure
+that the total impact of the occurrence of the event $E_{\bigstar}$ is
+to preclude the occurrence of any outcome $\theta\notin{}E$, and that,
+within $E$, $p$ remains operative in the assessment of relative
+uncertainties (see \scite{8}{wagner92}{250}). While conditions
+(\ref{eq:entail}), (\ref{eq:marg}) and (\ref{eq:wagn}) may admit an
+infinite number of joint probability distributions on
+$\Theta\times\Omega$, their marginalizations to $\Theta$ are identical
+and give us the desired posterior probability, expressible by the
+formula
+
+\begin{equation}
+  \label{eq:qofa}
+  q(A)=\sum_{E\in\mathcal{E}}m(E)p(A|E).
+\end{equation}
+
+So far we are in agreement with Wagner, although we are surprised
+about these contortions when a Bayesian approach, combined with
+\textsc{maxent}, gives us exactly the same results. Wagner's paper is
+a paradigmatic example for the \qnull{anti-Bayesian ad hockeries}
+addressed in E.T. Jaynes' diatribe (see \scite{8}{jaynes98}{143}). In
+Wagner's case, however, the motivation of the anti-Bayesian (over
+which Jaynes despairs) is on the surface: Wagner is mistaken about the
+correct application of \textsc{maxent}, and so he considers the ad
+hockery necessary to come to an acceptable result, which his incorrect
+application of \textsc{maxent} clearly does not provide.
+
+When Wagner considers \textsc{maxent} towards the end
+of his article, his verdict is scathing. 
+
+\begin{quotex}
+  Students of maximum entropy approaches to probability revision may
+  [\ldots] wonder if the probability measure defined by our formula
+  (\ref{eq:qofa}) similarly minimizes [the Kullback-Leibler
+  information number] $D_{\textsc{kl}}(q,p)$ over all probability
+  measures $q$ bounded below by $b$. The answer is negative [\ldots]
+  convinced by Skyrms, among others, that \textsc{maxent} is not a
+  tenable updating rule, we are undisturbed by this fact. Indeed, we
+  take it as additional evidence against \textsc{maxent} that
+  (\ref{eq:qofa}), firmly grounded on [\ldots] a considered judgment
+  that (\ref{eq:wagn}) holds, might violate \textsc{maxent} [\ldots]
+  the fact that Jeffrey's rule coincides with \textsc{maxent} is
+  simply a misleading fluke, put in its proper perspective by the
+  natural generalization of Jeffrey conditioning described in
+  this paper. [References to formulas and notation modified.]
+  \scite{3}{wagner92}{255}
+\end{quotex}
+
+Here is what we will do to demonstrate that Wagner's conclusions are
+off-target. First, we will focus on \emph{Linguist} and show that
+Wagner's solution is plausible. Then we will introduce what Wagner
+considers to be the solution of \textsc{maxent} for this problem and
+show, in much greater detail than Wagner does, why this result is
+implausible. Next, we will uncover the fundamental mistake that Wagner
+makes in his application of \textsc{maxent}. In summary, Wagner
+forgets that advocates of \textsc{maxent} are Bayesians and do not buy
+into Wagner's apparently non-Bayesian convictions. Non-Bayesian
+assumptions and \textsc{maxent} result in counterintuitive
+conclusions. Once the non-Bayesian assumptions are replaced by
+Bayesian assumptions (for example, that probabilities represent the
+uncertainty of those who hold them and not objective probabilities out
+there in the world), not only do the conclusions become plausible,
+they also (luckily for Wagner and, by extension, for Spohn's theory of
+ranking functions) agree with Wagner's solution. Hence, the patchwork
+solution is unnecessary and only provides intuitive support for
+\textsc{maxent}. We will top off our considerations with a more
+general theorem which seamlessly incorporates Wagner's \qeins{natural
+  generalization of Jeffrey conditionalization}
+\scite{2}{wagner92}{250} into \textsc{maxent} orthodoxy.
+
+\section{The Linguist}
+\label{TheLinguist}
+
+According to Wagner (thus the index $w$ in $P_{w}$), the prior
+probabilities for \emph{Linguist} are as follows:
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|r|r|}\hline
+  $P_{w}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $P_{\Theta}$ \\ \hline
+$\theta_{1}$ & ? & ? & ? & ? & 0.20 \\ \hline
+$\theta_{2}$ & ? & ? & ? & ? & 0.30 \\ \hline
+$\theta_{3}$ & ? & ? & ? & ? & 0.40 \\ \hline
+$\theta_{4}$ & ? & ? & ? & ? & 0.10 \\ \hline
+$P_{\Omega}$ & 0.40 & 0.30 & 0.20 & 0.10 & 1.00\\ \hline
+\end{tabular}
+
+\medskip
+
+In Wagner's diction, we are not possessed of the joint probability
+measure $P$ on $\Theta\times\Omega$, only of the marginal
+probabilities. This betrays Wagner's non-Bayesian convictions. A
+Bayesian would determine these probabilities as representations of
+prior assumptions or lack of information. Even though many Bayesians
+think that they are not objectively determined, they never leave prior
+probabilities unspecified as if it were a matter of epistemological
+access to objective probabilities to specify them. Much more about
+this later. Wagner's posterior probabilities $Q_{w}$ (in contrast to
+\textsc{maxent}'s posterior probabilities $Q_{m}$ later on) for
+\emph{Linguist} are as follows:
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|r|r|}\hline
+  $Q_{w}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $Q_{\Theta}$ \\ \hline
+$\theta_{1}$ & ? & ? & 0.00 & ? & 0.30 \\ \hline
+$\theta_{2}$ & ? & ? & ? & ? & 0.60 \\ \hline
+$\theta_{3}$ & 0.00 & 0.00 & 0.00 & 0.04 & 0.04 \\ \hline
+$\theta_{4}$ & 0.00 & 0.00 & ? & ? & 0.06 \\ \hline
+$Q_{\Omega}$ & 0.40 & 0.30 & 0.20 & 0.10 & 1.00\\ \hline
+\end{tabular}
+
+\medskip
+
+(\ref{eq:entail}) dictates the zero joint probabilities,
+(\ref{eq:marg}) dictates the marginal probabilities in the last
+row, and (\ref{eq:qofa}) dictates the marginal probabilities in
+the last column. The posterior probability that the native
+encountered by the linguist is a northerner, for example, is 34\%.
+
+To solve this problem from the perspective of \textsc{maxent},
+Wagner assumes that the constraint is that $b$ must act as a lower
+bound for the posterior probability. Consider
+$E_{12}=\{\theta_{1}\vee\theta_{2}\}$. Because both $\omega_{1}$
+and $\omega_{2}$ entail $E_{12}$, according to (\ref{eq:bof}),
+$b(E_{12})=0.70$. It makes sense to consider it a constraint that
+the posterior probability for $E_{12}$ must be at least
+$b(E_{12})$. In keeping with the idea of \textsc{maxent}, we
+choose from all probability distributions fulfilling the
+constraint the one which is information-theoretically closest to
+the prior probability distribution. 
+
+Wagner applies this idea to the marginal probability distribution on
+$\Theta$. He does not provide the numbers, but refers to other
+examples where $b$ is already a lower bound for the prior probability
+distribution to make his point that \textsc{maxent} does not generally
+agree with his solution. To aid the discussion, I want to make
+Wagner's claims more concrete. Using proposition 1.29 in Dimitri
+Bertsekas' book \emph{Constrained Optimization and Lagrange Multiplier
+  Methods} (see \scite{8}{bertsekas82}{71}) and some non-trivial
+calculations, the \textsc{maxent} solution for \emph{Linguist},
+given Wagner's assumptions (indexed $Q_{w/m}$) is
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|r|r|}\hline
+  $Q_{w/m}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $Q_{\Theta}$ \\ \hline
+$\theta_{1}$ & ? & ? & 0.00 & ? & 0.30 \\ \hline
+$\theta_{2}$ & ? & ? & ? & ? & 0.45 \\ \hline
+$\theta_{3}$ & 0.00 & 0.00 & 0.00 & 0.10 & 0.10 \\ \hline
+$\theta_{4}$ & 0.00 & 0.00 & ? & ? & 0.15 \\ \hline
+$Q_{\Omega}$ & 0.40 & 0.30 & 0.20 & 0.10 & 1.00\\ \hline
+\end{tabular}
+
+\medskip
+
+$D_{\textsc{kl}}(Q_{w/m},P)\approx{}0.0823$ is indeed significantly
+smaller than $D_{\textsc{kl}}(Q_{w},P)\approx{}0.4148$. In both cases,
+$Q_{w/m}$ and $Q_{w}$ are first marginalized to $\Theta$ in order to
+calculate the Kullback-Leibler Divergence
+
+\begin{equation}
+  \label{eq:kl}
+  D_{\textsc{kl}}(q,p)=\sum_{i=1}^{4}q(\theta_{i})\log_{2}\frac{q(\theta_{i})}{p(\theta_{i})}.
+\end{equation}
+
+From the perspective of a \textsc{maxent} advocate, there are only
+two explanations for this difference in cross-entropy. Either
+Wagner's solution illegitimately uses information not contained in
+the problem, or Wagner's \textsc{maxent} solution has failed to
+include information contained in the problem. I will radically
+simplify \emph{Linguist} in order to show that the latter is
+the case. 
+
+Imagine the native is either Protestant or Catholic (50:50).
+Further imagine that the utterance of the native either entails
+that the native is a Protestant (60\%) or provides no information
+about the religious affiliation of the native (40\%). Using
+(\ref{eq:qofa}), the posterior probability distribution is 80:20
+(Wagner's solution). Using $b$ as a lower bound and
+\textsc{maxent}, Wagner's \textsc{maxent} solution for this
+radically simplified problem is 60:40, clearly a more entropic
+solution than Wagner's. The problem, of course, is that 
+Wagner's \textsc{maxent} solution is both counter-intuitive and
+false. It is our task to find out why Wagner's interpretation of
+how \textsc{maxent} should proceed is misguided.
+
+Wagner's core mistake is that for a Bayesian, the prior joint
+probability distribution on $\Theta\times\Omega$ is not left
+unspecified. It represents the subjective priors or the lack of
+information on part of the agent who holds these probabilities.
+Whether it is the former or the latter is a matter of considerable
+debate among \qnull{subjectivist} and \qnull{objectivist} Bayesians
+(for example, Bruno de Finetti and E.T. Jaynes), both of which,
+confusingly, are adherents of interpreting probabilities as subjective
+probabilities. 
+
+This debate aside, all Bayesians agree that well-defined events have
+prior probabilities. Advocates of \textsc{maxent}, who form a strict
+subset of the set of all Bayesians, do not only believe (as Bayesians
+do and non-Bayesians do not) that the prior joint probability
+distribution is numerically populated in accordance with basic
+probability axioms; they also believe that the prior joint probability
+distribution is numerically populated with the probabilities that have
+the highest entropy compatible with the available information (in our
+case, the marginal probability distributions).
+
+\begin{quotex}
+  Bayes theorem requires that $P(\theta,\omega)$ be defined and that
+  assertions such as \qzwei{$\theta$ \emph{and} $\omega$} be
+  meaningful; the relevant space is neither $\Theta$ nor $\Omega$ but
+  the product $\Theta\times\Omega$ [notation modified]
+  \scite{3}{catichagiffin06}{9}
+\end{quotex}
+
+Advocates of \textsc{maxent}, who are objectivist Bayesians, think
+that determining these probabilities is not solely a matter of
+consistency with probability axioms. If the marginal probabilities are
+available, then the joint distribution is equal to the product of the
+marginal distributions
+
+\begin{equation}
+  \label{eq:prod}
+P(\theta_{i},\omega_{j})=p(\theta_{i})p(\omega_{j})\mbox{ for all
+}i=1,\ldots,n\mbox{ and }j=1,\ldots,m
+\end{equation}
+
+to achieve maximum entropy (for a proof, see exercise 12.4 in
+\scite{8}{coverthomas06}{421}).
+
+Therefore, the prior probability table for \emph{Linguist}, from a
+\textsc{maxent} Bayesian's perspective, looks as follows:
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|r|r|}\hline
+  $P_{m}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $Q_{\Theta}$ \\ \hline
+$\theta_{1}$ & 0.08 & 0.06 & 0.04 & 0.02 & 0.20 \\ \hline
+$\theta_{2}$ & 0.12 & 0.09 & 0.06 & 0.03 & 0.30 \\ \hline
+$\theta_{3}$ & 0.16 & 0.12 & 0.08 & 0.04 & 0.40 \\ \hline
+$\theta_{4}$ & 0.04 & 0.03 & 0.02 & 0.01 & 0.10 \\ \hline
+$Q_{\Omega}$ & 0.40 & 0.30 & 0.20 & 0.10 & 1.00\\ \hline
+\end{tabular}
+
+\medskip
+
+Given the constraints (\ref{eq:entail}) and (\ref{eq:marg}) and a
+formal result provided in the next section, the \textsc{maxent}
+solution minimizing the cross-entropy to this prior probability
+distribution is
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|r|r|}\hline
+  $Q_{m}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $Q_{\Theta}$ \\ \hline
+$\theta_{1}$ & 0.16 & 0.12 & 0.00 & 0.02 & 0.30 \\ \hline
+$\theta_{2}$ & 0.24 & 0.18 & 0.15 & 0.03 & 0.60 \\ \hline
+$\theta_{3}$ & 0.00 & 0.00 & 0.00 & 0.04 & 0.04 \\ \hline
+$\theta_{4}$ & 0.00 & 0.00 & 0.05 & 0.01 & 0.06 \\ \hline
+$Q_{\Omega}$ & 0.40 & 0.30 & 0.20 & 0.10 & 1.00\\ \hline
+\end{tabular}
+
+\medskip
+
+$Q_{m}$ agrees with $Q_{w}$ in the marginalization to $\Theta$ (the
+last column). Consequently, \textsc{maxent} delivers a reasonable
+solution conforming to the ad hoc intuitive condition imposed by
+Wagner. The solution that Wagner foists on \textsc{maxent} is simply a
+victim of coarsening at random (see \scite{7}{gruenwaldhalpern03}{},
+who show how coarsening at random is responsible for misguided
+intuitions in the \emph{Monty Hall} and the \emph{Three Prisoners}
+problem). Just as the misguided interpretation of the \emph{Monty
+  Hall} problem operates on a coarsening of the event space, Wagner's
+\textsc{maxent} solution operates on a coarsening of the event space,
+which then fails to process the totality of the information provided
+in the wording of the problem. Wagner's \textsc{maxent} solution uses
+a probability distribution that is unnecessarily coarse---a more
+finely grained prior probability distribution delivers the right
+results.
+
+The calculations for \emph{Linguist} are awkward, because the
+$4\times{}4$ joint probability matrix is too large to deal with on the
+back of a napkin (and handling constraints on upper and lower
+probabilities using Wagner's faulty assumptions is much more
+complicated than handling constraints on joint probability
+distributions as shown in the next section) . Using my simplified
+linguist problem above (where we only need to attend to a $2\times{}2$
+matrix) makes the point just as beautifully, and again the
+\textsc{maxent} solution concurs both with Wagner's condition and with
+our intuitions: the posterior probability that the native is a
+Protestant is 80\% versus a 20\% probability that he or she is a
+Catholic.
+
+\section{MAXENT is the Natural Generalization of Jeffrey Conditioning}
+\label{maxjeff}
+
+We will show, using Lagrange multipliers, that \textsc{maxent}
+conforms to the intuition voiced by Wagner that the prior probability
+distribution remains operative in the assessment of relative
+uncertainties with respect to the consequents of observed
+conditionals. Wagner denies that \textsc{maxent} conforms to this
+intuition, thus disparaging \textsc{maxent}, but we have shown in the
+previous section that Wagner's judgment relies on an interpretation of
+\textsc{maxent} in terms of non-Bayesian assumptions, which is
+nonsensical as \textsc{maxent} is a more specific version of
+Baysianism.
+
+We will show that \textsc{maxent} conforms to the intuitions behind
+standard conditioning; then that it conforms to the intuitions behind
+Jeffrey conditioning; and finally that it conforms to Wagner's ad hoc
+\qnull{natural generalization of Jeffrey conditioning.} Throughout, to
+make formalities comprehensible for non-mathematical folk, we will
+refer to finite (and therefore discrete) probability distributions.
+For countable and continuous probability distributions, the reasoning
+is largely analogous (for a mathematically rigorous introduction to
+continuous entropy see \scite{8}{guiasu77}{16ff}; for an example of
+how to do a proof of this section for continuous probability densities
+see \scite{8}{catichagiffin06}{11}; for a proof that the stationary
+points of the Lagrange function are indeed the desired extrema see
+\scite{8}{zubarev96}{55} and \scite{8}{coverthomas06}{410}; for the
+pioneer of the method applied in this section see
+\scite{8}{jaynes79}{241ff}).
+
+\medskip
+
+{\noindent}\emph{Standard Conditioning}
+
+\medskip
+
+{\noindent}Let $y_{i}$ (all $y_{i}\neq{}0$) be a finite prior
+probability distribution summing to $1$, $i\in{}I$. Let $x_{i}$ be the
+posterior probability distribution derived from standard conditioning
+with $x_{i}=0$ for all $i\in{}I'$ and $x_{i}\neq{}0$ for all
+$i\in{}I''$, $I'\cup{}I''=I$. $I'$ and $I''$ specify the standard
+event observation. Standard conditioning requires that
+
+\begin{equation}
+  \label{eq:sc}
+  x_{i}=\frac{y_{i}}{\sum_{k\in{}I''}y_{k}}.
+\end{equation}
+
+To solve this problem using \textsc{maxent}, we want to minimize the
+cross-entropy with the constraint that the non-zero $x_{i}$ sum to
+$1$. The Lagrange function is (writing in vector form
+$x=(x_{i})_{i\in{}I''}$)
+
+\begin{equation}
+  \label{eq:sclag}
+  \Lambda(x,\lambda)=\sum_{i\in{}I''}x_{i}\ln\frac{x_{i}}{y_{i}}+\lambda\left(1-\sum_{i\in{}I''}x_{i}\right).
+\end{equation}
+
+Differentiating the Lagrange function with respect to $x_{i}$ and
+setting the result to zero gives us
+
+\begin{equation}
+  \label{eq:sc1}
+  x_{i}=y_{i}e^{\lambda-1}
+\end{equation}
+
+with $\lambda$ normalized to
+
+\begin{equation}
+  \label{eq:sc2}
+  \lambda=-1+\ln{}\sum_{i\in{}I''}y_{i}.
+\end{equation}
+
+(\ref{eq:sc}) follows immediately. \textsc{maxent} and standard
+conditioning are consistent with each other.
+
+\medskip
+
+{\noindent}\emph{Jeffrey Conditioning}
+
+\medskip
+
+{\noindent}Let $\theta_{i},i=1,\ldots,n$ and
+$\omega_{j},j=1,\ldots,m$ be finite partitions of the event space with
+the joint prior probability matrix $(y_{ij})$ (all $y_{ij}\neq{}0$).
+Let $x_{ij}$ be the posterior probability distribution derived from
+Jeffrey conditioning with 
+
+\begin{equation}
+  \label{eq:jc1}
+  \sum_{i=1}^{n}x_{ij}=\alpha_{j}\mbox{ for all }j=1,\ldots,m
+\end{equation}
+
+where the $\alpha_{j}\neq{}0, \sum\alpha_{j}=1$ are the observed
+redistribution of the marginal probability for $\omega_{j}$. Jeffrey
+conditioning requires that for all $i=1,\ldots,n$
+
+\begin{equation}
+  \label{eq:jc2}
+  q(\theta_{i})=\sum_{j=1}^{m}p(\theta_{i}|\omega_{j})q(\omega_{j})=\sum_{j=1}^{m}\frac{y_{ij}}{p(\omega_{j})}q(\omega_{j})
+\end{equation}
+
+where $p$ and $q$ are the marginal probabilities for
+$(\theta_{i})_{i=1,\ldots,n}$ and $(\omega_{j})_{j=1,\ldots,m}$, prior
+and posterior respectively (just as $P$ and $Q$ are the joint
+probabilities on $\Theta\times\Omega$), for example
+$\alpha_{j}=q(\omega_{j})$, $P(\theta_{i},\omega_{j})=y_{ij}$ and
+
+\begin{equation}
+  \label{eq:jc3}
+  q(\theta_{i})=\sum_{j=1}^{m}x_{ij}.
+\end{equation}
+
+Using \textsc{maxent} to get the posterior distribution $(x_{ij})$,
+the Lagrange function is (writing in vector form
+$\lambda=(\lambda_{1},\ldots,\lambda_{m})$ and
+$x=(x_{11},\ldots,x_{n1},\ldots,x_{nm})$)
+
+\begin{equation}
+  \label{eq:jclag}
+  \Lambda(x,\lambda)=\sum_{i=1}^{n}\sum_{j=1}^{m}x_{ij}\ln\frac{x_{ij}}{y_{ij}}+\sum_{j=1}^{m}\lambda_{j}\left(\alpha_{j}-\sum_{i=1}^{n}x_{ij}\right).
+\end{equation}
+
+Consequently,
+
+\begin{equation}
+  \label{eq:jc4}
+  x_{ij}=y_{ij}e^{\lambda_{j}-1}
+\end{equation}
+
+with the Lagrangian parameters $\lambda_{j}$ normalized by
+
+\begin{equation}
+  \label{eq:jc5}
+  \sum_{i=1}^{n}y_{ij}e^{\lambda_{j}-1}=\alpha_{j}
+\end{equation}
+
+(\ref{eq:jc2}) follows immediately. \textsc{maxent} and Jeffrey
+conditioning are consistent with each other.
+
+\medskip
+
+{\noindent}\emph{Wagner Conditioning}
+
+\medskip
+
+{\noindent}Let $\theta_{i},i=1,\ldots,n$ and
+$\omega_{j},j=1,\ldots,m$ be finite partitions of the event space. Let
+the joint prior probability matrix be $(y_{ij})$ and the joint
+posterior probability matrix be $(x_{ij})$. The elements of this
+matrix may be unknown or may have to be inferred from one's state of
+ignorance or uncertainty or may be chosen any other way according to
+basic probability axioms and your favourite interpretation of
+probability. The marginal probabilities are
+$p(\theta_{i}),p(\omega_{j}),q(\theta_{i}),q(\omega_{j})$ so that, for
+example,
+
+\begin{equation}
+  \label{eq:wc1}
+  p(\theta_{i})=\sum_{j=1}^{m}y_{ij}
+\end{equation}
+
+if the pertinent $y_{ij}$ exist. According to (\ref{eq:qofa}), Wagner
+conditioning determines the posterior marginal probability to be
+
+\begin{equation}
+  \label{eq:wc2}
+    q(\theta_{i})=\sum_{E\in\mathcal{E}}m(E)p(\theta_{i}|E)\mbox{ for
+      all }i=1,\ldots,n
+\end{equation}
+
+given the conditions in (\ref{eq:entail}) and (\ref{eq:marg}).
+(\ref{eq:entail}) means for $Q$ that depending on the observed
+conditionals there is a partition of the indices
+$\{1,\ldots,n\}\times\{1,\ldots,m\}$ into sets $K'$ and $K''$ such
+that $Q(\theta_{i},\omega_{j})=0$ (i.e.\ $x_{ij}=0$) for
+$(i,j)\in{}K'$ and $Q(\theta_{i},\omega_{j})\neq{}0$ (i.e.\
+$x_{ij}\neq{}0$) for $(i,j)\in{}K''$.
+
+We want to show that \textsc{maxent} comes to the same conclusion as
+Wagner conditioning, provided that the probability matrices
+$(y_{ij}),(x_{ij})$ are fully quantified---to which we commit
+ourselves since \textsc{maxent} only makes sense in a Bayesian
+framework. Because the matrices are fully quantified, we rewrite
+(\ref{eq:wc2}) as
+
+\begin{equation}
+  \label{eq:wc3}
+  q(\theta_{i})=p(\theta_{i})\sum_{j=1}^{m}\frac{\sum_{k=1}^{n}y_{kj}}{\sum_{r=1}^{n\circledast{}j}p(\theta_{r})}
+\end{equation}
+
+where for $j=1,\ldots,m$
+
+\begin{equation}
+  \label{eq:dast}
+  \sum_{r=1}^{n\circledast{}j}p(\theta_{r})=\sum_{r=1,(r,j)\in{}K''}^{n}p(\theta_{r})
+\end{equation}
+
+Note that for all $i,k=1,\ldots,n$ and $j=1,\ldots,m$
+
+\begin{equation}
+  \label{eq:wc4}
+  \frac{y_{ij}}{y_{kj}}=\frac{p(\theta_{i})}{p(\theta_{k})}
+\end{equation}
+
+because of (\ref{eq:prod}). The Lagrange function is, given the
+above-mentioned constraints,
+
+\begin{equation}
+  \label{eq:wclag}
+  \Lambda(x,\lambda)=\sum_{i=1}^{n}\sum_{j=1}^{m\circledast{}i}x_{ij}\ln{}x_{ij}+\sum_{j=1}^{m}\lambda_{j}\left(\sum_{i=1}^{n}y_{ij}-\sum_{i=1}^{n\circledast{}j}x_{ij}\right)
+\end{equation}
+
+Differentiating $\Lambda$ with respect to $x_{ij}$ gives us for $(i,j)\in{}K''$
+
+\begin{equation}
+  \label{eq:wc5}
+  x_{ij}=y_{ij}e^{\lambda_{j}-1}
+\end{equation}
+
+with the Lagrangian parameters $\lambda_{j}$ normalized such that
+
+\begin{equation}
+  \label{eq:wc6}
+  \mu_{j}=e^{\lambda_{j}-1}=\frac{\sum_{i=1}^{n}y_{ij}}{\sum_{i=1}^{n\circledast{}j}y_{ij}}.
+\end{equation}
+
+The $\mu_{j}$ provide a simple (and correct) way to arrive at
+\textsc{maxent} solutions for these types of problems, compared to the
+complicated (and incorrect) way in which Wagner arrives at
+\textsc{maxent} solutions. Comparing the correct \textsc{maxent}
+solution gained with the help of Lagrangian multipliers
+
+\begin{equation}
+  \label{eq:wc7}
+  q(\theta_{i})=\sum_{j=1}^{m}\mu_{j}y_{ij}
+\end{equation}
+
+to Wagner's solution in (\ref{eq:wc3}) it is clear that they agree if
+and only if
+
+\begin{equation}
+  \label{eq:wc8}
+  \frac{y_{ij}}{y_{kj}}=\frac{p(\theta_{i})}{p(\theta_{k})}
+\end{equation}
+
+which is (\ref{eq:wc4}). \textsc{maxent} and Wagner conditioning are
+consistent with each other.
+
+This could not have been any easier, given that the proofs with
+respect to standard conditioning and Jeffrey conditioning are readily
+available in the literature. \textsc{maxent}, when it is not
+adulterated by viewing probabilities as properties of the external
+world rather than representations of uncertainty in the agents who
+entertain them, seamlessly and elegantly handles the observation of
+conditionals.
+
+\section{References}
+\label{References}
+
+% \nocite{*} 
+% \bibliographystyle{stefan-2010-08-28}
+\bibliographystyle{ChicagoReedweb}
+\bibliography{bib-0861}
+
+\end{document} 
+
+% (fset 'sum
+%    [?\\ ?s ?u ?m ?\{ ?\} backspace backspace ?_ ?\{ ?\} ?^ ?\{ ?\} ?\C-h ?\C-h ?\C-h ?\C-h])

@@ -1,0 +1,78 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citeauthoryear{Caticha and Giffin}{Caticha and
+  Giffin}{2006}]{catichagiffin06}
+Caticha, A. and A.~Giffin. 2006.
+\newblock Updating Probabilities.
+\newblock In {\em MaxEnt 2006, the 26th International Workshop on Bayesian
+  Inference and Maximum Entropy Methods}.
+
+\bibitem[\protect\citeauthoryear{Cover and Thomas}{Cover and
+  Thomas}{2006}]{coverthomas06}
+Cover, T. and J.~Thomas. 2006.
+\newblock {\em Elements of Information Theory}, Volume~6.
+\newblock Hoboken, NJ: Wiley.
+
+\bibitem[\protect\citeauthoryear{Dempster}{Dempster}{1967}]{dempster67}
+Dempster, A. 1967.
+\newblock Upper and Lower Probabilities Induced by a Multivalued Mapping.
+\newblock {\em The Annals of Mathematical Statistics\/}~{\em 38\/}(2):
+  325--339.
+
+\bibitem[\protect\citeauthoryear{Friedman and Shimony}{Friedman and
+  Shimony}{1971}]{friedmanshimony71}
+Friedman, K. and A.~Shimony. 1971.
+\newblock Jaynes's Maximum Entropy Prescription and Probability Theory.
+\newblock {\em Journal of Statistical Physics\/}~{\em 3\/}(4): 381--384.
+
+\bibitem[\protect\citeauthoryear{Guia{\c{s}}u}{Guia{\c{s}}u}{1977}]{guiasu77}
+Guia{\c{s}}u, S. 1977.
+\newblock {\em Information Theory with Application}.
+\newblock New York: McGraw-Hill.
+
+\bibitem[\protect\citeauthoryear{Howson and Franklin}{Howson and
+  Franklin}{1994}]{howsonfranklin94}
+Howson, C. and A.~Franklin. 1994.
+\newblock Bayesian Conditionalization and Probability Kinematics.
+\newblock {\em The British Journal for the Philosophy of Science\/}~{\em
+  45\/}(2): 451--466.
+
+\bibitem[\protect\citeauthoryear{Jaynes}{Jaynes}{1978}]{jaynes78}
+Jaynes, E. 1978.
+\newblock Where Do We Stand on Maximum Entropy.
+\newblock In {\em The Maximum Entropy Formalism},  eds.\ R.~Levine and
+  M.~Tribus,  15--118. Cambridge, MA: MIT.
+
+\bibitem[\protect\citeauthoryear{Jeffrey}{Jeffrey}{1965}]{jeffrey65}
+Jeffrey, R. 1965.
+\newblock {\em The Logic of Decision}.
+\newblock New York, NY: Gordon and Breach.
+
+\bibitem[\protect\citeauthoryear{Majern{\'\i}k}{Majern{\'\i}k}{2000}]{majernik00}
+Majern{\'\i}k, V. 2000.
+\newblock Marginal Probability Distribution Determined by the Maximum Entropy
+  Method.
+\newblock {\em Reports on Mathematical Physics\/}~{\em 45\/}(2): 171--181.
+
+\bibitem[\protect\citeauthoryear{Spohn}{Spohn}{2012}]{spohn12}
+Spohn, W. 2012.
+\newblock {\em The Laws of Belief: Ranking Theory and Its Philosophical
+  Applications}.
+\newblock Oxford.
+
+\bibitem[\protect\citeauthoryear{Teller}{Teller}{1973}]{teller73}
+Teller, P. 1973.
+\newblock Conditionalization and Observation.
+\newblock {\em Synthese\/}~{\em 26\/}(2): 218--258.
+
+\bibitem[\protect\citeauthoryear{Wagner}{Wagner}{1992}]{wagner92}
+Wagner, C. 1992.
+\newblock Generalized Probability Kinematics.
+\newblock {\em Erkenntnis\/}~{\em 36\/}(2): 245--257.
+
+\bibitem[\protect\citeauthoryear{Wagner}{Wagner}{2002}]{wagner02}
+Wagner, C. 2002.
+\newblock Probability Kinematics and Commutativity.
+\newblock {\em Philosophy of Science\/}~{\em 69\/}(2): 266--278.
+
+\end{thebibliography}

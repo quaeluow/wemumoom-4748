@@ -1,0 +1,41 @@
+Leitgeb and Pettigrew present the following salient axioms (see
+\scite{8}{leitgebpettigrew10i}{219}):
+
+\begin{quotex}
+  \textbf{Local Normality and Dominance}: If $I$ is a legitimate
+  inaccuracy measure, then there is a strictly increasing function
+  $f:\mathbb{R}^{+}_{0}\rightarrow\mathbb{R}^{+}_{0}$ such that, for
+  any $A\in{}W$, $w\in{}W$, and $x\in\mathbb{R}^{+}_{0}$,
+  \begin{equation}
+    \label{eq:e4}
+    I(A,w,x)=f\left(|\chi_{A}(w)-x|\right).
+  \end{equation}
+\end{quotex}
+
+\begin{quotex}
+  \textbf{Global Normality and Dominance}: If $G$ is a legitimate
+  global inaccuracy measure, there is a strictly increasing function
+  $g:\mathbb{R}^{+}_{0}\rightarrow\mathbb{R}^{+}_{0}$ such that, for
+  all worlds $w$ and belief functions $b\in{}\mbox{Bel}(W)$,
+  \begin{equation}
+    \label{eq:e5}
+  G(w,b)=g\left(\|w-b_{\mbox{{\tiny glo}}}\|\right).
+  \end{equation}
+\end{quotex}
+
+Similarly to Joyce, these axioms are justified on the basis of
+geometry, but this time more explicitly so:
+
+\begin{quotex}
+  Normality and Dominance [are] a consequence of taking seriously the
+  talk of inaccuracy as \qnull{distance} from the truth, and [they
+  endorse] the geometrical picture provided by Euclidean $n$-space as
+  the correct clarification of this notion. As explained in section
+  3.2, the assumption of this geometrical picture is one of the
+  presuppositions of our account, and we do not have much to offer in
+  its defense, except for stressing that we would be equally
+  interested in studying the consequences of minimizing expected
+  inaccuracy in a non-Euclidean framework. But without a doubt,
+  starting with the Euclidean case is a natural thing to do.
+\end{quotex}
+

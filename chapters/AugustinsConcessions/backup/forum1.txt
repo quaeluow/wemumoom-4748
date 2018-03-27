@@ -1,0 +1,17 @@
+I think a conjunction of the following is sometimes true:
+
+(1) It is rational for S to believe X.
+
+(2) It is rational for S to believe Y.
+
+(3) It is not rational for S to believe X and Y.
+
+Here is an example:
+
+(1e) It is rational for me to believe that the tomato in front of me is red.
+
+(2e) It is rational for me to believe that the tomato in front of me is orange.
+
+(3e) It is not rational for me to believe that the tomato in front of me is red and that the tomato in front of me is orange.
+
+Is my reasoning sound? Are there other examples?

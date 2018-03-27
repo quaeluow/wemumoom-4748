@@ -1,0 +1,386 @@
+From sediomyle@gmail.com Thu Jun 15 05:56:33 2017
+From: "Thierry Denoeux (International Journal of Approximate Reasoning)"
+ <EviseSupport@elsevier.com>
+To: sediomyle@gmail.com
+Subject: Your manuscript, IJA_2017_81, has not been accepted
+Date: Thu, 15 Jun 2017 02:47:18 +0000
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset=utf-8
+Status: RO
+X-Status: F
+
+   Ref: IJA_2017_81
+   Title: Augustin's Concessions: A Problem for Indeterminate Credal
+   States
+   Journal: International Journal of Approximate Reasoning
+
+   Dear Dr. Lukits,
+
+   Thank you for submitting your manuscript to International Journal of
+   Approximate Reasoning. I regret to inform you that reviewers have
+   advised against publishing your manuscript, and we must therefore
+   reject it.
+
+   Please refer to the comments listed at the end of this letter for
+   details of why I reached this decision.
+
+   We appreciate your submitting your manuscript to this journal and for
+   giving us the opportunity to consider your work.
+
+   Kind regards,
+
+   Professor Thierry Denoeux
+   Editor-in-Chief
+   International Journal of Approximate Reasoning
+
+   Comments from the editors and reviewers:
+
+   -Reviewer 1
+
+   This paper argues that the attractiveness of the "imprecise credence"
+   view trades on an ambiguity between two views:
+
+   a naive view and a sophisticated view.
+
+   The naive view is attractive but untenable, the sophisticated view is
+   tenable but unattractive.
+
+   While the paper has some merits, I can't recommend it for publication
+   in IJAR for two reasons:
+
+   first, the paper needs some restructuring and some rethinking of some
+   arguments,
+
+   second, I don't think IJAR is the right venue for such a non-technical
+   philosophical paper.
+
+   Even if the editors want to overrule me on point two, the paper should
+   be rejected on the grounds of point one alone.
+
+   There is no one central argumentative flaw I want to point to in this
+   paper,
+
+   I just think it is so rife with confusions, unacknowledged rebuttals
+
+   and structural deficiencies that fixing all the problems would turn it
+   into a completely different paper.
+
+   Given all the small flaws with the argument, it isn't clear that @ can
+   argue for @'s conclusion in anything like the way @
+
+   currently does.
+
+   The author (henceforth @) does not explain why @ uses the labels
+   "Boolean" and "Laplacean".
+
+   It isn't clear that historical views of Boole and Laplace really
+   reflect the difference in opinion
+
+   @ wants to highlight.
+
+   On p.2 @ contradicts @self.
+
+   @ says first that "the agent entertains a credal state C(X)" where
+
+   C is a function from propositions to an algebra of subsets of the
+   reals.
+
+   A couple of sentences later @ claims that credal states are sets of
+   probability functions,
+
+   not set-valued functions.
+
+   So the function C is not a function that picks out a state, merely one
+   that reflects
+
+   some aspect of that state.
+
+   @ then makes a distinction between the credal state and the doxastic
+   state that is never sufficiently explained.
+
+   p.3 "From the perspective of information theory, it appears that an
+   agent with sharp credences pretends to be in possession of information
+   that she does not have"
+
+   Being in possession of information is not a concept that has any role
+   to play in information theory.
+
+   What does @ mean by this?
+
+   The INTERN argument is something of a non-starter,
+
+   because the precise probabilist could respond that her credences in the
+   fair coin are resilient
+
+   while those of the unknown coin are not.
+
+   That is, the difference between them shows up in how she responds to
+   evidence of tosses of those coins...
+
+   p.6 Why are the generalised Shannon measures unsatisfactory?
+
+   p.7 "reasons that incline Booleans to permit instates"
+
+   What @ means is "reasons to be a Boolean": Booleans, by definition, are
+   those that permit instates.
+
+   p.8 introduces but doesn't explain the distinction between Bool-A and
+   Bool-B.
+
+   The difference is allegedly illustrated by the example 3.
+
+   But we are never clearly told what it is that Bool-B thinks about the
+   example.
+
+   I think @ needs to think harder about the structure of the paper,
+   because it is something of a mess.
+
+   p.10 the credal state/doxastic state distinction rears its head again
+   here, again without adequate definition.
+
+   "Any updating will merely change the partial beliefs, but no full
+   beliefs"
+
+   Well, if you update on E, you acquire a full belief in E.
+
+   So what @ says is strictly false.
+
+   What exactly does @ mean here?
+
+   That the agent's full beliefs (or lack thereof) about chances don't
+   change?
+
+   Depends on what you learn...
+
+   p.13 The formalism is inconsistent in its use of C and c.
+
+   The explanation of dilation is unclear.
+
+   How does (7) explain why (6) is true?
+
+   Presumably because P(H_v) is unconstrained and ranges over all of
+   [0,1].
+
+   Someone unfamiliar with the phenomenon of dilation would not be able to
+   glean much from this "explanation" of it.
+
+   p.14 RETENTION is false in the precise case unless P(H_v)=0.5.
+
+   Imagine you thought H_v was very likely,
+
+   then being told that the coins match *is* evidence that H_iv is true.
+
+   I don't feel the pull of REPETITION either.
+
+   My reaction was "Well, let's build an explicit model of repeated coin
+
+   tosses and *see* whether an imprecise agent learns".
+
+   My intution is that if the precise agent in this model can learn, then
+   so can
+
+   the imprecise agent (or rather, the imprecise agent will fail to learn
+   because of OBTUSE,
+
+   rather than anything to do with dilation).
+
+   The 2014 Bradley and Steele paper @ cites discusses and ultimately
+   dismisses the REFLECTION argument.
+
+   Aron Vallinder has a nice forthcoming paper on the topic of OBTUSE.
+
+   http://www.vallinder.se/imprecise_inert.pdf
+
+   p.18 C' and C'' are not defined.
+
+   "the same instate can encode doxastic states which are relevantly
+   different when it comes to updating probabilities"
+
+   I don't know what this means.
+
+   If an instate is a set of probability functions, then the sets of
+   conditional probabilities are fixed.
+
+   There's no way the same set of probabilities can "encode" different
+   ways to update on the same evidence.
+
+   As I said earlier (9) is simply false in the precise case.
+
+   Its status in the imprecise case has been discussed by the Stanford
+   Encyclopedia of Philosophy, by Bradley and Steele,
+
+   by Pedersen and Wheeler...
+
+   Pedersen, Arthur Paul, and Gregory Wheeler. "Demystifying dilation."
+   Erkenntnis 79.6 (2014): 1305-1342.
+
+   p.19 to say that the imprecise view "licences" the very long odds bet
+   is a little misleading.
+
+   On a permissive view of what imprecise decision allows the long odds
+   bet is permissible but not mandatory.
+
+   Indeed, taking either side of the bet is permissible.
+
+   I think @ is pointing towards a weird feature of imprecise decision,
+   but I think @
+
+   overstates @'s case.
+
+   p.22 the riposte seems to suggest that representation involves positing
+   a relationship of identity between
+
+   the represented and the thing representing.
+
+   That is absolutely insane.
+
+   Who in their right mind would hold that view of representation!?
+
+   @ argues that the precise framework has a better fit with information
+   theory,
+
+   and since this theory provides powerful tools to justify the
+   fundamentals of bayesianism,
+
+   that's the better view of credence.
+
+   First, I don't think the first clause of this claim has been
+   established.
+
+   @ earlier gestured at the fact that generalized Shannon measures were
+   unsatisfactory,
+
+   but didn't say why.
+
+   But even if this were true, information theory is not the only way
+
+   to justify fundamental tenets of Bayesianism.
+
+   The "coherent betting" approach of de Finetti has proved to have a
+   fruitful
+
+   extension to imprecise credence.
+
+   See, for example, the first couple of chapters of the Augustin et al
+   "Introduction to Imprecise Probabilities".
+
+   p.23 @ describes "updating, inference and decision making" as a "double
+   task". I count three tasks there.
+
+   p.25 @ now seems to be arguing that having precise credences doesn't
+   determine precise betting quotients.
+
+   But isn't determining betting quotients one of the core tasks that
+   credences were supposed to perform?
+
+   Given a credence of 0.53, what kinds of bets are such that,
+   determinately, the agent ought to accept them?
+
+   Is there a gap between her buying price and selling price?
+
+   Aren't we now shading back into an imprecise view?
+
+   p.26 "she must reject one of them not to incur a sure loss".
+
+   Not with the bets as described: they always produce a net gain of 0.
+
+   p.29--30
+
+   "it appears to me that they outperform the Boolean approach"
+
+   It isn't clear what measure of success @ has in mind here.
+
+   -Reviewer 2
+
+   IJA_2017_81
+
+   Augustin’s Concession: A Problem for Indeterminate Credal States
+
+   The paper engages with fairly recent philosophical literature on
+   imprecise probabilities and responses to dilation to argue against
+   representing cognitive commitments (beliefs) in terms of an imprecise
+   probability model.  The paper is unpublishable, however, for two
+   reasons.  First, the author is engaging a very narrow and
+   largely-out-of-date philosophical literature that ignores relevant
+   developments and prior work that covers the same ground.  Second, the
+   very limited highly idiosyncratic view of IP undercuts the author’s
+   ambitions to offer a sweeping rejection of IP models of single-agent
+   cognitive commitments.
+
+   The author is right about terminological confusion in this area, but
+   the mess is due almost entirely to the small corner of the IP
+   literature in philosophy that the author is responding to.  Walley is
+   very clear that imprecision refers to the weakening of the additivity
+   condition; Levi distinguishes between indeterminate and imprecision as
+   distinct grounds for assessments that are not precise — which overloads
+   the term ‘imprecise’, but is forgivable given the time periods (late
+   80s and early 70s, respectively) these authors were writing.  The
+   introduction of ‘imprecise credences’ and ‘mushy credences’ is very
+   recent (late 90s, Weatherson, as far I gather; and mid 2000s, White and
+   or Scott Sturgeon at a FEW in Wisconsin, respectively) and was launched
+   into the literature without much consideration of the existing
+   literature, much of it in SIPTA, that covered this ground, and covered
+   it far more thoroughly and carefully.
+
+   So, the author’s introduction of even more jargon is unhelpful, if not
+   unkind, to the reader. Bool-A? Bool-B? instates? H_iv and H_v?  And
+   waiting until section 3 to tell us what the difference is between
+   Bool-A and Bool-B?
+
+   A second point is that the authors construction of an imprecise
+   probability model in terms of a closed convex set of probability mass
+   functions — that is, a credal set — is about 10 to 15 years out of
+   date.  This matters particularly since the arguments that author is
+   attempting to mount will not go through, as they stand, if one starts
+   instead with sets of desirable gambles.  See the first two chapters of
+   Augstin et al.’s Introduction to Imprecise Probabilities (2014) for an
+   introduction to the desirable gambles approach, and why it is favored
+   by theorists in particular.
+
+   Even within the credal set approach, the author equivocates between
+   representing belief by a set of functions, upper and lower previsions,
+   and the values of a lower prevision and upper prevision wrt some event.
+
+   And speaking of events, the author’s Jeffrey-style approach to
+   formalizing a lower probability model is an idiosyncratic choice given
+   the sweepingly negative conclusion he/she wishes to establish.
+
+   The discussion of dilation is similarly skewed by the literature the
+   author considers. White’s argument against IP in 2010 is invalid.  This
+   point was observed by Joyce and also by Pedersen and Wheeler, who also
+   give a complete characterization of dilation in terms of distance from
+   independence, which was an open question from Seidenfeld and
+   Wasserman’s analysis.
+
+   For learning, particularly involving Bernoulli generators, the author
+   may wish to look to the literature on stochastic processes and
+   imprecise probability models, as well as updating with regular
+   extensions. Flip Hermans and Damjan Skulj’s chapter in Augustin’s et
+   al.’s introduction is a good overview of stochastic processes, and
+   Walley’s discussion of regular extensions and the basics of updating
+   ought to be covered.
+
+   In closing, a general remark, Seamus Bradley’s admonishment of
+   philosophers in his SEP article ought to be taken to heart. Bradley
+   complains about philosophers citing Walley without having read him, and
+   that criticism applies to this manuscript.  Much has happened since
+   Walley 1991; but the philosophical literature is filling up with work
+   that hasn’t even absorbed this level of understanding of IP.  This
+   won’t pass for IJAR; and it is a problem for philosophy that it can
+   pass elsewhere.
+
+   Have questions or need assistance?
+   For further assistance, please visit our Customer Support site. Here
+   you can search for solutions on a range of topics, find answers to
+   frequently asked questions, and learn more about EVISE® via interactive
+   tutorials. You can also talk 24/5 to our customer support team by phone
+   and 24/7 by live chat and email.
+
+   -------------------------------------------------------------
+
+   Copyright © 2017 Elsevier B.V. | Privacy Policy
+
+   Elsevier B.V., Radarweg 29, 1043 NX Amsterdam, The Netherlands, Reg.
+   No. 33156677.
+

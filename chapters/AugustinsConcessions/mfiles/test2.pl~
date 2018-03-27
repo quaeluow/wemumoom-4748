@@ -1,0 +1,10 @@
+use Math::CDF;
+
+# the bet
+$betquo=1/2;
+# projecting the unit interval onto the real line using f(x)=exp(x)/(1+exp(x))
+$pb=exp($betquo)/(1+exp($betquo));
+# translation to standard normal
+$t26=rand;
+$t27=&Math::CDF::qnorm($t26);
+print "$t27\n";

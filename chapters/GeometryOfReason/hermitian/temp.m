@@ -1,0 +1,15 @@
+aa=D(1,2)+D(2,1);
+ba=D(1,2)-D(2,1);
+ab=D(1,3)+D(3,1);
+bb=D(1,3)-D(3,1);
+ac=D(2,3)+D(3,2);
+bc=D(2,3)-D(3,2);
+A=((-1)*((aa^2)+(ba^2)+(ab^2)+(bb^2)))+(ac^2)+(bc^2);
+xa=D(1,2);
+xb=D(1,3);
+xc=D(2,3);
+ya=D(2,1);
+yb=D(3,1);
+yc=D(3,2);
+B=(((xa*xb*xc)+(xa*xb*yc)+(ya*xb*xc)+(ya*yb*yc)+(xa*yb*yc)+(ya*xb*xc))+((-1)*((xa*yb*xc)+(ya*xb*yc))))+(i*(((xa*yb*xc)+(xa*yb*yc)+(xa*xb*xc)+(ya*yb*xc))+((-1)*((ya*xb*xc)+(ya*xb*yc)+(xa*xb*yc)+(ya*yb*yc)))));
+sol=roots([1,0,A,2*B]);

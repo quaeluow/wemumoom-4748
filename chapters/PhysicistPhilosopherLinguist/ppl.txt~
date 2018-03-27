@@ -1,0 +1,724 @@
+                                         Abstract
+      When we come to know a conditional, we cannot straightforwardly ap-
+      ply Jeffrey conditioning to gain an updated probability distribution.
+      Carl Wagner has proposed a natural generalization of Jeffrey condition-
+      ing to accommodate this case (Wagner conditioning). The generaliza-
+      tion rests on an ad hoc but plausible intuition (W). Wagner shows how
+      the principle of maximum entropy (M) disagrees with intuition (W)
+      and therefore considers (M) to be undermined. This article presents a
+      natural generalization of Wagner conditioning which is derived from
+      (M) and implied by it. (M) is therefore not only consistent with (W),
+      it seamlessly and elegantly generalizes it (just as it generalizes stan-
+      dard conditioning and Jeffrey conditioning). Wagner's inconsistency
+      result for (W) and (M) is instructive. It rests on the assumption (I)
+      that the credences of a rational agent may be indeterminate. While
+      many Bayesians now hold (I) it is difficult to articulate (M) on its ba-
+      sis because to date there is no proposal how to measure indeterminate
+      probability distributions in terms of information theory. Most, if not
+      all, advocates of (M) resist (I). If they did not they would be vulner-
+      able to Wagner's inconsistency result. Wagner has therefore not, as
+      he believes, undermined (M) but only demonstrated that advocates of
+      (M) must accept that rational agents ought to have sharp credences.
+
+1 Introduction
+
+Standard conditioning in Bayesian probability theory gives us a relatively
+well-accepted tool to update on the observation of an event. Jeffrey con-
+ditioning provides another tool which updates probability distributions (or
+densities, from now on omitted) given uncertain evidence. Jeffrey condition-
+ing generalizes standard conditioning. Evidence can be viewed as imposing
+a constraint on acceptable probability distributions, often one with which
+the prior probability distribution is inconsistent. If it is a conditional which
+constitutes this constraint, standard conditioning and Jeffrey conditioning
+do not always apply. Carl Wagner presents such a case (see Wagner, 1992)
+together with a solution based on a plausible intuition. We will call this
+intuition (W). Wagner's (W) solution, or Wagner conditioning, in its turn
+generalizes Jeffrey conditioning.
+
+Twenty years earlier, E.T. Jaynes had already proposed a generalization of
+Jeffrey conditioning, the principle of maximum entropy (M). This gener-
+alization is more sweeping than Wagner's and includes partial information
+cases (using the moment(s) of a distribution as evidence), such as Bas van
+                                               1
+
+
+Fraassen's Judy Benjamin problem and Jaynes' own Brandeis Dice prob-
+lem. It uses information theory to suggest that one should (a) always choose
+prior probabilities which are minimally informative, and (b) update to the
+probability distribution which is minimally informative relative to the prior
+probability distribution while obeying the constraints imposed by the obser-
+vation or the evidence. Again, there is a plausible intuition at work, but (M)
+soon ran into counter-examples (e.g. Judy Benjamin, see van Fraassen, 1981)
+and conceptual difficulties (e.g. Abner Shimony's Lagrange multiplier prob-
+lem, see Friedman and Shimony, 1971; or more recently, Joseph Halpern's
+and Peter Gr"unwald's Coarsening at Random, see Gr"unwald and Halpern,
+2003).
+The question for Wagner was therefore whether his generalization (W)agreed
+with (M) or not. Wagner found that it did not. Wagner then used his method
+not only to present a "natural generalization of Jeffrey conditioning" (see
+Wagner, 1992, 250), but also to deepen criticism of (M). I will show that
+(M) not only generalizes Jeffrey conditioning (as is well known, for a formal
+proof see Caticha and Giffin, 2006) but also Wagner conditioning. Wag-
+ner's intuition (W) is plausible, and his method works. His derivation of
+a disagreement with (M), however, is conceptually more complex than he
+assumed. Below, we will show that (M) and (W) are consistent given (L).
+(L) is what I call the Laplacean principle which requires a rational agent,
+besides other standard Bayesian commitments, to hold sharp credences with
+respect to well-defined events under consideration. (I), which is inconsistent
+with (L) and which some Bayesians accept, allows a rational agent to have
+indeterminate or imprecise credences (see Ellsberg, 1961; Levi, 1985; Walley,
+1991; and Joyce, 2010).
+
+ (M) (W) (I) (L)
+ [U+2713] [U+2713] [U+2296] according to Wagner's article
+ [U+2713] [U+2713] OK according to this article
+                 [U+2713] [U+2713] [U+2296] disagree over permitting mushy credences
+ [U+2713] [U+2713] [U+2713] [U+2296] formally shown in Wagner's article
+ [U+2713] [U+2713] [U+2713] OK formally shown in this article
+While Wagner is welcome to deny (L), my sense is that advocates of (M)
+usually accept it because they are already to the right of Sandy L. Zabell's
+spectrum between left-wing dadaists and right-wing totalitarians (see Zabell,
+2005, 27; Zabell's representative of right-wing totalitarianism is E.T. Jaynes).
+If there were an advocate of (M) sympathetic to (I), Wagner's result would
+
+                                             2
+
+
+indeed force her to choose, but my emphasis is that Wagner's criticism of
+(M) is misplaced since it rests on an assumption that someone who believes
+in (M) would naturally not hold. Wagner certainly does not give indepen-
+dent arguments for (I). This paper shows how elegantly (M) generalizes not
+only standard conditioning and Jeffrey conditioning but also Wagner condi-
+tioning, once we accept (L).
+A tempered and differentiated account of (M) (contrasted with Jaynes' ear-
+lier version) is not only largely immune to criticisms, but often illuminates
+the problems that the criticisms pose (for example in the Judy Benjamin
+case see Lukits, 2014). This account rests on principles such as (L) and
+a reasonable interpretation of what we mean by objectivity. To make this
+more clear, and before we launch into the formalities of generalizing Wagner
+conditioning by using (M), let us articulate (L) and (M). (L) is what I call
+the Laplacean principle and in addition to standard Bayesian commitments
+states that a rational agent assigns a determinate precise probability to a
+well-defined event under consideration (for a defence of (L) against (I) see
+White, 2010; and Elga, 2010).
+To avoid excessive apriorism (see Seidenfeld, 1979), (L) does not require that
+a rational agent has probabilities assigned to all events in an event space,
+only that, once an event has been brought to attention, and sometimes
+retrospectively, the rational agent is able to assign a probability. Newton
+did not need to have a prior probability for Einstein's theory in order to
+have a posterior probability for his theory of gravity.
+
+(L) also does not require objectivity in the sense that all rational agents must
+agree in their probability distributions if they have the same information.
+It is important to distinguish between type I and type II prior probabili-
+ties. The former precede any information at all (so-called ignorance priors).
+The latter are simply prior relative to posterior probabilities in probability
+kinematics. They may themselves be posterior probabilities with respect to
+an earlier instance of probability kinematics. One of Jaynes' projects, the
+project of objectivity for type I prior probabilities, has failed.
+The case for objectivity in probability kinematics, where prior probabilities
+are of type II, is consistent with and dependent on a subjectivist interpreta-
+tion of probabilities, making for some terminological confusion. Interpreta-
+tions of the evidence and how it is to be cast in terms of formal constraints
+may vary. Once we agree on a prior distribution (type II), however, and on
+a set of formal constraints representing our evidence, (M) claims that poste-
+
+                                              3
+
+
+rior probabilities follow mechanically. Just as is the case in deductive logic,
+we may come to a tentative and voluntary agreement on an interpretation,
+a set of rules and presuppositions and then go part of the way together. To
+standard Bayesian commitments and (L), (M) adds
+
+       Update type II prior distributions under formalized constraints in accordance
+       with information theory and a commitment to keep the entropy maximal,
+       if constraints are synchronic, and the cross-entropy minimal, if they are
+       diachronic.
+
+This corresponds to the simple intuition that we ought not to gain infor-
+mation where the additional information is not warranted by the evidence.
+Some want to drive a wedge between the synchronic rule to keep the en-
+tropy maximal (maxent) and the diachronic rule to keep the cross-entropy
+minimal (Infomin).
+Here is a brief excursion to dispel this worry. Consider a bag with blue,
+                                                         [U+2032]
+red, and green tokens. You know that (C ) at least 50% of the tokens are
+                                          [U+2032][U+2032]
+blue. Then you learn that (C ) at most 20% of the tokens are red. The
+synchronic norm maxent, on the one hand, ignores the diachronic dimension
+and prescribes the probability distribution which has the maximum entropy
+                         [U+2032] [U+2032][U+2032]
+and obeys both (C ) and (C ). The three-dimensional vector containing the
+                                                     1 1 3
+probabilities for blue, red, and green is ( , , ). Infomin, on the other hand,
+                                                     2 5 10
+                [U+2032] [U+2032][U+2032] 1 1 1
+processes (C ) and (C ) sequentially, taking in its second step ( , , ) as its
+                                                                                    2 4 4
+                                                                                        8 1 4
+prior probability distribution and then diachronically updating to ( , , ).
+                                                                                        15 5 15
+The information provided in a problem calling for maxent and the infor-
+mation provided in a problem calling for Infomin is different, as temporal
+relations and their implications for dependence between variables clearly
+matter. In the above case, we might have relevantly received information
+   [U+2032][U+2032] [U+2032]
+(C ) before (C ) ('before' may be understood logically rather than tempo-
+                                                                 2 1 2 1 1 1
+rally) so that Infomin updates in its last step ( , , ) to ( , , ). Even if
+                                                                 5 5 5 2 6 3
+   [U+2032] [U+2032][U+2032]
+(C ) and (C ) are received in a definite order, the problem may be phrased
+in a way that indicates independence between the two constraints. In this
+case, maxent is the appropriate norm to use. Infomin does not assume such
+independence and therefore processes the two pieces of information sepa-
+rately. Disagreement arises when observations are interpreted differently,
+not because maxent and Infomin are inconsistent with each other. In the
+following I will assume that maxent and Infomin are compatible and part
+of the toolkit at the disposal of (M), the principle of maximum entropy.
+
+                                                   4
+
+
+Returning now to the issue of updating on conditionals, Wagner's method
+and his plausible intuition (W) provide a generalization of Jeffrey condition-
+ing, but contrary to Wagner's claims they do nothing to vitiate the principle
+of maximum entropy. Some advocates of (M) may find (L) too weak in its
+claims, but none think it is too strong. Once (L) is assumed, however, Wag-
+ner's diagnosis of disagreement between (W) and (M) fails. Moreover, (M)
+and (L) together seamlessly generalize Wagner conditioning. In the remain-
+der of this paper I will provide a sketch of a formal proof for this claim.
+A welcome side-effect of reinstating harmony between (M) and (W) is that
+it provides an inverse procedure to Vladim[U+00B4][U+0131]r Majern[U+00B4][U+0131]k's method of finding
+marginals based on given conditional probabilities (see Majern[U+00B4][U+0131]k, 2000; and
+my more technical companion paper to this one).
+
+2 Wagner's Natural Generalization of Jeffrey Conditioning
+
+Wagner claims that he has found a relatively common case of probability
+kinematics in which (M) delivers the wrong result so that we must develop
+an ad hoc generalization of Jeffrey conditioning. This is best explained by
+using Wagner's example, the Linguist problem.
+
+      You encounter the native of a certain foreign country and wonder whether
+      he is a Catholic northerner ([U+03B8] ), a Catholic southerner ([U+03B8] ), a Protestant
+                                            1 2
+      northerner ([U+03B8] ), or a Protestant southerner ([U+03B8] ). Your prior probability p over
+                      3 4
+      these possibilities (based, say, on population statistics and the judgment that
+      it is reasonable to regard this individual as a random representative of his
+      country) is given by p([U+03B8] ) = 0.2,p([U+03B8] ) = 0.3,p([U+03B8] ) = 0.4, and p([U+03B8] ) = 0.1.
+                                    1 2 3 4
+      The individual now utters a phrase in his native tongue which, due to the
+      aural similarity of the phrases in question, might be a traditional Catholic
+      piety ([U+03C9] ), an epithet uncomplimentary to Protestants ([U+03C9] ), an innocuous
+                1 2
+      southern regionalism ([U+03C9] ), or a slang expression used throughout the country
+                                   3
+      in question ([U+03C9] ). After reflecting on the matter you assign subjective prob-
+                       4
+      abilities u([U+03C9] ) = 0.4,u([U+03C9] ) = 0.3,u([U+03C9] ) = 0.2, and u([U+03C9] ) = 0.1 to these
+                     1 2 3 4
+      alternatives. In the light of this new evidence how should you revise p? (See
+      Wagner, 1992, 252 and Spohn, 2012, 197.)
+
+                                                                                            [U+0398]
+Let [U+0398] = {[U+03B8] : i = 1,...,4},[U+03A9] = {[U+03C9] : i = 1,...,4}. Let [U+0393] : [U+03A9] [U+2192] 2 -{[U+2205]}
+               i i
+be the function which maps [U+03C9] to [U+0393]([U+03C9]), the narrowest event in [U+0398] entailed
+by the outcome [U+03C9] [U+2208] [U+03A9]. Here are two definitions that take advantage of
+
+                                                   5
+
+
+the apparatus established by Arthur Dempster (see Dempster, 1967). We
+will need m and b to articulate Wagner's (W) solution for Linguist type
+problems.
+
+       For all E [U+2286] [U+0398],m(E) = u({[U+03C9] [U+2208] [U+03A9] : [U+0393]([U+03C9]) = E}). (1)
+
+
+       For all E [U+2286] [U+0398],b(E) = [U+2211] m(H) = u({[U+03C9] [U+2208] [U+03A9] : [U+0393]([U+03C9]) [U+2286] E}). (2)
+                                  H[U+2286]E
+
+Let Q be the posterior joint probability measure on [U+0398] [U+00D7] [U+03A9], and Q the
+                                                                                   [U+0398]
+marginalization of Q to [U+0398], Q the marginalization of Q to [U+03A9]. Wagner plau-
+                                  [U+03A9]
+sibly suggests that Q is compatible with u and [U+0393] if and only if
+
+       for all [U+03B8] [U+2208] [U+0398] and for all [U+03C9] [U+2208] [U+03A9],[U+03B8] [U+2208]/ [U+0393]([U+03C9]) implies that Q([U+03B8],[U+03C9]) = 0 (3)
+
+and
+
+       Q = u. (4)
+         [U+03A9]
+
+The two conditions (3) and (4), however, are not sufficient to identify a
+"uniquely acceptable revision of a prior" (Wagner, 1992, 250). Wagner's
+proposal includes a third condition, which extends Jeffrey's rule to the sit-
+uation at hand. We will call it (W). To articulate the condition, we need
+some more definitions. For all E [U+2286] [U+0398], let E = {[U+03C9] [U+2208] [U+03A9] : [U+0393]([U+03C9]) = E}, so
+                                                      [U+2605]
+that m(E) = u(E ). For all A [U+2286] [U+0398] and all B [U+2286] [U+03A9], let "A" = A [U+00D7] [U+03A9] and
+                     [U+2605]
+"B" = [U+0398][U+00D7]B, so that Q("A") = Q (A) for all A [U+2286] [U+0398] and Q("B") = Q (B)
+                                         [U+0398] [U+03A9]
+for all B [U+2286] [U+03A9]. Let also E = {E [U+2286] [U+0398] : m(E) > 0} be the family of evidentiary
+focal elements.
+According to Wagner only those Q satisfying the condition
+
+       for all A [U+2286] [U+0398] and for all E [U+2208] E,Q("A"|"E ") = p(A|E) (5)
+                                                         [U+2605]
+
+                                            6
+
+
+are eligible candidates for updated joint probabilities in Linguist type prob-
+lems. To adopt (5), says Wagner, is to make sure that the total impact of
+the occurrence of the event E is to preclude the occurrence of any outcome
+                                      [U+2605]
+[U+03B8] [U+2208]/ E, and that, within E, p remains operative in the assessment of rela-
+tive uncertainties (see Wagner, 1992, 250). While conditions (3), (4) and (5)
+may admit an infinite number of joint probability distributions on [U+0398] [U+00D7] [U+03A9],
+their marginalizations to [U+0398] are identical and give us the desired posterior
+probability, expressible by the formula
+
+      q(A) = [U+2211]m(E)p(A|E). (6)
+                 E[U+2208]E
+
+So far we are in agreement with Wagner. Wagner's scathing verdict about
+(M) towards the end of his article, however, is not really a verdict about
+(M) in the Laplacean tradition but about the curious conjunction of (M)
+and (I):
+
+      Students of maximum entropy approaches to probability revision may [...]
+      wonder if the probability measure defined by our formula (6) similarly mini-
+      mizes [the Kullback-Leibler information number] D (q,p) over all probabil-
+                                                                  kl
+      ity measures q bounded below by b. The answer is negative [...] convinced by
+      Skyrms, among others, that maxent is not a tenable updating rule, we are
+      undisturbed by this fact. Indeed, we take it as additional evidence against
+      maxent that (6), firmly grounded on [...] a considered judgment that (5)
+      holds, might violate maxent [...] the fact that Jeffrey's rule coincides with
+      maxent is simply a misleading fluke, put in its proper perspective by the
+      natural generalization of Jeffrey conditioning described in this paper. [Ref-
+      erences to formulas and notation modified.] (Wagner, 1992, 255)
+In the next section, we will contrast what Wagner considers to be the solution
+of (M) for this problem, 'Wagner's (M) solution,' and Wagner's solution
+presented in this section, 'Wagner's (W) solution,' and show, in much greater
+detail than Wagner does, why Wagner's (M) solution misrepresents (M).
+
+
+3 Wagner's (M) Solution
+Wagner's (M) solution assumes the constraint that b must act as a lower
+bound for the posterior probability. Consider E = {[U+03B8] [U+2228][U+03B8] }. Because both
+                                                                12 1 2
+
+                                                 7
+
+
+[U+03C9] and [U+03C9] entail E , according to (2), b(E ) = 0.70. It makes sense to
+  1 2 12 12
+consider it a constraint that the posterior probability for E must be at
+                                                                         12
+least b(E ). Then we choose from all probability distributions fulfilling the
+           12
+constraint the one which is closest to the prior probability distribution, using
+the Kullback-Leibler divergence.
+Wagner applies this idea to the marginal probability distribution on [U+0398]. He
+does not provide the numbers, but refers to simpler examples to make his
+point that (M) does not generally agree with his solution. To aid the dis-
+cussion, I want to populate Wagner's claim for the Linguist problem with
+numbers. Using proposition 1.29 in Dimitri Bertsekas' book Constrained Op-
+timization and Lagrange Multiplier Methods (see Bertsekas, 1982, 71) and
+some non-trivial calculations, Wagner's (M) solution for the Linguist prob-
+lem (indexed Q ) is
+                   wm
+
+                          [U+22BA] [U+22BA]
+       ~[U+03B2] = (Q ([U+03B8] )) = (0.30,0.45,0.10,0.15) . (7)
+                wm j
+A brief remark about notation: I will use [U+03B1] for vectors expressing [U+03C9] proba-
+                                                                                 i
+bilities and [U+03B2] for vectors expressing [U+03B8] probabilities. I will use a tilde as in
+                                               j
+~[U+03B2] or a hat as in ^[U+03B2] for posteriors, while priors remain without such ornamen-
+tation. The tilde is used for Wagner's (M) solution (which, as we will see, is
+incorrect) and the hat for the correct solution (both (W) and (M)).
+
+The cross-entropy between ~[U+03B2] and the prior
+
+                      [U+22BA] [U+22BA]
+       [U+03B2] = (P([U+03B8] )) = (0.20,0.30,0.40,0.10) (8)
+                  j
+is indeed significantly smaller than the cross-entropy between Wagner's (W)
+solution
+
+                      [U+22BA] [U+22BA]
+       ^[U+03B2] = (Q([U+03B8] )) = (0.30,0.60,0.04,0.06) (9)
+                  j
+and the prior [U+03B2] (0.0823 compared to 0.4148). For the cross-entropy, we use
+the Kullback-Leibler Divergence
+
+                                       q([U+03B8] )
+                                           j
+       D (q,p) = [U+2211]q([U+03B8] )log . (10)
+          kl j 2
+                                       p([U+03B8] )
+                                           j
+                        j
+                                              8
+
+
+From the perspective of an (M) advocate, there are only two explanations for
+this difference in cross-entropy. Either Wagner's (W) solution illegitimately
+uses information not contained in the problem, or Wagner's (M) solution
+has failed to include information that is contained in the problem. I will
+simplify the Linguist problem in order to show that the latter is the case.
+
+       The Simplified Linguist Problem. Imagine the native is either Protestant or
+       Catholic (50:50). Further imagine that the utterance of the native either
+       entails that the native is a Protestant (60%) or provides no information
+       about the religious affiliation of the native (40%).
+
+Using (6), the posterior probability distribution is 80:20 (Wagner's (W) so-
+lution and, surely, the correct solution). Using b as a lower bound and (M),
+Wagner's (M) solution for this radically simplified problem is 60:40, clearly
+a more entropic solution than Wagner's (W) solution. The problem, as we
+will show, is that Wagner's (M) solution does not take into account (L),
+which an (M) advocate would naturally accept.
+For a Laplacean, the prior joint probability distribution on [U+0398] [U+00D7] [U+03A9] is not
+left unspecified for the calculation of the posteriors. Before the native makes
+the utterance, the event space is unspecified with respect to [U+03A9]. After the
+utterance, however, the event space is defined (or brought to attention) and
+populated by prior probabilities according to (L). That this happens ret-
+rospectively may or may not be a problem: Bayes' theorem is frequently
+used retrospectively, for example when the anomalous precession of Mer-
+cury's perihelion, discovered in the mid-1800s, was used to confirm Albert
+Einstein's General Theory of Relativity in 1915. I shall bracket for now
+that this procedure is controversial and refer the reader to the voluminous
+literature on Old Evidence.
+Ariel Caticha and Adom Giffin make the following appeal:
+
+       Bayes' theorem requires that P([U+03C9],[U+03B8]) be defined and that assertions such
+       as '[U+03C9] and [U+03B8]' be meaningful; the relevant space is neither [U+03A9] nor [U+0398] but the
+       product [U+03A9] [U+00D7] [U+0398] [notation modified] (Caticha and Giffin, 2006, 9)
+
+Following (L) we shall populate the joint probability matrix P on [U+03A9] [U+00D7] [U+0398],
+which is a perfect task for maxent, as updating the joint probability P to
+Q on [U+03A9] [U+00D7] [U+0398] will be a perfect task for Infomin. For the Simplified Linguist
+
+                                                9
+
+
+Problem, this procedure gives us the correct result, agreeing with Wagner's
+(W) solution (80:20).
+There is a more general theorem which incorporates Wagner's (W) method
+into Laplacean realism and maxent orthodoxy. The proof of this theorem
+will be in a more technical companion paper, but its validity is confirmed by
+how well it works for the Linguist problem (as well as the Simplified Linguist
+Problem).
+
+4 The Linguist
+
+The Linguist problem is a specific case of a more general Wagner-type prob-
+lem characterized by two vectors and one matrix ([U+03B2],^[U+03B1],[U+03BA]) (the dimensions are
+n, m, and m[U+00D7]n, respectively). The first vector, [U+03B2], represents the marginal
+prior probability P([U+03B8] ). For the Linguist problem,
+                          j
+
+                                  [U+22BA]
+      [U+03B2] = (0.2,0.3,0.4,0.1) . (11)
+
+The second vector, ^[U+03B1], represents the marginal posterior probability Q([U+03C9] ).
+                                                                                          i
+For the Linguist problem,
+
+
+                                    [U+22BA]
+      ^[U+03B1] = (0.4,0.3,0.2,0.1,0) . (12)
+Whereas Wagner only considers four dimensions, corresponding to the four
+utterances of the native, we have to add a fifth dimension corresponding
+to the case in which the native does not make any of those utterances, i.e.
+[U+03C9] =[U+231D]([U+2228] [U+03C9] ). Presumably, the prior probability of [U+03C9] is very high,
+ 5 i 5
+           i=1,...,4
+nearly 1 (the native may have uttered a typical Buddhist phrase, asked
+where the nearest bathroom was, complimented your fedora, or chosen to
+be silent, as a commenter pointed out to me). By the principle of regularity,
+however, it does not equal 1 (for a defence of the principle of regularity, that
+one should not assign probability 0 to any possibility, see Edwards et al.,
+1963). The posterior probability is 0, as the Linguist problem specifies that
+one of the four possibilities was uttered by the native. ^[U+03B1] is therefore always
+                                                                    m
+0 for Wagner-type problems.
+
+
+                                             10
+
+
+The matrix [U+03BA] represents the logical relationships between the [U+03B8] 's and the
+                                                                             j
+[U+03C9] 's. In Wagner-type problems, the conditionals imply that some of the joint
+  i
+probabilities are zero. The observation of [U+03C9] for i = 1,...,m-1 implies that
+                                                    i
+the last row of [U+03BA], which consists of 1's, becomes a row of 0's in the posterior
+representation ^[U+03BA] of these relationships. Thus,
+
+             [U+23A1] [U+23A4] [U+23A1] [U+23A4]
+                1 1 0 0 1 1 0 0
+             [U+23A2] [U+23A5] [U+23A2] [U+23A5]
+                1 1 0 0 1 1 0 0
+             [U+23A2] [U+23A5] [U+23A2] [U+23A5]
+             [U+23A2] [U+23A5] [U+23A2] [U+23A5]
+        [U+03BA] = 0 1 0 1 and ^[U+03BA] = 0 1 0 1 . (13)
+             [U+23A2] [U+23A5] [U+23A2] [U+23A5]
+             [U+23A3] [U+23A6] [U+23A3] [U+23A6]
+                1 1 1 1 1 1 1 1
+                1 1 1 1 0 0 0 0
+
+The triple ([U+03B2],^[U+03B1],[U+03BA]) corresponds to Wagner's conditions (3) (dictating the
+zero joint probabilities or [U+03BA]), (4) (dictating the marginal probabilities ^[U+03B1]
+or Q([U+03C9] )), and (6) (dictating the marginal probabilities [U+03B2] or P([U+03B8] )). The
+         i j
+                                                                [U+22BA]
+marginal prior probabilities [U+03B1] = (P([U+03C9] ),...,P([U+03C9] ) ) and posterior prob-
+                                                1 m
+                                       [U+22BA]
+abilities ^[U+03B2] = (Q([U+03B8] ),..., Q([U+03B8] ) ) are unknown. We do not need to know
+                        1 n
+[U+03B1], but the point of the exercise is to determine ^[U+03B2]. According to (W),
+^[U+03B2] = (0.3,0.6,0.04,0.06).
+According to (M), we use Lagrange multipliers and first maximize the en-
+tropy of M, the joint prior probability matrix; then we use Lagrange mul-
+tipliers again to minimize the cross-entropy from M to the joint posterior
+probability matrix ^M. The situation can be visualized like this for the Lin-
+guist problem:
+
+        [U+23A1] [U+23A4]
+           m m 0 0 [U+03B1]
+             11 12 1
+        [U+23A2] [U+23A5]
+           m m 0 0 [U+03B1]
+             21 22 2
+        [U+23A2] [U+23A5]
+        [U+23A2] 0 m 0 m [U+03B1] [U+23A5]
+                     32 34 3
+        [U+23A2] [U+23A5] (14)
+        [U+23A2] [U+23A5]
+           m m m m [U+03B1]
+             41 42 43 44 4
+        [U+23A2] [U+23A5]
+        [U+23A3] [U+23A6]
+           m m m m [U+03B1]
+             51 52 53 54 5
+            [U+03B2] [U+03B2] [U+03B2] [U+03B2] 1.00
+             1 2 3 4
+where the last column and the last row are the row and column sums of
+M = (m ). Similarly for the posterior joint probability matrix ^M = (^m )
+           ij ij
+
+
+
+                                             11
+
+
+      [U+23A1] [U+23A4]
+         ^m ^m 0 0 ^[U+03B1]
+            11 12 1
+      [U+23A2] [U+23A5]
+         ^m ^m 0 0 ^[U+03B1]
+            21 22 2
+      [U+23A2] [U+23A5]
+      [U+23A2] 0 ^m 0 ^m ^[U+03B1] [U+23A5]
+                     32 34 3
+      [U+23A2] [U+23A5]
+                                                   . (15)
+      [U+23A2] [U+23A5]
+         ^m ^m ^m ^m ^[U+03B1]
+            41 42 43 44 4
+      [U+23A2] [U+23A5]
+      [U+23A3] 0 0 0 0 ^[U+03B1] [U+23A6]
+                                              5
+          ^[U+03B2] ^[U+03B2] ^[U+03B2] ^[U+03B2] 1.00
+            1 2 3 4
+The Lagrange multiplier method (for details, see the more technical com-
+panion paper) yields:
+
+             1
+                   [U+22BA]
+      M = rs [U+25E6][U+03BA] (16)
+             e
+
+             1 [U+22BA]
+      ^M = ^r^s [U+25E6]^[U+03BA][U+25E6]M (17)
+             e
+
+                 [U+22BA]
+      e[U+03B2] = S[U+03BA] r (18)
+
+
+       2
+      e ^[U+03B1] = ^R[U+03BA]^s (19)
+
+              [U+03BB] [U+03BC] ^[U+03BB] ^[U+03BC]
+                i j i j
+where r = e ,s = e ,^r = e ,^s = e represent factors arising from the
+        i j i j
+Lagrange multiplier method. The operator [U+25E6] is the entry-wise Hadamard
+product in linear algebra. r,s,^r,^s are the vectors containing the r ,s ,^r ,^s ,
+                                                                                 i j i j
+respectively. R,S,^R,^S are the diagonal matrices with R = r [U+03B4] ,S =
+                                                                                 i
+                                                                         il il kj
+s [U+03B4] ,^R = ^r [U+03B4] ,^S = ^s [U+03B4] ([U+03B4] is Kronecker delta).
+ j i j
+   kj il il kj kj
+Wagner's (W) solution ^[U+03B2] solves this system of equation (but not Wagner's
+(M) solution ~[U+03B2]). Because maximum entropy and minimum cross-entropy so-
+lutions are unique (see Shore and Johnson, 1980), (M) agrees with (W). To
+get there, we have assumed (L), namely that the joint probability matri-
+ces are populated by determinate probabilities. Wagner ostensibly disagrees
+with (L), as he represents the joint probability matrix ^M like this (visualized
+here with the marginals):
+                                                12
+
+
+      [U+23A1] [U+23A4]
+             ? ? 0 0 ^[U+03B1] = 0.4
+                                                               1
+      [U+23A2] [U+23A5]
+             ? ? 0 0 ^[U+03B1] = 0.3
+                                                               2
+      [U+23A2] [U+23A5]
+      [U+23A2] [U+23A5]
+             0 ? 0 ? ^[U+03B1] = 0.2 . (20)
+                                                               3
+      [U+23A2] [U+23A5]
+      [U+23A3] [U+23A6]
+             ? ? ? ? ^[U+03B1] = 0.1
+                                                               4
+         ^[U+03B2] = 0.3 ^[U+03B2] = 0.6 ^[U+03B2] = 0.04 ^[U+03B2] = 0.06 1.00
+           1 2 3 4
+The posterior probability that the native encountered by the linguist is a
+northerner, for example, is 34%. (L) in conjunction with (M), by contrast,
+provides the joint probability matrix in full without lacunae.
+
+      [U+23A1] [U+23A4]
+            0.16 0.24 0 0 ^[U+03B1] = 0.4
+                                                               1
+      [U+23A2] [U+23A5]
+            0.12 0.18 0 0 ^[U+03B1] = 0.3
+                                                               2
+      [U+23A2] [U+23A5]
+      [U+23A2] [U+23A5]
+             0 0.15 0 0.05 ^[U+03B1] = 0.2 (21)
+                                                               3
+      [U+23A2] [U+23A5]
+      [U+23A3] [U+23A6]
+            0.02 0.03 0.04 0.01 ^[U+03B1] = 0.1
+                                                               4
+         ^[U+03B2] = 0.3 ^[U+03B2] = 0.6 ^[U+03B2] = 0.04 ^[U+03B2] = 0.06 1.00
+           1 2 3 4
+We have not formally demonstrated that for all Wagner-type problems
+([U+03B2],^[U+03B1],[U+03BA]), the correct (M) solution (versus Wagner's deficient (M) solution)
+agrees with Wagner's (W) solution, although we have established a use-
+ful framework and demonstrated the agreement for the Linguist problem.
+The technical companion paper will accomplish the more general proof. As
+Vladim[U+00B4][U+0131]r Majern[U+00B4][U+0131]k has shown how to derive marginal probabilities from
+conditional probabilities using (M) (see Majern[U+00B4][U+0131]k, 2000), we will inversely
+show how to derive conditional probabilities (i.e. the joint probability ma-
+trices) from the marginal probabilities and logical relationships provided in
+Wagner-type problems. This technical result together with the claim estab-
+lished in the present paper that Wagner's intuition (W) is consistent with
+(M), given (L), underlines the formal and conceptual virtue of (M).
+
+5 References
+
+Bertsekas, Dimitri. Constrained Optimization and Lagrange Multiplier
+  Methods. Boston, MA: Academic, 1982.
+Caticha, Ariel, and Adom Giffin. "Updating Probabilities." In MaxEnt 2006,
+  the 26th International Workshop on Bayesian Inference and Maximum
+  Entropy Methods. 2006.
+
+                                          13
+
+
+Dempster, Arthur. "Upper and Lower Probabilities Induced by a Multi-
+  valued Mapping." The Annals of Mathematical Statistics 38, 2: (1967)
+  325--339.
+Edwards, Ward, Harold Lindman, and Leonard J. Savage. "Bayesian Statis-
+  tical Inference for Psychological Research." Psychological Review 70, 3:
+  (1963) 193.
+Elga, Adam. "Subjective Probabilities Should Be Sharp." Philosophers'
+  Imprints 10, 5: (2010) 1--11.
+
+Ellsberg, Daniel. "Risk, Ambiguity, and the Savage Axioms." The Quarterly
+  Journal of Economics 75, 4: (1961) 643--669.
+Friedman, Kenneth, and Abner Shimony. "Jaynes's Maximum Entropy Pre-
+  scription and Probability Theory." Journal of Statistical Physics 3, 4:
+  (1971) 381--384.
+Gr"unwald, P., and J.Y. Halpern. "Updating Probabilities." Journal of
+  Artificial Intelligence Research 19: (2003) 243--278.
+Joyce, James. "A Defense of Imprecise Credences in Inference and Decision
+  Making." Philosophical Perspectives 24, 1: (2010) 281--323.
+
+Levi, Isaac. "Imprecision and Indeterminacy in Probability Judgment." Phi-
+  losophy of Science 390--409.
+Lukits, Stefan. "The Principle of Maximum Entropy and a Problem in
+  Probability Kinematics." Synthese 191, 7: (2014) 1409--1431.
+Majern[U+00B4][U+0131]k, Vladim[U+00B4][U+0131]r. "Marginal Probability Distribution Determined by the
+  Maximum Entropy Method." Reports on Mathematical Physics 45, 2:
+  (2000) 171--181.
+
+Seidenfeld, Teddy. "Why I Am Not an Objective Bayesian; Some Reflections
+  Prompted by Rosenkrantz." Theory and Decision 11, 4: (1979) 413--440.
+Shore, J., and R.W. Johnson. "Axiomatic Derivation of the Principle of
+  Maximum Entropy and the Principle of Minimum Cross-Entropy." IEEE
+  Transactions on Information Theory 26, 1: (1980) 26--37.
+Spohn, Wolfgang. The Laws of Belief: Ranking Theory and Its Philosophical
+  Applications. Oxford, 2012.
+
+
+                                         14
+
+
+Wagner, Carl G. "Generalized Probability Kinematics." Erkenntnis 36, 2:
+  (1992) 245--257.
+Walley, Peter. Statistical Reasoning with Imprecise Probabilities. Chapman
+  and Hall London, 1991.
+White, Roger. "Evidential Symmetry and Mushy Credence." In Oxford
+  Studies in Epistemology, edited by Tamar Gendler, and John Hawthorne,
+  New York, NY: Oxford University, 2010, 161--186.
+
+Zabell, Sandy. Symmetry and Its Discontents: Essays on the History of
+  Inductive Probability. Cambridge University Press, 2005.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                      15
+
+

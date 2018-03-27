@@ -1,0 +1,445 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (Web2C 2009) (format=pdflatex 2010.1.4)  14 JUN 2011 15:11
+entering extended mode
+ %&-line parsing enabled.
+**fredericton-handout.tex
+(./fredericton-handout.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, german-x-2009-06-19, ngerman-x-2009-06-19, ancientgreek, ibycus, ar
+abic, basque, bulgarian, catalan, pinyin, coptic, croatian, czech, danish, dutc
+h, esperanto, estonian, farsi, finnish, french, galician, german, ngerman, mono
+greek, greek, hungarian, icelandic, indonesian, interlingua, irish, italian, ku
+rmanji, latin, latvian, lithuanian, mongolian, mongolian2a, bokmal, nynorsk, po
+lish, portuguese, romanian, russian, sanskrit, serbian, slovak, slovenian, span
+ish, swedish, turkish, ukenglish, ukrainian, uppersorbian, welsh, loaded.
+(c:/texlive/2009/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+(c:/texlive/2009/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(c:/texlive/2009/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2009/10/31 v0.4i Insert pages of external PDF documents (AM)
+
+(c:/texlive/2009/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(c:/texlive/2009/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2007/08/22 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count87
+\calc@Bcount=\count88
+\calc@Adimen=\dimen103
+\calc@Bdimen=\dimen104
+\calc@Askip=\skip43
+\calc@Bskip=\skip44
+LaTeX Info: Redefining \setlength on input line 76.
+LaTeX Info: Redefining \addtolength on input line 77.
+\calc@Ccount=\count89
+\calc@Cskip=\skip45
+)
+(c:/texlive/2009/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2009/10/07 v2.0a eso-pic (RN)
+
+(c:/texlive/2009/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2009/12/02 v1.10 At begin shipout hook (HO)
+
+(c:/texlive/2009/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+(c:/texlive/2009/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+))
+(c:/texlive/2009/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(c:/texlive/2009/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(c:/texlive/2009/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(c:/texlive/2009/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2009/08/25 v0.04m Graphics/color for pdfTeX
+\Gread@gobject=\count90
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+))
+(c:/texlive/2009/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2009/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2009/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(c:/texlive/2009/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+(c:/texlive/2009/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2009/10/31 v0.4i Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box26
+\AM@toc@title=\toks15
+\c@AM@survey=\count91
+\AM@templatesizebox=\box27
+)
+No file fredericton-handout.aux.
+\openout1 = `fredericton-handout.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+\AtBeginShipoutBox=\box28
+(c:/texlive/2009/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count92
+\scratchdimen=\dimen107
+\scratchbox=\box29
+\nofMPsegments=\count93
+\nofMParguments=\count94
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count95
+\MPscratchDim=\dimen108
+\MPnumerator=\count96
+\everyMPtoPDFconversion=\toks17
+) <fredericton.pdf, id=3, page=1, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 1>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 1>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 1>
+<fredericton.pdf, id=4, page=2, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 2>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 2>
+<fredericton.pdf, id=5, page=3, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 3>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 3>
+<fredericton.pdf, id=6, page=4, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 4>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 4>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 1>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 2>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 3>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 4> [1
+
+ <./fredericton.pdf{c:/texlive/2009/texmf-var/fonts/map/pdftex/updmap/pdftex.ma
+p}> <./fredericton.pdf> <./fredericton.pdf> <./fredericton.pdf>]
+<fredericton.pdf, id=46, page=5, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 5>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 5>
+<fredericton.pdf, id=47, page=6, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 6>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 6>
+<fredericton.pdf, id=48, page=7, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 7>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 7>
+<fredericton.pdf, id=49, page=8, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 8>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 8>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 5>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 6>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 7>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 8> [2 <./fredericton.pdf> <./fredericton.pdf> <./fr
+edericton.pdf> <./fredericton.pdf>]
+<fredericton.pdf, id=86, page=9, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 9>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 9>
+<fredericton.pdf, id=87, page=10, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 10>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 10>
+<fredericton.pdf, id=88, page=11, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 11>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 11>
+<fredericton.pdf, id=89, page=12, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 12>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 12>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 9>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 10>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 11>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 12> [3 <./fredericton.pdf> <./fredericton.pdf> <./f
+redericton.pdf> <./fredericton.pdf>]
+<fredericton.pdf, id=98, page=13, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 13>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 13>
+<fredericton.pdf, id=99, page=14, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 14>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 14>
+<fredericton.pdf, id=100, page=15, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 15>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 15>
+<fredericton.pdf, id=101, page=16, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 16>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 16>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 13>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 14>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 15>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 16> [4 <./fredericton.pdf> <./fredericton.pdf> <./f
+redericton.pdf> <./fredericton.pdf>]
+<fredericton.pdf, id=115, page=17, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 17>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 17>
+<fredericton.pdf, id=116, page=18, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 18>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 18>
+<fredericton.pdf, id=117, page=19, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 19>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 19>
+<fredericton.pdf, id=118, page=20, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 20>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 20>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 17>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 18>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 19>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 20> [5 <./fredericton.pdf> <./fredericton.pdf> <./f
+redericton.pdf> <./fredericton.pdf>]
+<fredericton.pdf, id=127, page=21, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 21>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 21>
+<fredericton.pdf, id=128, page=22, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 22>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 22>
+<fredericton.pdf, id=129, page=23, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 23>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 23>
+<fredericton.pdf, id=130, page=24, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 24>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 24>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 21>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 22>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 23>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 24> [6 <./fredericton.pdf> <./fredericton.pdf> <./f
+redericton.pdf> <./fredericton.pdf>]
+<fredericton.pdf, id=140, page=25, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 25>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 25>
+<fredericton.pdf, id=141, page=26, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 26>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 26>
+<fredericton.pdf, id=142, page=27, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 27>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 27>
+<fredericton.pdf, id=143, page=28, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 28>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 28>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 25>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 26>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 27>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 28> [7 <./fredericton.pdf> <./fredericton.pdf> <./f
+redericton.pdf> <./fredericton.pdf>]
+<fredericton.pdf, id=149, page=29, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 29>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 29>
+<fredericton.pdf, id=150, page=30, 364.19562pt x 273.14648pt>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 30>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 30>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 1>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 1>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 1>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 1>
+File: fredericton.pdf Graphic file (type pdf)
+
+<use fredericton.pdf, page 29>
+File: fredericton.pdf Graphic file (type pdf)
+ <use fredericton.pdf, page 30> [8 <./fredericton.pdf> <./fredericton.pdf>] (./
+fredericton-handout.aux) ) 
+Here is how much of TeX's memory you used:
+ 2215 strings out of 493848
+ 30827 string characters out of 3152187
+ 85774 words of memory out of 3000000
+ 5516 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 714 hyphenation exceptions out of 8191
+ 39i,20n,47p,243b,425s stack positions out of 5000i,500n,10000p,200000b,50000s
+<c:/texlive/2009/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmcsc10.pfb><c:/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb><c:/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb>
+<c:/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/texliv
+e/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb><c:/texlive/2009/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb><c:/texlive/2009/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmss8.pfb><c:/texlive/2009/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmssi10.pfb><c:/texlive/2009/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmssi12.pfb><c:/texlive/2009/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmssi8.pfb><c:/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><c:/texlive/2009/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on fredericton-handout.pdf (8 pages, 290522 bytes).
+PDF statistics:
+ 168 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 161 words of extra memory for PDF output out of 10000 (max. 10000000)
+

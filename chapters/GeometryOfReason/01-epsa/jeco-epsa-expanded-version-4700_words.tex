@@ -1,0 +1,708 @@
+% jeco.tex is the official version
+% the official version of the pdf is on overleaf.com
+
+\documentclass[11pt]{article}
+\usepackage{october}
+% For BJPS
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+\begin{document}
+% For BJPS
+% \raggedright
+% \doublespacing
+
+% y=3;z=4;pdftk A=epsa-jeffrey-conditioning\ \($y\).pdf cat A1-$z output wc-out.pdf
+
+\title{Jeffrey Conditioning and the Geometry of Reason}
+\author{(Author)}
+\date{}
+\maketitle
+\newcounter{expls}
+% \doublespacing
+
+\begin{abstract}
+  {\noindent}Defenders of the epistemic utility approach to Bayesian
+  epistemology use the geometry of reason to justify the foundational
+  Bayesian tenets of probabilism and standard conditioning. The
+  geometry of reason is the view that the underlying topology for
+  credence functions is a metric space, on the basis of which axioms
+  and theorems of epistemic utility for partial beliefs are
+  formulated. It implies that Jeffrey conditioning must cede to an
+  alternative form of conditioning. The latter fails five plausible
+  expectations, which Jeffrey conditioning fulfills, and brings with
+  it unacceptable results in certain cases. The solution to this
+  problem is to reject the geometry of reason and accept information
+  theory in its stead. Information theory comes fully equipped with an
+  axiomatic approach which covers probabilism, standard conditioning,
+  and Jeffrey conditioning. It is not based on an underlying topology
+  of a metric space, but uses asymmetric divergences instead of a
+  symmetric distance measure.
+\end{abstract}
+
+\section{Introduction}
+\label{intr}
+
+The \qnull{geometry of reason,} a term coined by Richard Pettigrew and
+Hannes Leitgeb, refers to a view of epistemic utility in which the
+underlying topology for credence functions (which may be subjective
+probability distributions) on a finite number of events is a metric
+space. Consider a 6-sided die. Probabilism assumed (we may drop this
+assumption later on and try to show that probabilism is justified on
+the basis of maximizing epistemic utility), the possible credence
+functions of an agent are isomorphic to the 6-dimensional simplex
+($\mathbb{S}^6\subset\mathbb{R}^6$) for which
+
+\begin{equation}
+  \label{eq:simplex}
+  p_{1}+p_{2}+p_{3}+p_{4}+p_{5}+p_{6}=1
+\end{equation}
+
+Since the isomorphism is to a metric space, there is now a distance
+relation between credence functions which can be used to formulate
+axioms relating credences to epistemic utility and justify or
+criticize contentious positions such as Bayesian conditionalization,
+the principle of indifference, other forms of conditioning, or
+probabilism itself (for probabilism the isomorphism is usually to
+$\mathbb{R}_{\geq{}0}^{6}$, since the simplex isomorphism assumes
+probabilism). Before I introduce the notion of epistemic utility and
+some of the substantial claims in the literature that epistemic
+utility together with the geometry of reason give us, I want to spell
+out my claim that (a) given an epistemic utility approach and some
+intuitive axioms, the geometry of reason leads itself ad absurdum; and
+(b) there is a viable alternative to the geometry of reason which
+avoids the problematic implications: information theory. For
+information theory, as opposed to the geometry of reason, the
+underlying topology for credence functions is not a metric space.
+Before I argue for my claim, we need to achieve clarity on the
+epistemic utility approach (contrasted most usefully with a pragmatic
+utility approach) and look at the impressive results of applying the
+geometry of reason.
+
+Epistemic utility in Bayesian epistemology has attracted some
+attention in the past few years. Patrick Maher provides a compelling
+acceptance-based account of epistemic utility (see
+\scite{8}{maher93}{182--207}). James Joyce, in \qeins{A Nonpragmatic
+  Vindication of Probabilism,} defends probabilism supported by
+partial-belief-based epistemic utility rather than the pragmatic
+utility we are used to in Dutch-book style arguments (see
+\scite{7}{joyce98}{}). For Joyce, norms of gradational accuracy
+characterize the epistemic utility approach to partial beliefs,
+analogous to norms of truth for full beliefs.
+
+David Wallace and Hilary Greaves investigate epistemic utility
+functions along \qnull{stability} lines and conclude that for
+everywhere stable utility functions standard conditioning is optimal,
+while only somewhere stable utility functions create problems for
+maximizing expected epistemic utility norms (see
+\scite{7}{greaveswallace06}{}; and \scite{7}{pettigrew13}{}). Richard
+Pettigrew and Hannes Leitgeb have published arguments that under
+certain assumptions probabilism and standard conditioning (which
+together give epistemology a distinct Bayesian flavour) minimize
+inaccuracy, thereby providing maximal epistemic utility (see
+Leitgeb and Pettigrew, 2010a\fixref{7}{leitgebpettigrew10i}{} and
+2010b\fixref{7}{leitgebpettigrew10ii}{}).
+
+Leitgeb and Pettigrew show, given the geometry of reason and other
+axioms inspired by Joyce (normality, dominance), that in
+order to avoid epistemic dilemmas we must commit ourselves to a Brier
+score measure of inaccuracy and subsequently to probabilism and
+standard conditioning. Jeffrey conditioning (also called probability
+kinematics) is widely considered to be a common sense extension of
+standard conditioning. On Leitgeb and Pettigrew's account, it fails to
+provide maximal epistemic utility. Another type of conditioning, which
+we will call LP conditioning, takes the place of Jeffrey conditioning.
+
+The failure of Jeffrey conditioning to minimize inaccuracy on the
+basis of the geometry of reason casts, by reductio, doubt on the
+geometry of reason. To relate probability distributions to each other
+geometrically, using the isomorphism between the set of probability
+distributions on a finite event space $W$ with $|W|=n$ and the
+$n$-dimensional simplex $\mathbb{S}^{n}\subset\mathbb{R}^{n}$, is
+initially an arbitrary move. Leitgeb and Pettigrew do little to
+substantiate a link between the geometry of reason and epistemic
+utility. I will show that between Jeffrey conditioning and LP
+conditioning we have good reasons to favour Jeffrey conditioning.
+
+The question then remains whether we have a plausible candidate to
+supplant the geometry of reason. The answer is yes: information theory
+provides us with a measure of closeness between probability
+distributions on a finite event space that has more intuitive appeal
+than the geometry of reason, especially with respect to epistemic
+utility---it is intuitively correct to relate coming-to-knowledge to
+exchange of information. More persuasive than intuitions, however, is
+the fact that information theory supports both standard conditioning
+(see \scite{7}{williams80}{}) and the extension of standard
+conditioning to Jeffrey conditioning (see
+\scite{7}{catichagiffin06}{}; and \scite{7}{lukits15}{}), an extension
+which is on the one hand commonsensical (see \scite{7}{wagner02}{})
+and on the other hand formally continuous with the standard
+conditioning which Leitgeb and Pettigrew have worked so hard to
+vindicate nonpragmatically (see \scite{7}{levinstein12}{}).
+
+There are four sections to come [note that this needs to be updated].
+Section \ref{eugr} articulates the geometry of reason and provides a
+brief overview of Leitgeb and Pettigrew's strategy to give probabilism
+and standard conditioning a foundation in epistemic utility. Section
+\ref{grit} gives a simple example where the geometry of reason and
+information theory give different results about the closeness of
+probability distributions. The geometry of reason supports LP
+conditioning, information theory supports Jeffrey conditioning.
+Section \ref{fivex} provides reasons why Jeffrey conditioning is
+superior to LP conditioning on independent grounds, since LP
+conditioning violates five commonsense expectations which Jeffrey
+conditioning fulfills. Section \ref{ascc} draws the conclusion that
+information theory, not the geometry of reason, reflects in formal
+terms what epistemic utility expresses in informal terms. Information
+theory notably is not a geometry of reason because its measure of
+closeness between probability distributions is not symmetrical. This
+asymmetry speaks in favour of information theory because it reflects
+epistemic asymmetries for which a non-geometrical approach can provide
+the better account.
+
+A further conclusion of my argument is that Joyce's axioms of
+gradational accuracy, based as they are on the geometry of reason,
+need to be reformulated. Fortunately, Joyce's result still stands,
+vindicating probabilism on epistemic merits rather than prudential
+ones: partial beliefs which violate probabilism are dominated by
+partial beliefs which obey it, no matter what the facts are. Without
+the geometry of reason, however, it is necessary to modify Joyce's
+axioms of normality, weak convexity, and symmetry.
+
+\section{Epistemic Utility and the Geometry of Reason}
+\label{eugr}
+
+There is more epistemic virtue for an agent in believing a truth
+rather than not believing it and in not believing a falsehood rather
+than believing it. Accuracy in full belief epistemology can be
+measured by counting four sets, believed truths and falsehoods as well
+as unbelieved truths and falsehoods, and somehow relating them to each
+other such that epistemic virtue is rewarded and epistemic vice
+penalized. Accuracy in partial belief epistemology must take a
+different shape since as a \qnull{guess} all partial non-full beliefs
+are off the mark so that they need to be appreciated as
+\qnull{estimates} instead. Richard Jeffrey distinguishes between
+guesses and estimates: a guess fails unless it is on target, whereas
+an estimate succeeds depending on how close it is to the target.
+
+The gradational accuracy needed for partial belief epistemology is
+reminiscent of verisimilitude and its associated difficulties in the
+philosophy of science [references]. Both Joyce and Leitgeb/Pettigrew
+propose axioms for a measure of gradational accuracy for partial
+beliefs relying on the geometry of reason, i.e.\ the idea of
+geometrical distance between distributions of partial belief expressed
+in non-negative real numbers. In Joyce, the geometry of reason is
+adopted without much reflection. Terms such as \qnull{midpoint}
+between two distributions and $\lambda{}b'+(1-\lambda)b''$ for
+distributions \qnull{between} two distributions $b'$ and $b''$ are
+used freely. Leitgeb and Pettigrew muse about alternative geometries,
+especially non-Euclidean ones. They suspect that these would be based
+on and in the end reducible to Euclidean geometry but they do not
+entertain the idea that they could drop the requirement of a metric
+topology.
+
+Once a geometry of reason is in place, interesting and substantial
+results follow. Leitgeb and Pettigrew define two notions, local and
+global inaccuracy, and show that one must adopt a Brier score to
+measure inaccuracy in order to avoid epistemic dilemmas trying to
+minimize inaccuracy on both measures. To give the reader an idea what
+this looks like in detail and for purposes of later exposition, I want
+to provide some of the formal apparatus. Let $W$ be a set of worlds
+and $A\subseteq{}W$ a proposition. Then
+
+\begin{equation}
+  \label{eq:linacc}
+  I:P(W)\times{}W\times{}\mathbb{R}^{+}_{0}\rightarrow\mathbb{R}^{+}_{0}
+\end{equation}
+
+{\noindent}is a measure of local inaccuracy such that $I(A,w,x)$
+measures the inaccuracy of the degree of credence $x$ with respect to
+$A$ at world $w$. Let $\mbox{Bel}(W)$ be the set of all belief
+functions (what we have been calling distributions of partial belief).
+Then
+
+\begin{equation}
+  \label{eq:ginacc}
+  G:W\times\mbox{Bel}(W)\rightarrow\mathbb{R}^{+}_{0}
+\end{equation}
+
+{\noindent}is a measure of global inaccuracy of a belief function $b$
+at a possible world $w$ such that $G(w,b)$ measures the inaccuracy of
+a belief function $b$ at world $w$.
+
+Axioms such as normality and dominance guarantee that the only
+legitimate measure of inaccuracy are Brier scores if one wants to
+avoid epistemic dilemmas where one receives conflicting advice from
+the local and the global measures. For local inaccuracy measures, this
+means that there is $\lambda\in\mathbb{R}^{+}$ such that
+
+\begin{equation}
+  \label{eq:e1}
+  I(A,w,x)=\lambda\left(\chi_{A}(w)-x\right)^{2}
+\end{equation}
+
+where $\chi_{A}$ is the characteristic function of $A$. For global
+inaccuracy measures, this means that there is $\mu\in\mathbb{R}^{+}$
+such that
+
+\begin{equation}
+  \label{eq:e2}
+  G(w,b)=\mu\|w-b\|^{2}
+\end{equation}
+
+where $w$ and $b$ are represented by vectors and $\|u-v\|$ is the
+Euclidean distance
+
+\begin{equation}
+  \label{eq:e3}
+  \sqrt{\sum_{i=1}^{n}\left(u_{i}-v_{i}\right)^{2}}.
+\end{equation}
+
+We use (\ref{eq:e1}) to define expected local inaccuracy of degree of
+belief $x$ in proposition $A$ by the lights of belief function $b$,
+with respect to local inaccuracy measure $I$, and over the set $E$ of
+epistemically possible worlds as follows:
+
+\begin{equation}
+  \label{eq:eli}
+  \mbox{LExp}_{b}(I,A,E,x)=\sum_{w\in{}E}b(\{w\})I(A,w,x)=\sum_{w\in{}E}b(\{w\})\lambda\left(\chi_{A}(w)-x\right)^{2}.
+\end{equation}
+
+We use (\ref{eq:e2}) to define expected global inaccuracy of belief
+function $b'$ by the lights of belief function $b$, with respect to
+global inaccuracy measure $G$, and over the set $E$ of epistemically
+possible worlds as follows:
+
+\begin{equation}
+  \label{eq:egi}
+  \mbox{GExp}_{b}(G,E,b')=\sum_{w\in{}E}b(\{w\})G(w,b')=\sum_{w\in{}E}b(\{w\})\mu\|w-b\|^{2}.
+\end{equation}
+
+To give a flavour of how attached the axioms are to the geometry of
+reason, here are Joyce's axioms called Weak Convexity and Symmetry,
+which he uses to justify probabilism:
+
+\begin{quotex}
+  \textbf{Weak Convexity}: Let $m=(0.5b'+0.5b'')$ be the midpoint of the line
+  segment between $b'$ and $b''$. If $I(b',\omega)=I(b'',\omega)$,
+  then it will always be the case that $I(b',\omega)\geq{}I(m,\omega)$
+  with identity only if $b'=b''$.
+\end{quotex}
+
+\begin{quotex}
+  \textbf{Symmetry}: If $I(b',\omega)=I(b'',\omega)$, then for any
+  $\lambda\in{}[0,1]$ one has\newline
+  $I(\lambda{}b'+(1-\lambda)b'',\omega)=I((1-\lambda){}b'+\lambda{}b''),\omega)$.
+\end{quotex}
+
+Joyce advocates for these axioms in geometrical terms, using
+justifications such as \qeins{the change in belief involved in going
+  from $b'$ to $b''$ has the same direction but a doubly greater
+  magnitude than change involved in going from $b'$ to [the midpoint]
+  $m$} (see \scite{8}{joyce98}{596}). Once I have established my
+alternative account, I will give counterexamples where these axioms
+are violated. The final task will be to show how these axioms and the
+geometry of reason justifying them saddle us with counterintuitive
+results on their own terms. This will establish the alternative
+(information theory) as a superior alternative. Before I do this,
+however, I will show how the geometry of reason works in Leitgeb and
+Pettigrew's account, since their account more so than Joyce's will
+give us leverage in identifying its shortcomings.
+
+Leitgeb and Pettigrew's work is continuous with Joyce's work, but
+significantly goes beyond it. Joyce wants much weaker assumptions and
+would be leery of expected inaccuracies (\ref{eq:eli}) and
+(\ref{eq:egi}), as they might presuppose the probabilism that Joyce
+wants to justify axiomatically without begging the question. Leitgeb
+and Pettigrew investigate not only whether probabilism and standard
+conditioning follow from gradational accuracy based on the geometry of
+reason, but also uniform distribution (their term for the claim of
+objective Bayesians that there is some principle of indifference for
+ignorance priors) and Jeffrey conditioning. They show that uniform
+distribution requires additional axioms which are much less plausible
+than the ones on the basis of which they derive probabilism and
+standard conditioning (see \scite{8}{leitgebpettigrew10ii}{250f}); and
+that Jeffrey conditioning does not fulfill Joyce's Norm of Gradational
+Accuracy (see \scite{8}{joyce98}{579}), in short that it violates the
+pursuit of epistemic virtue. Leitgeb and Pettigrew provide us with an
+alternative method of updating for Jeffrey-type updating scenarios,
+which I will call LP conditioning.
+
+Here is a brief example of a Jeffrey-type updating scenario. Sherlock
+Holmes attributes the following probabilities to the propositions
+$E_{i}$ that $k_{i}$ is the culprit in a crime:
+$P(E_{1})=1/3,P(E_{2})=1/2,P(E_{3})=1/6$, where $k_{1}$ is Mr.\ R.,
+$k_{2}$ is Ms.\ S., and $k_{3}$ is Ms.\ T. Then Holmes finds some
+evidence which convinces him that $P'(Y)=1/2$, where $Y$ is the
+proposition that the culprit is male and $P$ is relatively prior to
+$P'$. What should be Holmes' updated probability that Ms.\ S. is the
+culprit? We will look at the recommendations of Jeffrey conditioning
+and LP conditioning for this case in the next section. For now, we
+note that LP conditioning violates all of the following plausible
+expectations for an amujus, an \qnull{alternative method of updating
+  for Jeffrey-type updating scenarios.}
+
+\begin{itemize}
+\item \textsc{continuity} An amujus ought to be continuous with
+  standard conditioning as a limiting case.
+\item \textsc{invariance} An amujus ought to be partition invariant.
+\item \textsc{levinstein} An amujus ought not to give \qeins{extremely
+    unattractive} results in a Levinstein scenario (see
+  \scite{7}{levinstein12}{}).
+\item \textsc{regularity} An amujus ought not to assign a posterior
+  probability of $0$ to an event which has a positive prior
+  probability and about which the intervening evidence says nothing
+  except that a strictly weaker event has a positive posterior
+  probability.
+\item \textsc{asymmetry} An amujus ought to reflect epistemic
+  asymmetries.
+\end{itemize}
+
+We are faced with the choice of rejecting the geometry of reason or
+accepting these unpleasant consequences. Fortunately, there is a live
+alternative to the geometry of reason: information theory. Information
+theory has its own axiomatic approach to justifying probabilism and
+standard conditioning (see \scite{7}{shorejohnson80}{}). Furthermore,
+information theory provides a justification for Jeffrey conditioning
+and generalizes it (see \scite{7}{lukits15}{}). Information theory is
+not a geometry of reason in the sense that it measures divergences,
+not distances, between distributions of partial belief. In other
+words, the divergence of $b''$ from $b'$ may not be equal to the
+divergence of $b'$ from $b''$. Updating methods based on information
+theory (standard conditioning, Jeffrey conditioning, the principle of
+maximum entropy) fulfill expectations \textsc{continuity},
+\textsc{invariance}, \textsc{levinstein}, \textsc{regularity}, and
+\textsc{asymmetry}.
+
+Returning from general argument to mathematical detail, salient axioms
+in Leitgeb and Pettigrew are both local and global Normality and
+Dominance (see \scite{8}{leitgebpettigrew10i}{219}):
+
+\begin{quotex}
+  \textbf{Local Normality and Dominance}: If $I$ is a legitimate
+  inaccuracy measure, then there is a strictly increasing function
+  $f:\mathbb{R}^{+}_{0}\rightarrow\mathbb{R}^{+}_{0}$ such that, for
+  any $A\in{}W$, $w\in{}W$, and $x\in\mathbb{R}^{+}_{0}$,
+  \begin{equation}
+    \label{eq:e4}
+    I(A,w,x)=f\left(|\chi_{A}(w)-x|\right).
+  \end{equation}
+\end{quotex}
+
+\begin{quotex}
+  \textbf{Global Normality and Dominance}: If $G$ is a legitimate
+  global inaccuracy measure, there is a strictly increasing function
+  $g:\mathbb{R}^{+}_{0}\rightarrow\mathbb{R}^{+}_{0}$ such that, for
+  all worlds $w$ and belief functions $b\in{}\mbox{Bel}(W)$,
+  \begin{equation}
+    \label{eq:e5}
+  G(w,b)=g\left(\|w-b_{\mbox{{\tiny glo}}}\|\right).
+  \end{equation}
+\end{quotex}
+
+Similarly to Joyce, these axioms are justified on the basis of
+geometry, but this time more explicitly so:
+
+\begin{quotex}
+  Normality and Dominance [are] a consequence of taking seriously the
+  talk of inaccuracy as \qnull{distance} from the truth, and [they
+  endorse] the geometrical picture provided by Euclidean $n$-space as
+  the correct clarification of this notion. As explained in section
+  3.2, the assumption of this geometrical picture is one of the
+  presuppositions of our account, and we do not have much to offer in
+  its defense, except for stressing that we would be equally
+  interested in studying the consequences of minimizing expected
+  inaccuracy in a non-Euclidean framework. But without a doubt,
+  starting with the Euclidean case is a natural thing to do.
+\end{quotex}
+
+The next section provides a simple example where the distance of
+geometry and the divergence of information theory differ. With this
+difference in mind, I will show how LP conditioning fails the five
+expectations outlined above. The conclusion is that a rational agent
+uses information theory, not the geometry of reason.
+
+\section{Geometry of Reason versus Information Theory}
+\label{grit}
+
+Consider the following three points in three-dimensional space: 
+
+\begin{equation}
+  \label{eq:e6}
+    A=\left(\frac{1}{3},\frac{1}{2},\frac{1}{6}\right) \hspace{.5in}
+    B=\left(\frac{1}{2},\frac{3}{8},\frac{1}{8}\right)  \hspace{.5in}
+    C=\left(\frac{1}{2},\frac{5}{12},\frac{1}{12}\right)
+\end{equation}
+
+All three are elements of the three-dimensional simplex
+$\mathbb{S}^{3}$: their coordinates add up to $1$. Thus they represent
+probability distributions over a partition of the event space into
+three events. Now call $D_{\mbox{\tiny KL}}(A,B)$ the Kullback-Leibler
+divergence of $B$ from $A$ defined as follows, where $a_{i}$ are the
+Cartesian coordinates of $A$:
+
+\begin{equation}
+  \label{eq:e7}
+  D_{\mbox{\tiny KL}}(A,B)=\sum_{i=1}^{3}a_{i}\ln\frac{a_{i}}{b_{i}}
+\end{equation}
+
+The Euclidean distance $\|A-B\|$ is defined as in equation
+(\ref{eq:e3}). What is remarkable about the three points in
+(\ref{eq:e6}) is that [what is remarkable here?? shouldn't we be
+comapring the differences in global expectation, metric distance AND
+Kullback-Leibler?]
+
+\begin{equation}
+  \label{eq:e8}
+  \mbox{GExp}_{A}(C)\approx{}0.653<\mbox{GExp}_{A}(B)\approx{}0.656
+\end{equation}
+
+and
+
+\begin{equation}
+  \label{eq:e9}
+  \|A-C\|\approx{}0.057<\|A-B\|\approx{}0.072
+\end{equation}
+
+assuming in (\ref{eq:e8}) the global inaccuracy measure presented in
+(\ref{eq:e2}) and $E=W$ (all possible worlds are epistemically
+accessible). The Kullback-Leibler divergence and Euclidean distance
+give different recommendations with respect to closeness. If $A$
+corresponds to my prior and my evidence is such that I must change the
+first coordinate to $1/2$ and nothing stronger, then information
+theory via the Kullback-Leibler divergence recommends the posterior
+corresponding to $B$; and the geometry of reason as expounded in
+Leitgeb and Pettigrew recommends the posterior corresponding to $C$. 
+
+There are several things going on here that need some explanation.
+First, we note that for Leitgeb and Pettigrew, expected global
+inaccuracy of $b'$ is always evaluated by the lights of another
+partial belief distribution $b$. This may sound counterintuitive.
+Should we not evaluate $b'$ by its own lights? It is part of a larger
+Bayesian commitment that partial belief distributions are not created
+ex nihilo. They can also not be evaluated for inaccuracy ex nihilo.
+Leitgeb and Pettigrew say very little about this, but it appears that
+there is a deeper problem here with the flow of diachronic updating.
+The classic Bayesian picture is one of moving from a relatively prior
+probability distribution to a posterior distribution. This is nicely
+captured by standard conditioning, Bayes' formula, and updating on the
+basis of information theory (the Kullback-Leibler divergence reflects
+this flow by asymmetries which we will bring up again below).
+
+The geometry of reason and notions of accuracy based on it sit
+uncomfortably with this idea of flow, as the suggestion is that
+partial belief distributions are evaluated on their accuracy without
+reference to a prior probability distributions---why should the
+accuracy or epistemic virtue of a posterior probability distribution
+depend on a prior probability distribution which has already been
+debunked by the evidence? I agree with Leitgeb and Pettigrew that
+there is no alternative here but to evaluate the posterior by the
+lights of the prior. Not doing so would saddle us with Carnap's
+Straight Rule, where priors are dismissed as irrelevant (see
+\scite{8}{carnap52}{40ff}). Yet we shall note that a justification of
+evaluating a belief function's accuracy by the lights of another
+belief function is a lot less persuasive than the way Bayesians and
+information theory integrate prior distributions into forming
+posterior distributions by virtue of an asymmetric flow of
+information.
+
+Second, I want to outline how Leitgeb and Pettigrew arrive at
+posterior probability distributions in Jeffrey-type updating
+scenarios. I will call their method LP conditioning. Consider a
+possibility space $W=E_{1}\cup{}E_{2}\cup{}E_{3}$ (the $E_{i}$ are
+sets of states which are pairwise disjoint and whose union is $W$) and
+a partition $\mathcal{F}$ of $W$ such that
+$\mathcal{F}=\{F^{*},F^{**}\}=\{E_{1},E_{2}\cup{}E_{3}\}$. Let
+$P$ be the prior probability function on $W$ and $P'$ the posterior. I
+will keep the notation informal to make this simple, not
+mathematically precise. Jeffrey-type updating scenarios give us new
+information on the posterior probabilities of partitions such as
+$\mathcal{F}$. In our example, let
+
+\begin{equation}
+  \label{eq:priors}
+  \begin{array}{rcl}
+    P(E_{1})&=&1/3 \\
+    P(E_{2})&=&1/2 \\
+    P(E_{3})&=&1/6
+  \end{array}
+\end{equation}
+
+and the new evidence constrain $P'$ such that
+$P'(F^{*})=1/2=P'(F^{**})$.
+
+Jeffrey conditioning works on the following intuition, which elsewhere
+I have called Jeffrey's updating principle \textsc{jup} (see also
+\scite{7}{wagner02}{}) and where the posterior probabilities
+conditional on the partition elements equal the prior probabilities
+conditional on the partition elements (since we have no information in
+the evidence that they should have changed):
+
+\begin{align}
+  \label{eq:jc}
+  &P'_{\mbox{\tiny JC}}(E_{i})&=&P'(E_{i}|F^{*})P'(F^{*})+P'(E_{i}|F^{**})P'(F^{**})\notag \\
+  &&=&P(E_{i}|F^{*})P'(F^{*})+P(E_{i}|F^{**})P'(F^{**})
+\end{align}
+
+Jeffrey conditioning is controversial (for an introduction to Jeffrey
+conditioning see \scite{7}{jeffrey65}{}; for its statistical and
+formal properties see \scite{7}{diaconiszabell82}{}; for a pragmatic
+vindication of Jeffrey conditioning see \scite{7}{armendt80}{}, and
+\scite{7}{skyrms86}{}; for criticism see
+\scite{7}{howsonfranklin94}{}). Information theory, however, supports
+Jeffrey conditioning. Leitgeb and Pettigrew show that Jeffrey
+conditioning does not in general pick out the minimally inaccurate
+posterior probability distribution. If the geometry of reason as
+presented in Leitgeb and Pettigrew is sound, this would constitute a
+powerful criticism of Jeffrey conditioning. Leitgeb and Pettigrew
+introduce an alternative to Jeffrey conditioning, which we have called
+LP conditioning. It proceeds as follows for our example and in general
+provides the minimally inaccurate posterior probability distribution
+in Jeffrey-type updating scenarios.
+
+Solve the following two equations for $x$ and $y$:
+
+\begin{equation}
+  \label{eq:lpce}
+  \begin{array}{rcl}
+    P(E_{1})+x&=&P'(F^{*}) \\
+    P(E_{2})+y+P(E_{3})+y&=&P'(F^{**})
+  \end{array}
+\end{equation}
+
+and then set
+
+\begin{equation}
+  \label{eq:lpcf}
+  \begin{array}{rcl}
+    P'_{\mbox{\tiny LP}}(E_{1})&=&P(E_{1})+x \\
+    P'_{\mbox{\tiny LP}}(E_{2})&=&P(E_{2})+y \\
+    P'_{\mbox{\tiny LP}}(E_{3})&=&P(E_{3})+y
+  \end{array}
+\end{equation}
+
+For the more formal and more general account see
+\scite{8}{leitgebpettigrew10ii}{254}. The results for our toy example
+are:
+
+\begin{equation}
+  \label{eq:lpcres}
+  \begin{array}{rcl}
+    P'_{\mbox{\tiny LP}}(E_{1})&=&1/2 \\
+    P'_{\mbox{\tiny LP}}(E_{2})&=&5/12 \\
+    P'_{\mbox{\tiny LP}}(E_{3})&=&1/12
+  \end{array}
+\end{equation}
+
+Compare these results to the results of Jeffrey conditioning:
+
+\begin{equation}
+  \label{eq:jcres}
+  \begin{array}{rcl}
+    P'_{\mbox{\tiny JC}}(E_{1})&=&1/2 \\
+    P'_{\mbox{\tiny JC}}(E_{2})&=&3/8 \\
+    P'_{\mbox{\tiny JC}}(E_{3})&=&1/8
+  \end{array}
+\end{equation}
+
+Note that (\ref{eq:priors}), (\ref{eq:jcres}), and (\ref{eq:lpcres})
+correspond to $A,B,C$ in (\ref{eq:e6}). Now we will show how LP
+conditioning violates the five expectations. Because Leitgeb and
+Pettigrew's reasoning is valid, it cannot be sound. The premise to
+reject is the geometry of reason. Fortunately, information theory
+replaces it and yields results that fulfill the five expectations.
+
+\section{Five Expectations}
+\label{fivex}
+
+It remains to provide more detail for the five expectations and to
+show how LP conditioning violates them. The full-length paper does so
+with formal rigour and by giving simple hands-on examples. In this
+abstract, I can only provide a short synopsis. LP conditioning
+violates \textsc{continuity} because standard conditioning gives a
+different recommendation than a series of Jeffrey-type updating
+scenarios which get arbitrarily close to standard event observation.
+This is especially troubling considering how important the case for
+standard conditioning is to Leitgeb and Pettigrew.
+
+LP conditioning violates \textsc{invariance} because two agents who
+have identical credences with respect to a partition of the event
+space may disagree about this partition after LP conditioning, even
+when the Jeffrey-type updating scenario provides no new information
+about the more finely grained partitions on which the two agents
+disagree.
+
+LP conditioning violates \textsc{levinstein} because of \qeins{the
+  potentially dramatic effect [LP conditioning] can have on the
+  likelihood ratios between different propositions}
+\scite{3}{levinstein12}{419}. Consider Benjamin Levinstein's example:
+There is a car behind an opaque door, which you are almost sure is
+blue but which you know might be red. You are almost certain of
+materialism, but you admit that there's some minute possibility that
+ghosts exist. Now the opaque door is opened, and the lighting is
+fairly good. You are quite surprised at your sensory input: your new
+credence that the car is red is very high. Jeffrey conditioning leads
+to no change in opinion about ghosts. Under LP conditioning, however,
+seeing the car raises the probability that there are ghosts to an
+astonishing 47\%, given Levinstein's reasonable priors. Levinstein
+proposes a logarithmic inaccuracy measure as a foundation to avoid
+violation of \textsc{levinstein} (vaguely related to the
+Kullback-Leibler divergence), but his account falls far short of the
+formal scope, substance, and integrity of information theory.
+
+LP conditioning violates \textsc{regularity} because formerly positive
+probabilities can be reduced to $0$ even though the new information in
+the Jeffrey-type updating scenario makes no such requirements (as is
+usually the case for standard conditioning). Ironically, Jeffrey-type
+updating scenarios are meant to be a better reflection of real-life
+updating because they avoid extreme probabilities. The violation
+becomes especially egregious if we are already somewhat sympathetic to
+an information-based account: the amount of information required to
+turn a non-extreme probability into one that is extreme ($0$ or $1$)
+is infinite. Whereas the geometry of reason considers extreme
+probabilities to be easily accessible by non-extreme probabilities
+under new information (much like a marble rolling off a table or a
+bowling ball heading for the gutter), information theory envisions
+extreme probabilities more like an event horizon. The nearer you are
+to the extreme probabilities, the more information you need to move
+on. For an observer, the horizon is never reached.
+
+LP conditioning violates \textsc{asymmetry} for reasons related to
+\textsc{regularity}. Even the scrupulous about partial beliefs (such
+as Isaac Levi in Jeffrey's \qeins{Dracula Meets Wolfman: Acceptance
+  vs. Partial Belief}) concede that extreme probabilities are special
+and induce asymmetries in updating: moving in direction from certainty
+to uncertainty is asymmetrical to moving in direction from uncertainty
+to certainty. Geometry of reason's metric topology, however, allows
+for no asymmetries. Henri Poincar{\'e} once suggested that it could
+never be experimentally demonstrated that physical space was best
+modeled by a Euclidean topology, but a Euclidean topology was the
+simplest and therefore the preferable model. Impressed by Albert
+Einstein's relativity theory, Ernst Cassirer reinterpreted
+Poincar{\'e}'s argument and suggested that once the universe is
+populated (by objects creating gravitational fields) a non-Euclidean
+topology is a simpler model for physical space. I would use this
+analogy here to suggest that once epistemology is populated with
+certainties, the geometry of reason (whether Euclidean or
+non-Euclidean) is no longer the simplest and most effective
+explanatory model.
+
+\section{Conclusion}
+\label{ascc}
+
+In conclusion, Leitgeb and Pettigrew's reasoning to establish LP
+conditioning on the basis of the geometry of reason is valid. Given
+the failure of LP conditioning with respect to the five expectations,
+it cannot be sound. The premise to reject is the geometry of reason.
+Fortunately, information theory replaces it and yields results that
+fulfill the five expectations.
+
+% \section{References}
+% \label{refs}
+
+% \nocite{*} 
+\bibliographystyle{ChicagoReedweb} 
+\bibliography{bib-2902}
+
+\end{document} 
+

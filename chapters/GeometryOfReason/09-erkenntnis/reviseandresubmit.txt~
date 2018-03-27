@@ -1,0 +1,215 @@
+I want to address each point the referees have made and indicate how I
+have addressed it.
+
+REVIEWER I
+
+(xx) Making the argument more clear.
+
+I have given the paper a more detailed structure and introduced
+subsections. I have completely rewritten the introduction to clarify
+and focus the argument.
+
+(xx) Sections and their headlines should better guide the reader.
+
+I have restructured this paper, especially the beginning sections, and
+introduced subsections.
+
+(xx) Adding a conclusions section is a must.
+
+A conclusion has been added.
+
+(xx) Clarifying the originality of content.
+
+I have clearly flagged subsections whose results depend on other
+authors; the characterization theorem for proper scoring rules is due
+to McCarthy as well as Henderson and Buehler; the symmetry and
+locality proofs are due to Savage, although I have expanded and
+clarified Savage's proof. Continuity, regularity, and the Levinstein
+argument are due to Levinstein. The remaining arguments and proofs are
+mine.
+
+(xx) Assessing the badness of failing.
+
+I have introduced various references to Richard Pettigrew's book
+``Accuracy and the Laws of Credence'' where symmetry is defended and
+mounted a sustained argument against this position.
+
+(xx) Adding a table with the different desiderata.
+
+The table has been added with annotations.
+
+(xx) Minor comments by first referee.
+
+(yy) There are no longer sections with only one subsection.
+
+(yy) The remark on page 3 has been deleted.
+
+(yy) ``(0.5P+0.5Q)--this does not require a Euclidean metric.''
+
+That is correct. I have added a clarifying note that Joyce uses the
+geometry of reason in as much as he requires (0.5P+0.5Q) to be
+epistemically symmetric with respect to its parents P and Q, which is
+according to the symmetry argument by Savage equivalent to an
+endorsement of the geometry of reason.
+
+(yy) I have provided a definition of a simplex near the beginning of
+the paper.
+
+(yy) ``L&P-updating should be introduced before it is applied.''
+
+I have rewritten the introductory sections to take care of this point.
+
+(yy) ``I don't like the word "expectation". It makes people think about
+expected val- ues. How about "desiderata", "properties" or something
+else?''
+
+This was a difficult point to address. While I understand the
+referee's concern, I was not able to come up with a substitute that
+didn't sound stilted, like the word ``desiderata.'' I played with
+expressions such as ``desired features'' and ``desired properties,''
+but in the end I chose to stick with ``expectations.''
+
+(yy) ``Are these lists meant to consist of intuitive statements or are
+the items natural language formulations of formal properties?''
+
+I consider them to be expressions of epistemic intuitions that in some
+instances can be formalized. Continuity, on the one hand, can be
+formalized painlessly; the formal representation of horizon, on the
+other hand, is an obvious artefact of the more comprehensive epistemic
+intuition. I have given expression to the artificial nature of this
+formalization in the revision.
+
+(yy) ``CONTINUITY and INVARIANCE: these properties need
+clarification.''
+
+I have included the mathematical definition as well as a more precise
+natural language formulation in the revision.
+
+(yy) I have abandoned the terminology ``amujus.''
+
+(yy) ``Page 11: Delete the sentence following (3).''
+
+Done. This was an error in the original paper. Thank you for pointing
+it out.
+
+(yy) ``Page 12: Where can I find the "brief sketch"?''
+
+I have clarified the terminology to refer to the immediately following
+mathematical analysis of the Holmes example.
+
+(yy) ``Page 14: "minimally inaccurate"--if one measures in their
+sense.''
+
+Quite right. I have reformulated this passage.
+
+(yy) ``Page 17: "meant to be"--by whom?''
+
+I have added a reference to clarify that I am talking about Richard
+Jeffrey.
+
+(yy) ``"It is called standard conditioning."--Delete this sentence.''
+
+Sentence has been deleted.
+
+(yy) ``Pages 28--30: A clearer structure of the argument would be nice
+here. The use of the "proof"-environment or other such structures is
+advisable.''
+
+This is excellent advice. I have restructured the whole paper, but
+also in particular this passage, using the proof environment in LaTeX.
+
+(yy) ``COLLINEAR HORIZON: This has strong Euclidean appeal. I wonder
+whether a "logarithmic" equivalent of co-linearity can be found.''
+
+I have added the following paragraph to the revision:
+
+The way I have formalized the horizon and collinear horizon
+requirement is artificial in the face of the more comprehensive
+epistemic intuition. Collinear horizon especially is dependent on the
+Euclidean idea of collinearity. In a more integrated account it would
+be desirable to have these requirements reformulated in a more general
+fashion; convexity may play a major role in such a reformulation. It
+could, perhaps, identify a divergence that does not violate horizon or
+reveal why the divergence of information theory violates it. (I thank
+an anonymous referee for bringing this point to my attention.)
+
+(yy) ``Page 33: "the information required is infinite."--outright
+impossible.''
+
+Yes. I am hoping that is the impact this statement makes on the
+reader.
+
+(yy) ``Page 34: "escapes any epistemic intuition"--if so, is this soo
+bad?''
+
+I think it is bad enough in the sense of awakening intellectual
+curiosity---why does information theory act in these unexpected ways?
+I suspect there are answers to these questions (I am actively working
+on finding them), and they could aid to find a more effective approach
+to formal partial belief representation in general (such as the use of
+differential geometry).
+
+(yy) ``Make indexing consistent. Either always or never. I prefer to
+always display the index.''
+
+I would also prefer to display the index consistently, but in this
+case I don't know where the index isn't displayed. Please clarify, and
+I will correct.
+
+
+REVIEWER II
+
+(xx) Discuss proposed responses on behalf of the advocate of
+LP-conditioning.
+
+This is one of the major issues I have addressed in the revision. I
+admit that I was not aware of Richard Pettigrew's 2016 book Accuracy
+and the Laws of Credence when I originally wrote the paper.
+Pettigrew's book is an excellent monograph on the topics covered in my
+paper. It takes a strong position on symmetry and therefore provides a
+perfect foil to highlight the contrasts in my paper (while also
+providing a summary of much of the technical detail that is also in my
+paper). I have completely rewritten the beginning pages of the paper
+to address and respond to Pettigrew's account.
+
+(xx) Expand on Leitgeb and Pettigrew's global/local inaccuracy account
+as well as Benjamin Levinstein's ghost story.
+
+For reasons of paper length, I have chosen not to follow this
+recommendation. Instead, I have made sure that there are clearly
+marked references to guide the reader to the literature. Leitgeb,
+Pettigrew, and Levinstein's accounts are complete and well-executed,
+so I did not feel a need to reiterate their arguments in an appendix.
+
+(xx) Reorganize the introduction.
+
+I have paid careful attention to this recommendation, as it was also
+voiced by the other referee. I have completely restructured the
+introduction, hoping that the road map for the paper has gained in
+clarity and substance without adding too much in length. I have split
+off a Features of Scoring Rules section in order to make the
+Introduction section shorter.
+
+(xx) Geometry of reason terminology.
+
+I have amended the paper to make clear that the term geometry of
+reason is Leitgeb and Pettigrew's.
+
+(xx) ``Leitgeb and Pettigrew muse about alternative geometries ...''
+
+I have cut this remark. It is obvious that Leitgeb and Pettigrew are
+well aware of alternative geometries.
+
+(xx) Prejudice for simplicity and starting with Euclidean geometry.
+
+These comments are well-placed. I have addressed them in two ways: (a)
+I have emphasized Thomas Mormann's assessment of dependence on
+Euclidean geometry in logic generally. (b) In this revision, I have
+more carefully identified Pettigrew's argument for
+simplicity/symmetry. According to Pettigrew, there is a lack of
+intuition whether the distance is from the ideal credence function to
+the partial belief or from the partial belief to the credence
+function. It is more symmetry than simplicity that makes Pettigrew
+take the next step towards endorsing symmetry. Yet then, with these
+kinds of arguments, there is always ``Symmetry and Its Discontents''
+(S.L. Zabell).

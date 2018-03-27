@@ -1,0 +1,45 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: word-version-for-paul.aux
+The style file: april.bst
+Database file #1: bib-3306.bib
+You've used 22 entries,
+            2791 wiz_defined-function locations,
+            723 strings with 7375 characters,
+and the built_in function-call counts, 10932 in all, are:
+= -- 904
+> -- 310
+< -- 25
++ -- 125
+- -- 93
+* -- 708
+:= -- 1711
+add.period$ -- 68
+call.type$ -- 22
+change.case$ -- 125
+chr.to.int$ -- 22
+cite$ -- 22
+duplicate$ -- 842
+empty$ -- 916
+format.name$ -- 151
+if$ -- 2165
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 175
+newline$ -- 114
+num.names$ -- 88
+pop$ -- 317
+preamble$ -- 1
+purify$ -- 119
+quote$ -- 0
+skip$ -- 347
+stack$ -- 0
+substring$ -- 580
+swap$ -- 417
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 180
+warning$ -- 0
+while$ -- 96
+width$ -- 0
+write$ -- 284

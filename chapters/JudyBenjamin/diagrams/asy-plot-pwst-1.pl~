@@ -1,0 +1,27 @@
+# print "Step? (e.g. .0001) ";
+# $s=<STDIN>;
+# chomp($s);
+# print "Beginning? (e.g. .01) ";
+# $b=<STDIN>;
+# chomp($b);
+open(plot,">./asy-plot-pwst-1.asy");
+for ($t=2;$t<50;++$t)
+{
+    $x=$t/($t+1);
+    $q=$x;
+    $expt=(2*($t**3))-(3*($t**2))+(4*$t)-5;
+    $q3=$t/($t+(.5*$t*$expt)+(.5*$expt));
+    $y=(1-$q3)*(1-$q);
+    print plot "pair zzz$i1=($x*n,$y*n);\n";
+}
+    print plot "path q1ch=";
+for ($i1=0;$i1<$n;++$i1)
+{
+    print plot "z$i1";
+unless ($i1==$n-1)
+{
+    print plot "--";
+}
+}
+    print plot ";\n";
+close(plot);

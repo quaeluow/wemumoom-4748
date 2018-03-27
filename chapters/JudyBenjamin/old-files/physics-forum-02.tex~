@@ -1,0 +1,15 @@
+[b]1. The problem statement, all variables and given/known data[/b]
+
+I need to sum the binomial coefficients that are divisible by a
+variable t, i.e.
+
+[tex][/tex]
+
+[b]2. Relevant equations[/b]
+
+
+
+[b]3. The attempt at a solution[/b]
+
+(fset 'stefan-insert-physics-forum-tex-quotes
+   "[tex][/tex]\C-u6\C-h")

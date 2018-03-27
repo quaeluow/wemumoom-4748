@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+
+\usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+\definecolor{lightgray}{gray}{0.9}
+\usepackage{graphicx}
+\usepackage{enumerate}
+
+\begin{document}
+
+This summarizes work done in February 2014. Sudelbuch around page 900.
+The problem is that we have an $m\times{}n$ joint prior probability
+matrix $p_{ij}$ with some zeroes in it (Wagner's constraints) that we want to
+transform into a joint posterior probability matrix $(q_{ij}$.
+
+(A) For $p_{ij}$, we use the constraints and \textsc{maxent}. (B) For
+$q_{ij}$, we use the observation and \emph{Infomin}.
+
+(A) Let
+$K=K_{\omega}\times{}K_{\theta}\subset\{1,\ldots,m\}\times\{1,\ldots,n\}$
+be the set for which $p_{ij}=0$ (iff $(i,j)\in{}K$). First let
+$K=\emptyset$.
+
+Then leonbloy on page 914 in Sudelbuch, using Cover and Thomas
+theorems 2.2.1. and 2.6.5., shows that
+$p_{ij}=P(\omega_{i})P(\theta_{i})$.
+
+To show this manually let $\alpha_{i}=P(\omega_{i})$ and
+$\beta_{j}=P(\theta_{j})$. Then the maximum entropy for $(p_{ij})$ is
+
+\begin{align}
+\label{eq:e1}
+  -H&=&\sum_{i=1}^{m-1}\sum_{j=1}^{n-1}x_{ij}\log{}x_{ij}+\sum_{i=1}^{m-1}\left(\alpha_{i}-\sum_{j=1}^{n-1}x_{ij}\right)log\left(\alpha_{i}-\sum_{j=1}^{n-1}x_{ij}\right)+ \notag \\
+& & \sum_{j=1}^{n-1}\left(\beta_{j}-\sum_{i=1}^{m-1}x_{ij}\right)\log\sum_{j=1}^{n-1}\left(\beta_{j}-\sum_{i=1}^{m-1}x_{ij}\right)+X\log{}X 
+\end{align}
+
+with
+
+\begin{equation}
+X=\left(1-\sum_{i=1}^{m-1}\alpha_{i}-\sum_{j=1}^{n-1}\beta_{j}+\sum_{i=1}^{m-1}\sum_{j=1}^{n-1}x_{ij}\right)\label{eq:e2}
+\end{equation}
+
+To find the extremum we differentiate with respect to $x_{ij}$ ($i$
+and $j$ now fixed) and set to $0$ (no Lagrange multipliers
+necessary, page 919).
+
+\begin{align}
+  \label{eq:e3}
+0&=&\log{}x_{ij}-\log\left(\alpha_{i}-\sum_{j=1}^{n-1}x_{ij}\right)-\log\left(\beta_{j}-\sum_{i=1}^{m-1}x_{ij}\right)+ \notag \\
+& & \log\left(1-\sum_{i=1}^{m-1}\alpha_{i}-\sum_{j=1}^{n-1}\beta_{j}+\sum_{i=1}^{m-1}\sum_{j=1}^{n-1}x_{ij}\right)
+\end{align}
+
+It is easy to see that $x_{ij}=\alpha_{i}\beta_{j}$ solves this.
+Therefore, $p_{ij}=P(\omega_{i})P(\theta_{i})$ is the maximum entropy
+solution for $K=\emptyset$.
+
+\end{document} 

@@ -1,0 +1,14 @@
+function y = s1161(x)
+y(1)=(46*x(1))-(100*x(1)*x(3))+(40*x(2))-12
+y(2)=(36*x(2))-(100*x(2)*x(3))+(30*x(1))-9
+y(3)=(6*x(1))+(6*x(2))+(4*x(3))-(100*x(1)*x(3))-(100*x(2)*x(3))-1.44
+endfunction
+
+## for some reason, you have to pass the next line manually
+## in cygwin, I also had to pass the function line by line manually
+## [x, info] = fsolve (@stefsolve, [.3;.3;.3])
+
+x=[0.020342,0.277290,0.013422]
+w=[x(1,1),.4-x(1,1),0,0;x(1,2),.3-x(1,2),0,0;0,.14+x(1,3),0,.06-x(1,3);.3-x(1,1)-x(1,2),-.24+x(1,1)+x(1,2)-x(1,3),.04,x(1,3)]
+
+

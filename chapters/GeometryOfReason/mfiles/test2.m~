@@ -1,0 +1,3 @@
+function t = test2(s)
+s=t+4;
+endfunction

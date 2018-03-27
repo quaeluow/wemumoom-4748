@@ -1,0 +1,183 @@
+\begin{thebibliography}{32}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+
+\bibitem[{Augustin(2003)}]{augustin03}
+Augustin, Thomas.
+\newblock \enquote{On the Suboptimality of the Generalized Bayes Rule and
+  Robust Bayesian Procedures from the Decision Theoretic Point of View---a
+  Cautionary Note on Updating Imprecise Priors.}
+\newblock In \emph{ISIPTA: Proceedings of the 3rd International Symposium on
+  Imprecise Probabilities and Their Applications}. Carleton Scientific, 2003,
+  31--45.
+
+\bibitem[{Boole(1854)}]{boole54}
+Boole, George.
+\newblock \emph{An Investigation of the Laws of Thought: On Which Are Founded
+  the Mathematical Theories of Logic and Probabilities}.
+\newblock Walton and Maberly, 1854.
+
+\bibitem[{Bradley and Steele(2013)}]{bradleysteele13}
+Bradley, Seamus, and Katie Steele.
+\newblock \enquote{Uncertainty, Learning, and the Problem of Dilation.}
+\newblock \emph{Erkenntnis} 79, ~5: (2013) 1--17.
+
+\bibitem[{Chandler(2014)}]{chandler14}
+Chandler, Jake.
+\newblock \enquote{Subjective Probabilities Need Not Be Sharp.}
+\newblock \emph{Erkenntnis} 79, ~5: (2014) 1--14.
+
+\bibitem[{Douven and Williamson(2006)}]{douvenwilliamson06}
+Douven, Igor, and Timothy Williamson.
+\newblock \enquote{Generalizing the Lottery Paradox.}
+\newblock \emph{British Journal for the Philosophy of Science} 57, ~4: (2006)
+  755--779.
+
+\bibitem[{Elga(2010)}]{elga10}
+Elga, Adam.
+\newblock \enquote{Subjective Probabilities Should Be Sharp.}
+\newblock \emph{Philosophers' Imprints} 10, ~5: (2010) 1--11.
+
+\bibitem[{Ellsberg(1961)}]{ellsberg61}
+Ellsberg, Daniel.
+\newblock \enquote{Risk, Ambiguity, and the Savage Axioms.}
+\newblock \emph{The Quarterly Journal of Economics} 75, ~4: (1961) 643--669.
+
+\bibitem[{van Fraassen(1984)}]{vanfraassen84}
+van Fraassen, Bas.
+\newblock \enquote{Belief and the Will.}
+\newblock \emph{Journal of Philosophy} 81, ~5: (1984) 235--256.
+
+\bibitem[{Grove and Halpern(1997)}]{grovehalpern97}
+Grove, A., and J.Y. Halpern.
+\newblock \enquote{Probability Update: Conditioning Vs. Cross-Entropy.}
+\newblock In \emph{Proceedings of the Thirteenth Conference on Uncertainty in
+  Artificial Intelligence}. Providence, Rhode Island: Citeseer, 1997.
+
+\bibitem[{H{\'a}jek and Smithson(2012)}]{hajeksmithson12}
+H{\'a}jek, Alan, and Michael Smithson.
+\newblock \enquote{Rationality and Indeterminate Probabilities.}
+\newblock \emph{Synthese} 187, ~1: (2012) 33--48.
+
+\bibitem[{Jaynes and Bretthorst(2003)}]{jaynesbretthorst03}
+Jaynes, E.T., and G.L. Bretthorst.
+\newblock \emph{Probability Theory: the Logic of Science}.
+\newblock Cambridge, UK: Cambridge University, 2003.
+
+\bibitem[{Jeffrey(1965)}]{jeffrey65}
+Jeffrey, Richard.
+\newblock \emph{The Logic of Decision}.
+\newblock New York, NY: McGraw-Hill, 1965.
+
+\bibitem[{Joyce(2005)}]{joyce05}
+Joyce, James.
+\newblock \enquote{How Probabilities Reflect Evidence.}
+\newblock \emph{Philosophical Perspectives} 19, ~1: (2005) 153--178.
+
+\bibitem[{Joyce(2010)}]{joyce10}
+\rule[.6ex]{3em}{.05ex}.
+\newblock \enquote{A Defense of Imprecise Credences in Inference and Decision
+  Making.}
+\newblock \emph{Philosophical Perspectives} 24, ~1: (2010) 281--323.
+
+\bibitem[{Levi(1981)}]{levi81}
+Levi, Isaac.
+\newblock \enquote{Direct Inference and Confirmational Conditionalization.}
+\newblock \emph{Philosophy of Science} 48, ~4: (1981) 532--552.
+
+\bibitem[{Levi(1985)}]{levi85}
+\rule[.6ex]{3em}{.05ex}.
+\newblock \enquote{Imprecision and Indeterminacy in Probability Judgment.}
+\newblock \emph{Philosophy of Science} 52, ~3: (1985) 390--409.
+
+\bibitem[{Lewis(1981)}]{lewis81}
+Lewis, David.
+\newblock \enquote{A Subjectivist's Guide to Objective Chance.}
+\newblock In \emph{Ifs: Conditionals, Belief, Decision, Chance and Time},
+  edited by William Harper, Robert Stalnaker, and G.A. Pearce, Springer, 1981,
+  267--297.
+
+\bibitem[{Lukits(2014)}]{lukits14}
+Lukits, Stefan.
+\newblock \enquote{The Principle of Maximum Entropy and a Problem in
+  Probability Kinematics.}
+\newblock \emph{Synthese} 191, ~7: (2014) 1409--1431.
+
+\bibitem[{Moss(2013)}]{moss13}
+Moss, Sarah.
+\newblock \enquote{Epistemology Formalized.}
+\newblock \emph{Philosophical Review} 122, ~1: (2013) 1--43.
+
+\bibitem[{Savage(1954)}]{savage54}
+Savage, Leonard.
+\newblock \emph{The Foundations of Statistics}.
+\newblock New York, NY: Wiley, 1954.
+
+\bibitem[{Savage et~al.(1963)Savage, Lindman, and Edwards}]{edwardsetal63}
+Savage, Leonard~J., Harold Lindman, and Ward Edwards.
+\newblock \enquote{Bayesian Statistical Inference for Psychological Research.}
+\newblock \emph{Psychological Review} 70, ~3: (1963) 193.
+
+\bibitem[{Seidenfeld and Wasserman(1993)}]{seidenfeldwasserman93}
+Seidenfeld, Teddy, and Larry Wasserman.
+\newblock \enquote{Dilation for Sets of Probabilities.}
+\newblock \emph{The Annals of Statistics} 1139--1154.
+
+\bibitem[{Shimony(1985)}]{shimony85}
+Shimony, Abner.
+\newblock \enquote{The Status of the Principle of Maximum Entropy.}
+\newblock \emph{Synthese} 63, ~1: (1985) 35--53.
+
+\bibitem[{Skyrms(1987)}]{skyrms87updating}
+Skyrms, Brian.
+\newblock \enquote{Updating, Supposing, and Maxent.}
+\newblock \emph{Theory and Decision} 22, ~3: (1987) 225--246.
+
+\bibitem[{Spohn(2012)}]{spohn12}
+Spohn, Wolfgang.
+\newblock \emph{The Laws of Belief: Ranking Theory and Its Philosophical
+  Applications}.
+\newblock Oxford, 2012.
+
+\bibitem[{Van~Fraassen(1981)}]{fraassen81}
+Van~Fraassen, Bas.
+\newblock \enquote{A Problem for Relative Information Minimizers in Probability
+  Kinematics.}
+\newblock \emph{The British Journal for the Philosophy of Science} 32, ~4:
+  (1981) 375--379.
+
+\bibitem[{Wagner(1992)}]{wagner92}
+Wagner, Carl.
+\newblock \enquote{Generalized Probability Kinematics.}
+\newblock \emph{Erkenntnis} 36, ~2: (1992) 245--257.
+
+\bibitem[{Walley(1991)}]{walley91}
+Walley, Peter.
+\newblock \emph{Statistical Reasoning with Imprecise Probabilities}.
+\newblock London, UK: Chapman and Hall, 1991.
+
+\bibitem[{Walley(2000)}]{walley00}
+\rule[.6ex]{3em}{.05ex}.
+\newblock \enquote{Towards a Unified Theory of Imprecise Probability.}
+\newblock \emph{International Journal of Approximate Reasoning} 24, ~2: (2000)
+  125--148.
+
+\bibitem[{White(2010)}]{white10}
+White, Roger.
+\newblock \enquote{Evidential Symmetry and Mushy Credence.}
+\newblock In \emph{Oxford Studies in Epistemology}, edited by Tamar Gendler,
+  and John Hawthorne, New York, NY: Oxford University, 2010, 161--186.
+
+\bibitem[{Williamson(1996)}]{williamson96}
+Williamson, Timothy.
+\newblock \emph{Vagueness}.
+\newblock New York, NY: Routledge, 1996.
+
+\bibitem[{Williamson(2000)}]{williamson00}
+\rule[.6ex]{3em}{.05ex}.
+\newblock \emph{Knowledge and Its Limits}.
+\newblock Oxford, UK: Oxford University, 2000.
+
+\end{thebibliography}

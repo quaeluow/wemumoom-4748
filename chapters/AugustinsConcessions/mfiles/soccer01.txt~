@@ -1,0 +1,25 @@
+Source:
+http://www.aworldofsoccer.com/top_tournaments/world_cup_statistics.htm
+(world cup history)
+
+http://www.fifa.com/worldcup/statistics/teams/goal-scored.html
+(brazil)
+
+Games played: 772
+
+Games D: 173 (22.41%)
+
+Games W or L: 599
+
+Goals scored: 2208
+
+Goals per match: 2.86
+
+Soccer goals are Poisson distributed:
+http://annabet.com/blog/soccer-goal-probabilities-poisson-vs-actual-distribution/
+
+
+
+(/ 2208 772.0)
+
+(/ 173.0 772)

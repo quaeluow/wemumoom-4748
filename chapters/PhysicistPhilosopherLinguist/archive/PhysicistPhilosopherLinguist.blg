@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2013/Cygwin)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: PhysicistPhilosopherLinguist.aux
+The style file: ChicagoReedweb.bst
+Database file #1: bib-0861.bib
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+You've used 12 entries,
+            3202 wiz_defined-function locations,
+            1159 strings with 13855 characters,
+and the built_in function-call counts, 9633 in all, are:
+= -- 1153
+> -- 162
+< -- 19
++ -- 104
+- -- 45
+* -- 471
+:= -- 1082
+add.period$ -- 46
+call.type$ -- 12
+change.case$ -- 65
+chr.to.int$ -- 12
+cite$ -- 12
+duplicate$ -- 1004
+empty$ -- 591
+format.name$ -- 69
+if$ -- 1928
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 93
+newline$ -- 67
+num.names$ -- 48
+pop$ -- 341
+preamble$ -- 1
+purify$ -- 63
+quote$ -- 0
+skip$ -- 599
+stack$ -- 0
+substring$ -- 501
+swap$ -- 829
+text.length$ -- 7
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 99
+warning$ -- 0
+while$ -- 61
+width$ -- 0
+write$ -- 147

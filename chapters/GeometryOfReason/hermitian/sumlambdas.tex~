@@ -1,0 +1,102 @@
+%\documentclass[10pt]{article}
+\documentclass[landscape,12pt]{article}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{.3in}
+
+\raggedbottom
+
+\pagestyle{empty}
+
+% 	PACKAGES
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+%\usepackage{german}
+%\usepackage{hebtex}
+%\usepackage{pdfpages} % to include pdf pages
+%\usepackage{graphics}
+% \usepackage[german]{babel}
+%\usepackage{helvet}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathbb{P}}
+
+\begin{document}
+
+Naohito,
+
+Thank you very much for responding to my inquiries so far. I have been
+working through your 1993 paper, Geometrical Structures of Some
+Non-Distance Models for Asymmetric MDS. Here is something I am
+wondering about. You define the seminorm (page 38)
+
+\begin{equation}
+  \label{eq:n1}
+  \|\zeta\|=\sqrt{\phi(\zeta,\zeta)}
+\end{equation}
+
+and then say, ``in particular, if $\phi$ is positive for any
+$\zeta\neq{}0,\|\zeta\|$ defines a \emph{norm}.'' Let me defend the
+claim that $\sqrt{\phi(\zeta,\zeta)}$ \textbf{never} defines a norm
+because the diagonal matrix $\Lambda$ is always indefinite (i.e.\ it
+always contains at least one negative and one positive real number).
+Let's call this claim ALWAYS-INDEF.
+
+Recall that $\phi$ was defined as follows:
+
+\begin{equation}
+  \label{eq:n2}
+  \phi(\zeta,\tau)=\zeta\Lambda\tau^{*}
+\end{equation}
+
+and 
+
+\begin{equation}
+  \label{eq:n3}
+  \Lambda=\diag(\lambda_{1},\ldots,\lambda_{n})
+\end{equation}
+
+where the $\lambda_{j}$ are the eigenvalues of $H$ as defined on page
+36. $H$ is a Hermitian matrix, and I will claim that for Hermitian
+matrices
+
+\begin{equation}
+  \label{eq:n4}
+  \sum_{j=1}^{n}\lambda_{j}=0.
+\end{equation}
+
+In other words, the trace of $\Lambda$ is $0$. ALWAYS-INDEF follows
+immediately unless $\Lambda=0$, which is a trivial case. Consider
+
+\begin{equation}
+  \label{eq:n5}
+  \det(H-\lambda{}I)=
+      \left[
+      \begin{array}{ccc}
+        -\lambda & k_{12} & k_{13} \\
+        k_{21} & -\lambda & k_{23} \\
+        k_{31} & k_{32} & -\lambda 
+      \end{array}
+\right].
+\end{equation}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

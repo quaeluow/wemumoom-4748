@@ -1,0 +1,64 @@
+% TEX PROPERTIES
+
+\documentclass[11pt]{article}
+
+\setlength{\parindent}{0in}
+
+\setlength{\parskip}{.1in}
+
+\raggedbottom
+
+\pagestyle{myheadings}
+
+% PACKAGES
+
+\usepackage{amsfonts}
+
+\usepackage{amssymb}
+
+\usepackage{graphixs}
+
+% NEW COMMANDS
+
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\PP}{\mathbb{P}}
+
+% DOCUMENT BODY
+
+\begin{document}
+
+Thomas,
+
+Beweise es oder gib mir ein Gegenbeispiel.
+
+Wenn
+
+\begin{displaymath}
+  \log\(\frac{p}{q}\)>\log\(\frac{\hat{q}}{\hat{p}}\)
+\end{displaymath}
+
+dann
+
+\begin{displaymath}
+  (p+q)\log\(\frac{p}{q}\)>(\hat{p}+\hat{q})\log\(\frac{\hat{q}}{\hat{p}}\).
+\end{displaymath}
+
+Hiebei ist zu beachten dass
+
+\begin{displaymath}
+  \hat{p}=1-p \\
+  \hat{q}=1-q
+\end{displaymath}
+
+und sowohl $0<p<1$ als auch $0<q<1$.
+
+\end{document}

@@ -1,0 +1,12 @@
+fill(whitef,rgb(255,255,255));
+draw(elt,norlin);
+draw(mx,dashed);
+draw(my,dashed);
+draw(mz,dashed);
+draw(mxx,norlin);
+draw(myy,norlin);
+draw(mzz,norlin);
+label("x",Xx,SE);
+label("y",Yy,SW);
+label("z",Zz,E);
+dot("$A$",A);

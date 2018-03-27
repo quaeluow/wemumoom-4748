@@ -1,0 +1,100 @@
+% TEX PROPERTIES
+
+\documentclass[11pt]{article}
+
+\setlength{\parindent}{0in}
+\pagestyle{empty}
+
+\setlength{\parskip}{.1in}
+
+\raggedbottom
+
+% \pagestyle{myheadings}
+
+% PACKAGES
+
+\usepackage{amsfonts}
+
+\usepackage{amssymb}
+
+% \usepackage{graphixs}
+
+% NEW COMMANDS
+
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\C}{\mathbb{C}}
+
+\newcommand{\N}{\mathbb{N}}
+
+\newcommand{\Q}{\mathbb{Q}}
+
+\newcommand{\Z}{\mathbb{Z}}
+
+\newcommand{\PP}{\mathbb{P}}
+
+% DOCUMENT BODY
+
+\begin{document}
+
+Thomas,
+
+Beweise es oder gib mir ein Gegenbeispiel.
+
+Wenn
+
+\begin{equation}
+\label{eq:eins}
+  \log\left(\frac{p}{q}\right)>\log\left(\frac{\hat{q}}{\hat{p}}\right)
+\end{equation}
+
+dann
+
+\begin{equation}
+\label{eq:zwei}
+  (p+q)\log\left(\frac{p}{q}\right)>(\hat{p}+\hat{q})\log\left(\frac{\hat{q}}{\hat{p}}\right).
+\end{equation}
+
+Hiebei ist zu beachten dass
+
+\begin{equation}
+\label{eq:drei}
+  \hat{p}=1-p\mbox{ und }\hat{q}=1-q
+\end{equation}
+
+und sowohl $0<p<1$ als auch $0<q<1$.
+
+M{\"o}glichkeit (hat bei mir aber nicht funktioniert): (\ref{eq:eins})
+hei{\ss}t schlichtweg, dass die Wahrscheinlichkeiten $p$ und $\hat{p}$
+mehr in der Mitte liegen als $q$ und $\hat{q}$, also
+$0<q<p\leq{}\hat{p}<\hat{q}<1$. Man sollte das ausnutzen und
+(\ref{eq:eins}) als folgende Bedingung umformulieren:
+
+\begin{equation}
+  \label{eq:vier}
+  p=\frac{1-\pi}{2}\mbox{ und }q=\frac{1-\kappa}{2}
+\end{equation}
+
+also $\pi=\hat{p}-p$ und $\kappa=\hat{q}-q$. Bedingung (\ref{eq:eins})
+ist dann 
+
+\begin{equation}
+  \label{eq:fuenf}
+  \frac{\pi-\kappa}{2}<0
+\end{equation}
+
+und das zu Beweisende (\ref{eq:zwei}) ist $A<\frac{\pi-\kappa}{2}B$, wobei:
+
+\begin{equation}
+  \label{eq:sechs}
+  A=(1+\pi)\log\left(\frac{1+\kappa}{1+\pi}\right)-(1-\pi)\log\left(\frac{1-\pi}{1-\kappa}\right)
+\end{equation}
+
+\begin{equation}
+  \label{eq:sieben}
+  B=\log\left(\frac{1+\kappa}{1+\pi}\right)+\log\left(\frac{1-\pi}{1-\kappa}\right)
+\end{equation}
+
+\end{document}
+
+

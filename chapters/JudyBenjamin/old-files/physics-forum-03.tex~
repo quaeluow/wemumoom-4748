@@ -1,0 +1,26 @@
+[b]1. The problem statement, all variables and given/known data[/b]
+
+I need to sum the binomial coefficients that are divisible by a
+positive integer t, i.e.
+
+[tex]\sum_{i=0}^{s}\binom{ts}{ti}[/tex]
+
+Is there any way to get rid of the sum sign?
+
+[b]2. Relevant equations[/b]
+
+Let t be fixed and s go to (positive) infinity (both t and s are
+positive integers). Let M(s) be a set with #M(s)=ts, then I am really
+interested in the expected value of the number of elements when you
+choose subsets from M whose cardinality is a multiple of t. For
+example, what is the mean number of elements picking subsets with
+cardinality 0, 3, 6, or 9 from a set with cardinality 9 (t=3, s=3)?
+Where does this expected value go as s (the ``grain'' of M) goes to
+infinity?
+
+[tex]EX=\frac{\sum_{i=0}^{s}ti\binom{ts}{ti}}{\sum_{i=0}^{s}\binom{ts}{ti}}[/tex]
+
+[b]3. The attempt at a solution[/b]
+
+I anticipate the solution to be lim(s->infty)EX(s)=ts/2, but I'd love
+to prove it.

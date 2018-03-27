@@ -1,0 +1,381 @@
+\documentclass[11pt]{article}
+
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+\frenchspacing % no extra space at the end of a sentence
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{.1in}
+
+\raggedbottom
+
+%\pagestyle{empty}
+
+% 	PACKAGES
+% \usepackage[small,bf]{caption}
+% \let\bcode\textbgreek
+% \usepackage[bgreek,english]{babel}
+% \usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+% \usepackage{german}
+% \usepackage{hebtex}
+% \usepackage{graphicx}
+% \usepackage[german]{babel}
+% \usepackage{endnotes}
+% \let\footnote=\endnote
+% \usepackage{rotating}
+% \usepackage{enumerate}
+
+\newcommand{\kapt}[1]{\textbf{{\thechap}. #1}\addtocounter{chap}{1}}
+\newcommand{\nootag}{}
+
+\newcommand{\tbd}[1]{}
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+\newcommand{\erf}[0]{\mbox{erf}}
+\newcommand{\anum}[0]{a'}
+\newcommand{\bnum}[0]{b'}
+\newcommand{\cnum}[0]{c'}
+\newcommand{\hnum}[0]{h'}
+\newcommand{\knum}[0]{k'}
+\newcommand{\wnum}[0]{w'}
+\newcommand{\aden}[0]{a''}
+\newcommand{\bden}[0]{b''}
+\newcommand{\cden}[0]{c''}
+\newcommand{\hden}[0]{h''}
+\newcommand{\kden}[0]{k''}
+\newcommand{\wden}[0]{w''}
+
+\newif\ifNumericalOrYear
+\NumericalOrYeartrue
+% \NumericalOrYearfalse
+\ifNumericalOrYear
+\usepackage[numbers,colon]{natbib}
+\else
+\usepackage[round,colon]{natbib}
+\fi
+\newif\ifPageP
+\PagePtrue
+% \PagePfalse
+\ifPageP
+\newcommand{\PageP}{p.~}
+\else
+\newcommand{\PageP}{}
+\fi
+
+\newcommand{\scite}[3]{\ifnum#1=1\ifNumericalOrYear\citep{#2}\else\citeyearpar{#2}\fi\else
+\ifnum#1=2\ifNumericalOrYear\citep[#3]{#2}\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=4\ifNumericalOrYear\citet{#2}\else\citet{#2}\fi\else
+\ifnum#1=5\ifNumericalOrYear(\citet{#2})\else\citep{#2}\fi\else
+\ifnum#1=6\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=7\ifNumericalOrYear\citep{#2}\else\citealp{#2}\fi\else
+\ifnum#1=8\ifNumericalOrYear\citep[#3]{#2}\else\citealp[{\PageP}#3]{#2}\fi\else
+\textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
+% \newenvironment{quotex}{\begin{quote}\begin{footnotesize}\begin{singlespace}}{\end{singlespace}\end{footnotesize}\end{quote}}
+
+\begin{document}
+
+\title{The Principle of Maximum Entropy and a Problem in Probability Kinematics}
+
+\author{Stefan Lukits}
+
+\maketitle
+
+\newcounter{chap}
+
+\setcounter{chap}{1}
+
+This summarizes the labours of the first half of the red book, numbers
+in parentheses refer to the red book. We begin with a quote:
+
+\begin{quotex} 
+  Probability kinematics resembles ethics in the sense that there are
+  all kinds of things we are able to say about the relations between
+  our intuitions and the prescriptions or rules we propose. We never
+  cease to be vulnerable, however, to the question why the states of
+  affairs we describe should entail that we have one set of
+  probability assignments and updating strategies and not another.
+  That an observation or a piece of evidence should change our
+  assessment of uncertainty with respect to relevant propositions and
+  events in particular ways cannot be a matter of logical consistency.
+  Even a Dutch Book argument rests on assumptions that are entangled
+  with the relations and intuitions we are supposed to explain. Our
+  task in this paper, then, is to show what were to flow from certain
+  assumptions being made and certain intuitions being accepted, and to
+  articulate them clearly and well so that we understand where they
+  are reasonable, arbitrary, or subject to criticism. In all this, we
+  never lose a sense of need for what ethicists in Rawl's tradition
+  call a reflective equilibrium, as it is not the intuitions about
+  particular cases alone, nor the general judgments they sometimes
+  inspire, that carry away the prize, but rather a balance between
+  them. The principle of maximum entropy is a poster child for this
+  method: it is a principle with great generality and scope, arguably
+  outperforming all others, but it also raises worries in particular
+  cases. There is beauty in the fact that, as sweeping as the
+  principle is, it cannot accommodate everything we think and feel
+  about how conditionalization (another term for probability update)
+  should proceed. This paper cautions, however, against undue
+  enthusiasm about the full employment theorem, the view that
+  ultimately all rules and methods of conditionalization are tools in
+  the hand of a human inquirer, expressing that which one to use must
+  always be based on the intuitive and creative labour of the user.
+  Probability kinematics is not a sit-down dinner: various approaches
+  mingle, easily shift positions, and have access to the buffet table
+  from different angles. There is no throne even for the view that,
+  when all is said and done, a special place remains for the art of
+  human inquiry.
+\end{quotex}
+
+Let's assume a partition $\{B_{i}\}_{i=1,{\ldots},4n}$ of
+$A_{1}\cup{}A_{2}\cup{}A_{3}$ into sets that are of equal measure and
+whose intersection with $A_{i}$ is either the empty set or the whole
+set itself. (MAP) dictates that the number of sets covering $A_{3}$
+equals the number of sets covering $A_{1}\cup{}A_{2}$. For
+convenience, we assume the number of sets covering $A_{1}$ to be $n$.
+Let $\mathcal{C}$, a subset of the powerset of
+$\{B_{i}\}_{i=1,{\ldots},4n}$, be the collection of sets which agree
+with the constraint imposed by (HDQ), i.e.\
+\begin{displaymath}
+  C\in\mathcal{C}\mbox{ iff }C=\{C_{j}\}\mbox{ and }t\mu\left(\bigcup{}C_{j}\cap{}A_{1}\right)=\mu\left(\bigcup{}C_{j}\cap{}A_{2}\right)
+\end{displaymath}
+
+(Provide diagrams.) Let $X$ be the random variable that corresponds to
+the ratio of the number of sets that are in $A_{3}$ and the total
+number of sets for a randomly chosen $C\in\mathcal{C}$. We would now
+anticipate that the expectation of $X$ (which we will call $EX$) gives
+us an indication of the posterior probability that Judy is in $A_{3}$.
+Grove and Halpern's uniformity approach (based on retrospective
+conditioning, see Diaconix and Zabell, 822) results in this quantity,
+which we have loosely called $q_{3}$, being $q_{3}=.5$, whereas the
+maximum entropy approach (either using Kullback-Leibler directly or
+Lagrange Multipliers) results in $q_{3}=.53$ for $t=3$. In which
+direction is the powerset approach outlined in the last couple of
+paragraphs going to take us? The powerset approach is often superior
+to the uniformity approach: if you have played Monopoly, you will
+know that the frequencies for rolling a 2, a 7, or a 10 with two dice
+tend to conform more closely to the binomial distribution (based on a
+powerset approach) rather than to the uniform distribution with
+$P(X=i)=1/11$ for $i=2,{\ldots},12$.
+
+The binomial distribution dictates the value of $EX$, using simple
+combinatorics. In this case we require, again for convenience, that
+$n$ be divisible by $t$ and the \qnull{grain} of the partition $A$ be
+$s=n/t$. We introduce a few variables which later on will help for
+abbreviation:
+\begin{displaymath}
+n=ts\hspace{.5in}
+2m=n\hspace{.5in}
+2j=n-1\hspace{.5in}
+\psi=t^{2}+1
+\end{displaymath}
+$EX$, of course, depends both on the grain of $A$ and the value of
+$t$. It makes sense to make it independent of the grain by letting the
+grain become increasingly finer and by determining $EX$ as
+$s\rightarrow\infty$. This cannot be done for the binomial
+distribution, as it is notoriously uncomputable for large numbers
+(even with a powerful computer things get dicy around $s=20$). But,
+equally notorious, the normal distribution provides a good
+approximation of the binomial distribution and will help us arrive at
+a value $q_{3}$ suggested by the powerset approach.
+
+First, we express the random variable $X$ by the two independent
+random variables $X_{12}$ and $X_{3}$. $X_{12}$ is the number of sets in
+the randomly chosen $C$ which cover either $A_{1}$ or $A_{2}$ (the
+random variable of the number of sets covering $A_{1}$ and the random
+variable of the number of sets covering $A_{2}$ are decisively not
+independent, because they need to obey (HDQ)); $X_{3}$ is the number
+of sets in the randomly chosen $C$ which cover $A_{3}$. A relatively
+simple calculation shows that $EX_{3}=n$, which is just what we
+would expect (either the powerset approach or the uniformity approach
+would give us this result).
+
+Using combinatorics,
+\begin{displaymath}
+  EX_{3}=2^{-2n}\sum_{i=0}^{2n}i\binom{2n}{i}=n\mbox{ (use }\binom{n}{k}=\frac{n}{k}\binom{n-1}{k-1}\mbox{)}
+\end{displaymath}
+
+The expectation of $X$, $X$ being the random variable expressing the
+ratio of the number of sets covering $A_{3}$ and the number of sets
+covering $A_{1}\cup{}A_{2}\cup{}A_{3}$, is
+\begin{displaymath}
+  EX=\frac{EX_{3}}{EX_{12}+EX_{3}}=\frac{n}{EX_{12}+n}
+\end{displaymath}
+Using the uniformity approach, $EX_{12}=n$ and $EX=1/2$, just as Grove
+and Halpern suggest (although their uniformity approach is admittedly
+less crude than the one used here). Will the powerset approach concur
+with the uniformity approach, will it support the principle of maximum
+entropy, or will it make another suggestion on how to update the prior
+probabilities? To answer this question, we must find out what $EX_{12}$
+is, for a given value $t$ and $s\rightarrow\infty$, using the binomial
+distribution and its approximation by the normal distribution.
+
+Using combinatorics,
+\begin{displaymath}
+  EX_{12}=(t+1)\frac{\sum_{i=1}^{s}i\binom{ts}{i}\binom{ts}{ti}}{\sum_{i=0}^{s}\binom{ts}{i}\binom{ts}{ti}}
+\end{displaymath}
+
+Let us call the numerator of this fraction NUM and the denominator
+DEN. According to the de Moivre-Laplace Theorem,
+\begin{displaymath}
+  \mbox{DEN}=\sum_{i=0}^{s}\binom{ts}{i}\binom{ts}{ti}\approx{}2^{2n}\sum_{i=0}^{s}\int_{i-\frac{1}{2}}^{i+\frac{1}{2}}\mathcal{N}(\frac{n}{2},\frac{n}{4})(i)\mathcal{N}(\frac{n}{2},\frac{n}{4})(ti)di
+\end{displaymath}
+where
+\begin{displaymath}
+  \mathcal{N}(\mu,\sigma^{2})(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left(-\frac{(x-\mu)^{2}}{2\sigma^{2}}\right)
+\end{displaymath}
+Substitution yields
+\begin{displaymath}
+  \mbox{DEN}\approx{}2^{2n}\frac{1}{\pi{}m}\sum_{i=0}^{s}\int_{i-\frac{1}{2}}^{i+\frac{1}{2}}\exp\left(-\frac{\left(x-m\right)^{2}}{m}-\frac{t^{2}\left(x-\frac{m}{t}\right)^{2}}{m}\right)dx
+\end{displaymath}
+Consider briefly the argument of the exponential function:
+\begin{displaymath}
+  -\frac{\left(x-m\right)^{2}}{m}-\frac{t^{2}\left(x-\frac{m}{t}\right)^{2}}{m}=-\frac{t^{2}}{m}({\aden}x^{2}+{\bden}x+{\cden})=-\frac{t^{2}}{m}\left({\aden}(x-{\hden})^{2}+{\kden}\right)
+\end{displaymath}
+with (the double prime sign corresponds to the simple prime sign for
+the numerator later on)
+\begin{displaymath}
+{\aden}=\frac{1}{t^{2}}\psi\notag\hspace{.5in}
+{\bden}=(-2m)\frac{1}{t^{2}}(t+1)\hspace{.5in}
+{\cden}=2m^{2}\frac{1}{t^{2}}
+\end{displaymath}
+\begin{displaymath}
+{\hden}=-{\bden}/2{\aden}\hspace{.5in}
+{\kden}={\aden}{\hden}^{2}+{\bden}{\hden}+{\cden}
+\end{displaymath}
+Consequently,
+\begin{displaymath}
+\mbox{DEN}\approx{}2^{2n}\exp\left(-\frac{t^{2}}{m}{\kden}\right)\sqrt{\frac{1}{\pi{}{\aden}mt^{2}}}\int_{-\infty}^{s+\frac{1}{2}}\mathcal{N}\left({\hden},\frac{m}{2{\aden}t^{2}}\right)dx
+\end{displaymath}
+And, using the error function for the cumulative density function of
+the normal distribution,
+\begin{equation}
+  \label{eq:den}
+  \mbox{DEN}\approx{}2^{2n-1}\sqrt{\frac{1}{\pi{}{\aden}mt^{2}}}\exp\left(-\frac{{\kden}t^{2}}{m}\right)\left(1-\erf({\wden})\right)
+\end{equation}
+with
+\begin{displaymath}
+  {\wden}=\frac{t\sqrt{{\aden}}\left(s+\frac{1}{2}-{\hden}\right)}{\sqrt{m}}
+\end{displaymath}
+
+We proceed likewise with the numerator, although the additional factor
+introduces a small complication:
+  \begin{eqnarray*}
+  \mbox{NUM}&=&\sum_{i=1}^{s}i\binom{ts}{i}\binom{ts}{ti}=\sum_{i=1}^{s}s\binom{ts}{i}\binom{ts-1}{ti-1}\\
+&\approx&s2^{2n-1}\sum_{i=1}^{s}\mathcal{N}\left(m,\frac{m}{2}\right)(i)\mathcal{N}\left(j,\frac{j}{2}\right)(ti-1)
+\end{eqnarray*}
+Again, we substitute and get
+\begin{displaymath}
+  \mbox{NUM}\approx{}s2^{2n-1}\left(\pi\sqrt{mj}\right)^{-1}\sum_{0}^{s-1}\int_{i-\frac{1}{2}}^{i+\frac{1}{2}}\exp\left({\anum}(x-{\hnum})^{2}+{\knum}\right)
+\end{displaymath}
+where the argument for the exponential function is
+\begin{displaymath}
+  -\frac{1}{mj}\left(j(x-m)^{2}+mt^{2}\left(x-\frac{j+1}{t}\right)^{2}\right)
+\end{displaymath}
+and therefore
+\begin{displaymath}
+{\anum}=j+mt^{2}\hspace{.5in}
+{\bnum}=2j(1-m)+2mt\left(t-j\right)\hspace{.5in}
+{\cnum}=j(1-m)^{2}+m\left(t-j-1\right)^{2}
+\end{displaymath}
+\begin{displaymath}
+{\hnum}=-{\bnum}/2{\anum}\hspace{.5in}
+{\knum}={\anum}{\hnum}^{2}+{\bnum}{\hnum}+{\cnum}
+\end{displaymath}
+Using the error function, 
+\begin{equation}
+  \label{eq:num}
+  \mbox{NUM}\approx{}2^{2n-2}\frac{s}{\sqrt{\pi{}{\anum}}}\exp\left(-\frac{{\knum}}{mj}\right)\left(1+\erf({\wnum})\right)
+\end{equation}
+with
+\begin{displaymath}
+  {\wnum}=\frac{\sqrt{{\anum}}\left(s-\frac{1}{2}-{\hnum}\right)}{\sqrt{mj}}
+\end{displaymath}
+
+Combining ({\ref{eq:den}}) and ({\ref{eq:num}}),
+\begin{eqnarray*}
+  EX_{1}&=&(t+1)\frac{\mbox{NUM}}{\mbox{DEN}}\\
+&\approx&\frac{1}{2}(t+1)\sqrt{\frac{\psi{}ts}{\psi{}ts-1}}se^{\alpha_{t,s}}
+\end{eqnarray*}
+for large $s$, because the arguments for the error function $w'$ and
+$w''$ escape to positive infinity in both cases (NUM and DEN) so that
+their ratio goes to 1. The argument for the exponential function is
+\begin{displaymath}
+  \alpha_{t,s}=-\frac{{\knum}}{mj}+\frac{{\kden}t^{2}}{m}
+\end{displaymath}
+and, for $s\rightarrow\infty$, goes to
+\begin{displaymath}
+  \alpha_{t}=\frac{1}{2}\psi^{-2}(2t^{3}-3t^{2}+4t-5)
+\end{displaymath}
+
+Notice that, for $t\rightarrow\infty$, $\alpha_{t}$ goes to $0$ and
+\begin{displaymath}
+  EX=\frac{n}{EX_{12}+n}\rightarrow\frac{2}{3}
+\end{displaymath}
+in accordance with intuition T2.
+
+We now have a formula for the powerset approach corresponding to the
+formula for the \textsc{maxent} approach, giving us $q_{3}$ dependent
+on $t$. Notice that this formula is for $t=2,3,4,\ldots$. For $t=1$
+use the Chu-Vandermonde identity to find that
+\begin{displaymath}
+  EX_{12}=(t+1)\frac{\sum_{i=1}^{s}i\binom{ts}{i}\binom{ts}{ti}}{\sum_{i=0}^{s}\binom{ts}{i}\binom{ts}{ti}}=(t+1)\frac{s}{2}  
+\end{displaymath}
+and consequently $EX=1/2$, as one would expect. For
+$t=1/2,1/3,1/4,\ldots$ we can simply reverse the roles of $A_{1}$ and
+$A_{2}$. These results give us a graph of the normalized odds vector,
+a bit bumpy around the middle because the $t$-values are discrete and
+farther apart in the middle, as $t=q/(1-q)$. (Put a line through
+$q=3/4$.) Comparing the graphs of the normalized odds vector under
+Grove and Halpern's uniformity approach, Jaynes' \textsc{maxent}
+approach, and the powerset approach suggested in this paper, it is
+clear that the powerset approach supports \textsc{maxent}.
+
+The powerset approach cannot stand on its own. The reason behind using
+\textsc{maxent} is that we want our evidence to have just the right
+influence on our prior probabilities, i.e.\ neither over-inform nor
+under-inform. There is no corresponding reason why we should update
+our probabilities using the powerset approach. What the powerset
+approach does is lend support to another approach. In this task, it is
+strangely powerful because it tells us what would happen if we were to
+divide the event space into infinitesimally small \qnull{atomic} bits
+of information, analogous to the way in which the normal distribution
+captures so many natural phenomena because it generalizes the binomial
+distribution with its discrete on/off switches (as in a Galton box) to
+an infinite grain and a smooth distribution.
+
+Going through the calculations, it seems at many places that the
+powerset approach should give its support to the uniformity approach.
+It was highly surprising to me that in the mathematical analysis,
+$\alpha_{t,s}$ turned out to converge to a non-trivial (neither $0$
+nor $+/-\infty$) factor, enabling a graph of the normalized
+odds vector that was not of the simple nature of the graph suggested
+by Grove and Halpern. Most surprisingly, the powerset approach, prima
+facie unrelated to an approach using information, supports the idea
+that a set of events about which nothing is known (such as $A_{3}$)
+gains in probability in the posterior probability distribution
+compared to the set of events about which something is known (such as
+$A_{1}$ and $A_{2}$). 
+
+% \noindent\textbf{Endnotes}
+
+% \theendnotes
+
+% \medskip
+
+% \noindent\textbf{References}
+
+% \nocite{*} 
+\bibliographystyle{stefan-2010-08-28}
+\bibliography{bib-3306}
+
+\end{document}
+

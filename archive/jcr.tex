@@ -1,0 +1,117 @@
+This appendix provides a concise but comprehensive summary of
+Jaynes' constraint rule not easily obtainable in the literature.
+Jaynes applied it to the Brandeis Dice Problem (see
+\scite{8}{jaynes89}{243}), but does not give a mathematical
+justification.
+
+Let $f$ be a probability distribution on a finite space
+$x_{1},\ldots,x_{m}$ that fulfills the constraint 
+\begin{equation}
+  \label{eq:constraint}
+\sum_{i=1}^{m}r(x_{i})f(x_{i})=\alpha
+\end{equation}
+
+An affine constraint can always be expressed by assigning a value to
+the expectation of a probability distribution (see
+\scite{7}{hobson71}{}). In Judy Benjamin's case, for example, let
+% This is the original line and needs to be corrected (see Sudelbuch
+% p. 755)
+% $r(x_{1})=0, r(x_{2})=1, r(x_{3})={\qvu}\mbox{ and }\alpha={\qvu}$. Because $f$
+$r(x_{1})=0, r(x_{2})=1-{\qvu}, r(x_{3})=-{\qvu}\mbox{ and }\alpha=0$. Because $f$
+is a probability distribution it fulfills
+\begin{equation}
+  \label{eq:unity}
+\sum_{i=1}^{m}f(x_{i})=1
+\end{equation}
+
+We want to maximize Shannon's entropy, given the constraints
+({\ref{eq:constraint}}) and ({\ref{eq:unity}}),
+\begin{equation}
+  \label{eq:entropy}
+-\sum_{i=1}^{m}f(x_{i})\ln(x_{i})
+\end{equation}
+
+We use Lagrange multipliers to define the functional
+\begin{equation}
+  \label{eq:functional}
+J(f)=-\sum_{i=1}^{m}f(x_{i})\ln{}f(x_{i})+\lambda_{0}\sum_{i=1}^{m}f(x_{i})+\lambda_{1}\sum_{i=1}^{m}r(x_{i})f(x_{i})\notag
+\end{equation}
+and differentiate it with respect to $f(x_{i})$
+\begin{equation}
+  \label{eq:funder}
+\frac{\partial{}J}{\partial{}f(x_{i})}=-\ln(f(x_{i}))-1+\lambda_{0}+\lambda_{1}r(x_{i})
+\end{equation}
+
+Set ({\ref{eq:funder}}) to $0$ to find the necessary condition to
+maximize ({\ref{eq:entropy}})
+\begin{equation}
+  \label{eq:coverthomas}
+g(x_{i})=e^{\lambda_{0}-1+\lambda_{1}r(x_{i})}\notag
+\end{equation}
+
+This is the Gibbs distribution. We still need to do two things: (a)
+show that the entropy of $g$ is maximal, and (b) show how to find
+$\lambda_{0}$ and $\lambda_{1}$. (a) is shown in Theorem 12.1.1 in
+Cover and Thomas \scite{1}{coverthomas06}{} and there is no reason to
+copy it here. 
+
+For (b), let
+\begin{equation}
+  \label{eq:l1}
+\lambda_{1}=-\beta\notag
+\end{equation}
+\begin{equation}
+  \label{eq:zet}
+Z(\beta)=\sum_{i=1}^{m}e^{-\beta{}r(x_{i})}\notag
+\end{equation}
+\begin{equation}
+  \label{eq:l0}
+\lambda_{0}=1-\ln(Z(\beta))\notag
+\end{equation}
+
+To find $\lambda_{0}$ and $\lambda_{1}$ we introduce the constraint
+\begin{equation}
+  \label{eq:logcon}
+-\frac{\partial}{\partial{}\beta}\ln(Z(\beta))=\alpha\notag
+\end{equation}
+
+To see how this constraint gives us $\lambda_{0}$ and $\lambda_{1}$,
+Jaynes' solution of the Brandeis Dice Problem (see
+\scite{8}{jaynes89}{243}) is a helpful example. We are, however,
+interested in a general proof that this choice of $\lambda_{0}$ and
+$\lambda_{1}$ gives us the probability distribution maximizing the
+entropy. That $g$ so defined maximizes the entropy is shown in (a). We
+need to make sure, however, that with this choice of $\lambda_{0}$ and
+$\lambda_{1}$ the constraints ({\ref{eq:constraint}}) and
+({\ref{eq:unity}}) are also fulfilled.
+
+First, we show
+\begin{align}
+&\sum_{i=1}^{m}g(x_{i})=\sum_{i=1}^{m}e^{\lambda_{0}-1+\lambda_{1}r(x_{i})}=e^{\lambda_{0}-1}\sum_{i=1}^{m}e^{\lambda_{1}r(x_{i})}=\notag\\
+&e^{-\ln(Z(\beta))}Z(\beta)=1\label{eq:unishow}\notag
+\end{align}
+
+Then, we show, by differentiating $\ln(Z(\beta))$ using the
+substitution $x=e^{-\beta}$
+\begin{align}
+&\alpha=-\frac{\partial}{\partial{}\beta}\ln(Z(\beta))=-\frac{1}{\sum_{i=1}^{m}x^{r(x_{i})}}\left(\sum_{i=1}^{m}r(x_{i})x^{r(x_{i})-1}\right)(-x)=\notag\\
+&\frac{\sum_{i=1}^{m}r(x_{i})x^{r(x_{i})}}{\sum_{i=1}^{m}x^{r(x_{i})}}\notag
+\end{align}
+
+And, finally,
+\begin{align}
+&\sum_{i=1}^{m}r(x_{i})g(x_{i})=\sum_{i=1}^{m}r(x_{i})e^{\lambda_{0}-1+\lambda_{1}r(x_{1})}=e^{\lambda_{0}-1}\sum_{i=1}^{m}r(x_{i})e^{\lambda_{1}r(x_{1})}=\notag\\
+&e^{\lambda_{0}-1}\sum_{i=1}^{m}r(x_{i})x^{r(x_{i})}=\alpha{}e^{\lambda_{0}-1}\sum_{i=1}^{m}x^{r(x_{i})}=\alpha{}e^{\lambda_{0}-1}\sum_{i=1}^{m}e^{-\beta{}r(x_{i})}=\notag\\
+&\alpha{}Z(\beta)e^{\lambda_{0}-1}=\alpha{}Z(\beta))e^{-\ln(Z(\beta))}=\alpha\notag
+\end{align}
+
+Filling in the variables from Judy Benjamin's scenario gives us result
+({\ref{eq:vmax}}). The lambdas are:
+  \begin{displaymath}
+    \lambda_{0}=1-\ln\left(\sum_{i=1}^{m}e^{\lambda_{1}r(x_{i})}\right)\hspace{.3in}
+    \lambda_{1}=\ln{}{\qvu}-\ln(1-{\qvu})\notag
+  \end{displaymath}
+
+  We combine the normalized odds vector $(0.16,0.48,0.36)$ following
+  from these lambdas using Dempster's Rule of Combination with
+  ({\ref{eq:map}}) and get result ({\ref{eq:vmax}}).

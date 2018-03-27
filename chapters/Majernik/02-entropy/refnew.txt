@@ -1,0 +1,47 @@
+[1] Caticha, Ariel, and Adom Giffin. ``Updating Probabilities.'' In \emph{Max-Ent 2006, the 26th International Workshop on Bayesian Inference and Maximum Entropy Methods}. 2006.
+
+[2] Cover, T.M., and J.A. Thomas. \emph{Elements of Information Theory}, volume 6. Hoboken, NJ: Wiley, 2006.
+
+[2a] Csisz{\'a}r, Imre. ``Information-Type Measures of Difference of Probability Distributions and Indirect Observations.'' \emph{Studia Scientiarum Mathematicarum Hungarica} 2: (1967) 299--318.
+
+[3] Dempster, Arthur. ``Upper and Lower Probabilities Induced by a Multi-valued Mapping.'' \emph{The Annals of Mathematical Statistics} 38, 2: (1967) 325--339.
+
+[4] Friedman, Kenneth, and Abner Shimony. ``Jaynes's Maximum Entropy Prescription and Probability Theory.'' \emph{Journal of Statistical Physics} 3, 4: (1971) 381--384.
+
+[5] Guia{\c{s}}u, Silviu. \emph{Information Theory with Application}. New York, NY: McGraw-Hill, 1977. 
+
+[5a] Halpern, Joseph. \emph{Reasoning About Uncertainty}. Cambridge, MA: MIT, 2003.
+
+[6] Howson, Colin, and Allan Franklin. ``Bayesian Conditionalization and Probability Kinematics.'' \emph{The British Journal for the Philosophy of Science} 45, 2: (1994) 451--466.
+
+[7a] Jaynes, E.T. ``Information Theory and Statistical Mechanics.'' \emph{Physical Review} 106, 4: (1957) 620--630.
+
+[7] Jaynes, E.T. ``Where Do We Stand on Maximum Entropy.'' In \emph{The Maximum Entropy Formalism}, edited by R.D. Levine, and M. Tribus, Cambridge, MA: MIT, 1978, 15--118.
+
+[8] Jeffrey, Richard. \emph{The Logic of Decision}. New York, NY: Gordon and Breach, 1965.
+
+[8a] Joyce, James. ``A Defense of Imprecise Credences in Inference and Decision Making.'' \emph{Philosophical Perspectives} 24, 1: (2010) 281--323.
+
+[9] Majern{\'\i}k, Vladim{\'\i}r. ``Marginal Probability Distribution Determined by the Maximum Entropy Method.'' \emph{Reports on Mathematical Physics} 45, 2: (2000) 171--181.
+
+[9a] Paris, Jeff. \emph{The Uncertain Reasoner's Companion: A Mathematical Perspective}. Cambridge, UK: Cambridge University, 2006.
+
+[9c] Seidenfeld, Teddy. ``Entropy and Uncertainty.'' In \emph{Advances in the Statistical Sciences: Foundations of Statistical Inference}, Springer, 1986, 259--287.
+
+[9b] Skyrms, Brian. ``Updating, Supposing, and Maxent.'' Theory and Decision 22, 3: (1987) 225--246.
+
+[10] Spohn, Wolfgang. \emph{The Laws of Belief: Ranking Theory and Its Philosophical Applications}. Oxford, UK: Oxford University, 2012.
+
+[11] Teller, Paul. ``Conditionalization and Observation.'' \emph{Synthese} 26, 2: (1973) 218--258.
+
+[11a] Uffink, Jos. ``Can the Maximum Entropy Principle Be Explained as a Consistency Requirement?'' \emph{Studies in History and Philosophy of Science} 26, 3: (1995) 223--261.
+
+[12] Wagner, Carl. ``Generalized Probability Kinematics.'' \emph{Erkenntnis} 36, 2: (1992) 245--257.
+
+[13] Wagner, Carl. ``Probability Kinematics and Commutativity.'' \emph{Philosophy of Science} 69, 2: (2002) 266--278.
+
+[13a] Walley, Peter. \emph{Statistical Reasoning with Imprecise Probabilities}. London, UK: Chapman and Hall, 1991.
+
+[14] Williams, Paul. ``Bayesian Conditionalisation and the Principle of Minimum Information.'' \emph{British Journal for the Philosophy of Science} 31, 2: (1980) 131--144.
+
+[15] Zubarev, Dmitrii, Vladimir Morozov, and Gerd R{\"o}pke. \emph{Statistical Mechanics of Nonequilibrium Processes}. Berlin: Akademie, 1996.

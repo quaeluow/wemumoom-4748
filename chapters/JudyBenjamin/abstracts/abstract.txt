@@ -1,0 +1,12 @@
+Given prior probabilities and an observation, it is common to form
+posterior probabilities by using rules of conditioning. Some
+observations pose affine constraints that cannot be addressed by
+standard conditional probabilities or Jeffrey conditioning. The
+Principle of Maximum Entropy (PME) claims that it is appropriate to
+form a posterior probability assessment by minimizing information gain
+consistent with the observation. Opposition to the PME leans heavily
+on one counterexample: the Judy Benjamin problem. This article shows
+that an intuitively plausible approach that should support the
+opponents' case turns out to support the PME. The article demonstrates
+that opponents improperly apply independence assumptions to the
+problem.

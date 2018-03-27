@@ -1,0 +1,91 @@
+It is well-known that with known marginal probabilities a_{i} and
+b_{j} the joint probability distribution maximizing the entropy
+
+[tex]H(P)=-\sum_{i=1}^{m}\sum_{j=1}^{n}p_{ij}\log{}p_{ij}[/tex]
+
+is [tex]p_{ij}=a_{i}b_{j}[/tex] 
+
+For m=3 and n=3, a=(0.2,0.3,0.5), b=(0.1,0.6,0.3), for example,
+
+[tex]\begin{equation}
+  \label{eq:r1}
+P=\left(
+  \begin{array}{rrr}
+    0.02 & 0.12 & 0.06 \\
+    0.03 & 0.18 & 0.09 \\
+    0.05 & 0.30 & 0.15
+  \end{array}
+\right)
+\end{equation}[/tex]
+
+jNow, I have a problem where the joint probability distribution is
+constrained (much like a random walk where the path from one node to
+another is blocked). For example, let m, n, a, and b be as above with
+the constraint that
+
+[tex]\begin{equation}
+  \label{eq:r2}
+P=\left(
+  \begin{array}{rrr}
+    p_{11} & 0 & p_{13} \\
+    p_{21} & p_{22} & p_{23} \\
+    p_{31} & p_{32} & p_{33} \\
+  \end{array}
+\right)
+\end{equation}[/tex]
+
+Because a and b are known, it suffices to find out any 2x2 matrix
+contained in the 3x3 matrix, for example (x,y,z the variables by which
+w_{1}, w_{2}, v_{1}, v_{2}, and sigma are expressible, given a and b)
+
+[tex]\begin{equation}
+  \label{eq:r3}
+P=\left(
+  \begin{array}{rrr}
+    x & 0 & w_{1} \\
+    y & z & w_{2} \\
+    v_{1} & v_{2} & \sigma \\
+  \end{array}
+\right)
+\end{equation}[/tex]
+
+I use this to write out the entropy and differentiate with respect to
+x, y, and z to find out that the maximum will be where
+
+[tex]\begin{equation}
+  \label{eq:r4}
+  \det\left(
+    \begin{array}{ll}
+      x & w_{1} \\
+      v_{1} & \sigma
+    \end{array}
+\right)=0
+\end{equation}[/tex]
+
+[tex]\begin{equation}
+  \label{eq:r5}
+  \det\left(
+    \begin{array}{ll}
+      y & w_{2} \\
+      v_{1} & \sigma
+    \end{array}
+\right)=0
+\end{equation}[/tex]
+
+[tex]\begin{equation}
+  \label{eq:r6}
+  \det\left(
+    \begin{array}{ll}
+      z & w_{2} \\
+      v_{2} & \sigma
+    \end{array}
+\right)=0
+\end{equation}[/tex]
+
+This is a system of 3 non-linear equations which are awkward to solve
+algebraically. In the end, I am interested to know which property a
+and b need to have to ensure that P is a proper probability
+distribution (i.e. no negative elements). For now, however, I'd be
+thrilled if anybody could give me a hint how I could find the
+solutions for x, y, and z algebraically without these non-linear
+equations.

@@ -1,0 +1,47 @@
+I have read the aforementioned manuscript with interest. I have to
+admit in full honesty that this type of "philosophical" papers is hard
+to be reviewed, since the recommendation is unavoidably influenced by
+personal taste and "scientific beliefs", although the latter is a
+contradiction in terms. These papers, according to my opinion, can
+only be recommended for publication as is or to be rejected, since
+there is no major research component that would justify a
+recommendation in between.
+
+Having said all that, I am a strong believer of not allowing
+personal beliefs interfeer with science, and for this reason I
+will recommend the paper to be accepted in its present form and
+leave the editor make the final decision. I would however like to
+provide an alternative point of view to the author, for his future
+works.
+
+In the paragraph in-between lines 116-123 the author emphatically
+dismisses Wagner's conclusion that the PME is not a reliable
+principle as incorrect. He relegates the support information for
+his claim in another paper that he will write in the future, and I
+don't doubt that.
+
+There is, however, a different point of view, that says that
+Wagner is correct. We have encountered several times problems
+where PME is insuffient to describe and some communities know that
+PME is nothing more than a postulate, a limiting case of the
+energy and entropy production conservation laws. The most famous
+community is the chemical engineering, where Prigogine proved that
+higher-information systems tend to favor the minimum entropy
+production as the principle that describes their response. A nice
+and short review just got published in that community, that
+summarizes these concepts. Although not entirely written in
+philosophical-mathematical jargon, I would recommend the author to
+read it for his future works:
+
+E. Veveakis, K Regenauer-Lieb, Review of extremum postulates, Current
+Opinion in Chemical Engineering, Volume 7, February 2015, Pages 40-46,
+ISSN 2211-3398, http://dx.doi.org/10.1016/j.coche.2014.10.006.
+
+I wouldn't want to enter in a philosophical and endless debate on
+which principle describes best what; I just wanted to emphasize
+that the manuscript is written in a somehow imperative language,
+which I consider not appropriate for a scientific topic that
+torments the community for quite a few years. Therefore, maybe the
+author wants to relax the strong conclusions and allow some
+flexibility in his discussion. That aside, I wish the best to the
+author for his future research.

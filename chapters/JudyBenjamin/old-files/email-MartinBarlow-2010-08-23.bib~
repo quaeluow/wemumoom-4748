@@ -1,0 +1,201 @@
+@book{williamson00,
+    abstract = {Knowledge and Its Limits presents a systematic new conception of knowledge as a fundamental kind of mental state sensitive to the knower's environment. It makes a major contribution to the debate between externalist ad internalist philosophies of mind, and breaks radically with the epistemological tradition of analysing knowledge in terms of true belief. The theory casts light on a wide variety of philosophical issues: the problem of scepticism, the nature of evidence, probability and assertion, the dispute between realism and anti-realism and the paradox of the surprise examination. Williamson relates the new conception to structural limits on knowledge which imply that what can be known never exhausts what is true. The arguments are illustrated by rigorous models based on epistemic logic and probability theory. The result is a new way of doing epistemology for the twenty-first century.},
+    address = {Oxford},
+    author = {Williamson, Timothy},
+    citeulike-article-id = {7369763},
+    citeulike-linkout-0 = {http://www.worldcat.org/isbn/9780198250432},
+    citeulike-linkout-1 = {http://books.google.com/books?vid=ISBN9780198250432},
+    citeulike-linkout-2 = {http://www.amazon.com/gp/search?keywords=9780198250432\&index=books\&linkCode=qs},
+    citeulike-linkout-3 = {http://www.librarything.com/isbn/9780198250432},
+    citeulike-linkout-4 = {http://www.worldcat.org/oclc/43919781},
+    isbn = {9780198250432},
+    keywords = {epistemology},
+    posted-at = {2010-06-30 15:29:42},
+    priority = {2},
+    publisher = {Oxford University Press},
+    title = {Knowledge and its limits},
+    url = {http://www.worldcat.org/isbn/9780198250432},
+    year = {2000}
+}
+
+@book{loeve55,
+  author =	"Lo{\`e}ve, M.",
+  title =	"Probability Theory",
+  publisher =	"Van Nostrand",
+  year = 	"1955",
+  address =	"Princeton, NJ"
+}
+
+@book{guiasu77,
+  author =	"Guia{\c{s}}u, S.",
+  title =	"Information Theory with Application",
+  publisher =	"McGraw-Hill",
+  year = 	"1977",
+  address =	"New York"
+}
+
+@book{mackay02,
+  author =	"MacKay, D. J. C.",
+  title =	"Information Theory, Inference, and Learning Algorithms",
+  publisher =	"Cambridge University",
+  year = 	"2002",
+  address =	"Cambridge"
+}
+
+@article{kolmogorov03,
+    abstract = {A new logical basis for information theory as well as probability theory is proposed, based on computing complexity.},
+    author = {Kolmogorov, A.},
+    booktitle = {Information Theory, IEEE Transactions on},
+    citeulike-article-id = {2641577},
+    citeulike-linkout-0 = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1054210},
+    day = {06},
+    journal = {Information Theory, IEEE Transactions on},
+    keywords = {information, probability, theory},
+    month = {January},
+    number = {5},
+    pages = {662--664},
+    posted-at = {2008-04-08 14:13:40},
+    priority = {2},
+    title = {Logical basis for information theory and probability theory},
+    url = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1054210},
+    volume = {14},
+    year = {2003}
+}
+
+@article{hjorland07,
+    abstract = {This article contrasts Bates' understanding of information as an observer-independent phenomenon with an understanding of information as situational, put forward by, among others, Bateson, Yovits, Spang-Hanssen, Brier, Buckland, Goguen, and Hj{\o}rland. The conflict between objective and subjective ways of understanding information corresponds to the conflict between an understanding of information as a thing or a substance versus an understanding of it as a sign. It is a fundamental distinction that involves a whole theory of knowledge, and it has roots back to different metaphors applied in Shannon's information theory. It is argued that a subject-dependent/situation specific understanding of information is best suited to fulfill the needs in information science and that it is urgent for us to base Information Science (IS; or Library and Information Science, LIS) on this alternative theoretical frame.},
+    address = {Royal School of Library and Information Science, 6 Birketinger, DK-2300, Copenhagen S, Denmark},
+    author = {Hj{\o}rland, Birger},
+    citeulike-article-id = {2334394},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1002/asi.20620},
+    citeulike-linkout-1 = {http://www3.interscience.wiley.com/cgi-bin/abstract/114278626/ABSTRACT},
+    doi = {10.1002/asi.20620},
+    issn = {15322882},
+    journal = {Journal of the American Society for Information Science and Technology},
+    keywords = {information, theory},
+    month = {August},
+    number = {10},
+    pages = {1448--1456},
+    posted-at = {2008-02-05 11:17:09},
+    priority = {0},
+    title = {Information: Objective or subjective/situational?},
+    url = {http://dx.doi.org/10.1002/asi.20620},
+    volume = {58},
+    year = {2007}
+}
+
+@article{chaitin74,
+    abstract = {This paper attempts to describe, in nontechnical language, some of the concepts and methods of one school of thought regarding computational complexity. It applies the viewpoint of information theory to computers. This will first lead us to a definition of the degree of randomness of individual binary strings, and then to an information-theoretic version of G\&\#246;del's theorem on the limitations of the axiomatic method. Finally, we will examine in the light of these ideas the scientific method and yon Neumann's views on the basic conceptual problems of biology.},
+    author = {Chaitin, G.},
+    citeulike-article-id = {449316},
+    citeulike-linkout-0 = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1055172},
+    journal = {Information Theory, IEEE Transactions on},
+    keywords = {computation, information},
+    number = {1},
+    pages = {10--15},
+    posted-at = {2005-12-24 06:22:30},
+    priority = {2},
+    title = {Information-theoretic computation complexity},
+    url = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1055172},
+    volume = {20},
+    year = {1974}
+}
+
+@article{clarkebarron90,
+    abstract = {In the absence of knowledge of the true density function, Bayesian models take the joint density function for a sequence of <e1>n</e1> random variables to be an average of densities with respect to a prior. The authors examine the relative entropy distance <e1>D</e1><sub>n</sub> between the true density and the Bayesian density and show that the asymptotic distance is (<e1>d</e1>/2)(log <e1>n</e1>)+<e1>c</e1>, where <e1>d</e1> is the dimension of the parameter vector. Therefore, the relative entropy rate <e1>D</e1><sub>n</sub>/<e1>n</e1> converges to zero at rate (log <e1>n</e1>)/<e1>n</e1>. The constant <e1>c</e1>, which the authors explicitly identify, depends only on the prior density function and the Fisher information matrix evaluated at the true parameter value. Consequences are given for density estimation, universal data compression, composite hypothesis testing, and stock-market portfolio selection},
+    author = {Clarke, B. S. and Barron, A. R.},
+    citeulike-article-id = {1363527},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1109/18.54897},
+    citeulike-linkout-1 = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=54897},
+    doi = {10.1109/18.54897},
+    journal = {Information Theory, IEEE Transactions on},
+    keywords = {asymptotics, bayesian, information},
+    number = {3},
+    pages = {453--471},
+    posted-at = {2009-02-11 19:26:41},
+    priority = {0},
+    title = {Information-theoretic asymptotics of Bayes methods},
+    url = {http://dx.doi.org/10.1109/18.54897},
+    volume = {36},
+    year = {1990}
+}
+
+@article{grunwald00,
+    author = {Grunwald, Peter},
+    title = {Model Selection Based on Minimum Description Length},
+    year = {2000},
+    journal = {Journal of Mathematical Psychology},
+    pages = {133--152},
+    volume = {44}
+}
+
+@article{ingardenurbanik62,
+    author = {Ingraden, R. S. and Urbanik, K.},
+    title = {Information Without Probability},
+    year = {1962},
+    journal = {Colloquium Mathematicum},
+    pages = {131--150},
+    volume = {9}
+}
+
+@article{ingarden06,
+    author = {Ingarden, R. S.},
+    title = {Information Theory and Thermodynamics of Light Part I Foundations of Information Theory},
+    year = {2006},
+    journal = {Fortschritte der Physik},
+    pages = {567--594},
+    volume = {12}
+}
+
+@article{kampe67,
+    author = {Kamp{\'e} de F{\'e}riet, J. and Forte, B.},
+    title = {Information et probabilit{\'e}},
+    year = {1967},
+    journal = {Comptes rendus de l'Acad{\'e}mie des sciences},
+    pages = {110--114},
+    volume = {A 265}
+}
+
+@article{bozdogan00,
+    abstract = {In this paper we briefly study the basic idea of Akaike's (1973) information criterion (AIC). Then, we present some recent developments on a new entropic or  information complexity  (ICOMP) criterion of Bozdogan (1988a, 1988b, 1990, 1994d, 1996, 1998a, 1998b) for model selection. A rationale for ICOMP as a model selection criterion is that it combines a badness-of-fit term (such as minus twice the maximum log likelihood) with a measure of complexity of a model differently than AIC, or its variants, by taking into account the interdependencies of the parameter estimates as well as the dependencies of the model residuals. We operationalize the general form of ICOMP based on the quantification of the concept of overall model complexity in terms of the estimated  inverse-Fisher information matrix . This approach results in an approximation to the sum of two  Kullback–Leibler distances . Using the correlational form of the complexity, we further provide yet another form of ICOMP to take into account the interdependencies (i.e.,  correlations ) among the parameter estimates of the model. Later, we illustrate the practical utility and the importance of this new model selection criterion by providing several real as well as Monte Carlo simulation examples and compare its performance against AIC, or its variants.},
+    address = {The University of Tennessee},
+    author = {Bozdogan, H.},
+    citeulike-article-id = {376152},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1006/jmps.1999.1277},
+    citeulike-linkout-1 = {http://linkinghub.elsevier.com/retrieve/pii/S0022-2496(99)91277-4},
+    citeulike-linkout-2 = {http://view.ncbi.nlm.nih.gov/pubmed/10733858},
+    citeulike-linkout-3 = {http://www.hubmed.org/display.cgi?uids=10733858},
+    doi = {10.1006/jmps.1999.1277},
+    issn = {00222496},
+    journal = {Journal of Mathematical Psychology},
+    keywords = {ill, regularization},
+    month = {March},
+    number = {1},
+    pages = {62--91},
+    posted-at = {2005-11-02 01:26:39},
+    priority = {2},
+    title = {Akaike's Information Criterion and Recent Developments in Information Complexity},
+    url = {http://dx.doi.org/10.1006/jmps.1999.1277},
+    volume = {44},
+    year = {2000}
+}
+
+@article{akaike03,
+    abstract = {The history of the development of statistical hypothesis testing in time series analysis is reviewed briefly and it is pointed out that the hypothesis testing procedure is not adequately defined as the procedure for statistical model identification. The classical maximum likelihood estimation procedure is reviewed and a new estimate minimum information theoretical criterion (AIC) estimate (MAICE) which is designed for the purpose of statistical identification is introduced. When there are several competing models the MAICE is defined by the model and the maximum likelihood estimates of the parameters which give the minimum of AIC defined by AIC = (-2)log-(maximum likelihood) + 2(number of independently adjusted parameters within the model). MAICE provides a versatile procedure for statistical model identification which is free from the ambiguities inherent in the application of conventional hypothesis testing procedure. The practical utility of MAICE in time series analysis is demonstrated with some numerical examples.},
+    author = {Akaike, H.},
+    citeulike-article-id = {849862},
+    citeulike-linkout-0 = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1100705},
+    day = {06},
+    journal = {Automatic Control, IEEE Transactions on},
+    keywords = {aic, model, selection, statistical},
+    month = {January},
+    number = {6},
+    pages = {716--723},
+    posted-at = {2006-09-19 17:26:06},
+    priority = {5},
+    title = {A new look at the statistical model identification},
+    url = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1100705},
+    volume = {19},
+    year = {2003}
+}
+

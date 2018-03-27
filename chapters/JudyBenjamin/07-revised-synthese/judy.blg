@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2012/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: judy.aux
+The style file: april.bst
+Database file #1: bib-3306.bib
+You've used 23 entries,
+            2791 wiz_defined-function locations,
+            729 strings with 7489 characters,
+and the built_in function-call counts, 11111 in all, are:
+= -- 913
+> -- 310
+< -- 26
++ -- 126
+- -- 93
+* -- 701
+:= -- 1758
+add.period$ -- 71
+call.type$ -- 23
+change.case$ -- 129
+chr.to.int$ -- 23
+cite$ -- 23
+duplicate$ -- 862
+empty$ -- 939
+format.name$ -- 148
+if$ -- 2201
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 179
+newline$ -- 119
+num.names$ -- 92
+pop$ -- 329
+preamble$ -- 1
+purify$ -- 123
+quote$ -- 0
+skip$ -- 360
+stack$ -- 0
+substring$ -- 566
+swap$ -- 413
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 186
+warning$ -- 0
+while$ -- 97
+width$ -- 0
+write$ -- 295

@@ -1,0 +1,8 @@
+Given a special type of evidence, the Principle of Maximum Entropy
+(PME) provides a solution for the posterior probability assignment
+based on the intuition that the information gain consistent with
+assumptions and evidence should be minimal. For one example (Judy
+Benjamin) the results provided by the PME are supported by an
+intuitive approach that prima facie should support the case of
+opponents of PME; and independence assumptions rendering results
+counter-intuitive are improperly applied by opponents.

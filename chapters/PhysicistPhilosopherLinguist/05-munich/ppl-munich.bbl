@@ -1,0 +1,81 @@
+\begin{thebibliography}{13}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+
+\bibitem[{Caticha and Giffin(2006)}]{catichagiffin06}
+Caticha, Ariel, and Adom Giffin.
+\newblock \enquote{Updating Probabilities.}
+\newblock In \emph{MaxEnt 2006, the 26th International Workshop on Bayesian
+  Inference and Maximum Entropy Methods}. 2006.
+
+\bibitem[{Elga(2010)}]{elga10}
+Elga, Adam.
+\newblock \enquote{Subjective Probabilities Should Be Sharp.}
+\newblock \emph{Philosophers' Imprints} 10, ~5: (2010) 1--11.
+
+\bibitem[{Ellsberg(1961)}]{ellsberg61}
+Ellsberg, Daniel.
+\newblock \enquote{Risk, Ambiguity, and the Savage Axioms.}
+\newblock \emph{The Quarterly Journal of Economics} 75, ~4: (1961) 643--669.
+
+\bibitem[{Joyce(2010)}]{joyce10}
+Joyce, James.
+\newblock \enquote{A Defense of Imprecise Credences in Inference and Decision
+  Making.}
+\newblock \emph{Philosophical Perspectives} 24, ~1: (2010) 281--323.
+
+\bibitem[{Levi(1985)}]{levi85}
+Levi, Isaac.
+\newblock \enquote{Imprecision and Indeterminacy in Probability Judgment.}
+\newblock \emph{Philosophy of Science} 52, ~3: (1985) 390--409.
+
+\bibitem[{Lukits(2015)}]{lukits15}
+Lukits, Stefan.
+\newblock \enquote{Maximum Entropy and Probability Kinematics Constrained by
+  Conditionals.}
+\newblock \emph{Entropy} Special Issue "Maximum Entropy Applied to Inductive
+  Logic and Reasoning": (2015) forthcoming.
+
+\bibitem[{Majern{\'\i}k(2000)}]{majernik00}
+Majern{\'\i}k, Vladim{\'\i}r.
+\newblock \enquote{Marginal Probability Distribution Determined by the Maximum
+  Entropy Method.}
+\newblock \emph{Reports on Mathematical Physics} 45, ~2: (2000) 171--181.
+
+\bibitem[{Seidenfeld(1979)}]{seidenfeld79}
+Seidenfeld, Teddy.
+\newblock \enquote{Why I Am Not an Objective Bayesian; Some Reflections
+  Prompted by Rosenkrantz.}
+\newblock \emph{Theory and Decision} 11, ~4: (1979) 413--440.
+
+\bibitem[{Shore and Johnson(1980)}]{shorejohnson80}
+Shore, J., and R.W. Johnson.
+\newblock \enquote{Axiomatic Derivation of the Principle of Maximum Entropy and
+  the Principle of Minimum Cross-Entropy.}
+\newblock \emph{IEEE Transactions on Information Theory} 26, ~1: (1980) 26--37.
+
+\bibitem[{Spohn(2012)}]{spohn12}
+Spohn, Wolfgang.
+\newblock \emph{The Laws of Belief: Ranking Theory and Its Philosophical
+  Applications}.
+\newblock Oxford University, 2012.
+
+\bibitem[{Wagner(1992)}]{wagner92}
+Wagner, Carl~G.
+\newblock \enquote{Generalized Probability Kinematics.}
+\newblock \emph{Erkenntnis} 36, ~2: (1992) 245--257.
+
+\bibitem[{Walley(1991)}]{walley91}
+Walley, Peter.
+\newblock \emph{Statistical Reasoning with Imprecise Probabilities}.
+\newblock Chapman and Hall London, 1991.
+
+\bibitem[{White(2010)}]{white10}
+White, Roger.
+\newblock \enquote{Evidential Symmetry and Mushy Credence.}
+\newblock In \emph{Oxford Studies in Epistemology}, edited by Tamar Gendler,
+  and John Hawthorne, New York, NY: Oxford University, 2010, 161--186.
+
+\end{thebibliography}

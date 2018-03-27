@@ -1,0 +1,1457 @@
+* forum entries
+http://math.stackexchange.com/questions/1494271/definition-of-tensors-and-its-connection-to-examples-of-tensors?noredirect=1#comment3043613_1494271
+* cuts
+** RandR cuts
+*** 1
+to two forecasts for the probability $p$ of Hillary Clinton winning
+the U.S. presidential election: the \emph{New York Times} forecast
+(the \qnull{Upshot}) set $p$ at 85\%; the forecast on
+\texttt{fivethirtyeight.com} by Nate Silver set $p$ at 67.9\%. The
+difference is remarkable (a forecast I did not pay attention to in the
+\emph{Huffington Post} set $p$ at 99.9\%). Where did it come from?
+Among many possible answers, one is that the \emph{New York Times} is
+not only in the business of reporting the news but also in the
+business of selling newspapers. If the statisticians at the \emph{New
+York Times} considered the true probability for Clinton's win to be
+$67.9\%$, as Nate Silver did, it may still have increased their
+utility to publish $85\%$, if only because the people who buy the
+\emph{New York Times} reward this kind of reassurance.
+** Weak Convexity and Symmetry in Information Geometry
+Using information theory instead of the geometry of reason, Joyce's
+result still stands, vindicating probabilism on epistemic merits
+rather than prudential ones: partial beliefs which violate probabilism
+are dominated by partial beliefs which obey it, no matter what the
+facts are.
+
+Joyce's axioms, however, will need to be reformulated to accommodate
+asymmetry. This appendix shows that the axiom Weak Convexity (see
+section \ref{eugr}) still holds in information geometry. Consider
+three points $Q,R,S\in\mathbb{S}^{n}$ (replace $\mathbb{S}^{n}$ by the
+$n$-dimensional space of non-negative real numbers, if you do not want
+to assume probabilism) for which
+
+\begin{equation}
+  \label{eq:app1}
+  D_{\mbox{\tiny KL}}(Q,R)=D_{\mbox{\tiny KL}}(Q,S).
+\end{equation}
+
+I will show something slightly stronger than Weak Convexity: Joyce's
+inequality is not only true for the midpoint between $R$ and $S$ but
+for all points $\lambda{}R+(1-\lambda)S$, as long as
+$0\leq\lambda\leq{}1$. The inequality aimed for is
+
+\begin{equation}
+  \label{eq:app2}
+  D_{\mbox{\tiny KL}}(Q,\lambda{}R+(1-\lambda)S)\leq{}D_{\mbox{\tiny KL}}(Q,R)=D_{\mbox{\tiny KL}}(Q,S).
+\end{equation}
+
+To show that it holds I need the log-sum inequality, which is a result
+of Jensen's inequality (for a proof of the log-sum inequality see
+Theorem 2.7.1 in \scite{8}{coverthomas06}{31}). For non-negative
+numbers $a_{1},\ldots,a_{n}$ and $b_{1},\ldots,b_{n}$,
+
+\begin{equation}
+  \label{eq:logsum}
+  \sum_{i=1}^{n}a_{i}\ln\frac{a_{i}}{b_{i}}\geq\left(\sum_{i=1}^{n}a_{i}\right)\ln\frac{\sum_{i=1}^{n}a_{i}}{\sum_{i=1}^{n}b_{i}}.
+\end{equation}
+
+(\ref{eq:app2}) follows from (\ref{eq:logsum}) via
+
+\begin{align}
+  \label{eq:app3}
+  &D_{\mbox{\tiny KL}}(Q,R)=\lambda{}D_{\mbox{\tiny KL}}(Q,R)+(1-\lambda)D_{\mbox{\tiny KL}}(Q,S)=\notag \\
+  &\sum_{i=1}^{n}\left(\lambda{}q_{i}\ln\frac{\lambda{}q_{i}}{\lambda{}r_{i}}+(1-\lambda)q_{i}\ln\frac{(1-\lambda)q_{i}}{(1-\lambda)s_{i}}\right)\geq\notag \\
+  &\sum_{i=1}^{n}q_{i}\ln\frac{q_{i}}{\lambda{}r_{i}+(1-\lambda)s_{i}}=D_{\mbox{\tiny KL}}(Q,\lambda{}R+(1-\lambda)S).
+\end{align}
+
+I owe some thanks to physicist friend Thomas Buchberger for help with
+this proof. Interested readers can find a more general claim in
+Csisz{\'a}r's Lemma 4.1 (see \scite{8}{csiszarshields04}{448}), which
+accommodates convexity of the Kullback-Leibler divergence as a special
+case.
+** version 197 cuts
+*** wikipedia
+Note, however, also that weight of evidence and information theory are
+concerned with different concepts which can come apart, as in this
+example in the Wikipedia article on the Kullback-Leibler divergence:
+
+\begin{quotex}
+  \beispiel{Riemann's Certainty}\label{ex:riemann} On the entropy
+  scale of information gain there is very little difference between
+  near certainty and absolute certainty---coding according to a near
+  certainty requires hardly any more bits than coding according to an
+  absolute certainty. On the other hand, on the logit scale implied by
+  weight of evidence, the difference between the two is
+  enormous---infinite perhaps; this might reflect the difference
+  between being almost sure (on a probabilistic level) that, say, the
+  Riemann hypothesis is correct, compared to being certain that it is
+  correct because one has a mathematical proof. These two different
+  scales of loss function for uncertainty are both useful, according
+  to how well each reflects the particular circumstances of the
+  problem in question.
+\end{quotex}
+*** In an earlier version of this paper, I added asymmetry 
+to List One of expectations for the more attractive number of seven
+plausible expectations for an amujus. It turns out, however, that
+asymmetry is initially an attractive feature but brings with it a
+complexity that I underestimated at first. It is a worthy research
+project to tame this complexity. The objective of this paper is merely
+to show where the problems are, not to offer an integrated solution
+and an explanation how our epistemic intuitions cohere with the
+anomalies of information theory. I do not think that the geometry of
+reason can be salvaged from the damage done to it in the previous
+section. I have more hope that there are explanations for the
+violations of expectations described in this section for information
+theory.
+*** which will also give us another strong indicator 
+against the geometry of reason that the distance measure between
+probability distributions needs to be asymmetrical. What Chentsov's
+theory does for us more specifically, however, is to provide us with a
+reason to reject the idea that there might be well-behaved asymmetry
+measures which can do the job as well as the ill-behaved distance
+measures of information theory. Three subsections are to follow. one
+on Chino's asymmetric modeling approach, which will motivate the
+subsequent two subsections on information geometry (primarily using
+Amari's results) and monotone invariance (primarily using Chentsov's
+results).
+*** A violation of \textsc{transitivity of asymmetry} means 
+that even though $P_{1}$ may be asymmetrical to $P_{2}$ in favour of
+$P_{2}$ (it is somehow less of an effort to get from $P_{1}$ to
+$P_{2}$ than from $P_{2}$ to $P_{1}$) and $P_{2}$ may be asymmetrical
+to $P_{3}$ in favour of $P_{3}$, $P_{1}$ is asymmetrical to $P_{3}$ in
+favour of $P_{1}$. Using $\Delta$ defined in (\ref{eq:sksy}), for
+example, $\Delta_{P_{3}}(P_{1})>0$ while $\Delta_{P_{2}}(P_{1})<0$ and
+$\Delta_{P_{3}}(P_{2})<0$ given
+*** Triangularity 
+and transitivity are properties that we may reasonably expect from a
+distance measure on probability distributions, even if we want
+asymmetry. After all, a violation of triangularity means that updating
+from $R_{1}$ to $R_{2}$ and then from $R_{2}$ to $R_{3}$ is somehow
+less of an effort than updating from $R_{1}$ to $R_{3}$ directly. For
+example,
+
+\begin{equation}
+  \label{eq:triang}
+  D_{\mbox{\tiny KL}}(R_{1},R_{3})>D_{\mbox{\tiny KL}}(R_{1},R_{2})+D_{\mbox{\tiny KL}}(R_{2},R_{3})
+\end{equation}
+
+for
+
+\begin{equation}
+  \label{eq:triangviol}
+    R_{1}=\left(\frac{1}{3},\frac{1}{3},\frac{1}{3}\right) \hspace{.5in}
+    R_{2}=\left(\frac{2}{5},\frac{2}{5},\frac{1}{5}\right)  \hspace{.5in}
+    R_{3}=\left(\frac{4}{5},\frac{1}{10},\frac{1}{10}\right).
+\end{equation}
+*** Asymmetry is central to partial beliefs 
+and their norms of updating because it confronts us with the choice
+between a simple metric (geometry of reason), possibly even Euclidean,
+and its counter-intuitive consequences; and a complicated topology
+(information theory) which is not based on a metric and has
+non-trivial features which are difficult to reconcile with epistemic
+virtues.
+*** triangularity version 1
+As mentioned at the end of subsection \ref{subsec:ieseiwoh}, the three
+points $A,B,C$ in (\ref{eq:e6}) violate \textsc{triangularity}:
+
+\begin{equation}
+  \label{eq:yohliimo}
+  D_{\mbox{\tiny KL}}(A,C)>D_{\mbox{\tiny KL}}(B,C)+D_{\mbox{\tiny KL}}(A,B).
+\end{equation}
+
+This is counterintuitive on a number of levels, some of which I have
+already hinted at in illustration (taking a shortcut while making a
+detour; buying a pair of shoes for more money than buying the shoes
+individually). Here is another example of an odd consequence of the
+particular kind of triangle inequality violation committed by
+information theory. Consider two points $x$ and $z$ on
+$\mathbb{S}^{n-1}$ with coordinates $x_{i}$ and $z_{i}$. Then consider
+a sequence of intermediate points $y^{jk}$ whose coordinates are
+defined as follows for fixed $j=1,2,3,\ldots$
+
+\begin{equation}
+  \label{eq:ohngokei}
+  y_{i}^{jk}=\frac{k}{2^{j}}x_{i}+\left(1-\frac{k}{2^{j}}\right)z_{i}\mbox{ for }k=0,\ldots,2^{j}.
+\end{equation}
+
+For simplicity, let us write $\delta(a,b)=D_{\mbox{\tiny KL}}(b,a)$.
+Then define the sequence
+
+\begin{equation}
+  \label{eq:queireiw}
+  T_{j}=\sum_{k=0}^{2^{j}-1}\delta\left(y^{jk},y^{j(k+1)}\right)\mbox{ for }j=1,\ldots
+\end{equation}
+
+If $\delta$ were the Euclidean distance norm, $T_{j}$ would be
+constant. Like Zeno's arrow, one moves happily along from $x$ to $z$,
+no matter how many stops one makes on the way. Not so for information
+theory and the Kullback-Leibler divergence. Any midpoint stop along
+the way shortens the divergence, no matter which points $x$ and $z$
+on the simplex you pick, as long as $x\neq{}z$:
+
+\begin{equation}
+  \label{eq:aiphedau}
+  \delta(x,z)>\delta\left(x,y^{11}\right)+\delta\left(y^{11},z\right).
+\end{equation}
+
+$T_{j}$ is a strictly decreasing sequence. Therefore, the more stops
+you make along the way, the less information you lose. For the proof
+of (\ref{eq:aiphedau}), let $y=y^{11}$ with coordinates
+$y_{i}=0.5x_{i}+0.5z_{i}$. Then (\ref{eq:aiphedau}) is equivalent to
+
+\begin{equation}
+  \label{eq:dooviegu}
+  D_{\mbox{\tiny KL}}(z,x)>D_{\mbox{\tiny KL}}(y,x)+D_{\mbox{\tiny KL}}(z,y)
+\end{equation}
+
+which in turn is equivalent to
+
+\begin{equation}
+  \label{eq:oxootosu}
+  \sum_{i=1}^{n}\left(z_{i}+x_{i}\right)\log\frac{x_{i}+z_{i}}{2x_{i}}+\sum_{i=1}^{n}2x_{i}\log\frac{2x_{i}}{x_{i}+z_{i}}>0
+\end{equation}
+
+which is true by Gibbs' inequality.
+*** You can go out of your way and save time! 
+One of these via points where you do not lose time (more precisely,
+where you do not lose information) is the point that Jeffrey
+conditioning recommends if you are trying to get from the prior
+probability distribution to the point that LP conditioning recommends.
+If we call these points $A,B,C$ as in (\ref{eq:e6}) and remember that
+$A$ represents the prior, $B$ the solution for Jeffrey conditioning,
+and $C$ the solution for LP conditioning, then
+
+Later on, I will discuss how information theory violates
+\textsc{triangularity}. In Euclidean geometry, adding a via point will
+always make the journey longer, unless the via point lies on the
+direct route from the starting point to the stopping point. This is
+not necessarily true for the Kullback-Leibler divergence (for more
+detail see
+*** Now we want to show that on all five of these 
+confirmation criteria, the degree of confirmation is greater if $h$ is
+less of a middling distribution ($P$ is less of a middling
+distribution than $Q$ if and only if
+$|P(h)-P(\urcorner{}h)|>|Q(h)-Q(\urcorner{}h)|$, a concept generalized
+by entropy).
+
+Degree of confirmation is lower at the extremes than in the middle.
+
+From the perspective of an observer (in the case of subjective
+probabilities, the epistemic perspective), movement towards the
+extremes becomes increasingly difficult. Once a hypothesis is already
+considered to be highly likely or highly unlikely, confirmation or
+disconfirmation is much more difficult to come by than in the case of
+near-equiprobability between alternative hypotheses. The geometry of
+reason ignores this analogy from confirmation theory; information
+theory reflects it.
+
+the idea here is that confirmation is more difficult near the horizon
+than near the centre. 
+*** Consider the following partial derivatives 
+of $M_{P},R_{P},\mbox{ and }L_{P}$. They are illustrated in
+figure\tbd{} and nicely reflect the horizon effect for degree of
+confirmation measures (ii) and (iv) in contrast to (i).
+
+\begin{align}
+  \label{eq:confders}
+  \mbox{(i) }&\left(\frac{\partial{}M_{P}}{\partial{}x},\frac{\partial{}M_{P}}{\partial{}y}\right)=(-1,1) \notag \\
+  \mbox{(ii) }&\left(\frac{\partial{}R_{P}}{\partial{}x},\frac{\partial{}R_{P}}{\partial{}y}\right)=\left(-\frac{1}{x},\frac{1}{y}\right) \notag \\
+  \mbox{(iii) }&\left(\frac{\partial{}J_{P}}{\partial{}x},\frac{\partial{}J_{P}}{\partial{}y}\right)=\left(-\frac{1}{(x-1)^{2}},\frac{1}{(y-1)^{2}}\right) \notag \\
+  \mbox{(iv) }&\left(\frac{\partial{}L_{P}}{\partial{}x},\frac{\partial{}L_{P}}{\partial{}y}\right)=\left(\frac{1}{x(x-1)},\frac{1}{y(y-1)}\right) \notag \\
+  \mbox{(v) }&\left(\frac{\partial{}G_{P}}{\partial{}x},\frac{\partial{}G_{P}}{\partial{}y}\right)=\left(\frac{1}{y-1},\frac{(x-1)}{(y-1)^{2}}\right) \notag \\
+  \mbox{(vi) }&\left(\frac{\partial{}Z_{P}}{\partial{}x},\frac{\partial{}Z_{P}}{\partial{}y}\right)=\left\{
+     \begin{array}{l}
+       \left(\frac{y-1}{(x-1)^{2}},-\frac{1}{(x-1)}\right) \\
+       \left(-\frac{y}{x^{2}},\frac{1}{x}\right)
+     \end{array}\right. \notag \\
+  \mbox{(vii)
+  }&\left(\frac{\partial{}I_{P}}{\partial{}x},\frac{\partial{}I_{P}}{\partial{}y}\right)=\left(\frac{x(y-1)-y(x-1)}{x(x-1)},\log\frac{y(x-1)}{x(y-1)}\right)   \notag \\
+\end{align}
+
+They define vector fields on $(0,1)\times{}(0,1)$ which clearly
+indicate a rise in rate of change towards the extremes for the ratio
+measures. Now also differentiate Festa and Gaifman. Milne rejects L,
+Festa, Gaifman, and Crupi because when h=e the confirmation function
+does not yield information-added.
+*** In the following subsection, I will show how different degree 
+of confirmation theories align with different updating methods as far
+as the horizon effect is concerned.
+
+I present two formalizations of the horizon effect, one that is
+intuitive to grasp (F1) and another that is mathematically more useful
+(F2). They are largely equivalent, with some minor complications
+tarnishing straightforward equivalence, but I will leave those for a
+more technical paper. 
+
+\begin{description}
+\item[(F1)] Let $P,Q,P',Q'$ be probability distributions on a finite
+  event space $\Omega$ with $|\Omega|=n+1$.\tbd{bring this notation in
+    line with rest of paper} They correspond to points $p,q,p',q'$ in
+  $\mathbb{S}^{n}\subset{}\mathbb{R}^{n+1}$. Let $M$ be the maximally
+  middling distribution with $m_{i}=1/(n+1)$ for all the Cartesian
+  coordinates of $m\in{}\mathbb{S}^{n}$, the point in $\mathbb{S}^{n}$
+  corresponding to $M$. (F1) requires that a measure $D$ of how far
+  one point is from another in $\mathbb{S}^{n}$, which serves a basis
+  for the updating method under consideration, yields
+  $D(p,p')<D(q,q')$ if the three conditions (i)--(iii) are fulfilled.
+\end{description}
+
+The three conditions are (i) all points ($p,q,p',q'$) lie on a
+Euclidean line from $m$ to a fixed point $\xi$ on the boundary of
+$\mathbb{S}^{n}$; (ii) the Euclidean distance between $p$ and $p'$
+equals the Euclidean distance between $q$ and $q'$; (iii) measuring
+from $m$ to $\xi$, $p$ is closest to $m$ and $q'$ is farthest away from
+$m$ (therefore closest to $\xi$), $p'$ and $q$ are strictly between $p$
+and $q'$ in the direction of the line from $m$ to $\xi$. See figure
+\ref{fig:conditions} for an illustration of these conditions.
+
+Note that (F1) is conservative in its demands: only points that are
+equidistant and exactly oriented between midpoint of the simplex and a
+fixed point on the boundary are required to exhibit the horizon
+effect. The geometry of reason by its nature violates the horizon
+effect, because the Euclidean distance measure is indifferent to
+nearness with respect to the midpoint or the boundary of the simplex.
+
+\begin{description}
+\item[(F2)] Let $D$ be as in (F1) and $x$ a point belonging to the
+  simplex $\mathbb{S}^{n}$ with $x\neq{}m$. $\xi$ is then the unique
+  point on the boundary of $\mathbb{S}^{n}$ which is collinear with
+  $m$ and $x$. Then define two functions $G_{x}^{+}$ and $G_{x}^{-}$
+  as below in (\ref{eq:f2def1}). The horizon effect requires that,
+  where $G_{x}^{+}$ and $G_{x}^{-}$ are sufficiently smooth,
+\begin{equation}
+  \label{eq:horeff}
+  \frac{\partial^{2}G_{x}^{+}}{\partial\lambda^{2}}\mbox{ is strictly
+    positive for all }x\in\mathbb{S}^{n}\mbox{ and}
+\end{equation}
+\begin{equation}
+  \label{eq:horefg}
+  \frac{\partial^{2}G_{x}^{-}}{\partial\lambda^{2}}\mbox{ is strictly
+    negative for all }x\in\mathbb{S}^{n}.
+\end{equation}
+\end{description}
+
+The function $G_{x}^{+}:(0,1)\rightarrow\mathbb{R}_{0}^{+}$ is defined
+as follows,
+\begin{equation}
+  \label{eq:f2def1}
+  G_{x}^{+}(\lambda)=|D(x,y(\lambda))|
+\end{equation}
+where $y(\lambda)=(y_{0}(\lambda),\ldots,y_{n}(\lambda))$ with
+$y_{i}(\lambda)=(1-\lambda)x_{i}+\lambda{}\xi_{i}$. More simply, $y$
+is a point on the line from $x$ to $\xi$ with $\lambda$ as a linear
+parameter. 
+
+The function $G_{x}^{-}:(-1,0)\rightarrow\mathbb{R}_{0}^{+}$ is
+defined as in (\ref{eq:f2def1}), so
+$G_{x}^{-}(\lambda)=|D(x,y(\lambda))|$, but with
+$y_{i}(\lambda)=(1+\lambda)x_{i}-\lambda{}m_{i}$. Therefore,
+$y(\lambda)$ is a point on the line from $x$ to $m$ with $\lambda$ as
+a linear parameter.
+
+Note that we allow negative values for $D$ but not for $G$. The reason
+is that in confirmation theory $D$ expresses the degree of
+confirmation, which could be negative in the case of disconfirmation.
+Note also that for the following calculations it is helpful to know
+that the coordinates for $\xi$, the unique boundary point determined
+by $m$ and $x$, are
+
+\begin{equation}
+  \label{eq:xii}
+  \xi_{i}=m_{i}\left(1-\frac{x_{i}-m_{i}}{x^{*}-m_{i}}\right),
+\end{equation}
+
+where $m_{i}=1/(n+1)$ and $x^{*}=\min\{x_{i}\}$.
+
+The two obvious examples for (F2) are the geometry of reason and
+information theory using the Kullback-Leibler divergence. For the
+geometry of reason,
+\begin{equation}
+  \label{eq:horeffgor}
+  G_{x}^{+}(\lambda)=\lambda\sqrt{\sum_{i=0}^{n}\left(\xi_{i}-x_{i}\right)^{2}}=\lambda\|\xi-x\|
+\end{equation}
+and
+\begin{equation}
+  \label{eq:horeffgos}
+  G_{x}^{-}(\lambda)=\lambda\sqrt{\sum_{i=0}^{n}\left(x_{i}-m_{i}\right)^{2}}=\lambda\|x-m\|
+\end{equation}
+
+(F2) is clearly not fulfilled since
+$\partial^{2}G_{x}^{+/-}/\partial\lambda^{2}=0$.
+
+For the Kullback-Leibler divergence and information theory,
+$G_{x}^{+/-}(\lambda)=D_{\mbox{\tiny KL}}(y(\lambda),x)$. Note that
+the arguments for $D$ and $D_{\mbox{\tiny KL}}$ are reversed because
+for the Kullback-Leibler divergence the second argument is considered
+the prior probability. Note also that the Kullback-Leibler divergence
+is always positive, which is one of its well-known properties
+immediately following from Gibbs' inequality. Then
+
+\begin{align}
+  \label{eq:dklhor}
+  \frac{\partial^{2}G_{x}^{+}}{\partial\lambda^{2}}(\lambda)&=&\sum_{i=0}^{n}\left(\xi_{i}-x_{i}\right)^{2}\frac{x_{i}}{y_{i}(\lambda)}\notag \\
+  \frac{\partial^{2}G_{x}^{-}}{\partial\lambda^{2}}(\lambda)&=&\sum_{i=0}^{n}\left(x_{i}-m_{i}\right)^{2}\frac{x_{i}}{y_{i}(\lambda)},
+\end{align}
+
+both of which are strictly positive since at least one summand is
+strictly positive and all others are non-negative. Information theory
+reflects the horizon effect while the geometry of reason does not. In
+the next subsection, I will take this idea to a difference level and
+compare degree of confirmation theory to probability updating methods
+from the perspective of the horizon effect requirement.
+*** Updating methods based on information theory 
+(standard conditioning, Jeffrey conditioning, the principle of maximum
+entropy) fulfill all seven expectations. I will have more to say later
+about two very plausible-sounding expectations that information theory
+does not fulfill: that whatever epistemic asymmetry an amujus reflects
+ought to be transitive and fulfill the triangle inequality.
+*** Before I introduce the notion of epistemic utility 
+and some of the substantial claims in the literature that epistemic
+utility together with the geometry of reason give us, I want to spell
+out my claim that (a) given an epistemic utility approach and some
+intuitive axioms, the geometry of reason leads itself ad absurdum; and
+(b) there is a viable alternative to the geometry of reason which
+avoids the problematic implications: information theory.
+*** die roll
+\begin{quotex}
+  \beispiel{Die Roll}\label{ex:dieroll} You are about to roll a
+  six-sided die.
+\end{quotex}
+*** Just as Tversky did, I will present 
+a non-geometric and asymmetric alternative: information theory.
+Information theory fulfills the expectations that the geometry of
+reason violates and incorporates basic Bayesian commitments to
+probabilism and standard conditioning. I end the paper, however, with
+a vexatious problem for information theory. The asymmetry that makes
+information theory such an ideal candidate to replace the geometry of
+reason turns out to be of a very ill-behaved sort and cannot easily be
+squared with epistemic intuition. I will give some pointed
+illustrations of this ill behaviour (violation of the triangle
+inequality and violation of transitivity).
+** small cuts
+*** horizon effect first pass
+The horizon effect, a little more formally, is the requirement
+that a difference measure (which, as in psychometrics after
+Tversky, could be asymmetrical---this is the case primarily
+addressed by Chino and Shiraiwa) assigns a greater squared
+difference to $C$ and $D$ than to $A$ and $B$ if (a) the Euclidean
+distance in some suitable Euclidean coordinate model between $C$
+and $D$ and between $A$ ad $B$ is equal; (b) the point that is
+closest to the midpoint of the Euclidean model of the total space
+is neither $C$ nor $D$; and (c) all four points can be contained
+in half of the Euclidean model and do not straddle all acceptable
+divisions into halves of the model. This definition is hardly
+rigorous as a general definition, but I am hoping to clarify this
+at least for the two-dimensional case.
+
+Consider a relatively prior probability distribution $P$ and a
+posterior probability distribution $Q$ on an outcome space with two
+outcomes, such as a coin flip with the outcomes $H$ and $T$ for the
+random variable $X$. Let $P(X=H)=p,Q(X=H)=q$. We are interested in
+comparing the difference between the prior $P$ and the posterior $Q$
+to another pair of priors and posteriors $P'$ and $Q'$, for which we
+use corresponding notation. Let $\mathbb{S}^{1}$ be the Euclidean
+model for these distributions (the line in $\mathbb{R}^{2}$ between
+$(0,1)$ and $(1,0)$). The horizon effect originally expresses a very
+narrow requirement. If all four probabilities $p,q,p',q'$ are greater
+(or lesser) than $0.5$, so they do not straddle halves, and
+$\|p-q\|=\|p'-q'\|$ in the Euclidean model, then a difference measure
+$D$ must yield $D(p,q)^{2}>D(p',q')^{2}$ in case the probability
+closest to $0.5$ of all four is neither $p$ nor $q$.
+
+The horizon effect has the following more substantial consequence.
+If $P,Q,P',Q'$ are probability densities or distributions
+belonging to the same family of densities or distributions with
+parameters $\xi=\xi_{1},\ldots,\xi_{k}$ such that $P(x;\xi)=?$,
+then the derivative ...
+*** diagrams
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{asym-eq.pdf}
+      \caption{\footnotesize The partition induced by equation
+        (\ref{eq:sksy}) of $\mathbb{S}^{3}$ when $P=(1/3,1/3,1/3)$.}
+      \label{fig:asymeq}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{asym-242-604-154.pdf}
+      \caption{\footnotesize The partition induced by equation
+        (\ref{eq:sksy}) of $\mathbb{S}^{3}$ when
+        $P=(0.242,0.604,0.154)$.}
+      \label{fig:asym262}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{asym-400-400-200.pdf}
+      \caption{\footnotesize The partition induced by equation
+        (\ref{eq:sksy}) of $\mathbb{S}^{3}$ when $P=(0.4,0.4,0.2)$.}
+      \label{fig:asym442}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{asym-741-087-172.pdf}
+      \caption{\footnotesize The partition induced by equation
+        (\ref{eq:sksy}) of $\mathbb{S}^{3}$ when $P=(0.741,0.087,0.172)$.}
+      \label{fig:asym712}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{euclidean.pdf}
+      \caption{\footnotesize 3D scatterplot for $\Delta_{P}$ with
+        arbitrary $P$ when the Euclidean metric is used and not the
+        Kullback-Leibler divergence. There is symmetry, therefore all
+        values are zero.}
+      \label{fig:euclidean}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{jelly-eq.pdf}
+      \caption{\footnotesize 3D scatterplot for $\Delta_{P}$ with
+        $P=(1/3,1/3,1/3)$, using the Kullback-Leibler divergence. Note
+      that some values are above zero, others are below zero. This
+      partition is more visible in figure (\ref{fig:asymeq}).}
+      \label{fig:jellyeq}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{jelly-261.pdf}
+      \caption{\footnotesize 3D scatterplot for $\Delta_{P}$ with
+        $P=(0.242,0.604,0.154)$. For the corresponding partition see
+        figure (\ref{fig:asym262}).}
+      \label{fig:jelly261}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{jelly-442.pdf}
+      \caption{\footnotesize 3D scatterplot for $\Delta_{P}$ with
+        $P=(0.4,0.4,0.2)$. For the corresponding partition see figure (\ref{fig:asym442}).}
+      \label{fig:jelly442}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{jelly-712.pdf}
+      \caption{\footnotesize 3D scatterplot for $\Delta_{P}$ with
+        $P=(0.741,0.087,0.172)$. For the corresponding partition see
+        figure (\ref{fig:asym712}).}
+      \label{fig:jelly712}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.82\linewidth}
+      \includegraphics[width=\textwidth]{concat1.png}
+      \caption{\footnotesize The partitions induced by equation
+        (\ref{eq:sksy}) on the left, corresponding to the 3D
+        scatterplot for $\Delta_{P}$ on the right. From top to bottom,
+        $P=(1/3,1/3,1/3); P=(0.4,0.4,0.2); P=(0.242,0.604,0.154);
+        P=(0.741,0.087,0.172)$.
+        Note that for the geometry of reason, the diagrams are
+        trivial. The challenge for information theory is to explain
+        the non-triviality of these diagrams epistemically without
+        begging the question.}
+      \label{fig:concat}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{threepointshat.pdf}
+      \caption{\footnotesize The simplex $\mathbb{S}^{2}$ in
+        three-dimensional space $\mathbb{R}^{3}$ with points
+        $\hat{A},\hat{B},\hat{C}$ corresponding to the probability
+        distributions in (\ref{eq:priors}),
+        (\ref{eq:sherlockposteriorjcreg}), and
+        (\ref{eq:sherlockposteriorlpreg}). Similar to figure
+        (\ref{fig:threepoints}), $\hat{C}$ is closer to $\hat{A}$ than
+        $\hat{B}$ is, geometrically speaking. Using the
+        Kullback-Leibler divergence, however, $\hat{B}$ is closer to
+        $\hat{A}$ than $\hat{C}$ is. The probability distribution
+        corresponding to $\hat{B}$ is the Jeffrey posterior with
+        respect to the probability distribution corresponding to
+        $\hat{A}$. The probability distribution corresponding to
+        $\hat{C}$ is the LP posterior and contains an extreme element.
+        Jeffrey conditioning, by regularity, avoids extreme
+        probabilities not required by the evidence. The coloured line
+        going through $\hat{B}$ and $\hat{C}$ signifies the constraint
+        that the evidence imposes on the posterior distribution,
+        mandating that the $x$-coordinate must be $2/3$.}
+      \label{fig:threepointshat}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{symmetrylp.pdf}
+      \caption{\footnotesize The simplex $\mathbb{S}^{2}$ in
+        three-dimensional space $\mathbb{R}^{3}$ with points
+        $Q,R,S,L_{1},L_{2}$, where $\|Q-R\|=\|Q-S\|$,
+        $L_{1}=\lambda\Vec{OR}+(1-\lambda)\Vec{OS}$ and
+        $L_{2}=(1-\lambda)\Vec{OR}+\lambda\Vec{OS}$. As you would
+        expect with a Euclidean metric, $\|Q-L_{1}\|=\|Q-L_{2}\|$.}
+      \label{fig:symmetrylp}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{symmetryrj.pdf}
+      \caption{\footnotesize The simplex $\mathbb{S}^{2}$ in
+        three-dimensional space $\mathbb{R}^{3}$ with points
+        $\hat{Q},\hat{R},\hat{S},\hat{L_{1}},\hat{L_{2}}$, where
+        $D_{\mbox{\tiny KL}}(\hat{Q},\hat{R})=D_{\mbox{\tiny
+            KL}}(\hat{Q},\hat{S})$,
+        $\hat{L_{1}}=\lambda\Vec{O\hat{R}}+(1-\lambda)\Vec{O\hat{S}}$
+        and
+        $\hat{L_{2}}=(1-\lambda)\Vec{O\hat{R}}+\lambda\Vec{O\hat{S}}$.
+        However, in violation of Joycean symmetry, $D_{\mbox{\tiny
+            KL}}(\hat{Q},\hat{L_{1}})\neq{}D_{\mbox{\tiny
+            KL}}(\hat{Q},\hat{L_{2}})$.}
+      \label{fig:symmetryrj}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{flushright}
+    \begin{minipage}[h]{.7\linewidth}
+      \includegraphics[width=\textwidth]{symmetrytgr.pdf}
+      \caption{\footnotesize Figure (\ref{fig:symmetrylp}) and figure
+        (\ref{fig:symmetryrj}) superimposed in different colours to
+        show that the \qnull{isosceles} triangles (\qnull{isosceles}
+        with respect to Euclidean metric and Kullback-Leibler
+        divergence respectively) are not congruent.}
+      \label{fig:symmetrytgr}
+    \end{minipage}
+  \end{flushright}
+\end{figure}
+*** Section Overview
+There are four sections to come. Section \ref{eugr} describes the
+geometry of reason and provides a brief overview of Leitgeb and
+Pettigrew's strategy to give probabilism and standard conditioning a
+foundation in epistemic utility. Section \ref{grit} gives a simple
+example and a more general overview how the geometry of reason and
+information theory give different results with respect to proximity
+relations of probability distributions. The geometry of reason
+supports LP conditioning, information theory supports Jeffrey
+conditioning. Section \ref{fivex} demonstrates in detail how LP
+conditioning violates five commonsense expectations and how Jeffrey
+conditioning fulfills them. Section \ref{ascc} draws the conclusion
+that information theory, not the geometry of reason, reflects in
+formal terms what epistemic utility expresses in informal terms.
+*** Proof in the three-dimensional case
+let $b',b'',\omega$ correspond to points $A,B,C$ in $\mathbb{S}^{3}$,
+forming an isosceles triangle with $\beta=\gamma$. Let $D$ be an
+arbitrary point on $BC$ and $\gamma'$ the angle created by $ACD$,
+$\gamma''$ the angle created by $BCD$. Then the law of sines yields
+
+\begin{equation}
+  \label{eq:iso1}
+  |AC|=\frac{\sin\gamma'}{\sin\gamma}|CD|.
+\end{equation}
+
+Since $\gamma'\leq\gamma'+\gamma''=\gamma$, it follows that
+$|CD|\leq{}|AC|$, which completes the proof. It is more challenging to
+show this for information theory, but Weak Convexity is also true when
+the Kullback-Leibler divergence is used.\tbd{Provide proof.}
+*** The final task will be to show how these axioms 
+and the geometry of reason justifying them saddle us with
+counterintuitive results on their own terms. This will establish the
+alternative (information theory) as a superior alternative. Before I
+do this, however, I will show how the geometry of reason works in
+Leitgeb and Pettigrew's account, since their account more so than
+Joyce's will give us leverage in identifying its shortcomings.
+*** Consider a 6-sided die. Probabilism assumed 
+(we may drop this assumption later on and try to show that probabilism
+is justified on the basis of maximizing epistemic utility), the
+possible credence functions of an agent are isomorphic to the
+6-dimensional simplex ($\mathbb{S}^6\subset\mathbb{R}^6$) for which
+*** This paper has no solution for the problem 
+which non-question-begging epistemic explanation may justify the
+non-trivial asymmetries of information theory. Yet I consider
+asymmetry to be much more plausible than the symmetry that the
+geometry of reason advocates---not only because the geometry of reason
+violates the six expectations, but also because asymmetry in its own
+right is epistemically more plausible. I have already made this case
+for extreme probabilities. In the following, I want to make the case
+hat symmetry is not only implausible for extreme but also for regular
+probabilities.
+*** The suggestion of the geometry of reason 
+that these cases are symmetrical and that the distribution $Q'$ is as
+close to $Q$ as $P'$ is to $P$ is about as unlikely as getting the
+empirical result that people will find that North Korea is as similar
+to China as China is to North Korea (see \scite{8}{tversky77}{328}).
+** MDS and its symmetry bias
+Another area where similarity measures are important is
+multidimensional scaling (or MDS), for example in genetics (or for
+dating apps). Especially in genetics, the MDS literature has a similar
+bias towards symmetry as the epistemological literature advocating the
+geometry of reason. Biologists are often interested in the clustering
+of DNA samples in order to establish relationships between genetics
+and biological properties. The clustering needs to be based on some
+kind of similarity measure, for example Euclidean metrics or the
+Kullback-Leibler divergence (see \scite{7}{gentleman06}{}). The
+Euclidean metric is often preferred because it is easily computed and
+visualized, but some biologists have noted the significance of the
+Kullback-Leibler divergence, especially when it is used in conjunction
+with mutual information and dependence relationships between genetic
+measurements. 
+
+The asymmetry of the Kullback-Leibler divergence is then often
+considered to be a nuisance. Biologists sometimes resort to a
+symmetric form of the Kullback-Leibler divergence, such as the sum
+$D_{\mbox{\tiny KL}}(X,Y)+D_{\mbox{\tiny KL}}(Y,X)$. I suspect that in
+genetics, just as in concept similarity for Tversky and for our case
+against the geometry of reason, it may be useful to discard the bias
+against asymmetry and investigate how it may be useful to identify the
+gene expressions that are central (from which it is harder to deviate
+towards the periphery) and those that are peripheral.
+** horizon rules
+Similarly, probability distributions with near-extreme (though still
+regular) probabilities are informationally further apart from each
+other than more mainstream probability distributions, even when the
+Euclidean distances are the same. Consider the following five rules,
+all of which are merely illustrations of the horizon effect.
+
+\begin{description}
+\item[Kitchen Rule] It is easier to get things out of the kitchen
+  cabinet than it is to put them back in. In terms of information, it
+  is more costly to move (by probability kinematics, for example) from
+  a probability distribution with higher entropy (closer to the centre
+  of the simplex) to a probability distribution with lower entropy
+  (closer to the periphery of the simplex) than the reverse. The
+  difference is subtle, not pronounced. It takes just a little more to
+  almost exclude a heretofore plausible hypothesis (maybe from 1/2 to
+  1/100) than it does to include a heretofore implausible hypothesis
+  (maybe from 1/100 to 1/2).
+\item[Similarity Rule] Defaults introduce asymmetries. Tversky
+  extensively illustrates this rule (see \scite{7}{tversky77}{}). An
+  ellipse, for example, is more similar to a circle than a circle is
+  similar to an ellipse, at least psychologically. As in the Kitchen
+  Rule, the difference can be subtle. However, it speaks in favour of
+  information theory that it reflects this difference in numerically
+  subtle ways, compared to the geometry of reason which ignores it.
+  Similarity of concepts is like similarity of subjective probability
+  distributions in the sense that they both exhibit features of
+  asymmetry which are in tension with the initial appeal of using
+  metric distance measures to model them. 
+\item[Field Rule] For the geometry of reason, the borders of the
+  simplex introduce a simple boundary condition (not dissimilar to
+  boundary conditions for Lagrange Multiplier problems, see
+  \scite{7}{bertsekas82}{}). For information theory, the presence of
+  extreme probabilities at the border of the simplex introduces a
+  topology that is highly sensitive to where these borders are. The
+  asymmetry claim is that a simplex of subjective probability
+  distributions is more like an American football field, where every
+  player knows how different the dynamics along the sidelines are
+  compared to the dynamics in the middle of the field (and passes from
+  the wings into the middle are not symmetric reflections of passes
+  from the middle out to one of the flanks); rather than a Minecraft
+  world, where players inhabit an infinite expanse and pay little
+  attention to borders (and a simplex would simply be a cut-out as if
+  from a piece of paper or what you can see on a computer screen).
+\item[Horizon Rule] From the perspective of an observer (in the case
+  of subjective probabilities, the epistemic perspective), movement
+  towards the extremes becomes increasingly difficult. Once a
+  hypothesis is already considered to be highly likely or highly
+  unlikely, confirmation or disconfirmation is much more difficult to
+  come by than in the case of near-equiprobability between alternative
+  hypotheses. The geometry of reason ignores this analogy from
+  confirmation theory; information theory reflects it.
+\item[Cassirer Rule] Henri Poincar{\'e} once suggested that it could
+  never be experimentally demonstrated that physical space was best
+  modeled by a Euclidean topology, but a Euclidean topology was the
+  simplest and therefore the preferable model (see
+  \scite{8}{poincare08}{67}). Impressed by Albert Einstein's
+  relativity theory, Ernst Cassirer reinterpreted Poincar{\'e}'s
+  argument and suggested that once the universe is populated (by
+  objects creating gravitational fields) a non-Euclidean topology is a
+  simpler model for physical space (see \scite{8}{cassirer23}{443}). I
+  would use this analogy here to suggest that once epistemology is
+  populated with near-certainties, the geometry of reason (whether
+  Euclidean or non-Euclidean) is no longer the simplest and most
+  effective explanatory model. Initially simple metrics fail in
+  populated spaces.
+\end{description}
+** regularity and invariance
+Postscript: perhaps none of the five expectations elicits your
+approval. You do not think that they are expectations an amujus needs
+to fulfill. Then their violation would not compel you to look for an
+alternative to the geometry of reason. Here is the case that you must
+accept either \textsc{regularity} or \textsc{invariance}. Since LP
+conditioning violates both, your position is not tenable. 
+
+Let us assume you do not accept \textsc{regularity} (not an uncommon
+point of view). A fortiori, you do not accept regularity the way it is
+usually interpreted, which is stronger than the expectation
+\textsc{regularity} and requires that only propositions of a specified
+subset (such as logical contradictions) should be assigned a
+subjective probability of $0$. Consider an event $X$ which is not in
+the specified subset but still is assigned subjective probability $0$.
+Because there is no specified subset containing $X$ that we can on
+principle exclude from the list of events considered by LP
+conditioning (otherwise we would have \textsc{regularity}), there are
+now two partitions of the event space, one of them containing $X$ as
+its own partition element, the other subsuming it somewhere else.
+
+Let $P(Y)=0.3$ and $P(Z)=0.7$, for example. Then one could apply LP
+conditioning to 
+
+\begin{equation}
+  \label{eq:reginvone}
+  \begin{array}{rcl}
+  P(X)&=&0\\
+  P(Y)&=&0.3\\
+  P(Z)&=&0.7
+\end{array}
+\end{equation}
+
+or to 
+
+\begin{equation}
+  \label{eq:reginvtwo}
+  \begin{array}{rcl}
+  P(X\vee{}Y)&=&0.3\\
+  P(Z)&=&0.7.
+\end{array}
+\end{equation}
+
+In general, LP conditioning will not give the same updated probabilities
+for (\ref{eq:reginvone}) and (\ref{eq:reginvtwo}), whereas Jeffrey
+conditioning will, because LP conditioning violates
+\textsc{invariance}. Therefore, if you do not accept either
+\textsc{regularity} or \textsc{invariance}, you find yourself in the
+strange position of a perfect ambiguity between two different updated
+probability distributions based on the same prior probability
+distribution in an otherwise straightforward updating scenario. To
+avoid this result, you should at least accept one of these two
+expectation, either \textsc{regularity} or \textsc{invariance}. Since
+LP conditioning violates both, you must look for an alternative.
+* ideas
+** degree of confirmation
+Summary of November readings:
+
+Vincenzo Crupi, Katya Tentori:
+
+the idea here is that confirmation is more difficult near the horizon
+than near the centre. 
+
+Quotes by David Christensen:
+
+In fact, this is the case: in general, S-support given by E is stable
+over Jeffrey conditioning on {E,~E}. [this is not the case for
+LP-conditioning] (451)
+
+Perhaps the controversy between difference and ratio-based positive
+relevance models of quantitative confirmation reflects a natural
+indeterminateness in the basic notion of \qnull{how much} one thing
+supports another. (460)
+
+On the entropy scale of information gain there is very little
+difference between near certainty and absolute certainty---coding
+according to a near certainty requires hardly any more bits than
+coding according to an absolute certainty. On the other hand, on the
+logit scale implied by weight of evidence, the difference between the
+two is enormous---infinite perhaps; this might reflect the difference
+between being almost sure (on a probabilistic level) that, say, the
+Riemann hypothesis is correct, compared to being certain that it is
+correct because one has a mathematical proof. These two different
+scales of loss function for uncertainty are both useful, according to
+how well each reflects the particular circumstances of the problem in
+question.
+https://en.wikipedia.org/wiki/Kullback%E2%80%93Leibler_divergence#Discrimination_information
+** information geometry
+*** notes 1
+Information geometry studies the intrinsic geometrical structure to be
+introduced in the manifold of a family of probability distributions.
+Its Riemannian structure was introduced by Rao [37].
+Csiszár [21], [22], [23] studied the geometry of -divergence in detail
+and applied it to information theory. It was Chentsov [19] who
+developed Rao’s idea further and introduced new invariant affine
+connections in the manifolds of probability distributions. Nagaoka and
+Amari [31] developed a theory of dual structures and unified all of
+these theories in the dual differential-geometrical framework (see
+also [3], [14], [31]). Information geometry has been used so far not
+only for mathematical foundations of statistical inferences
+([3], [12], [28] and many others) but also applied to information
+theory [5], [11], [25], [18], neural networks
+[6], [7], [9], [13], systems theory [4], [32], mathematical
+programming [33], statistical physics [10], [16], [38], and others.
+Mathematical foundations of information geometry in the function space
+were given by Pistone and his coworkers [35],
+[36] and are now developing further.
+(http://www.qwone.com/~jason/trg/papers/amari-ig-hierarchy-01.pdf)
+*** notes 2
+**** differential geometry at UBC
+http://gw2jh3xr2c.search.serialssolutions.com/?ctx_ver=Z39.88-2004&ctx_enc=info%3Aofi%2Fenc%3AUTF-8&rfr_id=info:sid/summon.serialssolutions.com&rft_val_fmt=info:ofi/fmt:kev:mtx:book&rft.genre=book&rft.title=Differential+Geometry&rft.au=J.+J.+Stoker&rft.series=Classics+Library&rft.date=1969-01-01&rft.pub=Interscience&rft.isbn=9780471504030&rft.externalDocID=9781118165478&paramdict=en-US
+**** differential geometry at VCC
+http://encore.vcc.ca/iii/encore/record/C__Rb1328311__Sdifferential%20geometry__P0%2C6__Orightresult__U__X6?lang=eng&suite=cobalt
+http://encore.vcc.ca/iii/encore/record/C__Rb1304372__Sdifferential%20geometry__P0%2C10__Orightresult__U__X6?lang=eng&suite=cobalt
+http://encore.vcc.ca/iii/encore/record/C__Rb1235965__Sdifferential%20geometry__P0%2C12__Orightresult__U__X6?lang=eng&suite=cobalt
+http://encore.vcc.ca/iii/encore/record/C__Rb1331180__Sdifferential%20geometry__P0%2C20__Orightresult__U__X6?lang=eng&suite=cobalt
+http://encore.vcc.ca/iii/encore/record/C__Rb1331312__Sdifferential%20geometry__P0%2C22__Orightresult__U__X6?lang=eng&suite=cobalt
+http://encore.vcc.ca/iii/encore/record/C__Rb1342725__Sdifferential%20geometry__P0%2C24__Orightresult__U__X3?lang=eng&suite=cobalt
+*** notes 3
+https://en.wikipedia.org/wiki/Levi-Civita_connection
+https://en.wikipedia.org/wiki/Affine_connection
+
+I am trying to understand the definition of the Lie bracket of vector
+fields. According to two presumably independent sources (Amari/Nagaoka
+2000 and wikipedia), the Lie bracket of two vector fields $X$ and $Y$
+is
+
+$$
+[X,Y]=\sum_{i=1}^{n}\left(X(Y^{i})-Y(X^{i})\right)\partial_{i}=\sum_{i=1}^{n}\sum_{j=1}^{n}\left(X^{j}\partial_{j}(Y^{i})-Y^{j}'\partial_{j}(X^{i})\right)\partial_{i}
+$$
+
+where $\partial_{i}$ is the natural basis
+$\frac{\partial}{\partial\xi^{i}}$ for the tangent space at
+point $p$, and $X^{i}$ as well as $Y^{i}$ are the corresponding
+coordinates, i.e.
+
+$$
+X=\sum_{i=1}^{n}X^{i}\partial_{i}
+$$
+
+$$
+Y=\sum_{i=1}^{n}Y^{i}\partial_{i}
+$$
+
+Here is what I do not understand. There is probably a simple answer
+for this. $[X,Y]$ is a vector field, so
+$\left(X(Y^{i})-Y(X^{i})\right)$ are the coordinates corresponding to
+a tangent space at point $p$ of the manifold. These are supposed to be
+real numbers. $X$ and $Y$ are vectors in the tangent space at point
+$p$; $X^{i}$ and $Y^{i}$ are real numbers. How am I supposed to read
+an expression of the form $X(Y^{i})$, a vector times a real number?
+The corresponding problem in the expansion is
+$X^{j}\partial_{j}(Y^{i})$ -- I am not sure how to read this
+expression. $X^{j}\partial_{j}$ makes perfect sense, it's a vector in
+the tangent space. But how do you multiply it by a real number?
+** asymnmetric distance measures
+*** notes 1
+http://stats.stackexchange.com/questions/13410/clustering-with-asymmetrical-distance-measures
+http://link.springer.com/chapter/10.1007/978-3-642-72253-0_68?no-access=true
+http://link.springer.com/chapter/10.1007/978-1-4419-7976-6_3?no-access=true
+https://en.wikipedia.org/wiki/Cosine_similarity
+http://www.cbcb.umd.edu/~hcorrada/CMSC858B/readings/Solutions_ch12.pdf
+http://srmo.sagepub.com/view/the-sage-encyclopedia-of-social-science-research-methods/n30.xml
+
+start with (w1,w2,w3)
+
+drop last and lowest, whose coordinate is k (e.g. k=3 if z coordinate
+is dropped)
+
+call left-over x1,x2
+
+identify w with r by isomorphism where r\in R^2 via polar coordinates
+
+r1=1/(1-(x1+x2))
+r2=(2pi*k/3)+(3*arctan(x1/x2))
+
+Then f(w)=\infty if any coordinate is 0 and f(1/3,1/3,1/3)=origin
+all others cover all of R^2
+
+Thus, we shall mainly refer to the degree Rik which is assumed to be
+the conditional probability of some sort, of Off, given Ok. For
+example, these may refer to the attraction each member of a group
+expresses towards the other members of the group, and the amount of
+trade each nation in the world has with other nations, etc.
+\scite{8}{chino78}{?}
+
+This article (okadaimaizumi87) is interesting in so far as represents
+asymmetric data by assigning to each point both Euclidean coordinates
+and circles
+
+Awareness of the importance of asymmetries in various kinds of
+proximities such as similarity judgments (Holyoak and Gordon, 1983;
+Jones, Roberts, and Holman 1978; Rosch, 1975), dissimilarity judgments
+(Cermak and Cornillon, 1976), similarity/dissimilarity judgments
+(Tversky, 1977; Tversky and Gati, 1982), reaction time (Podgorny and
+Garner, 1979), identifying task (Appelman and Mayzner, 1982 ; Keren
+and Baggen, 1981), same different judgments (Zinnes and Wolf, 1977),
+judging directions (Moar and Bower, 1983), spatial distance judgments
+(Holyoak and Gordon, 1983; Holyoak and Mah, 1982; Saddal la,
+Burroughs, and Staplin, 1980) has been growing recently (Carroll and
+Arabie, 1980).  There also have been growing interests in asymmetries
+of other kinds of data ; journal citation (Coombs, 1964),
+international trade (Chino, 1978), car switch (Harshman, Green, Wind,
+and Lundy, 1982), telephone calls (Harshman and Lundy, 1984), and
+interaction or input-output flow in migration, economic activity, and
+social mobility (Blau and Duncan, 1967 ; Coxon, 1982). And there have
+been several theoretical developments trying to explain psychological
+background of asymmetries in proximities (Krumhansl, 1978; Rips,
+Shoben, and Smith, 1973; Rosch, 1975; Smith and Medin, 1981 ; Tversky,
+1977). \scite{8}{okadaiokadaimaizumi87}{81}
+
+Multidimensional scaling (MDS) is a means of visualizing the level of
+similarity of individual cases of a dataset. It refers to a set of
+related ordination techniques used in information visualization, in
+particular to display the information contained in a distance matrix.
+An MDS algorithm aims to place each object in N-dimensional space such
+that the between-object distances are preserved as well as possible.
+Each object is then assigned coordinates in each of the N dimensions.
+The number of dimensions of an MDS plot N can exceed 2 and is
+specified a priori. Choosing N=2 optimizes the object locations for a
+two-dimensional scatterplot. (wikipedia, see chinoshiraiwa93)
+
+Unlike the distance model, the Hermitian scalar product model has an
+interesting property in that the similarity between the pair of
+objects located far from the centroid of objects, say, the origin, is
+greater than that located near the origin, even if their distances are
+the same. In other words, if this model holds, then subjects are
+likely to underestimate the distance between the pairs of objects
+located far from the origin and overestimate the distance between the
+pairs located near the origin. \scite{8}{chinoshiraiwa93}{43}
+
+The KLI is not a distance because it is not symmetric. KLI does not
+satisfy the triangle inequality either. \scite{8}{gentleman06}{196}
+
+It is also important that the investigator be able to select, and use, a
+distance that is appropriate for the task at hand. There is no single distance
+that is always relevant, and similarity can be measured in many ways. We
+find R to be a good platform for these sorts of analyses, as it has a wealth
+of built-in distance functions, and supports the addition of new distance
+functions straightforwardly. \scite{8}{gentleman06}{208}
+
+flight time between two cities is an example of an asymmetric
+distance \scite{8}{gentleman06}{191}
+
+have consistently found that mutual intelligibility between Swedish
+and Danish is asymmetrical. In all of these studies the
+intelligibility of spoken Danish for Swedish listeners turned out to
+be lower than the intelligibility of spoken Swedish for Danish
+listeners \scite{8}{vanommenetal13}{193}
+*** notes 2
+DKL also doesn't satisfy the triangle inequality, so it's a
+semi-quasimetric -- that's probably why it's not transitive.
+
+http://arxiv.org/abs/1507.08229
+
+http://link.springer.com/chapter/10.1007/978-3-319-07779-6_4
+
+http://www.sciencedirect.com/science/article/pii/S0022249610000167
+
+http://www.sciencedirect.com/science/article/pii/016686419500116X
+
+From wikipedia:
+
+Quasimetrics[edit]
+Occasionally, a quasimetric is defined as a function that satisfies
+all axioms for a metric with the possible exception of symmetry:[3][4]
+
+d(x, y) ≥ 0 (positivity)
+d(x, y) = 0   if and only if   x = y (positive definiteness)
+d(x, y) = d(y, x) (symmetry, dropped)
+d(x, z) ≤ d(x, y) + d(y, z) (triangle inequality)
+Quasimetrics are common in real life. For example, given a set X of
+mountain villages, the typical walking times between elements of X
+form a quasimetric because travel up hill takes longer than travel
+down hill. Another example is a taxicab geometry topology having
+one-way streets, where a path from point A to point B comprises a
+different set of streets than a path from B to A. Nevertheless, this
+notion is rarely used in mathematics, and its name is not entirely
+standardized.[5]
+
+A quasimetric on the reals can be defined by setting
+
+d(x, y) = x − y if x ≥ y, and
+d(x, y) = 1 otherwise. The 1 may be replaced by infinity or by
+1+10(y-x).
+The topological space underlying this quasimetric space is the
+Sorgenfrey line. This space describes the process of filing down a
+metal stick: it is easy to reduce its size, but it is difficult or
+impossible to grow it.
+
+If d is a quasimetric on X, a metric d' on X can be formed by taking
+
+d'(x, y) = 1⁄2(d(x, y) + d(y, x)).
+
+***
+
+Summary: use Kopperman's "dual" terminology for Delta.
+*** notes 3
+starting again with Chino
+
+see s1637.m for quite a bit of detail
+
+reading Chino's 1990
+
+Tobler's wind model
+
+scalar (inner) product refers to the symmetric part
+cross product (parallelogram area) refers to skew-symmetric part
+
+From wikipedia on Hermitian Matrix:
+
+https://en.wikipedia.org/wiki/Hermitian_matrix
+
+Hermitian matrices are named after Charles Hermite, who demonstrated
+in 1855 that matrices of this form share a property with real
+symmetric matrices of always having real eigenvalues.
+
+The finite-dimensional spectral theorem says that any Hermitian matrix
+can be diagonalized by a unitary matrix, and that the resulting
+diagonal matrix has only real entries. This implies that all
+eigenvalues of a Hermitian matrix A with dimension n are real, and
+that A has n linearly independent eigenvectors. Moreover, Hermitian
+matrix has orthogonal eigenvectors for distinct eigenvalues. Even if
+there are degenerate eigenvalues, it is always possible to find an
+orthogonal basis of Cn consisting of n eigenvectors of A.
+
+Here is something about cubic roots of x^3+ax+b (called a depressed
+cubic). Use, for example, Cardano's method.
+
+https://en.wikipedia.org/wiki/Cubic_equation
+
+eigenvalues of Hermitian matrices:
+
+http://math.stackexchange.com/questions/223510/eigenvalues-and-determinant-of-conjugate-transpose-and-hermitian-of-a-complex-m
+
+consider this for the positive-definite/transitive question:
+
+http://math.stackexchange.com/questions/729186/given-m-be-a-n-times-n-hermitian-matrix-with-p-positive-eigenvalues-and?rq=1
+
+VCC Library has an interesting electronic resource: Matrix
+completions, moments, and sums of hermitian squares [electronic
+resource] / Mihály Bakonyi and Hugo J. Woerdeman
+
+http://encore.vcc.ca/iii/encore/search/C__Slinear%20algebra__Orightresult__U;jsessionid=BD5EC7D4A5A581092A0FB7BF6ABE1038?lang=eng
+
+some helpful material on positive definite matrices:
+
+https://en.wikipedia.org/wiki/Positive-definite_matrix
+
+I had a hard time figuring out what it meant for a cubic equation to
+have three real roots. This is the casus irreducibilis where you need
+complex numbers in the process. Wikipedia and Wolfram weren't good on
+this (unless you used casus irreducibilis), but see
+
+http://www.sosmath.com/algebra/factor/fac111/fac111.html
+
+The three real roots are the real parts of an equilateral triangle
+centred on the origin in the complex plane:
+
+http://home.pipeline.com/~hbaker1/cubic3realroots.htm
+** is Williamson's and Landes' logarithmic loss function 
+related to Levinstein's?
+** connection to sharp credences
+Consider this email for Paul Bartha:
+
+Paul,
+
+I asked Anderson (my 13-year-old) last night about a ``geometry of
+reason'' puzzle. One of the things I want to show in my geometry
+of reason paper is that there is a big difference between updating
+from (1/3,1/3,1/3)-> (1/2-e/2,1/2-e/2,e) and updating from
+(1/2-e/2,1/2-e/2,e)->(1/3,1/3,1/3), where e is very small -- I
+call this asymmetry. So I gave him a scenario: there is a bag of
+tokens in front of you with red, green, and blue tokens in it, but
+you have no idea what the composition is. Your probabilities are
+(1/3,1/3,1/3). Then you see something, which makes you change your
+probabilities to (1/2,1/2,0), for example you get to peek inside
+the bag and there are no blue tokens. Not a big deal. No surprise
+or shock. If it goes the other way, though -- you were willing to
+bet a million dollars against a cent that there are no blue tokens
+-- and then you see blue tokens in the bag, changing your
+probabilities from (1/2,1/2,0)->(1/3,1/3,1/3), then there ought to
+be shock and surprise. That's my argument against the geometry of
+reason used by Joyce, Pettigrew, Leitgeb, Wallace, and others.
+
+Anderson was totally unconvinced. He thought it was all the same
+(i.e. symmetrical), and here is why: when my probabilities were
+(1/3,1/3,1/3) I was supposed to ``be a 100% sure that there were
+blue tokens in the bag'' because (translating into epistemological
+terms) I had a full belief that the objective chance of drawing a
+blue token from the bag was 1/3. Discovering that there were no
+blue tokens in the bag was supposed to be just as shocking and
+surprising as in the reverse scenario.
+
+I tried to explain to him that subjective probabilities of
+(1/3,1/3,1/3) didn't imply at all that I had any beliefs about
+blue tokens in the bag, but he remained adamant. What's my point?
+Booleans make just that mistake (if they are of the crude Boolean
+kind) -- they don't conceive of partial beliefs as sui generis.
+They think of them as full beliefs about objective chances. I just
+read Mark Kaplan's paper ``In Defence of Modest Probabilism,'' and
+it is full of this (mis)understanding of subjective probabilities.
+
+Quote from Kaplan: ``Consider the two cases we considered earlier,
+and how the difference between them bears on the question as to
+how confident you should be that (B) the ball drawn will be black.
+In the first case [where you know the compoition of the urn], it
+is clear why you should have a degree of confidence equal to 0.5
+that [sic] ball drawn from the urn will be black. Your evidence
+tells you that there is an objective probability of 0.5 that the
+ball will be black: it rules every other assignment out either as
+too low or as too high. In the second case, however, you do not
+know the objective probability that the ball will be black,
+because you don't know exactly how many of the balls in the urn
+are black. Your evidence---thus much inferior in quality to the
+evidence you have in the first case---doesn't rule out all the
+assignments your evidence the first case does. It rules out, as
+less warranted than the rest, every assignment that gives B a
+value <0.3, and every assignment that gives B a value >0.65. But
+none of the remaining assignments can reasonably thought to be any
+more warranted, or less warranted, by your evidence than any
+other. But then it would seem, at least at first blush, an
+exercise in unwarranted precision to accede to the requirement,
+issued by Orthodox Bayesian Probabilism, that you choose one of
+those assignments to be your own.''
+
+This is also another nice example of someone tasking subjective
+probabilities with both reflecting a degree of confidence AND a
+measure of how good the evidence is (the double task).
+
+Alan Hajek is another crude Boolean of this kind, for example in
+``What Conditional Probability Could Not Be.''
+
+I just had to get that off my chest. Thank you for your comments.
+I haven't looked at them yet. I'll try to work on them for my
+Laetz submission.
+
+Stefan
+** verisimilitude
+There might be a betweenness relation amongst worlds, or even a
+fully-fledged distance metric. If that's the case we can start to see
+how one proposition might be closer to the Truth --- the proposition
+whose range singles out the actual world --- than another. The core of
+the likeness approach is that the truthlikeness of a proposition
+supervenes on the likeness between worlds, or the distance between
+worlds. (Graham Oddie, SEP on verisimilitude)
+
+Continue reading at ``Applying Hilpinen's definition we capture ...''
+
+http://plato.stanford.edu/entries/truthlikeness/
+** main idea
+Cimmerian geometry versus Schwarzschild geometry: Whereas the geometry
+of reason considers extreme probabilities to be easily accessible by
+non-extreme probabilities under new information (much like a marble
+rolling off a table or a bowling ball heading for the gutter),
+information theory envisions extreme probabilities more like an event
+horizon. The nearer you are to the extreme probabilities, the more
+information you need to get closer. For an observer, the horizon is
+never reached.
+
+draw a diagram of Jeffrey conditioning and LP conditioning (see
+Schmierbuch, 1387)
+
+Measure ``accuracy'' like this, basing it on information flow more so
+than on accuracy:
+
+I(C,A)=D_{KL}(C,\chi(A))
+
+must read Levinstein see also Wronski's ppt presentation here: https://www.tilburguniversity.edu/upload/861f0d62-c6f2-43f7-a361-262499f05250_Presentation%20Wronski.pdf
+
+maxent is what motivates Levinstein's logarithmic ``accuracy'' measure
+-- which doesn't measure accuracy as much as information flow
+
+Here is something interesting in Joyce that seems to appeal to the
+same discomfort with LP's ``by the lights of'' that I had:
+
+we cannot hope to justify probabilism by assuming that rational agents
+should maximize the ex- pected accuracy of their opinions because the
+concept of an expectation really only makes sense for agents whose
+partial beliefs already obey the laws of probability. (Joyce, 1998,
+590)
+
+Note also that Joyce warns of equating accuracy with epistemic
+utility, see 592. 
+
+You may want to refer to Maher's criticism of Weak Convexity and
+Symmetry in Maher 2002.
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+IMPORTANT notes in Schmierbuch, 1358--1364.
+
+Some notes from 2015-01-25:
+
+The asymmetry needs to be shown to be already there for standard
+conditioning.
+
+The midpoint between P(X)=0 and P(X)=0.2 is NOT P(X)=0.1.
+
+How do you argue against the geometry of reason without assuming the
+importance of information?
+
+Is there a parallel here to Poincare Cassirer about the simplicity of
+Euclidean geometry?
+
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+what is the epistemic benefit of using the ``geometry of reason''?
+
+Here are some question collated <2015-01-18 Sun>:
+
+(1) Show that JC is continuous with SC and LP is not.
+
+(2) What is deficient about -\sum p_i log frac p_i q_i as a measure of
+accuracy compared to squared? Consult LP I. Is there an analog in the
+deductive case to using entropy as a measure of inaccuracy?
+
+(3) Consider the immense information gain when some X_k's probability
+is reduced to nil by LP.
+
+(4) It makes a difference to LP whether you include some X_j in the
+prior probability distribution whose prior probability is nil. Why
+exclude those events -- they don't make a difference to JC.
+
+This paper is a response to Leitgeb/Pettigrew. They claim that JC is
+not minimally inaccurate, as their own updating rule is. My contention
+is that their claim is implausible, since the accuracy of an updated
+belief function needs to be measured by its own lights, not by the
+lights of the now outdated belief function. Note the comments on the
+hard copy of the paper. 
+
+I did the calculations (Schmierbuch p. 1313) and it turns out that
+their notion of accuracy is better than evaluating by the lights of
+the updated belief function. JC only does slightly worse than the LP
+rule. Here are the problems with LP: (1) why call their notion
+``accuracy''? The virtue of accuracy is derived from the
+propositional logic case, but the use of the outdated belief function
+attenuates this virtue. It's at best accuracy-ish, it does only
+slightly better than JC (contra their calculations), and it is NOT
+continuous with SC.
+** collator from dissertation.org
+there are notes on Joyce's nonpragmatic vindication on Schmierbuch p. 1349f
+investigate Richard Pettigrew and Hans Leitgeb's criticism of JC based on rigidity, see ReadingGroup-FormalEpistemology
+there is more on this now in jeco.org, the literature should be reviewed there as well
+diaconiszabell82:824
+halpern03:105
+Skyrms has a Dutch-book argument for JC, but I don't know where (what about David Lewis's Why Conditionalize?)
+fraassen93:297ff (JC is better than ME)
+levi67
+* quotes
+** tversky77 Amos Tversky: Features of Similarity
+**** EXAMPLES
+circle ellipse
+china north korea
+**** The metric and dimensional assumptions that underlie the geometric
+representation of similarity are questioned on both theoretical and
+empirical grounds. (Amos Tversky: Features of Similarity, 327)
+**** Practically all analyses of proximity data have been metric 
+in nature (Amos Tversky: Features of Similarity, 327)
+**** the assumption of symmetry underlies essentially 
+all theoretical treatments of similarity. Contrary to this tradition,
+the present paper provides empirical evidence for asymmetric
+similarities and argues that similarity should not be treated as a
+symmetric relation. (Amos Tversky: Features of Similarity, 328)
+** mormann05
+All too often, we rely on geometric intuitions that are determined by
+Euclidean prejudices. The geometry of logic, however, does not fit the
+standard Euclidean metrical framework. This is evidenced by the
+deficits and shortcomings of the various definitions of a
+\qzwei{distance from the truth} that have been proposed in the last
+decades. (433)
+
+Logical structures come along with ready-made geometric structures
+that can be used for matters of truth approximation. Admittedly, these
+geometric structures differ from those we are accostumed [sic] with,
+namely, Euclidean ones. Hence, the geometry of logic is not Euclidean
+geometry. This result should not come as a big surprise. There is no
+reason to assume that the conceptual spaces we use for representing
+our theories and their relations have an Euclidean structure. On the
+contrary, this would appear to be an improbable coincidence. (453)
+** csiszarshields04
+*** Information divergence of probability distributions 
+can be interpreted as a (nonsymmetric) analogue of squared Euclidean
+distance. With this interpretation, several results in this Section
+are intuitive ``information geometric'' counterparts of standard
+results in Euclidean geometry. (Csiszar Shields, Information Theory
+and Statistics: A Tutorial, 440)
+* lisp math
+(+ (* 0.5 (log (/ 0.5 0.1))) (* 0.5 (log (/ 0.5 0.9))))
+0.5108256237659907
+(+ (* 0.1 (log (/ 0.1 0.5))) (* 0.9 (log (/ 0.9 0.5))))
+0.3680642071684971
+* buffer
+@incollection{gentleman2005distance,
+  title={Distance measures in DNA microarray data analysis},
+  author={Gentleman, R and Ding, B and Dudoit, S and Ibrahim, J},
+  booktitle={Bioinformatics and Computational Biology Solutions Using R and Bioconductor},
+  pages={189--208},
+  year={2005},
+  publisher={Springer}
+}
+
+"Weight"
+46.22
+46.72
+46.94
+47.61
+47.67
+47.7
+47.98
+48.28
+48.33
+48.45
+48.49
+48.72
+48.74
+48.95
+48.98
+49.16
+49.4
+49.69
+49.79
+49.8
+49.8
+50.01
+50.23
+50.4
+50.43
+50.97
+51.53
+51.68
+51.71
+52.06
+
+Finn, Patrick. Critical condition : replacing critical thinking with creativity. Waterloo, ON: Wilfrid Laurier University Press, 2015.
+
+Gardner, Susan. Thinking Your Way to Freedom: A Guide to Owning Your Own Practical Reasoning. West Conshohocken, PA: Templeton, 2008.
+
+Groarke, Leo, Christopher W. Tindale, and J F. Little. Good reasoning matters! : a constructive approach to critical thinking. Don Mills, ON: Oxford University Press, 2013.
+
+Woods, John, A. D. Irvine, and Douglas N. Walton. Argument : critical thinking, logic and the fallacies. Toronto, ON: Pearson/Prentice Hall, 2004.
+

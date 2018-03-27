@@ -1,0 +1,13 @@
+open(asym,"<./asym.data");
+@asym=<asym>;
+close(asym);
+foreach $asym (@asym)
+{
+    chomp($asym);
+}
+for ($i1=0;$i1<=$#asym;++$i1)
+{
+open(ptote,">./ptote{$i1}.asy");
+print ptote "$asym[$i1]\n";
+close(ptote);
+}

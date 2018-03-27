@@ -1,0 +1,1103 @@
+@book{walley91,
+stefancomment ={You must reconvert umlauts before bibbing -- see table in bib2csv.pl},
+title =	 {Statistical Reasoning with Imprecise Probabilities},
+author =	 {Walley, P.},
+year =	 {1991},
+publisher =	 {Chapman and Hall London}
+}
+
+@article{friedmanshimony71,
+title =	 {Jaynes's Maximum Entropy Prescription and Probability Theory},
+author =	 {Friedman, Kenneth and Shimony, Abner},
+journal =	 {Journal of Statistical Physics},
+volume =	 {3},
+number =	 {4},
+pages =	 {381--384},
+year =	 {1971},
+publisher =	 {Springer}
+}
+
+@book{rott01,
+title =	 {Change, Choice and Inference: A Study of Belief Revision and Nonmonotonic Reasoning},
+author =	 {Rott, Hans},
+year =	 {2001},
+publisher =	 {Oxford University}
+}
+
+@book{harperstalnakerpearce80,
+title =	 {Ifs: Conditionals, Belief, Decision, Chance and Time},
+author =	 {Harper, William Leonard and Stalnaker, Robert and Pearce, G.A.},
+year =	 {1980},
+publisher =	 {Reidel}
+}
+
+@book{skyrms90,
+title =	 {The Dynamics of Rational Deliberation},
+author =	 {Skyrms, Brian},
+year =	 {1990},
+publisher =	 {Cambridge University}
+}
+
+@book{spohn12,
+title =	 {The Laws of Belief: Ranking Theory and Its Philosophical Applications},
+author =	 {Spohn, Wolfgang},
+year =	 {2012},
+address =	 {New York, NY},
+publisher =	 {Oxford University}
+}
+
+@inproceedings{grunwald00a,
+title =        {Maximum Entropy and the Glasses You Are Looking Through},
+author =       {Grxuxnwald, Peter},
+booktitle =    {Proceedings of the Sixteenth conference on Uncertainty in artificial intelligence},
+pages =        {238--246},
+year =         {2000},
+organization = {Morgan Kaufmann Publishers}
+}                  
+
+@article{topsoe79,
+title =        {Information-Theoretical Optimization Techniques},
+author =       {Topsyoye, F.},
+journal =      {Kybernetika},
+volume =       {15},
+number =       {1},
+pages =        {8--27},
+year =         {1979},
+publisher =    {Institute of Information Theory and Automation}
+}
+
+@article{bovens10,
+title =        {Judy Benjamin is a Sleeping Beauty},
+author =       {Bovens, Luc},
+journal =      {Analysis},
+volume =       {70},
+number =       {1},
+pages =        {23--26},
+year =         {2010},
+publisher =    {Oxford University Press}
+}
+
+@article{little06,
+title =        {Calibrated Bayes},
+author =       {Little, R.J.},
+journal =      {The American Statistician},
+volume =       {60},
+number =       {3},
+pages =        {213--223},
+year =         {2006},
+publisher =    {ASA}
+}
+
+@article{gardner59,
+title =        {Mathematical Games},
+author =       {Gardner, Martin},
+journal =      {Scientific American},
+volume =       {201},
+number =       {4},
+pages =        {174--182},
+year =         {1959}
+}
+
+@article{gruenwaldhalpern03,
+title =        {Updating Probabilities},
+author =       {Peter Grxuxnwald and Joseph Y. Halpern},
+journal =      {Journal of Artificial Intelligence Research},
+volume =       {19},
+pages =        {243--278},
+year =         {2003}
+}
+
+@book{jaynes98,
+title =        {Probability Theory: the Logic of Science},
+author =       {Jaynes, E.T. and Bretthorst, G.L.},
+year =         {1998},
+publisher =    {Cambridge University Press},
+address =      {Cambridge, UK}
+}
+
+@article{williams80,
+title =        {Bayesian Conditionalisation and the Principle of Minimum Information},
+author =       {Williams, P.M.},
+journal =      {British Journal for the Philosophy of Science},
+pages =        {131--144},
+year =         {1980}
+}
+
+@article{howsonfranklin94,
+title =        {Bayesian Conditionalization and Probability Kinematics},
+author =       {Howson, C. and Franklin, A.},
+journal =      {The British Journal for the Philosophy of Science},
+volume =       {45},
+number =       {2},
+pages =        {451--466},
+year =         {1994}
+}
+
+@article{williamson09,
+title =        {Objective Bayesianism, Bayesian Conditionalisation and Voluntarism},
+author =       {Williamson, J.},
+journal =      {Synthese},
+pages =        {1--19},
+year =         {2009},
+publisher =    {Springer}
+}
+
+@article{bradley05,
+title =        {Radical Probabilism and Bayesian Conditioning},
+author =       {Bradley, R.},
+journal =      {Philosophy of Science},
+volume =       {72},
+number =       {2},
+pages =        {342--364},
+year =         {2005},
+publisher =    {Philosophy of Science Association},
+address =      {East Lansing, MI}
+}
+
+@article{douvenromeijn09,
+title =        {A New Resolution of the Judy Benjamin Problem},
+author =       {Douven, I. and Romeijn, J.W.},
+year =         {2009},
+publisher =    {London School of Economics},
+address =      {London, UK},
+journal =      {CPNSS Working Paper},
+volume =       {5},
+number =       {7},
+pages =        {1--22}
+}
+
+@book{hobson71,
+title =        {Concepts in Statistical Mechanics},
+author =       {Hobson, A.},
+year =         {1971},
+publisher =    {Gordon and Beach},
+address =      {New York, NY}
+}
+
+@book{jeffrey65,
+title =        {The Logic of Decision},
+author =       {Jeffrey, R.C.},
+year =         {1965},
+address =      {New York, NY},
+publisher =    {McGraw-Hill}
+}
+
+@article{csiszar67,
+title =        {Information-Type Measures of Difference of Probability Distributions and Indirect Observations},
+author =       {Csiszyayr, I.},
+journal =      {Studia Scientiarum Mathematicarum Hungarica},
+volume =       {2},
+pages =        {299--318},
+year =         {1967}
+}
+
+@article{dawid82,
+title =        {The Well-Calibrated Bayesian},
+author =       {Dawid, A.P.},
+journal =      {Journal of the American Statistical Association},
+pages =        {605--610},
+year =         {1982},
+publisher =    {JSTOR}
+}
+
+@article{diaconiszabell82,
+title =        {Updating Subjective Probability},
+author =       {Diaconis, P. and Zabell, S.L.},
+journal =      {Journal of the American Statistical Association},
+pages =        {822--830},
+year =         {1982},
+publisher =    {JSTOR}
+}
+
+@article{seidenfeld79,
+title =        {Why I Am Not an Objective Bayesian; Some Reflections Prompted by Rosenkrantz},
+author =       {Seidenfeld, Teddy},
+journal =      {Theory and Decision},
+volume =       {11},
+number =       {4},
+pages =        {413--440},
+year =         {1979},
+publisher =    {Springer}
+}
+
+@article{skyrms85,
+title =        {Maximum Entropy Inference as a Special Case of Conditionalization},
+author =       {Skyrms, B.},
+journal =      {Synthese},
+volume =       {63},
+number =       {1},
+pages =        {55--74},
+year =         {1985},
+publisher =    {Springer}
+}
+
+@article{fraassenetal86,
+title =        {A Problem for Relative Information Minimizers, Continued},
+author =       {Van Fraassen, Bas},
+journal =      {The British Journal for the Philosophy of Science},
+volume =       {37},
+number =       {4},
+pages =        {453--463},
+year =         {1986}
+}
+
+@article{uffink95,
+title =        {Can the Maximum Entropy Principle be Explained as a Consistency Requirement?},
+author =       {Uffink, J.},
+journal =      {Studies In History and Philosophy of Science Part B: Studies In History and Philosophy of Modern Physics},
+volume =       {26},
+number =       {3},
+pages =        {223--261},
+year =         {1995},
+publisher =    {Elsevier}
+}
+
+@article{shorejohnson80,
+title =        {Axiomatic Derivation of the Principle of Maximum Entropy and the Principle of Minimum Cross-Entropy},
+author =       {Shore, J. and Johnson, RW},
+journal =      {IEEE Transactions on Information Theory},
+volume =       {26},
+number =       {1},
+pages =        {26--37},
+year =         {1980},
+publisher =    {IEEE}
+}
+
+@inproceedings{grovehalpern97,
+title =        {Probability Update: Conditioning Vs. Cross-Entropy},
+author =       {Grove, A. and Halpern, J.Y.},
+booktitle =    {Proceedings of the Thirteenth Conference on Uncertainty in Artificial Intelligence},
+year =         {1997},
+address =      {Providence, Rhode Island},
+organization = {Citeseer}
+}
+
+@article{fraassen81,
+title =        {A Problem for Relative Information Minimizers in Probability Kinematics},
+author =       {Van Fraassen, B.C.},
+journal =      {The British Journal for the Philosophy of Science},
+volume =       {32},
+number =       {4},
+pages =        {375--379},
+year =         {1981}
+}
+
+@article{uffink96,
+title =        {The Constraint Rule of the Maximum Entropy Principle},
+author =       {Uffink, J.},
+journal =      {Studies In History and Philosophy of Science Part B: Studies In History and Philosophy of Modern Physics},
+volume =       {27},
+number =       {1},
+pages =        {47--79},
+year =         {1996},
+publisher =    {Elsevier}
+}
+
+@article{diasshimony81,
+title =        {A Critique of Jaynes' Maximum Entropy Principle},
+author =       {Dias, P. and Shimony, A.},
+journal =      {Advances in Applied Mathematics},
+volume =       {2},
+pages =        {172--211},
+year =         {1981}
+}
+
+@book{jaynes89,
+title =        {Papers on Probability, Statistics and Statistical Physics},
+author =       {Jaynes, E.T.},
+year =         {1989},
+address =      {Dordrecht},
+publisher =    {Springer}
+}
+
+@book{coverthomas06,
+title =        {Elements of Information Theory},
+author =       {Cover, T.M. and Thomas, J.A.},
+volume =       {6},
+year =         {2006},
+publisher =    {Wiley},
+address =      {Hoboken, NJ}
+}
+
+@book{karmeshu03,
+title =        {Entropy Measures, Maximum Entropy Principle and Emerging Applications},
+author =       {Karmeshu, J.},
+year =         {2003},
+publisher =    {Springer-Verlag},
+address =      {New York}
+}
+
+@book{buck91,
+title =        {Maximum Entropy in Action: A Collection of Expository Essays},
+author =       {Buck, B. and Macaulay, V.A.},
+year =         {1991},
+publisher =    {Clarendon Press},
+address =      {New York}
+}
+
+@book{carnap03,
+author =       {Rudolf Carnap},
+title =        {{The Logical Structure of the World and Pseudoproblems in Philosophy (Open Court Classics)}},
+publisher =    {{Open Court Publishing Company}},
+howpublished = {Paperback},
+year =         2003,
+day =          31,
+notex =        {Annotation: see research proposal.},
+priority =     4,
+isbn =         0812695232,
+}
+
+@book{mach82,
+title =        {Die xoxkonomische Natur der physikalischen Forschung},
+author =       {Mach, Ernst},
+year =         {1882},
+publisher =    {Kaiserliche und Kxoxnigliche Hof- und Staatsdruckerei},
+address =      {Wien}
+}
+
+@article{definetti31,
+title =        {Sul significato soggettivo della probabilitzaz},
+author =       {De Finetti, Bruno},
+journal =      {Fundamenta mathematicae},
+volume =       {17},
+pages =        {298--329},
+year =         {1931}
+}
+
+@incollection{chalmersfc,
+title =        {{The Nature of Epistemic Space}},
+author =       {Chalmers, D.J.},
+booktitle =    {Epistemic Modality},
+editor =       {A. Egan and B. Weatherson},
+year =         {Forthcoming},
+publisher =    {Oxford University}
+}
+
+@book{halpern03,
+title =        {{Reasoning About Uncertainty}},
+author =       {Halpern, Joseph Y.},
+year =         {2003},
+address =      {Cambridge, MA},
+publisher =    {MIT Press}
+}
+
+@incollection{kaplan94,
+title =        {{A Problem in Possible-World Semantics}},
+author =       {Kaplan, David},
+booktitle =    {Modality, Morality and Belief: Essays in Honor of Ruth Barcan Marcus},
+editor =       {Walter Sinnott-Armstrong and Diana Raffman and Nicholas Asher},
+pages =        {41--52},
+year =         {1994},
+publisher =    {Cambridge University}
+}
+
+@article{jago09,
+jstor_articletype ={research-article},
+title =        {Logical Information and Epistemic Space},
+author =       {Jago, Mark},
+journal =      {Synthese},
+jstor_issuetitle ={Knowledge, Rationality &amp; Action},
+volume =       {167},
+number =       {2},
+jstor_formatteddate ={Mar., 2009},
+pages =        {pp. 327-341},
+url =          {http://www.jstor.org/stable/40271194},
+ISSN =         {00397857},
+language =     {English},
+year =         {2009},
+publisher =    {Springer}
+}
+
+@book{burgin10,
+author =       {M. S. Burgin},
+year =         {2010},
+title =        {Theory of Information : Fundamentality, Diversity and Unification},
+publisher =    {World Scientific},
+address =      {Singapore; Hackensack, NJ},
+note =         {ID: 505911833},
+isbn =         {9789812835482 9812835482},
+language =     {English}
+}
+
+@book{carnapbarhillel52,
+author =       {Rudolf Carnap and Yehoshua Bar-Hillel},
+year =         {1952},
+title =        {An Outline of a Theory of Semantic Information},
+publisher =    {Research Laboratory of Electronics, M.I.T.},
+address =      {Cambridge, Mass.},
+note =         {ID: 3150899},
+language =     {English}
+}
+
+@book{quine51,
+author =       {W. V. Quine},
+year =         {1951},
+title =        {Two Dogmas of Empiricism},
+publisher =    {Longmans},
+address =      {New York},
+note =         {ID: 43091494},
+language =     {English}
+}
+
+@book{avenarius76,
+author =       {Richard Avenarius},
+year =         {1876},
+title =        {Philosophie als Denken der Welt gemxaxxsx dem Prinzip des kleinsten Kraftmaxsxes},
+publisher =    {Reisland},
+address =      {Leipzig},
+note =         {ID: 254997873},
+language =     {Undetermined}
+}
+
+@article{verlinde10,
+author =       {Verlinde, Erik P.},
+day =          {6},
+eprint =       {1001.0785},
+keywords =     {einstein, gravity, newton, origin},
+month =        {Jan},
+posted-at =    {2010-01-31 17:55:09},
+priority =     {2},
+journal =      {arXiv},
+title =        {On the Origin of Gravity and the Laws of Newton},
+url =          {http://arxiv.org/abs/1001.0785},
+year =         {2010},
+stefancomment ={see Dimensionen 2010-20-19 http://oe1.orf.at/programm/256294 and http://www.scientificblogging.com/hammock_physicist/it_bit_how_get_rid_dark_energy, http://supernova.lbl.gov/~evlinder/turner.pdf, http://www.nytimes.com/2010/07/13/science/13gravity.html?_r=1&src=mv}
+}
+
+@article{forstersober94,
+title =        {How to Tell When Simpler, More Unified, or Less Ad Hoc Theories Will Provide More Accurate Predictions},
+author =       {Forster, Malcolm and Sober, Elliott},
+journal =      {The British Journal for the Philosophy of Science},
+jstor_issuetitle ={},
+volume =       {45},
+number =       {1},
+jstor_formatteddate ={Mar., 1994},
+pages =        {pp. 1-35},
+ISSN =         {00070882},
+language =     {English},
+year =         {1994},
+publisher =    {Oxford University Press on behalf of The British Society for the Philosophy of Science},
+pdfconv =      {1994__Forster_Sober__How_to_Tell_When_Simpler.pdf}
+}
+
+@incollection{teller76,
+author =       {Teller, Paul},
+title =        {Conditionalization, Observation, and Change of Preference},
+booktitle =    {Foundations of Probability Theory, Statistical Inference, and Statistical Theories of Science},
+publisher =    {D. Reidel},
+address =      {Dordrecht},
+year =         {1976}
+}
+
+@phdthesis{giffin08,
+author =       {Giffin, Adom},
+title =        {Maximum Entropy: The Universal Method for Inference},
+school =       {University at Albany, State University of New York},
+type =         {{PhD} Dissertation},
+address =      {Department of Physics},
+year =         {2008},
+pdfconv =      {2008__Giffin_Adom__Maximum_Entropy_The_Universal_Method_for_Inference.pdf}
+}
+
+@inproceedings{catichagiffin06,
+author =       {Caticha, Ariel and Giffin, Adom},
+title =        {Updating Probabilities},
+booktitle =    {MaxEnt 2006, the 26th International Workshop on Bayesian Inference and Maximum Entropy Methods},
+pdfconv =      {2006__Caticha_Giffin__Updating_Probabilities.pdf},
+year =         {2006}
+}
+
+@incollection{vandevenschouten10,
+author =       {van de Ven, Antoine and Schouten, Ben A.M.},
+booktitle =    {Advances in Intelligent Systems Research},
+address =      {Amsterdam},
+title =        {A Minimum Relative Entropy Principle for AGI},
+publisher =    {Atlantis Press},
+url =          {http://agi-conf.org/2010/wp-content/uploads/2009/06/paper_65.pdf},
+year =         {2010}
+}
+
+@book{jones79,
+author =       {Jones, D. S.},
+title =        {Elementary Information Theory},
+publisher =    {Clarendon},
+year =         {1979},
+address =      {Oxford}
+}
+
+@book{kampe63,
+author =       {Kampyey de Fyeyriet, J.},
+title =        {Thyeyorie de l'Information. Principe du Maximum de l'Entropie et ses Applications zaz la Statistique et zaz la Myeycanique},
+publisher =    {Publications du Laborataire de Calcul de la Facultyey des Sciences de l'Universityey de Lille},
+year =         {1963},
+address =      {Lille}
+}
+
+@book{feller57,
+author =       {Feller, William},
+title =        {An Introduction to Probability Theory and Its Applications},
+publisher =    {Wiley},
+year =         {1957},
+address =      {New York}
+}
+
+@book{williamson00,
+address =      {Oxford},
+author =       {Williamson, Timothy},
+isbn =         {9780198250432},
+keywords =     {epistemology},
+posted-at =    {2010-06-30 15:29:42},
+priority =     {2},
+publisher =    {Oxford University Press},
+title =        {Knowledge and Its Limits},
+url =          {http://www.worldcat.org/isbn/9780198250432},
+year =         {2000}
+}
+
+@book{bertrand88,
+author =       {Bertrand, Joseph Louis Franxcxois},
+title =        {Calcul des probabilityeys},
+publisher =    {Gauthiers-Villars},
+year =         {1888},
+address =      {Paris}
+}
+
+@book{kolmogorov50,
+author =       {Kolmogorov, A. N.},
+title =        {Foundations of the Theory of Probability},
+publisher =    {Chelsea Publishing},
+year =         {1950},
+address =      {New York}
+}
+
+@book{khinchin57,
+author =       {Khinchin, A. I.},
+title =        {Mathematical Foundations of Information Theory},
+publisher =    {Dover Publications},
+year =         {1957},
+address =      {New York}
+}
+
+@book{loeve55,
+author =       {Lozezve, Michel},
+title =        {Probability Theory},
+publisher =    {Van Nostrand},
+year =         {1955},
+address =      {Princeton, NJ}
+}
+
+@book{guiasu77,
+author =       {Guiazszu, Silviu},
+title =        {Information Theory with Application},
+publisher =    {McGraw-Hill},
+year =         {1977},
+address =      {New York}
+}
+
+@book{fadeev57,
+author =       {Fadeev, D.},
+title =        {Zum Begriff der Entropie eines endlichen Wahrscheinlichkeitsschemas},
+publisher =    {Deutscher Verlag der Wissenschaften},
+year =         {1957},
+address =      {Berlin}
+}
+
+@book{mackay02,
+author =       {MacKay, D. J. C.},
+title =        {Information Theory, Inference, and Learning Algorithms},
+publisher =    {Cambridge University},
+year =         {2002},
+address =      {Cambridge}
+}
+
+@article{kolmogorov68,
+abstract =     {Logical basis for information theory as well as probability theory is proposed, based on computing complexity.},
+author =       {Kolmogorov, A. N.},
+booktitle =    {Information Theory, IEEE Transactions on},
+day =          {06},
+journal =      {Information Theory, IEEE Transactions on},
+keywords =     {information, probability, theory},
+month =        {January},
+number =       {5},
+pages =        {662--664},
+posted-at =    {2008-04-08 14:13:40},
+priority =     {2},
+title =        {Logical Basis for Information Theory and Probability Theory},
+volume =       {14},
+year =         {1968}
+}
+
+@article{zhulu04,
+author =       {Zhu, Mu and Lu, Arthur Y.},
+journal =      {Journal of Statistics Education},
+keywords =     {Beta Distribution; Conjugate priors; Maximum likelihood estimation; Posterior mean},
+number =       {2},
+pages =        {1--10},
+title =        {The Counter-Intuitive Non-Informative Prior for the Bernoulli Family},
+url =          {http://www.amstat.org/publications/jse/v12n2/zhu.pdf},
+volume =       {12},
+year =         {2004}
+}
+
+@article{hjorland07,
+address =      {Royal School of Library and Information Science, 6 Birketinger, DK-2300, Copenhagen S, Denmark},
+author =       {Hjyoyrland, Birger},
+doi =          {10.1002/asi.20620},
+issn =         {15322882},
+journal =      {Journal of the American Society for Information Science and Technology},
+keywords =     {information, theory},
+month =        {August},
+number =       {10},
+pages =        {1448--1456},
+posted-at =    {2008-02-05 11:17:09},
+priority =     {0},
+title =        {Information: Objective or subjective/situational?},
+url =          {http://dx.doi.org/10.1002/asi.20620},
+volume =       {58},
+year =         {2007}
+}
+
+@article{chaitin74,
+author =       {Chaitin, G.},
+journal =      {Information Theory, IEEE Transactions on},
+keywords =     {computation, information},
+number =       {1},
+pages =        {10--15},
+posted-at =    {2005-12-24 06:22:30},
+priority =     {2},
+title =        {Information-theoretic computation complexity},
+volume =       {20},
+year =         {1974}
+}
+
+@article{clarkebarron90,
+author =       {Clarke, B. S. and Barron, A. R.},
+doi =          {10.1109/18.54897},
+journal =      {Information Theory, IEEE Transactions on},
+keywords =     {asymptotics, bayesian, information},
+number =       {3},
+pages =        {453--471},
+posted-at =    {2009-02-11 19:26:41},
+priority =     {0},
+title =        {Information-theoretic asymptotics of Bayes methods},
+url =          {http://dx.doi.org/10.1109/18.54897},
+volume =       {36},
+year =         {1990}
+}
+
+@article{grunwald00,
+author =       {Peter Grxuxnwald},
+title =        {Model Selection Based on Minimum Description Length},
+year =         {2000},
+journal =      {Journal of Mathematical Psychology},
+pages =        {133--152},
+volume =       {44}
+}
+
+@article{ingardenurbanik62,
+author =       {Ingarden, R. S. and Urbanik, K.},
+title =        {Information Without Probability},
+year =         {1962},
+journal =      {Colloquium Mathematicum},
+pages =        {131--150},
+volume =       {9}
+}
+
+@article{yang95,
+author =       {Yang, Y.},
+title =        {Invariance of the Reference Prior under Reparametrization},
+year =         {1995},
+journal =      {Test},
+pages =        {83--94},
+volume =       {4},
+number =       {1}
+}
+
+@article{ingardenkossakowski71,
+author =       {Ingarden, R. S. and Kossakowski, A.},
+title =        {Poisson Probability Distribution and Information Thermodynamics},
+year =         {1971},
+journal =      {Bulletin of the Polish Academy of Sciences Mathematics Astronomy Physics},
+pages =        {83--86},
+volume =       {19}
+}
+
+@article{ingarden06,
+author =       {Ingarden, R. S.},
+title =        {Information Theory and Thermodynamics of Light Part I Foundations of Information Theory},
+year =         {2006},
+journal =      {Fortschritte der Physik},
+pages =        {567--594},
+volume =       {12}
+}
+
+@article{wallaceboulton68,
+author =       {Wallace, C. S. and Boulton, D. M.},
+title =        {An Information Measure for Classification},
+year =         {1968},
+journal =      {Computer Journal},
+pages =        {185--194},
+volume =       {11},
+number =       {2}
+}
+
+@article{kampe67,
+author =       {Kampyey de Fyeyriet, J. and Forte, B.},
+title =        {Information et probabilityey},
+year =         {1967},
+journal =      {Comptes rendus de l'Acadyeymie des sciences},
+pages =        {110--114},
+volume =       {A 265}
+}
+
+@article{solomonoff64,
+author =       {Solomonoff, Ray},
+title =        {A Formal Theory of Inductive Inference},
+year =         {1964},
+journal =      {Information and Control},
+pages =        {1--22},
+volume =       {7},
+number =       {1}
+}
+
+@article{rissanen78,
+keywords =     {Modeling; parameter estimation; identification; statistics; stochastic systems},
+author =       {Rissanen, J.},
+title =        {Modeling by Shortest Data Description},
+year =         {1968},
+journal =      {Automatica},
+pages =        {465--471},
+volume =       {14},
+issue =        {5}
+}
+
+@article{bozdogan00,
+address =      {The University of Tennessee},
+author =       {Bozdogan, H.},
+doi =          {10.1006/jmps.1999.1277},
+issn =         {00222496},
+journal =      {Journal of Mathematical Psychology},
+keywords =     {ill, regularization},
+month =        {March},
+number =       {1},
+pages =        {62--91},
+posted-at =    {2005-11-02 01:26:39},
+priority =     {2},
+title =        {Akaike's Information Criterion and Recent Developments in Information Complexity},
+url =          {http://dx.doi.org/10.1006/jmps.1999.1277},
+volume =       {44},
+year =         {2000}
+}
+
+@article{akaike74,
+author =       {Akaike, H.},
+day =          {06},
+journal =      {Automatic Control, IEEE Transactions on},
+keywords =     {aic, model, selection, statistical},
+month =        {January},
+number =       {6},
+pages =        {716--723},
+posted-at =    {2006-09-19 17:26:06},
+priority =     {5},
+title =        {A new look at the statistical model identification},
+volume =       {19},
+year =         {1974}
+}
+
+@article{jaynes57,
+author =       {Jaynes, E. T.},
+day =          {15},
+doi =          {10.1103/PhysRev.106.620},
+journal =      {Physical Review Online Archive (Prola)},
+keywords =     {jaynes},
+month =        {May},
+number =       {4},
+pages =        {620--630},
+posted-at =    {2006-06-13 17:27:48},
+priority =     {0},
+publisher =    {American Physical Society},
+title =        {Information Theory and Statistical Mechanics},
+url =          {http://dx.doi.org/10.1103/PhysRev.106.620},
+volume =       {106},
+year =         {1957}
+}
+
+@book{kullback59,
+author =       {Kullback, Solomon},
+day =          {07},
+howpublished = {Paperback},
+isbn =         {0486696847},
+keywords =     {book, information-theory, statistics},
+month =        {July},
+posted-at =    {2010-08-11 23:31:47},
+priority =     {2},
+publisher =    {Dover Publications},
+title =        {Information Theory and Statistics},
+year =         {1959}
+}
+
+@article{wallacedowe99,
+author =       {Wallace, C. S. and Dowe, D. L.},
+day =          {1},
+doi =          {10.1093/comjnl/42.4.270},
+journal =      {The Computer Journal},
+keywords =     {complexity, kolmogorov},
+month =        {April},
+number =       {4},
+pages =        {270--283},
+posted-at =    {2008-01-24 09:04:40},
+priority =     {4},
+title =        {Minimum Message Length and Kolmogorov Complexity},
+url =          {http://dx.doi.org/10.1093/comjnl/42.4.270},
+volume =       {42},
+year =         {1999}
+}
+
+@article{bernardo79,
+author =       {Bernardo, Jose M.},
+doi =          {10.2307/2985028},
+issn =         {00359246},
+journal =      {Journal of the Royal Statistical Society. Series B.},
+keywords =     {cp2},
+number =       {2},
+pages =        {113--147},
+posted-at =    {2008-03-14 10:37:49},
+priority =     {2},
+publisher =    {Blackwell Publishing for the Royal Statistical Society},
+title =        {Reference Posterior Distributions for Bayesian Inference},
+url =          {http://dx.doi.org/10.2307/2985028},
+volume =       {41},
+year =         {1979}
+}
+
+@article{turing37,
+abstract =     {10.1112/plms/s2-42.1.230},
+author =       {Turing, A. M.},
+day =          {1},
+doi =          {10.1112/plms/s2-42.1.230},
+journal =      {Proc. London Math. Soc.},
+keywords =     {computability, turing},
+month =        {January},
+number =       {1},
+pages =        {230--265},
+posted-at =    {2010-03-18 15:43:37},
+priority =     {2},
+title =        {On Computable Numbers, with an Application to the Entscheidungsproblem},
+url =          {http://dx.doi.org/10.1112/plms/s2-42.1.230},
+volume =       {s2-42},
+year =         {1937}
+}
+
+@inproceedings{goguen97,
+author =       {Goguen, Joseph A.},
+title =        {Towards a Social, Ethical Theory of Information},
+editor =       {Bowker, Geoffrey},
+booktitle =    {Social Science Research, Technical Systems, and Cooperative Work: Beyond the Great Divide},
+pages =        {27--56},
+keywords =     {formalization, formalization-hypothesis, information-theory},
+posted-at =    {2007-09-11 02:00:30},
+publisher =    {Erlbaum},
+priority =     {2},
+url =          {http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.51.7576},
+year =         {1997}
+}
+
+@article{kolmogorov68a,
+author =       {Kolmogorov, A. N.},
+doi =          {10.1080/00207166808803030},
+journal =      {International Journal of Computer Mathematics},
+keywords =     {contribution, information, theory},
+number =       {1},
+pages =        {157--168},
+posted-at =    {2009-07-16 03:08:02},
+priority =     {2},
+publisher =    {Taylor xpx Francis},
+title =        {Three Approaches to the Quantitative Definition of Information},
+url =          {http://dx.doi.org/10.1080/00207166808803030},
+volume =       {2},
+year =         {1968}
+}
+
+@article{gettier63,
+author =       {Gettier, Edmund L.},
+journal =      {Analysis},
+keywords =     {belief, epistemology, knowledge},
+number =       {6},
+pages =        {121--123},
+posted-at =    {2009-03-20 03:53:33},
+priority =     {0},
+title =        {Is Justified True Belief Knowledge?},
+url =          {http://www.jstor.org/stable/3326922},
+volume =       {23},
+year =         {1963}
+}
+
+@article{chaitin66,
+address =      {New York, NY, USA},
+author =       {Chaitin, G. J.},
+doi =          {10.1145/321356.321363},
+issn =         {0004-5411},
+journal =      {J. ACM},
+keywords =     {phy250, sta232c},
+month =        {October},
+number =       {4},
+pages =        {547--569},
+posted-at =    {2005-06-11 06:40:06},
+priority =     {2},
+publisher =    {ACM Press},
+title =        {On the Length of Programs for Computing Finite Binary Sequences},
+url =          {http://dx.doi.org/10.1145/321356.321363},
+volume =       {13},
+year =         {1966}
+}
+
+@article{dowegardneroppy07,
+author =       {Dowe, David L. and Gardner, Steve and Oppy, Graham},
+title =        {Bayes not Bust! Why Simplicity is no Problem for Bayesians},
+volume =       {58},
+number =       {4},
+pages =        {709-754},
+year =         {2007},
+doi =          {10.1093/bjps/axm033},
+URL =          {http://bjps.oxfordjournals.org/content/58/4/709.abstract},
+eprint =       {http://bjps.oxfordjournals.org/content/58/4/709.full.pdf+html},
+journal =      {The British Journal for the Philosophy of Science}
+}
+
+@article{shannon48,
+address =      {New York, NY, USA},
+author =       {Shannon, C. E.},
+doi =          {10.1145/584091.584093},
+issn =         {1559-1662},
+journal =      {The Bell System Technical Journal},
+keywords =     {channel-capacity, shannon},
+month =        {January},
+number =       {1},
+pages =        {379--423, 623--656},
+posted-at =    {2006-08-16 00:26:41},
+priority =     {2},
+publisher =    {ACM},
+title =        {A Mathematical Theory of Communication},
+url =          {http://dx.doi.org/10.1145/584091.584093},
+volume =       {27},
+year =         {1948}
+}
+
+@book{mingvitanyi97,
+author =       {Li, Ming and Vitanyi, Paul},
+day =          {27},
+howpublished = {Hardcover},
+isbn =         {0387948686},
+month =        {February},
+posted-at =    {2005-09-08 03:25:45},
+priority =     {2},
+publisher =    {Springer},
+title =        {An Introduction to Kolmogorov Complexity and Its Applications (Texts in Computer Science)},
+url =          {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20xpxpath=ASIN/0387948686},
+year =         {1997}
+}
+
+@book{shimony93,
+author =       {Shimony, Abner},
+day =          {26},
+howpublished = {Hardcover},
+isbn =         {0521373522},
+keywords =     {naturalism},
+month =        {February},
+posted-at =    {2006-12-31 14:41:33},
+priority =     {4},
+publisher =    {Cambridge University Press},
+title =        {The Search for a Naturalistic World View},
+url =          {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20xpxpath=ASIN/0521373522},
+year =         {1993}
+}
+
+@article{raatikainen98,
+author =       {Raatikainen, Panu},
+journal =      {Journal of Philosophical Logic},
+keywords =     {complexity},
+pages =        {569--586},
+posted-at =    {2007-11-07 15:00:14},
+priority =     {0},
+title =        {On Interpreting Chaitin's Incompleteness Theorem},
+volume =       {27},
+year =         {1998}
+}
+
+@book{torkel05,
+author =       {Franzyeyn, Torkel},
+day =          {25},
+howpublished = {Paperback},
+isbn =         {1568812388},
+keywords =     {logic, model-theory, proof-theory},
+month =        {May},
+posted-at =    {2009-08-15 14:22:22},
+priority =     {0},
+publisher =    {A K Peters, Ltd.},
+title =        {Gxoxdel's Theorem: An Incomplete Guide to Its Use and Abuse},
+year =         {2005}
+}
+
+@article{cristofaro04,
+title =        {On the Foundations of the Likelihood Principle},
+journal =      {Journal of Statistical Planning and Inference},
+volume =       {126},
+number =       {2},
+pages =        {401 - 411},
+year =         {2004},
+author =       {Rodolfo de Cristofaro},
+}
+
+@article{lindley56,
+author =       {Lindley, D. V.},
+doi =          {10.2307/2237191},
+issn =         {00034851},
+journal =      {The Annals of Mathematical Statistics},
+keywords =     {bayesian, experiment, experimental-design, information, knowledge, measure, prior, science},
+number =       {4},
+pages =        {986--1005},
+posted-at =    {2010-01-30 00:11:13},
+priority =     {2},
+publisher =    {Institute of Mathematical Statistics},
+title =        {On a Measure of the Information Provided by an Experiment},
+url =          {http://dx.doi.org/10.2307/2237191},
+volume =       {27},
+year =         {1956}
+}
+
+@article{chomsky56,
+author =       {Chomsky, N.},
+day =          {06},
+doi =          {10.1109/TIT.1956.1056813},
+journal =      {Information Theory, IRE Transactions on},
+keywords =     {language, linguistics},
+month =        {January},
+number =       {3},
+pages =        {113--124},
+posted-at =    {2007-06-22 01:37:41},
+priority =     {2},
+title =        {Three Models for the Description of Language},
+url =          {http://dx.doi.org/10.1109/TIT.1956.1056813},
+volume =       {2},
+pdfconv =      {1956__Chomsky_Noam__Three_Models_for_the_Description_of_Language.pdf},
+year =         {1956}
+}
+
+@article{friston10,
+author =       {Friston, Karl},
+day =          {13},
+doi =          {10.1038/nrn2787},
+issn =         {1471-003X},
+journal =      {Nature Reviews Neuroscience},
+keywords =     {brain},
+month =        {January},
+number =       {2},
+pages =        {127--138},
+posted-at =    {2010-01-21 16:54:24},
+priority =     {2},
+publisher =    {Nature Publishing Group},
+title =        {The free-energy principle: a unified brain theory?},
+url =          {http://dx.doi.org/10.1038/nrn2787},
+volume =       {11},
+year =         {2010}
+}

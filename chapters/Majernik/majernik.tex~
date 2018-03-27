@@ -1,0 +1,551 @@
+%I prepared this file for Landes submission at
+%http://www.mdpi.com/journal/entropy/special_issues/max_log_res on
+%2014-10-29.
+
+%So, I have a problem here. If we can assign probabilities
+%retrospectively, then the Wagner scenario is trivially resolved in
+%terms of Jeffrey Conditioning. Consider events w1,\dots,w5 and
+%t1,\dots,t4. Then Q(ti)=sum_j=1to4 P(ti|wj)Q(wj) -- fortunately, this
+%doesn't work since P(ti|wj) is just what is in question. t1=northern
+%Catholic, for example, and w1=Catholic piety. We know what P(C|w1) is,
+%but what is P(N&C|w1)?
+
+%However, do keep in mind to tailor the paper to fit the theme (adding a section or two on inductive logic); this might take some time.
+
+\documentclass[11pt]{article}
+\usepackage{october}
+% For BJPS
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+\begin{document}
+% For BJPS
+% \raggedright
+% \doublespacing
+
+% This article http://streetgreek.com/lpublic/various/majernik.pdf or http://tinyurl.com/kxeu2vy
+
+%\title{Probability Kinematics Constrained by Conditionals}
+%the following title for Landes special edition
+\title{Maximum Entropy and Probability Kinematics Constrained by Conditionals}
+\author{Stefan Lukits}
+\date{}
+\maketitle
+% \doublespacing
+
+% probability kinematics
+% probability update
+% conditionals
+% evidence
+% Bayesian epistemology
+% maximum entropy
+% infomin
+% formal epistemology
+
+\begin{abstract} 
+  {\noindent}Two open questions of inductive reasoning are solved: (1)
+  does the principle of maximum entropy (\textsc{pme}) give a solution
+  to the obverse Majern{\'\i}k problem; and (2) is Wagner correct when
+  he claims that Jeffrey's updating principle (\textsc{jup}) contradicts
+  \textsc{pme}?  Majern{\'\i}k shows that \textsc{pme}
+  provides unique and plausible marginal probabilities, given
+  conditional probabilities.  The obverse problem posed here is
+  whether \textsc{pme} also provides such conditional
+  probabilities, given certain marginal probabilities. The theorem
+  developed to solve the obverse Majern{\'\i}k problem demonstrates
+  that in the special case introduced by Wagner \textsc{pme} does
+  not contradict \textsc{jup}, but elegantly generalizes it and offers
+  a more integrated approach to probability updating.
+\end{abstract}
+
+\section{Introduction}
+\label{Introduction}
+
+Sometimes, when we reason inductively, outcomes that are observed have
+entailment relationships with partitions of the possibility space that
+pose updating challenges which Jeffrey conditioning cannot meet. As we
+will see, it is not difficult to resolve these challenges by
+generalizing Jeffrey conditioning. There are claims in the literature
+that the principle of maximum entropy, from now on \textsc{pme},
+conflicts with this generalization. We will show under which
+conditions this conflict obtains. Since proponents of
+\textsc{pme} are unlikely to subscribe to these conditions, the
+position of \textsc{pme} in the larger debate over inductive logic
+and reasoning is not undermined.
+
+In Section \ref{Introduction}, I will introduce the obverse
+Majern{\'\i}k problem and sketch how it ties in with two natural
+generalizations of Jeffrey conditioning: Wagner conditioning and the
+\textsc{pme}. In Section \ref{jc}, I will introduce Jeffrey
+conditioning in a notation that will later help us to solve the
+obverse Majern{\'\i}k problem. In Section \ref{wc}, I will introduce
+Wagner conditioning and show how it naturally generalizes Jeffrey
+conditioning. In Section \ref{Generalization}, finally, I will show
+that \textsc{pme} does so as well under conditions that are
+straightforward to accept for proponents of \textsc{pme}. This
+solves the obverse Majern{\'\i}k problem and makes Wagner conditioning
+unnecessary as a generalization of Jeffrey conditioning, since the
+\textsc{pme} seamlessly incorporates it. The conclusion summarizes my
+claims and briefly refers to epistemological consequences.
+
+In his paper \qeins{Marginal Probability Distribution Determined by
+the Maximum Entropy Method} (see \scite{7}{majernik00}{}),
+Vladim{\'\i}r Majern{\'\i}k asks the following question: If we had two
+partitions of an event space and knew all the conditional
+probabilities (any conditional probability of one event in the first
+partition conditional on another event in the second partition), would
+we be able to calculate the marginal probabilities for the two
+partitions? The answer is yes, if we commit ourselves to
+\textsc{pme}:
+
+\begin{quotex}
+  [\textsc{pme}] Keep the information entropy of your probability
+  distribution maximal within the constraints that the evidence
+  provides (in the synchronic case), or your cross-entropy minimal (in
+  the diachronic case).
+\end{quotex}
+
+For Majernik's question, \textsc{pme} provides us with a unique and
+plausible answer (see Majernik's paper). We may also be interested in
+the obverse question: if the marginal probabilities of the two
+partitions were given, would we similarly be able to calculate the
+conditional probabilities? The answer is yes: given \textsc{pme},
+Theorems 2.2.1. and 2.6.5. in \emph{Elements of Information Theory}
+(see \scite{7}{coverthomas06}{}) reveal that the joint probabilities
+are the product of the marginal probabilities. Once the joint
+probabilities and the marginal probabilities are available, it is
+trivial to calculate the conditional probabilities.
+
+There is an older problem by Carl Wagner (see \scite{7}{wagner92}{}),
+which can be cast in similar terms. If we were given some of the
+marginal probabilities in an updating problem as well as some logical
+relationships between the two partitions, would we be able to
+calculate the remaining marginal probabilities? This problem is best
+understood by example (see Wagner's \emph{Linguist} problem in section
+\ref{wc}). Wagner solves it with a natural generalization of
+Jeffrey conditioning, which we will call Wagner conditioning. It is
+not based on \textsc{pme}, but on what we may call Jeffrey's
+updating principle, or \textsc{jup} for short:
+
+\begin{quotex}
+  [\textsc{jup}] In a diachronic updating process, keep the ratio of
+  probabilities constant as long as they are unaffected by the
+  constraints that the evidence poses.
+\end{quotex}
+
+Richard Jeffrey made this principle famous when he introduced
+probability kinematics (see \scite{7}{jeffrey65}{}), an updating
+method which operates on uncertain evidence. As is the case for
+\textsc{pme}, there is a debate whether updating on evidence by
+rational agents is bound by \textsc{jup} (for a defence see
+\scite{7}{teller73}{}; for detractors see
+\scite{7}{howsonfranklin94}{}). 
+
+Our interest in this article is the relationship between \textsc{pme}
+and \textsc{jup}, both of which are updating principles. Wagner
+contends that his natural generalization of Jeffrey conditioning,
+based on \textsc{jup}, contradicts \textsc{pme}. Among formal
+epistemologists, there is a widespread view that, while \textsc{pme}
+is a generalization of Jeffrey conditioning, it is an inappropriate
+updating method in certain cases and does not enjoy the generality of
+Jeffrey conditioning. Wagner's claims support this view inasmuch as
+Wagner conditioning is based on the relatively plausible \textsc{jup}
+and naturally generalizes Jeffrey conditioning, but according to
+Wagner it contradicts \textsc{pme}, which gives wrong results in these
+cases.
+
+%I am generally suspicious of the widespread view that there are
+%problems with \textsc{pme} which go beyond the problems of a more
+%general Bayesian viewpoint with respect to probability updating.
+%Although a dominant majority of Bayesians does not accept \textsc{pme}
+%to be a generally valid updating method, I believe that there are
+%persuasive arguments that Bayesian commitments, especially if they are
+%coupled with commitments to \textsc{jup}, should lead to adherence to
+%\textsc{pme}. Once one accepts \textsc{jup}, counterexamples to
+%\textsc{pme} and their attendant conceptual problems can be
+%successfully addressed. This is a larger project, which receives
+%support in the more specific claims advanced in this paper, although
+%the more specific claims can be independently and profitably evaluated
+%without reference to the larger project.
+
+This paper resists Wagner's conclusions and shows that \textsc{pme}
+generalizes both Jeffrey conditioning and Wagner conditioning,
+providing a much more integrated approach to probability updating.
+This integrated approach also gives a coherent answer to the obverse
+Majernik problem posed above. A more epistemologically oriented
+companion paper shows that Wagner's argument about the contradiction
+between \textsc{jup} and \textsc{pme} is specious.
+
+\section{Jeffrey Conditioning}
+\label{jc}
+
+Richard Jeffrey proposes an updating method for cases in which the
+evidence is uncertain, generalizing standard probabilistic
+conditioning. I will present this method in unusual notation,
+anticipating using my notation to solve Wagner's \emph{Linguist}
+problem and to give a general solution for the obverse Majernik
+problem. Let $\Omega$ be an event space with finitely many elements
+and $\{\theta_{j}\}_{j=1,\ldots,n}$ a partition of $\Omega$. Let
+$\kappa$ be an $m\times{}n$ matrix for which each column contains
+exactly one $1$, otherwise $0$. Let $P=P_{\mbox{\tiny{prior}}}$ and
+$\hat{P}=P_{\mbox{\tiny{posterior}}}$. Then
+$\{\omega_{i}\}_{i=1,\ldots,m}$, for which
+
+\begin{equation}
+  \label{eq:m1}
+  \omega_{i}=\bigcup_{j=1,\dots,n}\theta^{*}_{ij},
+\end{equation}
+
+is likewise a partition of $\Omega$ (the $\omega$s are basically a
+more coarsely grained partition than the $\theta$s).
+$\theta^{*}_{ij}=\emptyset$ if $\kappa_{ij}=0$,
+$\theta^{*}_{ij}=\theta_{j}$ otherwise. Let $\beta$ be the vector of
+prior probabilities for $\{\theta_{j}\}_{j=1,\ldots,n}
+(P(\theta_{j})=\beta_{j})$ and $\hat{\beta}$ the vector of posterior
+probabilities $(\hat{P}(\theta_{j})=\hat{\beta}_{j})$; likewise for
+$\alpha$ and $\hat{\alpha}$ corresponding to the prior and posterior
+probabilities for $\{\omega_{i}\}_{i=1,\ldots,m}$, respectively.
+
+A Jeffrey-type problem is when $\beta$ and $\hat{\alpha}$ are given
+and we are looking for $\hat{\beta}$. A mathematically more concise
+characterization of a Jeffrey-type problem is the triple
+$(\kappa,\beta,\hat{\alpha})$. The solution, using Jeffrey
+conditioning, is
+
+\begin{equation}
+  \label{eq:m2}
+  \hat{\beta_{j}}=\beta_{j}\sum_{i=1}^{m}\frac{\kappa_{ij}\hat{\alpha_{i}}}{\sum_{\kappa_{il}=1}\beta_{l}}\mbox{ for all }j=1,\ldots,n.
+\end{equation}
+
+I will soon introduce an example which makes this notation more
+perspicuous. The notation is at first glance off-putting, but we will
+in the following take full advantage of it to present a generalization
+where the $\omega_{i}$ do not range over the $\theta_{j}$.
+
+\section{Wagner Conditioning}
+\label{wc}
+
+Carl Wagner uses \textsc{jup} (explained in more detail in
+\scite{7}{wagner02}{}) to solve a problem which cannot be solved by
+Jeffrey conditioning. Here is the narrative (call this the
+\emph{Linguist} problem):
+
+\begin{quotex}
+  You encounter the native of a certain foreign country and wonder
+  whether he is a Catholic northerner ($\theta_{1}$), a Catholic
+  southerner ($\theta_{2}$), a Protestant northerner ($\theta_{3}$),
+  or a Protestant southerner ($\theta_{4}$). Your prior probability
+  $p$ over these possibilities (based, say, on population statistics
+  and the judgment that it is reasonable to regard this individual as
+  a random representative of his country) is given by
+  $p(\theta_{1})=0.2,p(\theta_{2})=0.3,p(\theta_{3})=0.4,\mbox{ and
+  }p(\theta_{4})=0.1$. The individual now utters a phrase in his
+  native tongue which, due to the aural similarity of the phrases in
+  question, might be a traditional Catholic piety ($\omega_{1}$), an
+  epithet uncomplimentary to Protestants ($\omega_{2}$), an innocuous
+  southern regionalism ($\omega_{3}$), or a slang expression used
+  throughout the country in question ($\omega_{4}$). After reflecting
+  on the matter you assign subjective probabilities
+  $u(\omega_{1})=0.4,u(\omega_{2})=0.3,u(\omega_{3})=0.2,\mbox{ and
+  }u(\omega_{4})=0.1$ to these alternatives. In the light of this new
+  evidence how should you revise $p$? (See \scite{8}{wagner92}{252},
+  and \scite{8}{spohn12}{197}.)
+\end{quotex}
+
+Let us call a problem of this type a Wagner-type problem. It is an
+instance of the more general obverse Majernik problem where partitions
+are given with logical relationships between them as well as some
+marginal probabilities. Wagner-type problems seek as a solution
+missing marginals, while obverse Majernik problems seek the
+conditional probabilities as well, both of which we will eventually
+provide using \textsc{pme}.
+
+Wagner's solution for such problems (from now on Wagner conditioning)
+rests on \textsc{jup} and a formal apparatus established by Arthur
+Dempster (see \scite{7}{dempster67}{}), which is quite different from
+our notational approach. Wagner legitimately calls his solution a
+\qeins{natural generalization of Jeffrey conditioning} (see
+\scite{8}{wagner92}{250}). There is, however, another natural
+generalization of Jeffrey conditioning, E.T. Jaynes' principle of
+maximum entropy. \textsc{pme} does not rest on \textsc{jup}, but
+rather claims that one should keep one's entropy maximal within the
+constraints that the evidence provides (in the synchronic case) and
+one's cross-entropy minimal (in the diachronic case). Some distinguish
+between \textsc{maxent}, the synchronic rule, and \emph{Infomin}, the
+diachronic rule, but I have shown elsewhere that the two are
+compatible and both follow \textsc{pme} (see also
+\scite{7}{wagner02}{}).
+
+It turns out that \textsc{pme} elegantly generalizes Jeffrey
+conditioning and therefore absorbs \textsc{jup} on the more narrow
+domain of problems that we can solve using Jeffrey conditioning (for a
+proof see \scite{7}{catichagiffin06}{}). Wagner's contention is that
+on the wider domain of problems where we must use Wagner conditioning,
+\textsc{jup}and \textsc{pme} contradict each other. We are now in the
+awkward position of being confronted with two plausible intuitions,
+\textsc{jup} and \textsc{pme}, and it appears that we have to let one
+of them go. Wagner adduces other conceptual problems for \textsc{pme}
+(e.g.\ Bas van Fraassen's \emph{Judy Benjamin} problem and Abner
+Shimony's Lagrange multiplier problem, see
+\scite{7}{friedmanshimony71}{}) to reinforce his conclusion that
+\textsc{pme} is not a principle on which we should rely in general.
+
+We will see that Wagner's conclusion is incorrect. \textsc{jup} and
+\textsc{pme} are compatible. Wagner's formal apparatus, although
+inspiring, is unnecessary and ad hoc, as the much more integrated
+maximum entropy approach seamlessly generalizes \textsc{jup}. There
+are now two distinctive tasks at hand. One is to show how Wagner
+construes a contradiction between \textsc{jup} and \textsc{pme} and
+where this construction is misleading. I will do this in a more
+epistemological companion paper, because Wagner's mistake is more
+epistemological in nature than formal, attributing implausible
+assumptions to adherents of \textsc{pme}. The other more general and
+more formal task, which we will pursue here, is to show how
+\textsc{pme} generalizes Jeffrey conditioning and Wagner conditioning
+to boot.
+
+\section{A Natural Generalization of Jeffrey and Wagner Conditioning}
+\label{Generalization}
+
+To achieve the second task, we use the notation that we have already
+introduced for Jeffrey conditioning. We can characterize Wagner-type
+problems analogously to Jeffrey-type problems by a triple
+$(\kappa,\beta,\hat{\alpha})$.
+$\{\theta_{j}\}_{j=1,\ldots,n}$ and $\{\omega_{i}\}_{i=1,\ldots,m}$
+now refer to independent partitions of $\Omega$, i.e.\ (\ref{eq:m1})
+need not be true. Besides the marginal probabilities
+$P(\theta_{j})=\beta_{j}, \hat{P}(\theta_{j})=\hat{\beta}_{j},
+P(\omega_{i})=\alpha_{i},\hat{P}(\omega_{i})=\hat{\alpha}_{i}$, we
+therefore also have joint probabilities
+$m_{ij}=P(\omega_{i}\cap\theta_{j})$ and
+$\hat{m}_{ij}=\hat{P}(\omega_{i}\cap\theta_{j})$.
+
+Given the specific nature of Wagner-type problems, there are a few
+constraints on the triple $(\kappa,\beta,\hat{\alpha})$. The last row
+$(m_{mj})_{j=1,\ldots,n}$ is special because it represents the
+probability of $\omega_{m}$, which is the negation of the events
+deemed possible after the observation. In the \emph{Linguist} problem,
+for example, $\omega_{5}$ is the event (initially highly likely, but
+impossible after the observation of the native's utterance) that the
+native does not make any of the four utterances. The native may have,
+after all, uttered a typical Buddhist phrase, asked where the nearest
+bathroom was, complimented your fedora, or chosen to be silent.
+$\kappa$ will have all $1$s in the last row. Let
+$\hat{\kappa}_{ij}=\kappa_{ij}$ for $i=1,\ldots,m-1$ and
+$j=1,\ldots,n$; and $\hat{\kappa}_{mj}=0$ for $j=1,\ldots,n$.
+$\hat{\kappa}$ equals $\kappa$ except that its last row are all $0$s,
+and $\hat{\alpha}_{m}=0$. Otherwise the $0$s are distributed over
+$\kappa$ (and equally over $\hat{\kappa}$) so that no row and no
+column has all $0$s, representing the logical relationships between
+the $\omega_{i}$s and the $\theta_{j}$s. We set $P(\omega_{m})=x$
+($\hat{P}(\omega_{m})=0$), where $x$ depends on your prior knowledge.
+Fortunately, the value of $x$ cancels out nicely and will play no
+further role. For convenience, we define
+$\zeta=(0,\ldots,0,1)^{\intercal}$ with $\zeta_{m}=1$ and
+$\zeta_{i}=0$ for $i\neq{}m$.
+
+The best way to visualize such a problem is by providing the joint
+probability matrix $M=(m_{ij})$ together with the marginals $\alpha$
+and $\beta$ in the last column/row, here for example as for the
+\emph{Linguist} problem with $m=5$ and $n=4$,
+
+\begin{equation}
+  \label{eq:m3}
+      \left[
+      \begin{array}{ccccc}
+        m_{11} & m_{12} & 0 & 0 & \alpha_{1} \\
+        m_{21} & m_{22} & 0 & 0 & \alpha_{2} \\
+        0 & m_{32} & 0 & m_{34} & \alpha_{3} \\
+        m_{41} & m_{42} & m_{43} & m_{44} & \alpha_{4} \\
+        m_{51} & m_{52} & m_{53} & m_{54} & x \\
+        \beta_{1} & \beta_{2} & \beta_{3} & \beta_{4} & 1.00
+      \end{array}
+\right].
+\end{equation}
+
+% \begin{equation}
+%   \label{eq:m3}
+%       \left[
+%       \begin{array}{ccccc}
+%         m_{11}\kappa_{11} & m_{12}\kappa_{12} & m_{13}\kappa_{13} & m_{14}\kappa_{14} & \alpha_{1} \\
+%         m_{21}\kappa_{21} & m_{22}\kappa_{22} & m_{23}\kappa_{23} & m_{24}\kappa_{24} & \alpha_{2} \\
+%         m_{31}\kappa_{31} & m_{32}\kappa_{32} & m_{33}\kappa_{33} & m_{34}\kappa_{34} & \alpha_{3} \\
+%         m_{41}\kappa_{41} & m_{42}\kappa_{42} & m_{43}\kappa_{43} & m_{44}\kappa_{44} & \alpha_{4} \\
+%         m_{51}\kappa_{51} & m_{52}\kappa_{52} & m_{53}\kappa_{53} & m_{54}\kappa_{54} & x \\
+%         \beta_{1} & \beta_{2} & \beta_{3} & \beta_{4} & 1.00
+%       \end{array}
+% \right].
+% \end{equation}
+
+The $m_{ij}\neq{}0$ where $\kappa_{ij}=1$. Ditto, mutatis mutandis,
+for $\hat{M},\hat{\alpha},\hat{\beta}$. To make this a little less
+abstract, Wagner's \emph{Linguist} problem is characterized by the
+triple $(\kappa,\beta,\hat{\alpha})$,
+
+\begin{equation}
+  \label{eq:m4}
+  \kappa=\left[
+  \begin{array}{cccc}
+    1 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 1 \\
+    1 & 1 & 1 & 1 \\
+    1 & 1 & 1 & 1
+  \end{array}
+\right]\mbox{ and }
+  \hat{\kappa}=\left[
+  \begin{array}{cccc}
+    1 & 1 & 0 & 0 \\
+    1 & 1 & 0 & 0 \\
+    0 & 1 & 0 & 1 \\
+    1 & 1 & 1 & 1 \\
+    0 & 0 & 0 & 0
+  \end{array}
+\right]
+\end{equation}
+
+\begin{equation}
+  \label{eq:m5}
+  \beta=(0.2,0.3,0.4,0.1)^{\intercal}\mbox{ and }\hat{\alpha}=(0.4,0.3,0.2,0.1,0)^{\intercal}.
+\end{equation}
+
+Wagner's solution, based on \textsc{jup}, is
+
+\begin{equation}
+  \label{eq:m6}
+  \hat{\beta_{j}}=\beta_{j}\sum_{i=1}^{m-1}\frac{\hat{\kappa}_{ij}\hat{\alpha_{i}}}{\sum_{\hat{\kappa}_{il}=1}\beta_{l}}\mbox{ for all }j=1,\ldots,n.
+\end{equation}
+
+In numbers,
+
+\begin{equation}
+  \label{eq:m7}
+  \hat{\beta_{j}}=(0.3,0.6,0.04,0.06)^{\intercal}.
+\end{equation}
+
+The posterior probability that the native encountered by the linguist
+is a northerner, for example, is 34\%. Wagner's notation is completely
+different and never specifies or provides the joint probabilities, but
+I hope the reader appreciates both the analogy to (\ref{eq:m2})
+underlined by this notation as well as its efficiency in delivering a
+correct \textsc{pme} solution for us (compared to Wagner's incorrect
+\textsc{pme} solution, which is to some extent misleadingly suggested
+by Wagner's Dempsterian setup). That (\ref{eq:m6}) follows from
+\textsc{jup} is well-documented in Wagner's article.
+
+For the \textsc{pme} solution for this problem, we will not use
+(\ref{eq:m6}) or \textsc{jup}, but maximize the entropy for the joint
+probability matrix $M$ and then minimize the cross-entropy between the
+prior probability matrix $M$ and the posterior probability matrix
+$\hat{M}$. The \textsc{pme} solution, despite its seemingly different
+ancestry in principle, formal method, and assumptions, agrees with
+(\ref{eq:m6}). This completes our argument.
+
+What follows may be accessible largely to \textsc{pme} cognoscenti,
+since it involves the Lagrange multiplier method (see
+\scite{8}{guiasu77}{327ff}, and \scite{8}{jaynes78}{244}). Others may
+want to skip to the Conclusion. To maximize the Shannon entropy of $M$
+and minimize the Kullback-Leibler divergence between $\hat{M}$ and
+$M$, consider the Lagrangian functions:
+
+\begin{flalign}
+\label{eq:m8}
+& \Lambda(m_{ij},\mu)= & \notag \\
+& \sum_{\kappa_{ij}=1}m_{ij}\log{}m_{ij}+\sum_{j=1}^{n}\mu_{j}\left(\beta_{j}-\sum_{\kappa_{kj}=1}m_{kj}\right)+ & \notag \\
+& \lambda_{m}\left(x-\sum_{j=1}^{n}m_{mj}\right) &
+\end{flalign}
+
+and
+
+\begin{flalign}
+\label{eq:m9}
+& \hat{\Lambda}(\hat{m}_{ij},\hat{\lambda})= & \notag \\
+& \sum_{\hat{\kappa}_{ij}=1}\hat{m}_{ij}\log{}\frac{\hat{m}_{ij}}{m_{ij}}+\sum_{i=1}^{m}\hat{\lambda}_{i}\left(\hat{\alpha}_{i}-\sum_{\hat{\kappa}_{il}=1}\hat{m}_{il}\right). &
+\end{flalign}
+
+For the optimization, we set the partial derivatives to $0$, which
+results in
+
+\begin{equation}
+  \label{eq:m10}
+  M=rs^{\intercal}\circ\kappa
+\end{equation}
+
+\begin{equation}
+  \label{eq:m11}
+  \hat{M}=\hat{r}s^{\intercal}\circ\hat{\kappa}
+\end{equation}
+
+\begin{equation}
+  \label{eq:m12}
+  \beta=S\kappa^{\intercal}r
+\end{equation}
+
+\begin{equation}
+  \label{eq:m13}
+  \hat{\alpha}=\hat{R}\kappa{}s
+\end{equation}
+
+where
+$r_{i}=e^{\zeta_{i}\lambda_{m}},s_{j}=e^{-1-\mu_{j}},\hat{r}_{i}=e^{-1-\hat{\lambda}_{i}}$
+represent factors arising from the Lagrange multiplier method. The
+operator $\circ$ is the entry-wise Hadamard product in linear algebra.
+$r,s,\hat{r}$ are the vectors containing the
+$r_{i},s_{j},\hat{r}_{i}$, respectively. $R,S,\hat{R}$ are the
+diagonal matrices with
+$R_{il}=r_{i}\delta_{il},S_{kj}=s_{j}\delta_{kj},\hat{R}_{il}=\hat{r}_{i}\delta_{il}$
+($\delta$ is Kronecker delta).
+
+Note that 
+
+\begin{equation}
+  \label{eq:m14}
+  \frac{\beta_{j}}{\sum_{\hat{\kappa}_{il}=1}\beta_{l}}=\frac{s_{j}}{\sum_{\hat{\kappa}_{il}=1}s_{l}}\mbox{ for all }(i,j)\in\{1,\ldots,m-1\}\times\{1,\ldots,n\}.
+\end{equation}
+
+(\ref{eq:m13}) implies
+
+\begin{equation}
+  \label{eq:m15}
+  \hat{r}_{i}=\frac{\hat{\alpha_{i}}}{\sum_{\hat{\kappa}_{il}=1}s_{l}}\mbox{ for all }i=1,\ldots,m-1.
+\end{equation}
+
+Consequently,
+
+\begin{equation}
+  \label{eq:m16}
+  \hat{\beta}_{j}=s_{j}\sum_{i=1}^{m-1}\frac{\hat{\kappa}_{ij}\hat{\alpha_{i}}}{\sum_{\kappa_{il}=1}s_{l}}\mbox{ for all }j=1,\ldots,n.
+\end{equation}
+
+(\ref{eq:m16}) gives us the same solution as (\ref{eq:m6}), taking
+into account (\ref{eq:m14}). Therefore, Wagner conditioning and
+\textsc{pme} agree.
+
+\section{Conclusion}
+\label{Conclusion}
+
+Wagner-type problems (but not obverse Majernik-type problems) can be
+solved using \textsc{jup} and Wagner's ad hoc method. Obverse
+Majernik-type problems, and therefore all Wagner-type problems, can
+also be solved using \textsc{pme} and its established and integrated
+formal method. What at first blush looks like serendipitous
+coincidence, namely that the two approaches deliver the same result,
+reveals that \textsc{jup} is safely incorporated in \textsc{pme}. Not
+to gain information where such information gain is unwarranted and to
+process all the available and relevant information is the intuition at
+the foundation of \textsc{pme}. My results show that this more
+fundamental intuition generalizes the more specific intuition that
+ratios of probabilities should remain constant unless they are
+affected by observation or evidence. Wagner's argument that
+\textsc{pme} conflicts with \textsc{jup} is ineffective because, as my
+more epistemological companion paper demonstrates, it rests on
+assumptions that advocates of \textsc{pme} naturally reject.
+
+\section{References}
+\label{References}
+
+% \nocite{*} 
+\bibliographystyle{ChicagoReedweb}
+\bibliography{bib-5908}
+
+\end{document} 

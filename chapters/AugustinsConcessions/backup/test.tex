@@ -1,0 +1,35 @@
+\documentclass{article}
+\setlength{\parindent}{0mm}
+
+\newcounter{phase} 
+\setcounter{phase}{0}
+\newcounter{subphase}[phase] 
+\setcounter{subphase}{0}
+\renewcommand{\thesubphase}{\thephase.\arabic{subphase}}
+\newcommand{\phase}[1]{\noindent%
+   \refstepcounter{phase}\textbf{Phase \thephase} --- \texttt{#1}\\%
+   }
+\newcommand{\subphase}[1]{\noindent%
+   \dots\refstepcounter{subphase}\textbf{Phase \thesubphase} --- \texttt{#1}\\%
+   }
+
+\begin{document}
+
+\phase{Bla bla bla}
+
+\phase{A Phase}
+This is just some random text\dots\\
+
+\subphase{A Sub-Phase (with label)\label{pha: mysubphase}}
+And some more random text. But this time, I'd like to refer to this phase by setting a label.\\
+
+\subphase{A Sub-Phase}
+
+\phase{The Last Phase (with label)\label{pha: last phase}}
+
+\vspace{1cm}
+In this paragraph, I'd like to refer to the label I've set in the first sub-phase and the last phase;\\
+Phase \ref{pha: mysubphase} and \ref{pha: last phase} contains\dots\\
+\textbf{It should print and it does!}\\
+Phase 2.1 and 3 contains\dots
+\end{document}

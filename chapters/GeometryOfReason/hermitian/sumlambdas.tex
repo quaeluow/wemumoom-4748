@@ -1,0 +1,121 @@
+%\documentclass[10pt]{article}
+\documentclass[landscape,12pt]{article}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{.3in}
+
+\raggedbottom
+
+\pagestyle{empty}
+
+% 	PACKAGES
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+%\usepackage{german}
+%\usepackage{hebtex}
+%\usepackage{pdfpages} % to include pdf pages
+%\usepackage{graphics}
+% \usepackage[german]{babel}
+%\usepackage{helvet}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathbb{P}}
+
+\begin{document}
+
+Naohito,
+
+Thank you very much for responding to my inquiries so far. I have been
+working through your 1993 paper, Geometrical Structures of Some
+Non-Distance Models for Asymmetric MDS. Here is something I am
+wondering about. You define the seminorm (page 38)
+
+\begin{equation}
+  \label{eq:n1}
+  \|\zeta\|=\sqrt{\varphi(\zeta,\zeta)}
+\end{equation}
+
+and then say, ``in particular, if $\varphi$ is positive for any
+$\zeta\neq{}0,\|\zeta\|$ defines a \emph{norm}.'' Let me defend the
+claim that $\sqrt{\varphi(\zeta,\zeta)}$ \textbf{never} defines a norm
+because the diagonal matrix $\Lambda$ is always indefinite (i.e.\ it
+always contains at least one negative and one positive real number).
+Let's call this claim \textsc{always-indef}.
+
+Recall that $\varphi$ was defined as follows:
+
+\begin{equation}
+  \label{eq:n2}
+  \varphi(\zeta,\tau)=\zeta\Lambda\tau^{*}
+\end{equation}
+
+and 
+
+\begin{equation}
+  \label{eq:n3}
+  \Lambda=\mbox{diag}(\lambda_{1},\ldots,\lambda_{n})
+\end{equation}
+
+where the $\lambda_{j}$ are the eigenvalues (repeated according to
+multiplicity) of $H$ as defined on page 36. $H$ is a Hermitian matrix
+with $\mbox{tr}(H)=0$, and according to a well-known theorem in linear
+algebra (see link in email)
+
+\begin{equation}
+  \label{eq:n4}
+  \sum_{j=1}^{n}\lambda_{j}=\mbox{tr}(H)=0.
+\end{equation}
+
+In other words, the trace of $\Lambda$ is $0$. \textsc{always-indef}
+follows immediately unless $\Lambda=0$, which is a trivial case.
+
+This appears to be sad news for both you and me. You were trying to
+model asymmetries. The Hermitian Form Model looks initially very
+promising and elegant, but now it turns out that the seminorm defined
+on the Hilbert Space is always indefinite. I was hoping that I could
+classify asymmetry as follows: (null) no asymmetry, for example
+Euclidean distance; (well-behaved) asymmetry obeying the triangle
+inequality and transitivity, for example Tobler's wind model;
+(ill-behaved) asymmetry violating the triangle inequality and
+transitivity, for example the Kullback-Leibler divergence. Your
+distinction between only seminorm-inducing asymmetries and
+norm-inducing asymmetries may have delivered such a classification, as
+you expressed in your email:
+
+\begin{quote}
+  Very interesting! I suppose that your finding may be explained by
+  examining the definiteness of the Hermitian matrix
+  $H=(S+S')/2+i*(S-S')/2$ constructed from the proximity matrix $S$
+  which you specified above. Here, $S'$ denotes the transposed matrix
+  of $S$, and $i$ denotes the pure imaginary number. This inspection
+  comes from the theory of the Hermitian Form Model (HFM) proposed by
+  Chino and Shiraiwa (1993), Behaviormetrika. Our theory states that
+  members (or objects) are embedded in a finite-dimensional Hilbert
+  space if and only if the matrix $H$ is positive-semi definite.
+\end{quote}
+
+Unofortunately, as it turns out, all cats are grey at night and there
+are no norm-inducing asymmetries. Even if $H$ is symmetrical and
+$S_{sk}=0$ the seminorm on the Hilbert Space is still indefinite.
+
+% Consider
+
+% \begin{equation}
+%   \label{eq:n5}
+%   \det(H-\lambda{}I)=\det
+%       \left[
+%       \begin{array}{cccc}
+%         -\lambda & h_{12} & \cdots & h_{1n} \\
+%         h_{21} & -\lambda & \cdots & h_{2n} \\
+%         \vdots & \vdots & \ddots & \vdots \\
+%         h_{n1} & \cdots & \cdots & -\lambda 
+%       \end{array}
+% \right].
+% \end{equation}
+
+\end{document}

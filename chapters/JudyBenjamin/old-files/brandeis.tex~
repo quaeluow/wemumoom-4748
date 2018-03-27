@@ -1,0 +1,751 @@
+\documentclass[11pt]{article}
+
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+\frenchspacing % no extra space at the end of a sentence
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{.1in}
+
+\raggedbottom
+
+%\pagestyle{empty}
+
+% 	PACKAGES
+% \usepackage[small,bf]{caption}
+% \let\bcode\textbgreek
+% \usepackage[bgreek,english]{babel}
+% \usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+% \usepackage{german}
+% \usepackage{hebtex}
+% \usepackage{graphicx}
+% \usepackage[german]{babel}
+% \usepackage{endnotes}
+% \let\footnote=\endnote
+% \usepackage{rotating}
+% \usepackage{enumerate}
+
+\newcommand{\kapt}[1]{\textbf{{\thechap}. #1}\addtocounter{chap}{1}}
+
+\newcommand{\tbd}[1]{}
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+
+\newif\ifNumericalOrYear
+\NumericalOrYeartrue
+% \NumericalOrYearfalse
+\ifNumericalOrYear
+\usepackage[numbers,colon]{natbib}
+\else
+\usepackage[round,colon]{natbib}
+\fi
+\newif\ifPageP
+\PagePtrue
+% \PagePfalse
+\ifPageP
+\newcommand{\PageP}{p.~}
+\else
+\newcommand{\PageP}{}
+\fi
+
+\newcommand{\scite}[3]{\ifnum#1=1\ifNumericalOrYear\citep{#2}\else\citeyearpar{#2}\fi\else
+\ifnum#1=2\ifNumericalOrYear\citep[#3]{#2}\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=4\ifNumericalOrYear\citet{#2}\else\citet{#2}\fi\else
+\ifnum#1=5\ifNumericalOrYear(\citet{#2})\else\citep{#2}\fi\else
+\ifnum#1=6\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=7\ifNumericalOrYear\citep{#2}\else\citealp{#2}\fi\else
+\ifnum#1=8\ifNumericalOrYear\citep[#3]{#2}\else\citealp[{\PageP}#3]{#2}\fi\else
+\textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
+% \newenvironment{quotex}{\begin{quote}\begin{footnotesize}\begin{singlespace}}{\end{singlespace}\end{footnotesize}\end{quote}}
+
+\begin{document}
+
+\title{Carnap's Conventionalism in Geometry}
+
+\author{Stefan Lukits}
+
+\maketitle
+
+\newcounter{chap}
+
+\setcounter{chap}{1}
+
+\kapt{Introduction}
+
+There are, possibly among others, three lines of attack against Rudolf
+Carnap's conventionalism in geometry. Concise labels for them are
+\textsc{quine/ holism}, \textsc{ryckman/relativity}, and
+\textsc{mormann/topology}. We will give a brief summary what their
+respective targets are and then focus on \textsc{mormann/topology} to
+substantiate our claim that, whatever else may be said about Carnap's
+conventionalism in geometry, it does not run afoul of mathematical
+topology.
+
+Instead, the objections of \textsc{mormann/topology} reveal that there
+is an obscurity at the heart of Carnap's account of scientific
+objectivity with respect to the practical limitations an empiricist
+inquirer faces. For Thomas Mormann, it is clear that empiricists must
+on principle reject any ideas that areas of the world are inaccessible
+to empirical investigation. Carnap is less clear. On the one hand, he
+rejects Emil Heinrich Du Bois-Reymond's \emph{Ignorabimus}. On the
+other hand, his account clearly suggests even in his own words the
+existence of at least singularities of principled ignorance.
+
+\kapt{Carnap's Conventionalism in Geometry}
+
+Carnap's conventionalism in geometry is the platform from which, often
+by analogy, he launches into conventionalism in other areas. Consider,
+for example, Carnap's comment in \emph{Der Raum} where the
+transformation of a statement from one metric into another is
+\qeins{aptly compared} \scite{2}{carnap22}{99} (page numbers refer to
+the English translation of \emph{Der Raum}) to the translation of a
+proposition from one language into another. Conventionalism in
+geometry serves as evidence that not only are we able to express
+topological facts using various metrics, but we are also able to
+express the meaning of a proposition using various languages.
+Linguistic descriptions and their underlying and underdetermining
+propositional contents are in a many-to-one relationship, with no
+privilege given to certain descriptions on the basis of how well they
+express their meaning on a formal basis. Conventionalism in geometry,
+although it is not referred to, influences the formation of the
+principle of tolerance in \emph{The Logical Syntax of Language}
+\scite{2}{carnap37}{52} (see \scite{8}{mormann07}{51}).
+
+Conventionalism is not an incidental feature of Carnap's philosophical
+pro\-jects, for instance in the \emph{The Logical Structure of the
+  World} (from now on \emph{Aufbau}). For the \emph{Aufbau} is not
+only after the reduction that later on was recognized to have failed
+both by Carnap himself as well as his critics (see
+\scite{8}{quine51}{37f}, \scite{8}{richardson98}{13}). A larger
+project behind the reduction of science to logical form on the basis
+of elementary experiences may be what Michael Friedman calls
+\qeins{the most fundamental aim of the Aufbau: namely, the
+  articulation and defense of a radically new conception of
+  objectivity} \scite{2}{friedman87}{526} (see also
+\scite{8}{richardson98}{90} and passim).
+
+Objectivity raises both the question of intersubjective meaning and
+the metaphysical nature of objects. Writing the \emph{Aufbau}, Carnap
+proposes a unified answer to both of these questions. As there cannot
+be meaningful intersubjective agreement on phenomenal content, which
+is dependent on ostensive definitions, it is structural properties
+which provide for the only achievable objectivity in science. The
+metaphysical nature of objects is therefore a purely conventionalist
+affair (one may speak about them from a realist, an idealist, or a
+phenomenalist perspective), in which science can play no arbitrative
+role, as there is no possible evaluative link between the different
+\emph{fa\c{c}ons de parler} in metaphysics and observation.
+
+More relevantly, conventions play an important role within science. As
+the construction of the space-time world, visual things, and the
+assignment of colour in {\S\S}125--127 shows, qualities are assigned
+to point-instants \qeins{in such a way as to achieve the laziest world
+  compatible with our experience} \scite{2}{quine51}{37} (see
+especially point 11 in {\S}126). The problem what kind of simplicity
+guides these conventions occupies Carnap already in \emph{Der Raum}
+(where the rule is that \qeins{Einfachheit des Baues geht vor
+  Einfachheit des Bauens} \scite{8}{carnap22}{82}, simplicity of the
+construct trumps simplicity of construction) and receives full
+attention in \emph{{\"U}ber die Aufgabe der Physik und die Anwendung
+  des Grundsatzes der Einfachstheit} \scite{1}{carnap23}{}.
+
+Whereas the project of reduction in the \emph{Aufbau} fails in
+Carnap's later view (which does not necessarily mean that the project
+of the \emph{Aufbau} fails, see \scite{7}{parks73}{},
+\scite{7}{goodman77}{}, and \scite{8}{richardson98}{73}), Carnap
+advocates conventionalism in a very similar form to his early
+conventionalism as late as 1966 in his \emph{Introduction to the
+  Philosophy of Science} \scite{1}{carnap95}{}. The conventionalism of
+the \emph{Introduction to the Philosophy of Science} is as firmly
+based on the evidence of conventionalism in geometry as the
+conventionalism that we see in 1922 in \emph{Der Raum}. In a
+\emph{Reply to Gr{\"u}nbaum} in 1963, Carnap explains that the only
+reason he writes so little about conventionalism in geometry between
+1922 and 1966 is that he feels Hans Reichenbach had already done all the
+work in \emph{The Philosophy of Space and Time}
+\scite{1}{reichenbach57}{} in 1928 (see \scite{8}{carnap63}{957}).
+
+Carnap begins his philosophical work not as a logical empiricist, but
+as a thinker in whom the neo-Kantian problem of the constitution of
+objectivity by way of the synthetic a priori and its relationship to
+advancing science (especially the theory of relativity) meets with
+Frege's predicate logic and Russell's theory of types. Carnap's
+position in the \emph{Aufbau} is characterized by a large-scale
+attempt to replace Kant's synthetic a priori (which depends on a
+transcendental logic itself dependent on intuition, see
+\scite{8}{friedman87}{529}) by the logical structure of elements (see,
+for example, \scite{8}{carnap03}{176}, {\S}106, and
+\scite{8}{carnap03}{289}, {\S}179).
+
+The essences of these elements, perceived by intuition, are no longer
+of consequence to objectivity, because with the new logic their formal
+structure can be rendered substantive without reference to phenomenal
+content. (The notion that they are substantive means that they are
+well-defined without reference to their metaphysical or phenomenal
+essences but solely to the structural relations they entertain with
+other elements, see \scite{8}{carnap03}{24f}, {\S}13. It does not mean
+to say that science, despite its omnipotence in answering well-formed
+questions, has to offer much insight relative to practical life and
+its riddles, see \scite{8}{carnap03}{297}, {\S}183.) There is no need
+for synthetic a priori judgments as \qeins{the conventional and the
+  empirical} \scite{2}{carnap03}{289}, {\S}179, exhaust the
+componentry of cognition.
+
+This picture draws inspiration from the conventionalism conceived by
+Henri Poincar{\'e} just a few years before the advent of Albert
+Einstein's theory of relativity. Poincar{\'e} concludes from a result
+by Nikolai Lobachevsky that experiment cannot inform geometry in the
+sense of deciding between alternative, consistent theories (see
+\scite{8}{poincare52}{70}). Lobachevsky showed that it is in principle
+impossible to design an experiment that leads to contradictions if
+interpreted in Lobachevskian geometry (or hyperbolic geometry, where
+given a line and a point not on the line there are more than one line
+going through the point that do not intersect with the original line)
+unless it also leads to contradictions in Euclidean geometry. Because
+Euclidean geometry can be shown to be consistent
+\scite{5}{tarski51}{}, Lobachevskian geometry must be consistent as
+well. (Lobachevsky's proof is not difficult to grasp: hyperbolic
+geometry can be embedded in Euclidean geometry, and thus an
+inconsistency in hyperbolic geometry necessitates an inconsistency in
+Euclidean geometry.)
+
+Considering that therefore no experiment will ever tell us whether
+space is Euclidean or non-Euclidean, a convention will have to deliver
+the constraint that no necessity of observation will impose on us:
+\qeins{one geometry cannot be more true than another; it can only be
+  more convenient} \scite{2}{poincare52}{50}. Poincar{\'e} comes to
+the conclusion that Euclidean geometry is the most convenient, on
+account of its simplicity and its sufficient agreement with the
+properties of natural solids.
+
+A few years later, conventionalism is put to the test by relativity
+theory, which relies heavily on experiments to establish itself and
+its non-Euclidean view of space geometry. Ernst Cassirer, from whom
+Carnap inherits a deep commitment to the \qeins{logical
+  differentiation of the contents of experience and their arrangement
+  in an ordered system of dependencies} \scite{2}{cassirer04}{280},
+now turns Poincar{\'e}'s argument on its head and justifies why
+Euclidean geometry is no longer the most convenient geometry:
+
+\begin{quotex}
+  Pure Euclidean space stands, as is now seen, not closer to the
+  demands of empirical and physical knowledge than the non-Euclidean
+  manifolds but rather more removed. For precisely because it
+  represents the logically simplest form of spatial construction it is
+  not wholly adequate to the complexity of content and the material
+  determinateness of the empirical. Its fundamental property of
+  homogeneity, its axiom of the equivalence in principle of all
+  points, now marks it as an abstract space; for, in the concrete and
+  empirical manifold, there never is such uniformity, but rather
+  thorough-going differentiation reigns in it.
+  \scite{3}{cassirer04}{443}
+\end{quotex}
+
+With these dynamics at play, Carnap largely adopts Poincar{\'e}'s
+conventionalism (sometimes also leaning on the more radical Hugo
+Dingler, although later in life Carnap calls Dingler someone who has
+taken conventionalism too far, see \scite{8}{carnap95}{59}) with a
+renewed emphasis on \emph{critical} conventionalism. Critical
+conventionalism notes that there are parts of physics which because of
+their dependence on conventions cannot be verified or refuted by
+experience, but also insists on the \qnull{critical} feature of
+conventions which subjects them to evaluation along simplicity
+considerations (for an example of this see {\S}136 in the
+\emph{Aufbau}, \scite{8}{carnap03}{210}). Edmund Runggaldier writes:
+
+\begin{quotex}
+  Even though there is no possibility of phenomenal verification or
+  falsification for some of the constituent \qnull{content parts} of
+  physics, there are practical criteria for accepting or rejecting
+  them. Carnap maintained, throughout his life, that conventions play
+  a very great role in the introduction into physics of quantitative
+  concepts of space, time and causality. \scite{3}{runggaldier84}{30}
+\end{quotex}
+
+\kapt{Three Lines of Attack}
+
+This section does not intend to give a full account of the first two
+lines of attack, \textsc{quine/holism} and
+\textsc{ryckman/relativity}. They are only mentioned to provide
+context for the third, \textsc{mormann/topology}, and to show that
+disarming Mormann's reservations has no particular implications
+whether or not we can make our way past the reservations of the other
+two.
+
+\textbf{(1)} \textsc{quine/holism}, expressed in \scite{1}{quine51}{}
+and \scite{1}{quine69}{}, maintains that the strong distinction
+between analytic and synthetic truths (held not only by Carnap, but
+also by Moritz Schlick and Reichenbach, see \scite{8}{howard94}{47}) breaks
+down upon closer examination:
+
+\begin{quotex}
+  For all its a priori reasonableness, a boundary between analytic and
+  synthetic statements simply has not been drawn. That there is such a
+  distinction to be drawn at all is an unempirical dogma of
+  empiricists, a metaphysical article of faith. \scite{3}{quine51}{34}
+\end{quotex}
+
+This conclusion rests on considerations of synonymy and artificial
+languages, both of which are shown by Quine to be of interest only
+once we have already understood the notion of analyticity, and neither
+of which help in gaining such an understanding. It is therefore a
+matter of metaphysical commitment (which is precisely what a
+commitment to Carnap's project must reject) to distinguish between
+analytic conventions, which nail down (in Carnap's words,
+\emph{festsetzen}) the necessary metric (or language) to facilitate
+univocal structural relations that are receptive for empirical
+evaluation, and synthetic a posteriori scientific hypotheses. Quine
+identifies the hysteron proteron of Carnap's epistemological
+categorization of science as the synthetic a posteriori, contrasted
+with convention, and advocates in good naturalist tradition for
+allowing epistemology the resources of science (see
+\scite{8}{quine69}{90}). 
+
+For Quine, the reductionist project in the \emph{Aufbau} is intimately
+related to the \qeins{cleavage between the analytic and the synthetic}
+\scite{2}{quine51}{38}, and once the former fails, the latter fails as
+well (how this may not be the case, following Friedman, see
+\scite{8}{richardson98}{73}). For our purposes, however, it is the
+intimate connection between conventionalism and the analytic/synthetic
+dichotomy that is relevant in Quine's critique: if the dichotomy
+collapses under Quine's holism, then there is no room left for
+Carnap's conventionalism, neither in geometry nor as it is more
+generally developed in \emph{The Logical Syntax of Language}. (For
+this intimate connection between conventionalism and the
+analytic/synthetic dichotomy see \scite{7}{yuneznaude03}{}.)
+
+\textbf{(2)} \textsc{ryckman/relativity} criticizes Carnap's
+conventionalism in geometry on an altogether different level, its
+relationship to Einstein's theory of relativity. It has been
+articulated by both Thomas Ryckman \scite{1}{ryckman05}{} and Friedman
+\scite{1}{friedman99}{}, although we will focus on Ryckman's version.
+Ryckman skillfully locates Einstein's position between Hermann Weyl's
+and Reichenbach's. At the time (there will be an ironic reversal of
+Weyl's and Einstein's position later on), Weyl pursues a
+\qnull{broadened relativity theory} seeking to explain rods and clocks
+as derived from field equations and not \qeins{stipulated as
+  independent primitive \qzwei{facts} licensed in the physical
+  definition of metrical notions} \scite{2}{ryckman05}{79}.
+Reichenbach, on the other hand, defends Schlick's new empiricism of
+coordination between mathematical representations and concrete
+physical objects, thus basing geometry on stipulations regarding rigid
+measuring rods and uniform clocks.
+
+Einstein is in this conflict squarely on Reichenbach's side, relying
+on the work of the much younger physicist Wolfgang Pauli, who
+identifies empirical contradictions in Weyl's work. Weyl's theory
+predicts the perihelion precession of Mercury and the bending of light
+rays in the solar gravitational field as well as Einstein's theory of
+relativity, but it also turns out to predict, according to Pauli's
+calculation, a widely varying spectral signature of hydrogen atoms at
+far distances. Unfortunately for Weyl's theory, astronomical
+observation confirms the homogeneity of this signature even at far
+distances. Einstein had followed his intuition for \qnull{practical
+  geometry,} which in his view had not been possible without the
+assumption of rigid measuring rods and uniform clocks, and Pauli had,
+for the time being, proven him right.
+
+On another point, however, Einstein disagrees with
+\qeins{Reichenbach's method of analysis that proposes to cleave a
+  physical theory into its empirical and its non-empirical parts (to
+  be designated, after the \qzwei{linguistic turn} prefigured in
+  Schlick, its synthetic and its analytic statements)}
+\scite{2}{ryckman05}{95}. For Einstein, it is the observation of
+uniformity that brings about his empirical belief in rigid measuring
+rods and uniform clocks, while for Reichenbach in his opposition to
+Weyl they are postulates vulnerable at best to evaluation on
+non-empirical grounds. This is also the breeding ground for a sharp
+disagreement between Einstein's position and Carnap's conventionalism
+in geometry.
+
+\begin{quotex}
+  In the general theory of relativity, physics and geometry are
+  entangled in a way that geometric conventionalism had not previously
+  envisaged: the metric of space-time is no longer accounted as a
+  globally rigid structure, fixed for all time, but as dynamically
+  dependent in a given region, according to the Einstein field
+  equations, upon surrounding matter and energy distributions.
+  \scite{3}{ryckman05}{78}
+\end{quotex}
+
+In a 1921 lecture, entitled \emph{Geometry and Experience}, Einstein
+refers to Riemann's \qnull{audacious idea} \qeins{that the
+geometric behavior of bodies might be conditioned by physical
+realities or forces} (in \scite{8}{ryckman05}{91}). In Einstein's
+later words, 
+
+\begin{quotex}
+  If we imagine the gravitational field, i.e. the functions $g_{ik}$,
+  to be removed, there does not remain a space of the type (1)
+  [Minkowski spacetime], but absolutely \emph{nothing}, and also no
+  \qnull{topological space} (Einstein's emphasis).
+  \scite{3}{einstein52}{155}
+\end{quotex}
+
+This is clearly not what Carnap has in mind, explicitly in \emph{Der
+  Raum}, where topological space is a type of space to which
+projective and metrical space stand in a relationship of species and
+subspecies \scite{2}{carnap22}{17}, which is characterized by the
+mathematical relationships of curves and surfaces lying in or upon one
+another \scite{2}{carnap22}{45}, and which comes in three
+\qnull{meanings of space,} formal, intuitive, and physical
+\scite{2}{carnap22}{5}. Topological space is here not
+\qeins{entangled} \scite{2}{ryckman05}{78} with metrical or physical
+space, nor is physical space constitutive of it. On the contrary,
+philosophers, mathematicians, and physicists are admonished to keep
+them properly differentiated \scite{2}{carnap22}{95}.
+
+Einstein's theory of general relativity is not at all what
+Poincar{\'e} has in mind when he looks upon the alternatives of
+Euclidean and non-Euclidean geometries, with no empirical observations
+to guide us in accepting one or another convention to apply to
+physical space. General relativity theory integrates geometry and
+physics, all the while remaining fully within the purview of empirical
+verification (and shenanigans like Weyl's, which \qeins{renounce
+  {\ldots} empirically-grounded coordination, {\ldots} rob the theory
+  [of general relativity] of its most solid empirical support and
+  possibilities of confirmation,} \scite{8}{ryckman05}{92}). 
+
+Carnap's conventionalism violates Einstein's theory in as far as it
+does not accept this commitment as part and parcel of the theory but
+rather lifts the evaluation of the theory out of the empirical realm
+into non-empirical critical considerations of greatest simplicity
+(\qnull{Einfachstheit}). Cassirer's defence of non-Euclidean geometry
+as applying to space quoted above is another example of this kind of
+non-empirical verification. Ryckman's critique is effective in
+locating Carnap at the same end of either misunderstanding the theory
+of general relativity or disagreeing with it.
+
+\textbf{(3)} \textsc{mormann/topology} picks up where
+\textsc{ryckman/relativity} leaves off in our discussion, with the
+question of how enmeshed topologies are with the metrics that can be
+defined on them. As we have seen, Carnap suggests already in the
+\emph{Aufbau} that Kant's division of judgments into synthetic a
+priori and other variants of synthetic/analytic and a priori/a
+posteriori judgments can be completely replaced by the conventional
+and the empirical (see \scite{8}{carnap03}{289}, {\S}179). This is an
+adumbration of how Carnap's conventionalism eventually culminates in
+the principle of tolerance (for the principle of tolerance see
+\scite{8}{carnap37}{52}), which considers even logic to be
+conventional.
+
+Carnap often justifies the conventionalism generalized to language and
+logic by analogy to the specific conventionalism found in geometry.
+Expressing a proposition in a natural language is analogous to
+expressing a topological fact in a conventional metric. Translating
+natural language sentences from German to French, for example,
+compares to translating a statement belonging to one metrical spatial
+form into another (see \scite{8}{carnap22}{99}). In Mormann's words,
+metrical conventionalism is the paradigm for conventionalism in
+general. Mormann's contention is that, whatever may be true about
+conventionalism in general, the mathematical discipline of
+differential topology does not support the conventionalism in geometry
+which is Carnap's main support for conventionalism in general:
+
+\begin{quotex}
+  for purely mathematical reasons geometry fails to be a stronghold
+  for conventionalism. One can show that Poincar{\'e}'s result
+  concerning the metrical structure of Euclidean spaces is not
+  representative for manifolds in general: differential topology and
+  related mathematical disciplines of twentieth-century mathematics
+  have shown that the relation between the topological and geometrical
+  structure of manifolds is extremely intricate. It is quite
+  misleading to describe this relation in terms of a hierarchical
+  conventionalism {\`a} la Carnap, according to which there is a
+  bedrock of topological facts (\qnull{topologischer Tatbestand})
+  dealing with the topological structure of space-time, and then there
+  are different \qnull{Euclidean} and \qnull{non-Euclidean languages}
+  in which these facts are expressed. \scite{3}{mormann07}{51}
+\end{quotex}
+
+It is now up to us to parse what Mormann means by the intricacies of
+the relationship between topological and geometrical structures of
+manifolds. Carnap's guiding example is the compatibility of a
+hyperbolic (Lobachevskian) and parabolic (Euclidean) metric with the
+same underlying topology, provided by Poincar{\'e} (see
+\scite{8}{poincare52}{74}). A swallow doesn't make a summer, however,
+and so Carnap comes up with another example.
+
+Let us agree on the convention that the Earth's surface has zero
+curvature everywhere. Regard the Earth's surface as infinitely large,
+with the Euclidean geometry of the plane holding everywhere upon it
+(see \scite{8}{carnap22}{69}). Mormann's topological interpretation of
+this claim is (using not Mormann's but Morris Hirsch's naming
+convention in \scite{7}{hirsch76}{}, where $S^{2}$ is the surface of a
+two-dimensional sphere)
+\begin{equation}\label{carmor1}
+  S^{2}\mbox{ can be endowed with a metric }l_{1}\mbox{ with curvature }K=0\tag{C1}
+\end{equation}
+% \eqref{...}
+
+This topology, according to Carnap, does not contradict any geodetic
+measurements or physical observations. He is not quite happy with this
+example, however, because the metric $l_{1}$ must give preference to a
+particular point in $S^{2}$, for example the North Pole. This
+preference does not sit well with our requirement for simplicity.
+Instead of postulating curvature $K=0$ everywhere, we have the choice
+of postulating $K=k$ everywhere, where $k>0$ is the curvature
+corresponding to the curvature of $S^{2}$ given $l_{0}$, the Euclidean
+distance measure we are used to. Now we no longer need a privileged
+point to define a distance measure $l_{2}$ for this topology (also
+extending it from $S^{2}$ to $\mathbb{R}^{3}$), which has a positive
+curvature $k>0$ everywhere:
+\begin{displaymath}
+  l_{2}(A,B)=l_{0}(A,B)(1-{\sin}h)
+\end{displaymath}
+Carnap does not tell us what $h$ precisely refers to except that it is
+the \qnull{height above $E$} ($E$ is the Earth and the spherical
+surface on which $l_{2}=l_{0}$). Whose height? As long as we do not
+know, we can only measure the distance between points that are
+elements of concentric spheres around the centre of $S^{2}$. 
+
+We also need a postulate on how to measure $h$, which Carnap provides
+with the following rule:
+\begin{displaymath}
+  \int_{0}^{h}\frac{1}{1-{\sin}x}dx=a
+\end{displaymath}
+where $a$ is the length of a measuring rod measuring $h$ transferred
+to $S^{2}$. Again, Carnap claims that accepting this topology and
+metric will not put us at odds with any empirical observations or
+measurements. Mormann translates his claim in terms of differential
+topology into
+\begin{align}
+&\mathbb{R}^{3}\mbox{ can be endowed with a metric }l_{2}\notag
+\\
+&\mbox{with constant positive curvature }K=k\label{carmor2}\tag{C2}
+\end{align}
+
+Mormann now provides a proof that, under suitable conditions, both
+\eqref{carmor1} and \eqref{carmor2} are false. Before we evaluate the
+impact that Mormann's proof has on Carnap's conventionalism, a brief
+comment about notation: Mormann is inconsistent, calling
+$\mathbb{R}^{3}$ \qnull{$E^{3}$} and $S^{2}$ \qnull{$E^{2}$}, not to
+mention that neither of them are necessarily Euclidean. Carnap's
+notation using $M_{1},M_{e},M_{s},l,\mbox{ and }l_{0}$ is hopelessly
+confused. Thus the unfortunate introduction of a third notational set
+in this paper.
+
+\kapt{Completeness and the Empiricist Point of View}
+
+One of the favourite pastimes of topologists is homology, which seeks
+for correspondence relationships between topologies and groups that
+are global topological invariants. To be a global topological
+invariant, a property will always be shared by homeomorphic
+topologies. The prime example of a homology relationship is the
+fundamental group shared by homeomorphic Riemannian manifolds. It
+counts the number of loops that a continuous path takes around the
+manifold and divides the paths into equivalence classes. In the case
+of the circle in $\mathbb{R}^{3}$, for example, they correspond to the
+whole numbers $\mathbb{Z}$ (see \scite{8}{hatcher02}{26}).
+
+Another homology relationship is the assignment of the
+Euler-Poincar{\'e} characteristic $\chi(T)$ to a topological space
+$X$. For polyhedra, $\chi(T)$ is know as the number of vertices minus
+the number of edges plus the number of areas (e.g.\ $\chi(T)=2$ for a
+cube). The theorem of Gauss-Bonnet states that for a compact
+two-dimensional Riemannian manifold $M$ without a boundary (such as
+$S^{2}$), the total Gaussian curvature is ($A$ being the area element
+of $M$)
+\begin{displaymath}
+  \iint_{M}KdA=2\pi\chi(M)
+\end{displaymath}
+
+The Euler-Poincar{\'e} characteristic for an orientable compact
+surface homeo\-morphic to a sphere with some handles attached is $2-2g$,
+$g$ being the number of handles. Consequently, $\chi(S^{2})=2$, and 
+\eqref{carmor1} is false.
+
+Now let $M$ be a complete connected Riemannian manifold with curvature
+$K\geq a>0$ (call this last condition (*)). Bonnet's theorem states
+that then $M$ must be compact. Because $\mathbb{R}^{3}$ fulfills all these
+conditions except (*) and is not compact, \eqref{carmor2} is false.
+(Both of these proofs see \scite{8}{mormann04}{820f}.)
+
+Mormann concludes that Carnap's conventionalism in geometry as it is
+justified in \emph{Der Raum} is untenable because \qeins{there are
+  nontrivial relations between the metrical structure and the
+  underlying topological structure of $M$} \scite{2}{mormann04}{821}.
+Topological spaces are not at all like propositional spaces harbouring
+the \qnull{Tatbestand} (factual basis), which then is shipped out in
+different descriptions depending on arbitrary metrical conventions.
+The fact that a topological space can sometimes, as in Poincar{\'e}'s
+case, be compatibly endowed with different metrics points to the
+accidental nature of the example and not a relationship in which the
+topological space is indifferent about the kind of metric we apply to
+it.
+
+What Mormann initially hides in footnotes (footnote 9 and footnote 12)
+and eventually discusses in a section toward the end of his article
+is that his idealized mathematical conditions do not necessarily match
+the pragmatic constraints Carnap assumes to be true for the physicists
+doing the work of finding empirical disconfirmation of physical
+theories with respect to applicable conventions. In \emph{An
+  Introduction to the Philosophy of Science}, for example, Carnap
+tells the story of the ant physicists $P_{1}$ and $P_{2}$, whose
+\qeins{movements are confined to a limited domain on the surface of
+  the sphere} \scite{2}{carnap95}{146}, and asks the question if they
+have any need to quarrel as they give different descriptions of the
+same totality of facts. $P_{1}$ maintains the theory that their world
+is a spherical surface $S^{2}$, whereas $P_{2}$ maintains the theory
+that it is a flat surface $E^{2}$.
+
+Carnap then moves from the statement that \qeins{they cannot in
+  principle decide which theory is correct} \scite{2}{carnap95}{148}
+to Leibniz' declaration that, if there is in principle no way of
+deciding between two statements, we should not say they have different
+meanings. Carnap's claim warrants some head-scratching: is he using
+the phrase \qnull{in principle} in a non-standard way? What if the ant
+physicists (or their cousins, the ant engineers) invented jet
+airplanes? If $P_{1}$ circles the sphere, $P_{2}$'s theory is
+officially falsified. Carnap's \qnull{principle} includes the notion
+of limitation, but how are we supposed to think of a principle of
+limitation from an empiricist perspective? (For a fictional account of
+what very small creatures can find out about very large creatures see
+David Eagleman's story \qeins{Giantess} \scite{2}{eagleman09}{13--16};
+for a real-life account of what very large creatures can find out
+about very small, in fact unobservable, creatures, see the story of
+Jean Perrin, Brownian motion, and molecular physics in
+\scite{7}{salmon84}{}.)
+
+Mormann clearly disagrees with Carnap on the admissibility of
+limitation in empiricist inquiry. This disagreement, somewhat obscure
+in Mormann's article, explains their mathematical disagreement.
+\eqref{carmor1} and \eqref{carmor2} are not false, Carnap just never
+makes clear that he admits limitations and the Riemannian manifolds
+are therefore bounded or not complete (a space $X$ is complete if
+every Cauchy sequence in it converges). Mormann complains that
+completeness is \qeins{indispensable from an empiricist point of view}
+\scite{2}{mormann04}{817}, that incompleteness \qeins{lacks empirical
+  significance} \scite{2}{mormann04}{820}, that \qeins{it would be a
+  desperate move to attempt to rescue Carnap's thesis by allowing him
+  to fall back on incomplete metrics} \scite{2}{mormann04}{821}, and,
+most relevantly, that
+\begin{quotex}
+  for an empiricist it is meaningless to be engaged in investigating
+  the global structure of the world under the presupposition that
+  large areas of that world are principally inaccessible to empirical
+  investigation. \scite{3}{mormann04}{823}
+\end{quotex}
+
+In reply to Mormann, first off we need to note that completeness is
+not the issue for \eqref{carmor1}. Let a plane $F$ go through a point
+on the radius between the centre of the Earth and the North Pole (say
+6000km away from the centre of the Earth) and be parallel to the
+equatorial plane. Then define $T^{2}$, think of it as a punch bowl or
+a spherical decapitated eggshell, as the intersection of
+$\mathbb{R}^{3}$ south of $F$ (including $F$) and $S^{2}$. $T^{2}$
+fulfills the conditions of the Gauss-Bonnet theorem, and there is no
+longer a problem with Carnap's claim that $T^{2}$ can be endowed with
+a metric whose curvature is $0$, as Gauss-Bonnet's theorem for a space
+with a boundary runs like this (see \scite{8}{chavel06}{260}):
+\begin{displaymath}
+  \int_{\partial M}k_{g}ds+\iint_{M}KdA=2\pi-\sum_{j=1}^{m}\alpha(p_{j})
+\end{displaymath}
+where $\partial M$ is the boundary of $M$, $k_{g}$ is the geodesic
+curvature of $\partial M$, and the $\alpha(p_{j})$ are the exterior
+angles of the corners $p_{1},\ldots,p_{m}$ of $\partial M$. 
+
+Foreboding as this formula may look it actually makes good sense. Our
+boundary (the intersection of $F$ and $S^{2}$) has no corners, so we
+can ignore the sum of exterior angles. The concavity of the boundary,
+however, makes up for the convexity of the sphere so that it is
+possible to endow $T^{2}$ with a metric with constant curvature $K=0$.
+You may ask why we did not keep $T^{2}$ open and exclude the boundary,
+which would also provide us with the possibility of a metric with
+constant curvature $K=0$. Such a space would be homeomorphic to
+$\mathbb{R}^2$, very close to what Carnap had in mind, but it lacks
+the completeness we were hoping for. In any case, $T^{2}$ as defined
+is complete and fulfills Carnap's criteria.
+
+Thus, when Mormann says that with incomplete metrics, while
+\qeins{\eqref{carmor2} could be saved, \eqref{carmor1} remains false}
+\scite{2}{mormann04}{821}, it remains false because we do not even
+need to go as far as retreating to incomplete metrics. We can keep
+\eqref{carmor1} by introducing a boundary, or, as Carnap would say, a
+limitation. Carnap takes precisely this line of defence against
+Gr{\"u}nbaum, who has reservations similar to Mormann's in
+\scite{1}{gruenbaum63}{} (although Mormann dismisses Gr{\"u}nbaum's
+argument, \scite{8}{mormann04}{819}). The limitation Carnap introduces,
+however, is just one point: the projection point of the stereographic
+projection. This limitation
+\begin{quotex}
+  has no consequences for any possible observational results, since
+  every observation involves a spatial region with a positive
+  extension, however small, but never a single point.
+  \scite{3}{carnap63}{957}
+\end{quotex}
+
+This approach raises doubts. Reichenbach, for one, disagrees with it
+when he notes that singularities, while admissible in topology, should
+not be admitted in physics (see \scite{8}{reichenbach57}{80}),
+although Carnap rejects this worry (see \scite{8}{carnap63}{958}).
+Mormann's criticism is more to the point: should the empiricist accept
+principled limitations to her inquiry? In Carnap's philosophical
+world, this question is related to Du Bois-Reymond's famous
+\emph{Ignorabimus} speech about the \qnull{Grenzen des Naturerkennens}
+(1872).
+
+Carnap addresses this question in {\S}183 of the \emph{Aufbau}, where
+he pronounces that \qeins{for us there is no \emph{Ignorabimus}}
+\scite{2}{carnap03}{297} because \emph{Ignorabimus} would mean that
+\qeins{there are questions to which it is in principle impossible to
+  find answers.} \qnull{In principle impossible} in the \emph{Aufbau},
+of course, means that the map exhaustively representing the structural
+properties of scientific objects makes the answers to the questions
+indistinguishable (see \scite{8}{carnap03}{27}, {\S}15). It is unclear
+whether pragmatic limitations such as those imposed on ant physicists
+have the required impact on this map. Carnap asserts that in
+connection with structural correlation properties, when we encounter
+competing hypotheses, we can at least \qeins{indicate which empirical
+  data would be required to decide in favor of one hypothesis or
+  another} \scite{2}{carnap03}{37}. It remains unclear, however,
+whether this set of data needs to be associated with an executable
+task on part of the inquirer or not.
+
+\kapt{Conclusion}
+
+Mormann means to show that we do not have to go as far as Quine,
+Ryckman, or Friedman, to reveal the weaknesses of Carnap's
+conventionalism in geometry. A look at the mathematical foundations of
+Carnap's claim identifies serious shortcomings. Consequently,
+conventionalism in geometry is weak evidence for conventionalism in
+general, but conventionalism in general is highly significant in
+Carnap's lifelong philosophical quest for scientific objectivity.
+
+Our claim, contra Mormann, is that it is not so much mathematical
+inconsistency that is at the heart of this problem, but rather a lack
+of clarity to what extent the limitations of the empiricist scientist
+enter into which questions it is in principle possible to answer. Our
+impression, unfortunately not based on a clarification by Carnap
+himself, is that he includes practical limitations in his account of
+the limits of science. To pose a question, Carnap says in {\S}180 of
+the \emph{Aufbau}, \qeins{is to give a statement together with the
+  task of deciding whether this statement or its negation is true}
+\scite{2}{carnap03}{290}. If the task is \qnull{in principle}
+impossible to carry out, which it very well may be (unless \qnull{in
+  principle} means just the opposite of \qnull{in practice}), then it
+remains open whether the question is properly posed.
+
+% \noindent\textbf{Endnotes}
+
+% \theendnotes
+
+% \medskip
+
+% \noindent\textbf{References}
+
+% \nocite{*} 
+\bibliographystyle{stefan-2010-08-28}
+\bibliography{bib-3306}
+
+\end{document}

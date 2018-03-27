@@ -1,0 +1,104 @@
+\begin{thebibliography}{14}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Akaike(2003)]{akaike03}
+H.~Akaike.
+\newblock A new look at the statistical model identification.
+\newblock \emph{Automatic Control, IEEE Transactions on}, 19\penalty0
+  (6):\penalty0 716--723, January 2003.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1100705}.
+
+\bibitem[Bozdogan(2000)]{bozdogan00}
+H.~Bozdogan.
+\newblock Akaike's information criterion and recent developments in information
+  complexity.
+\newblock \emph{Journal of Mathematical Psychology}, 44\penalty0 (1):\penalty0
+  62--91, March 2000.
+\newblock ISSN 00222496.
+\newblock \doi{10.1006/jmps.1999.1277}.
+\newblock URL \url{http://dx.doi.org/10.1006/jmps.1999.1277}.
+
+\bibitem[Chaitin(1974)]{chaitin74}
+G.~Chaitin.
+\newblock Information-theoretic computation complexity.
+\newblock \emph{Information Theory, IEEE Transactions on}, 20\penalty0
+  (1):\penalty0 10--15, 1974.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1055172}.
+
+\bibitem[Clarke and Barron(1990)]{clarkebarron90}
+B.~S. Clarke and A.~R. Barron.
+\newblock Information-theoretic asymptotics of bayes methods.
+\newblock \emph{Information Theory, IEEE Transactions on}, 36\penalty0
+  (3):\penalty0 453--471, 1990.
+\newblock \doi{10.1109/18.54897}.
+\newblock URL \url{http://dx.doi.org/10.1109/18.54897}.
+
+\bibitem[Grunwald(2000)]{grunwald00}
+Peter Grunwald.
+\newblock Model selection based on minimum description length.
+\newblock \emph{Journal of Mathematical Psychology}, 44:\penalty0 133--152,
+  2000.
+
+\bibitem[Guia{\c{s}}u(1977)]{guiasu77}
+S.~Guia{\c{s}}u.
+\newblock \emph{Information Theory with Application}.
+\newblock McGraw-Hill, New York, 1977.
+
+\bibitem[Hj{\o}rland(2007)]{hjorland07}
+Birger Hj{\o}rland.
+\newblock Information: Objective or subjective/situational?
+\newblock \emph{Journal of the American Society for Information Science and
+  Technology}, 58\penalty0 (10):\penalty0 1448--1456, August 2007.
+\newblock ISSN 15322882.
+\newblock \doi{10.1002/asi.20620}.
+\newblock URL \url{http://dx.doi.org/10.1002/asi.20620}.
+
+\bibitem[Ingarden(2006)]{ingarden06}
+R.~S. Ingarden.
+\newblock Information theory and thermodynamics of light part i foundations of
+  information theory.
+\newblock \emph{Fortschritte der Physik}, 12:\penalty0 567--594, 2006.
+
+\bibitem[Ingraden and Urbanik(1962)]{ingardenurbanik62}
+R.~S. Ingraden and K.~Urbanik.
+\newblock Information without probability.
+\newblock \emph{Colloquium Mathematicum}, 9:\penalty0 131--150, 1962.
+
+\bibitem[Kamp{\'e}~de F{\'e}riet and Forte(1967)]{kampe67}
+J.~Kamp{\'e}~de F{\'e}riet and B.~Forte.
+\newblock Information et probabilit{\'e}.
+\newblock \emph{Comptes rendus de l'Acad{\'e}mie des sciences}, A 265:\penalty0
+  110--114, 1967.
+
+\bibitem[Kolmogorov(2003)]{kolmogorov03}
+A.~Kolmogorov.
+\newblock Logical basis for information theory and probability theory.
+\newblock \emph{Information Theory, IEEE Transactions on}, 14\penalty0
+  (5):\penalty0 662--664, January 2003.
+\newblock URL
+  \url{http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1054210}.
+
+\bibitem[Lo{\`e}ve(1955)]{loeve55}
+M.~Lo{\`e}ve.
+\newblock \emph{Probability Theory}.
+\newblock Van Nostrand, Princeton, NJ, 1955.
+
+\bibitem[MacKay(2002)]{mackay02}
+D.~J.~C. MacKay.
+\newblock \emph{Information Theory, Inference, and Learning Algorithms}.
+\newblock Cambridge University, Cambridge, 2002.
+
+\bibitem[Williamson(2000)]{williamson00}
+Timothy Williamson.
+\newblock \emph{Knowledge and its limits}.
+\newblock Oxford University Press, Oxford, 2000.
+\newblock ISBN 9780198250432.
+\newblock URL \url{http://www.worldcat.org/isbn/9780198250432}.
+
+\end{thebibliography}

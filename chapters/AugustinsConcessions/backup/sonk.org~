@@ -1,0 +1,1469 @@
+* To Do for French
+what do you mean by semantics
+
+consider joyce98 and pettigrew13: can you show that with Joyce's
+assumptions (structure, normality, extensionality, dominance, weak
+convexity, and symmetry) or Greaves and Wallace's assumptions
+(separable and proper), sharp credences outperform indeterminate
+credences? maher02 is an interesting objection to joyce98. Consider
+Joyce's idea of supervaluationism joyce98:590. Consult pettigrew13
+more closely on measures of epistemic utility (with references to
+Greaves and Wallace, Hajek, Leitgeb, and Selten, and the Brier Score).
+* French Cuts
+** 1
+see Boole, 1854, chapters 16--21, for alternative methods to the
+ones suggested by Laplace which result in imprecise epistemic
+probabilities).
+** 2
+\texttt{<x1.1>}Sharp credences confront a genuine conceptual
+crisis with intuitions about betting behaviour, completeness for
+preferences, and how reasonable it is to demand precision from
+agents, even if they are rational. Indeterminacy appears to
+provide an elegant solution to overcome this crisis as well as a
+powerful formal theory to uphold what many find so compelling
+about the Bayesian legacy. In the face of these virtues, I
+maintain that indeterminacy adds an unnecessary layer to the
+semantics of partial belief which has in its wake
+counter-intuitive consequences and solves nothing that cannot be
+solved by a carefully articulated version of the classical
+Bayesian commitment to sharp credences.\texttt{</x1.1>}
+
+\texttt{<x1.2>}A sharp credence, as much as the term suggests
+precision and a measure of certainty, is a representation of an
+epistemic state chracterized by uncertainty and lack of
+information. Importantly, it does not represent the evidence which
+informs the epistemic state, and it makes no claim of such a
+representation.\texttt{</x1.2>} 
+** 3
+\texttt{<x2.3>}Despite this disclaimer, we begin with an example that
+motivates instates based on human betting behaviour. It is nonetheless
+forceful. For the Ellsberg paradox (see \scite{8}{ellsberg61}{650ff}),
+you have two urns, both containing 100 red and black balls. Urn I
+contains an unknown ratio of the two colours, whereas the ratio for
+Urn II is 50:50. In experiments, subjects usually prefer to bet on
+Red$_{II}$ rather than Red$_{I}$ and Black$_{II}$ rather than
+Black$_{I}$. If these preferences stem from sharp subjective
+probabilities, then
+
+\begin{equation}
+  \label{eq:s1}
+  1=P(R_{II})+P(B_{II})>P(R_{I})+P(B_{I})=1
+\end{equation}
+
+leads to a violation of probability axioms by reductio. A slight
+variation shows that such preferences also violate L.J. Savage's Sure
+Thing principle, without the possibly doubtful numerical mapping from
+preferences to subjective probabilities (see
+\scite{8}{ellsberg61}{653f}). The intuition behind the Ellsberg
+paradox remains a strong motivation for instates, often expressed in
+terms of biased coins.\texttt{</x2.3>}
+** 4
+\begin{quotex}
+  Precise degrees of belief are the wrong response to the sorts of
+  evidence that we typically receive [{\ldots}] since the data we
+  receive is often incomplete, imprecise or equivocal, the
+  epistemically right response is often to have opinions that are
+  similarly incomplete, imprecise or equivocal.
+  \scite{3}{joyce10}{283}
+\end{quotex}
+** 5
+\texttt{<x2.5>}One motivation for permitting a rational agent to have
+a range of probability measures rather than mandating her to hold a
+single one as her credence is (D) that she would do better making
+decisions and accepting advantageous bets. Even though Booleans seldom
+raise this issue, I find it worth pursuing. Before we do this, it is
+necessary to make brief reference to the variety of versions which
+accommodate indeterminacy as we have sketched it: upper and lower
+probabilities, choquet capacities, belief and possibility functions,
+coherent lower previsions, sets of probability measures, partial
+preference orderings, and sets of desirable gambles (the list is from
+\scite{8}{walley00}{126}). The proliferation of versions is not a
+problem for Booleans, neither in principle because the debate is
+vigorous and useful which of them best captures requirements for
+rationality, nor in practice because the versions agree on large parts
+of the terrain (see \scite{8}{levi85}{390}; and
+\scite{8}{walley91}{50f}).\texttt{</x2.5>}
+
+\texttt{<x2.6 comment="if cut one sentence summary instead">}For our
+purposes, we accept Walley's theory of upper and lower previsions,
+which is motivated by coherence on the one hand and avoidance of sure
+loss on the other hand. Upper and lower previsions have a behavioural
+interpretation as maximum buying prices and minimum selling prices for
+gambles. If the agent's lower prevision is $1/3$ and the upper
+prevision $2/3$, she would accept a bet paying \$1 if $H$ for thirty
+cents and reject such a bet for seventy cents, but if the price of the
+bet is between one and two thirds of a dollar it would be rational for
+her to either accept or reject the bet. Walley conducted an experiment
+with 17 participants, who had various levels of understanding Bayesian
+theory, asking them for upper and lower probabilities entering into
+bets about the games played in the Soccer World Cup 1982 in Spain. One
+of the participants, a \qeins{dogmatic Bayesian lecturer} (see
+\scite{8}{walley91}{633}), only used single sharp subjective
+probabilities, while the others used intervals. The dogmatic Bayesian
+lecturer finished a distant last when the bets were evaluated. Walley
+admits that this result may have been due to the lecturer's eccentric
+assessments (for the game between the Soviet Union and Brazil, for
+example, his distribution between a Win, a Draw, and a Loss was
+10-80-10).\texttt{</x2.6>}
+
+\texttt{<x2.7 comment="if cut one sentence summary instead">}I
+replicated the experiment using two computer players, Betsy and Linda,
+with rudimentary artificial intelligence and made them specify betting
+parameters (previsions) for games played in the Soccer World Cup 2014
+in Brazil. I used the Poisson distribution (which is an excellent
+predictor for the outcome of soccer matches) and the FIFA ranking to
+simulate millions of counterfactual World Cup results and their
+associated bets, using Walley's evaluation method. Betsy, who used
+upper and lower previsions, had a slight but systematic advantage over
+Linda, who used linear previsions. Betsy's expected gain for a whole
+tournament was approximately \$2 (very little compared to the stakes,
+as one can see by considering the standard deviation of approximately
+\$46 for this expected gain, i.e. 67\% of Betsy's overall gain from a
+tournament was between -\$44 and +\$48). The surprising fact that she
+did consistently better than Linda remains in need of explanation. In
+section \ref{WalleysWorldCupWoes}, I will provide an explanation and
+show how it can support rejecting instates for rational agents,
+counter-intuitive as that may sound.\texttt{</x2.7>}
+** 6
+From a collection of arguments against indeterminacy I draw on two
+that sound compelling and that in the final analysis fail. Objection
+(AE) by Adam Elga (see \scite{7}{elga10}{}) charges indeterminacy with
+making a rational agent vulnerable to sure loss and ends in the
+statement: \qeins{Perfectly rational agents always have perfectly
+sharp probabilities} \scite{2}{elga10}{1}.
+
+For Elga, the issue is that while it is rational for an agent with an
+upper and lower provision to reject both an $x$ bet for $H$ (shorthand
+for \qnull{receiving \$1 if $H$ is true for the price of $x$}) and a
+$1-x$ bet against $H$ (or, equivalently, for $T$), if $x$ is between
+the two previsions; it should also be rational to accept both bets if
+they are an $x+\delta$ bet for $H$ and a $1-x+\delta$ bet for $T$,
+where $\delta$ is chosen small enough to keep the prices of the bets
+within the previsions. These bets will lead to a sure loss and an
+arbitrage opportunity for bookies against our supposedly rational
+agent.
+
+There is no reason to reinvent the wheel here: both Chandler and Joyce
+address Elga's objection, and while Chandler's defence of
+indeterminacy against Elga does not persuade me (see
+\scite{8}{chandler14}{10}), Joyce's defence does (see
+\scite{8}{joyce10}{314}). 
+** 7
+\texttt{<x5.2>}Here is a table of the results. Each result is based on
+100,000 die rolls. The second column shows the mean gain for Linda,
+the third column shows the standard deviation, the fourth column shows
+the percentage of bets which are called off. The table is for $y=1$.
+
+\begin{tabular}{|l|r|r|r|}
+  \hline
+  $n=2$ & 0.14 & 18.8 & 25.2 \\ \hline
+  $n=3$ & -1.67 & 13.7 & 39.1 \\ \hline
+  $n=4$ & -1.73 & 10.4 & 48.1 \\ \hline
+  $n=5$ & -1.39 & 8.2 & 54.5 \\ \hline
+  $n=6$ & -1.22 & 6.6 & 59.1 \\ \hline
+  $n=7$ & -1.01 & 5.5 & 62.8 \\ \hline
+\end{tabular}
+
+Here are the results if Betsy is not as generous with her
+indeterminacy, $y=0.3$ (note that fewer bets are called off). The
+second column still shows Linda's mean gain.
+
+\begin{tabular}{|l|r|r|r|}
+  \hline
+  $n=2$ & 5.82 & 28.0 & 0.0 \\ \hline
+  $n=3$ & -0.55 & 21.8 & 0.0 \\ \hline
+  $n=4$ & -2.32 & 17.0 & 0.0 \\ \hline
+  $n=5$ & -2.89 & 13.7 & 0.4 \\ \hline
+  $n=6$ & -2.74 & 11.3 & 1.4 \\ \hline
+  $n=7$ & -2.52 & 9.6 & 3.2 \\ \hline
+\end{tabular}
+
+We should get similar results if we do this analytically instead of
+using computer simulation. I will pursue this further for the final
+version of the paper. The math is not complicated, but unwieldy. The
+following expression yields the expected gain for Linda:
+
+\begin{eqnarray}
+  \label{eq:s3}
+  EX =
+  \frac{p_{x}}{n}\left(\sum_{j=0}^{n-1}\int_{0}^{1}\int_{0}^{x}\int_{0}^{x-y}\sum_{k=0}^{n-1}g(x,y,s,k,j)\,ds\,d\upsilon(y)\,d\xi(x)\right)+
+  \notag \\
+  \frac{p_{y}}{n}\left(\sum_{j=0}^{n-1}\int_{0}^{1}\int_{0}^{1}\int_{0}^{y-s}\sum_{k=0}^{n-1}g(x,y,s,k,j)\,d\xi(x)\,d\upsilon(y)\,ds\right)
+\end{eqnarray}
+
+where $p_{x}$ and $p_{y}$ are the respective probabilities that $X$
+and $Y$ win a bet and $g$ is $X$'s gain given $X$'s credence $x$ and
+$Y$'s credal state $y\pm{}s$ on roll $j$, given result $k$. $\xi(x)$
+and $\upsilon(y)$ are the distributions of the credences given our
+method of simplex point picking (for these distributions, one must use
+the Cayley-Menger Determinant to find out the volume of generalized
+pentatopes involved).\texttt{</x5.2>}
+* To Do
+address Yang Liu's motivation for indeterminate probs
+
+wikipedia Sufficient Statistic
+
+read walley90
+
+difference probabilistic and causal independence
+
+why does inadmissible evidence matter to Joyce?
+
+set function with Shannon's third axiom
+
+look at jeffrey65:12.7 for a theory of chance in terms of subjective
+probabilities (see lewis81:278)
+* Zillner
+The Semantics of Not Knowing
+
+(0) Introduction
+
+write at the end
+
+(1) motivation for imps CC
+
+- Imprecise vs. Indeterminate
+
+- introduce Laplaceanism
+
+- Villainous and Heroic Manifestos CC
+
+- Bartha's Bias, Ellsberg paradox
+
+- Yang Liu, see levi81:533
+
+- the ample bosom of Mother Bayes
+
+(2) problems with imps (dilation)
+
+- Elga's arbitrage opportunity
+
+- imp variants CC this shoudn't be a problem, point to fruitfulness
+and Walley/Joyce for best practice
+
+- White's Dilation Problem CC White's coin game EX Tic-Tac-Toe Bonbons EX
+
+(3) response: villains successful
+
+(4) conceptual problems
+
+- Chance Grounding Thesis CC and the converse principal principle CC
+  Urn of Nature CC
+
+- Double Task of Credences CC
+
+- evidep CC Huisman's job offer EX
+
+- Independence versus Unknown Dependence CC
+
+- permissive view and bets CC
+
+- Updating Imps CC Rinard objection CC
+
+- Semantics of Not Knowing CC
+
+- Sufficient Statistic CC
+
+- Traditional Versus Formal Epistemology CC moss13 Sarah Moss:
+  Epistemology Formalized ZT
+
+- Second order CC Lewis's Summation Formula CC Tashkent dice EX
+
+- aggregating expert opinion CC
+
+- Vagueness CC
+
+- observation evidence information CC
+
+- It may be reasonable to hold X CC
+
+- Wagner's argument CC
+
+- counterexamples to imp CC monkey tossing and hand urn
+
+- are sharp credences informative? CC 
+
+- price/average/measurement/value CC
+
+- signs, not maps
+
+(5) Walley's World Cup Woes
+
+- Walley's World Cup CC
+
+- Cushioning Partial Beliefs
+* Collator
+** Bernoulli Principle
+augustin03:34
+** Chance Grounding Thesis
+here is one way to debunk the CGT---if it were true, updating
+probabilities would always have to proceed by narrowing subsets; it
+wouldn't make sense for an updated probability not to be in the
+original credal state. But then our credal state should always be
+[0,1], lest we commit ourselves to ruling out a probability which is
+not logically ruled out (principle of regularity, see Edwards,
+Lindman, and Savage 1963, hajeksmithson12:40, lewis81 passim,
+especially lewis81:276).
+
+joyce10:289 ``While White portrays CGT as essential to the imprecise
+approach, it merely [sic!] the most extreme of a range of possible
+positions. Indeed, it is too extreme in one respect since sharp
+credences are clearly called for in some situations where chances are
+unknown.''
+
+joyce10:288 ``Rather than being a model of a believer's psychology,
+the credal state is a highly formalized representation of her doxastic
+situation.''
+
+white10:174 ``Chance Grounding Thesis. Only on the basis of known
+chances can one legitimately have sharp credences. Otherwise one's
+spread of credence should cover the range of possible chance
+hypotheses left open by your evidence.''
+
+Frank Knight ellsberg61:643 ``situations when the decision-maker was
+ignorant of the statistical frequencies'' ... Arrow's comment:
+``Knight's uncertainties seem to have surprisingly many of the
+properties of ordinary probabilities, and it is not clear how much is
+gained by the distinction'' 
+
+levi81:540 ``Direct inference derives credal probability from
+knowledge of the chances of possible outcomes occurring on trials of a
+certain kind on a given chance set-up together with information about
+the trial occurring on a specific occasion.''
+** Citations for Misbehaviour
+Here are a few examples in the literature:
+
+\begin{quotex}
+  \textbf{Citation 1 Isaac Levi} Direct inference derives credal
+  probability from knowledge of the chances of possible outcomes
+  occurring on trials of a certain kind on a given chance set-up
+  together with information about the trial occurring on a specific
+  occasion. \scite{3}{levi81}{540}
+\end{quotex}
+
+The semantic confusion of deriving \qeins{credal probability from
+  knowledge of the chances} is aptly described in White's treatment of
+the CGT. In Levi's defence it must be said that he does not share the
+the Bayesian probabilism that I am assuming for the purposes of this
+paper, and that for him traditional knowledge epistemology clearly
+precedes Bayesian partial belief epistemology, and (uncertain) partial
+beliefs are always based on some kind of (certain) knowledge.
+
+\begin{quotex}
+  \textbf{Citation 2: H{\'a}jek and Smithson} If your doctor is your
+  sole source of information about medical matters, and she assigns a
+  credence of $[0.4,0.6]$ to your getting lung cancer, then it would be
+  odd, and arguably irrational, for you to assign this proposition a
+  sharper credence---say, $0.5381$. How would you defend that
+  assignment? You could say `I don't have to defend it---it just
+  happens to be my credence.' But that seems about as unprincipled as
+  looking at your sole source of information about the time, your
+  digital clock, which tells that the time rounded off to the nearest
+  minute is 4:03---and yet believing that the time is in fact 4:03 and
+  36 seconds. Granted, you may just happen to believe that; the point
+  is that you have no business doing so.
+  \scite{3}{hajeksmithson12}{38f}
+\end{quotex}
+
+The proper procedure here would be to have a probability distribution
+over the possible times, say 1/60 for each second between 4:03:00 and
+4:03:59, and then use Lewis's summation formula. Ditto for the
+information from the medical doctor.
+
+\begin{quotex}
+  \textbf{Citation 3: Weisberg} there is nothing irrational about an incomplete state of opinion;
+  suspending judgment is frequently the rational thing to do
+  \scite{3}{weisberg14}{7f}
+\end{quotex}
+
+It is telling how Weisberg is here interpreting sharp credences as
+making a judgment rather than suspending it. The partial belief
+expressed by a sharp credence is just that: suspending judgment. What
+seems less defensible and therefore irrational is to suspend judgment
+twice over and make credences indeterminate instead of drawing
+meaningful semantic distinctions.
+
+\begin{quotex}
+  \textbf{Citation 4: Chandler} This move notably yields a more adequate representation of
+  suspension of judgment, a state of mind that the sharp model has
+  serious difficulties in handling. \scite{3}{chandler14}{2}
+\end{quotex}
+
+We just commented on the suspension of judgment, and Chandler's idea
+of adequate representation is undermined by the work of his
+colleagues in the indeterminacy camp, Augustin and Joyce.
+
+\begin{quotex}
+  \textbf{Citation 5: Augustin} Imprecise probabilities and related
+  concepts {\ldots} provide a powerful language which is able to
+  reflect the partial nature of the knowledge suitably and to express
+  the amount of ambiguity adequately. \scite{3}{augustin03}{34}
+\end{quotex}
+
+Augustin himself details the demise of the idea that indeterminate
+credal states can \qeins{express the amount of ambiguity adequately},
+but if we do not take him at his own word, Joyce's concessions in the
+wake of White's dilation problem undermine it.
+** Convexity
+chandler14:5 with literature (Levi vs. Jeffrey) [Levi requires
+convexity, Jeffrey gives reasons why this is not a good idea]
+
+bradleysteele13:3
+** Double Task of Credences
+walley91:1
+
+I wonder if this could be led ad absurdum: When there is little or no
+relevant evidence, the probability model should be highly imprecise or
+vacuous. More generally, the precision of probability models should
+match the amount of information on which they are based. (Peter
+Walley: Statistical Reasoning with Imprecise Probabilities, 34)
+
+In walley91:396, this is what makes precise Bayesian probabilities
+irrational, although they are coherent. ``Beliefs should be coherent,
+but they should also conform to evidence. Bayesian inferences rarely
+conform to evidence. They require precise prior previsions, whereas
+prior information is rarely adequate to justify precision.''
+
+``For Bayesians, probabilities are precise whether they are based on a
+large sample of observations or on ignorance. In fact, a Bayesian
+prior probability may be unchanged by the observation of many tosses.
+This is the paradox of ideal evidence discussed in 5.3.4.''
+walley91:478
+** Evidep
+Evidep refers to evidence that is mishandled as having epistemological
+import. Best example: Huisman's job offer example.
+** Imp Variants
+levi85:390
+walley00:125
+walley91:7 upper and lower previsions
+walley91:50f list and downplaying their differences
+** Imprecise vs. Indeterminate
+hajeksmithson12:35
+
+levi85:395 ``Here I am supposing, as all these authors have, that
+refusal to make a determinate probability judgment does not derive
+from a lack of clarity about one's credal state. To the contrary, it
+may derive from a very clear and cool judgment that on the basis of
+the available evidence, making a numerically determinate judgment
+would be unwarranted and arbitrary.''
+** Incomplete preference structure
+this is an elicitation problem; this can be solved using vagueness
+and antiluminosity
+
+It hardly seems a requirement of rationality that belief be precise
+(and preferences complete); surely imprecise belief (and
+corresponding incomplete preferences) are at least rationally
+permissible. \scite{3}{bradleysteele13}{2}
+** Independence versus Unknown Dependence
+see walley91:443ff for a good intro to problems surrounding
+independence
+
+see lewis81:284 distinction between probabilistic independence and
+causal independence.
+
+Bradley/Steele fallacy to conclude independence from P(X)P(Y)=P(XY)
+see bradley/steele:8 -- see their own response bradleysteele13:11
+
+example game show
+unknown correlation, dilation plus independence
+joyce10:286f
+
+my marginal comment on walley00:128: maxent says, unless we are
+otherwise informed we must assume independence, for no other reason
+than because we don't know which way the dependence is going. This
+independence only expresses our ignorance and is not a claim that the
+random variables are independent. This is a lot like Bartha's Bias.
+** Laplaceanism
+augustin03:32
+
+My attempt: For any well-defined proposition in the Boolean algebra
+of a propositional space, a sharp credence can be elicited from a
+rational agent. 
+** Lewis's Summation Formula
+either 90% or 95% of Swedes are Protestants (levi85:5400 -- so why
+not use David Lewis summation formula?)
+
+lewis81:266 and lewis81:267
+** Motivation for Imps
+Address Yang Liu's motivation for imps via a representation theorem
+and a partial ordering of preferences.
+
+hajeksmithson12 makes the argument from indeterminate chances to
+indeterminate probabilities (``describing a world that plausibly has
+indeterminate chances'' hajeksmithson12:33)
+
+chandler14:4 two motivations: (i) the sharp model is at odds with a
+trio of plausible propositions regarding agnosticism [von Mises]; (ii)
+[Ellsberg] impose counterintuitive constraints on choice prescriptions
+with respect to simple decision problems involving partial agnosticism
+
+augustin03:34 mediate between the objectivists pessimism (minimax) and
+the subjectivists Ellsberg Paradox
+
+joyce05 ``one important motivation for imprecise probabilism is to
+represent the difference between the weight of evidence and the
+balance of evidence (Joyce, 2005)'' bradleysteele13:2 [why should a
+measure of uncertainty also measure the weight of the evidence -- only
+for the sake of updating, but when you update, the weight of the
+evidence IS evidence ... figure this out more clearly and see
+evidep.org] [see sufficient statistic]
+** Permissive View
+Can a Laplacean have upper and lower previsions in the sense
+of rejecting some bets as being neither good enough nor bad enoough to
+take the opposing bet. Reject the 69c bet even if her sharp
+probability is 72%. The fact that someone is offering her the bet is
+information. If the bet were offered by a computer or someone who
+ostensibly has as little information as she does, the rejection is
+beginnning to sound less reasonable (for example really high bets in
+cases of vacuous probabilities). 
+
+You don't know the bias of a coin. Thus your representor is [0,1] for
+heads. Is it rationally permissible to buy the ticket 
+
+$0 if T $10,000 if H
+
+for $9,999? See white10:172: ``Alternatively we might hold a
+permissive view, according to which no particular credence
+distribution is rationally required; any of some range is a rational
+option. But how wide is this range? How about 1:0? No, it would be
+nutty to be certain that p rather than q on the basis of no relevant
+evidence. (Talk about getting knowledge magically out of ignorance!)
+Would .9: .1 be okay? That's just about as bad for the same reason.
+Smaller divergences from a nice .5: .5 might not be as crazy as being
+highly confident that p rather than q for no reason. But the same
+scruples that prevent us from the more drastic imbalances of opinion
+reveal that ideally we should just split our credence evenly unless
+there is a reason to do otherwise.''
+** Principal Principle and Converse Principal Principle
+for converse see lewis81:289 ``It would be natural to think that the
+Principal Principle tells us nothing at all about chance, but rather
+tells us something about what makes an initial credence function be a
+reasonable one. To be reasonable is to conform to objective chances in
+the way described. Put this strongly, the response is wrong: the
+Principle has consequences, as we noted, that are about chance and
+not at all about its relationship to credence. (They would be
+acceptable, I trust, to a believer in objective single-case chance who
+rejects the very idea of degree of belief.) It tells us more than
+nothing about chance. But perhaps it is divisible into two parts: one
+part that tells us something about chance, another that takes the
+concept of chance for granted and goes on to lay down a criterion of
+reasonableness for initial credence.''
+
+walley91 calls it the principle of direct inference walley91:33
+
+lewis81:266
+
+see Paul's comment in email: ``Re the Principal Principle: you have to
+be excruciatingly careful with this! Alan Hajek tells me that whenever
+he goes to a talk on the Principal Principle, he starts his stopwatch
+to see how long it will be before the principle is mis-stated! I find
+that I still get it wrong. But the main thing is that it makes no
+claim about unconditional credences. It says something like Pr(X /
+ch(X) = p ^ K) = p, provided that your background knowledge K contains
+no inadmissible information (e.g., information logically linked to the
+truth-value of X). I'm going from memory too, so this could be
+incorrect.
+
+In his paper, Lewis actually discusses a type of converse that would
+define chances in terms of credences. He dismisses this strategy, but
+some good philosophers take this to be a serious proposal for defining
+chance. Close to home, you may know that something like this was the
+basis for Richard Johns' PhD dissertation! In fact, what Lewis says is
+that this cannot be an *analysis* of chance, even if there is a true
+equation with ch(X) on the LHS and Pr(X .../ ...) on the RHS. This
+distinction would defeat the simple inference from imprecise credences
+to imprecise chances.''
+** Representation Theorems for Imps
+Seidenfeld et al 1990 elga10:2
+** Rinard Objection
+for Susanna Rinard see white10:184 ``As Susanna Rinard pointed out to
+me, if prior to evidence e my credence in p covers the entire interval
+(0,1], then no matter what evidential bearing e has on p, once I
+conditionalize on e my credence will still cover the range [0,1].
+Maximally mushy credences are immovable! This result is entirely
+unacceptable. To avoid it we must either abandon the rule of updating
+each function by conditionalization, or deny that it is ever
+reasonable for credences to be that mushy. Neither option is appealing
+without forfeiting some of the motivating grounds for the mushy
+credence approach to symmetrical ignorance.'' (barber)
+
+joyce10:291 ``There are two ways for proponents of the imprecise model
+to respond to this result [the Barber Objection]. Purists will say
+that if you really know nothing about the black/white coin's bias,
+then you also really know nothing about how your opinions about B
+should change in light of frequency data. For each 0 < \delta < 1/2
+you have a committee member who feels that your credence for B should
+move exactly \delta probability units toward 1/2 given the data 500
+heads. So, your views about the evidential relevance of this data are
+maximally imprecise, which means that your credence for B should
+remain imprecise as well even after taking the data into account. You
+cannot learn anything in cases of pronounced ignorance simply because
+a prerequisite for learning is to have prior views about how potential
+data should alter your beliefs, but you have no determinate views on
+these matters at all.'' [comment: it's all about knowledge, not about
+ignorance --> this is Williamson's knowledge first approach,
+unacceptable to a probabilist/Bayesian]
+
+imps preclude inductive learning in situations of extreme ignorance
+see joyce10:290
+
+joyce10:291 ``As each `extremist' finds her views tempered by the
+data, an even more radical extremist slides in from the wings to take
+her place. So, while each non-pigheaded committee member becomes more
+convinced that the coin is fair, your credal state as a whole remains
+exactly where it was!''
+
+joyce10:291 ``There are two ways for proponents of the imprecise model
+to respond to this result [the Barber Objection]. Purists will say
+that if you really know nothing about the black/white coin's bias,
+then you also really know nothing about how your opinions about B
+should change in light of frequency data. For each 0 < \delta < 1/2
+you have a committee member who feels that your credence for B should
+move exactly \delta probability units toward 1/2 given the data 500
+heads. So, your views about the evidential relevance of this data are
+maximally imprecise, which means that your credence for B should
+remain imprecise as well even after taking the data into account. You
+cannot learn anything in cases of pronounced ignorance simply because
+a prerequisite for learning is to have prior views about how potential
+data should alter your beliefs, but you have no determinate views on
+these matters at all.''
+
+See, however, joyce10:293 for an example where updating on imps
+results in non-trivial posteriors.
+** Semantics of Not Knowing
+Credence do not reflect chances; they reflect ignorance, uncertainty,
+and information about chances and, more generally, about events. 
+** Sufficient Statistic
+Augustin's P2.
+
+Credence represents ignorance and information, not evidence. It is
+more like an indicator than a map. 
+
+CREDENCE DOES NOT REPRESENT EVIDENCE
+
+joyce10:318 ``directionality of the spread'' in [0,1]
+
+Read carefully Joyce's introduction to joyce05:153, where emphasis is
+on ``probabilities in credal states reflect states of total
+evidence,'' continued by balance, weight, and specificity. This needs
+to be addressed by sharp probabilities.
+
+joyce05:154 ``any adequate epistemology must be capable of accurately
+representing the distinctions between the balance, weight and
+specificity of evidence'' [it is interesting that Joyce would say
+this but in joyce10 admit that imprecise credal states cannot
+represent the ``directionality of the spread'' joyce10:318 without
+being vulnerable to White's Reflection principle violation]
+
+joyce05:158 ``the total evidence in favour of a hypothesis can be
+separated into at least three components---balance, weight, and
+specificity---only one of which is directly reflected in credences.''
+
+augustin03:41 ``The imprecise posterior does no longer contain all
+the relevant information to produce optimal decisions. Inference and
+decision do not coincide any more.''
+
+agreeing with Joyce bradleysteele13:16, who also give a nice example
+of inadequate representation [is there such a thing as a credence
+with the Markov property such that decisions based on the credence
+are always fully informed, just as chess moves are always fully
+informed by a description of the board?]
+** Terminology
+doxastic and bulative (wrt beliefs and desires, chandler14:3
+
+representor (van Fraassen, 1990)
+
+epistemic and aleatory probabilities (Hacking, 1975, see walley91:479)
+** Traditional Versus Formal Epistemology
+consider the relationship between traditional epistemology and formal
+epistemology. TE attempts to give an account of knowledge, whereas FE
+attempts to give a semantics of not knowing. See Shackle's delicious
+``we do not know'' where the frequency is known, ellsberg61:644; see
+traditional vs formal epistemology
+
+Ultimately we must decide whether we want credences to reflect
+traditional epistemology and its semantics of knowing or formal
+epistemology and its semantics of not knowing. FE: inductive
+reasoning, no justification for prior probabilities, no lottery
+paradox, Spohn's dualism, Moss's attempt at integration.
+
+white10:168 ``In such cases we should just apply the Principal
+Principle (Lewis, 1980) and our credence to the known chances. There
+may be other cases in which we have no such knowledge of chances but
+are still tempted to think that an assignment of equal credence is
+called for. We should resist this temptation, which might be based on
+a confusion with cases of the legitimate application of known
+chances.'' [we would indeed have very few useful credences, since
+knowledge is exacting; any possible chance must be a member of the
+credal state---and since dilation is a common phenomenon, the
+underlying conception of knowledge would have to be highly defeasible]
+
+moss13:2 ``several core epistemological notions naturally extend to
+states other than full beliefs''
+
+moss13:27 ``the central claims of this paper: that probabilistic
+knowledge can help us solve several problems, and that it can do so
+without overturning our core intuitions about the nature of
+knowledge'' [Bayesian epistemology would be in trouble because it
+rests on prior probabilities and pseudo-observations which are NOT
+justified]
+** Updating Imps
+grovehalpern98 formalism see bradleysteele13:4
+
+bradleysteele13:6 ``classical rules have the best claims to being
+natural generalizations of standard Bayesian conditioning.''
+** Urn of Nature
+white10:169 ``So it is hard to see how we can be appealing to any kind
+of implicit stochastic information in giving 1/2 credence to it's
+being Monday. Rather it seems just to be matter of our ignorance
+concerning which day it is. You have no reason to suppose that it is
+one day rather than the other. It is hard to see how to defend the 1/2
+answer without appeal to POI.''
+
+white10:171 ``I find it hard to reconcile the common lines of
+statistical reasoning we all engage in with Levi's position. It is a
+little unclear how the appropriate kind of `random selection' is meant
+to work in less contrived cases. I ride a motorcycle and know
+something of the accident statistics for riders in different classes.
+Surely this sort of information should inform my credence in the
+possibility of a crash. (The insurance companies are certainly using
+it!) What would it mean for me to be randomly selected in the relevant
+way? It is not as if I picked someone at random out of the directory
+of motorcyclists and it happened to be me. I started with myself and
+went looking for statistical data that might apply to me. So I have
+trouble seeing how this random selection condition on FC is supposed
+to be applied if it is to do justice to our actual inferential
+practices. 
+
+But in any event, if we really need to do this random sampling then
+there is nothing to stop us doing it. Let's take all the formal
+epistemologists and toss them into a big urn. We will shake it
+vigorously and pick someone out. It happens to be Branden. Are we now
+
+supposed to have 37% credence that he is left-handed? If so then even
+if we don't get Branden the first time, we could just keep randomly
+selecting until we do. While this might be fun, it doesn't seem to be
+necessary.''
+
+rain in Detroit next year on July 4; no urn of nature joyce10:283
+
+augustin03:34
+
+``If your doctor is your sole source of information about medical
+matters, and she assigns a credence of [0.4, 0.6] to your getting lung
+cancer, then it would be odd, and arguably irrational, for you to
+assign this proposition a sharper credence---say, 0.5381. How would
+you defend that assignment? You could say `I don't have to defend
+it---it just happens to be my credence.' But that seems about as
+unprincipled as looking at your sole source of information about the
+time, your digital clock, which tells that the time rounded off to the
+nearest minute is 4:03---and yet believing that the time is in fact
+4:03 and 36 seconds. Granted, you may just happen to believe that; the
+point is that you have no business doing so.'' hajeksmithson12:38f
+[no, the proper procedure here would be to have a probability
+distribution over the possible times, say 1/60 for each second between
+4:03:00 and 4:03:59; in the case of chances, see the doctor case, we
+can then use Lewis's summation formula]
+** Villainous and Heroic Manifestos
+white10:162f ``Let me set aside a common misunderstanding to begin
+with. One often hears: `You can't get probabilities out of ignorance.'
+Let's be clear that POI, as I am understanding it, puts a normative
+constraint on what your credence may be. It entails that in a position
+of ignorance you are not rationally permitted to be more confident of
+one proposition than another. It is not to be confused with a
+principle for determining what the objective probabilities or chances
+are, where these are understood as supervening on the laws and
+physical properties of objects (e.g. that this coin has a 1/2 chance
+of landing heads on the next toss has to do with its shape, mass
+distribution, and manner of tossing; it is not a matter my attitudes
+or evidence [sic!]). Obviously ignorance is no basis for a belief
+concerning contingent physical conditions. But it is not at all out of
+the question that your ignorance puts constraints on what your degrees
+of confidence should be. I hope we agree that if I have no more reason
+to suppose that it will rain than that it won't then I should not be
+absolutely certain that it will rain, or even fairly certain. POI
+takes this idea further by insisting that if I am to be any more
+confident that it will rain than not, I had better have some reason
+for this difference of opinion.''
+
+weisberg14 ``there is nothing irrational about an incomplete state of
+opinion; suspending judgment is frequently the rational thing to do''
+[there is nothing about holding precise probabilities that translates
+into not suspending judgment]
+
+moss13:4 `` the semantic value of a sentence is a set of probability
+measures, and an assertion expresses the advice that your credence
+distribution be among the members of that set'' 
+
+There is something interesting going on here, see ``some attitude
+ascriptions ascribe relations not to propositions, but to constraints
+on probability measures'' moss13:5, where there is a confusion between
+evidence (which comes in the form of a constraint and thus looks like
+an imprecise credal state) and the credal state itself (which is
+sharp). ARe villains mistaking evidence for credence?
+
+levi85:395 ``Here I am supposing, as all these authors have, that
+refusal to make a determinate probability judgment does not derive
+from a lack of clarity about one's credal state. To the contrary, it
+may derive from a very clear and cool judgment that on the basis of
+the available evidence, making a numerically determinate judgment
+would be unwarranted and arbitrary.''
+
+joyce10:283 `` precise degrees of belief are the wrong response to the
+sorts of evidence that we typically receive. As argued in joyce05,
+since the data we receive is often incomplete, imprecise or equivocal,
+the epistemically right response is often to have opinions that are
+similarly incomplete, imprecise or equivocal.''
+
+joyce05:170 ``The real difficulty is not that the Principle of
+Insufficient Reason might be incoherent; it is that the Principle,
+even if it can be made coherent, is defective epistemology. It is
+wrong-headed to try to capture states of ambiguous or incomplete
+evidence using a single credence function. Those who advocate this
+approach play on the intuition that someone who lacks evidence that
+distinguishes among possibilities should not `play favorites,' and
+so should treat the possibilities equally by investing equal cre-
+dence in them. The fallacious step is the last one: equal treatment
+does not require equal credence. When Joshua, who knows nothing about
+the contents of U4, assigns each hypothesis U4=urn(i) an equal
+probability he is pretending to have information he does not possess.
+His evidence is compatible with any distribution of objective
+probability over the hypotheses, so by distributing his credences
+uniformly over them Joshua ignores a vast number of possibilities that
+are consistent with his evidence.'' [we never `pretend to have
+information' by assigning a sharp credence: the summation formula is
+not injective, so no backwards conclusion from a sharp credence to
+evidence is possible; a credence is always held together with
+evidence, not in its stead]
+
+joyce05:170f ``the Principle of Insufficient Reason (even if coherent)
+is bad epistemology because it requires believers to ignore
+possibilities that are consistent with their evidence. As
+sophisticated Bayesians like Isaac Levi (1980), Richard Jeffrey
+(1983), Mark Kaplan (1996), have long recognized, the proper response
+to symmetrically ambiguous or incomplete evidence is not to assign
+probabilities symmetrically, but to refrain from assigning precise
+probabilities at all. Indefiniteness in the evidence is reflected not
+in the values of any single credence function, but in the spread of
+values across the family of all credence functions that the evidence
+does not exclude. This is why modern Bayesians represent credal states
+using sets of credence functions. It is not just that sharp degrees of
+belief are psychologically unrealistic (though they are). Imprecise
+credences have a clear epistemological motivation: they are the proper
+response to unspecific evidence.''
+
+``Bayesians are often accused of being committed to the existence of
+sharp numerical degrees of belief. This is not true. The idea that
+people have sharp degrees of belief is both psychologically
+implausible and epistemologically calamitous. Sophisticated versions
+of Bayesianism, as found in, e.g., (Levi 1980, 85-
+91) and (Kaplan 1996, 27-31), have long recognized that few of our credences
+are anywhere near definite enough to be precisely quantified. A person's beliefs
+at a time t are not best represented by any one credence function, but by a set of
+such functions, what we are calling her credal state.'' joyce05:156
+
+Manifesto of a Hero: ``perfectly rational agents always have
+perfectly sharp probabilities'' elga10:1
+
+Manifesto of another Hero: ``the PME is not an oracle telling which
+prediction must be right; it is a rule for inductive reasoning that
+tells us which predictions are more strongly indicated by our present
+information'' jaynesbretthorst03:370
+
+Peter Walley: ``If there is little evidence concerning [a claim,] then
+beliefs about [that claim] should be indeterminate, and probability
+models imprecise, to reflect the lack of information. We regard this
+as the most important source of imprecision.'' elga10:3
+walley91:212--213
+
+chandler14:2 ``this move notably yields a more adequate representation of
+suspension of judgment, a state of mind that the sharp model has
+serious difficulties in handling'' [compare this to an
+imprecise idea of averages]
+
+augustin03:34 ``Imprecise probabilities and related concepts ...
+provide a powerful language which is able to reflect the partial
+nature of the knowledge suitably and to express the amount of
+ambiguity adequately.''
+
+bradleysteele13:2 ``it hardly seems a requirement of rationality that
+belief be precise (and preferences complete); surely imprecise belief
+(and corresponding incomplete preferences) are at least rationally
+permissible.
+
+Peter Walley: ``If there is little evidence concerning [a claim,] then
+beliefs about [that claim] should be indeterminate, and probability
+models imprecise, to reflect the lack of information. We regard this
+as the most important source of imprecision.'' elga10:3
+walley91:212--213
+
+chandler14:2 ``this move notably yields a more adequate representation of
+suspension of judgment, a state of mind that the sharp model has
+serious difficulties in handling'' [compare this to an
+imprecise idea of averages]
+
+augustin03:34 ``Imprecise probabilities and related concepts ...
+provide a powerful language which is able to reflect the partial
+nature of the knowledge suitably and to express the amount of
+ambiguity adequately.''
+
+bradleysteele13:2 ``it hardly seems a requirement of rationality that
+belief be precise (and preferences complete); surely imprecise belief
+(and corresponding incomplete preferences) are at least rationally
+permissible.
+** White's Dilation Problem
+can you undermine Walley by pointing to dilation in the Three
+Prisoner's problem (Monte Carlo)
+
+dilation may contradict Walley's ``the more information the more
+precision'' principle, e.g. walley91:207; walley91:299 addresses this
+problem
+
+white10:177 ``Having noodled about this puzzle on and off for some
+time, I discovered that the general phenomenon of dilation is old
+news. Some statisticians and philosophers have studied how the
+phenomenon arises in other cases and appear to have taken it in their
+stride. This is not a reductio but a result, they might say. I want
+to suggest that the present case brings out particularly forcefully
+how bizarre this phenomenon is, at least in the present case where we
+are assuming evidential symmetry between p and not-p.''
+
+This is a little like White's Coin Puzzle, but it makes visible
+Joyce's line of defence: Two bags, A and B, Scott and Anderson draw
+from one of them. A and B both have 100 tokens in them. There are 100
+white and 100 lavender tokens. The distribution of the tokens between
+A and B is unknown. Scott knows he is drawing from A. Anderson
+doesn't know which urn he is drawing from. Scott should have mushy
+credence, Anderson sharp.
+
+Reflection bradleysteele13:13
+
+I find White's Dilation Problem very much non-worrying from a
+villain's perspective. It illegitimately confounds ambiguous or
+incomplete evidence with independence. For a similar perspective see
+bradleysteele13:15
+
+see Joyce's response (summary in bradleysteele13:13f)
+* Ideas
+** Cushioned Partial Beliefs
+Can a Laplacean have upper and lower previsions in the sense
+of rejecting some bets as being neither good enough nor bad enoough to
+take the opposing bet. Reject the 69c bet even if her sharp
+probability is 72%. The fact that someone is offering her the bet is
+information. If the bet were offered by a computer or someone who
+ostensibly has as little information as she does, the rejection is
+beginnning to sound less reasonable (for example really high bets in
+cases of vacuous probabilities). 
+
+The Bayesian needs to protect herself against betting with people who
+have more evidence than she does. Arbitrage opportunities for people
+who use decision markets. High speed trading. Cushioned partial
+beliefs respond to information about evidence advantage for an
+opponent offering a bet. Villains can also accommodate cushioning.
+Traditional Bayesians were thinking largely in terms of unintentioned
+nature in their decision theory, while villains have intentioned
+opponents in mind. 
+** Walley's World Cup
+Simulation is not needed for these results, since an
+analytic approach is possible as well (and is, in fact, superior in
+displaying the semantic connections). I am pursuing the analytic
+project elsewhere.
+
+see walley91:632, soccer.pl and vhdice.pl  
+** Second order
+Villains have second order uncertainty, heroes have second order
+probabilities. Both have a problem, for second order suggests third
+order, which suggests an infinite regress. This is Walley's argument
+against precise probabilities. I want to show that heroes' second
+order is of a different kind than first order and therefore not
+vulnerable to infinite regress. The order is not hierarchical.
+
+see ``double task of credences'' in collator and walley91:211, ``the
+central issue here is whether the amount of information concerning an
+event is more slosely related to its degree of uncertainty or its
+degree of imprecision''
+
+walley91:258f assesses Bayesian second order probabilities, e.g.
+walley91:259, ``thus [Lewis's summation formula] the imprecise class M
+is reduced, through the assessment of P2, to the single linear
+prevision P1, and the imprecision is eliminated'' walley91:268
+emphasizes how MAXENT is useful in replacing second-order
+probabilities by reducing and precisifying M without them.
+** aggregating expert opinion
+Villains keep saying that indeterminate probabilities are better
+at representing evidence, i.e. if evidence is ambiguous or incomplete,
+indeterminate probabilities are better at bearing out those facts.
+Here is a counterexample: you have no information whether it will rain
+tomorrow or not except the predictions of two weather forecasters. One
+of them forecasts 0.3 on GPY, the other 0.6 on QCT. You consider the
+QCT forecaster to be significantly more reliable, based on past
+experience. A sharp probability can easily represent this evidence, as
+in P[posterior](R)=0.55, while it is less clear what villains would
+do. This ties into the idea that Laplaceans usually have distributions
+over chances, while villains put chances in sets where they all have
+an equal voice (see also Rinard Objection). Another way to put this is
+to say that Joyce's committee members are considered to have equal
+franchise, whereas the opinion of Laplacean committee members is
+aggregated by weight and summarized by Lewis's summation formula.
+
+See also aggregating expert opinion in walley91:213
+** Vagueness
+**** Crispin Wright and Stewart Shapiro say a competent speaker can
+faultlessly classify the borderline case as a positive instance while
+another competent speaker can faultlessly classify the case as a
+negative instance. (SEP)
+**** vagueness consists in our ignorance of the sharp 
+boundaries of our concepts, and therefore requires no revision of
+standard logic. [the ``epistemic'' view] (Timothy Williamson:
+Vagueness, xi)
+**** The thesis of this book is that vagueness is an epistemic 
+phenomenon. As such, it constitutes no objection to classical logic or
+semantics. In cases of unclarity, statements remain true or false, but
+speakers of the language have no way of knowing which. Higher-order
+vagueness consists in ignorance about ignorance. At first sight, the
+epistemic view of vagueness is incredible. We may think that we cannot
+conceive how a vague statement could be true or false in an unclear
+case. For when we conceive that something is so, we tend to imagine
+finding out that it is so. We are uneasy with a fact on which we
+cannot attain such a first-personal perspective. We have no idea how
+we ever could have found out that the vague statement is true, or that
+it is false, in an unclear case; we are consequently unable to imagine
+finding out that it is true, or that it is false; we fallaciously
+conclude that it is inconceivable that it is true, and inconceivable
+that it is false. Such fallacies of the imagination must be laid aside
+before the epistemic view can be adequately assessed. [you can
+substitute worries about precision for credences here] (Timothy
+Williamson: Vagueness, 3)
+**** The epistemic view is that ignorance is the real essence of the
+phenomenon ostensively identified as vagueness. (Timothy Williamson:
+Vagueness, 202)
+**** A common complaint against the epistemic view of vagueness 
+is that it severs a necessary connection between meaning and use.
+Words mean what they do because we use them as we do; to postulate a
+fact of the matter in borderline cases is (it is charged) to suppose,
+incoherently, that the meanings of our words draw lines where our use
+of them does not. The point is perhaps better put at the level of
+complete speech acts, in terms of sentences rather than single words.
+If the meaning of a declarative sentence may provisionally be
+identified with its truth-conditions, and its use with our
+dispositions to assent to and dissent from it in varying
+circumstances, then the complaint is that the epistemic view of
+vagueness sets truthconditions floating unacceptably free of our
+dispositions to assent and dissent. (Timothy Williamson: Vagueness,
+205) [this could also be an objection to precise probabilities] ...
+thin things do not form a natural kind. The thought is that, if nature
+does not draw a line for us, then a line is drawn only if we draw it
+ourselves, by our use. So (it is held) there is no line, for our use
+leaves not a line but a smear. (Timothy Williamson: Vagueness, 206)
+** observation evidence information
+The lack of precision in practice is a matter of describing the
+evidence precisely, which is impossible and requires a lot of
+interpretation. Once evidence is formally articulated, precise
+probabilities follow mechanically (see evidence -> interpretation ->
+updating in prospectus).
+
+In textual criticism, it is not the easiest reading that is
+considered to be most likely to be authentic, but the reading the
+best explains the other readings. Similarly for the dispute between
+sharp and mushy credences, mushy credences may sound attractive,
+especially with a view to how well the psychology of belief and mushy
+credences go together, and how difficult the psychology of belief and
+sharp credences are to reconcile (the same is true for TW's epistemic
+view of vagueness).
+** It may be reasonable to hold X or
+to hold Y when it is not reasonable to hold both X and Y. It is 
+the reasonableness of holding X and Y concurrently that is
+controversial, not the reasonableness of holding Y (without holding X)
+when it is reasonable to hold X.
+** Wagner's argument: maxent implies sharp credences
+even if you distrust maxent on independent grounds, its inconsistency
+with villainy is a strike against villainy, for maxent, despite all
+its problems, is a trenchant observer of what's evidence and what's
+uncertainty.
+
+If you advocate maxent you must 
+accept determinate probabilities, otherwise Wagner happens;
+furthermore, it would be a challenge to define Shannon information as
+a set function.
+** counterexamples to imp
+Jaynes' monkey tossing example, see Schmierbuch:1247
+
+The Hand Paradox: You have a bag with a white and a lavender token.
+You draw a token. What is the probability that it is white? Obviously
+1/2. But the villains must disagree. Presumably, you put your hand in
+the bag and withdraw the hand from the bag without seeing the token
+in your hand right away. Now what is the probability that the token
+in your hand is white? It is either 0 or 1. Your hand acts like an
+intermediary urn, and your credence in W should be {0,1}, not 1/2.
+** are sharp credences informative?
+Imprecision in probabilities is needed to reflect the amount of
+information on which they are based. (Peter Walley: Statistical
+Reasoning with Imprecise Probabilities, 3)
+
+I wonder if this could be led ad absurdum: When there is little or no
+relevant evidence, the probability model should be highly imprecise or
+vacuous. More generally, the precision of probability models should
+match the amount of information on which they are based. (Peter
+Walley: Statistical Reasoning with Imprecise Probabilities, 34)
+
+information measure for imprecise probabilities: walley91:222
+
+The question is, what is more informative: a precise or an imprecise
+probability distribution? I will show that imprecise probability
+distributions are more informative than precise probability
+distributions and thus reflect the uncertainty in the evidence less
+well. [more Schmierbuch 1242f]
+
+see joyce10:311 for Joyce's confounding of probabilistic belief as
+informative ``precise belief''
+
+imps make the problem of scarce/ambiguous evidence
+worse, not better. Consider a man who worries that he is not
+attractive to women because he is bald. Offering him a toupet makes
+his problem worse, not better, for there is only one thing that women
+find less appealing than bald men: bald men with toupets.
+
+The intuition is that the ambiguity/scarcity of the evidence is
+disproportional to the power of discrimination inherent to sharp
+probabilities. My contention is that it is precisely the sharpness of
+the probabilities which properly represents the uncertainty. Compare
+set function and information idea
+http://math.stackexchange.com/questions/843150/continuous-non-additive-set-function
+
+see joyce05:170 for a statement that equates sharpness with more
+information
+
+of joyce10:284 ``Even if one grants that the uniform density is the
+least informative sharp credence function consistent with your
+evidence in Black/Grey Coins, it is still very informative. Adopting
+it amounts to pretending that you have lots and lots of information
+that you simply don't have. For example, fU commits you to thinking
+that in a hundred independent tosses of the black/grey coin the
+chances of black coming up fewer than 17 times is exactly 17/101, just
+a smidgen (= 1/606) more probable than rolling an ace with fair die.
+Do you really think that your evidence justifies such a specific
+probability assignment?'' [no, what Joyce shows here is that sharpies
+are committed to subjective probabilities over chances, from which
+credences follow via Lewis's summation formula]
+
+joyce10:285 `` the evidence you have about the coin's bias (viz.,
+nada!) is insufficient to justify such a specific inductive policy. Of
+course, any sharp credence function will have similar problems.
+Precise credences, whether the result of purely subjective judgments
+or `objective' rules like POI, always commit a believer to extremely
+definite beliefs about repeated events and very specific inductive
+policies, even when the evidence comes nowhere close to warranting
+such beliefs and policies.''
+
+Adding imprecision does not make the agent more uncertain (Joyce's
+expression ``at sea'') but, on the contrary, more informed (more
+informed than they should be).
+** price
+antiluminosity also about value, vague concepts
+
+de Finetti is Walley with the additional requirement that lower and
+upper prevision must meet for a linear prevision, see walley91:242, as
+a ``fair price'' for a gamble (I guess you could also say that Walley
+has the additional requirement that a bettor may reject a gamble both
+ways; walley91:252 defends this requirement)
+
+buyer/seller || bettor/bookie
+
+difference worth/price
+
+when does it make sense to say, ``the price of a litre of milk is
+between $1.10 and $1.75''?
+
+the claim of sharpness: to say P[X](T)=0.58237 means X rejects
+$58.238 for a T ticket but accepts $41.762 for a non-T ticket; and
+rejects a $41.764 non-T ticket but accepts a $58.236 T ticket ... see
+Williamson on vagueness, cf. hajeksmithson12:36 (see also joyce10:284)
+** average
+compare imps to imprecise averages ``the average height of Regent
+College students is between 162 and 168 centimetres''
+** measurement
+Mathias Pert: the Bavarian king was a man who seemed to be between 45
+and 47 years of age. Pert was wrong if he was 48.
+
+walley91:249 talks about the difference in imprecision for
+probabilities and Euclidean geometry/Newtonian mechanics
+
+levi85:407 ``The idea that probability judgments may be imprecise is
+scarcely novel. Both strict Bayesians and their critics can agree
+about this. Even if magnitudes have precise values, measurement aimed
+at determining these values is always liable to imprecisions of
+various sorts.'' [but probabilities do NOT measure a magnitude, they
+SIGNIFY ignorance]
+** title
+Semantics of Not Knowing
+** signs, not maps
+unless we leave the meadows of analytic philosophy for the jungle of
+continental semiotics, the letters H, O, U, S, and E add nothing to
+what a house is (a rose by any other name would smell as sweet).
+Similarly, rational credences signify ignorance and knowledge, but do
+not add to it. They are signs, not maps; they signify, and do not
+represent.
+* Zitate
+** walley
+upper and lower +probabilities, choquet capacities, belief and
+possibility functions, coherent lower previsions, sets of probability
+measures, partial +preference orderings, and sets of desirable gambles
+** walley91 Peter Walley: Statistical Reasoning with Imprecise Probabilities
+**** Reasoning begins with the recognition 
+of ignorance and uncertainty. In practical reasoning, whether it is
+aimed at drawing inferences or making decisions, we need to give
+appropriate weight both to our uncertainty, about facts or events or
+consequences of our actions, and to the indeterminacy that arises from
+our ignorance about these matters. To measure the uncertainty, we need
+some kind of probability. To measure the indeterminacy, we need
+imprecise probabilities. (Peter Walley: Statistical Reasoning with
+Imprecise Probabilities, 1)
+**** Imprecision in probabilities is needed to reflect the 
+amount of information on which they are based. (Peter Walley:
+Statistical Reasoning with Imprecise Probabilities, 3)
+**** We will present the theory in terms of lower and upper
+previsions, quantities which have a behavioural interpretation as
+maximum buying prices and minimum selling prices for gambles, rather
+than in terms of ideal probabilities whose existence and meaning are
+problematical. The theory is based on principles of coherence that can
+be justified through the behavioural interpretation and do not rely on
+the dogma of ideal precision. (Peter Walley: Statistical Reasoning
+with Imprecise Probabilities, 7)
+**** When there is little or no
+relevant evidence, the probability model should be highly imprecise or
+vacuous. More generally, the precision of probability models should
+match the amount of information on which they are based. (Peter
+Walley: Statistical Reasoning with Imprecise Probabilities, 34)
+** moss13 Sarah Moss: Epistemology Formalized
+**** the semantic value of a sentence is a set of 
+probability measures, and an assertion expresses the advice that your
+credence distribution be among the members of that set. [with
+examples] (Sarah Moss: Epistemology Formalized, 4)
+**** It is notoriously difficult to defend general procedures for directly
+updating cre- dences on constraints. [footnote: For further
+discussion, see Diaconis and Zabell 1982 , Jaynes 1978 , Skyrms 1987 ,
+Joyce 1999 , and Grünwald and Halpern 2003 .] (Sarah Moss:
+Epistemology Formalized, 7)
+**** the Lockean project of analyzing belief in terms of sufficient 
+credence (Sarah Moss: Epistemology Formalized, 19)
+** levi81 Isaac Levi: Direct Inference and Confirmational Conditionalization
+**** The early Carap and other strict Bayesians think that credal states
+for ideally rational agents ought to be representable by single
+conditional probability measures relative to the appropriate corpora
+of knowledge. (Isaac Levi: Direct Inference and Confirmational
+Conditionalization, 533)
+**** My view of confirmational commitments deviates from the 
+Jeffrey-Carnap approach in still one other respect. Like Keynes,
+Koopman, Ky- burg, Good and Smith, I avoid assuming that a credal
+state B is repre- sentable by a unique probability function.
+Probability judgment may go indeterminate. Indeed, it may go so
+indeterminate as to preclude a weak ordering of propositions with
+respect to probability (Isaac Levi: Direct Inference and
+Confirmational Conditionalization, 533)
+**** direct inference derives credal probability from knowledge of the
+chances of possible outcomes occurring on trials of a certain kind on
+a given chance set-up together with information about the trial
+occurring on a specific occasion. (Isaac Levi: Direct Inference and
+Confirmational Conditionalization, 540)
+** levi85 Isaac Levi: Imprecision and Indeterminacy in Probability Judgment
+**** Some who deny that states of probability 
+judgment ("credal states" as I shall call them) are numerically
+definite have sought to represent them in terms of a relation of
+comparative probability. Others use functions assigning upper and
+lower probabilities (or, alternatively, interval-valued probabilities)
+to hypotheses. Still others represent credal states by means of sets
+of probability functions defined for the relevant algebras of
+propositions or events. (Isaac Levi: Imprecision and Indeterminacy in
+Probability Judgment, 390)
+**** The set of distributions represents a set of 
+rival hy- potheses about the unknown contents of the black box. (Isaac
+Levi: Imprecision and Indeterminacy in Probability Judgment, 391)
+**** rational agents often do not and should not regard exactly one
+real-valued probability function to be permissible for use in
+assessing expected utilities. The credal state should be repre- sented
+by a set of permissible probability functions. (Isaac Levi:
+Imprecision and Indeterminacy in Probability Judgment, 392)
+**** a set of probability functions can be used to characterize the credal
+state as a set of permissible probability distributions and not as a
+set of possibly true hypotheses concerning the unknown uniquely
+permissible distribution. (Isaac Levi: Imprecision and Indeterminacy
+in Probability Judgment, 392)
+**** distinction between black box construals of sets of distributions and
+permissibility construals (Isaac Levi: Imprecision and Indeterminacy
+in Probability Judgment, 392)
+**** the ample bosom of Mother Bayes
+(Isaac Levi: Imprecision and Indeterminacy in Probability
+Judgment, 392)
+**** Here I am supposing, as all these authors have, that refusal 
+to make a deter- minate probability judgment does not derive from a
+lack of clarity about one's credal state. To the contrary, it may
+derive from a very clear and cool judgment that on the basis of the
+available evidence, making a nu- merically determinate judgment would
+be unwarranted and arbitrary. (Isaac Levi: Imprecision and
+Indeterminacy in Probability Judgment, 396)
+**** Both strict Bayesians and their critics can agree 
+about this. Even if magnitudes have precise values, measurement aimed
+at determining these values is always liable to imprecisions of var-
+ious sorts. [but probs do NOT measure a magnitude, they represent
+uncertainty] (Isaac Levi: Imprecision and Indeterminacy in Probability
+Judgment, 407)
+* Cut Passages
+% If a rational agent perceives an evidence differential and lends some
+% belief to the proposition that the bet is offered by someone who has
+% more evidence about the outcome of an event than she does, then it is
+% likely that the rational agent will update her sharp credence, as she
+% would do if she were informed of another source of expert opinion. She
+% will certainly not be willing to enter a bet based on her outdated
+% sharp credence.
+
+% (White has some fun with the urn of nature idea and
+% its involvement in the CGT in
+% \scite{8}{white10}{171}, featuring a big urn with all
+% formal epistemologists in it, which is vigorously
+% shaken and Branden Fitelson picked out.)
+
+% (the scenario can be tweaked, of course, to make the
+% indeterminate credal state $\{\delta,1/2,1-\delta\}$
+% for very small $\delta$).
+
+% \begin{quotex}
+%   The semantic value of a sentence is a set of
+%   probability measures, and an assertion expresses
+%   the advice that your credence distribution be among
+%   the members of that set. \scite{3}{moss13}{4}
+% \end{quotex}
+
+% \begin{quotex}
+%   It hardly seems a requirement of rationality that
+%   belief be precise (and preferences complete);
+%   surely imprecise belief (and corresponding
+%   incomplete preferences) are at least rationally
+%   permissible. \scite{3}{bradleysteele13}{2}
+% \end{quotex}
+
+% On the opposite side of the fence are the following:
+
+% \begin{quotex}
+%   The principle of maximum entropy is not an oracle
+%   telling which prediction must be right; it is a
+%   rule for inductive reasoning that tells us which
+%   predictions are more strongly indicated by our
+%   present information''
+%   \scite{3}{jaynesbretthorst03}{370}
+% \end{quotex}
+
+% \begin{quotex}
+%   Obviously ignorance is no basis for a belief
+%   concerning contingent physical conditions. But it
+%   is not at all out of the question that your
+%   ignorance puts constraints on what your degrees of
+%   confidence should be. \scite{3}{white10}{163}
+% \end{quotex}
+
+% I thank Yang Liu and Christopher French for bringing
+% (B) to my attention.
+* Examples
+** Bartha's Bias
+biased coin, but we don't know which way white10:163
+
+Isn't P(H)=.5 misleading? Joyce and I agree that P(H)=x isn't the
+whole story (sufficient statistics). For Joyce, to respond to White's
+Dilation Problem, C(H)=[a,b] and C(H)=[a,b] can represent different
+credal states. For me, C(H)=.5 in Bartha's Bias says nothing about
+chances. Not all prior information is contained in C, e.g. that the
+coin is not fair.
+** Ellsberg paradox
+levi85:393f
+
+ellsberg61:650, violating the Sure-Thing Principle, see ellsberg61:654
+
+one failed explanation of the Ellsberg paradox: 
+
+draw two white (win) or lavender (lose) tokens from a bag with
+replacement. You have the choice of (A) a bag with a lavender and a
+white token or (B) a bag with an unknown composition of lavender and
+white tokens (numbering 2 in total). Losing hurts you more than
+winning (loss aversion), say a lavender token is worth the equivalent
+of -$3 and a white token the equivalent of +$2. Given that you are
+loss averse, would you rather draw from (A) or (B)? The odds of
+drawing LL, WL, or WW are quite different for (A) and (B) (2:4:2 for
+(A), 3:2:3 for (B)).
+
+more promising: the victim of the paradox ``distorts his best
+estimates of likelihood in the direction of increased emphasis on the
+less favourable outcomes'' ellsberg61:667
+** Elga's arbitrage opportunity
+elga10
+
+see chandler14:10 failed attempt to criticize Elga
+
+joyce10:314
+** Hand Urn
+\begin{quotex}
+  \textbf{Example 2 The Hand Urn} You draw by hand from an urn with
+  100 balls, 50 red balls and 50 black balls.
+\end{quotex}
+
+When your hand retreats from the urn, does it not contain either a red
+ball or a black ball and so serve itself as an urn, from which in a
+sense you draw a ball? Your hand contains one ball, either red or
+black, and the indeterminate credal state that it is one or the other
+should be $[0,1]$. This contradicts our intuition that our credence
+should be a sharp $0.5$. 
+** Huisman's job offer
+example for evidep
+** Tashkent dice
+lewis81:285 ``To the subjectivist who believes in objective chance,
+particular or general propositions about chances are nothing special.
+We believe them to varying degrees. As new evidence arrives, our
+credence in them should wax and wane in accordance with Bayesian
+confirmation theory. It is reasonable to believe such a proposition,
+like any other, to the degree given by a reasonable initial credence
+function conditionalized on one's present total evidence.''
+
+``the PME is not an oracle telling which prediction must be right; it
+is a rule for inductive reasoning that tells us which predictions are
+more strongly indicated by our present information''
+jaynesbretthorst03:370
+
+Laplaceanism here faces the challenge of Lewis's ``underlying
+metaphysical issue'' (lewis81:290) because it operates on the basis
+of both chance and credence, but what is the prinicipled difference?
+
+See my comment on Lewis's Summation Formula, lewis81:267, ``what
+villains should be attacking is Lewis's metaphysics of chance, for if
+you grant us chance we take the game'' -- how unpleasant the
+alternatives are (Hume or not), see the very end of Lewis's article
+(lewis81:292), either uniqueness of rational priors conditional on
+all facts or features of the world that are not supervenient on
+particular facts.
+
+Lewis ends up saying, ``chance is credence conditional on the truth''
+lewis81:278 (see also lewis81:291), but he recognizes the metaphysical
+minefield (lewis81:290f). See also jeffrey65:12.7.
+
+lewis81:264 ``Given two kinds of probability, credence and chance, we
+can have hybrid probabilities of probabilities. (Not `second order
+probabilities,' which suggests one kind of probability self-applied.)
+{\ldots} To the believer in chance, chance is a proper subject to have
+beliefs about. Propositions about chance will enjoy various degrees of
+belief, and other propositions will be believed to various degrees
+conditionally upon them.''
+
+schmierbuch:1237
+
+One problem with imps is that they cannot be meaningfully calibrated
+without a regress problem. Because imps confuse uncertainty with
+information, they cannot have a preference among the credences in
+their credal state. Joyce resolves this by having a ``directionality
+of the spread'' joyce10:318 which is not represented in the credal
+state.
+** White's coin game
+bradleysteele13:13f
+joyce10:287
+joyce10:296ff
+see also many coins variant joyce10:304 and joyce10:306
+** Tic-Tac-Toe Bonbons
+joyce10:307
+see also variant crime and punishment joyce10:309
+* Buffer

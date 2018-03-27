@@ -1,0 +1,31 @@
+[b]1. The problem statement, all variables and given/known data[/b]
+
+According to the de Moivre Laplace theorem
+
+[tex]\binom{n}{k}p^{k}q^{n-k}\approx\frac{1}{\sqrt{2\pi{}npq}}e^{-\frac{(k-np)^{2}}{2npq}}[/tex]
+
+For p=q=1/2 this translates nicely into an approximation for the binomial distribution by the normal distribution (the +1/2 is a continuity correction):
+
+[tex]\binom{n}{k}\approx{}2^{n}N(\frac{n}{2},\frac{n}{4})(k)[/tex]
+
+and therefore
+
+[tex]\mbox{(A)}\quad \sum_{k=0}^{m}\binom{n}{k}\approx{}2^{n}\int_{-\infty}^{m+\frac{1}{2}}N(\frac{n}{2},\frac{n}{4})(x)dx[/tex]
+
+This appears to be correct. I am trying to solve a problem for which I need
+
+[tex]\sum_{k=0}^{m}k\binom{n}{k}[/tex]
+
+and I am wondering what would keep me from reasoning in analogy to (A) so that 
+
+[tex]\mbox{(B)}\quad \sum_{k=0}^{m}k\binom{n}{k}\approx{}2^{n}\int_{-\infty}^{m+\frac{1}{2}}xN(\frac{n}{2},\frac{n}{4})(x)dx[/tex]
+
+Unfortunately, when I use (B) I get some very counter-intuitive results (too complicated to expand on them here).
+
+[b]2. Relevant equations[/b]
+
+see above
+
+[b]3. The attempt at a solution[/b]
+
+see above

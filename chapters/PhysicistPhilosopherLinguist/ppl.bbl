@@ -1,0 +1,121 @@
+\begin{thebibliography}{20}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+
+\bibitem[{Bertsekas(1982)}]{bertsekas82}
+Bertsekas, Dimitri.
+\newblock \emph{Constrained Optimization and Lagrange Multiplier Methods}.
+\newblock Boston, MA: Academic, 1982.
+
+\bibitem[{Caticha and Giffin(2006)}]{catichagiffin06}
+Caticha, Ariel, and Adom Giffin.
+\newblock \enquote{Updating Probabilities.}
+\newblock In \emph{MaxEnt 2006, the 26th International Workshop on Bayesian
+  Inference and Maximum Entropy Methods}. 2006.
+
+\bibitem[{Dempster(1967)}]{dempster67}
+Dempster, Arthur.
+\newblock \enquote{Upper and Lower Probabilities Induced by a Multivalued
+  Mapping.}
+\newblock \emph{The Annals of Mathematical Statistics} 38, ~2: (1967) 325--339.
+
+\bibitem[{Edwards et~al.(1963)Edwards, Lindman, and Savage}]{edwardsetal63}
+Edwards, Ward, Harold Lindman, and Leonard~J. Savage.
+\newblock \enquote{Bayesian Statistical Inference for Psychological Research.}
+\newblock \emph{Psychological Review} 70, ~3: (1963) 193.
+
+\bibitem[{Elga(2010)}]{elga10}
+Elga, Adam.
+\newblock \enquote{Subjective Probabilities Should Be Sharp.}
+\newblock \emph{Philosophers' Imprints} 10, ~5: (2010) 1--11.
+
+\bibitem[{Ellsberg(1961)}]{ellsberg61}
+Ellsberg, Daniel.
+\newblock \enquote{Risk, Ambiguity, and the Savage Axioms.}
+\newblock \emph{The Quarterly Journal of Economics} 75, ~4: (1961) 643--669.
+
+\bibitem[{Friedman and Shimony(1971)}]{friedmanshimony71}
+Friedman, Kenneth, and Abner Shimony.
+\newblock \enquote{Jaynes's Maximum Entropy Prescription and Probability
+  Theory.}
+\newblock \emph{Journal of Statistical Physics} 3, ~4: (1971) 381--384.
+
+\bibitem[{Gr{\"u}nwald and Halpern(2003)}]{gruenwaldhalpern03}
+Gr{\"u}nwald, P., and J.Y. Halpern.
+\newblock \enquote{Updating Probabilities.}
+\newblock \emph{Journal of Artificial Intelligence Research} 19: (2003)
+  243--278.
+
+\bibitem[{Joyce(2010)}]{joyce10}
+Joyce, James.
+\newblock \enquote{A Defense of Imprecise Credences in Inference and Decision
+  Making.}
+\newblock \emph{Philosophical Perspectives} 24, ~1: (2010) 281--323.
+
+\bibitem[{Levi(1985)}]{levi85}
+Levi, Isaac.
+\newblock \enquote{Imprecision and Indeterminacy in Probability Judgment.}
+\newblock \emph{Philosophy of Science} 52, ~3: (1985) 390--409.
+
+\bibitem[{Lukits(2014)}]{lukits14}
+Lukits, Stefan.
+\newblock \enquote{The Principle of Maximum Entropy and a Problem in
+  Probability Kinematics.}
+\newblock \emph{Synthese} 191, ~7: (2014) 1409--1431.
+
+\bibitem[{Lukits(2015)}]{lukits15}
+\rule[.6ex]{3em}{.05ex}.
+\newblock \enquote{Maximum Entropy and Probability Kinematics Constrained by
+  Conditionals.}
+\newblock \emph{Entropy} Special Issue "Maximum Entropy Applied to Inductive
+  Logic and Reasoning": (2015) forthcoming.
+
+\bibitem[{Majern{\'\i}k(2000)}]{majernik00}
+Majern{\'\i}k, Vladim{\'\i}r.
+\newblock \enquote{Marginal Probability Distribution Determined by the Maximum
+  Entropy Method.}
+\newblock \emph{Reports on Mathematical Physics} 45, ~2: (2000) 171--181.
+
+\bibitem[{Seidenfeld(1979)}]{seidenfeld79}
+Seidenfeld, Teddy.
+\newblock \enquote{Why I Am Not an Objective Bayesian; Some Reflections
+  Prompted by Rosenkrantz.}
+\newblock \emph{Theory and Decision} 11, ~4: (1979) 413--440.
+
+\bibitem[{Shore and Johnson(1980)}]{shorejohnson80}
+Shore, J., and R.W. Johnson.
+\newblock \enquote{Axiomatic Derivation of the Principle of Maximum Entropy and
+  the Principle of Minimum Cross-Entropy.}
+\newblock \emph{IEEE Transactions on Information Theory} 26, ~1: (1980) 26--37.
+
+\bibitem[{Spohn(2012)}]{spohn12}
+Spohn, Wolfgang.
+\newblock \emph{The Laws of Belief: Ranking Theory and Its Philosophical
+  Applications}.
+\newblock Oxford University, 2012.
+
+\bibitem[{Wagner(1992)}]{wagner92}
+Wagner, Carl~G.
+\newblock \enquote{Generalized Probability Kinematics.}
+\newblock \emph{Erkenntnis} 36, ~2: (1992) 245--257.
+
+\bibitem[{Walley(1991)}]{walley91}
+Walley, Peter.
+\newblock \emph{Statistical Reasoning with Imprecise Probabilities}.
+\newblock Chapman and Hall London, 1991.
+
+\bibitem[{White(2010)}]{white10}
+White, Roger.
+\newblock \enquote{Evidential Symmetry and Mushy Credence.}
+\newblock In \emph{Oxford Studies in Epistemology}, edited by Tamar Gendler,
+  and John Hawthorne, New York, NY: Oxford University, 2010, 161--186.
+
+\bibitem[{Zabell(2005)}]{zabell05}
+Zabell, Sandy.
+\newblock \emph{Symmetry and Its Discontents: Essays on the History of
+  Inductive Probability}.
+\newblock Cambridge University, 2005.
+
+\end{thebibliography}

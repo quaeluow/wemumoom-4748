@@ -1,0 +1,1195 @@
+* current
+** quotes
+*** NEW Efron contrasted this Bayesian 
+theory, which ``requires a great deal of thought about the given
+situation to apply sensibly.'' (Little, 2006, 217)
+*** NEW Jaynes' quotes on full employment
+*** Gr"unwald and Halpern: Updating Probabilities
+**** There exist some very simple setting in which 
+MRE essentially never gives the right results. (Gr"unwald and Halpern:
+Updating Probabilities, 243)
+**** Example 1.3 provides some motivation for working in 
+the smaller, more naive space. Examples 1.1 and 1.2 show that this is
+not always appropriate. Thus, an obvious question is when it is
+appropriate. (Gr"unwald and Halpern: Updating Probabilities, 245)
+**** There are situations where applying MRE leads to 
+paradoxical, highly counter-intuitive results (Gr"unwald and Halpern:
+Updating Probabilities, 245)
+**** Seidenfeld (1986), strengthening results of 
+Friedman and Shimony (1971), show that there is <i>no</i>
+sophisticated space in which conditioning will give the same answer as
+MRE in this case. (See also (Dawid, 2001), for similar results along
+these lines.) (Gr"unwald and Halpern: Updating Probabilities, 246)
+**** Working with the naive space, while an attractive 
+approach, is likely to give highly misleading answers. That is the
+main message of this paper. (Gr"unwald and Halpern: Updating
+Probabilities, 246)
+**** We show that Jeffrey conditioning in the naive space 
+gives the appropriate answers iff a generalized CAR condition holds.
+We then show that, typically, applying MRE in the naive space does not
+give the appropriate answer. (Gr"unwald and Halpern: Updating
+Probabilities, 246)
+**** While in these cases the sophisticated space is still 
+relatively simple, this is no longer the case for the Judy Benjamin
+puzzle. (Gr"unwald and Halpern: Updating Probabilities, 247)
+**** In some cases of interest, CAR is (roughly speaking) guaranteed 
+<i>not</i> to hold except in ``degenerate'' situations
+. (Gr"unwald and
+Halpern: Updating Probabilities, 251)
+**** Seidenfeld shows that, under very weak conditions, MRE cannot 
+coincide with sophisticated conditioning if the observations have the
+form ``the conditional probability of $U$ given $V$ is $\alpha$'' (as
+is the case in the Judy Benjamin problem). (Gr"unwald and Halpern:
+Updating Probabilities, 263)
+**** [Useful summary in table form]
+(Gr"unwald and Halpern: Updating Probabilities, 264)
+**** We show that the CAR framework can be used as a general 
+tool to clarify many of the well-known paradoxes of conditional
+probability; ... no CAR-like condition can hold in general for cases
+where only MRE (and not Jeffrey) updating can be applied ... MRE
+updating is not always so bad (Gr"unwald and Halpern: Updating
+Probabilities, 264)
+*** Recall that Bayes assumed a condition of complete 
+ignorance regarding the unknown event. If we ignore the potential
+ambiguities in this notion, the point is that such a condition will be
+realized only in never-never-land Bayesianism, where an agent begins
+as a tabula rasa, chooses her priors, and forever after changes her
+probabilities only by conditionalization. A more realistic Bayesianism
+would recognize the local and episodic character of problem solving.
+In Bayesian terms, we use different probability functions for
+different problem-solving contexts, and within a context we may change
+probabilities not by conditionalization but by some more radical
+means. Thus, far from being a tabula rasa, the typical scientist comes
+burdened with a wealth of information in trying to make what the
+Bayesian would describe as decisions about prior probabilities. E.T.
+Jaynes's modern version of the principle of indifference tries to take
+into account some of this information, since it enjoins us to maximize
+a quantity he calls ``entropy'' subject to known constraints that can
+be expressed in terms of moments of the probability distribution. But
+only a small part of information can be expressed in these terms.
+(1992__John_Earman__Bayes_or_Bust, 139f)
+*** The copy principle (Hume)
+Information. Numbers. Is information, and subsequently numbers, a
+consequence of our excessive success in copying, or the origin? Names
+are more like numbers than they are like words. They falsify
+Nietzsche's claim in Truth and Lies that nothing is really identical
+or the same, that all identity is fiction.
+** ideas
+*** Do we know our credences? 
+A Bayesian would say that credences are all that matters in
+epistemology. A traditional epistemologist applies knowledge claims to
+propositions (and possibly other things, such as skills---maybe
+credences are an other thing). The question is then whether credences
+are propositions. If yes, they are known (if true). How can a credence
+be true? By being rational? By matching objective chance? For (i)
+their subjective probability is 1 (show by using calibration)---they
+are similar to evidence in this respect, the probability of evidence
+also has to be 1. (ii) They can be acted upon and asserted (see
+hawthorne). Do consistency requirements replace the truth condition
+for knowledge and credences? Although it sounds more like they replace
+the justification requirement. Hawthorne claims that evidential
+probability is not luminous (p12). There are then things whose
+probability is 1 and yet we do not know them, although we know that
+their probability is 1. But E=K. Also, whether is certain of something
+and whether it has probability 1 comes apart. This may be an argument
+that credences are not propositions. This affects Judy Benjamin. If
+credences are not propositions then Halpern is right: HDQ must be
+propositionalized. See Klein (1981, in Fantl and MacGrath) who claims
+that the non-probabilistic character of beliefs allows them to give
+you knowledge (see Fantl and MacGrath, p190). 
+*** the powerset approach is a naive partition 
+of tspace a la Halpern
+
+Our is vaguely related to Jaynes' use of the Wallis
+deri justify \textsc{maxent} in \scite{8}{jaynes98}{351ff}.
+*** we are trying to naturalize epistemological normativity
+analogous to the naturalization of semantics by using a causal or
+information based approach -- the full employment theorem does not
+naturalize epistemological normativity. Interpretivism (Donaldson,
+Dennett) is analogous to the full employment theorem.
+*** the powerset approach is just one of Halpern's naive spaces
+albeit quite sophisticated
+*** lottery
+scenario I: information is about Y's decreased odds
+(* (/ 1 (+ 999 (/ 1 1000.0))) (/ 1 1000.0))
+1.0009999989990002e-06
+(* (/ 1 (+ 999 (/ 1 1000.0))))
+0.001000999998999
+
+
+scenario II: information is about X and Y's odds, but independent of Z's odds
+(/ 2 1001.0)
+0.001998001998001998
+
+(/ 1 1999.0)
+0.0005002501250625312
+
+
+beta = minus \lambda_{1} = (/ (log 1000.0) -1001)
+0.006900854424557579
+
+\lambda_{0} = (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998))))
+-5.906762718201527
+
+P(\alpha_{0}) = (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1 (/ (log 1000.0) 1001)))
+0.0010079246503368348
+
+P(\alpha_{1}) = (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1 (* -1000 (/ (log 1000.0) 1001))))
+1.007924650336835e-06
+
+P(\alpha_{n}) for n=2..999 = (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1))
+0.0010009930535320765
+
+(+ (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1 (/ (log 1000.0) 1001))) (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1 (* -1000 (/ (log 1000.0) 1001)))) (* 998 (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1))))
+0.9999999999999994
+
+(/ (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1 (/ (log 1000.0) 1001))) (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1 (* -1000 (/ (log 1000.0) 1001)))))
+999.9999999999999
+
+(/ (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp
+(* 1000 (/ (log 1000.0) -1001))) 998)))) -1 (/ (log 1000.0) 1001))) (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1)))
+1.006924720186918
+
+(/ (- (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1 (/ (log 1000.0) 1001))) .001) (/ (- (exp (+ (+ 1 (* -1 (log (+ (exp (* -1 (/ (log 1000.0) -1001))) (exp (* 1000 (/ (log 1000.0) -1001))) 998)))) -1)) .001) 998))
+7964.123565044741
+
+(/ (- 0.0010079246503368348 .001) (- 0.0010009930535320765 .001))
+7.980083732509759
+
+
+
+A lottery with 1000 tickets, your ticket is #0, my ticket is #1. We
+receive reliable information that your ticket is a thousand times more
+likely to win than my ticket. Originally, the chance to win was 1
+promille. Now it is, according to Jaynes,
+
+P(\alpha_{0})=1.007925 promille
+P(\alpha_{1})=0.001008 promille
+P(\alpha_{n})=1.000993 promille
+
+Here is what's interesting: call A1's promille P -- who gets P? A1 loses almost all of it, only gets 1/1000 of it. But A0 doesn't get much of it either, only 8/1000. The remaining 991/1000 are distributed among A2 to A999. In fact, despite the promising announcement ``You are 1000 times more likely to win than your neighbour'' your odds compared to another neighbour have improved only by 0.69 percent. If you had received (almost) all of P (a Douven Romeijn scenario), your chances would be almost double that of anybody else. As it is, A0 only gets 8 times more than the other neighbours off of P.
+*** lottery texted
+Consider a 1000 ticket lottery to demonstrate the role of epistemic
+entrenchment. There will be one winner. You receive the information
+that ticket holder X's ticket is 1000 times more likely to win than
+ticket holder Y's ticket. You consider this information completely
+reliable, but you have no idea what the reasons behind it are. The
+reasons may have nothing to do with X's increased odds, but only with
+Y's decreased odds. Y's original 1/10th percent chance to win should
+be evenly distributed amongst all others (leaving enough for Y to have
+1/1000th of the chance to win as everybody else, including X).
+Alternatively, X may have claim to all the spoils coming from Y's
+1/10th percent: then everybody will stay at odds of 1/10th of a
+percent except X, who will have almost 2/10ths, and Y, who will have
+1/1000th of that. \textsc{maxent} sides largely with the first
+scenario, approximately handing Y 1/1000th of the original 1/10th
+percent that was Y's, X 8/1000th of Y's original 1/10th percent, and
+everybody else 991/1000th of Y's original 1/10th percent. X gains
+little compared to everyone else. This example lends support to Douven
+and Romeijn's argument: \textsc{maxent} appears to commit itself to
+something that is better left in the hands of an epistemic
+entrenchment. On the other hand, however, maxent does give X eight
+times more of the pie than everyone else.}
+*** for Donat Berghuber, who 
+taught me .975 of this stuff.
+*** probability kinematics and ethics
+Probability kinematics resembles ethics in the sense that there are
+all kinds of things we are able to say about the relations between our
+intuitions and the prescriptions or rules we propose. We never cease
+to be vulnerable, however, to the question why the states of affairs
+we describe should entail that we have one set of probability
+assignments and updating strategies and not another. That an
+observation or a piece of evidence should change our assessment of
+uncertainty with respect to relevant propositions and events in
+particular ways cannot be a matter of logical consistency. Even a
+Dutch Book argument rests on assumptions that are entangled with the
+relations and intuitions we are supposed to explain. Our task in this
+paper, then, is to show what were to flow from certain assumptions
+being made and certain intuitions being accepted, and to articulate
+them clearly and well so that we understand where they are reasonable,
+arbitrary, or subject to criticism. In all this, we never lose a sense
+of need for what ethicists in Rawl's tradition call a reflective
+equilibrium, as it is not the intuitions about particular cases alone,
+nor the general judgments they sometimes inspire, that carry away the
+prize, but rather a balance between them. The principle of maximum
+entropy is a poster child for this method: it is a principle with
+great generality and scope, arguably outperforming all others, but it
+also raises worries in particular cases. There is beauty in the fact
+that, as sweeping as the principle is, it cannot accommodate
+everything we think and feel about how conditionalization (another
+term for probability update) should proceed. This paper cautions,
+however, against undue enthusiasm about the full employment theorem,
+the view that ultimately all rules and methods of conditionalization
+are tools in the hand of a human inquirer, expressing that which one
+to use must always be based on the intuitive and creative labour of
+the user. Probability kinematics is not a sit-down dinner: various
+approaches mingle, easily shift positions, and have access to the
+buffet table from different angles. There is no throne even for the
+view that, when all is said and done, a special place remains for the
+art of human inquiry.
+*** ranking functions
+Hi Stefan,
+
+Lots to say here.
+
+'Tis true -- the relationship between ranking functions and information. One could say, I suppose, that if it takes n bits of information to make you believe P then the rank of P is n. In a lottery with 1024 tickets it would take 10 bits to identify the winner, so \rho(P_{i})=10, if P_{i} designates that the i-th ticket wins. You would have to change the disjunction rule to
+
+(*) \rho{A\cup B}=-log_{2}(2^{-I(A)}+2^{-I(B)}) for disjoint A and B
+
+-- a formula that has little to recommend it in terms of elegance, but it takes care of the lottery paradox: if A_{i} is a disjoint cover of \Omega then
+
+\rho(\Omega)=-log_{2}(\sum_{i}2^{-I(A_{i})})=0
+
+A rigorous proof of this looks like an interesting challenge. I am only assuming this because it works for probabilities of the (1/k)^{m} type, thus by ``mathematical analogy''
+
+OK -- part of the problem here is interpreting what claims about rank mean. According to the official rank theorists (Spohn, Huber): rank 0 is not "believes", but "does not disbelieve". So, rank 10 means disbelief that is 10 steps away from "does not disbelieve". But the entrenchment interpretation does not always seem to fit with this view about rank 0.
+
+Your rule will violate the basic axioms of ranking theory: since \rho(A \cup ~A) = 0 = min(\rho(A), \rho(~A)), we must have at least one of \rho(A)=0 or \rho(~A)=0.
+
+[beginning of rabbit trail] besides the examples you provided I was trying to think of cases of analogies in mathematics and couldn't come up with anything interesting, but then I read in my book on topology that I am reading for the Carnap seminar:
+
+``This [a claim about manifolds] is a sensible claim because if v were a vector in \mathbold{R}^{m} then to express v as a linear combination of the standard basis vector, to find the approximate coefficients we would take the scalar product of v with the standard basis vectors. To verify this claim we must show that ...'' (David Gauld, Differential Topology, page 98)
+
+In topology this analogy from n-dimensional Euclidean spaces to manifolds is quite common (and mathematically productive, as nobody can picture general manifolds very well, but we do OK with Euclidean spaces). Topology is to a large degree the discipline that provides theorems delineating when the analogies are valid and when they are not. [end of rabbit trail]
+
+An m-manifold is locally like R^m, for sure. I guess there is an analogical argument here in support of a conjecture about manifolds involving scalar products -- that's pretty cool, since it is being put forward exactly the way I say things run: first the analogy (and with no big fuss about the degree of strength of the analogical argument), and then the need to follow up with a proof. In my chapter on analogies in mathematics, I have a section on "asymptotic analogies" -- those involving limits.
+
+As soon as ranking functions are defined by information as outlined above, they could immediately be reduced to probabilities (to the degree to which probabilities and information hang together) ... not what the Baconian modal approach has in mind, I suppose, unless one could find a modal approach to information as well that makes it less of a one-to-one reflection of the corresponding probabilities. Now, I would be VERY interested in how that might work. Perhaps, instead of defining information by the corresponding probabilities, one could define information by ranking functions, as in I(A)=\rho(A), where we know how A ranks (in terms of plausibility), but not what quantifiable probability it has. Unfortunately, with the disjunction rule (*) \rho(A) would reduce to the Bayesian probability calculus (violating our Baconian intuitions), and without (*) (for example, your suggested disjunction rule) information wouldn't do anything for us that we didn't already know about ranking functions -- for example that they don't deal very well with the lottery paradox, or, I suppose, with anything that quantifies nicely probabilistically. Modal plausibilities and Bayesian probabilities appear to live in different kingdoms, not unlike my IT-1 (information theory intimately connected with probability theory) and IT-2 (information theory as it relates to data compression).
+
+Stefan
+
+Good -- I am wrestling with this too. I thought the idea of "modal information" or "Baconian information" might be interesting to you -- an approach that doesn't mesh with probability, but is independently worthwhile. Spohn thinks that rank is exactly this (though I have not seen him make the connection with information, the 'entrenchment semantics' seems to me to do just that).
+
+Ranks don't mesh with probabilities, unless you use the infinitesimal semantics. The theme of the talk was that there really are these two different notions. Yet I refuse to let things stand at that -- there has to be some link. At present, the best I can do is an informal link, interpreting ranks as orders-of-magnitude of probability...
+
+Paul
+*** kickstart
+We want to (a) know things and (b) come to know things. According to
+Bayesian epistemology, knowing things corresponds to being able to
+partition epistemic space and evaluating it quantitatively.
+This evaluation happens on the basis of evidence, or more basic, on
+the basis of information. Use the example of physics:
+http://www.philosophynow.org/issue82/Hawking_contra_Philosophy. Debate
+about multiverses. 
+*** information, and only information, can 
+be copied. <2011-02-25 Fri>
+** roadmap
+*** read Giffin and Caticha's work
+*** read MaxEnt conference proceedings
+*** think about information and Carnap
+*** read information textbook (Raymond Yeung)
+*** read 1953__Bar_Hillel_Carnap__Semantic_Information.pdf
+*** find out whats been written on Information and Philosophy in the last five years
+** external comments
+*** CPA reviewers
+Reviewer #1: The author offers a new analysis of the Judy Benjamin
+problem initially discussed by van Fraassen. The author demonstrates
+that the probabilistic structure of the example is underdetermined by
+the information provided in the philosophical literature. Following
+this assessment the author challenges a widely held intuition about
+the example. I find the author’s discussion of the Judy Benjamin
+example very illuminating and therefore suggest accepting the paper
+for the conference. I think the paper is suitable for any session on
+the philosophy of probability and/or formal epistemology.
+
+Reviewer #2: When a problem provokes conflicting appeals to intuition,
+this is usually a sign that an ambiguous question has been asked, and
+that various respondents are, implicitly, disambiguating it in
+different ways. There is no determinate answer because, despite
+appearances, no determinate question has been asked, and the ground
+has been prepared for endless discussions as long as nobody points out
+that no clear question has been asked.
+
+The Judy Benjamin case seems a paradigm example of this. What Judy’s
+credences should be depends on what sort of situation we’re imagining
+her to be in. Why should anyone thing there's a unique correct answer
+to the problem?
+
+(Paul Bartha: It seems to me that reviewer #2 is a bit hasty. You
+acknowledge the point (about different descriptions compatible with
+the information given to Judy) early in your paper. Still, when it
+comes time to publish this paper, it's useful to have taken this type
+of reaction into account -- perhaps there is somewhere in the first
+couple of sections where you can make clear that you do have a
+'well-posed problem'.)
+*** Paul Bartha
+Hi Stefan,
+
+I think the paper is great!  You might want to submit it for the
+upcoming PSA (= Philosophy of Science Association) meeting.  Papers are
+due March 1.
+
+A couple of suggestions.
+
+1)  When you state the intuitions T1 and T2, you should elaborate on
+each to give a non-technical appreciation.  So for T2 you could say:
+given ~A_1, conditionalization would imply q_3 = 2/3.  The intuition is
+that we should approach this value as we increase P(~A_1 / A_1 v A_2).
+
+2)  Also:  these intuitions, and the discussion of Judy Benjamin, are
+already on page 7!  Is there any way you can foreshadow with an informal
+insertion of one paragraph in the Introduction, probably between your
+current second and third paragraph?  Something like this:
+
+"One argument has it that this information, which makes no mention of
+Blue territory, does not change the probability that Judy is in Blue
+territory.  There is, however, a rival argument.  Suppose the commanders
+were to tell Judy that if she is in Red territory, then she is in Red
+HQ.  This is the same as simply finding out that she is not in Red 2C,
+and ordinary conditionalization tells us that Judy's new probability of
+being in Blue territory should be 2/3.  Now ... [etc.]"
+
+3)  Perhaps you can give a label to these two intuitions?
+
+I will get to your other questions later, but I just wanted to send an
+initial encouraging note.
+
+Paul
+*** Jan-Willem Romeijn
+Dear Stefan,
+
+Thanks again for sending me your paper which I read with a lot of
+pleasure.
+
+I do have a few things to say about it:
+
+The parallel you draw to the Carnapian continuum is not quite
+correct: his is really not about inference rules. In fact Carnap's
+logics are best understood as relying on conditionalisation; see
+my paper in the Handbook for the Philosophy of Statistics. You
+might argue that Carnap is also worried about epistemic
+entrenchments, in which case you'd have to say more about the
+parallel than you do now.
+
+Igor Douven and I should perhaps have been less emphatic about the
+intuitions that drive people's answers to the Judy puzzle. We are
+not exactly wedded to the idea that P(Blue) is invariant. Our
+point is rather that, whatever your intuitions on that, those
+intuitions can be slotted into Jeffrey's rule. In other words, our
+arguments do not really hinge on MaxEnt bringing out the wrong
+intuition in Judy.
+
+As I guess you realise, showing that the result of MaxEnt is
+backed by another method does not yet show that MaxEnt is our best
+candidate for a universal inference rule. (I would, for example,
+not claim that it is "arguably outperforming all others".)
+
+I had not seen the powerset approach before and I think it has its
+own appeal. But of course there are issues with representing or
+portraying MaxEnt as, or at least paralleling it with
+conditionalisation, mostly to do with non-conglomerability. I also
+urge you to look at Halpern and Grunwald's paper on CAR.
+
+Quite apart from that, as you will be aware, the powerset approach
+hinges on assuming a particular probability over the sets C that
+realise the constraint. You should spend much more time motivating
+this assumption, because it drives your result on E[X]. (There is
+some irony in the fact that, to defend MaxEnt, you rely on a
+method that seems to presuppose a uniform probability over the
+C's.)
+
+I hope these comments are of help to you and I wish you the best
+of luck with the paper!
+
+Kind regards,
+
+Jan-Willem
+* before february 2012
+** Zillner map
+Introduction
+Probability Update
+The Judy Benjamin Problem
+Two Intuitions
+Skepticism about maxent
+The Full Employment Theorem
+Probability Kinematics and Ethics
+
+The Judy Benjamin Problem and Its Solutions
+Outlining the Problem (diagram already in judy.pdf)
+T1 and T2
+Jaynes (already done in inep-before-fredericton.tex)
+Grove and Halpern
+Fraassen, Hughes, and Harman 
+FHH's five requirements and three strategies
+
+Independence and the Judy Benjamin Problem
+Scenarios
+Diagrams for unif,maxent, mud, and mtp (see plotq-i1 and plotq-i2)
+The Powerset Approach
+
+Conclusion
+Information processing deficiencies of other approaches, Seidenfeld's Calibration Fallacy
+To be done: generalize the powerset approach
+Address Shimony's, Uffink's, and Seidenfeld's concerns
+Address van Fraassen's MUD
+the monopoly argument 
+** quotes
+*** Colin Howson and Allan Franklin
+**** [soundness and completeness theorem 
+for the probability calculus] (Colin Howson and Allan Franklin,
+Bayesian Conditionalization and Probability Kinematics, 451)
+**** [Jeffrey's innovation: evidence doesn't come to us in the form of
+propositions of whose truth we are certain] Jeffrey inaugurated the
+study of general probability kinematics (Colin Howson and Allan
+Franklin, Bayesian Conditionalization and Probability Kinematics, 453)
+**** limitation on Jeffrey's rule: it cannot be 
+used to define a posterior probability P' when the E(i) are not
+exclusive (Colin Howson and Allan Franklin, Bayesian
+Conditionalization and Probability Kinematics, 454)
+**** Csiszar states that if any convex set C of constraints is 
+closed in the variational distance and some member of C has finite
+information relative to P, then there is a unique P' such that P'
+minimizes I(P',P). [affine constraints] (Colin Howson and Allan
+Franklin, Bayesian Conditionalization and Probability Kinematics, 456)
+**** This gloss (the function P' minimizing I(P',P) is as like 
+P as it is possible to be given the constraints imposed by the data)
+should be treated with great caution. (Colin Howson and Allan
+Franklin, Bayesian Conditionalization and Probability Kinematics, 456)
+**** The requirement that the posterior distribution should be that 
+which is in some sense or other the closest, subject to the stated
+constraints, to the prior, is not only an extralogical constraint, but
+it is also, in our view, one which it is very difficult if not
+impossible to defend as a rationality constraint either. (Colin Howson
+and Allan Franklin, Bayesian Conditionalization and Probability
+Kinematics, 457)
+**** [critique of diachronic or dynamic Dutch Book arguments, based 
+on Hacking, see also Jon Williamson, Objective Bayesianism, Bayesian
+Conditionalisation and Voluntarism, 14] (Colin Howson and Allan
+Franklin, Bayesian Conditionalization and Probability Kinematics, 458)
+**** Bayesian conditionalization suffices to deal with most if not 
+all of the methodologically important cases of adjusting beliefs, even
+where uncertain evidence is involved. (Colin Howson and Allan
+Franklin, Bayesian Conditionalization and Probability Kinematics, 461)
+**** There are several things wrong with [Hobson's example, where 
+probabilities are calculated with an expectation constraint and the
+PME] the X(i) are not likely to be independent with respect to the
+probability distribution P', for P' is by assumption an inductive
+probability [see Seidenfeld's example in Jon Williamson, Objective
+Bayesianism, Bayesian Conditionalisation and Voluntarism, 10f] (Colin
+Howson and Allan Franklin, Bayesian Conditionalization and Probability
+Kinematics, 464)
+**** not to use the rule of Bayesian conditionalization, but some 
+other rule, like the principle of minimum information with a uniform
+prior and constraints in the form of expectation values, actually
+entails inconsistency, i.e. incoherence. (Colin Howson and Allan
+Franklin, Bayesian Conditionalization and Probability Kinematics, 465)
+*** Igor Douven and Jan-Willem Romeijn
+**** we argue that Jeffrey's rule can solve the 
+Judy Benjamin problem after all {\ldots} we extend the set of distance
+functions to ones that take into account the varying degrees to which
+propositions may be epistemically entrenched (Igor Douven and
+Jan-Willem Romeijn, A New Resolution of the Judy Benjamin Problem, 1)
+**** [indicative conditional]
+(Igor Douven and Jan-Willem Romeijn, A New Resolution of the Judy
+Benjamin Problem, 2)
+**** how one could beg any questions simply by registering one's 
+intuitive verdict that (1) contains no information relevant to whether
+Judy is in Red rather than in Blue territory {\ldots}(Igor Douven and
+Jan-Willem Romeijn, A New Resolution of the Judy Benjamin Problem, 4)
+**** How is one to update on an indicative conditional 
+{\ldots} is there a defensible update rule that agrees with how Judy
+should respond to learning (3)? {\ldots} semantics of conditionals
+[used to undermine T2 on page 8] (Igor Douven and Jan-Willem Romeijn,
+A New Resolution of the Judy Benjamin Problem, 5)
+**** [Sarah's example: if it rains tomorrow, we cannot have 
+sundowners at the Westcliff. My comment: Sarah of course knows that
+rain is independent of sundowners, there is no such certainty in the
+JB case.] (Igor Douven and Jan-Willem Romeijn, A New Resolution of the
+Judy Benjamin Problem, 7)
+**** intuitively, the learning of a conditional is or would be irrelevant 
+to one's degree of belief for the conditional's antecedent {\ldots}
+the learning of the relevant conditional should intuitively leave the
+probability of the antecedent unaltered (Igor Douven and Jan-Willem
+Romeijn, A New Resolution of the Judy Benjamin Problem, 9)
+**** [Bradley's Adams conditioning]
+(Igor Douven and Jan-Willem Romeijn, A New Resolution of the Judy
+Benjamin Problem, 9f)
+**** {\ldots} really just a Jeffrey update. To be more 
+exact, it is a Jeffrey update on the partition
+\{urcorner{}A,A\wedge{}B_{1},{\ldots},A\wedge{}B_{n}\}, with
+constraints Pr_{1}(\urcorner{}A)=Pr_{0}(\urcorner{}A) and {\ldots} in
+the case of Judy only part of that assignment is given. But this
+objection overlooks the fact that the context of the Judy Benjamin
+case provides us with the additional probabilistic information
+{\ldots} a clear separation between probabilities that derive from
+explicit information and those that derive from context does not seem
+feasible (Igor Douven and Jan-Willem Romeijn, A New Resolution of the
+Judy Benjamin Problem, 11)
+**** Adams conditioning, or, equivalently, Jeffrey conditioning with the 
+explicit constraint of keeping the antecedent's probability fixed in
+the update, or, again equivalently, IRE minimization, covers most of
+the cases of learning a conditional. Unfortunately, however, it would
+be wrong to think that it covers all of them, as Example 2 (jeweller,
+Kate and Henry) already shows. (Igor Douven and Jan-Willem Romeijn, A
+New Resolution of the Judy Benjamin Problem, 12)
+**** where Sarah held onto her probability for the antecedent, Kate
+wants to leave the probability of the consequent unaffected {\ldots}
+bring to the table the epistemic entrenchments of the propositions
+under scrutiny [my comment: translates into finding a Jeffrey
+partition] (Igor Douven and Jan-Willem Romeijn, A New Resolution of
+the Judy Benjamin Problem, 13)
+**** [epistemic entrenchments and 
+Hellinger distance function] allows us to regulate whether, and to
+what extent, learning a conditional reflects back on the probability
+fo the antecedent or rather influences the probability of the
+consequent (Igor Douven and Jan-Willem Romeijn, A New Resolution of
+the Judy Benjamin Problem, 14)
+**** As Bradley stresses, even Bayes' rule ``should not be thought of 
+as a universal and mechanical rule of updating, but as a technique to
+be applied in the right circumstances, as a tool in what Jeffrey terms
+\qnull{the art of judgment}.'' In the same way, determining and
+adapting the weights EE supposes, or deciding when Adams conditioning
+applies, may be an art, or a skill, rather than a matter of
+calculation or derivation from more fundamental epistemic principles.
+((Igor Douven and Jan-Willem Romeijn, A New Resolution of the Judy
+Benjamin Problem, 16)
+*** Jon Williamson
+**** the difference between the two forms of updating [Bayes, maxent] 
+reflects negatively on Bayesian conditionalization rather than on
+objective Bayesian updating. (Jon Williamson, Objective Bayesianism,
+Bayesian Conditionalisation and Voluntarism, 1)
+**** [Probability, Calibration, Equivocation]
+(Jon Williamson, Objective Bayesianism, Bayesian Conditionalisation
+and Voluntarism, 3)
+**** It is objective in the sense that the three principles 
+outlined above strongly constrain degrees of belief, leaving little
+room for an agent to subjectively choose how strongly to believe a
+proposition (Jon Williamson, Objective Bayesianism, Bayesian
+Conditionalisation and Voluntarism, 4)
+**** [affine constraint, as in Csiszar]
+(Jon Williamson, Objective Bayesianism, Bayesian Conditionalisation
+and Voluntarism, 5)
+**** conditionalisation requires being eternally true of prior beliefs
+(Jon Williamson, Objective Bayesianism, Bayesian Conditionalisation
+and Voluntarism, 11)
+*** Williams, Peter
+**** about reversibility of evidence
+(136)
+**** In summary, the principle of minimum information yields a 
+unique prescription for all closed convex constraints satisfied by at
+least one distribution having finite information relative to the given
+prior. (139)
+*** Uffink, Jos
+not yet excerpted
+*** Diaconis and Zabell
+**** retrospective conditioning
+(basically what Grove and Halpern are doing) (822)
+**** Example 5.1 suggests that any claims to the effect 
+that maximum-entropy revision is the only correct route to probability
+revision should be viewed with considerable caution because of its
+strong dependence on the measure of closeness being used. (829)
+*** Fraassen, Hughes, Harman
+**** three classes of constraints
+(454)
+**** five symmetry requirements
+(455ff)
+**** the three rules
+INF Infomin or PME
+MTP Maximum Transition Probability
+MUD the simplest rule fulfilling the five requirements
+**** It is surely significant, and disturbing, that 
+INFOMIN did not come out the winner in either test ... the perceived
+superiority of INFOMIN (462, with a handwritten note of objection)
+*** Seidenfeld, Teddy
+**** It is interesting to note, as reported 
+by Denzau et. al. (1984), the MAXENT solution (A1) is associated with
+a LOGIT model by a simple reidentification of parameters (Entropy and
+Uncertainty, 282)
+**** PME is excessively aprioristic ...
+[I think Seidenfeld is here the victim of the meteorologist's fallacy]
+(Why I am not, 414)
+**** At one pole is subjectivism 
+(as defended by Savage and de Finetti) ... At the other pole is
+objectivism (as defended by Jeffreys and Jaynes) which argues for a
+uniquely admissible probability function given a knowledge state K.
+(Why I am not, 416)
+**** Seidenfeld's objection
+Maximizing entropy is unsatisfactory because the `partial information'
+it works with fails to capture the effect of uncertainty about related
+nuisance factors ... by conditionalizing on information about a
+nuisance parameter one may move from a distribution of lower to higher
+entropy, despite the obvious increase in information available (Why I
+am not, 434)
+*** Aristotle
+**** Nicomachean Ethics
+Here, as in all other cases, we must set down the appearances
+(phainomena) and, first working through the puzzles (diaporesantas),
+in this way go on to show, if possible, the truth of all the beliefs
+we hold about these experiences; and, if this is not possible, the
+truth of the greatest number and the most authoritative. For if the
+difficulties are resolved and the beliefs are left in place, we will
+have done enough showing. (NE VII, 1145b1ff)
+*** Avenarius, Richard
+***** die Gesamtheit des in der Erfahrung Gegebenen 
+mit dem geringsten Kraftaufwand zu denken (Richard Avenarius
+inspirierte die Figur des Professor Avenarius im Roman Die
+Unsterblichkeit von Milan Kundera.) -- see Moritz Schlick 1917:
+Amongst all the possible views ... mental indolence ... (Yemima
+Ben-Menahem, Conventionalism, 113)
+*** Bar-Hillel, Yehoshua, and Carnap, Rudolf
+see article Semantic Information in keep-2011
+*** Burgin, Mark
+**** burgin09
+***** definition of information in 
+Burgin, 316, according to Carnap and Bar-Hillel. Very interesting.
+E.g. The more probable a statement is, the less information it
+conveys, 320.
+*** Chalmers, David
+**** scenarios constitute epistemic space. If a subject 
+did not know anything, all scenarios would be epistemically possible
+for the subject. When a subject knows something, some scenarios are
+excluded. Every piece of substantive knowledge corresponds to a
+division in epistemic space: some scenarios are excluded out as
+epistemically impossible for the subject, while others are left open.
+(David Chalmers, The Nature of Epistemic Space, 2)
+**** In epistemic logic and the theory 
+of belief revision, it is common to model epistemic possibility using
+epistemic relations to an underlying space of pos- sible worlds. The
+same goes for the theory of subjective probability: a subject’s
+credences are usually taken to be distributed over a space of
+epistemically possible worlds. (David Chalmers, The Nature of
+Epistemic Space, 2)
+**** Instead, we should try to understand epistemic possibility 
+on its own terms. We are not dealing here with counterfactual space:
+the space of ways things might have been. Here, we are dealing with
+epistemic space: the space of ways things might be. This epistemic
+space calls for its own epistemic tools of analysis. (David Chalmers,
+The Nature of Epistemic Space, 3)
+**** But the notion of possibility invoked here differs from the notion 
+of possibility that is usually associated with possible worlds: it is
+a sort of epistemic possibility, whereas possible worlds are usually
+understood to be associated with a sort of `metaphysical' possibility.
+(David Chalmers, The Nature of Epistemic Space, 10)
+**** Prima facie, this situation suggests that there is no good candidate 
+to be the cardinality of the set of all worlds, and that there may be
+no such set. Kaplan’s paradox [see Modality, morality, and belief:
+essays in honor of Ruth Barcan Marcus, 44f, title A problem in
+possible-world semantics] arises at least as strongly when worlds and
+propositions are replaced by scenarios and intensions. If anything,
+the situation is worse. (David Chalmers, The Nature of Epistemic
+Space, 35)
+**** In Counterfactuals, Lewis suggests that the cardinality of 
+the space of worlds might be beth2 , for reasons tied to the character
+of spacetime. But it is hard to see why our spacetime should restrict
+the space of worlds. (David Chalmers, The Nature of Epistemic Space,
+37)
+*** Halpern, Joseph
+**** Another famous justification of probability is 
+due to Cox (1946), who showed that any function that assigns degrees
+to events and satisfies certain minimal properties (such as the degree
+of belief in U is a decreasing function in the degree of belief in U)
+must be isomorphic to a probability measure. Unfortunately, Cox's
+argument is not quite correct as stated; his hypotheses need to be
+strengthened (in ways that make them less compelling) to make it
+correct [Halpern 1999a; Halpern 1999b; Paris 1994]. (Reasoning About
+Uncertainty, 65)
+**** Given this intuition, it is perhaps not surprising 
+that there are proponents of maximum entropy and relative entropy who
+recommend that if an agent's information can be characterized by a set
+C of constraints, then the agent should act "as if" the probability is
+determined by the measure that maximizes entropy relative to C (i.e.,
+the measure that has the highest entropy of all the measures in C).
+Similarly, if the agent starts with a particular measure . it and gets
+new information characterized by C, he should update to the measure
+,a' that satisfies C such that the relative entropy between and ,u is
+a minimum. Maximum entropy and relative entropy have proved quite
+successful in a number of applications, from physics to
+natural-language modeling. Unfortunately, they also exhibit some
+counterintuitive behavior on certain applications. Although they are
+valuable tools, they should be used with care.(Reasoning About
+Uncertainty, 110)
+**** [For the correspondence of ME and RW 
+(random worlds) and their overlap in the unary case, whereas RW also
+covers the nonunary case, see pp416--420. For the origin of the RW
+approach see p. 429.]
+*** Mach, Ernst
+**** Die ökonomische Natur der physikalischen Forschung
+***** Sowohl die Mitteilung als das Bedürfnis des 
+Einzelnen, seine Erfahrungssumme mit dem kleinsten Gedankenaufwand zu
+beherrschen, zwingt zu ökonomischer Ordnung. Hiermit ist aber auch die
+ganze rätselhafte Macht der Wissenschaft erschöpft. Im einzelnen mag
+sie uns nichts zu bieten, was nicht jeder in genügend langer Zeit auch
+ohne alle Methode finden könnte.
+(http://www.gleichsatz.de/b-u-t/trad/mach2.html)
+*** Quine, WVO
+**** Two Dogmas
+***** the plan was that qualities should be assigned to point-instants in such 
+a way as to achieve the laziest world compatible with our experience.
+The principle of least action was to be our guide in constructing a
+world from experience. (37)
+* before fall 2010
+** aufbau
+1) Information and Probability
+2) Information and Divergence
+3) Information and Complexity
+4) Information and Philosophy
+** quotes
+*** ingardenurbanik62
+**** information seems intuitively a much simpler and 
+more elementary notion than that of probability. It gives more a
+cruder and global description of some situations physical or other
+than probability does. Therefore, information represents a more
+primary step of knowledge than that of cognition of probabilities
+(just as probability description is cruder and more global than
+deterministic description). Furthermore, a prinicipal separation of
+notions of probability and information seems convenient and useful
+from the point of view of statistical physics. In physics there
+prevail situations where information is known (e.g.\ entropy of some
+macroscopic systems) and may be measured with a high degree of
+accuracy, whereas probability distribution is unknown and practically
+cannot be measured at all {\ldots} Finally, it may be remarked that a
+new axiomatic definition of information, free of the inessential
+connection with probability, clears the way for future generalizations
+of this notion. (ingardenurbanik62:136)
+*** bernardo79
+**** This pragmatic approach led to
+Jose M. Bernardo's suggestion of Reference Posterior Distributions.
+{\rppd}s agree with the Principle of Maximum Entropy in applicable
+cases and thus also with the Principle of Indifference. Instead of
+measuring and maximizing missing information, however, {\rppd}s
+measure and maximize expected information. Let $p(\theta)$ be our
+prior density. Then the expected information IE is:
+\begin{displaymath} \mbox{IE}=\int p(x)\int p(\theta\vert
+x)\log\frac{p(\theta\vert x)}{p(\theta)}d\theta\, dx \end{displaymath}
+where $p(x)=\int p(x\vert\theta)p(\theta)d\theta$ and $p(\theta\vert
+x)=p(x\vert\theta)p(\theta)/p(x)$ (Bernardo, 1979, p115). Again,
+$p_{k}=\frac{1}{n}$ for the straightforward discrete case, but this
+time we also learn that for the continuous case the distribution which
+maximizes expected information is the normal distribution. (my priors
+paper)
+*** clarkebarron90
+**** The relative entropy is a mathematical expression 
+that admits several different interpretations in information theory
+and statistics. These include the redundancy in source coding
+problems, the risk in statistical estimation, and the error exponents
+in hypothesis testing, among others. (clarkebarron90:453)
+**** It is seen that $D(P^{n}_{\theta}\|M_{n})$ is 
+a) the cumulative risk of Bayes' estimators of the density function,
+b) the redundancy of a source code based on $M_{n}$, c) the exponent
+of error probability for Bayes' tests of a simple versus composite
+hypothesis, and d) a bound on the financial loss in a stock-market
+portfolio selection problem. (clarkebarron90:455)
+*** goguen97
+**** It is said that we live in an 
+Age of Information, but it is an open scandal that there is no theory,
+nore even definition, of information that is both broad and precise
+enough to make such an assertion meaningful. (goguen97:27)
+*** guiasu77
+**** Therefore, the continuous entropy $H_{\rho}$ may be interpreted 
+as being (up to an additive constant) the variation of information
+when we pass from the initial uniform probability distribution on the
+interval $[a,b]$ to the new probability measure defined by the
+probability distribution function $\rho(x)$ (any such a probability
+measure is absolutely continuous with respect to the uniform
+probability distribution on the interval $[a,b]$). Thus, we can
+utilize, in the continuous case, Boltzmann's continuous entropy as
+well as Shannon Entropy in the discrete case, both being interpreted
+as the variation of information when we pass from the initial uniform
+distribution to the corresponding probability measures. (guiasu77:28)
+**** Theorem 3.1 shows that though the usual logical order, according 
+to which information is defined by means of probability, can be
+reversed, and one can introduce information first, without using
+probabilities, probabilities inevitably come in at a later stage. The
+fact that a theory which starts with the aim of defining information
+without probability leads to the proof of the existence of probability
+supports the view that the notion of information cannot be separated
+from that of probability. To each event $A$ there correspond two
+numbers: its probability $p(A)$ and its information content $I(A)$
+which are connected by the formulas $I(A)=\log_{e}\frac{1}{p(A)},
+p(A)=e^{-I(A)}$ (guiasu77:36f)
+*** hjorland07
+**** [objective versus subjective understanding of 
+information] (hjorland07:1449)
+**** The problem is also about whether problems of 
+information science are best served with theories like Shannon and
+Weaver's information theory or with theories more related to
+semiotics. In the history of information science, the tendency has
+been a development from information theory toward more semiotic
+theories. (See also Werzig, 2003.) (hjorland07:1455)
+*** jaynes57
+**** the maximum-entropy distribution may be asserted for the
+positive reason that it is uniquely determined as the one which is
+maximally noncommittal with regard to missing information, instead of
+the negative one that there was no reason to think otherwise
+(Jaynes, 1957, p623)
+**** there is nothing in the general
+laws of motion that can provide us with any additional information
+about the state of a system beyond what we have obtained from
+measurement (Jaynes, 1957, 624)
+*** khinchin57
+*** kolmogorov68
+**** the need for attaching definite meaning 
+to the expressions $H(x|y)$ and $I(x|y)$, in the case of individual
+values $x$ and $y$ that are not viewed as a result of random tests
+with a definite law of distribution, was realized long ago by many who
+dealt with information theory. (kolmogorov68:662)
+**** The meaning of the new definition is very simple. Entropy 
+$H(x|y)$ is the minimal length of the recorded sequence of zeros and
+ones of a \qnull{program} $P$ that permits construction of the value
+of $x$, the value of $y$ being known {\ldots} Although Martin-L{\"o}f
+and I realized the importance of the new concept, the development was
+hindered because the simplest formulas that can be produced as a
+result of simple algebraic transposition of (1) [Shannon's Entropy]
+could not be derived from the new definitions (kolmogorov68:662)
+**** The preceding rather superficial discourse should 
+prove two general theses: 1) Basic information theory concepts must
+and can be founded without recourse to the probability theory, and
+such a manner that \qnull{entropy} and \qnull{mutual information}
+concepts are applicable to individual values. 2) Thus introduced,
+information theory concepts can form the basis of the term random,
+which naturally suggests that random is the absence of periodicity.
+(kolmogorov68:663f)
+**** by using probability theory, we resort to 
+considerably rougher generalization. A realistic interpretation of
+probability results is always statistical, and error estimates are
+considerable rougher that in the information theory exposition
+developed by us. (kolmogorov68:664)
+**** Credit for noting this relatively simple condition 
+evidently belongs to Solomonov and me. (kolmogorov68:664) [compare
+Matthew Effect]
+*** kolmogorov68a
+**** Discussions of information theory do not go into this 
+combinatorial approach at any length, but I consider it important to
+emphasize its logical independence of probabilistic assumptions.
+(kolmogorov68a:158)
+**** If we make the variable $x$ and $y$ \qnull{random variables} 
+with given joint probability distributions, we can obtain a
+considerably richer system of concepts and relationships
+(kolmogorov68a:161)
+**** {\ldots} War and Peace {\ldots} 
+(kolmogorov68a:162)
+*** loeve55
+**** Probability Theory
+Synopsis:
+
+(i) Constructive definition of conditional expectation:
+
+\begin{displaymath}
+  E_{B}X=\int_{B}XdP
+\end{displaymath}
+
+or, equivalently,
+
+\begin{displaymath}
+  P(B)E_{B}X=\int_{B}XdP
+\end{displaymath}
+
+then define
+
+\begin{displaymath}
+  P_{B}A=E_{B}I_{A}
+\end{displaymath}
+
+[page 338, more detail 339f]
+
+(ii) the constructive definition fails if partition is not countable
+-> use Radon-Nikodym
+
+conditional expectation is a function for which
+
+\begin{displaymath}
+  \int_{N}(E^{\mathcal{B}}X)dP=\int_{B}XdP
+\end{displaymath}
+
+and
+
+\begin{displaymath}
+  P^{\mathcal{B}}=E^{\mathcal{B}}I_{A}
+\end{displaymath}
+
+or
+
+\begin{displaymath}
+  \int_{B}(P^{\mathcal{B}}A)dP_{\mathcal{B}}=PAB
+\end{displaymath}
+
+[page 341]
+
+(iii) then show that the generalized definition accords with the
+intuitive, constructive definition where applicable
+*** solomonov64
+**** That these kinds of models might be valid is 
+suggested by \qnull{Occam's Razor,} one interpretation of which is that
+the more \qnull{simple} or \qnull{economical} of several hypotheses is
+the more likely. Turing machines are then used to explicate the
+concepts of \qnull{simplicity} or \qnull{economy}---the most
+\qnull{simple} hypothesis being that with the shortest
+\qnull{description.} (solomonov64:3)
+**** It is possible to devise a complete theory of 
+inductive inference using Bayes' Theorem, if we are able to assign an
+a priori probability to every conceivable sequence of symbols. In
+accord with this approach, it is felt that sequences should be given
+high a priori probabilities if they have shortest descriptions and/or
+many different descriptions {\ldots} any regularity in a corpus may be
+utilized to write a shorter description of that corpus {\ldots} the
+high a priori probability assigned to a sequence with a short
+description corresponds to one possible interpretation of
+\qnull{Occam's Razor.} The assignment of high a priori probabilities
+to sequences with many descriptions corresponds to a feeling that if
+an occurrence has many possible causes, then it is more likely.
+(solomonov64:7)
+**** Suppose that all of the sensory observations 
+of a human being since his birth were coded in some sort of uniform
+digital notation and written down as a long sequence of symbols. Then,
+a model that accounts in an optimum manner for the creation of this
+string, including the interaction of the man with his environment, can
+be formed by supposing that the string was created as the output of a
+universal machine of random input. (solomonov64:13)
+**** The laws of science that have been discovered 
+can be viewed as summaries of large amounts of empirical data about
+the universe. (solomonov64:15)
+*** turing37
+**** Turing (1937) has shown that it is impossible 
+to devise a Turing machine that will always be able to tell, in a
+finite time, whether an arbitrary string will be \qnull{meaningful}
+for another particular universal Turing machine. (solomonov64:9f)
+*** wallacedowe99
+**** The aim in this stream is to find the hypothesis
+$H$ which leads to the shortest such stream $I$, which may be regarded
+as the shortest message encoding the data given in $S$ {\ldots} The
+minimization of #I [length of the program which reproduces the data
+$S$] is, as shown by the equation above, equivalent to maximization of
+$h(H) x f(S|H)=Prob(H,S)$, i.e. the joint probability of hypothesis
+and data. It is thus formally equivalent to choosing the hypothesis of
+highest Bayesian posterior probability given $S$. (271f) [nice summary
+on 270 of Kolmogorov Complexity and Turing machines]
+*** zhulu04
+**** We should also note that, counter-intuitively, non-informative 
+priors and flat priors (such as the uniform distribution) do not
+coincide (cf.\ Mu and Zhu, 2004)
+**** The lesson from this discussion is extremely 
+interesting; it tells us that flat priors (such as the uniform prior)
+are not always the same thing as non-informative priors. A seemingly
+informative prior can actually be quite weak in the sense that it does
+not influence the posterior opinion very much. It is clear in our
+example that the MLE is the result of using a weak prior, whereas the
+most intuitive non-informative prior (the uniform prior) is not as
+weak or non-informative as one would have thought. (6)
+** links
+*** information theory
+http://en.wikipedia.org/wiki/Algorithmic_information_theory
+http://en.wikipedia.org/wiki/Kolmogorov_complexity
+http://en.wikipedia.org/wiki/Kullback–Leibler_divergence
+http://en.wikipedia.org/wiki/Minimum_message_length
+http://en.wikipedia.org/wiki/Bayesian_information_criterion
+** ideas
+*** information epistemology is an 
+epistemology of ignorance rather than an epistemology of knowledge,
+which suits me just right.
+*** Kolmogorov's frustration with probability theory comes 
+from a different place that Ingarden's or Kampe's. He wants an
+information density  measure that applies to individual sequences of
+symbols rather than to the probability distributions behind the
+sequences of symbols.
+*** math results
+1) Shannon Entropy is unique khinchin57:9
+2) It doesn't matter what Turing machine we use
+3) The uniform distribution has the highest Shannon Entropy guiasu77:3
+4) H(x|y) is a generalization of Shannon Entropy for the continuous
+   case guiasu77:19ff
+5) Ingarden and Kampe de Feriet guiasu77:29ff and guiasu77:37ff,
+   kampe67, ingardenurbanik62
+6) the normal distribution contains the largest amount of uncertainty
+   guiasu77:299 with good quote, proof is due to kampe63, similar
+   result with respect to Poisson distribution ingardenkossakowski71,
+   see guiasu77:301
+7) use Radon-Nikodym derivative to define conditional probability
+   because intuition fails in some cases see loeve55:338ff
+8) Chaitin's Incompleteness Theorem
+9) Shannon's Entropy is defined by KLD
+*** philsophical musings
+The world is full of specificity and unknowns, as it is full of
+possibilities and eigenheit. (Harry Potter and the Prisoner of
+Azkaban, Harry's patronus.)
+
+If all is indifferent, there is no information. All there is is
+entropy, the end of time. If all we have ever believed turns out to be
+false, there is an infinity of information. This lack of entropy
+altogether must be the closest approximation of Dante's Hell, of
+Leibniz's Demon. We are, hopefully, somewhere in the middle between
+total entropy and total information, somewhere between givens and
+possibilities. It appears to be a feature of life that things are one
+way and not another (call it truth, call it information) and that they
+are not fixed yet (call it choices, call it probability).
+
+This is the age of information, yet we know little and care little
+about the meaning of information. Beginning in the forties and
+petering out in the seventies, there was great interest in information
+theory, fueled no doubt by the British and American mathematicians who
+cracked the Japanese and the German codes. Then the interest
+waned, or moved over to the engineers, when Turing's Halting Problem
+halted algorithmization of information theory as G"odel's
+Incompleteness Theorem halted TBA. Nothing in so dramatic a fashion
+ever happened to probability theory, and so it still holds
+epistemological attention, and so there is little we know yet about
+the limits of its language.
+
+We return to the reasons why information theory may have
+epistemological primacy over probability theory: there is a
+mathematical definition of its limits, as there is for logic in
+G"odel's Incompleteness Theorem. There is an intuitive relation to
+complexity, which in some way is the only thing which enables us to
+assess the significance (the `bigness') of a thing. It is the only
+physical property we can scale, and thus the law of entropy becomes to
+us one of the most fundamental laws of nature. One day we may
+understand the physicality of our world entirely by means of
+information. Quantum mechanics undermines our faith in the continuous
+fluidity of matter, but it seems to support the ideas we have of
+informational states. Chesterton's prayer of gratitude in The Poet and
+the Lunatic may yet need to be understood in new ways: ``Thank God for
+hard stones; thank God for hard facts; thank God for thorns and rocks
+and deserts and long years. At least I know now that I am not the best
+or strongest thing in the world. At least I know now that I have not
+dreamed of everything.''
+*** there is also a convergence between physics and epistemology 
+if information or entropy are recognized as fundamental notions.
+*** is there a Dutch-book equivalent for
+information?
+*** experimental design
+Design your experiment so that the evidence (the data) will be
+information-rich and the hypothesis will be information-poor (see Jose Bernardo).
+*** perl zipping program
+generate 0 1 bernoulli sequence, once with p=.5, once with p=.9, and
+then zip it
+*** Model-Fitting
+I have some data and a set of models for the data. Strategies:
+
+(1) Likelihood Ratio Test
+http://en.wikipedia.org/wiki/Likelihood-ratio_test
+
+(2) Bayes Factor
+http://en.wikipedia.org/wiki/Bayes_factor -- guards against overfitting
+
+(3) Minimum Message Length
+http://en.wikipedia.org/wiki/Minimum_message_length
+
+(4) Kullback's Minimum Discrimination Information
+*** Minimum message length (MML) is a formal information theory 
+restatement of Occam's Razor: even when models are not equal in
+goodness of fit accuracy to the observed data, the one generating the
+shortest overall message is more likely to be correct (where the
+message consists of a statement of the model, followed by a statement
+of data encoded concisely using that model). MML was invented by Chris
+Wallace, first appearing in the seminal (Wallace and Boulton, 1968).
+(see http://en.wikipedia.org/wiki/Minimum_message_length)
+*** The idea of Kullback–Leibler divergence as discrimination information 
+led Kullback to propose the Principle of Minimum Discrimination
+Information (MDI): given new facts, a new distribution f should be
+chosen which is as hard to discriminate from the original distribution
+f0 as possible; so that the new data produces as small an information
+gain DKL( f || f0 ) as possible. (see
+http://en.wikipedia.org/wiki/Kullback–Leibler_divergence)
+*** Solomonoff, who focused on prediction using his invention of 
+the universal a priori probability distribution
+*** Incomputability of Kolmogorov complexity
+The first result is that there is no way to effectively compute K.
+Theorem. K is not a computable function. (see
+http://en.wikipedia.org/wiki/Kolmogorov_complexity)
+*** Chaitin's incompleteness theorem
+We know that, in the set of all possible strings, most strings are
+complex in the sense that they cannot be described in any
+significantly "compressed" way. However, it turns out that the fact
+that a specific string is complex cannot be formally proved, if the
+string's complexity is above a certain threshold. (see
+http://en.wikipedia.org/wiki/Kolmogorov_complexity)
+*** in algorithmic information theory, the invariance theorem, originally proved by 
+Ray Solomonoff, states that a universal Turing machine provides an
+optimal means of description, up to an additive constant.
+*** Gettier cases
+Miller believes that someone in his office owns a Ford. He doesn't own
+a Ford, but he has Jones' reliable testimony that Jones owns a Ford.
+It turns out that Jones doesn't own a Ford (he was lying, in this
+case), but Smith does (who has been lying and claiming that he owns a
+Chevrolet). Now consider someone telling Miller:
+
+(X) Someone in your office owns a Ford.
+
+Miller will think that (X) contains no information. He thinks he
+already knows (X). Yet it turns out that (X) contains information
+referring to the way in which Miller's belief is not properly
+connected to the truth. (Imagine someone saying, ``Someone in your
+office owns a Ford,'' with the right kind of intonation, intimating
+that Miller's belief that Jones owns a Ford is false.) All the
+problems of the conceptual analysis of knowledge remain the same.
+
+Take, for example, a simple form of Nozick's analysis. Here, knowing
+(X) means that (i) Miller believes (X), (ii) (X) is true, (iii) if (X)
+were not true, Miller wouldn't believe (X), and (iv) if (X) were true
+in a slightly different way, Miller would believe (X). (iii) fails,
+because Miller would continue to believe (X) even if Smith didn't own
+a Ford. What information does (X) add?
+*** Mutual information can be expressed as the average Kullback–Leibler divergence 
+(information gain) of the posterior probability distribution of X
+given the value of Y to the prior distribution on X (wikipedia on
+information theory)
+*** information density
+***** information density has as little 
+practicality to it as Bayesian epistemology. Scientists are not known
+to hunker down with their calculators, plugging in priors and
+likelihoods to figure out posteriors. What Bayesian epistemology does
+is give us a pattern of thought and belief revision. Given various
+alternative hypotheses, it is still our intuition, informed by
+information density epistemology, that needs to make the call.
+***** if information is the primary notion 
+behind knowledge, understanding, evidence, or explanation, then there
+is a Wittgensteinian point here: there is not /more/ to be explained
+about the world other than that things are one way and not another.
+This is also a Humean point.
+***** if I am right, this would be a bit of a 
+resurrection for positivism. I may not be right. A philosopher's ideas
+have no need to turn into his opinions. The best theories are those
+that keep the information density at a maximum. What is your best
+theory after the first sunrise, what after your second sunrise, what
+after sunrise no. 1000. Information density operates on the same
+principles as file compression.
+***** it is not inconsistent to believe in 
+a contradiction, but it is likely to violate the maximum information
+density principle. A world in which a contradiction would be true
+might be unnecessarily complicated. Sometimes, however, you may have
+to believe in a contradiction to make sense of the world at all.
+*** What matters is belief revision, not knowledge 
+acquisition. (The Bayesians are right, Williamson is wrong.) If, which
+is rare, probability language applies, rationality is coextensive with
+Bayesianism. If not, there must be a conversation about which belief
+systems are less inconsistent. If, as is likely the case, there is no
+appropriate measure of inconsistency (inconsistent may be an adjective
+that does not allow comparatives), we may refer to information
+density. Generally, disagreement arises over what the evidence and
+what the hypothesis are, rather than how well-fitted the hypothesis is
+to the evidence. In other (Quinean) words, the evidence is never
+fixed. If you doubt my conclusion, you are as likely to question my
+evidence as you are to question my fitting procedure. There is no
+primacy of doubting the validity of the argument versus doubting the
+validity of the premises.
+*** Quantitative Bayesian belief analysis is 
+like political analysis in terms of dollar amounts and number of
+voters. It can only go so far and definitely not the whole way.
+*** diachronische vernetztheit, eigenheit of the world, evidence.org
+*** rephrase Leibniz: Why is there something and not rather nothing? Why is 
+there information and not rather total entropy?
+*** defining the size of objects by their complexity
+see Marilynne Robinson and the brain
+*** Information is directly related to 
+complexity, which in some way is the only thing which enables us to
+assess the significance (the \qnull{bigness}) of a thing. It is the
+only physical property we can scale, and thus the law of entropy
+becomes to us one of the most fundamental laws of nature (entropy is
+also the only quantity in the physical sciences that seems to imply a
+particular direction for time). Information epistemology implies a
+sense of convergence between physics and philosophy, for example in
+the correspondence between Boltzmann's entropy and Shannon's entropy.
+One day we may understand the physicality of our world entirely by
+means of information. Quantum mechanics undermines our faith in the
+continuous fluidity of matter, but it seems to support the ideas we
+have of informational states. But information density and
+*** I dedicate this paper to X whose 
+relationship with me is proof that transmission across the noisy
+channels of marriage and family is possible and can, at times, be intimate.
+* buffer
+02 introduction
+04 two intuitions
+08 epistemic entrenchment
+11 the powerset approach
+16 appendix I
+18 appendix II
+22 references

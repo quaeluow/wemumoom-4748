@@ -1,0 +1,145 @@
+\documentclass[11pt]{article}
+
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+\frenchspacing % no extra space at the end of a sentence
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{.1in}
+
+\raggedbottom
+
+%\pagestyle{empty}
+
+% 	PACKAGES
+% \usepackage[small,bf]{caption}
+% \let\bcode\textbgreek
+% \usepackage[bgreek,english]{babel}
+% \usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+% \usepackage{german}
+% \usepackage{hebtex}
+% \usepackage{graphicx}
+% \usepackage[german]{babel}
+% \usepackage{endnotes}
+% \let\footnote=\endnote
+% \usepackage{rotating}
+% \usepackage{enumerate}
+
+\newcommand{\kapt}[1]{\textbf{{\thechap}. #1}\addtocounter{chap}{1}}
+\newcommand{\nootag}{}
+
+\newcommand{\tbd}[1]{}
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+
+\newif\ifNumericalOrYear
+\NumericalOrYeartrue
+% \NumericalOrYearfalse
+\ifNumericalOrYear
+\usepackage[numbers,colon]{natbib}
+\else
+\usepackage[round,colon]{natbib}
+\fi
+\newif\ifPageP
+\PagePtrue
+% \PagePfalse
+\ifPageP
+\newcommand{\PageP}{p.~}
+\else
+\newcommand{\PageP}{}
+\fi
+
+\newcommand{\scite}[3]{\ifnum#1=1\ifNumericalOrYear\citep{#2}\else\citeyearpar{#2}\fi\else
+\ifnum#1=2\ifNumericalOrYear\citep[#3]{#2}\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=4\ifNumericalOrYear\citet{#2}\else\citet{#2}\fi\else
+\ifnum#1=5\ifNumericalOrYear(\citet{#2})\else\citep{#2}\fi\else
+\ifnum#1=6\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=7\ifNumericalOrYear\citep{#2}\else\citealp{#2}\fi\else
+\ifnum#1=8\ifNumericalOrYear\citep[#3]{#2}\else\citealp[{\PageP}#3]{#2}\fi\else
+\textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
+% \newenvironment{quotex}{\begin{quote}\begin{footnotesize}\begin{singlespace}}{\end{singlespace}\end{footnotesize}\end{quote}}
+
+\begin{document}
+
+\title{A Note on the Judy Benjamin Problem---Continued}
+
+\author{Stefan Lukits}
+
+\maketitle
+
+\newcounter{chap}
+
+\setcounter{chap}{1}
+
+This summarized the labours of the first half of the red book, numbers
+in parentheses refer to the red book. We begin with a quote:
+
+\begin{quotex} 
+  Probability kinematics resembles ethics in the sense that there are
+  all kinds of things we are able to say about the relations between
+  our intuitions and the prescriptions or rules we propose. We never
+  cease to be vulnerable, however, to the question why the states of
+  affairs we describe should entail that we have one set of
+  probability assignments and updating strategies and not another.
+  That an observation or a piece of evidence should change our
+  assessment of uncertainty with respect to relevant propositions and
+  events in particular ways cannot be a matter of logical consistency.
+  Even a Dutch Book argument rests on assumptions that are entangled
+  with the relations and intuitions we are supposed to explain. Our
+  task in this paper, then, is to show what were to flow from certain
+  assumptions being made and certain intuitions being accepted, and to
+  articulate them clearly and well so that we understand where they
+  are reasonable, arbitrary, or subject to criticism. In all this, we
+  never lose a sense of need for what ethicists in Rawl's tradition
+  call a reflective equilibrium, as it is not the intuitions about
+  particular cases alone, nor the general judgments they sometimes
+  inspire, that carry away the prize, but rather a balance between
+  them. The principle of maximum entropy is a poster child for this
+  method: it is a principle with great generality and scope, arguably
+  outperforming all others, but it also raises worries in particular
+  cases. There is beauty in the fact that, as sweeping as the
+  principle is, it cannot accommodate everything we think and feel
+  about how conditionalization (another term for probability update)
+  should proceed. This paper cautions, however, against undue
+  enthusiasm about the full employment theorem, the view that
+  ultimately all rules and methods of conditionalization are tools in
+  the hand of a human inquirer, expressing that which one to use must
+  always be based on the intuitive and creative labour of the user.
+  Probability kinematics is not a sit-down dinner: various approaches
+  mingle, easily shift positions, and have access to the buffet table
+  from different angles. There is no throne even for the view that,
+  when all is said and done, a special place remains for the art of
+  human inquiry.
+\end{quotex}
+
+Let's assume a partition $\mathcal{A}$ of
+$A_{1}\cup{}A_{2}\cup{}A_{3}$. Let
+$\mathcal{B}\subset\mathcal{P}^{\mathcal{A}}$ be the collection of
+sets which agree with the constraint imposed by (HDQ), i.e.\ 
+\begin{displaymath}
+  B\in\mathcal{B}\mbox{ iff }B=\{B_{i}\}\mbox{ and }t\mu\left(\bigcup{}B_{i}\cap{}A_{1}\right)=\mu\left(\bigcup{}B_{i}\cap{}A_{2}\right)
+\end{displaymath}
+% \noindent\textbf{Endnotes}
+
+% \theendnotes
+
+% \medskip
+
+% \noindent\textbf{References}
+
+% \nocite{*} 
+\bibliographystyle{stefan-2010-08-28}
+\bibliography{bib-3306}
+
+\end{document}
+

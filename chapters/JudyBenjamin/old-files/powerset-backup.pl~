@@ -1,0 +1,145 @@
+use Math::BigInt;
+sub Factorial
+{
+    ($choosen)=@_;
+    $BIGn=Math::BigInt->new($choosen);
+    $BIGnfac=$BIGn->copy();
+    $BIGnfac->bfac();
+    return "$BIGnfac";
+}
+
+sub Choose
+{
+    ($choosen,$choosek)=@_;
+    $BIGn=Math::BigInt->new($choosen);
+    $BIGk=Math::BigInt->new($choosek);
+    $BIGnoverk=$BIGn->copy();
+    $BIGmult=$BIGk->copy();
+    $BIGmult->bfac();
+    $BIGnoverk->bfac();
+    $BIGnminusk=$BIGn->copy();
+    $BIGnminusk->bsub($BIGk);
+    $BIGnminusk->bfac();
+    $BIGmult->bmul($BIGnminusk);
+    $BIGnoverk->bdiv($BIGmult);
+    return "$BIGnoverk";
+}
+
+# VARIABLES
+$t=3;
+$s=2;
+print "t is $t\n";
+print "s is $s\n";
+$Ni=0;
+$Nj=0;
+$ttimess=$t*$s;
+$twots=2*$t*$s;
+$BIGts=Math::BigInt->new("$ttimess");
+$BIGt=Math::BigInt->new("$t");
+$BIGtwo=Math::BigInt->new("2");
+
+# Ni
+for ($i1=0;$i1<=$s;++$i1)
+{
+    $BIGi[$i1]=Math::BigInt->new("$i1");
+    $BIGtsoveri=$BIGts->copy();
+    $BIGii=$BIGi[$i1]->copy();
+
+if ("$BIGi[$i1]" eq "0") # there is a bug in Math::BigInt so that (n over zero) is not correct
+{
+    $BIGtsoveri->bone();
+}
+else
+{
+    $BIGtsoveri->bnok($BIGi[$i1]);
+}
+
+
+
+    $tsoveri="$BIGtsoveri";
+    $Ni=$Ni+$tsoveri;
+}
+
+# Nj
+for ($i2=0;$i2<=$s;++$i2)
+{
+    $BIGj[$i2]=Math::BigInt->new("$i2");
+    $BIGtsovertj=$BIGts->copy();
+    $BIGtj=$BIGj[$i2]->copy();
+    $BIGtj->bmul($BIGt);
+if ("$BIGtj" eq "0") # there is a bug in Math::BigInt so that (n over zero) is not correct
+{
+    $BIGtsovertj->bone();
+}
+else
+{
+    $BIGtsovertj->bnok($BIGtj);
+}
+$tsovertj="$BIGtsovertj";
+$Nj=$Nj+$tsovertj;
+}
+
+$N=((2**($t*$s))*$Ni*$Nj)-1;
+print "N is $N\n";
+$q3=0;
+$mij=0;
+$tsoveri=0;
+$tsoverti=0;
+$twotsoverj=0;
+
+for ($i3=0;$i3<=$s;++$i3)
+{
+for ($i4=0;$i4<=$twots;++$i4)
+{
+if (($i3>0) || ($i4>0))
+{
+# mij
+# (1) tsoveri
+    $BIGtsoveri=$BIGts->copy();
+if ("$BIGi[$i3]" eq "0") # there is a bug in Math::BigInt so that (n over zero) is not correct
+{
+    $BIGtsoveri->bone();
+}
+else
+{
+    $BIGtsoveri->bnok($BIGi[$i3]);
+}
+    $tsoveri="$BIGtsoveri";
+
+# (2) $tsoverti
+    $BIGtsoverti=$BIGts->copy();
+    $BIGti=$BIGi[$i3]->copy();
+    $BIGti->bmul($BIGt);
+if ("$BIGti" eq "0") # there is a bug in Math::BigInt so that (n over zero) is not correct
+{
+    $BIGtsoverti->bone();
+}
+else
+{
+    $BIGtsoverti->bnok($BIGti);
+}
+$tsoverti="$BIGtsoverti";
+
+# (3) $twotsoverj
+    $BIGjj=Math::BigInt->new("$i4");
+    $BIGtwots=Math::BigInt->new("$ttimess");
+    $BIGtwots->bmul($BIGtwo);
+    $BIGtwotsoverj=$BIGtwots->copy();
+if ("$BIGjj" eq "0") # there is a bug in Math::BigInt so that (n over zero) is not correct
+{
+    $BIGtwotsoverj->bone();
+}
+else
+{
+    $BIGtwotsoverj->bnok($BIGjj);
+}
+    $twotsoverj="$BIGtwotsoverj";
+
+    $phiij=$i4/($i4+($i3*(1+$i4)));
+    $mij=$tsoveri*$tsoverti*$twotsoverj;
+print "$i3 $i4 $tsoveri $tsoverti $twotsoverj\n";
+    $q3=$q3+($phiij*($mij/$N));
+}
+}
+}
+print "q3 is $q3\n";

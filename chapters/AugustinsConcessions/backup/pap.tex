@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+
+% https://tinyurl.com/lxam8f6
+
+% this makes marginpar more attractive
+% see http://www.f.kth.se/~ante/latex.php
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+%\usepackage{helvet}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{.3in}
+
+\raggedbottom
+
+%\pagestyle{empty}
+
+% 	PACKAGES
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{german}
+%\usepackage{hebtex}
+%\usepackage{graphicx}
+%\usepackage[german]{babel}
+%\usepackage{endnotes}
+%\usepackage{rotating}
+
+\begin{document}
+
+Professor Pap,
+
+I am looking for a non-additive, continuous set function from a
+simplex $\Pi_{n}$ of finite dimension $n-1$ into $[0,\infty]$. The
+motivation is as follows. Shannon defined the entropy of a probability
+measure on a finite event space $H(p_{1},\ldots,p_{n})$. He wanted the
+entropy to be (i) continuous in the $p_{i}$, (ii) if all the $p_{i}$
+are equal ($p_{i}=1/n$) then $H$ should be monotonic increasing in $n$
+(more equally probable events mean greater entropy, so for example
+$H_{2}(1/2,1/2)<H_{3}(1/3,1/3,1/3)$), and (iii) if choices are
+subdivided the entropy should remain constant, such that, for
+example, $H_{3}(p_{1},p_{2},p_{3})=
+H_{2}(p_{1},q)+qH_{2}(p_{2}/q,p_{3}/q)$ for $q=p_{2}+p_{3}$.
+
+The only function fulfilling these requirements is the Shannon entropy
+
+\begin{equation}
+  \label{eq:m1}
+  H(p)=-K\sum_{i=1}^{n}p_{i}\log{}p_{i}
+\end{equation}
+
+I want to generalize the Shannon entropy from elements of $\Pi_{n}$ to
+select subsets of $\Pi_{n}$ (e.g. Borel subsets). Let $\pi$ be a
+subset of $\Pi_{n}$. I guess here are some commonsense requirements
+for $\eta$, the generalization of $H$. (i) $\eta(\{p\})=H(p)$. (ii)
+$\eta$ is continuous in the sense that
+
+\begin{displaymath}
+  \mbox{If }\bigcap_{k=1}^{\infty}\pi_{k}=\pi\mbox{ with }\pi_{k}\subseteq\pi_{k-1}\mbox{ then }\eta(\pi)=\lim_{k\rightarrow\infty}\eta(\pi_{k})
+\end{displaymath}
+
+and
+
+\begin{displaymath}
+  \mbox{If }\bigcup_{k=1}^{\infty}\pi_{k}=\pi\mbox{ with }\pi_{k}\supseteq\pi_{k-1}\mbox{ then }\eta(\pi)=\lim_{k\rightarrow\infty}\eta(\pi_{k})
+\end{displaymath}
+
+One requirement that I can't quite articulate yet is that $\eta$ won't
+be additive but more of an averageing function, such that
+$\eta(\{p,q\})$ is somewhere between $H(p)$ and $H(q)$, certainly not
+the sum of them. The intuition is that if a rational agent can
+permissibly hold these two probability functions, her information is
+roughly the average of the information where she is in the situation
+that she can hold only one of them.
+
+My question for you: is it possible to give an explicit formula for
+$\eta$ as in (\ref{eq:m1})? I imagine it would look very similar to
+(\ref{eq:m1}) and involve some kind of integral over the points of the
+simplex.
+
+I would love it if you could help me with this or point me to someone
+who could. Thank you,
+
+Stefan
+
+\end{document}

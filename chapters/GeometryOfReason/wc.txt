@@ -1,0 +1,1090 @@
+1 Introduction
+Consider an idealized rational agent whose doxastic state at time t can be
+characterized such that she entertains certain partial beliefs with respect to a
+finite propositional algebra (the result of a die roll, for example). At a later
+time t 0 her beliefs may have changed due to intervening evidence. The agent
+uses ampliative reasoning to narrow down the set of logically coherent updates
+to a subset of credences (a so-called credal state). In Bayesian epistemology,
+for example, this credal state depends in some way on standard conditioning,
+using conditional probabilities, if the rational agent becomes certain of an
+event between t and t 0 . It is sometimes shown that based on a number of
+assumptions the updated partial beliefs are in accordance with the probability
+Address(es) of author(s) should be given2
+Anonymous
+axioms; or Bayes’ theorem; or Jeffrey conditioning; or the principle of minimum
+cross-entropy.
+James Joyce, in his paper “A Nonpragmatic Vindication of Probabilism,” uses
+a norm of gradational accuracy to identify inadmissible partial beliefs, which
+are demonstrably inferior in epistemic terms to those partial beliefs left in
+the updated credal state. Demonstrable inferiority in Joyce is usually based
+on supervaluationist semantics, when for example one credence is more truth-
+defective than another credence in all possible worlds.
+A set of partial beliefs can be genuinely defective in epistemic terms compared
+to another set of partial beliefs if its truth estimates are necessarily worse
+than the truth estimates of its rival. Note that with an estimate, as opposed
+to a guess, I am not simply right or wrong about the estimated quantity—I
+am instead more or less accurate. This distinction is due to Richard Jeffrey
+(see Jeffrey, 1986). Joyce uses his norm of gradational accuracy together with
+six axioms (structure, extensionality, dominance, normality, weak convexity,
+symmetry) to give an epistemic justification of probabilism: the requirement
+for a rational agent to keep her partial beliefs in keeping with the axioms of
+probability theory.
+It is a natural question to ask whether the same line of reasoning can give
+us an epistemic justification of standard conditioning and Jeffrey condition-
+ing. The former updates partial beliefs in light of an event that is known to
+be true based on intervening evidence, i.e. P 0 (E) = 1 (P 0 for the posterior,
+not necessarily a probability). The latter updates partial beliefs in light of an
+event about which the agent has shifted in uncertainty based on intervening
+evidence, i.e. P 0 (E) = y where y is not necessarily equal to P (E) = x, the
+prior of E. In a series of articles that will be pivotal for the rest of this paper,
+Hannes Leitgeb and Richard Pettigrew show that using Joyce’s approach, ac-
+curacy can be bifurcated into local and global accuracy. For this bifurcation
+to give consistent results, the Brier score must be used for Joyce’s norm of
+gradational accuracy. The Brier score vindicates standard conditioning and
+rules out Jeffrey conditioning. A new type of conditioning, which I shall call
+LP conditioning, takes the place of Jeffrey conditioning (for details see Leitgeb
+and Pettigrew, 2010a).
+I will show that LP conditioning fails a host of expectations that are rea-
+sonable to have for the kind of updating scenario that LP conditioning ad-
+dresses. Since Leitgeb and Pettigrew’s reasoning is valid, it cannot be sound.
+I identify a premise and call it the geometry of reason, on which Leitgeb
+and Pettigrew unwittingly cast doubt by reductio. The geometry of reason
+assumes that probability distributions entertain a geometric relationship to
+each other. At first, this assumption is natural: probability distributions can
+be isomorphically identified with points in a simplex, which is a well-behaved
+(n − 1)-dimensional subset of R n (n is the cardinality of the set of atoms be-
+longing to the propositional algebra—that the credences on this set determineAsymmetry and the Geometry of Reason
+3
+the credences on all propositions presumes probabilism). It seems natural to
+measure the difference between probability distributions by imposing a Eu-
+clidean metric on this space. Joyce uses this geometry of reason, for example,
+by defining midpoints between credences (0.5P + 0.5Q) and requiring them to
+be epistemically symmetric with respect to their parents P and Q.
+Leitgeb and Pettigrew muse about alternative geometries, especially non-
+Euclidean ones. They suspect that these would be based on and in the end
+reducible to Euclidean geometry but they do not entertain the idea that they
+could drop the requirement of a metric topology altogether (for the use of
+non-Euclidean geodesics in statistical inference see Amari, 1985). Thomas Mor-
+mann explicitly warns against the assumption that the metrics for a geometry
+of logic is Euclidean by default: “All too often, we rely on geometric intuitions
+that are determined by Euclidean prejudices. The geometry of logic, however,
+does not fit the standard Euclidean metrical framework” (see Mormann, 2005,
+433; also Miller, 1984). Mormann concludes in his article “Geometry of Logic
+and Truth Approximation,”
+Logical structures come along with ready-made geometric structures that can be
+used for matters of truth approximation. Admittedly, these geometric structures
+differ from those we are accostumed [sic] with, namely, Euclidean ones. Hence, the
+geometry of logic is not Euclidean geometry. This result should not come as a
+big surprise. There is no reason to assume that the conceptual spaces we use for
+representing our theories and their relations have an [sic] Euclidean structure. On
+the contrary, this would appear to be an improbable coincidence. (Mormann, 2005,
+453.)
+If the geometry of reason gives us bad results, we need to look for alternatives.
+Joyce now appears to favour Bregman divergences (personal communication)
+and an emphasis on scoring rules rather than metrics (see Predd et al, 2009;
+for a connection between proper scoring rules and Bregman divergences see
+Abernethy and Frongillo, 2012). Bregman divergences are a generalization
+which encompasses Euclidean geometry (the squared Euclidean distance is a
+Bregman divergence) and its alternatives (for example the Kullback-Leibler
+divergence that I will mention below). Joyce, in line with his use of superval-
+uationist semantics, considers one credence epistemically inferior to another if
+it is inferior on all Bregman divergences. If different divergences give different
+results, inferiority cannot be established.
+There is another way to relate probability distributions to each other and for-
+mulate a concept of difference between them that is less general than Bregman
+divergences. It is based on information theory, originally conceived to model
+the extra coding required when the sender gets the probability distribution
+of the alphabet not quite right. There is a substantial formal theory of in-
+formation, serendipitously cast in terms of probabilities; there is a similarly
+substantial formal theory of probabilities and Bayesian epistemology, also cast
+in terms of probabilities. The formal theories are different: one uses Shannon’s4
+Anonymous
+entropy, a logarithmic measure of difference; the other uses primarily ratios.
+It turns out that the superficial differences are rooted in deep commonalities.
+Information theory can serve as justification for Bayesian norms (probabilism,
+standard conditioning, and Jeffrey conditioning, for the latter two see Lukits,
+2015, 1697f).
+My claim is that this confluence of two formal theories has in itself justificatory
+force. This justificatory force may be small, and there are certainly detractors
+who claim that information theory sometimes, if not often, gives the wrong
+results if applied to epistemology (see Friedman and Shimony, 1971; Diaconis
+and Zabell, 1982, 829; Skyrms, 1987, 241; Walley, 1991, 266ff; Wagner, 1992,
+255; Howson and Franklin, 1994, 465; Uffink, 1995, 14; MacKay, 2003, 308;
+Grünwald and Halpern, 2003, 243ff; Halpern, 2003, 110; Howson and Urbach,
+2006, 287; Neapolitan and Jiang, 2014, 4012). I myself in this paper will add
+to the wrinkles that appear when information theory and epistemology are
+wedded to each other.
+I will hopefully also show, however, that a Euclidean prejudice in these matters
+is more deleterious. Joyce’s supervaluationist solution to these problems using
+Bregman divergences is certainly a reasonable option. Yet just as there is
+something special about Euclidean geometry and its attendant Brier scoring
+rule, there is something special about information theory and its attendant
+Kullback-Leibler divergence. My results in this paper are largely negative:
+there are insurmountable problems for the geometry of reason; there are serious
+problems for information theory. The positive aspect is that formal accounts,
+when they sometimes show surprising coherence or when they can be used
+to yield non-trivial theorems, supply epistemic justification just in terms of
+their formal architecture. I hope to contribute by adding to a sketch of one
+interesting formal architecture, especially its description of how epistemology
+and information theory interlock, and by identifying its problems.
+1.1 Expectations for Jeffrey-Type Updating Scenarios
+For the remainder of this paper I will assume probabilism and an isomorphism
+between probability distributions P on an outcome space Ω with |Ω| = n and
+points p ∈ S n−1 ⊂ R n having coordinates p i = P (ω i ), i = 1, . . . , n and ω i ∈ Ω.
+Since the isomorphism is to a metric space, there is a concept of difference
+between credence functions which can be used to formulate axioms relating
+credences to epistemic utility and to justify or to criticize contentious positions
+such as Bayesian conditionalization, the principle of indifference, other forms
+of conditioning, or probabilism itself (see Joyce, 1998; Leitgeb and Pettigrew,
+2010b; and Greaves and Wallace, 2006).
+For information theory, as opposed to the geometry of reason, the underlying
+topology for credence functions is not a metric space (see figures 1 and 2Asymmetry and the Geometry of Reason
+5
+for illustration). The term information geometry is due to Imre Csiszár, who
+considers the Kullback-Leibler divergence a non-commutative (asymmetric)
+analogue of squared Euclidean distance and derives several results that are
+intuitive information geometric counterparts of standard results in Euclidean
+geometry (see chapter 3 of Csiszár and Shields, 2004).
+Consider the following example of a Jeffrey-type updating scenario.
+Example 1: Sherlock Holmes. Sherlock Holmes attributes the following proba-
+bilities to the propositions E i that k i is the culprit in a crime: P (E 1 ) = 1/3, P (E 2 ) =
+1/2, P (E 3 ) = 1/6, where k 1 is Mr. R., k 2 is Ms. S., and k 3 is Ms. T. Then Holmes
+finds some evidence which convinces him that P 0 (F ∗ ) = 1/2, where F ∗ is the
+proposition that the culprit is male and P is relatively prior to P 0 . What should be
+Holmes’ updated probability that Ms. S. is the culprit?
+I will look at the recommendations of Jeffrey conditioning and LP conditioning
+for example 1 in the next section. For now note that LP conditioning violates
+all of the following plausible expectations in List A for an amujus, an ‘alter-
+native method of updating for Jeffrey-type updating scenarios.’ This is List
+A:
+– continuity An amujus ought to be continuous with standard conditioning
+as a limiting case.
+– regularity An amujus ought not to assign a posterior probability of 0
+to an event which has a positive prior probability and about which the
+intervening evidence says nothing except that a strictly weaker event has
+a positive posterior probability.
+– levinstein An amujus ought not to give “extremely unattractive” results
+in a Levinstein scenario (see Levinstein, 2012, which not only articulates
+this failed expectation for LP conditioning, but also the previous two).
+– invariance An amujus ought to be partition invariant.
+– expansibility An amujus ought to be insensitive to an expansion of the
+event space by zero-probability events.
+– horizon An amujus ought to exhibit the horizon effect which makes prob-
+ability distributions which are nearer to extreme probability distributions
+appear to be closer to each other than they really are.
+Jeffrey conditioning and LP conditioning are both an amujus based on a con-
+cept of quantitative difference between probability distributions. Evidence ap-
+pears in the form of a constraint on acceptable probability distributions and
+the closest acceptable probability to the original (relatively prior) probability
+distribution is chosen as its successor. Here is List B, a list of reasonable
+expectations one may have toward this concept of quantitative difference (we
+call it a distance function for the geometry of reason and a divergence for
+information theory). Let d(p, q) express this concept mathematically.6
+Anonymous
+– triangularity The concept obeys the triangle inequality. If there is an in-
+termediate probability distribution, it will not make the difference smaller:
+d(p, r) ≤ d(p, q) + d(q, r). Buying a pair of shoes is not going to be more
+expensive than buying the two shoes individually.
+– collinear horizon This expecation is just a more technical restatement
+of the horizon expectation in the previous list. If p, p 0 , q, q 0 are collinear
+with the centre of the simplex m (whose coordinates are m i = 1/n for all
+i) and an arbitrary but fixed boundary point ξ ∈ ∂S n−1 and p, p 0 , q, q 0 are
+all between m and ξ with kp 0 − pk = kq 0 − qk where p is strictly closest
+to m, then |d(p, p 0 )| < |d(q, q 0 )|. For an illustration of this expectation see
+figure 3.
+– transitivity of asymmetry An ordered pair (p, q) of simplex points
+associated with probability distributions is asymmetrically negative, posi-
+tive, or balanced, so either d(p, q) − d(q, p) < 0 or d(p, q) − d(q, p) > 0 or
+d(p, q) − d(q, p) = 0. If (p, q) and (q, r) are asymmetrically positive, (p, r)
+ought not to be asymmetrically negative. Think of a bicycle route map
+with different locations at varying altitudes. If it takes 20 minutes to get
+from A to B but only 15 minutes to get from B to A then (A, B) is asym-
+metrically positive. If (A, B) and (B, C) are asymmetrically positive, then
+(A, C) ought not to be asymmetrically negative.
+While the Kullback-Leibler divergence of information theory fulfills all the
+expectations of List A, save horizon, it fails all the expectations in List
+B. Conversely, the Euclidean distance of the geometry of reason fulfills all
+the expectations of List B, save collinear horizon, and fails all the ex-
+pectations in List A. Information theory has its own axiomatic approach
+to justifying probabilism and standard conditioning (see Shore and Johnson,
+1980). Information theory also provides a justification for Jeffrey conditioning
+and generalizes it (see Lukits, 2015). All of these virtues stand in contrast to
+the violations of the expectations in List B. The rest of this paper fills in the
+details of these violations both for the geometry of reason and information
+theory, with the conclusion that the case for the geometry of reason is hope-
+less while the case for information theory is now a major challenge for future
+research projects.
+2 Geometry of Reason versus Information Theory
+Here is a simple example corresponding to example 1 where the distance of
+geometry and the divergence of information theory differ. With this difference
+in mind, I will show how LP conditioning fails the expectations outlined in
+List A. Consider the following three points in three-dimensional space:
+
+a =
+1 1 1
+, ,
+3 2 6
+
+
+b =
+1 3 1
+, ,
+2 8 8
+
+
+c =
+1 5 1
+, ,
+2 12 12
+
+(1)Asymmetry and the Geometry of Reason
+7
+All three are elements of the simplex S 2 : their coordinates add up to 1. Thus
+they represent probability distributions A, B, C over a partition of the event
+space into three mutually exclusive events. Now call D KL (B, A) the Kullback-
+Leibler divergence of B from A defined as follows, where a i are the Cartesian
+coordinates of a (the base of the logarithm is not important, in order to facil-
+itate easy differentiation I will use the natural logarithm):
+D KL (B, A) =
+3
+X
+b i log
+i=1
+b i
+.
+a i
+(2)
+Note that the Kullback-Leibler divergence, irrespective of dimension, is always
+positive as a consequence of Gibbs’ inequality (see MacKay, 2003, sections 2.6
+and 2.7).
+The Euclidean distance is defined as follows:
+v
+u n
+u X
+2
+kB − Ak = t
+(b i − a i ) .
+(3)
+i=1
+The Euclidean distance kB − Ak is defined as in equation (3). What is remark-
+able about the three points in (1) is that
+kC − Ak ≈ 0.204 < kB − Ak ≈ 0.212 (4)
+D KL (B, A) ≈ 0.0589 < D KL (C, A) ≈ 0.069. (5)
+and
+The Kullback-Leibler divergence and Euclidean distance give different re-
+commendations with respect to proximity. In terms of the global inaccuracy
+measure presented in Leitgeb and Pettigrew (see Leitgeb and Pettigrew, 2010a,
+206) and E = W (all possible worlds are epistemically accessible),
+GExp A (C) ≈ 0.653 < GExp A (B) ≈ 0.656.
+(6)
+Global inaccuracy reflects the Euclidean proximity relation, not the recommendation
+of information theory. If A corresponds to my prior and my evidence is such
+that I must change the first coordinate to 1/2 (as in example 1) and noth-
+ing stronger, then information theory via the Kullback-Leibler divergence re-
+commends the posterior corresponding to B; and the geometry of reason as
+expounded in Leitgeb and Pettigrew recommends the posterior corresponding
+to C.8
+Anonymous
+2.1 LP conditioning and Jeffrey Conditioning
+Here is a brief sketch how Leitgeb and Pettigrew arrive at posterior probability
+distributions in Jeffrey-type updating scenarios. I will call their method LP
+conditioning.
+Example 2: Abstract Holmes. Consider a possibility space W = E 1 ∪ E 2 ∪ E 3
+(the E i are sets of states which are pairwise disjoint and whose union is W ) and a
+partition F of W such that F = {F ∗ , F ∗∗ } = {E 1 , E 2 ∪ E 3 }.
+Let P be the prior probability function on W and P 0 the posterior. I will keep
+the notation informal to make this simple, not mathematically precise. Jeffrey-
+type updating scenarios give us new information on the posterior probabilities
+of partitions such as F. In example 2, let
+P (E 1 ) = 1/3
+P (E 2 ) = 1/2
+P (E 3 ) = 1/6
+(7)
+and the new evidence constrain P 0 such that P 0 (F ∗ ) = 1/2 = P 0 (F ∗∗ ).
+Jeffrey conditioning works on the following intuition, which elsewhere I have
+called Jeffrey’s updating principle jup (see also Wagner, 2002). The posterior
+probabilities conditional on the partition elements equal the prior probabilities
+conditional on the partition elements since we have no information in the
+evidence that they should have changed. Hence,
+0
+P JC
+(E i )
+=P 0 (E i |F ∗ )P 0 (F ∗ ) + P 0 (E i |F ∗∗ )P 0 (F ∗∗ )
+=P (E i |F ∗ )P 0 (F ∗ ) + P (E i |F ∗∗ )P 0 (F ∗∗ )
+(8)
+Jeffrey conditioning is controversial (for an introduction to Jeffrey condition-
+ing see Jeffrey, 1965; for its statistical and formal properties see Diaconis and
+Zabell, 1982; for a pragmatic vindication of Jeffrey conditioning see Armendt,
+1980, and Skyrms, 1986; for criticism see Howson and Franklin, 1994). Infor-
+mation theory, however, supports Jeffrey conditioning. Leitgeb and Pettigrew
+show that Jeffrey conditioning does not in general pick out the minimally inac-
+curate posterior probability distribution. If the geometry of reason as presented
+in Leitgeb and Pettigrew is sound, this would constitute a powerful criticism of
+Jeffrey conditioning. Leitgeb and Pettigrew introduce an alternative to Jeffrey
+conditioning, which I call LP conditioning. It proceeds as follows for exam-
+ple 2 and in general provides the minimally inaccurate posterior probability
+distribution in Jeffrey-type updating scenarios.
+Solve the following two equations for x and y:Asymmetry and the Geometry of Reason
+P (E 1 ) + x = P 0 (F ∗ )
+P (E 2 ) + y + P (E 3 ) + y = P 0 (F ∗∗ )
+9
+(9)
+and then set
+0
+P LP
+(E 1 ) = P (E 1 ) + x
+0
+P LP (E 2 ) = P (E 2 ) + y
+0
+P LP
+(E 3 ) = P (E 3 ) + y
+(10)
+For the more formal and more general account see Leitgeb and Pettigrew,
+2010b, 254. The results for example 2 are:
+0
+P LP
+(E 1 ) = 1/2
+0
+P LP (E 2 ) = 5/12
+0
+P LP
+(E 3 ) = 1/12
+(11)
+Compare these results to the results of Jeffrey conditioning:
+0
+P JC
+(E 1 ) = 1/2
+0
+P JC (E 2 ) = 3/8
+0
+(E 3 ) = 1/8
+P JC
+(12)
+Note that (7), (12), and (11) correspond to A, B, C in (1).
+3 Expectations for the Geometry of Reason
+This section provides more detail for the expectations in List A and shows
+how LP conditioning violates them.
+3.1 Continuity
+LP conditioning violates continuity because standard conditioning gives a
+different recommendation than a parallel sequence of Jeffrey-type updating
+scenarios which get arbitrarily close to standard event observation. This is
+especially troubling considering how important the case for standard condi-
+tioning is to Leitgeb and Pettigrew.
+To illustrate a continuity violation, consider the case where Sherlock Holmes
+reduces his credence that the culprit was male to ε n = 1/n for n = 4, 5, . . ..
+The sequence ε n is not meant to reflect a case where Sherlock Holmes becomes10
+Anonymous
+successively more certain that the culprit was female. It is meant to reflect
+countably many parallel scenarios which only differ by the degree to which
+Sherlock Holmes is sure that the culprit was female. These parallel scenarios
+give rise to a parallel sequence (as opposed to a successive sequence) of updated
+0
+0
+probabilities P LP
+(F ∗∗ ) and another sequence of updated probabilities P JC
+(F ∗∗ )
+∗∗
+(F is the proposition that the culprit is female). As n → ∞, both of these
+sequences go to one.
+Straightforward conditionalization on the evidence that ‘the culprit is female’
+gives us
+0
+P SC
+(E 1 ) = 0
+0
+P SC (E 2 ) = 3/4
+0
+P SC
+(E 3 ) = 1/4.
+(13)
+Letting n → ∞ for Jeffrey conditioning yields
+0
+P JC
+(E 1 ) =
+1/n
+→ 0
+0
+P JC (E 2 ) = 3(n − 1)/4n → 3/4
+0
+P JC
+(E 3 ) = (n − 1)/4n → 1/4,
+(14)
+whereas letting n → ∞ for LP conditioning yields
+0
+(E 1 ) =
+1/n
+→ 0
+P LP
+0
+(E 2 ) = (4n − 3)/6n → 2/3
+P LP
+0
+P LP
+(E 3 ) = (2n − 5)/6n → 1/3.
+(15)
+LP conditioning violates continuity.
+3.2 Regularity
+LP conditioning violates regularity because formerly positive probabilities
+can be reduced to 0 even though the new information in the Jeffrey-type
+updating scenario makes no such requirements (as is usually the case for stan-
+dard conditioning). Ironically, Jeffrey-type updating scenarios are meant to be
+a better reflection of real-life updating because they avoid extreme probabili-
+ties.
+The violation becomes serious if we are already sympathetic to an informa-
+tion-based account: the amount of information required to turn a non-extreme
+probability into one that is extreme (0 or 1) is infinite. Whereas the geometry
+of reason considers extreme probabilities to be easily accessible by non-extreme
+probabilities under new information (much like a marble rolling off a table or
+a bowling ball heading for the gutter), information theory envisions extremeAsymmetry and the Geometry of Reason
+11
+probabilities more like an event horizon. The nearer you are to the extreme
+probabilities, the more information you need to move on. For an observer, the
+horizon is never reached.
+Example 3: Regularity Holmes. Everything is as in example 1, except that
+Sherlock Holmes becomes confident to a degree of 2/3 that Mr. R is the culprit and
+updates his relatively prior probability distribution in (7).
+Then his posterior probabilities look as follows:
+0
+P JC
+(E 1 ) = 2/3
+0
+P JC
+(E 2 ) = 1/4
+0
+P JC
+(E 3 ) = 1/12 (16)
+0
+P LP
+(E 1 ) = 2/3
+0
+P LP
+(E 2 ) = 1/3
+0
+P LP
+(E 3 ) = 0 (17)
+With LP conditioning, Sherlock Holmes’ subjective probability that Ms. T
+is the culprit in example 3 has been reduced to zero. No finite amount of
+information could bring Ms. T back into consideration as a culprit in this crime,
+and Sherlock Holmes should be willing to bet any amount of money against a
+penny that she is not the culprit—even though his evidence is nothing more
+than an increase in the probability that Mr. R is the culprit.
+LP conditioning violates regularity.
+3.3 Levinstein
+LP conditioning violates levinstein because of “the potentially dramatic
+effect [LP conditioning] can have on the likelihood ratios between different
+propositions” (Levinstein, 2012, 419.). Consider Benjamin Levinstein’s exam-
+ple:
+Example 4: Levinstein’s Ghost. There is a car behind an opaque door, which
+you are almost sure is blue but which you know might be red. You are almost
+certain of materialism, but you admit that there’s some minute possibility that
+ghosts exist. Now the opaque door is opened, and the lighting is fairly good. You
+are quite surprised at your sensory input: your new credence that the car is red is
+very high.
+Jeffrey conditioning leads to no change in opinion about ghosts. Under LP con-
+ditioning, however, seeing the car raises the probability that there are ghosts to12
+Anonymous
+an astonishing 47%, given Levinstein’s reasonable priors. Levinstein proposes
+a logarithmic inaccuracy measure as a remedy to avoid violation of levin-
+stein. As a special case of applying a Levinstein-type logarithmic inaccuracy
+measure, information theory does not violate levinstein.
+3.4 Invariance
+LP conditioning violates invariance because two agents who have identical
+credences with respect to a partition of the event space may disagree about this
+partition after LP conditioning, even when the Jeffrey-type updating scenario
+provides no new information about the more finely grained partitions on which
+the two agents disagree.
+Example 5: Jane Marple. Jane Marple is on the same case as Sherlock Holmes in
+example 1 and arrives at the same relatively prior probability distribution as Sher-
+lock Holmes (I will call Jane Marple’s relatively prior probability distribution Q and
+her posterior probability distribution Q 0 ). Jane Marple, however, has a more finely
+grained probability assignment than Sherlock Holmes and distinguishes between
+the case where Ms. S went to boarding school with her, of which she has a vague
+memory, and the case where Ms. S did not and the vague memory is only about a
+fleeting resemblance of Ms. S with another boarding school mate. Whether or not
+Ms. S went to boarding school with Jane Marple is completely beside the point
+with respect to the crime, and Jane Marple considers the possibilities equiprobable
+whether or not Ms. S went to boarding school with her.
+Let E 2 ≡ E 2 ∗ ∨ E 2 ∗∗ , where E 2 ∗ is the proposition that Ms. S is the culprit and
+she went to boarding school with Jane Marple and E 2 ∗∗ is the proposition that
+Ms. S is the culprit and she did not go to boarding school with Jane Marple.
+Then
+Q(E 1 ) = 1/3
+Q(E 2 ∗ ) = 1/4
+Q(E 2 ∗∗ ) = 1/4
+Q(E 3 ) = 1/6.
+(18)
+Now note that while Sherlock Holmes and Jane Marple agree on the relevant
+facts of the criminal case (who is the culprit?) in their posterior probabilities
+if they use Jeffrey conditioning,
+0
+P JC
+(E 1 ) = 1/2
+0
+P JC (E 2 ) = 3/8
+0
+P JC
+(E 3 ) = 1/8
+(19)Asymmetry and the Geometry of Reason
+13
+Q 0 JC (E 1 ) = 1/2
+Q 0 JC (E 2 ∗ ) = 3/16
+Q 0 JC (E 2 ∗∗ ) = 3/16
+Q 0 JC (E 3 ) = 1/8
+(20)
+they do not agree if they use LP conditioning,
+0
+P LP
+(E 1 ) = 1/2
+0
+P LP (E 2 ) = 5/12
+0
+P LP
+(E 3 ) = 1/12
+Q 0 LP (E 1 )
+Q 0 LP (E 2 ∗ )
+Q 0 LP (E 2 ∗∗ )
+Q 0 LP (E 3 )
+=
+=
+=
+=
+1/2
+7/36
+7/36
+1/9.
+(21)
+(22)
+LP conditioning violates invariance.
+3.5 Expansibility
+One particular problem with the lack of invariance for LP conditioning is how
+zero-probability events should be included in the list of prior probabilities that
+determines the value of the posterior probabilities. Consider
+P (X 1 )
+P (X 2 )
+P (X 3 )
+P (X 4 )
+=
+=
+=
+=
+0
+0.3
+0.6
+0.1
+(23)
+That P (X 1 ) = 0 may be a consequence of standard conditioning in a previous
+step. Now the agent learns that P 0 (X 3 ∨ X 4 ) = 0.5. Should the agent update
+on the list presented in (23) or on the following list:
+P (X 2 ) = 0.3
+P (X 3 ) = 0.6
+P (X 4 ) = 0.1
+(24)
+Whether you update on (23) or (24) makes no difference to Jeffrey condition-
+ing, but due to the lack of invariance it makes a difference to LP conditioning,
+so the geometry of reason needs to find a principled way to specify the ap-
+propriate prior probabilities. The only non-arbitrary way to do this is either
+to include or to exclude all zero probability events on the list. This strategy,14
+Anonymous
+however, sounds ill-advised unless one signs on to a stronger version of regu-
+larity and requires that only a fixed set of events can have zero probabilities
+(such as logical contradictions), but then the geometry of reason ends up in
+the catch-22 of LP conditioning running afoul of regularity.
+LP conditioning violates expansibility.
+3.6 Horizon
+Example 6: Undergraduate Complaint. An undergraduate student complains
+to the department head that the professor will not reconsider an 89% grade (which
+misses an A+ by one percent) when reconsideration was given to other students
+with a 67% grade (which misses a B- by one percent).
+Intuitions may diverge, but the professor’s reasoning is as follows. To improve
+a 60% paper by ten percent is easily accomplished: having your roommate
+check your grammar, your spelling, and your line of argument will sometimes
+do the trick. It is incomparably more difficult to improve an 85% paper by
+ten percent: it may take doing a PhD to turn a student who writes the former
+into a student who writes the latter. A maiore ad minus, the step from 89%
+to 90% is greater than the step from 67% to 68%.
+Another example for the horizon effect is George Schlesinger’s comparison
+between the risk of a commercial airplane crash and the risk of a military
+glider landing in enemy territory.
+Example 7: Airplane Gliders. Compare two scenarios. In the first, an airplane
+which is considered safe (probability of crashing is 1/10 9 ) goes through an inspection
+where a mechanical problem is found which increases the probability of a crash to
+1/100. In the second, military gliders land behind enemy lines, where their risk of
+perishing is 26%. A slight change in weather pattern increases this risk to 27%.
+(Schlesinger, 1995, 211.)
+I claim that an amujus ought to fulfill the requirements of the horizon effect:
+it ought to be more difficult to update as probabilities become more extreme
+(or less middling). I have formalized this requirement in List B. It is trivial
+that the geometry of reason does not fulfill it. Information theory fails as
+well, which gives the horizon effect its prominent place in both lists. The
+way information theory fails, however, is quite different. Near the boundary
+of S n−1 , information theory reflects the horizon effect just as our expectation
+requires. The problem is near the centre, where some equidistant points are
+more divergent the closer they are to the middle. I will give an example and
+more explanation in subsection 4.2.Asymmetry and the Geometry of Reason
+15
+4 Expectations for Information Theory
+Asymmetry is the central feature of the difference concept that information
+theory proposes for the purpose of updating between finite probability dis-
+tributions. In information theory, the information loss differs depending on
+whether one uses probability distribution P to encode a message distributed
+according to probability distribution Q, or whether one uses probability distri-
+bution Q to encode a message distributed according to probability distribution
+P . This asymmetry may very well carry over into the epistemic realm. Updat-
+ing from one probability distribution, for example, which has P (X) = x > 0
+to P 0 (X) = 0 is common. It is called standard conditioning. Going in the op-
+posite direction, however, from P (X) = 0 to P 0 (X) = x 0 > 0 is controversial
+and unusual.
+The Kullback-Leibler divergence, which is the most promising concept of dif-
+ference for probability distributions in information theory and the one which
+gives us Bayesian standard conditioning as well as Jeffrey conditioning, is
+non-commutative and may provide the kind of asymmetry required to reflect
+epistemic asymmetry. However, it also violates triangularity, collinear
+horizon, and transitivity of asymmetry. The task of this section is to
+show how serious these violations are.
+4.1 Triangularity
+There is an interesting connection between LP conditioning and Jeffrey con-
+ditioning as updating methods. Let B be on the zero-sum line between A and
+C if and only if
+d(A, C) = d(A, B) + d(B, C)
+(25)
+where d is the difference measure we are using, so d(A, B) = kB − Ak for the
+geometry of reason and d(A, B) = D KL (B, A) for information geometry. For
+the geometry of reason (and Euclidean geometry), the zero-sum line between
+two probability distributions is just what we intuitively think of as a straight
+line: in Cartesian coordinates, B is on the zero-sum line strictly between A
+and C if and only if for some θ ∈ (0, 1), b i = θa i + (1 − θ)c i and i = 1, . . . , n.
+What the zero-sum line looks like for information theory is illustrated in figure
+5. The reason for the oddity is that the Kullback-Leibler divergence does not
+obey triangularity. Call B a zero-sum point between A and C if (25) holds
+true. For the geometry of reason, the zero-sum points are simply the points
+on the straight line between A and C. For information geometry, the zero-sum
+points are the boundary points of the set where you can take a shortcut by
+making a detour, i.e. all points for which d(A, B) + d(B, C) < d(A, C).16
+Anonymous
+Remarkably, if A represents a relatively prior probability distribution and
+C the posterior probability distribution recommended by LP conditioning,
+the posterior probability distribution recommended by Jeffrey conditioning is
+always a zero-sum point with respect to the Kullback-Leibler divergence:
+D KL (C, A) = D KL (B, A) + D KL (C, B)
+(26)
+Informationally speaking, if you go from A to C, you can just as well go from
+A to B and then from B to C. This does not mean that we can conceive of
+information geometry the way we would conceive of non-Euclidean geometry,
+where it is also possible to travel faster on what from a Euclidean perspective
+looks like a detour. For in information geometry, you can travel faster on what
+from the perspective of information theory (!) looks like a detour, i.e. the
+triangle inequality does not hold.
+Before we get carried away with these analogies between divergences and met-
+rics, however, it is important to note that it is not appropriate to impose
+expectations that are conventional for metrics on divergences. Bregman di-
+vergences, for example, in some sense violate the triangle equality by design.
+If d f is a Bregman divergence with the corresponding convex function f (for
+example, f P
+(x) is the inner product hx, xi for the squared Euclidean distance;
+n
+or f (x) = i=1 x i log x i for the Kullback-Leibler divergence), then for convex
+n
+C ∈ R and all x ∈ C and y ∈ R n the following reverse triangle inequality is
+true:
+d f (x, y) ≥ d f (x, y 0 ) + d f (y 0 , y),
+(27)
+where y 0 is the projection of y onto C such that d f (z, y), z ∈ C, is minimal.
+The squared Euclidean distance is an interesting case in point for this prop-
+erty. In a generalization of the Pythagorean theorem, c 2 > a 2 + b 2 holds for
+obtuse triangles; and when C is affine, (27) becomes an equation for all Breg-
+man divergences and reduces to the conventional Pythagorean theorem for the
+squared Euclidean distance. To subject the difference concept between prob-
+ability distributions to a triangularity requirement may be a temptation
+to resist and only reveal another instance of the Euclidean prejudice identified
+by Mormann.
+To prove equation (26) in the case n = 3 (assuming that LP conditioning does
+not ‘fall off the edge’ as in case (b) in Leitgeb and Pettigrew, 2010b, 253) note
+that all three points (prior, point recommended by Jeffrey conditioning, point
+recommended by LP conditioning) can be expressed using three variables:Asymmetry and the Geometry of Reason
+17
+A = (1 − α, β, α − β)
+
+
+γ(α−β)
+B = 1 − γ, γβ
+α ,
+α
+(28)
+
+C = 1 − γ, β + 12 (γ − α), α − β + 2 1 (γ − α)
+The rest is basic algebra using the definition of the Kullback-Leibler divergence
+in (2). To prove the claim for arbitrary n one simply generalizes (28). It is a
+handy corollary of (26) that whenever (A, B) and (B, C) violate transitivity
+of asymmetry then
+D KL (A, C) > D KL (B, C) + D KL (A, B)
+(29)
+Consequently, the three points A, B, C in (1) violate triangularity. Infor-
+mation theory, however, does not only violate triangularity. It violates it
+in a particularly egregious way. Consider any distinct two points x and z on
+S n−1 with coordinates x i and z i (1 ≤ i ≤ n). For simplicity, let us write
+δ(x, z) = D KL (z, x). Then, for any θ ∈ (0, 1) and an intermediate point y with
+coordinates y i = θx i + (1 − θ)z i , the following inequality holds true:
+δ(x, z) > δ (x, y) + δ (y, z) .
+(30)
+It is straightforward to see that (30) is equivalent to
+n
+X
+i=1
+(z i − x i ) log
+θx i + (1 − θ)z i
+> 0.
+x i
+(31)
+Now I use the following trick. Expand the right hand side to
+n 
+X
+i=1
+
+θ
+θ
+z i +
+x i −
+x i − x i log
+1 − θ
+1 − θ
+1
+1−θ
+(θx i + (1 − θ)z i )
+1
+1−θ x i
+> 0.
+(32)
+(32) is clearly equivalent to (31). It is also equivalent to
+n 
+X
+z i +
+i=1
+
+n
+θ
+1
+z i + 1−θ
+x i X
+θ
+1
+1−θ x i
+x i log
++
+x
+log
+> 0, (33)
+i
+1
+θ
+1 − θ
+1 − θ
+z i + 1−θ
+x i
+1−θ x i
+i=1
+which is true by Gibbs’ inequality. Like Bregman divergences in general, the
+Kullback-Leibler divergence in particular violates triangularity by design.18
+Anonymous
+4.2 Collinear Horizon
+There are two intuitions at work that need to be balanced: on the one hand,
+the geometry of reason is characterized by simplicity, and the lack of curvature
+near extreme probabilities may be a price worth paying; on the other hand,
+simple examples such as example 7 make a persuasive case for curvature.
+Information theory is characterized by an intuitively opaque ‘semi-quasimetric’
+(the attribute ‘quasi’ is due to its non-commutativity, the attribute ‘semi’ to
+its violation of the triangle inequality). One of its initial appeals is that it
+performs well with respect to the horizon requirement near the boundary of
+the simplex, which is also the location of Schlesinger’s examples. It is not
+trivial, however, to articulate what the horizon requirement really demands.
+collinear horizon in List B seeks to set up the requirement as weakly
+as possible, only demanding that points collinear with the centre exhibit the
+horizon effect. The hope is that continuity will take care of the rest, since I want
+the horizon effect also for probability distributions that are not collinear with
+the centre. Be that as it may, the Kullback-Leibler divergence fails collinear
+horizon. Here is a simple example.
+
+p =
+1 2 2
+, ,
+5 5 5
+
+p 0 = q =
+
+1 3 3
+, ,
+4 8 8
+
+q 0 =
+
+3 7 7
+, ,
+10 20 20
+
+(34)
+The conditions of collinear horizon in List B are fulfilled. If p represents
+A, p 0 and q represent B, and q 0 represents C, then note that kb − ak = kc − bk
+and m, a, b, c are collinear. In violation of collinear horizon,
+D KL (B, A) = 7.3820 · 10 −3 > 6.4015 · 10 −3 = D KL (C, B).
+(35)
+Just as there is still a reasonable disagreement about difference measures
+(which do not exhibit the horizon effect) and ratio measures (which do) in
+degree of confirmation theory, most of us will not have strong intuitions about
+the adequacy of information theory based on its violation of collinear hori-
+zon. One way in which I can attenuate the independent appeal of this violation
+against information theory is by making it parasitic on the asymmetry of in-
+formation theory.
+Figure 6 illustrates what I mean. Consider the following two inequalities, where
+M is represented by the centre m of the simplex with m i = 1/n and Y is an
+arbitrary probability distribution with X as the midpoint between M and Y ,
+so x i = 0.5(m i + y i ).
+(i) D KL (Y, M ) > D KL (M, Y ) and (ii) D KL (X, M ) > D KL (Y, X)
+(36)Asymmetry and the Geometry of Reason
+19
+In terms of coordinates, the inequalities reduce to (H being the Shannon
+entropy)
+(i) H(y) <
+(ii) H(y) > log
+1 X
+1
+(log y i ) − log 2 and
+n
+n
+4 X
+−
+n
+
+3
+1
+y i +
+2
+2n
+
+
+
+1
+log y i +
+.
+n
+(37)
+(38)
+(i) is simply the case described in the next subsection for asymmetry and
+illustrated on the bottom left of figure 7. (ii) tells us how far from the midpoint
+I can go with a scenario where p = m, p 0 = q while violating collinear
+horizon. Clearly, as illustrated in figure 6, there is a relationship between
+asymmetry and collinear horizon.
+It is not transparent what motivates information theory not only to put prob-
+ability distributions farther apart near the periphery, as I would expect, but
+also near the centre. I lack the epistemic intuition reflected in the behaviour.
+The next subsection on asymmetry deals with this lack of epistemic intuition
+writ large.
+z
+A
+x
+y
+Fig. 1 The simplex S 2 in three-dimensional space R 3 with con-
+tour lines corresponding to the geometry of reason around point
+A in equation (1). Points on the same contour line are equidis-
+tant from A with respect to the Euclidean metric. Compare the
+contour lines here to figure 2. Note that this diagram and all the
+following diagrams are frontal views of the simplex.20
+Anonymous
+z
+A
+x
+y
+Fig. 2 The simplex S 2 with contour lines corresponding to in-
+formation theory around point A in equation (1). Points on the
+same contour line are equidistant from A with respect to the
+Kullback-Leibler divergence. The contrast to figure 1 will be-
+come clear in much more detail in the body of the paper. Note
+that the contour lines of the geometry of reason are insensitive
+to the boundaries of the simplex, while the contour lines of infor-
+mation theory reflect them. One of the main arguments in this
+paper is that information theory respects epistemic intuitions we
+have about asymmetry: proximity to extreme beliefs with very
+high or very low probability influences the topology that is at
+the basis of updating.
+4.3 Transitivity of Asymmetry
+Asymmetry presents a problem for the geometry of reason as well as for in-
+formation theory. For the geometry of reason, the problem is akin to conti-
+nuity. For information theory, the problem is the non-trivial nature of the
+asymmetries it induces, which somehow need to be reconnected to epistemic
+justification. I will consider this problem in a moment, but first I will have a
+look at the problem for the geometry of reason.
+Extreme probabilities are special and create asymmetries in updating: mov-
+ing in direction from certainty to uncertainty is asymmetrical to moving in
+direction from uncertainty to certainty. Geometry of reason’s metric topology,
+however, allows for no asymmetries.
+Example 8: Extreme Asymmetry. Consider two cases where for case 1 the
+prior probabilities are Y 1 = (0.4, 0.3, 0.3) and the posterior probabilities are Y 1 0 =Asymmetry and the Geometry of Reason
+21
+z
+q
+q ′
+x
+ξ
+p
+m
+p ′
+y
+Fig. 3 An illustrations of conditions (i)–(iii) for collinear
+horizon in List B. p, p 0 and q, q 0 must be equidistant and
+collinear with m and ξ. If q, q 0 is more peripheral than p, p 0 ,
+then collinear horizon requires that |d(p, p 0 )| < |d(q, q 0 )|.
+(0, 0.5, 0.5); for case 2 the prior probabilities are reversed, so Y 2 = (0, 0.5, 0.5) and
+the posterior probabilities Y 2 0 = (0.4, 0.3, 0.3).
+Case 1 is a straightforward application of standard conditioning. Case 2 is
+more complicated: what does it take to raise a prior probability of zero to a
+positive number? In terms of information theory, the information required is
+infinite. Case 2 is also not compatible with standard conditioning (at least
+not with what Alan Hájek calls the ratio analysis of conditional probability,
+see Hájek, 2003). The geometry of reason may want to solve this problem by
+signing on to a version of regularity, but then it violates regularity. Happy
+kids, clean house, sanity: the hapless homemaker must pick two. The third
+remains elusive. Continuity, a consistent view of regularity, and symmetry:
+the hapless geometer of reason cannot have it all.
+Now turn to information theory. Given the asymmetric similarity measure
+of probability distributions that information theory requires (the Kullback-
+Leibler divergence), a prior probability distribution P may be closer to a pos-
+terior probability distribution Q than Q is to P if their roles (prior-posterior)
+are reversed. That is just what we would expect. The problem is that there is
+another posterior probability distribution R where the situation is just the op-
+posite: prior P is further away from posterior R than prior R is from posterior
+P . And whether a probability distribution different from P is of the Q-type
+or of the R-type escapes any epistemic intuition.22
+Anonymous
+z
+B
+A
+C
+x
+y
+Fig. 4 The simplex S 2 in three-dimensional space R 3 with
+points a, b, c as in equation (1) representing probability distri-
+butions A, B, C. Note that geometrically speaking C is closer to
+A than B is. Using the Kullback-Leibler divergence, however, B
+is closer to A than C is.
+For simplicity, let us consider probability distributions and their associated cre-
+dence functions on an event space with three mutually exclusive and jointly
+comprehensive atoms Ω = {ω 1 , ω 2 , ω 3 }. The simplex S 2 represents all of these
+probability distributions. Every point p in S 2 representing a probability dis-
+tribution P induces a partition on S 2 into points that are symmetric to p,
+positively skew-symmetric to p, and negatively skew-symmetric to p given the
+topology of information theory.
+In other words, if
+∆ P (P 0 ) = D KL (P 0 , P ) − D KL (P, P 0 ),
+(39)
+then, holding P fixed, S 2 is partitioned into three regions,
+∆ −1 (R >0 )
+∆ −1 (R <0 )
+∆ −1 ({0})
+(40)
+One could have a simple epistemic intuition such as ‘it takes less to update
+from a more uncertain probability distribution to a more certain probabil-
+ity distribution than the reverse direction,’ where the degree of certainty in
+a probability distribution is measured by its entropy. This simple intuition
+accords with what we said about extreme probabilities and it holds true forAsymmetry and the Geometry of Reason
+23
+z
+B
+E
+A
+C
+x
+y
+Fig. 5 The zero-sum line between A and C is the boundary line
+between the green area, where the triangle inequality holds, and
+the red area, where the triangle inequality is violated. The pos-
+terior probability distribution B recommended by Jeffrey condi-
+tioning always lies on the zero-sum line between the prior A and
+the LP posterior C, as per equation (26). E is the point in the
+red area where the triangle inequality is most efficiently violated.
+Even though it can be calculated using the Lambert
+P W function,
+ c c k
+ , with λ chosen to fulfill
+e k =
+e k = 1, it is
+k
+W
+ak
+exp(1+λ)
+not clear to me whether E is the midpoint between A and C or
+not.
+the asymmetric distance measure defined by the Kullback-Leibler divergence
+in the two-dimensional case where Ω has only two elements.
+In higher-dimensional cases, however, the tripartite partition (40) is non-
+trivial—some probability distributions are of the Q-type, some are of the R-
+type, and it is difficult to think of an epistemic distinction between them that
+does not already presuppose information theory (see figure 7 for illustration).
+On any account of well-behaved and ill-behaved asymmetries, the Kullback-
+Leibler divergence is ill-behaved. Of the four axioms as listed by Ralph Kop-
+perman for a distance measure d (see Kopperman, 1988, 89), the Kullback-
+Leibler divergence violates both symmetry and triangularity, making it a ‘semi-
+quasimetric’:
+(m1)
+(m2)
+(m3)
+(m4)
+d(x, x) = 0 (self-similarity)
+d(x, z) ≤ d(x, y) + d(y, z) (triangularity)
+d(x, y) = d(y, x) (symmetry)
+d(x, y) = 0 implies x = y (separation)24
+Anonymous
+Fig. 6 These two diagrams illustrate inequalities (37) and (38). The former displays all
+points in red which violate collinear horizon, measured from the centre. The latter dis-
+plays points in different colours whose orientation of asymmetry differs, measured from the
+centre. The two red sets are not the same, but there appears to be a relationship, one that
+ultimately I suspect to be due to the more basic property of asymmetry.
+The Kullback-Leibler divergence not only violates symmetry and triangularity,
+but also transitivity of asymmetry. For a description of transitivity
+of asymmetry see List B. For an example of it, consider
+
+P 1 =
+1 1 1
+, ,
+2 4 4
+
+
+P 2 =
+1 1 1
+, ,
+3 3 3
+
+
+P 3 =
+2 2 1
+, ,
+5 5 5
+
+(41)
+In the terminology of transitivity of asymmetry in List B, (P 1 , P 2 ) is
+asymmetrically positive, and so is (P 2 , P 3 ). The reasonable expectation is that
+(P 1 , P 3 ) is asymmetrically positive by transitivity, but for the example in (41)
+it is asymmetrically negative.
+How counterintuitive this is (epistemically and otherwise) is demonstrated by
+the fact that in MDS (the multi-dimensional scaling of distance relationships)
+almost all asymmetric distance relationships under consideration are asymmet-
+rically transitive in this sense, for examples see international trade in Chino,
+1978; journal citation in Coombs, 1964; car switch in Harshman et al, 1982;
+telephone calls in Harshman and Lundy, 1984; interaction or input-output
+flow in migration, economic activity, and social mobility in Coxon, 1982; flight
+time between two cities in Gentleman et al, 2006, 191; mutual intelligibility
+between Swedish and Danish in van Ommen et al, 2013, 193; Tobler’s wind
+model in Tobler, 1975; and the cyclist lovingly hand-sketched in Kopperman,
+1988, 91.
+This ‘ill behaviour’ of information theory begs for explanation, or at least
+classification (it would help, for example, to know that all reasonable non-Asymmetry and the Geometry of Reason
+25
+Fig. 7 The partition (40) based on different values for P . From top left to bottom right,
+P = (0.4, 0.4, 0.2); P = (0.242, 0.604, 0.154); P = (1/3, 1/3, 1/3); P = (0.741, 0.087, 0.172).
+Note that for the geometry of reason, the diagrams are trivial. The challenge for information
+theory is to explain the non-triviality of these diagrams epistemically without begging the
+question.
+commutative difference measures used for updating are ill-behaved). For a fu-
+ture research project, it would be interesting either to see information theory
+debunked in favour of an alternative geometry (this paper has demonstrated
+that this alternative will not be the geometry of reason); or to see unique-
+ness results for the Kullback-Leibler divergence to show that despite its ill
+behaviour the Kullback-Leibler is the right asymmetric distance measure on
+which to base inference and updating.26

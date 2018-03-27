@@ -1,0 +1,13 @@
+print "Judy Benjamin. Priors: a, b, c. Posteriors: x, y, z. Let y=kx. Then what are x, y, z?\n";
+print "Enter a (for Judy, this would be 0.25): ";
+$a=<STDIN>;
+chomp($a);
+print "Enter b (for Judy, this would be 0.25): ";
+$b=<STDIN>;
+chomp($b);
+print "Enter c (for Judy, this would be 0.5): ";
+$c=<STDIN>;
+chomp($c);
+print "Enter k (for Judy, this would be 3): ";
+$k=<STDIN>;
+chomp($k);

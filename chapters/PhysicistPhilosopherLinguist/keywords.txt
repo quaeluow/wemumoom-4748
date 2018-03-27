@@ -1,0 +1,10 @@
+formal epistemology
+Jaynes
+Jeffrey conditioning
+joint probabilities
+minimum cross-entropy
+principle of maximum entropy
+probability kinematics
+probability update
+updating on conditionals
+Wagner

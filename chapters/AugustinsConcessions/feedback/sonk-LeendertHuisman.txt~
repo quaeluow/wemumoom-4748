@@ -1,0 +1,159 @@
+From lmhuisman35@gmail.com Wed Dec  3 20:32:39 2014
+Date: Wed, 3 Dec 2014 15:32:38 -0500
+Subject: Re: Judy Benjamin
+From: Leendert Huisman <lmhuisman35@gmail.com>
+To: Stefan Lukits <sediomyle@gmail.com>
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset=utf-8
+Status: RO
+
+Hi Stefan,
+
+I am still reading your draft, but I can already give some feedback.
+
+You argue that indeterminate credences are implausible because
+Booleans, as you call them, have to concede two points, J1 and J2, in
+order to overcome objections by Laplacians, but, once they do that,
+they have no real arguments left to defend indeterminacy from a
+semantic viewpoint. I haven't finished reading the second half of your
+paper, so I don't know whether I will agree that, once J1 and J2 have
+been conceded, there is little left with which to defend
+indeterminacy. I am not sure, however, that I will have to make that
+decision because I do not agree that Booleans need to concede J1.
+
+First, about J2; abandoning CGT. You write that Joyce conceded the
+necessity of abandoning J2, but I don't see that. I don't get the
+impression that he ever tried to defend CGT, nor do I see that it
+matters. Indeterminacy is coherent wherever the credences come from;
+at least, you do not make the case that they are not. CGT, as Joyce
+write, is "merely the most extreme of a range of possibilities". Of
+course, epistemologically CGT is important, but, as far as credences
+are concerned, nothing important seems to depend on it.
+
+Now about J1. You write "Joyce does an admirable job showing both that
+(J1) and (J2) address White's dilation problem and that they are
+necessary in order to avoid White's counter-intuitive results". You
+add a reference, but with a strange page number (13f ?), so I could
+not verify this statement. What does Joyce actually say and how does
+he show the sufficiency and necessity of accepting (J1) and (J2) ? You
+use Joyce's Three-sided Die example and conclude that "C and C*
+generate the same instates", but that seems to be wrong. Instates, if
+I understand you correctly, are sets of credence functions, and, since
+C* is a proper subset of C, they do differ. Joyce, in fact, uses that
+difference to argue that the full sets of credence functions are
+required and not some derived measure such as upper and lower bounds,
+or actual ranges. As an aside, I understand Joyce's point but I do not
+agree that this example shows the need for full sets of credence
+functions. If c(Z) >= 0.5 then c(X) + c(Y) < 0.5 for all c in both C
+and C*. Furthermore, however, if c(X) = c(Y) then c(X) < 0.25 in C*
+but not in C, so even bounds would already show the difference between
+C and C*.
+
+Unless I am missing something in Joyce's paper, I don't see him
+admitting that sets of credence functions do not adequately represent
+evidence in the sense that different evidence streams that should lead
+to different credences lead instead to identical indeterminate
+credence sets. The only place where he seems to argue for such a
+result is when he addresses the Black/Grey coin example and considers
+when the coin is flipped some number of times with both grey and black
+showing up. He essentially claims that, regardless of how often black
+and grey appear, nothing gets learned because the indeterminate
+credence state do not change, but he gives some reasons for why that
+is not unreasonable. I have a separate problem with that example,
+because it don't think it is obvious that the indeterminate credence
+states do not change. Of course, each posterior credence state is a
+subset of the (what you call) absolute prior one, but I don't have a
+proof that the reverse is true as well. How does he know that every
+prior c(.) can be obtained as the posterior of some other prior c*(.)
+? Is there a proof of that statement ? Maybe that proof is embedded in
+a result by Diaconis and Zabell.
+
+Sorry for being so negative. I am very interested in the problem of
+the justification of indeterminacy, and only by trying to disprove it
+can we become sure that it is coherent and justifiable. I hope you can
+find some good arguments to overcome my objections.
+
+Leendert
+
+On Wed, Nov 19, 2014 at 7:46 PM, Stefan Lukits <sediomyle@gmail.com> wrote:
+> Leendert,
+>
+> I am still off and on puzzling about this job offer problem. One thing I noticed is that if P=(a,b;c,d) is the probability matrix as you suggest below, then P(J|M)>>P(J|not-M), which according to you (and plausibly so) encodes the information that Tom is interested in moving West, then this information can also (and equivalently) be encoded using det(P)>>0. It would be nice if all of this lined up mathematically with alpha divergences. My suspicion is still that if all the conditional prior probabilities are determinate then your updating story won't hold water. Determinacy, as I see it at the moment, is a huge factor in the examples and counter-examples that are bounced around in the updating debates. (Your updating story, for example, may only work out for you if the conditional probabilities firm up after Harry talks to Sue, but not before -- although I don't see a reason why Harry wouldn't have had all the conditional probabilities already specified ahead of time, minding his Bayesian manners.)
+>
+> So, the reason for my email is that I finally have a presentable, if quite drafty, version of my paper on sharp and indeterminate credences. If I remember correctly, your paper was sympathetic towards indeterminate credences, and I think I can show that if such is the case, you cannot endorse the principle of maximum entropy. Vice versa, of course, if I endorse the principle of maximum entropy, then I must be unsympathetic towards indeterminate credences, which I try to be in this paper. Would you mind reading it and giving me some feedback? I'd love to see what you have to say.
+>
+> Stefan
+>
+> On Sat, Jul 26, 2014 at 10:41:12AM -0400, Leendert Huisman wrote:
+>>    Hi Stefan,
+>>    I hope you are enjoying Europe. We will be there the end of August, but
+>>    not in Scandinavia, so no beer.
+>>    You make a good point. I had indeed not thought through the example as
+>>    well as I should have. I do not agree with your probability matrix, so
+>>    let me reconstruct it my way. It will not change your criticism.
+>>    Let's start with setting P(J and M) to a. Since Harry knows that Tom
+>>    would like to move west, P(J and M) >> (not-J and M), so let's set
+>>    P(not-J and M) to a\5. Other than that, Harry has no idea whether Tom
+>>    will accept the job or not, so P(J) = P(not-J) = 0.5. This determines
+>>    the full matrix:
+>>               J             not-J
+>>    M         a            a/5          6a\5
+>>    not-M   0.5 - a     0.5 - a\5  1.0 - 6a\5
+>>               0.5          0.5
+>>    Now, what is a ? My thinking was (not spelled out, though, in the
+>>    paper) that P(J|not_M) ~ P(not-J|not-M); Harry feels that, in the
+>>    absence of a move west, there is not much too choose between J and
+>>    not-J. Consequently, a has to be small, so let's set it to 0.1. This
+>>    gives
+>>                J             not-J
+>>    M         0.1           0.02         0.12
+>>    not-M    0.4          0.48         0.88
+>>                0.5          0.5
+>>    Now, you argue that P(J and M) should be much larger than P(J and
+>>    not_M). I disagree. Instead, P(J|M) should be much larger than
+>>    P(J|not_M). In this case, P(J|M) = 5/6 and P(J|not-M) ~ 0.45. Not a lot
+>>    larger, but, still, larger.
+>>    For this final matrix, I think it is uncontroversial that the credence
+>>    in J should increase if Harry now learns that P(J and M) / P(J and
+>>    not-M) = 3. This looks good for me, but what if we vary a ? Let us
+>>    demand that P(J|M) = 5.P(J|not-M).
+>>    This gets closer to your original requirement. We find that a = 5/12
+>>    and the probability matrix becomes
+>>                J             not-J
+>>    M         5/12         1/12         0.5
+>>    not-M    1/12        5/12         0.5
+>>                0.5          0.5
+>>    We are now back at your point. Harry overestimates P(J and M) / P(J and
+>>    not-M), so what will happen to his credence in J when he learns that
+>>    the ratio is only 3 ? I may be able to wave my hands and argue that
+>>    P(J) will still increase, but I don't see the point: the obviousness is
+>>    gone. Instead, I would like to present an alternative proof of the
+>>    bounds I derive in my article (at least for the 2x2 matrix). It was
+>>    inspired by your arguments, so you may appreciate its simplicity.
+>>    Consider the matrix
+>>       a      b      a+b
+>>       c      d      c+d
+>>       a+c  b+d  a+b+c+d
+>>    with the obvious requirement that a+b+c+d = 1. We now learn that a/b =
+>>    r. How should we change the matrix ? In particular, what happens to the
+>>    sum of the elements in the first column ? There are two easy ways of
+>>    accomplishing this goal: set a to r.c or set c to a/r; leave the other
+>>    elements as they are and then renormalize. Of course, we could also do
+>>    anything in between: set a to c.s with s < r and set c to c.s/r. The
+>>    two extremes determine bounds on the posterior credences. In
+>>    particular, a+c changes to (rc + c) / (rc + c + b + d) = (rc - a + a +
+>>    c) / (rc - a + 1) or to (a/r - c + a + c) / (a/r - c + 1) or to
+>>    something in between. The relative values of a, c and r will determine
+>>    which one is the upper bound and which one the lower. In the final job
+>>    offer matrix, a = 5/12, c = 1/12. With r = 3, (a+c) changes to 2/7 or
+>>    10/19. These bounds are in fact the same one would get using the alpha
+>>    divergences, but are much simpler to derive, As with the latter, they
+>>    straddle the original a+c. There is, as you can see, little room for
+>>    posterior credences larger than a+c (= 0.5), but there is some.
+>>    This is the best I can do for the moment. I think the probability
+>>    matrix for the job offer with a = 0.1 is closer to what Harry would
+>>    believe, but you are correct in pointing out that he has other options.
+>>    Enjoy Europe's northern countries,
+>>    Leendert
+

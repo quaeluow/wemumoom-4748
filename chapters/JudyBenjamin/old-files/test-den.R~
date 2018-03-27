@@ -1,0 +1,3 @@
+x <- seq(-20,20,by=.1)
+y <- dnorm(x) 
+plot(x,y)

@@ -1,0 +1,631 @@
+\section{Synopsis}
+\label{Synopsis}
+
+Traditional Bayesian epistemology used to include the
+requirement for a rational agent to hold a sharp
+credence function. It has recently become popular to
+drop this requirement. There are now Bayesian theories
+which permit a rational agent to hold indeterminate
+credal states based on incomplete or ambiguous
+evidence. I will refer to Bayesians who continue to
+adhere to the classical theory of sharp credences for
+rational agents as \qnull{Laplaceans} (e.g.\ Adam Elga
+and Roger White). I will refer to Bayesians who do not
+believe in the requirement for a rational agent to hold
+sharp credences as \qnull{Booleans} (e.g.\ Peter Walley
+and James Joyce; see Boole, 1854, chapters 16--21, for
+alternative methods to the ones suggested by Laplace
+which result in imprecise epistemic probabilities).
+
+After describing the appeal of indeterminacy and
+showing how contemporary Laplacean objections fail, I
+will point to more serious failings of indeterminacy in
+semantic terms and show how a proper semantics of not
+knowing, which we could also call a semantics of
+partial belief, solves the problems for sharp credences
+that Booleans address by introducing indeterminate
+credal states. There is a sense in which, by linking
+knowledge of chances to its reflection in credences,
+Booleans seek to reconcile traditional knowledge
+epistemology concerned with full belief and formal
+epistemology concerned with partial belief. There are
+other more recent reconciliation projects (see Spohn,
+2012; and Moss, 2013), but if my paper is correct then
+the Boolean approach will not contribute to this
+reconciliation because it mixes full belief and partial
+belief metaphors in ways that are semantically
+problematic.
+
+A sharp credence, as much as the term suggests
+precision and a measure of certainty, is a
+representation of an epistemic state chracterized by
+uncertainty and lack of information. Importantly, it
+does not represent the evidence which informs the
+epistemic state, and it makes no claim of such a
+representation. Indeterminate credal states are often
+lauded as doing much better representing uncertainty
+together with the evidence that constrains it, but they
+can no more give an adequate representation of evidence
+than sharp credences. This paper is concerned with the
+semantic legitimacy of having a $0.5$ sharp credence in
+heads for a coin of whose bias we are completely
+ignorant; for a coin whose fairness is supported by a
+lot of evidence; and even for a coin about whose bias
+we know to be either 1/3 or 2/3 for heads.
+
+One potential Boolean claim is that agents who use
+indeterminate credal states do better than Laplaceans
+when they bet on the truth of events for which they
+have varying degrees of evidence. Peter Walley gives an
+example where a Laplacean does much worse at predicting
+soccer games than Boolean peers. I show that the result
+is due to an unreasonable restriction on the betting
+behaviour of the Laplacean. Once this restriction is
+lifted, Laplaceans do just as well as Booleans, except
+that they are not tangled in the semantic problem of
+the double task, where indeterminate credal states are
+supposed to reflect both the uncertainty of an agent
+and other properties of her evidence.
+
+I will present several examples where this double task
+stretches indeterminate credal states to the limits of
+plausibility, for example when they need to aggregate
+expert opinion or account for dilation. Joyce's idea
+that credences can represent balance, weight, and
+specificity of the evidence is inconsistent with the
+use of indeterminacy (and Joyce himself, in response to
+the dilation problem, gives the argument why this is
+the case). The implicit Boolean claim that certain
+properties of the evidence (its ambiguity, its
+completeness, conflicts within it) can be recovered
+from indeterminate credal states is inconsistent with
+an effective Boolean answer to the dilation problem.
+
+The Laplacean approach of assigning subjective
+probabilities to partitions of the event space (e.g.\
+objective chances) and then aggregating them by David
+Lewis's summation formula into a single precise
+credence function is semantically tidy and shares many
+of the formal virtues of Boolean theories. If the bad
+taste about numerical precision in our fuzzy, nebulous
+world lingers, I can point to philosophical projects in
+other domains where the concepts we use are sharply
+bounded, even though our ability to conceive of those
+sharp boundaries or know them is limited, for example
+Timothy Williamson's work on vagueness and knowledge as
+a mental state.
+
+\section{Motivation for Indeterminate Credal States}
+\label{MotivationForIndeterminateCredalStates}
+
+Booleans claim that it is rational for an agent to hold
+indeterminate credal states rather than sharp
+credences, representing uncertainty. They are Bayesians
+in all other respects and defend Bayesian epistemology,
+proposing that it is better off without the requirement
+for sharp credences. Laplaceans, by contrast, require
+sharp credences for rational agents. We want to
+motivate indeterminacy as forcefully as possible so
+that the reader will see (a) the appeal of the Boolean
+approach, (b) the insufficiency of the critical
+response, and (c) the need for careful articulation of
+the Laplacean approach that can address the concerns
+which motivate some to resort to indeterminacy.
+Finally, (d) the undesirable semantics of the Boolean
+approach, documented both conceptually and by example,
+will lead to the conclusion that a Laplacean approach
+is the more promising alternative.
+
+Let a \textsc{coin} be a Bernoulli generator that
+produces successes and failures with probability $p$
+for success, labeled $H$, and $1-p$ for failure,
+labeled $T$. Physical coins may serve as examples, if
+we are willing to set aside that most of them are
+approximately fair. Imagine three \textsc{coin}s for
+which we have evidence that \textsc{coin}$_{I}$ is
+fair, \textsc{coin}$_{II}$ has an unknown bias, and
+\textsc{coin}$_{III}$ has as bias either $p=1/3$ or
+$p=2/3$. The Laplacean approach permits a sharp $0.5$
+credence in $H$ for a rational agent in all three
+cases. A Boolean approach wants to see the difference
+in the evidential situation reflected in a rational
+agent's credal state and for example at least permit,
+as credence in $H$, $\{x|x=0.5\}$ for
+\textsc{coin}$_{I}$, $\{x|0\leq{}x\leq{}1\}$ for
+\textsc{coin}$_{II}$, and $\{x|1/3\leq{}x\leq{}2/3\}$
+or $\{1/3,2/3\}$ for \textsc{coin}$_{III}$. Here is a
+list of reasons for the Boolean position.
+
+\begin{enumerate}[(A)]
+\item The greatest emphasis motivating indeterminacy
+  rests on lack of evidence or conflicting evidence and
+  the assumption that single probability measures
+  (sharp credences) do not represent such evidence as
+  well as credal states composed by sets of probability
+  measures (indeterminate credal states).
+\item The preference structure of a rational agent may
+  be incomplete so that representation theorems do not
+  yield single probability measures to represent such
+  incomplete structures.
+\item There are more technical and paper-specific
+  reasons, such as Thomas Augustin's attempt to mediate
+  between the minimax pessimism of objectivists and the
+  Bayesian optimism of subjectivists using interval
+  probability (see \scite{8}{augustin03}{35f}); Alan
+  H{\'a}jek and Michael Smithson's belief that there
+  may be objectively indeterminate chances in the
+  physical world (see \scite{8}{hajeksmithson12}{33});
+  and Jake Chandler's claim that \qeins{the sharp model
+    is at odds with a trio of plausible propositions
+    regarding agnosticism} \scite{2}{chandler14}{4}.
+\end{enumerate}
+
+This paper mostly addresses (A), while taking (B)
+seriously as well and pointing towards solutions for
+it. I am leaving (C) to more specific responses to the
+issues presented in the cited articles, and for the
+remainder of this section I am adding a reason (D) that
+is poorly documented in the literature.
+
+One motivation for permitting a rational agent to have
+a range of probability measures rather than mandating
+her to hold a single one as her credence is that she
+would do better making decisions and accepting
+advantageous bets. Walley conducted an experiment in
+which Boolean participants did significantly better
+than Laplacean participants, betting on soccer games
+played in the Soccer World Cup 1982 in Spain (see
+\scite{7}{walley91}{}, Appendix F).\tbd{check
+  reference}
+
+I replicated the experiment using two computer players
+with rudimentary artificial intelligence and made them
+specify betting parameters (previsions) for games
+played in the Soccer World Cup 2014 in Brazil. I used
+the Poisson distribution (which is an excellent
+predictor for the outcome of soccer matches) and the
+FIFA ranking to simulate millions of counterfactual
+World Cup results and their associated bets, using
+Walley's evaluation method. The Boolean player had a
+slight but systematic advantage. In section
+\ref{WalleysWorldCupWoes}, I will provide an
+explanation and show how it undermines any support the
+experiment might give to the Boolean position.
+
+\section{Dilation}
+\label{Dilation}
+
+Roger White introduces a problem for indeterminate
+credal states, which I will call White's dilation
+problem, claiming that indeterminate credal states lead
+to unacceptable doxastic scenarios involving dilation.
+In dilation, there is a widening of the indeterminate
+credal state upon updating instead of a narrowing.
+Sometimes this widening is extreme, from a maximally
+precise credal state to a vacuous credal state, based
+on little information (see \scite{7}{white10}{} for
+examples). White's objection, even though I think it
+fails as it stands, triggers semantic concessions on
+the part of Booleans defending their position which
+will be important to my semantic criticism of
+indeterminacy.
+
+In Joyce's response to White, Lewis' indadmissibility
+criterion as well as two significant semantic
+concessions to White show why the indeterminate credal
+states give us the right result. I agree with Joyce:
+dilation is what you would expect (1) if credences do
+not adequately represent evidence (the same
+indeterminate credal state can reflect different
+evidential situations); and (2) if indeterminate credal
+states do not reflect knowledge claims about objective
+chances (Joyce rejects White's Chance Grounding Thesis
+CGT, see \scite{8}{joyce10}{289}). Dilation from a
+sharp $0.5$ to an indeterminate $[0.01,0.99]$ or
+$\{0.01,0.99\}$ (depending on whether convexity is
+required) is unproblematic in the following example,
+although the example already prefigures that there is
+something odd about the Boolean semantic approach. The
+example licences a 99:1 bet for one of the colours, but
+this is a problem that arises out of Boolean semantics
+without dilation, which we will address again in
+example \ref{monkey}.
+
+\addtocounter{expls}{1}
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}:
+    \addtocounter{expls}{1} Dilating Urns.} You draw
+  from an urn with 200 balls (100 red, 100 black) and
+  receive the information that the urn actually had two
+  chambers, one with 99 red balls and 1 black ball, the
+  other with 1 red ball and 99 black balls.
+\end{quotex}
+
+If one were to be committed to the principle of
+regularity, that all states of the world considered
+possible have positive probability (for a defence see
+\scite{7}{edwardsetal63}{}); and to the solution of
+Henry Kyburg's lottery paradox, that what is rationally
+accepted should have probability 1 (for a defence of
+this principle see \scite{7}{douvenwilliamson06}{});
+and the CGT, that one's spread of credence should cover
+the range of possible chance hypotheses left open by
+evidence; then one's indeterminate credal state is
+always vacuous. Booleans must deny at least one of the
+premises to avoid the conclusion. Joyce denies the CGT,
+but then he continues to make implicit use of it when
+he repeatedly complains that sharp credences
+\qeins{ignore a vast number of possibilities that are
+  consistent with [the] evidence} (for example in
+\scite{2}{joyce05}{170}).
+
+When updating dilates the credal state, it appears that
+the prior credal state was in some sense incorrect and
+did not properly reflect the state of the world, even
+though it properly reflected the epistemic state of the
+agent. Such a divergence between the proper reflections
+of epistemic state and state of the world undermines
+the subjective interpretation of probabilities at the
+centre of Bayesian epistemology. An indeterminate
+credal state semantically blurs the line between
+traditional full belief epistemology and formal partial
+belief epistemology (for semantically more intelligible
+attempts at reconciliation between the two see
+\scite{7}{moss13}{}, although Moss is committed to the
+Boolean approach, which may weaken her case; and
+\scite{7}{spohn12}{}, especially chapter 10).
+
+White's objection fails because dilation for
+indeterminate credences is in principle not any more
+surprising than a piece of information that increases
+the Shannon entropy of a sharp credence. It is true for
+both sharp and indeterminate credences that information
+can make us less certain about things. We will turn to
+the semantic fallout of the Boolean response to White's
+dilation problem now and show how it brings into relief
+the virtues of sharp credences in responding to the
+forceful motivations for indeterminate credal states
+while making those indeterminate credal states look
+semantically otiose. Then we will show in the last
+section how sharp credences have an elegant solution
+for being outperformed by indeterminate credal states
+in betting scenarios, and there we will rest our case.
+
+\section{Semantics of Partial Belief}
+\label{SemanticsOfPartialBelief}
+
+At the heart of my project is the proper semantic
+distinction between evidence, information, and partial
+belief. Both sharp credences and indeterminate credal
+states, within a Bayesian framework, try to represent
+the uncertainty of an agent with respect to the truth
+of a proposition. Indeterminate credal states have a
+greater ambition and therefore a double task: they also
+claim to represent properties of the evidence, such as
+its weight, conflict between its constituents, or its
+ambiguity.
+
+The Laplacean approach uses partial beliefs about how a
+parameter is distributed and then applies Lewis'
+summation formula (see \scite{8}{lewis81}{266f}) to
+integrate over them and condense them to a sharp
+credence. Walley comments on this \qeins{reduction} in
+his section on Bayesian second order probabilities (see
+\scite{8}{walley91}{258f}), but he mistakenly
+represents the Laplacean approach as a second order
+approach, as if the probability distributions that are
+summarized by Lewis' formula are of the same kind as
+the resulting credences. They are not. They are
+objective chances or other partitions of the event
+space and the subjective probabilities that are
+associated with them. It is the Boolean approach which
+has elements of a second order approach and thus makes
+itself vulnerable to regress problems by adding another
+dimension of uncertainty to a parameter (the credence)
+which already represents uncertainty.
+
+One of Joyce's complaints is that a sharp credence of
+$0.5$ for a \textsc{coin} contains too much information
+if there is little or no evidence that the
+\textsc{coin} is fair. This complaint, of course, is
+only effective if we make a credence say something
+about the evidence. Joyce himself, however, admits that
+indeterminate credal states cannot represent the
+evidence without violating the reflection principle due
+to White's dilation problem. He is quite clear that the
+same indeterminate credal state can represent different
+evidential scenarios (see, for example,
+\scite{8}{joyce10}{302}).
+
+Sharp credences have one task: to represent epistemic
+uncertainty and serve as a tool for updating,
+inference, and decision-making. They cannot fulfill
+this task without continued reference to the evidence
+which operates in the background. To use an analogy,
+credences are not sufficient statistics with respect to
+updating, inference, and decision-making. What is
+remarkable about Joyce's response to White's dilation
+problem is that Joyce recognizes that indeterminate
+credal states are not sufficient statistics either. But
+this means that they fail at the double task which has
+been imposed on them: to represent both epistemic
+uncertainty and the evidence.
+
+In the following, I will provide a few examples where
+it becomes clear that indeterminate credal states have
+difficulty representing uncertainty because they are
+tangled in a double task which they cannot fulfill.
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}:
+    \addtocounter{expls}{1} Aggregating Expert
+    Opinion.} You have no information whether it will
+  rain tomorrow ($R$) or not except the predictions of
+  two weather forecasters. One of them forecasts 0.3 on
+  channel GPY, the other 0.6 on channel QCT. You
+  consider the QCT forecaster to be significantly more
+  reliable, based on past experience.
+\end{quotex}
+
+An indeterminate credal state corresponding to this
+situation may be $[0.3,0.6]$ (see
+\scite{8}{walley91}{214}), but it will have a difficult
+time representing the difference in reliability of the
+experts. A sharp credence of $P(R)=0.55$, for example,
+does the right thing. Beliefs about objective chances
+make little sense in many situations where we have
+credences, since it is doubtful even in the case of
+rain tomorrow that there is an urn of nature from which
+balls are drawn (see \scite{8}{white10}{171}). What is
+really at play is a complex interaction between
+epistemic states (for example, experts evaluating
+meteorological data) and the evidence which influences
+them.
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}:
+    \addtocounter{expls}{1}\label{monkey} Precise
+    Credences.} Your sharp credence for rain tomorrow,
+  based on the expert opinion of channel GPY and
+  channel QCT (you have no other information) is
+  $0.55$. Is it reasonable, considering how little
+  evidence you have, to reject the belief that the
+  chance of rain tomorrow is $0.54$ or $0.56$; or to
+  prefer a 54.9 cent bet on rain to a 45.1 cent bet on
+  no rain?
+\end{quotex}
+
+The first question, of course, is confused, but in
+instructive ways. A sharp credence rejects no
+hypothesis about objective chances (unlike an
+indeterminate credal state). It often has a subjective
+probability distribution operating in the background,
+over which it integrates to yield the sharp credence.
+The subjective probability distribution $P$ is
+condensed by Lewis' summation formula to a sharp
+credence $C$, without being reduced to it:
+
+\begin{equation}
+  \label{eq:s2}
+  C(R)=\int_{0}^{1}\zeta{}P(\pi(R)=\zeta)\,d\zeta
+\end{equation}
+
+Lewis' 1981 paper \qeins{A Subjectivist's Guide to
+  Objective Chance} addresses the question what the
+relationship between $\pi$, $P$, and $C$ is. The point
+is that we have properly separated the semantic
+dimensions and that the Laplacean approach is not a
+second order probability approach. The partial belief
+epistemology deals with sharp credences and how they
+represent uncertainty and serve as a tool in inference,
+updating, and decision making; while Lewis' Humean
+speculations and his interpretation of the principal
+principle cover the relationship between subjective
+probabilities and objective chance.
+
+The second question is also instructive: why would we
+prefer a 54.9 cent bet on rain to a 45.1 cent bet on no
+rain, given that we do not possess the power of
+descrimination between these two bets? The answer to
+this question ties in with the issue of incomplete
+preference structure referenced above as motiviation
+(B) for indeterminate credal states.
+
+Via representation theorems, preferences may very well
+conceptually precede an agent's probability and utility
+functions, but that does not mean that we cannot inform
+the axioms we use for a rational agent's preferences by
+undesirable consequences downstream. Completeness may
+sound like an unreasonable imposition at the outset,
+but if incompleteness has unwelcome semantic
+consequences for credences, it is not illegitimate to
+revisit the issue. Timothy Williamson goes through this
+exercise with vague concepts, showing that all upstream
+logical solutions to the problem fail and that it has
+to be solved downstream with an epistemic solution (see
+\scite{7}{williamson96}{}).
+
+Vague concepts, like sharp credences, are sharply
+bounded, but not in a way that is luminous to the agent
+(for anti-luminosity see chapter 4 in
+\scite{7}{williamson00}{}). Anti-luminosity answers the
+original question: the rational agent prefers the 54.9
+cent bet on rain to a 45.1 cent bet on no rain based on
+her sharp credence without being in a position to have
+this preference necessarily or have it based on
+physical or psychological ability (for the analogous
+claim about knowledge see \scite{8}{williamson00}{95}).
+
+In a way, advocates of indeterminacy have solved this
+problem for us. There is strong agreement among most of
+them that the issue of indeterminacy for credences is
+not an issue of elicitation. The appeal of preferences
+is that we can elicit them more easily than assessments
+of probability and utility functions. The indeterminacy
+issue has been raised to the probability level (or
+moved downstream) by indeterminacy advocates themselves
+who feel justifiably uncomfortable with an
+interpretation of their theory in behaviourist terms.
+So it shall be solved there, and this paper makes an
+appeal to reject indeterminacy on this level.
+Ironically, Isaac Levi seems to agree with me on this
+point: when he talks about indeterminacy, it proceeds
+from the level of probability judgment to preferences,
+not the other way around (see \scite{8}{levi81}{533}).
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}:
+    \addtocounter{expls}{1} Jaynes' Monkeys.} Let urn
+  $A$ contain 4 balls, two red and two black. A monkey
+  randomly fills urn $B$ from urn $A$ with two balls.
+  We draw from urn $B$. (See
+  \scite{8}{jaynesbretthorst03}{160}.)
+\end{quotex}
+
+The sharp credence of drawing a red ball is $0.5$,
+following Lewis' summation formula for the different
+combinations of balls in urn $B$. I find this solution
+more intuitive in terms of further inference, decision
+making, and betting behaviour than a credal state of
+$\{0,1/2,1\}$ or $[0,1]$ (depending on the convexity
+requirement), since the indeterminate credal state
+would licence an exorbitant bet in favour of one
+colour.
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}:
+    \addtocounter{expls}{1} Three Prisoners.} The Three
+  Prisoners problem is well-documented (see
+  \scite{8}{mosteller87}{28}). Let the three prisoners
+  be $X_{1},X_{2},X_{3}$ and the warden tell $X_{1}$
+  that $X_{3}$ will be executed.
+\end{quotex}
+
+Peter Walley maintains that for the Monty Hall problem
+and the Three Prisoners problem, the probabilities of a
+rational agent should dilate rather than settle on the
+commonly accepted solutions. Consider the three
+prisoners problem. There is a compelling case for
+standard conditioning and the result that the chances
+of pardon for prisoner $X_{1}$ are unchanged after the
+update (see \scite{8}{lukits14}{1421f}). Walley's
+dilated solution would give prisoner $X_{1}$ hope on
+the doubtful possibility (and unfounded assumption)
+that the warden might prefer to provide $X_{3}$'s name
+in case prisoner $X_{1}$ was pardoned.
+
+Booleans charge that sharp credences often reflect
+independence of variables where such independence is
+unwarranted. Booleans prefer to dilate over the
+possible dependence relationships (independence
+included). White's dilation problem is an instance of
+this. The fallacy in the argument for indeterminate
+credal states, illustrated by the Three Prisoners
+problem, is that the probabilistic independence of
+sharp credences does not imply independence of
+variables (the converse is correct), but only that it
+is unknown whether there is dependence, and if yes,
+whether it is correlation or inverse correlation.
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}:
+    \addtocounter{expls}{1} Wagner's Linguist.} A
+  linguist hears the utterance of a native and
+  concludes that the native cannot be part of certain
+  population groups, depending on what the utterance
+  means. The linguist is uncertain between some options
+  about the meaning of the utterance. (For full details
+  see \scite{8}{wagner92}{252}; and
+  \scite{8}{spohn12}{197}.)
+\end{quotex}
+
+The mathematician Carl Wagner proposed a natural
+generalization of Jeffrey Conditioning for his Linguist
+example (see \scite{7}{wagner92}{}). Since the
+principle of maximum entropy is already a
+generalization of Jeffrey Conditioning, the question
+naturally arises whether the two generalizations agree.
+Wagner makes the case that they do not agree and
+deduces that the principle of maximum entropy is
+sometimes an inappropriate updating mechanism, in line
+with many earlier criticisms of the principle of
+maximum entropy (see van Fraassen, 1981;
+\scite{7}{shimony85}{}; \scite{7}{skyrms87updating}{};
+and, later on, \scite{7}{grovehalpern97}{}).
+
+What is interesting about this case is that Wagner uses
+indeterminate credal states for his deduction, so that
+even if you agree with his natural generalization of
+Jeffrey Conditioning (which I find plausible), the
+inconsistency with the principle of maximum entropy can
+only be inferred assuming indeterminate credal states.
+On the assumption of sharp credences Wagner's
+generalization of Jeffrey conditioning perfectly
+accords with the principle of maximum entropy. Wagner's
+argument, instead of undermining the principle of
+maximum entropy, just shows that indeterminate credal
+states are as wedded to rejecting the claims of the
+principle of maximum entropy as the principle of
+maximum entropy is wedded to sharp credences.
+
+\section{Evidence Differentials and Cushioning
+  Credences}
+\label{WalleysWorldCupWoes}
+
+After I found out that agents with indeterminate credal
+states do better betting on soccer games (see section
+\ref{MotivationForIndeterminateCredalStates}), I let
+player $X$ (who uses sharp credences) and player $Y$
+(who uses indeterminate credal states) play a more
+basic betting game and used Walley's pay off scheme
+(see \scite{8}{walley91}{632}) to settle the bets. The
+simulation results show that player $Y$ does better for
+$n>2$ while player $X$ does better for $n=2$. A defence
+of sharp credences for rational agents needs to have an
+explanation why, for $n>2$, player $Y$ does better. We
+will call it partial belief cushioning, which is based
+on an evidence differential between the bettors.
+
+Compulsory betting is a problem for indeterminate
+credal states, as Booleans have to find a way to decide
+without receiving instructions from the credal state.
+Booleans have addressed this point extensively (see for
+example \scite{8}{joyce10}{311ff}; for an opponent's
+view of this see \scite{8}{elga10}{6ff}). The problem
+for sharp credences arises when bets are noncompulsory,
+for then the data above suggests that agents holding
+indeterminate credal states sometimes do better. Bets
+are sometimes offered by better informed or potentially
+better informed bookies. In this case, even an agent
+with sharp credences must cushion her credences and is
+better off by rejecting bets that look attractive in
+terms of her partial beliefs. If an agent does not
+cushion her partial beliefs (whether they are sharp or
+indeterminate), she will incur a loss in the long run.
+Since cushioning is permitted in Walley's experimental
+setup (the bets are noncompulsory), Laplacean agents
+should also have access to it and then no longer do
+worse than Boolean agents.
+
+The rational agent with a sharp credence has resources
+at her disposal to use just as much differentiation
+with respect to accepting and rejecting bets as the
+agent with indeterminate credal states. Often (if she
+is able to and especially if the bets are offered to
+her by a better-informed agent), she will reject both
+of two complementary bets, even when they are fair. In
+2013, the U.S. Commodity Futures Trading Commission
+shut down the online prediction market Intrade, even
+though it was offering fair bets, because of expert
+arbitrageurs.
+
+Any advantage that the agent with an indeterminate
+credal state has can be counteracted based on
+distribution over partial beliefs with respect to all
+possibilities. The agent with indeterminate credal
+states suffers from a semantic mixing of metaphors
+between evidential and epistemic dimensions that puts
+her at a real disadvantage in terms of understanding
+the sources and consequences of her knowledge and her
+uncertainties.

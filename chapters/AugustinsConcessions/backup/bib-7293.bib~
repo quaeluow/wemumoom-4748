@@ -1,0 +1,146 @@
+@incollection{lewis81,
+  title =	 {A Subjectivist's Guide to Objective Chance},
+  author =	 {Lewis, David},
+  booktitle =	 {Ifs: Conditionals, Belief, Decision, Chance and Time},
+  editor =	 {Harper, William and Stalnaker, Robert and Pearce, G.A.},
+  pages =	 {267--297},
+  year =	 {1981},
+  publisher =	 {Springer}
+}
+
+@article{moss13,
+  title =	 {Epistemology Formalized},
+  author =	 {Moss, Sarah},
+  journal =	 {Philosophical Review},
+  volume =	 {122},
+  number =	 {1},
+  pages =	 {1--43},
+  year =	 {2013}
+}
+
+@article{joyce05,
+  title =	 {How Probabilities Reflect Evidence},
+  author =	 {Joyce, James},
+  journal =	 {Philosophical Perspectives},
+  volume =	 {19},
+  number =	 {1},
+  pages =	 {153--178},
+  year =	 {2005},
+  publisher =	 {Wiley Online Library}
+}
+
+@article{elga10,
+  title =	 {Subjective Probabilities Should Be Sharp},
+  journal =	 {Philosophers' Imprints},
+  volume =	 {10},
+  number =	 {5},
+  pages =	 {1--11},
+  author =	 {Elga, Adam},
+  year =	 {2010}
+}
+
+@article{chandler14,
+  title =	 {Subjective Probabilities Need Not Be Sharp},
+  author =	 {Chandler, Jake},
+  journal =	 {Erkenntnis},
+  pages =	 {1--14},
+  year =	 {2014},
+  publisher =	 {Springer}
+}
+
+@article{seidenfeld93,
+  title =	 {Dilation for Sets of Probabilities},
+  author =	 {Seidenfeld, Teddy and Wasserman, Larry},
+  journal =	 {Annals of Statistics},
+  pages =	 {1139--1154},
+  year =	 {1993},
+  stefanpdf =	 {1993__Seidenfeld_Wasserman__Dilation_for_Sets_of_Probabilities}
+}
+
+@article{ellsberg61,
+  title =	 {Risk, Ambiguity, and the Savage Axioms},
+  author =	 {Ellsberg, Daniel},
+  journal =	 {The Quarterly Journal of Economics},
+  volume =	 {75},
+  number =	 {4},
+  pages =	 {643--669},
+  year =	 {1961},
+  publisher =	 {Oxford University Press}
+}
+
+@incollection{white10,
+  title =	 {Evidential Symmetry and Mushy Credence},
+  author =	 {White, Roger},
+  editor =	 {Gendler, Tamar and Hawthorne, John},
+  booktitle =	 {Oxford Studies in Epistemology},
+  pages =	 {161--186},
+  year =	 {2010},
+  publisher =	 {Oxford University},
+  address =	 {New York, NY}
+}                  
+
+@article{levi81,
+  title =	 {Direct Inference and Confirmational Conditionalization},
+  author =	 {Levi, Isaac},
+  journal =	 {Philosophy of Science},
+  pages =	 {532--552},
+  year =	 {1981},
+  publisher =	 {JSTOR}
+}
+
+@article{levi77,
+  title =	 {Direct Inference},
+  author =	 {Levi, Isaac},
+  journal =	 {Journal of Philosophy},
+  volume =	 {74},
+  number =	 {1},
+  pages =	 {5--29},
+  year =	 {1977}
+}
+
+@article{levi85,
+  title =	 {Imprecision and Indeterminacy in Probability Judgment},
+  author =	 {Levi, Isaac},
+  journal =	 {Philosophy of Science},
+  pages =	 {390--409},
+  year =	 {1985}
+}
+
+@article{walley00,
+  title =	 {Towards a Unified Theory of Imprecise Probability},
+  journal =	 {International Journal of Approximate Reasoning},
+  volume =	 {24},
+  number =	 {2},
+  pages =	 {125--148},
+  year =	 {2000},
+  author =	 {Peter Walley}
+}
+
+@inproceedings{augustin03,
+  title =	 {On the Suboptimality of the Generalized Bayes Rule and Robust Bayesian Procedures from the Decision Theoretic Point of View---a Cautionary Note on Updating Imprecise Priors},
+  author =	 {Augustin, Thomas},
+  booktitle =	 {ISIPTA: Proceedings of the 3rd International Symposium on Imprecise Probabilities and Their Applications},
+  publisher =	 {Carleton Scientific},
+  pages =	 {31--45},
+  year =	 {2003}
+}
+
+@article{joyce10,
+  title =	 {A Defense of Imprecise Credences in Inference and Decision Making},
+  author =	 {Joyce, James},
+  journal =	 {Philosophical Perspectives},
+  volume =	 {24},
+  number =	 {1},
+  pages =	 {281--323},
+  year =	 {2010}
+}
+
+@article{hajeksmithson12,
+  title =	 {Rationality and Indeterminate Probabilities},
+  author =	 {H{\'a}jek, Alan and Smithson, Michael},
+  journal =	 {Synthese},
+  volume =	 {187},
+  number =	 {1},
+  pages =	 {33--48},
+  year =	 {2012}
+}

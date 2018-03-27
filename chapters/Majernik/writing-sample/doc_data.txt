@@ -1,0 +1,125 @@
+InfoBegin
+InfoKey: ModDate
+InfoValue: D:20150327110634+08'00'
+InfoBegin
+InfoKey: PTEX.Fullbanner
+InfoValue: This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014/W32TeX) kpathsea version 6.2.0
+InfoBegin
+InfoKey: Subject
+InfoValue: Two open questions of inductive reasoning are solved: (1) does the principle of maximum entropy (pme) give a solution to the obverse Majern&#237;k problem; and (2) is Wagner correct when he claims that Jeffrey's updating principle (jup) contradicts pme? Majern&#237;k shows that pme provides unique and plausible marginal probabilities, given conditional probabilities. The obverse problem posed here is whether pme also provides such conditional probabilities, given certain marginal probabilities. The theorem developed to solve the obverse Majern&#237;k problem demonstrates that in the special case introduced by Wagner pme does not contradict jup, but elegantly generalizes it and offers a more integrated approach to probability updating.
+InfoBegin
+InfoKey: CreationDate
+InfoValue: D:20150327110634+08'00'
+InfoBegin
+InfoKey: Author
+InfoValue: Stefan Lukits
+InfoBegin
+InfoKey: Keywords
+InfoValue: probability update; Jeffrey conditioning; principle of maximum entropy; formal epistemology; conditionals; probability kinematics
+InfoBegin
+InfoKey: Title
+InfoValue: Maximum Entropy and Probability Kinematics Constrained by Conditionals
+InfoBegin
+InfoKey: Creator
+InfoValue: LaTeX with hyperref package
+InfoBegin
+InfoKey: Producer
+InfoValue: pdfTeX-1.40.15
+PdfID0: cb5abcbc4d4f7126060357fee2e65ce1
+PdfID1: cb5abcbc4d4f7126060357fee2e65ce1
+NumberOfPages: 11
+BookmarkBegin
+BookmarkTitle: Introduction
+BookmarkLevel: 1
+BookmarkPageNumber: 1
+BookmarkBegin
+BookmarkTitle: Jeffrey's Updating Principle and the Principle of Maximum Entropy
+BookmarkLevel: 1
+BookmarkPageNumber: 2
+BookmarkBegin
+BookmarkTitle: Jeffrey Conditioning
+BookmarkLevel: 1
+BookmarkPageNumber: 3
+BookmarkBegin
+BookmarkTitle: Wagner Conditioning
+BookmarkLevel: 1
+BookmarkPageNumber: 4
+BookmarkBegin
+BookmarkTitle: A Natural Generalization of Jeffrey and Wagner Conditioning
+BookmarkLevel: 1
+BookmarkPageNumber: 5
+BookmarkBegin
+BookmarkTitle: Conclusion
+BookmarkLevel: 1
+BookmarkPageNumber: 8
+BookmarkBegin
+BookmarkTitle: Appendix: PME generalizes Jeffrey Conditioning
+BookmarkLevel: 1
+BookmarkPageNumber: 8
+BookmarkBegin
+BookmarkTitle: Standard Conditioning
+BookmarkLevel: 2
+BookmarkPageNumber: 8
+BookmarkBegin
+BookmarkTitle: Jeffrey Conditioning
+BookmarkLevel: 2
+BookmarkPageNumber: 9
+PageMediaBegin
+PageMediaNumber: 1
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageMediaBegin
+PageMediaNumber: 2
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageMediaBegin
+PageMediaNumber: 3
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageMediaBegin
+PageMediaNumber: 4
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageMediaBegin
+PageMediaNumber: 5
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageMediaBegin
+PageMediaNumber: 6
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageMediaBegin
+PageMediaNumber: 7
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageMediaBegin
+PageMediaNumber: 8
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageMediaBegin
+PageMediaNumber: 9
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageMediaBegin
+PageMediaNumber: 10
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageMediaBegin
+PageMediaNumber: 11
+PageMediaRotation: 0
+PageMediaRect: 0 0 595.276 841.89
+PageMediaDimensions: 595.276 841.89
+PageLabelBegin
+PageLabelNewIndex: 1
+PageLabelStart: 1690
+PageLabelNumStyle: DecimalArabicNumerals

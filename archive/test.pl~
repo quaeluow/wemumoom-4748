@@ -1,0 +1,3 @@
+$string = "([b - (a + 1)] * 7)"; 
+$string =~ /\m.*?\M/;
+print "$string\n";

@@ -1,0 +1,37 @@
+The Full Employment Theorem in Probability Kinematics
+
+The aim is to undermine the full employment theorem in probability
+kinematics, which is widely assumed to be true. Imagine you have a
+fully quantified probability assessment of a situation, and then you
+make an observation. If your observation comes in the form of an
+event, a plausible way to update your probabilities is by
+conditioning. If your observation comes in the form of a
+redistribution of probabilities over a partition of the event space (a
+more general type of evidence), it's plausible to use Jeffrey
+conditioning. Observation can be even more general, so that all you
+observe is what's called an affine constraint. If Jeffrey conditioning
+cannot be applied to an affine constraint, we can use the principle of
+maximum entropy (PME), based on the intuition that the observation
+should minimally affect your probabilities without being inconsistent
+with it.
+
+There are some (very few philosophers, more statistical physicists)
+who say that the PME delivers the unique solution to this problem
+which fulfills some basic rationality requirements. Opponents of this
+approach (a majority view among philosophers) believe in something I
+am calling the full employment theorem for probability kinematics. In
+their view, the PME is only one of many different strategies to update
+your probabilities, and to decide which strategy is the most
+appropriate you need a resident formal epistemologist to do the
+thinking and weigh the intuitions for you, for a fee, of course (thus
+formal epistemologists will always be fully employed; there is an
+analogous full employment theory in computer science about writing
+computer programs which has been formally proved to be true).
+
+Opponents of objective methods prominently cite van Fraassen's Judy
+Benjamin case to undermine the generality of the PME. I will show that
+the results provided by the PME are supported by an intuitive approach
+that prima facie should support the opponents. The independence
+assumptions which render the results counterintuitive are improperly
+applied by opponents. We'll also do some ``coarsening at random'' so
+make sure you bring the proper gear (employ your imagination).

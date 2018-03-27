@@ -1,0 +1,126 @@
+(defun chs (n k)
+  "The binomial coefficient."
+  (if (or (= k 0) (= k n)) 1
+    (+ (nck (- n 1) (- k 1)) (nck (- n 1) k))))
+
+(defun fac (integer)
+  "Compute factorial of an integer."
+  (if (= 1 integer) 1
+    (* integer (factorial (1- integer)))))
+
+(defun stefan-generate-binomials (n p) ;; written 2011-06-30
+  "Generate binomial distribution given n and p."
+  (interactive "nEnter n: \nnEnter p: ")
+  (save-excursion
+   (with-temp-buffer
+(setq i1 0)
+(while (<= i1 xmax)
+(setq i1 (+ i1 1)))
+
+(defun stefan-elisp-for-routine (varfor from to)
+  "You enter the variable, the numbers for from and to, and elisp inserts an elisp for routine."
+  (interactive "sEnter the name of the variable (default i1): \nsEnter the number from (default 0): \nsEnter the number to (no default): ")
+  (if (string= varfor "")
+      (progn
+	(setq varfor "i1")))
+  (if (string= from "")
+      (progn
+	(setq from "0")))
+(insert (concat "(setq " varfor " " to ")"))
+(newline-and-indent)
+(insert (concat "(while (<= " varfor " " to ")"))
+(newline-and-indent)
+(insert (concat "(setq " varfor " (+ " varfor " 1)))")))
+
+(setq i2 0)
+(while (<= i2 33)
+  (setq i2 (+ i2 1)))
+
+(setq i1 0)
+(while (<= i1 100)
+  (setq i1 (+ i1 1)))
+
+(setq i1 0)
+(while (<= i1 10)
+  (setq i1 (+ i1 1)))
+
+    (insert "for ($")
+    (insert varfor)
+    (insert "=0;$")
+    (insert varfor)
+    (insert "<=")
+    (newline)
+    (insert ";++$")
+    (insert varfor)
+    (insert ")")
+    (newline)
+    (insert "{")
+    (newline)
+    (newline)
+    (insert "}")
+    (previous-line)
+    (previous-line)
+    (previous-line)
+    (delete-backward-char 1)
+)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;;  (insert (format "This is a test, the x is %d and the y is %d." xmax ymax))
+(insert "size(600pt,600pt);")(newline-and-indent)
+(insert "real m=1;")(newline-and-indent)
+(newline-and-indent)
+(insert "// real fl=-1;")(newline-and-indent)
+(insert "// real fr=15;")(newline-and-indent)
+(insert "// real fu=20;")(newline-and-indent)
+(insert "// real fd=-1;")(newline-and-indent)
+(insert "// path frame=((fl*m,fu*m)--(fr*m,fu*m)--(fr*m,fd*m)--(fl*m,fd*m)--cycle);")(newline-and-indent)
+(insert "// draw(frame,linewidth(0));")(newline-and-indent)
+(newline-and-indent)
+(setq i1 0)
+(while (<= i1 xmax)
+(setq i2 0)
+  (while (<= i2 ymax)
+(if (< i1 10)
+      (setq xstring (concat "0" (number-to-string i1)))
+      (setq xstring (number-to-string i1)))
+(if (< i2 10)
+      (setq ystring (concat "0" (number-to-string i2)))
+      (setq ystring (number-to-string i2)))
+(insert (format "pair x%s%s=(%d*m,%d*m);" xstring ystring i1 i2))(newline-and-indent)
+(setq i2 (+ i2 1)))
+(setq i1 (+ i1 1)))
+(newline-and-indent)
+(insert "// pen wall=linewidth(3);")(newline-and-indent)
+(insert "// pen redwall=linewidth(3)+rgb(0,255,0);")(newline-and-indent)
+(insert "// path p03=shift((0*m,-8*m))*p01;")(newline-and-indent)
+(insert "// fill(sink1,sinkpen);")(newline-and-indent)
+(insert "// fill(tub,rgb(0,0,139));")(newline-and-indent)
+(insert "// draw(p02,redwall);")(newline-and-indent)
+(insert "// label(\"Sauna\",x0611);")(newline-and-indent)
+(insert "// real square_root_of_two=2**.5;")(newline-and-indent)
+(insert "// path unit_circle=shift(1,1)*circle((0,0),1);")(newline-and-indent)
+(insert "// label(\"\\parbox{1.5in}{\\centering \\textsf{kilometre (km){\\newline}1 km = 1000 metres}}\",box25);")(newline-and-indent)
+(insert "// label(\"\\textsf{\\normalsize{0}}\",x01,NE);")(newline-and-indent)
+(insert "// path kreis=(x08{up}..{left}x02{left}..{down}x04{down}..{right}x06{right}..{up}x08);")(newline-and-indent)
+(insert "// dot(x01--x02--x03--x04--x05--x06--x07--x08);")(newline-and-indent)
+(insert "// fill(shift(c1)*xscale(rx*x)*yscale(ry*y)*unitcircle,ubuntu_yellow);")(newline-and-indent)
+(newline-and-indent)
+(newline-and-indent)
+     (when (file-writable-p nameOfFile)
+       (write-region (point-min)
+                     (point-max)
+                     nameOfFile))))
+)

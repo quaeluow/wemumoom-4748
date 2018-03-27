@@ -1,0 +1,43 @@
+\documentclass[11pt]{article}
+
+\usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[table]{xcolor}
+\definecolor{lightgray}{gray}{0.9}
+\usepackage{graphicx}
+\usepackage{enumerate}
+\usepackage{october}
+
+\begin{document}
+
+This summarizes work done in the second half of February 2014.
+Sudelbuch around page 1174. 
+
+We know $\hat{\alpha}_{i}$ and $\beta_{j}$ as well as $\kappa$ and
+$\hat{\kappa}$.
+
+\textsc{maxent} and \emph{Infomin} give us
+
+\begin{equation}
+  \label{eq:m1}
+  M=\frac{1}{e}rs^{\intercal}\circ\kappa
+\end{equation}
+
+\begin{equation}
+  \label{eq:m2}
+  \hat{M}=\frac{1}{e}\hat{r}\hat{s}^{\intercal}\circ\hat{\kappa}\circ{}M
+\end{equation}
+
+\begin{equation}
+  \label{eq:m3}
+  \beta_{j}=r_{j}\sum_{(k,j)\in{}K}s_{k}
+\end{equation}
+
+\begin{equation}
+  \label{eq:m4}
+  \hat{\alpha}_{i}=\hat{s}_{i}\sum_{(i,l)\in\hat{K}}\hat{r}_{l}
+\end{equation}
+
+\end{document} 

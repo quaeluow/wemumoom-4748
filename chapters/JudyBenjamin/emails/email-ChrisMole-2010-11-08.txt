@@ -1,0 +1,57 @@
+Chris,
+
+I read your paper about cognitivism and culture in 58. It was very
+interesting and relevant to my information theory research project. It
+is especially the Broadbent book (Perception and Communication) on
+page 11 and the Goodman book (Fact, Fiction, and Forecast) on page 37
+that I am interested in. I had never made the connection between
+information theory and cognitive psychology---it was interesting to
+see how consistently Barlow et al refer to it as well in this week's
+reading.
+
+My project is to show the relations between Bayesian inference and
+probability on the one hand and information theory on the other hand.
+It is fairly clear that there is a branch of information theory that
+is closely related to probability theory by the following formula
+(assuming 2 as my logarithmic base):
+
+P(X)=2^{-I(X)}
+
+This is the branch of information theory that defines information
+primarily with reference to probabilities and probability
+distributions. It was Kolmogorov who first suggested to turn it around
+and define probabilities in terms of information. The fun thing is
+that one can play around with this and show that the Bayesian
+rationality constraint (your probability assignment is rational only
+if it coheres with your prior probabilities and Bayes' formula)
+follows from strictly information theoretical considerations. In other
+words, Bayesian inference and the principle of maximum entropy
+(believe the hypothesis that, given the evidence, is least
+informative) are equivalent. Let's call probability theory PT and this
+branch of information theory IT-1.
+
+But then there is another branch (let's call it IT-2) that defines
+information on strings (not probability distributions). 123456789, for
+example, is less informative than 326718549. The information content
+of a string is basically its minimum description. Using Turing's
+halting problem, Chaitin has shown that there is no general algorithm
+to determine the minimum description of a string. The proof is roughly
+analogous to the proof of Goedel's incompleteness theorem. I never
+heard of Goodman's book, but it looks like he's after the same thing.
+You write, ``it had become clear that there were difficulties of
+principle, not merely technical obstacles, that had thwarted the
+attempts of the logical empiricists to give a formal account of the
+scientific.'' In computer science, there is a ``full employment
+theorem'' that's going in a similar direction.
+
+So it looks like IT-1 and IT-2 give us a very different picture of
+information. One is intricately related to probabilities and obeys the
+intuitions we have about probabilities. The other reveals severe
+limitations on non-heuristic algorithms. There is some evidence that
+our minds are very good at compressing data, which is very much an
+IT-2 type of activity. Rationality, on the other hand, is closely
+aligned with IT-1 via Bayes' formula. 
+
+Suggest paper topics, either on Goodman or Broadbent, or mathematical
+modeling. Mention that I'd like this course to be a history of
+philosophy course (??).

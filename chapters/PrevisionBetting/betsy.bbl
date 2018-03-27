@@ -1,0 +1,23 @@
+\begin{thebibliography}{3}
+\newcommand{\enquote}[1]{``#1''}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\providecommand{\urlprefix}{}
+
+\bibitem[{Elga(2010)}]{elga10}
+Elga, Adam.
+\newblock \enquote{Subjective Probabilities Should Be Sharp.}
+\newblock \emph{Philosophers' Imprints} 10, ~5: (2010) 1--11.
+
+\bibitem[{Joyce(2010)}]{joyce10}
+Joyce, James.
+\newblock \enquote{A Defense of Imprecise Credences in Inference and Decision
+  Making.}
+\newblock \emph{Philosophical Perspectives} 24, ~1: (2010) 281--323.
+
+\bibitem[{Walley(1991)}]{walley91}
+Walley, Peter.
+\newblock \emph{Statistical Reasoning with Imprecise Probabilities}.
+\newblock London, UK: Chapman and Hall, 1991.
+
+\end{thebibliography}

@@ -1,0 +1,1016 @@
+\documentclass[11pt]{article}
+
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{.1in}
+
+\raggedbottom
+
+%\pagestyle{empty}
+
+% 	PACKAGES
+% \usepackage[colon,round]{natbib} % author-year style
+\usepackage[numbers,colon]{natbib} % author-numerical style
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{german}
+%\usepackage{hebtex}
+%\usepackage{graphicx}
+%\usepackage[german]{babel}
+\usepackage{endnotes}
+\let\footnote=\endnote
+%\usepackage{rotating}
+
+% \newcommand{\kapt}[1]{\bigskip\noindent\textbf{{\thechap}. #1}\addtocounter{chap}{1}\medskip}
+\newcommand{\kapt}[1]{\textbf{{\thechap}. #1}\addtocounter{chap}{1}}
+
+% \input{./zz-ReferencesAtBeg-InformationEpistemology.tex}
+
+\newcommand{\tbd}[1]{}
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
+
+\begin{document}
+
+\title{Information Epistemology}
+
+\author{Stefan Lukits}
+
+% \maketitle
+
+\begin{center}
+  \textbf{Information Epistemology}
+\end{center}
+
+\newcounter{chap}
+
+\setcounter{chap}{1}
+
+\begin{abstract}
+  \noindent Information is a more basic epistemological concept than
+  probability. It can be used to create the foundations for
+  probability, and it delivers substantial epistemological results
+  that cannot be obtained by using probability theory without the use
+  of information theory. The paper shows in what ways information
+  theory and probability theory are equivalent, and in what ways
+  information theory is epistemologically prior to probability theory.
+  A measure-theoretic proof is provided that Bayesian updating and the
+  principle of minimal discrimination (using the Kullback-Leibler
+  Divergence) are compatible. One section is devoted to Kolmogorov
+  Complexity, Chaitin's incompleteness theorem, and their implications
+  for an epistemology based on information theory.
+\end{abstract}
+
+\kapt{Information and Probability}
+
+Epistemology in general and belief revision in particular, or
+conditionalization of belief on evidence, can have different starting
+points. Timothy Williamson, for example, has made a good case for
+using knowledge itself as an epistemologically primary and indivisible
+concept \citep{williamson00}. For Bayesians, probability is the
+central concept. Given mutually exclusive and exhaustive hypotheses
+$\{H_{1},H_{2},{\ldots},H_{n}\}$ and a new piece of evidence $E$, it
+is \qnull{rational} to revise the probabilistic weight given to the
+hypotheses by the following formula or otherwise be liable to a Dutch
+book (\citet{teller76}):
+\begin{equation}
+  \label{eq:bayes}
+Q(H_{i})=P(H_{i}|E)=\frac{P(E|H_{i})P(H_{i})}{\sum_{k=1}^{n}P(E|H_{k})}  
+\end{equation}
+$Q$ is the updated probability assignment after evidence $E$ comes in
+(the \qnull{posterior probability distribution}), $P$ is the \qnull{prior
+probability distribution,} before we know about the evidence.
+
+Information is a serious alternative to probability as a fundamental
+notion of epistemology. There is a tight mathematical connection
+between information and probability, so that the question which of
+them is primary is in some ways a war of words because they are sides
+of the same coin. In other ways, however, where belief revision is not
+quantifiable, considerations of information may be more helpful in
+determining rational, epistemically justifiable, or just pragmatically
+workable belief. There is some evidence that our brains are successful
+this way: compression of data may be related to intelligence
+(\citet{friston10}), whereas it is unclear how good we are with our
+probability assessments.
+
+Probability theory gives us relatively little guidance about the prior
+probability distribution. For a finite, discrete set of hypotheses
+$(H_{i})_{i=1,\dots,n}$ an application of Laplace's principle of
+indifference will often do the job: $P(H_{i})=n^{-1}$. It is less
+certain what to do in the infinite case, in the continuous case, or
+when Bertrand's paradox strikes \citep{bertrand88}.\footnote{For an
+  interesting case where flat priors do not coincide with
+  non-informative priors see \citet{zhulu04}. \qeins{The lesson from
+    this discussion is extremely interesting; it tells us that flat
+    priors (such as the uniform prior) are not always the same thing
+    as non-informative priors. A seemingly informative prior can
+    actually be quite weak in the sense that it does not influence the
+    posterior opinion very much. It is clear in our example that the
+    MLE is the result of using a weak prior, whereas the most
+    intuitive non-informative prior (the uniform prior) is not as weak
+    or non-informative as one would have thought} \citep[6]{zhulu04}.
+  Jeffreys' priors also are not flat priors as they replace the
+  uniform probability distribution $P(\mbox{parameter lies between
+  }a\mbox{ and }b)=\int_{a}^{b}dt=b-a$ by $P(\mbox{parameter lies
+    between }a\mbox{ and }b)=\int_{a}^{b}(t(1-t))^{-.5}dt$ (the
+  argument of the integral is the determinant of the Fisher
+  Information matrix). They pose an interesting problem as it can be
+  shown that their invariance to parameter transformation depends on a
+  variance with respect to experimental design inherent in the Fisher
+  Information. Jeffreys priors therefore violate the likelihood
+  principle that inferences about the parameter should only rest on
+  observed data. We cannot have both invariance to parametrization,
+  for which using the Fisher information turns out be a necessary
+  condition, and invariance to our choice of experimental design. For
+  further information see \citet{cristofaro04}.} The principle of
+maximum entropy, however, developed by E. T. Jaynes, generalizes
+Laplace's principle of indifference to the continuous case, where the
+normal distribution is the one that is maximally noncommittal with
+regard to missing information \citep[622f]{jaynes57}. Bertrand's
+paradox can be addressed by investigating parameter transformations.
+The constraints we pose on prior probability distributions generally
+originate in information theory. Entropy is just a way of measuring
+the reciprocal of information. For a detailed and concise proof that
+the normal distribution contains the largest amount of uncertainty see
+\citet{kampe63}, in English \citet[298ff]{guiasu77}; for a proof of
+similar significance for the Poisson distribution with respect to
+information theory see \citet{ingardenkossakowski71}.
+
+Most of information theory is based on probability. Aleksandr Khinchin
+calls information theory an \qeins{important and interesting chapter
+  of the general theory of probability} \citep[1]{khinchin57}. One of
+the stock formulas of information theory is Shannon's Information
+Entropy and defines the entropy of a probability distribution where
+the $x_{i}$ are the elements of a finite event space with cardinality
+$n$:
+\begin{equation}
+  \label{eq:shannon}
+    H(X)=-\sum_{i=1}^{n}p(x_{i})\log p(x_{i})
+\end{equation}
+
+Discontent about this dependence of information theory on probability
+theory rises especially with the voice of Andrey Kolmogorov. We will
+have a brief look at \citet{ingardenurbanik62}, \citet{kolmogorov68},
+and \citet{kampe67} for formal attempts to define information theory
+without recourse to probability theory that entails probability.
+First, here is a more intuitive approach using counterfactuals.
+
+If we had a measure on the set of worlds (we can come up with a
+stylized set of worlds where we have such a measure), it would be
+intuitive to say that the more a proposition constrains which possible
+worlds are consistent with the actual world, the more information it
+gives us. Let $X$ be a proposition. Then
+\begin{equation}
+\label{eq:counterf}
+  I^{*}(X)=\frac{\mu(\mbox{set of all possible worlds})}{\mu(\mbox{set of
+      all possible worlds in which $X$ is true})}
+\end{equation}
+gives us a first approximation how we might measure information. 
+
+We rewrite this definition for notational convenience:
+\begin{displaymath}
+  I^{*}(X)=\frac{\mu(\Omega)}{\mu(\Omega|X)}
+\end{displaymath}
+$I^{*}$ is on an awkward scale, does not accord with the bit (binary
+digit) of information theory, and needs to be normalized. Call $I(X)$
+the information density of the proposition $X$:
+\begin{equation}
+  I(X)=\log_{2}(I^{*}(X))
+\label{eq:logdef}
+\end{equation}
+
+One eighth of possible worlds is consistent with the actual world if
+it is constrained by the result of three independent tosses of a fair
+coin. If $X$ is this result, $I(X)=3$, which corresponds nicely to the
+fact that $X$ contains $3$ bits of information.
+
+In a stylized set of a finite number of possible worlds, it seems
+intuitive to say that the information in $X$ and $Y$ is unrelated if 
+\begin{displaymath}
+  \mu(\Omega|X\wedge Y)=\frac{\mu(\Omega|X)\cdot\mu(\Omega|Y)}{\mu(\Omega)}
+\end{displaymath}
+Consequently,
+\begin{displaymath}
+  I^{*}(X\wedge Y)=I^{*}(X)\cdot I^{*}(Y)
+\end{displaymath}
+and so, using ({\ref{eq:logdef}}),
+\begin{displaymath}
+  I(X\wedge Y)=I(X)+I(Y)
+\end{displaymath}
+The joint information density of unrelated information is additive,
+and to whatever degree the information is redundant it is less
+additive.
+
+Information density is intuitively related to probability. The
+relation must be intuitive, as we have no realistic measure of
+possible worlds (we do not even know what the cardinality of the set
+of possible worlds is, see \citet[44f]{kaplan94}). Basing probability
+theory on counterfactuals harbours all kinds of systematic problems.
+Ignoring these warnings, the same intuitions as above give us:
+\begin{displaymath}
+  P(X)=\frac{\mu(\Omega|X)}{\mu(\Omega)}
+\end{displaymath}
+which translates into:
+\begin{displaymath}
+  P(X)=2^{-I(X)}
+\end{displaymath}
+
+Let us consider information density our primary epistemological notion
+so that information density is numerically defined in mathematically
+stylized scenarios (as probabilities are often numerically defined in
+mathematically stylized scenarios) and otherwise defined (let's say,
+\qnull{epistemologically defined}) if no mathematical stylization is
+accessible (which is usually the case). We should always be aware that
+the way we construct the set of possible worlds already encodes
+assumptions made about the domain of the construction (see
+\citet[13]{halpern03}). Information, the way we understand it here, is
+a narrowing of epistemic space implicitly embedding these assumptions.
+(For epistemic space see \citet{chalmersfc}.)
+
+Rationality constraints on the epistemological definition of
+information density are analogous to rationality constraints on
+subjective probabilities, following Kolmogorov's axioms of probability
+theory. The information density of a proposition $X$ should in analogy
+to Kolmogorov's axioms (i) be between $0$ and $\infty$ ($0\leq
+I(X)\leq\infty$), (ii) be $0$ if $X$ yields no information, $\infty$
+if $X$ constrains the set of possible worlds to a set measuring $0$,
+whatever that may mean in context, and (iii) be countably additive
+with other propositions $X',X'',\ldots$ if all those propositions
+together with $X$ are pairwise unrelated to each other in terms of
+yielding information ($I(X\wedge X'\wedge
+X''\wedge\ldots)=\sum_{m}I(X^{m})$). For mostly equivalent
+axiomatizations of information theory in the literature see
+\citet{shannon48,fadeev57,khinchin57}.
+
+Once information density is axiomatized in this way, our first strike
+is to define probability in terms of information
+density\footnote{\qeins{Though the usual order, according to which
+    information is defined by means of probability, can be reversed,
+    and one can introduce information first, without using
+    probabilities, probabilities inevitably come in at a later stage.
+    The fact that a theory which starts with the aim of defining
+    information without probability leads to the proof of the
+    existence of probability supports the view that the notion of
+    information cannot be separated from that of probability. To each
+    event $A$ there correspond two numbers: its probability $p(A)$ and
+    its information content $I(A)$ which are connected by the formulas
+    $I(A)=\log_{e}\frac{1}{p(A)}, p(A)=e^{-I(A)}$}
+  (\citet[37]{guiasu77}).} (in accordance with our intuitions):
+\begin{equation}
+  P(X)=2^{-I(X)}
+\label{eq:probdef}
+\end{equation}
+
+It follows immediately that $P$ is a probability measure and two
+propositions $X$ and $Y$ are independent if and only if $P(X\wedge
+Y)=P(X)P(Y)$.
+
+Strike number two: knowledge and evidence are both co-extensive with
+the set of propositions whose information density is $0$. $E=K$, as in
+Timothy Williamson's \emph{The Limits of Knowledge}
+\citep{williamson00}. Strike number three, inspired by Jaynes's
+principle of maximum entropy, but now also applied to posterior
+distributions: if choosing from an alternative hypothesis set
+$\{H_{1},H_{2},\ldots\}$, the hypothesis $H^{*}$ commanding the
+highest amount of epistemic warrant is the one (not necessarily
+unique) for which
+\begin{equation}
+  I(\mathcal{E}\wedge H^{*})=\min(\{I(\mathcal{E}\wedge
+  H_{1}),I(\mathcal{E}\wedge H_{2}),\ldots\})
+\label{eq:pme}
+\end{equation}
+where $\mathcal{E}$ is one's body of evidence. 
+
+An early formulation of Jaynes's principle of maximum entropy is in
+Richard Avenarius' telling book title \emph{Philosophie als Denken der
+  Welt gem{\"a}{\ss} dem Princip des kleinsten Kraftma{\ss}es:
+  Prolegomena zu einer Kritik der reinen Erfahrung}
+\citep{avenarius76}. Avenarius inspired Ernst Mach, who described the
+economy of thought in physics (and the sciences generally) as a result
+of the desire to \qeins{master the sum of one's experience by the
+  smallest possible effort}. The philosopher who pursued this project
+most systematically was Rudolf Carnap in \emph{Der logische Aufbau der
+  Welt}, whose plan it was \qeins{that qualities should be assigned to
+  point-instants in such a way as to achieve the laziest world
+  compatible with our experience {\ldots} the principle of least
+  action was to be our guide in constructing a world from experience}
+(\citet[37]{quine51}). Carnap's project in relation to our concerns is
+spelled out in \emph{An Outline of a Theory of Semantic Information}
+\citep{carnapbarhillel52}, where, unsurprisingly, logically true
+sentences do not contain information (theorem 4.2.24 and 4.2.33),
+while false sentences contain maximal information (theorem 4.2.23 and
+4.2.33) (for more detail see \citet[319f]{burgin10}). The project,
+however, is generally considered to have failed. The metaphysical
+debate that it created is via the relationship between information and
+probability applicable to our epistemological concerns, but here is
+not the place for a detailed account.
+
+The rest of the paper is a mopping up operation thinking about what
+({\ref{eq:pme}}) might mean as a definition and in scientific
+practice. It states that the hypothesis, explanation, or model is the
+best which is minimally informative. Knowledge is those propositions
+which provide no new information in context, as in the rejoinder,
+\qnull{I already knew that.} If the proposition is false or a Gettier
+proposition \citep{gettier63}, the rejoinder is inappropriate
+(although the speaker may not recognize it). Thus knowledge depends on
+both internal and external factors and the epistemological debate can
+continue as we are used to it.
+
+Probabilistic language provides us with a rich intuitive inventory
+that is further backed up by rich mathematical notions where (in rare
+cases, such as coin-flipping and dice-rolling) the probabilities are
+quantitatively precise. The same is true for information: where the
+assignment of quantitative information is not available we still have
+good intuitions about what is informative and what is not. Sometimes,
+probability assignments are infeasible, maybe even on principle, while
+information density assignments are not.\footnote{\qeins{In physics
+    there prevail situations where information is known (e.g.\ entropy
+    of some macroscopic systems) and may be measured with a high
+    degree of accuracy, whereas the probability distribution is
+    unknown and practically cannot be measured at all}
+  (\citet[136]{ingardenurbanik62}).} Operating in the background and
+supportive of our intuitions, there is a substantial body of
+mathematics where the information density is numerically defined. This
+body of mathematics, information theory, differs from probability
+theory in interesting ways and yields substantial results not
+achievable by probability theory, although, as we shall see, there are
+important equivalence relations between information theory and
+probability theory. In particular, I am providing a measure-theoretic
+proof in the next section that Bayes' theorem follows from a purely
+information-theoretic approach: the probability distribution given by
+Bayesian updating is the unique minimally informative posterior
+probability distribution.
+
+There is some recognition in the literature (the chief contender is
+Kolmogorov) that information is a concept more basic than
+probability.\footnote{\qeins{As a matter of fact, the information
+    seems to represent a more primary step of knowledge than that of
+    cognition of probabilities} (\citet[29]{guiasu77}).} There is no
+debate in information theory analogous to the debate about subjective,
+objective, and frequentist views of probability. Instead there are
+well-established theorems about what information theory \emph{cannot}
+do for us, for example provide an algorithm for computing the
+complexity of information. Using the proof that Turing's halting
+problem cannot be solved (\citet{turing37}), which bears a resemblance
+to G{\"o}del's incompleteness theorem, we know that there is no such
+algorithm (\citet{chaitin66}). There is then no algorithm giving us a
+solution for ({\ref{eq:pme}}) other than the continued labour of human
+thought and experience. In information theory, this is known as the
+full employment theorem.
+
+In conclusion of this section, let me summarize my argument in point
+form:
+\begin{itemize}
+\item The use of probabilistic concepts among epistemologists is
+  ubiquitous, whereas few of them seem to concern themselves with
+  information theory. I will show that there is a good case that
+  information is a more basic concept than probability, that it can be
+  used to create the foundations for probability, and that it delivers
+  substantial epistemological results that cannot be obtained by using
+  probability theory without the use of information theory.
+\item Using information theory as our basis we can (a) define
+  probabilities using (\ref{eq:probdef}), (b) then use the
+  Kullback-Leibler Divergence as our most general starting point for a
+  mathematical investigation of information (the Kullback-Leibler
+  Divergence is a generalization of the better-known Shannon Entropy
+  for the continuous case), which will further show that (c) Bayesian
+  rationality constraints also follow from the principle of maximum
+  entropy.
+\item Information theory has the added advantage that it will give us
+  solid results about continuous probability distributions. As
+  mentioned before, the normal distribution and the Poisson
+  distribution have unique characteristics in terms of being minimally
+  informative (or maximally entropic). 
+\item Information theory, however, soon diverges from applications
+  known from probability theory to go into considerations of
+  complexity. There is an intuitive correspondence between information
+  and complexity. Complexity (mathematically formalized as Kolmogorov
+  Complexity) cannot be algorithmically assessed, according to
+  Chaitin's incompleteness theorem (\citet{chaitin66}). There are
+  consequently heavy methodological limits on what information theory
+  can do for us in scientific practice. Solomonoff's theory of
+  inductive inference \citep{solomonoff64} and Wallace's theory of
+  minimum message length \citep{wallaceboulton68,wallacedowe99} are
+  only of limited use to practicioners. There is a strand of
+  non-Bayesian inference methods, however, which appears to have
+  methodological import, especially dealing with simplicity, for
+  example Hirotsugu Akaike's information criterion
+  \citep{akaike74,bozdogan00} or Jorma Rissanen's theory of minimum
+  description length \citep{rissanen78,grunwald00}. For a Bayesian
+  response see \citet{dowegardneroppy07}.
+\end{itemize}
+
+\kapt{Information and Divergence}
+
+The Kullback-Leibler divergence, in
+its most general measure-theoretic terms, is
+\begin{equation}
+  \label{eq:kulei}
+  D_{\mbox{\tiny{KL}}}(P\|Q)=\int_{X}p\log\frac{p}{q}d\mu
+\end{equation}
+Let not the math deter you. (Although I will say for those who are
+interested that $\mu$ is any measure on the event space $X$ for which
+$p$ and $q$ are the Radon-Nikodym derivatives $\frac{dP}{d\mu}$ and
+$\frac{dQ}{d\mu}$ respectively.) The Kullback-Leibler Divergence was
+introduced specifically for expressing what we have called (after
+Jaynes) the principle of maximum entropy, which Solomon Kullback calls
+the principle of minimum discrimination: given new facts, a new
+distribution $Q$ should be chosen which is as hard to discriminate
+from the original distribution $P$ as possible so that the new data
+produces as small an information gain ($D_{\mbox{\tiny{KL}}}(P\|Q)$)
+as possible. The Kullback-Leibler Divergence also provides a link
+between Shannon's Entropy in the discrete case and Boltzmann's
+continuous entropy: a concise and illuminating proof for this is in
+section 2.2 of \citet{guiasu77}. For practical applications of the
+Kullback-Leibler Divergence see
+\citet{clarkebarron90}.\footnote{\qeins{It is seen that
+    $D(P^{n}_{\theta}\|M_{n})$ is (a) the cumulative risk of Bayes'
+    estimators of the density function, (b) the redundancy of a source
+    code based on $M_{n}$, (c) the exponent of error probability for
+    Bayes' tests of a simple versus composite hypothesis, and (d) a
+    bound on the financial loss in a stock-market portfolio selection
+    problem} (\citet[455]{clarkebarron90}).}
+
+Here is a simple example. Imagine a city with 100 taxis. 30 are green,
+70 are blue. Your accuracy in recognizing the correct colour of a taxi
+is 90\%.
+
+\begin{tabular}{|l|l|l|l|}
+\hline
+& Green & Blue & Total\\ \hline
+Accurate & 27 & 63 & 90\\ \hline
+Inaccurate & 3 & 7 & 10\\ \hline
+Total & 30 & 70 & 100\\ \hline
+\end{tabular}
+
+Assume you see a green taxi ($sG$). How much probability should you
+assign to the event that the taxi you just saw was in fact green
+($G$)? Bayes' formula gives us a quick answer:
+\begin{displaymath}
+  Q(G)=\frac{P(sG|G)P(G)}{P(sG)}=\frac{\frac{90}{100}\cdot\frac{30}{100}}{\frac{34}{100}}\approx 0.79
+\end{displaymath}
+
+You may (erroneously) think that because you are 90\% accurate your
+chances of seeing a taxi that is in fact green are 90\%, so
+$Q'(G)=0.9$. The Kullback-Leibler divergence
+$D_{\mbox{\tiny{KL}}}(Q\|Q')$ measures the additional information
+needed for transmission of a message (in bits, if the base of the
+logarithm is $2$, which we will assume throughout this paper) because
+your probabilities ($Q'$) are off. Due to your faulty probability
+assessment you are inefficiently coding your messages.
+$D_{\mbox{\tiny{KL}}}(Q\|Q')$ measures the inefficiency. Because the
+event space is discrete we can substitute the sum for the integral in
+({\ref{eq:kulei}}):
+\begin{displaymath}
+  D_{\mbox{\tiny{KL}}}(Q\|Q')=Q(G)\log\frac{Q(G)}{Q'(G)}+Q(B)\log\frac{Q(B)}{Q'(B)}=
+\end{displaymath}
+\begin{displaymath}
+    0.79\cdot\log\frac{0.79}{0.90}+0.21\cdot\log\frac{0.21}{0.10}\approx0.08
+\end{displaymath}
+Because your code is based on $Q'$ rather than $Q$ you need 0.08 more
+code (per bit).
+
+The Kullback-Leibler Divergence, which is the unique divergence to
+minimize for minimum discrimination in Kullback's sense, will serve as
+our formal definition of information density with respect to
+probability distributions. A few remarks are in order:
+
+\begin{enumerate}
+\item We are using probabilities to define information. There are
+  three approaches to circumvent this order of priority: (a) Define
+  probability by using the axioms of information theory. We will see
+  how this works later in this section. (b) Abandon the probabilistic
+  approach altogether and define information in terms of complexity.
+  The next section will address this approach. (c) Use the notion of
+  probability at hand by definition ({\ref{eq:probdef}}), basing it on
+  the intuitive understanding of information given in
+  (\ref{eq:counterf}).
+\item The Kullback-Leibler divergence is not a true metric measuring
+  the \qnull{distance} between two probability distributions. There
+  are topological considerations, but they are seriously hampered by
+  the fact that the Kullback-Leibler divergence is neither symmetric
+  nor does it obey the triangle inequality.
+\item There are other ways of introducing the notion of information
+  with respect to probability distributions, notably Shannon's
+  Entropy. This would have been more intuitive, as Shannon's Entropy
+  simply bitwise quantifies the information in a random variable:
+  \begin{displaymath}
+    H(X)=-\sum_{i=1}^{n}p(x_{i})\log p(x_{i})
+  \end{displaymath}
+  Take one toss of a fair coin for example. As I have nothing to lean
+  on to predict it, I will simply need one bit to communicate the
+  result:
+\begin{displaymath}
+  H(X)=-\frac{1}{2}\log\frac{1}{2}-\frac{1}{2}\log\frac{1}{2}=1
+\end{displaymath}
+If the coin is not fair, heads or tails will be privileged, which I
+can use to encode the result more efficiently. Shannon's Entropy will
+be accordingly smaller. If I roll a die instead of a coin, Shannon's
+Entropy will be accordingly larger as I need more bits to encode the
+result (if it is a fair eight-sided die, 3 bits). For a proof that
+Shannon's Entropy is unique in quantifying this information, subject
+to highly intuitive axioms, see \citet[9]{khinchin57}. The Shannon
+Entropy, however, is much less capable of generalization than the
+Kullback-Leibler divergence which remains well-defined for continuous
+distributions and is invariant under parameter transformations.
+Shannon's Entropy, on the other hand, is easily defined using the
+Kullback-Leibler Divergence ($n$ is the number of possible outcomes,
+$P_{\mbox{\tiny{u}}}$ is the uniform distribution for these outcomes).
+For a proof see \citet[27]{guiasu77}:
+\begin{displaymath}
+  H(X)=\log n-D_{\mbox{\tiny{KL}}}(P\|P_{\mbox{\tiny{u}}})
+\end{displaymath}
+\end{enumerate}
+
+Now we want to show that Bayesian updating reflects the principle of
+maximum entropy. In other words, Bayesian conditionalization gives us
+the posterior probability distribution that is least informative given
+the evidence. We arrive at this result not by using axioms of
+probability but rather by using the axioms of information theory, in
+our case the Kullback-Leibler Divergence. Let $P$ be the prior
+probability distribution, $\Omega$ the event space, $E\subset\Omega$
+our evidence with $P(E)\neq 0$. Using the
+Radon-Nikodym theorem, there is a non-negative, real-valued,
+measurable function $p$ such that
+\begin{displaymath}
+  P(X)=\int_{X}p(\omega)dP(\omega)\mbox{ for all }X\subset \Omega
+\end{displaymath}
+(We will from now on abbreviate $dP(\omega)$ by $dP$.) The evidence
+restricts the event space from $\Omega$ to $E$. The successor
+probability distribution of $P$, given evidence $E$, is
+\begin{displaymath}
+  P_{E}(X)=\frac{P(X)}{P(E)}\mbox{ for }X\subset E
+\end{displaymath}
+It is easy to show that $P_{E}$ is a probability measures for $E$. Let
+\begin{displaymath}
+p_{E}(\omega)=\frac{p(\omega)}{P(E)}
+\end{displaymath}
+$p_{E}$ is the Radon-Nikodym derivative of $P_{E}$ with respect to
+$P$:
+\begin{displaymath}
+P_{E}(X)=\frac{P(X)}{P(E)}=\frac{1}{P(E)}\int_{X}p(\omega)dP=\int_{X}p_{E}dP
+  \mbox{ for }X\subset E
+\end{displaymath}
+Now let us define the function:
+\begin{displaymath}
+  q_{E}(\omega)=\frac{\chi_{E}(\omega)p(\omega)}{P(E)}
+\end{displaymath}
+$\chi_{E}$ is the characteristic function of $E$ for which
+$\chi_{E}(\omega)=1$ if $\omega\in E$ and $\chi_{E}(\omega)=0$
+otherwise. $q_{E}$ renders the following expression minimal (zero, in
+fact):
+\begin{equation}
+\label{eq:kldproof}
+  \int_{E}p_{E}(\omega)\log\frac{p_{E}(\omega)}{q_{E}(\omega)}dP 
+\end{equation}
+Now define $Q(X)=\int_{X}q_{E}(\omega)dP$ for all $X\subset\Omega$,
+which is easily shown to be a probability distribution on $\Omega$,
+and $Q_{E}(X)=\int_{X}q_{E}(\omega)dP$ for all $X\subset E$, which is
+easily shown to be a probability distribution on $E$, for example
+\begin{displaymath}
+  Q_{E}(E)=\int_{E}\frac{\chi_{E}(\omega)p(\omega)}{P(E)}dP=1
+\end{displaymath}
+\begin{displaymath}
+  Q(\Omega)=\int_{\Omega}\frac{\chi_{E}(\omega)p(\omega)}{P(E)}dP=1
+\end{displaymath}
+$Q_{E}=Q$ on $E$ and, because of (\ref{eq:kldproof}),
+$D_{\mbox{\tiny{KL}}}(P_{E}\|Q_{E})$ is minimal. It remains to show
+that $Q(X)P(E)=P(X\wedge E)$ for $X\subset \Omega$, which is just
+Bayes' formula (multiply both sides by $P(X)(P(X)P(E))^{-1}$ and
+compare to formula (\ref{eq:bayes})):
+\begin{displaymath}
+  Q(X)P(E)=P(E)\int_{X}\frac{\chi_{E}(\omega)p(\omega)}{P(E)}dP=
+\end{displaymath}
+\begin{displaymath}
+  \int_{X\wedge E}\chi_{E}(\omega)p(\omega)dP+\int_{X\wedge E^{c}}\chi_{E}(\omega)p(\omega)dP=P(X\wedge E)
+\end{displaymath}
+
+I wonder, you may say, didn't we just show that Bayesian
+conditionalization means what we already knew about Bayesian
+conditionalization? Yes, but not quite. Our base assumptions were
+assumptions of information theory, not probability theory. However, we
+did use what we know from probability theory, i.e.\ the particular
+form of the Bayesian posterior probability distribution. It turns out
+that this particular form is the only one that fulfills the principle
+of maximum entropy. While specifically taylored to Bayesian updating,
+this type of proof is analogous to two independent attempts of basing
+information theory on probability theory rather than the reverse, one
+by \citet{ingardenurbanik62}, the other one by \citet{kampe67}.
+
+A completely different proof using Lagrange multipliers rather than
+the Radon-Nikodym theorem is given in \citet{catichagiffin06} and
+\citet{giffin08}. Ariel Caticha and Adom Giffin show that \qeins{Bayes
+  updating is a special case of ME (the maximum relative entropy
+  method) updating} \citep[11]{catichagiffin06}. In his PhD thesis
+\citep{giffin08}, Giffin shows that \qeins{ME is capable of producing
+  every aspect of orthodox Bayesian inference and proves the complete
+  compatibility of Bayesian and entropy methods} \citep[62]{giffin08}.
+He furthermore shows that ME can handle updating with data and
+constraints simultaneously, which neither Bayesian updating nor MaxEnt
+can do on their own, but only in cooperation.
+
+In the following section, I will provide a brief
+glimpse of Ingarden's and Kamp{\'e} de F{\'e}riet's project, heavily
+leaning on Silviu Guia{\c{s}}u in the latter case \citep[37ff]{guiasu77}.
+
+\emph{(i) Ingarden and Urbanik}
+
+Ingarden and Urbanik motivate their project as follows:
+\begin{quotex}
+  information seems intuitively a much simpler and more elementary
+  notion than that of probability. It gives more a cruder [sic] and
+  global description of some situations physical or other than
+  probability does. Therefore, information represents a more primary
+  step of knowledge than that of cognition of probabilities (just as
+  probability description is cruder and more global than deterministic
+  description). Furthermore, a prinicipal separation of notions of
+  probability and information seems convenient and useful from the
+  point of view of statistical physics. In physics there prevail
+  situations where information is known (e.g.\ entropy of some
+  macroscopic systems) and may be measured with a high degree of
+  accuracy, whereas probability distribution is unknown and
+  practically cannot be measured at all {\ldots} Finally, it may be
+  remarked that a new axiomatic definition of information, free of the
+  inessential connection with probability, clears the way for future
+  generalizations of this notion. \citep[136]{ingardenurbanik62}
+\end{quotex}
+Ingarden and Urbanik define information for non-trivial Boolean rings
+$A,B,$ $C,\ldots$, whose elements will be denoted by $a,b,c,${\ldots}
+Let $\mathcal{H}$ be a class of Boolean rings for which all the
+subrings of its elements are elements and all elements have proper
+supersets that are elements. Let $F$ be a real-valued function defined
+on $\mathcal{H}$. We say that two rings $A$ and $B$ are $F$-equivalent
+if there exists an isomorphism $\varphi$ of $A$ onto $B$ such that
+$F(C)=F(\varphi(C))$ for any subring $C$ of $A$. $\mathcal{H}$ is
+decomposed into disjoint sets of $F$-equivalent rings.
+
+For any pair of isomorphic rings $A$ and $B$ we define
+\begin{displaymath}
+  \delta_{F}(A,B)=\min_{\varphi}\max_{C}|F(C)-F(\varphi(C))|
+\end{displaymath}
+where $C$ is running over all subrings of $A$ and $\varphi$ over all
+isomorphisms of $A$ onto $B$. The function $\varrho_{F}$ defined for any
+$A$ and $B$ makes $\mathcal{H}$ a pseudo-metric space:
+\begin{displaymath}
+  \varrho_{F}(A,B)=\left\{
+  \begin{array}{cl}
+    1 & \mbox{ if $A$ and $B$ are non-isomorphic} \\
+\frac{\delta_{F}(A,B)}{1+\delta_{F}(A,B)} & \mbox{ if $A$ and $B$ are isomorphic}
+  \end{array}
+\right.
+\end{displaymath}
+$\varrho_{F}(A,B)=0$ if and only if $A$ and $B$ are $F$-equivalent. A
+ring $A$ is said to be $F$-homogeneous if for every automorphism
+$\psi$ of $A$ and for every subring $B$ of $A$ we have the equality
+$F(B)=F(\psi(B))$.
+
+A real-valued regular function $H$ (we have skipped a step showing
+what it means for a function to be regular, for details see
+\citep[138]{ingardenurbanik62}) defined on $\mathcal{H}$ is called an
+information if it has the following properties:
+\begin{enumerate}
+\item The information of rings and their subrings is properly
+  connected. (For details, see \citep[138f]{ingardenurbanik62}.)
+\item Local character of information. (For details, see
+  \citep[139]{ingardenurbanik62}.)
+\item Monotoneity: if $B$ is a proper subring of $A$, then $H(B)<H(A)$.
+\item Indistinguishability: Isomorphic $H$-homogeneous rings are $H$-equivalent.
+\item Normalization: if $A$ has two elements and is $H$-homogeneous,
+  then $H(A)=1$. 
+\end{enumerate}
+
+The fundamental theorem about the connection between information
+theory and probability theory follows:
+\begin{quotex}
+  Let $H$ be an information on $\mathcal{H}$. Then for every
+  $A\in\mathcal{H}$ there exists one and only one strictly positive
+  probability measure $p_{A}$ defined on $A$ such that
+  \begin{displaymath}
+    p_{B}(b)=\frac{p_{A}(b)}{p_{A}(1_{B})}\mbox{ for all }b\in B
+  \end{displaymath}
+for every subring $B$ of $A$ and
+\begin{displaymath}
+  H(A)=-\sum_{j=1}^{n}p_{A}(a_{j})\log_{2}p_{A}(a_{j})
+\end{displaymath}
+where the $a_{j}$ are the atoms of $A$.
+\end{quotex}
+
+The proof of this theorem is substantial and constitutes the heart of
+Ingarden and Urbanik's paper. You can see the strategy, however: first
+define what information density is (a real-valued function on the sets
+for which we want to define information) and then notice how
+probability theory as we know it falls into place. Kamp{\'e} de
+F{\'e}riet's approach is more intuitive and accords well with our
+counterfactual intuitions expressed in formula (\ref{eq:counterf}).
+
+\emph{(ii) Kamp{\'e} de F{\'e}riet and Forte}
+
+Consider a measurable space of events $\{\Omega,\mathcal{K}\}$. The
+$\sigma$-algebra $\mathcal{K}$ is the set of events, and $\Omega$ is
+the total event. The real-valued function $I$ defined on the
+$\sigma$-algebra $\mathcal{K}$ is called a local information on
+$\mathcal{K}$ if the following axioms are satisfied:
+\begin{description}
+\item[axiom of extreme values] The certain event does not
+  contain any information, while the impossible event contains
+  infinite information: $I(\Omega)=0,I(\phi)=+\infty$.
+\item[axiom of monotony] For any two events $A$ and $B$
+  belonging to $\mathcal{K}$ such that $B\subset A$ we have
+  $I(A)<I(B)$.
+\item[axiom of union] Let $f$ be a topological strictly
+  decreasing convex function. For any disjoint events $A$ and $B$ we
+  have $I(A\cup B)=f(f^{-1}(I(A))+f^{-1}(I(B)))$.
+\item[axiom of continuity] The function $I$ is continuous
+  from below at every set in $\mathcal{K}$, i.e.\ for every increasing
+  sequence of events $(A_{i})_{i\in
+  M\subset\mathbb{N}}$ for which $A_{1}\subset A_{2}\subset\cdots$ we have 
+  \begin{displaymath}
+\lim_{n\rightarrow\infty}I(A_{n})=I\left(\lim_{n\rightarrow\infty}A_{n}\right)=I\left(\bigcup_{n=1}^{\infty}A_{n}\right)
+\end{displaymath}
+\end{description}
+
+The theorem analogous to Ingarden and Urbanik's
+theorem embedding probability theory in information theory is:
+\begin{quotex}
+  Let $I(A)$ be a local information of the $\sigma$-algebra
+  $\mathcal{K}$. If the function $F$ is topological and satisfies the
+  conditions $f^{-1}:\mathbb{R}^{+}\rightarrow[0,1],
+  f^{-1}(0)=1,f^{-1}(\infty)=0$ then the set function $\mu_{f}$,
+    defined by the equality $\mu_{f}(A)=f^{-1}(I(A))$ for every event
+    $A\in\mathcal{K}$ is a probability measure on $\mathcal{K}$.
+\end{quotex}
+
+Kamp{\'e} de F{\'e}riet and Forte differ from Ingarden and Urbanik in
+as far as Shannon's Entropy is only a special case of connection
+between information theory and probability theory in which
+information-independence coincides with the probability-independence
+of events (\citet[41]{guiasu77}).
+
+\kapt{Information and Complexity}
+
+Kolmogorov's frustration with the priority of probability theory comes
+from a different place than Ingarden's or Kamp{\'e} de F{\'e}riet's.
+He wants an information density measure that applies to individual
+sequences of symbols rather than to the probability distributions
+behind the sequences of symbols.\footnote{\qeins{The need for
+    attaching definite meaning to the expressions $H(x|y)$ and
+    $I(x|y)$, in the case of individual values $x$ and $y$ that are
+    not viewed as a result of random tests with a definite law of
+    distribution, was realized long ago by many who dealt with
+    information theory} (\citet[662]{kolmogorov68}).} This approach
+leads us away from probability to a different intuition connected with
+information. The series $0,1,2,3,4,5,6,7,8,9$ contains less
+information than the series $3,1,4,1,5,9,2,6,5,3$. If one of the
+elements of a series is missing the epistemically justified belief is
+that we should supply the one that is least informative, i.e.\ the one
+which coheres with the pattern. At the same time, we need to beware of
+overfitting. Formalizations of these intuitions can be found in
+Solomonoff's theory of inductive inference \citep{solomonoff64},
+Wallace's theory of minimum message length
+(\citet{wallaceboulton68,wallacedowe99}), Hirotsugu Akaike's
+information criterion (\citet{akaike74,bozdogan00}), and Jorma
+Rissanen's theory of minimum description length
+(\citet{rissanen78,grunwald00}).
+
+For our purposes, Kolmogorov's point supplies another reason why
+information is an epistemologically significant notion, perhaps more
+so than probability. There is no equivalent of Chaitin's
+incompleteness theorem in probability theory, and all the projects
+quoted in the last paragraph show why that is epistemologically
+relevant. As the name suggests, in \emph{Three Approaches to the
+  Quantitative Definition of Information} \citep{kolmogorov68a}
+Kolmogorov suggests that there are a couple of alternatives to the
+probabilistic quantification of information: one combinatorial, the
+other algorithmic. He admits that the combinatorial approach is
+outstripped by the probabilistic approach,\footnote{\qeins{If we make
+    the variable $x$ and $y$ \qnull{random variables} with given joint
+    probability distributions, we can obtain a considerably richer
+    system of concepts and relationships}
+  (\citet[161]{kolmogorov68a}).} but contends that this is not so for
+the algorithmic approach. Even a \qeins{superficial discourse}
+\citep[663]{kolmogorov68a} reveals the truth of
+\begin{quotex}
+  two general theses: (1) Basic information theory concepts must and
+  can be founded without recourse to the probability theory in such a
+  manner that \qnull{entropy} and \qnull{mutual information} concepts
+  are applicable to individual values. (2) Thus introduced,
+  information theory concepts can form the basis of the term random,
+  which naturally suggests that random is the absence of periodicity.
+  \citep[663]{kolmogorov68a}
+\end{quotex}
+
+The superficial discourse states that algorithmic information in a
+sequence of symbols is the length of its shortest description. For
+descriptions, we will use Turing machines. A description for a string
+$s$ is a program that will output the string $s$ as input to a given
+Turing machine. This principle was independently articulated in 1964
+by Solomonoff, in 1965 by Kolmogorov, and in 1965 by Chaitin. It is
+called Kolmogorov Complexity (a notorious example of the Matthew
+Effect, as it should be called Solomonoff Complexity).
+
+For formalization we use universal Turing machines (UTMs). A Turing
+machine $U$ is universal if it can simulate an arbitrary Turing
+machine on arbitrary input. For a proof that UTMs exist see
+\citet[14]{chaitin74}. Solomonoff proved the invariance theorem of
+information theory which states that a UTM provides an optimal means
+of description, up to a constant. Formally,
+\begin{displaymath}
+  C_{U}(s)\leq C_{M}(s)+c
+\end{displaymath}
+The proof is relatively simple using the universality of $U$
+(\citet[104]{mingvitanyi97}). This is good news for information
+theory: complexity does not depend on the particular Turing machine we
+use.
+
+A string is random if its complexity is approximately the same as its
+length. Both Kolmogorov \citep[663]{kolmogorov68} and Solomonoff
+\citep[7]{solomonoff64} appear to equate lack of randomness with
+regularity or periodicity. In view of fractal geometry, this is
+questionable. There is a very short computer program that will
+generate an image of the Mandelbrot set whose boundary does not
+simplify at any given magnification. It could be argued, although I am
+not in a position to do this formally, that despite its very low
+Kolmogorov Complexity the Mandelbrot set is irregular.
+
+More importantly, however, there are two questions that arise as an
+immediate consequence of this definition of complexity: are most
+sequences of symbols complex or simple, and is there an algorithm
+which will tells us how complex a given sequence of symbols is?
+Gregory Chaitin gives a detailed answer to the first question in
+\citep{chaitin74} (the upshot is that nearly all sequences of symbols
+are random) and supplies a proof for Chaitin's incompleteness theorem:
+whether a specific string is complex cannot be formally proved, if the
+string's complexity is above a certain threshold. The most accessible
+proofs for Chaitin's incompleteness theorem are online, e.g.\
+\texttt{http://wapedia.mobi/en/Kolmogorov\_complexity}.
+
+As Kolmogorov recognizes, algebraically the Kolmogorov Complexity
+lacks the power of Shannon's Entropy.\footnote{\qeins{The meaning of
+    the new definition is very simple. Entropy $H(x|y)$ is the minimal
+    length of the recorded sequence of zeros and ones of a
+    \qnull{program} $P$ that permits construction of the value of $x$,
+    the value of $y$ being known {\ldots} Although Martin-L{\"o}f and
+    I realized the importance of the new concept, the development was
+    hindered because the simplest formulas that can be produced as a
+    result of simple algebraic transposition of (1) [Shannon's
+    Entropy] could not be derived from the new definitions}
+  (\citet[662]{kolmogorov68}).} Chaitin's incompleteness theorem
+assures us that there are no general algorithms or formulas that can
+deliver an assessment of complexity, i.e.\ the information contained
+in a string. The next section will address the question if there is
+any epistemological merit to the complexity approach to information,
+or more widely to the information approach to epistemology.
+
+\kapt{Information and Epistemology}
+
+Considering the results of the last section, information epistemology
+has the virtue of being more an epistemology of ignorance than an
+epistemology of knowledge. There are efforts to use Kullback's
+principle of minimum relative entropy in certain fields of Artificial
+Intelligence, but there is also the sober recognition that while there
+is a \qeins{very strong and solid mathematical foundation, the problem
+  is that it is often very hard or even impossible to compute}
+(\citet[1]{vandevenschouten10}). As we saw in the last section, there
+are principled obstacles to assessing it from a general perspective.
+Computer programs that compress data must do so on a case by case
+basis, and there is no optimal algorithm.
+
+Yet it is intuitively right that given the data we should not maintain
+beliefs that add more information than necessary. As Jaynes notes,
+\qeins{there is nothing in the general laws of motion that can provide
+  us with any additional information about the state of a system
+  beyond what we have obtained from measurement}
+\citep[624]{jaynes57}. We take this for granted about our laws of
+motion, so it may be considered reasonable to have similar
+expectations for epistemology in general.\footnote{Such
+  generalizations are dangerous, as seen in this rather far-fetched
+  remark by Solomonoff: \qeins{Suppose that all of the sensory
+    observations of a human being since his birth were coded in some
+    sort of uniform digital notation and written down as a long
+    sequence of symbols. Then, a model that accounts in an optimum
+    manner for the creation of this string, including the interaction
+    of the man with his environment, can be formed by supposing that
+    the string was created as the output of a universal machine of
+    random input} \citep[13]{solomonoff64}.} It is not enough to say
+that our beliefs should rest on evidence: they must rest on evidence
+in the right way, which appears to be most concisely summarized by
+saying that our beliefs should not add information where there is no
+need to do so.
+
+Consider an example from experimental design. The principle of maximum
+entropy suggests that we should design experiments that make our
+evidence information-rich, followed up by a hypothesis choice that is
+information-poor. Jose M. Bernardo \citep{bernardo79} has devised an
+algorithm for prior probability distributions that measures and
+maximizes missing information: the Reference Posterior Distribution
+(based on a measure of information provided by experiments in
+\citet{lindley56}). Let $p(\theta)$ be our prior density. Then the
+expected information is:
+\begin{displaymath} 
+\int p(x)\int p(\theta\vert x)\log\frac{p(\theta\vert x)}{p(\theta)}d\theta\, dx 
+\end{displaymath}
+where $p(x)=\int p(x\vert\theta)p(\theta)d\theta$ and $p(\theta\vert
+x)=p(x\vert\theta)p(\theta)/p(x)$. Maximizing this information yields
+a prior probability distribution that agrees with what we have learned
+about information theory so far, giving us the uniform distribution
+$p_{k}=n^{-1}$ for the discrete case
+($\sum_{k\in\{1,\ldots,n\}}p_{k}=1$) and the normal distribution for
+the continuous case. It is largely invariant to parameter
+transformations (\citet{yang95}) and ensures that the expected
+information of the experiment will be maximal. This is no longer a
+principle of \qnull{indifference}: it is pragmatic with a view to
+Jeffreys' tempering condition, \qeins{assign to each seriously
+  proposed hypothesis sufficiently high prior probability to allow the
+  possibility that it will achieve a higher posterior probability than
+  any rival hypothesis as a result of the envisaged observations}
+\citep[267]{shimony93}.\footnote{Compare this also to Jaynes'
+  comment that \qeins{the maximum-entropy distribution may be asserted
+    for the positive reason that it is uniquely determined as the one
+    which is maximally noncommittal with regard to missing
+    information, instead of the negative one that there was no reason
+    to think otherwise} (\citep[623]{jaynes57}).}
+
+If all is indifferent, there is no information. But it is not so. We
+might say, paraphrasing Leibniz's \qnull{cur aliquid potius existit
+  quam nihil?,} why is there information and not rather total entropy?
+If, on the other hand, all we have ever believed turns out to be
+false, there is an infinity of information. We are, hopefully,
+somewhere in the middle between total entropy and total information,
+somewhere between determinants and possibilities, living a life where
+things are one way and not another, but not fixed yet either, a life
+full of both specificity and unknowns.
+
+Beginning in the forties and petering out in the seventies, there was
+great academic interest in information theory, fueled no doubt by the
+British and American mathematicians who cracked the Japanese and the
+German codes. Then the interest waned, or moved over to the engineers,
+when Turing's Halting Problem arrested algorithmization of information
+theory as G{\"o}del's incompleteness theorem arrested Hilbert's
+project. Nothing in so dramatic a fashion ever happened to probability
+theory, and so it still holds epistemological attention, and so there
+is little we know yet about the limits of its language.
+
+Information theory may have epistemological primacy over probability
+precisely because there is a mathematical definition of its limits, as
+there is for logic in G{\"o}del's incompleteness theorem. (For a
+critique of this analogy, see \citet{raatikainen98} and
+\citet{torkel05}, which bears the tell-all title \emph{G{\"o}del's
+  Theorem: An Incomplete Guide to Its Use and Abuse}.) The principle
+of maximum entropy has as little practicality to it as Bayesian
+epistemology. Scientists are not known to hunker down with their
+calculators, plugging in priors and likelihoods to figure out
+posteriors. What Bayesian epistemology does is give us a pattern of
+thought, belief revision, and some intelligent ideas about
+experimental design and hypothesis choice. What this paper tries to
+achieve is to understand a similar pattern inspired by information
+theory.  
+
+There is a Wittgensteinian point here: there is not \emph{more} to be
+explained about the world other than that things are one way and not
+another. Things, however, could also go the other way. As important as
+information is in our Age of Information, \qeins{there is no theory,
+  nor even definition, of information that is both broad and precise
+  enough to make such a [notion] meaningful} (\citet[27]{goguen97}).
+There may be a justified shift away from an objective interpretation
+of information as a substance to a subjective interpretation of
+information as a sign, as in \citet{hjorland07}.\footnote{\qeins{The
+    problem is also about whether problems of information science are
+    best served with theories like Shannon and Weaver's information
+    theory or with theories more related to semiotics. In the history
+    of information science, the tendency has been a development from
+    information theory toward more semiotic theories}
+  (\citet[1455]{hjorland07}).} Instead of converging on physics,
+information theory may give way to semiotic theories.
+
+In conclusion, I want to leave the reader with a triangle of theories
+that are closely related, whose relationship is underdescribed, and
+that have a high potential of informing both our naive and our
+scientific epistemology. Probability theory (PT) is one vertex of this
+triangle. Information theory (IT-1) as viewed by Shannon's Entropy and
+the Kullback-Leibler Divergence is the second vertex. Information
+theory (IT-2) viewed in terms of Kolmogorov or Solomonoff Complexity
+is the third vertex. The relationship between PT and IT-1 is clearly
+one of equivalence, as we have shown. IT-1 and IT-2 share something in
+common but are not easily accessible to each other. The claim of this
+paper is that the relationship between PT and IT-2 is of prime
+epistemological value. Much more inquiry will have to go into
+determining what precisely this value is.
+
+\noindent\textbf{Endnotes}
+
+\theendnotes
+
+\noindent\textbf{References}
+
+\nocite{*} 
+\bibliographystyle{stefan-2010-08-28}
+\bibliography{bib-3306}
+
+\end{document}

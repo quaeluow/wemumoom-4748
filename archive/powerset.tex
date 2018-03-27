@@ -1,0 +1,178 @@
+Let us assume a partition $\{B_{i}\}_{i=1,{\ldots},4n}$ of
+$A_{1}\cup{}A_{2}\cup{}A_{3}$ into sets that are of equal measure
+$\mu$ and whose intersection with $A_{i}$ is either the empty set or
+the whole set itself (this is the division into rectangles of scenario
+III). ({\ref{eq:map}}) dictates that the number of sets covering
+$A_{3}$ equals the number of sets covering $A_{1}\cup{}A_{2}$. For
+convenience, we assume the number of sets covering $A_{1}$ to be $n$.
+Let $\mathcal{C}$, a subset of the powerset of
+$\{B_{i}\}_{i=1,{\ldots},4n}$, be the collection of sets which agree
+with the constraint imposed by ({\ref{eq:hdq}}), i.e.\
+\begin{displaymath}
+  C\in\mathcal{C}\mbox{ iff }C=\{C_{j}\}\mbox{ and }t\mu\left(\bigcup{}C_{j}\cap{}A_{1}\right)=\mu\left(\bigcup{}C_{j}\cap{}A_{2}\right)
+\end{displaymath}
+In figures~\ref{fig:pwstex1} and \ref{fig:pwstex2} there are diagrams
+of two elements of the powerset of $\{B_{i}\}_{i=1,{\ldots},4n}$. One
+of them (figure~\ref{fig:pwstex1}) is not a member of $\mathcal{C}$,
+the other one (figure~\ref{fig:pwstex2}) is.
+
+The binomial distribution dictates the expectation $EX$ of $X$, using
+simple combinatorics. In this case we require, again for convenience,
+that $n$ be divisible by $t$ and the \qnull{grain} of the partition
+$A$ be $s=n/t$. Remember that $t$ is the factor by which
+({\ref{eq:hdq}}) indicates that Judy's chance of being in $A_{2}$ is
+greater than being in $A_{1}$. In Judy's particular case, $t=3$ and
+${\qvu}=0.75$. We introduce a few variables which later on will help
+for abbreviation:
+\begin{displaymath}
+n=ts\hspace{.5in}
+2m=n\hspace{.5in}
+2j=n-1\hspace{.5in}
+{T}=t^{2}+1
+\end{displaymath}
+$EX$, of course, depends both on the grain of $A$ and the value of
+$t$. It makes sense to make it independent of the grain by letting the
+grain become increasingly finer and by determining $EX$ as
+$s\rightarrow\infty$. This cannot be done for the binomial
+distribution, as it is notoriously uncomputable for large numbers
+(even with a powerful computer things get dicey around $s=10$). But,
+equally notorious, the normal distribution provides a good
+approximation of the binomial distribution and will help us arrive at
+a formula for $G_{\mbox{\tiny pws}}$ (corresponding to 
+$G_{\mbox{\tiny ind}}$ and $G_{\mbox{\tiny max}}$), determining the value $q_{3}$
+dependent on ${\qvu}$ as suggested by the powerset approach.
+
+First, we express the random variable $X$ by the two independent
+random variables $X_{12}$ and $X_{3}$. $X_{12}$ is the number of
+partition elements in the randomly chosen $C$ which are either in
+$A_{1}$ or in $A_{2}$ (the random variable of the number of partition
+elements in $A_{1}$ and the random variable of the number of partition
+elements in $A_{2}$ are decisively not independent, because they need
+to obey ({\ref{eq:hdq}})); $X_{3}$ is the number of partition elements
+in the randomly chosen $C$ which are in $A_{3}$. A relatively simple
+calculation shows that $EX_{3}=n$, which is just what we would expect
+(either the powerset approach or the uniformity approach would give us
+this result):
+\begin{displaymath}
+  EX_{3}=2^{-2n}\sum_{i=0}^{2n}i\binom{2n}{i}=n\mbox{ (use }\binom{n}{k}=\frac{n}{k}\binom{n-1}{k-1}\mbox{)}
+\end{displaymath}
+
+The expectation of $X$, $X$ being the random variable expressing the
+ratio of the number of sets covering $A_{3}$ and the number of sets
+covering $A_{1}\cup{}A_{2}\cup{}A_{3}$, is
+\begin{displaymath}
+  EX=\frac{EX_{3}}{EX_{12}+EX_{3}}=\frac{n}{EX_{12}+n}
+\end{displaymath}
+If we were able to use uniformity and independence, $EX_{12}=n$ and
+$EX=1/2$, just as Grove and Halpern suggest (although their uniformity
+approach is admittedly less crude than the one used here). Will the
+powerset approach concur with the uniformity approach, will it support
+the principle of maximum entropy, or will it make another suggestion
+on how to update the prior probabilities? To answer this question, we
+must find out what $EX_{12}$ is, for a given value $t$ and
+$s\rightarrow\infty$, using the binomial distribution and its
+approximation by the normal distribution.
+
+Using combinatorics,
+\begin{displaymath}
+  EX_{12}=(t+1)\frac{\sum_{i=1}^{s}i\binom{ts}{i}\binom{ts}{ti}}{\sum_{i=0}^{s}\binom{ts}{i}\binom{ts}{ti}}
+\end{displaymath}
+
+Let us call the numerator of this fraction NUM and the denominator
+DEN. According to the de Moivre-Laplace Theorem,
+\begin{displaymath}
+  \mbox{DEN}=\sum_{i=0}^{s}\binom{ts}{i}\binom{ts}{ti}\approx{}2^{2n}\sum_{i=0}^{s}\int_{i-\frac{1}{2}}^{i+\frac{1}{2}}\mathcal{N}(\frac{n}{2},\frac{n}{4})(i)\mathcal{N}(\frac{n}{2},\frac{n}{4})(ti)di
+\end{displaymath}
+where
+\begin{displaymath}
+  \mathcal{N}(\mu,\sigma^{2})(x)=\frac{1}{\sqrt{2\pi\sigma^{2}}}\exp\left(-\frac{(x-\mu)^{2}}{2\sigma^{2}}\right)
+\end{displaymath}
+Substitution yields
+\begin{displaymath}
+  \mbox{DEN}\approx{}2^{2n}\frac{1}{\pi{}m}\sum_{i=0}^{s}\int_{i-\frac{1}{2}}^{i+\frac{1}{2}}\exp\left(-\frac{\left(x-m\right)^{2}}{m}-\frac{t^{2}\left(x-\frac{m}{t}\right)^{2}}{m}\right)dx
+\end{displaymath}
+Consider briefly the argument of the exponential function:
+\begin{displaymath}
+  -\frac{\left(x-m\right)^{2}}{m}-\frac{t^{2}\left(x-\frac{m}{t}\right)^{2}}{m}=-\frac{t^{2}}{m}({\aden}x^{2}+{\bden}x+{\cden})=-\frac{t^{2}}{m}\left({\aden}(x-{\hden})^{2}+{\kden}\right)
+\end{displaymath}
+with (the double prime sign corresponds to the simple prime sign for
+the numerator later on)
+\begin{displaymath}
+{\aden}=\frac{1}{t^{2}}{T}\notag\hspace{.5in}
+{\bden}=(-2m)\frac{1}{t^{2}}(t+1)\hspace{.5in}
+{\cden}=2m^{2}\frac{1}{t^{2}}
+\end{displaymath}
+\begin{displaymath}
+{\hden}=-{\bden}/2{\aden}\hspace{.5in}
+{\kden}={\aden}{\hden}^{2}+{\bden}{\hden}+{\cden}
+\end{displaymath}
+Consequently,
+\begin{displaymath}
+\mbox{DEN}\approx{}2^{2n}\exp\left(-\frac{t^{2}}{m}{\kden}\right)\sqrt{\frac{1}{\pi{}{\aden}mt^{2}}}\int_{-\infty}^{s+\frac{1}{2}}\mathcal{N}\left({\hden},\frac{m}{2{\aden}t^{2}}\right)dx
+\end{displaymath}
+And, using the error function for the cumulative density function of
+the normal distribution,
+\begin{equation}
+  \label{eq:den}
+  \mbox{DEN}\approx{}2^{2n-1}\sqrt{\frac{1}{\pi{}{\aden}mt^{2}}}\exp\left(-\frac{{\kden}t^{2}}{m}\right)\left(1-\erf({\wden})\right)
+\end{equation}
+with
+\begin{displaymath}
+  {\wden}=\frac{t\sqrt{{\aden}}\left(s+\frac{1}{2}-{\hden}\right)}{\sqrt{m}}
+\end{displaymath}
+
+We proceed likewise with the numerator, although the additional factor
+introduces a small complication:
+  \begin{eqnarray*}
+  \mbox{NUM}&=&\sum_{i=1}^{s}i\binom{ts}{i}\binom{ts}{ti}=\sum_{i=1}^{s}s\binom{ts}{i}\binom{ts-1}{ti-1}\\
+&\approx&s2^{2n-1}\sum_{i=1}^{s}\mathcal{N}\left(m,\frac{m}{2}\right)(i)\mathcal{N}\left(j,\frac{j}{2}\right)(ti-1)
+\end{eqnarray*}
+Again, we substitute and get
+\begin{displaymath}
+  \mbox{NUM}\approx{}s2^{2n-1}\left(\pi\sqrt{mj}\right)^{-1}\sum_{0}^{s-1}\int_{i-\frac{1}{2}}^{i+\frac{1}{2}}\exp\left({\anum}(x-{\hnum})^{2}+{\knum}\right)
+\end{displaymath}
+where the argument for the exponential function is
+\begin{displaymath}
+  -\frac{1}{mj}\left(j(x-m)^{2}+mt^{2}\left(x-\frac{j+1}{t}\right)^{2}\right)
+\end{displaymath}
+and therefore
+\begin{displaymath}
+{\anum}=j+mt^{2}\hspace{.5in}
+{\bnum}=2j(1-m)+2mt\left(t-j\right)\hspace{.5in}
+{\cnum}=j(1-m)^{2}+m\left(t-j-1\right)^{2}
+\end{displaymath}
+\begin{displaymath}
+{\hnum}=-{\bnum}/2{\anum}\hspace{.5in}
+{\knum}={\anum}{\hnum}^{2}+{\bnum}{\hnum}+{\cnum}
+\end{displaymath}
+Using the error function, 
+\begin{equation}
+  \label{eq:num}
+  \mbox{NUM}\approx{}2^{2n-2}\frac{s}{\sqrt{\pi{}{\anum}}}\exp\left(-\frac{{\knum}}{mj}\right)\left(1+\erf({\wnum})\right)
+\end{equation}
+with
+\begin{displaymath}
+  {\wnum}=\frac{\sqrt{{\anum}}\left(s-\frac{1}{2}-{\hnum}\right)}{\sqrt{mj}}
+\end{displaymath}
+
+Combining ({\ref{eq:den}}) and ({\ref{eq:num}}),
+\begin{eqnarray*}
+  EX_{12}&=&(t+1)\frac{\mbox{NUM}}{\mbox{DEN}}\\
+&\approx&\frac{1}{2}(t+1)\sqrt{\frac{{T}{}ts}{{T}{}ts-1}}se^{\alpha_{t,s}}
+\end{eqnarray*}
+for large $s$, because the arguments for the error function $w'$ and
+$w''$ escape to positive infinity in both cases (NUM and DEN) so that
+their ratio goes to 1. The argument for the exponential function is
+\begin{displaymath}
+  \alpha_{t,s}=-\frac{{\knum}}{mj}+\frac{{\kden}t^{2}}{m}
+\end{displaymath}
+and, for $s\rightarrow\infty$, goes to
+\begin{displaymath}
+  \alpha_{t}=\frac{1}{2}{T}^{-2}(2t^{3}-3t^{2}+4t-5)
+\end{displaymath}
+
+Notice that, for $t\rightarrow\infty$, $\alpha_{t}$ goes to $0$ and
+\begin{displaymath}
+  EX=\frac{n}{EX_{12}+n}\rightarrow\frac{2}{3}
+\end{displaymath}
+in accordance with intuition T2.

@@ -1,0 +1,46 @@
+\documentclass[11pt]{article}
+
+% this makes marginpar more attractive
+% see http://www.f.kth.se/~ante/latex.php
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+%\usepackage{helvet}
+\setlength{\parindent}{0in}
+\setlength{\parskip}{.3in}
+
+\raggedbottom
+
+%\pagestyle{empty}
+
+% 	PACKAGES
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{german}
+%\usepackage{hebtex}
+%\usepackage{graphicx}
+%\usepackage[german]{babel}
+%\usepackage{endnotes}
+%\usepackage{rotating}
+
+\begin{document}
+
+Professor Pap,
+
+I am looking for a non-additive, continuous set function from a
+simplex $\Pi_{n}$ of finite dimension $n-1$ into $[0,\infty]$. The
+motivation is as follows. Shannon defined the entropy of a probability
+measure on a finite event space $H(p_{1},\ldots,p_{n})$. He wanted the
+entropy to be (i) continuous in the $p_{i}$, (ii) if all the $p_{i}$
+are equal ($p_{i}=1/n$) then $H$ should be monotonic increasing in $n$
+(more equally probable events mean greater entropy), and (iii) if
+choices are sub-divided the entropy should remain constant, such that,
+for example,
+$H_{3}(p_{1},p_{2},p_{3})=H_{2}(p_{1},q)+qH_{2}(p_{2}/q,p_{3}/q)$ for
+$q=p_{2}+p_{3}$.
+
+
+
+\end{document}

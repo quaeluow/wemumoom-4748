@@ -1,0 +1,118 @@
+%%%%%%%%%%%%%%%%%%%%%% file template.tex %%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% This is a general template file for the LaTeX package SVJour3
+% for Springer journals.          Springer Heidelberg 2010/09/16
+%
+% Copy it to a new file with a new name and use it as the basis
+% for your article. Delete % signs as needed.
+%
+% This template includes a few options for different layouts and
+% content for various journals. Please consult a previous issue of
+% your journal as needed.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% This goes into the preamble for Springer/Synthese
+%\documentclass{svjour3}                     % onecolumn (standard format)
+%\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
+%\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[twocolumn]{svjour3}          % twocolumn
+% \smartqed  % flush right qed marks, e.g. at end of proof
+% \RequirePackage{fix-cm}
+% Insert the name of "your journal" with
+% \journalname{Synthese}
+
+%% This comes after \begin{document}
+% \title{The Principle of Maximum Entropy and a Problem in Probability Kinematics}
+% \author{Stefan Lukits}
+% \institute{Stefan Lukits \at
+% University of British Columbia \\
+% Department of Philosophy \\
+% 1866 Main Mall E370 \\
+% Vancouver BC Canada V6T 1Z1 \\
+% \email{saiserit@streetgreek.com}
+% }
+% \date{Received: date / Accepted: date}
+% The correct dates will be entered by the editor
+% \maketitle
+
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage[small,bf]{caption}
+\usepackage{titlesec}
+\titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+\usepackage[table]{xcolor}
+\definecolor{lightgray}{gray}{0.9}
+% \usepackage{german}
+% \usepackage{hebtex}
+% \usepackage[german]{babel}
+% \usepackage{endnotes}
+% \let\footnote=\endnote
+% \usepackage{rotating}
+\usepackage{enumerate}
+
+\newcommand{\nias}{\noindent} % no indent after new section
+\newcommand{\nial}{\noindent} % no indent after equation, list, or whatever
+\newcommand{\nonsc}[1]{}
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+\newcommand{\erf}[0]{\mbox{erf}}
+\newcommand{\anum}[0]{a'}
+\newcommand{\bnum}[0]{b'}
+\newcommand{\cnum}[0]{c'}
+\newcommand{\hnum}[0]{h'}
+\newcommand{\knum}[0]{k'}
+\newcommand{\wnum}[0]{w'}
+\newcommand{\aden}[0]{a''}
+\newcommand{\bden}[0]{b''}
+\newcommand{\cden}[0]{c''}
+\newcommand{\hden}[0]{h''}
+\newcommand{\kden}[0]{k''}
+\newcommand{\wden}[0]{w''}
+\newcommand{\lwv}[0]{0.6}
+\newcommand{\qvu}[0]{\vartheta}
+\newif\ifNumericalOrYear
+\NumericalOrYeartrue
+\NumericalOrYearfalse
+\ifNumericalOrYear
+\usepackage[numbers,colon]{natbib}
+\else
+\usepackage[round,colon]{natbib}
+\usepackage{natbib}
+\fi
+\newif\ifPageP
+\PagePtrue
+\PagePfalse
+\ifPageP
+\newcommand{\PageP}{p.~}
+\else
+\newcommand{\PageP}{}
+\fi
+\newcommand{\scite}[3]{\ifnum#1=1\ifNumericalOrYear\citep{#2}\else\citeyearpar{#2}\fi\else
+\ifnum#1=2\ifNumericalOrYear\citep[#3]{#2}\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=4\ifNumericalOrYear\citet{#2}\else\citet{#2}\fi\else
+\ifnum#1=5\ifNumericalOrYear(\citet{#2})\else\citep{#2}\fi\else
+\ifnum#1=6\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=7\ifNumericalOrYear\citep{#2}\else\citealp{#2}\fi\else
+\ifnum#1=8\ifNumericalOrYear\citep[#3]{#2}\else\citealp[{\PageP}#3]{#2}\fi\else
+\ifnum#1=9\ifNumericalOrYear\citep[#3]{#2}\else{}loc.\ cit., {\PageP}#3\fi\else
+\textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+% \newcommand{\scite}[3]{\ifnum#1=1\cite{#2}\else
+% \ifnum#1=2\cite[{\PageP}~#3]{#2}\else
+% \ifnum#1=3\cite[{\PageP}~#3]{#2}\else
+% \ifnum#1=4\cite{#2}\else
+% \ifnum#1=5\cite{#2}\else
+% \ifnum#1=6\cite[{\PageP}~#3]{#2}\else
+% \ifnum#1=7\cite{#2}\else
+% \ifnum#1=8\cite[{\PageP}~#3]{#2}\else
+% \ifnum#1=9\cite[{\PageP}~#3]{#2}\else
+% \textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+% \newcommand{\scite}[3]{#2}
+% \newcommand{\scite}[3]{\cite{#2}}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
+

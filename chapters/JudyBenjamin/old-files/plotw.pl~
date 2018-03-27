@@ -1,0 +1,92 @@
+use Math::Trig;
+open(plotw,">./plotw.R");
+$tbeg=1;
+$tend=20;
+$tint=1;
+$sbeg=1;
+$send=100;
+$sint=1;
+
+print plotw "xvals <- seq(from=$sbeg,to=$send,by=$sint)\n";
+for ($t=$tbeg;$t<=$tend;$t=$t+$tint)
+{
+for ($s=$sbeg;$s<=$send;$s=$s+$sint)
+{
+print plotw "yvals$s <- c(";
+$w=($s*((2/($t*$s))**.5))+(1/((2*$t*$s)^.5))-($s*$t*((2/($t*$s))^.5));
+}
+}
+
+# $llim=0.001;
+# $rlim=.999;
+# $ulim=1;
+# $dlim=0;
+# $r=998;
+# $z=20;
+
+# $t2=($rlim-$llim)/$r;
+# print twodfun "xvals <- seq(from=$llim,to=$rlim,by=$t2)\n";
+# for ($i1=0;$i1<=$z;++$i1)
+# {
+# print twodfun "yvals$i1 <- c(";
+# for ($i3=0;$i3<=$r;++$i3)
+# {
+#     $x=$llim+(($rlim-$llim)/$r)*$i3;
+# if ($x!=0)
+# {
+#     $res=$x**$i1; # f(x) for n=0,1,2,...
+#     # $res=$i1*($x**($i1-1)); # f'(x)
+# }
+# else
+# {
+#     $res=0;
+# }
+#     print twodfun "$res";
+# unless ($i3==$r)
+# {
+# print twodfun ",";
+# }
+# }
+# print twodfun ")\n";
+# }
+# for ($i1=1;$i1<=$z;++$i1)
+# {
+#     $j1=$z+$i1;
+# print twodfun "yvals$j1 <- c(";
+# for ($i3=0;$i3<=$r;++$i3)
+# {
+#     $x=$llim+(($rlim-$llim)/$r)*$i3;
+# if ($x!=0)
+# {
+#     $res=1-((1-$x)**$i1); # f(x) for n=-1,-2,...
+#     # $res=($i1)*((1-$x)**($i1-1)); # f'(x)
+# }
+# else
+# {
+#     $res=0;
+# }
+#     print twodfun "$res";
+# unless ($i3==$r)
+# {
+# print twodfun ",";
+# }
+# }
+# print twodfun ")\n";
+# }
+# print twodfun "plot(xvals,yvals0,type=\"n\",xlim=c($llim,$rlim),ylim=c($dlim,$ulim))\n";
+# $y=2*$z;
+# for ($i2=0;$i2<=$y;++$i2)
+# {
+# if ($i2<=$z)
+# {
+# print twodfun "lines(xvals,yvals$i2,type=\"l\",col=\"$i2\")\n";
+# }
+# else
+# {
+#     $j2=$i2-$z;
+# print twodfun "lines(xvals,yvals$i2,type=\"l\",col=\"$j2\")\n";
+# }
+# }
+# print twodfun "dev.print(device=pdf, \"graph-approxUnitRect-originals.pdf\", onefile=FALSE)\n";
+# close(twodfun);
+# print "INFO: Now R the file twodfun.R ...\n";

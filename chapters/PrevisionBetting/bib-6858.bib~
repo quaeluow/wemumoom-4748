@@ -1,0 +1,30 @@
+@article{peirson10,
+  title =	 {Expert Analysis and Insider Information in Horse Race Betting: Regulating Informed Market Behavior},
+  author =	 {Peirson, John and Smith, Michael},
+  journal =	 {Southern Economic Journal},
+  pages =	 {976--992},
+  year =	 {2010},
+  publisher =	 {JSTOR},
+  pdfconv =	 {2010__Peirson_Smith__Expert_Analysis_and_Insider_Information_in_Horse_Race_Betting:_Regulating_Informed_Market_Behavior.pdf}
+}                  
+
+@article{figlewski1979subjective,
+  title =	 {Subjective Information and Market Efficiency in a Betting Market},
+  author =	 {Figlewski, Stephen},
+  journal =	 {The Journal of Political Economy},
+  pages =	 {75--88},
+  year =	 {1979},
+  publisher =	 {JSTOR}
+}
+
+@incollection{weatherson12,
+  title =	 {Knowledge, Bets and Interests},
+  author =	 {Weatherson, Brian},
+  booktitle =	 {Knowledge Ascriptions},
+  editor =	 {Brown, Jessica and Gerken, Mikkel},
+  pages =	 {75--103},
+  year =	 {2012},
+  publisher =	 {Oxford University},
+  address =	 {Oxford, UK}
+}
+

@@ -1,0 +1,156 @@
+\documentclass[11pt]{article}
+\usepackage{october}
+
+\begin{document}
+
+\title{Synopsis for ``Semantics of Not Knowing''}
+\author{Stefan Lukits}
+\date{}
+\maketitle
+
+Traditional Bayesian epistemology used to include the requirement for
+a rational agent to hold a sharp credence function. In the last twenty
+years or so, it has become increasingly popular to drop this
+requirement. There is now a well-articulated Bayesian theory which
+permits a rational agent to hold indeterminate credal states based on
+incomplete or ambiguous evidence. The consensus is that these
+credences are not only not sharp because it does not seem reasonable
+to elicit precise probability assignments from an agent, even if such
+an assignment may operate in the background; but that it is in some
+situations more rational to hold a set of credence functions, also
+called a credal state, rather than one sharp credence function to
+represent a rational partial belief.
+
+There is some terminological confusion around the adjectives
+\qnull{imprecise,} \qnull{indeterminate,} and \qnull{mushy} credences.
+In the paper, I will exclusively refer to indeterminate credences or
+credal states and mean by them a credal state (a set of credence
+functions, which some proponents of indeterminacy require to be
+convex) which it may be rational for an agent to hold within an
+otherwise orthodox Bayesian framework. I will refer to Bayesians who
+continue to adhere to the classical theory of sharp credences for
+rational agents as \qnull{Laplaceans} (e.g.\ Adam Elga and Roger
+White), while I will call Bayesians who do not believe in the
+requirement for a rational agent to hold sharp credences
+\qnull{Booleans} (e.g.\ Peter Walley and James Joyce; see
+\scite{7}{boole54}{}, chapters 16--21, for alternative methods to the
+ones suggested by Laplace which resulted in imprecise epistemic
+probabilities).
+
+After describing the appeal of indeterminacy and showing how
+contemporary Laplacean objections fail, I will point to more serious
+failings of indeterminacy in semantic terms and show how a proper
+semantics of not knowing, which we could also call a semantics of
+partial belief, solves the problems indeterminacy seeks to address and
+maintains the traditional Bayesian adherence to sharp credences for
+rational agents. The title of my paper, the semantics of not knowing,
+suggests that I see a more pronounced separation between traditional
+knowledge epistemology addressing full belief and formal epistemology
+being more concerned with partial belief. There is a sense in which
+indeterminacy seeks to soften the separation by linking knowledge of
+chances to its reflection in credences. There are recent projects
+reconciling traditional full belief epistemology and formal partial
+belief epistemology (see \scite{7}{spohn12}{}; and
+\scite{7}{moss13}{}), but if my paper is correct then indeterminacy
+will not contribute to this reconciliation because it mixes full
+belief and partial belief metaphors in ways that are semantically
+problematic.
+
+The underlying idea of my criticism is that sharp credences run into a
+genuine conceptual crisis when confronted with intuitions about
+betting behaviour, completeness for preferences, and how reasonable it
+is to demand precision from agents, even if they are rational.
+Indeterminacy appears to provide an elegant solution to overcome this
+crisis as well as a powerful formal theory, which expresses Bayesian
+commitments without recourse to sharp credences. In the face of these
+virtues, I maintain that indeterminacy adds an unnecessary layer to
+the semantics of partial belief which has in its wake
+counter-intuitive consequences and solves nothing that cannot be
+solved by a carefully articulated version of the classical Bayesian
+commitment to sharp credences.
+
+A sharp credence, as much as the term suggests precision and a measure
+of certainty and being informed, is a representation of an epistemic
+state chracterized by uncertainty and lack of information.
+Importantly, it does not represent the evidence which informs the
+epistemic state and makes no claim of such a representation. I will
+demonstrate how indeterminate credal states are on the one hand often
+lauded as doing much better representing uncertainty together with the
+evidence that constrains it, while on the other hand indeterminate
+credal states can no more represent evidence than sharp credences.
+Neither determinate nor indeterminate credal states are
+\qnull{sufficient statistics} with respect to evidence. Indeterminate
+credal states try and fail, determinate credences do not pretend. Thus
+it is legitimate to have a $0.5$ sharp credence in heads for a coin of
+whose bias we are completely ignorant, for a coin whose fairness is
+supported by a lot of evidence, and even for a coin about whose bias
+we know that it is either 1/3 or 2/3 for heads. The main body of the
+paper will address this issue in detail.
+
+One potential Boolean claim is that agents who use indeterminate
+credal states do better than Laplaceans when they bet on the truth of
+events for which they have varying degrees of evidence. Peter Walley
+gives an example where a Laplacean does much worse at predicting
+Soccer World Cup games than Boolean peers who use upper and lower
+previsions. Upper and lower previsions are indeterminate credal states
+for which bets may either be rejected or accepted if they fall within
+the margin of indeterminacy. First, I will show on a much more general
+level how Walley's claims are justified in practice (bettors using
+upper and lower previsions do better than bettors using linear
+previsions, i.e.\ sharp credences). Then I will explain why this is
+the case, how a Laplacean can protect herself against this
+disadvantage by drawing proper distinctions between credence and
+evidence, and how indeterminacy emerges as the loser when the contest
+is about clarity in one's semantics. Again, the problem will be mixed
+metaphors: the advocate of indeterminacy mixes semantic levels that
+ought for good reasons to remain separate. Indeterminacy imposes a
+double task on credences (representing both uncertainty and available
+evidence) that they cannot coherently fulfill.
+
+I will present several examples where this double task stretches
+indeterminate credal states to the limits of plausibility, for example
+when they need to aggregate expert opinion and assess evidence
+differentials or when they need to account for dilation. There is no
+doubt that the precision of sharp credences in situations where
+evidence is extremely thin or non-existent, ambiguous, or incomplete
+leaves a bad taste in everyone's mouth. My proposal is to address
+these problems by semantic clarity about what in detail it is that
+credences represent and what they do not represent and do not pretend
+to represent. For betting behaviour and decision problems, this
+clarity will eventually work in favour of the agent because she can
+properly distinguish which part of her decision calculus is based on
+the weight of the evidence and which part on the balance of the
+evidence.
+
+The weight of the evidence can be factored into the balance and
+determine decisions, but the balance cannot represent the weight.
+Joyce's idea that credences can represent balance, weight, and
+specificity of the evidence is inconsistent with the use of
+indeterminacy (and Joyce himself, in response to White's dilation
+problem, gives the argument why this is the case). The road from
+evidence via information to credences is a one-way road. The implicit
+Boolean claim that evidence can be recovered from indeterminate credal
+states is vulnerable to White's dilation problem, and so it is
+rejected by Joyce with semantic implications which we will
+investigate more closely.
+
+% One major problem for indeterminacy is that after a decision has been
+% made on the basis of indeterminate credal states, the weight of the
+% evidence can no longer be recovered from them. The agent can, of
+% course, always go back to her evidence stored in memory, but then it
+% was unnecessary in the first place to mix its weight into her
+% credences.
+
+% TBD Leave vagueness and Williamson to the discussion of Yang Liu's point
+The Laplacean approach of assigning subjective probabilities to
+distributions and then aggregating them by David Lewis's summation
+formula into a single precise credence function is semantically clean
+and shares many of the formal virtues of theories preferring
+indeterminate credal states. If the bad taste about numerical
+precision in our fuzzy, nebulous world lingers, we can point to
+philosophical projects in other domains where the concepts we use are
+sharply bounded, even though our ability to conceive of those sharp
+boundaries or know them is limited, for example Timothy Williamson's
+work on vagueness and knowledge as a mental state.
+
+\end{document} 

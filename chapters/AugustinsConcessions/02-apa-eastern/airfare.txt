@@ -1,0 +1,19 @@
+Augustin's Concessions: A Problem for Indeterminate Credal States
+
+Stefan Lukits
+
+The claim is that rational agents are subject to a norm requiring sharp credences. I defend this claim in spite of the initially promising features of indeterminate credal states (from now on instates) to address problems which sharp credences have as they reflect the evidence at the foundation of a doxastic state. Traditionally, Bayesians have maintained that a rational agent, when holding a credence, holds a sharp credence. It has recently become popular to drop the requirement for credence functions to be sharp. There are now Bayesians who permit a rational agent to hold instates based on incomplete or ambiguous evidence. I will refer to Bayesians who continue to adhere to the classical theory of sharp credences for rational agents as 'Laplaceans' (e.g. Adam Elga and Roger White). I will refer to Bayesians who do not believe that a rational agent's credences are sharp as 'Booleans' (e.g. Peter Walley and James Joyce). I will exclusively refer to indeterminate credal states (abbreviated 'instates', sometimes terminology such as 'imprecise' or 'mushy' credences is used as well) and mean by them a set of sharp credence functions (which some Booleans require to be convex) which it may be rational for an agent to hold within an otherwise orthodox Bayesian framework.
+
+When we first hear of the advantages of instates, two of them sound partic- ularly persuasive.
+
+range Instates represent the possibility range for objective chances.
+
+incomplete Instates represent incompleteness or ambiguity of the evidence.
+
+Here are some examples. Let a coin be a Bernoulli generator that produces successes and failures with probability p for success, labeled H , and 1-p for failure, labeled T . Physical coins may serve as Bernoulli generators, if we are willing to set aside that most of them are approximately fair.
+
+Example 1: Range. Bob has two Bernoulli Generators in his lab, coin and coin . Bob has a database of coin results and concludes on excellent evidence that coin is fair. Bob has no evidence about the bias of coin . As a Boolean, Bob assumes a sharp credence of {0.5} for H and an indeterminate credal state of [0,1] for H . He feels bad for Larry, his Laplacean colleague, who cannot distinguish between the two cases and who must assign a sharp credence of {0.5} for both H and H .
+
+Example 2: Incomplete. Bob has another Bernoulli Generator, coin , in his lab. His graduate student has submitted coin to countless experiments and emails Bob the resulting bias, but fails to include whether the bias of 2/3 is in favour of H or in favour of T . As a Boolean, Bob assumes an indeterminate credal state of [1/3,2/3] (or {1/3,2/3}, depending on whether convexity is required) for H . He feels bad for Larry who must assign a sharp credence of {0.5} for H when Larry concurrently knows that his credence gets the bias wrong.
+
+Against the force of range and incomplete, I maintain that the Laplacean approach of assigning subjective probabilities to partitions of the event space (e.g. objective chances) and then aggregating them by David Lewis' summa- tion formula into a single precise credence function is conceptually tidy and shares many of the formal virtues of Boolean theories. To put it provoca- tively, this paper defends a 0.5 sharp credence in heads in all three cases: for a coin of whose bias we are completely ignorant; for a coin whose fairness is supported by a lot of evidence; and even for a coin about whose bias we know that it is either 1/3 or 2/3 for heads.

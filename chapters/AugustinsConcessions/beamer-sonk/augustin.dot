@@ -1,0 +1,30 @@
+digraph g {
+	concentrate=true;
+	ratio=compress;
+
+a1 -> b1;
+a1 -> b2;
+a1 -> b3;
+b1 -> a2;
+b2 -> a2;
+b3 -> a2;
+a2 -> c1;
+a2 -> c2;
+c1 -> d1;
+c1 -> d2;
+c2 -> e1;
+c2 -> e2;
+
+a1 [label="Laplaceans (sharp credences)",style="filled",fillcolor="darkseagreen1",shape="box"];
+a2 [label="Booleans (indeterminate credal states)",style="filled",fillcolor="darkseagreen1",shape="box"];
+b1 [label="intern: objective\nchances represented",style="filled",fillcolor="brown1",shape="box"];
+b2 [label="incomp: incomplete-\nness represented",style="filled",fillcolor="brown1",shape="box"];
+b3 [label="inform: information\nrepresented",style="filled",fillcolor="brown1",shape="box"];
+c1 [label="Bool-A",style="filled",fillcolor="cadetblue1"];
+c2 [label="Bool-B",style="filled",fillcolor="cadetblue1"];
+d1 [label="dilation",style="filled",fillcolor="brown1",shape="box"];
+d2 [label="obtuse",style="filled",fillcolor="brown1",shape="box"];
+e1 [label="Augustin's\nConcession #1\nadequacy",style="filled",fillcolor="darkorange",shape="box"];
+e2 [label="Augustin's\nConcession #2\nchances",style="filled",fillcolor="darkorange",shape="box"];
+// f1 [label="the double task",style="filled",fillcolor="darkseagreen1",shape="box"];
+}

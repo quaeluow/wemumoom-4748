@@ -1,0 +1,37 @@
+digraph g {
+	concentrate=true;
+	ratio=compress;
+
+a1 -> b1;
+a1 -> b2;
+b1 -> c1;
+b2 -> c1;
+c1 -> d1;
+d1 -> e1;
+e1 -> f1;
+f1 -> g1;
+f1 -> g2;
+f1 -> g3;
+g1 -> h1;
+g2 -> h1;
+g3 -> h1;
+h1 -> i1;
+h1 -> i2;
+h1 -> i3;
+
+a1 [label="The Story (S)",style="filled",fillcolor="darkseagreen1",shape="box"];
+b1 [label="Method (W) solves (S)",style="filled",fillcolor="darkseagreen1",shape="box"];
+b2 [label="Method (M) solves (S)",style="filled",fillcolor="darkseagreen1",shape="box"];
+c1 [label="(W) results contradict (M) results",style="filled",fillcolor="cadetblue1"];
+d1 [label="(W) results are better than (M) results",style="filled",fillcolor="cadetblue1"];
+e1 [label="(M) is undermined",style="filled",fillcolor="brown1"];
+f1 [label="Introduce (L): credences\nare determinate and precise",style="filled",fillcolor="darkseagreen1",shape="box"];
+g1 [label="(M) implies (L)",style="filled",fillcolor="cadetblue1"];
+g2 [label="The bad (M) results for\n(S) presuppose not-(L)",style="filled",fillcolor="cadetblue1"];
+g3 [label="(M) together with (L)\nagrees with (W)",style="filled",fillcolor="cadetblue1"];
+h1 [label="(M) is vindicated",style="filled",fillcolor="brown1"];
+i1 [label="(M) together with (L)\nagrees with (W)",style="filled",fillcolor="cadetblue1"];
+i2 [label="(M) together with (L)\ngeneralizes (W)",style="filled",fillcolor="cadetblue1"];
+i3 [label="(M) together with (L)naturally\ngeneralizes Jeffrey conditioning",style="filled",fillcolor="cadetblue1"];
+	
+}

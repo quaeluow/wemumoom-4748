@@ -1,0 +1,629 @@
+% The original version of this paper is in PhysicistPhilosopherLinguist.tex
+
+% I put the old introduction which pays more attention to the
+% synchronic/diachronic problem into org
+\documentclass[11pt]{article}
+\usepackage{october}
+\hyphenation{Hal-pern}
+
+% This article http://tinyurl.com/ly2szc6
+% Wagner's article http://tinyurl.com/pgaflyw 
+
+% For BJPS
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+\begin{document}
+% For BJPS
+% \raggedright
+% \doublespacing
+
+\title{A Natural Generalization of Jeffrey Conditioning}
+% Conditioning on Conditonals ?
+\author{Stefan Lukits}
+
+% probability kinematics
+% probability update
+% conditionals
+% Evidence;
+% bayesian epistemology
+% maximum entropy
+% infomin
+% formal epistemology
+
+\date{}
+
+\maketitle
+
+% \doublespacing
+
+\begin{abstract} 
+  {\noindent}When we come to know a conditional, we cannot
+  straightforwardly apply Jeffrey conditioning to gain an updated
+  probability distribution. Carl Wagner has proposed a natural
+  generalization of Jeffrey conditioning to accommodate this case
+  (Wagner conditioning). The generalization rests on an ad hoc but
+  plausible intuition (W). Wagner shows how the principle of maximum
+  (M) entropy disagrees with intuition (W). This article presents a
+  natural generalization of Wagner conditioning which is derived from
+  (M) and implied by it. (M) does therefore not only not disagree with
+  (W), it seamlessly and elegantly generalizes it (just as it
+  generalizes standard conditioning and Jeffrey conditioning).
+  Wagner's inconsistency result for (M) and (W) rests on Wagner's
+  rejection of (L), the Laplacean Principle. The article explains (L)
+  and why all advocates of (M) accept it. Therefore, Wagner only shows
+  that one cannot hold (W) and (M) while rejecting (L). Since all
+  advocates of (M) accept (L), (W) and (M) are consistent and,
+  furthermore, (M) provides a much less ad hoc and much more
+  integrated generalization of Jeffrey conditioning than Wagner
+  conditioning.
+% \end{abstract}
+
+\section{Introduction}
+\label{Introduction}
+
+% Updating on conditionals is a swiftly developing field in probability
+% kinematics and the belief revision literature in general. 
+
+Standard conditioning in Bayesian probability theory gives us a
+relatively well-accepted tool to update on the observation of an
+event. Jeffrey conditioning provides another tool which updates
+probability distributions (or densities, from now on omitted) given
+uncertain evidence. Jeffrey conditioning generalizes standard
+conditioning. Evidence can be viewed as imposing a constraint on
+acceptable probability distributions, often one with which the prior
+probability distribution is inconsistent. If it is a conditional which
+constitutes this constraint, standard conditioning and Jeffrey
+conditioning do not always apply. Carl Wagner presents such a case
+(see \scite{7}{wagner92}{}) together with a solution based on a
+plausible intuition. We will call this intuition (W). Wagner's (W)
+solution, or Wagner conditioning, in its turn generalizes Jeffrey
+conditioning.
+
+Twenty years earlier, E.T. Jaynes had already proposed a
+generalization of Jeffrey conditioning, the principle of maximum
+entropy (M). This generalization is more sweeping than Wagner's and
+includes partial information cases (using the moment(s) of a
+distribution as evidence), such as Bas van Fraassen's \emph{Judy
+  Benjamin} problem and Jaynes' own \emph{Brandeis Dice} problem. It
+uses information theory to suggest that one should (a) always choose
+prior probabilities which are minimally informative, and (b) update to
+the probability distribution which is minimally informative relative
+to the prior probability distribution while obeying the constraint
+imposed by the observation or the evidence. Again, there is a
+plausible intuition at work, but (M) soon ran into counter-examples
+(e.g.\ \emph{Judy Benjamin}, see van Fraassen, 1981) and conceptual
+difficulties (e.g.\ Abner Shimony's Lagrange multiplier problem, see
+\scite{7}{friedmanshimony71}{}; or more recently, Joseph Halpern's and
+Peter Gr{\"u}nwald's Coarsening at Random, see
+\scite{7}{gruenwaldhalpern03}{}).
+
+The question for Wagner was therefore whether his generalization (W)
+agreed with (M) or not. Wagner found that it did not. Wagner then used
+his method not only to present a \qeins{natural generalization of
+  Jeffrey conditioning} (see \scite{8}{wagner92}{250}), but also to
+deepen criticism of (M). I will show that (M) not only generalizes
+Jeffrey conditioning (as is well known, for a formal proof see
+\scite{7}{catichagiffin06}{}) but also Wagner conditioning. Wagner's
+intuition (W) is plausible, and his method works. His derivation of a
+disagreement with (M), however, is conceptually flawed. It is based on
+a denial of principle (L), the Laplacean principle about the
+assignment of determinate prior probabilities to well-defined events,
+which we will specify in a moment.
+
+While Wagner is welcome to deny (L), advocates of (M) universally
+accept it. Wagner is correct in pointing out that denying (L) and
+accepting (M) is inconsistent. Since all advocates of (M) already
+accept (L), this is not going to dissuade anyone from continuing their
+allegiance, neither does it do anything to deepen criticism of (M).
+This paper shows how elegantly (M) generalizes not only standard
+conditioning and Jeffrey conditioning, but also Wagner conditioning.
+% (M) has formal virtues which come to the fore in this case.
+
+To broaden the horizon for a moment, the criticism of (M) in the 1970s
+and 1980s succeeded in tarnishing the reputation of (M) as a generally
+valid, objective updating method in epistemological circles. Many
+statistical physicists, however, still hold it in high regard and most
+epistemologists consider it a useful tool, although without the
+theoretical significance it would have if it enabled mechanic
+updating. The detractors have for the most part pointed out weaknesses
+in Jaynes' \qeins{right-wing totalitarian} exposition of (M) (see
+\scite{8}{zabell05}{28}). A tempered and differentiated account of (M)
+is not only largely immune to the criticisms, but often insightfully
+illuminates the problems that the criticisms pose (for example in the
+\emph{Judy Benjamin} case see \scite{7}{lukits14}{}). This account
+rests on principles such as (L) and a reasonable interpretation of
+what we mean by objectivity.
+% \newblock \emph{Synthese} (forthcoming) (2014).
+
+To make this more clear, and before we launch into the formalities of
+generalizing Wagner conditioning by using (M), let us articulate (L)
+and (M). (L) is what I call the Laplacean principle and states that a
+rational agent is able to assign a determinate probability to a
+well-defined event. Thomas Augustin summarizes it well in two
+paradigms:
+
+\begin{enumerate}[(P1)]
+\item Every uncertainty can adequately be described by a classical
+  probability distribution. This in particular allows to assign a
+  prior distribution $\pi(\cdot)$ on parameter spaces in inferential
+  problems and on the space of states of nature in decision problems.
+\item After having observed the sample $\{x\}$, the posterior
+  $\pi(\cdot|x)$ contains all the relevant information. Every
+  inference procedure depends on $\pi(\cdot|x)$, and only on
+  $\pi(\cdot|x)$.
+\end{enumerate}
+
+In contrast to frequentism and in agreement with Bayesians, (L)
+holds an epistemological view of probabilities where the probability
+distribution represents an agent's uncertainty or lack of information
+and not a fact in the world. When you change your probabilities you
+are not admitting that you have been wrong, you are only adjusting to
+new information. Sometimes you know very little about an event, but
+knowing little is no barrier to assigning a probability---the whole
+point of probabilities is to reflect uncertainty.
+
+There are many caveats here. To avoid excessive apriorism, as
+Teddy Seidenfeld calls it (see \scite{7}{seidenfeld79}{414}), (L) does
+not require that a rational agent has probabilities assigned to all
+events in an event space, only that, once an event has been brought to
+attention, and sometimes retrospectively, the rational agent is able
+to assign a probability. Newton did not need to have a prior
+probability for Einstein's theory in order to have a posterior
+probability for his theory of gravity.
+
+(L) also does not require objectivity in the sense that all rational
+agents must agree in their probability distributions if they have the
+same information. It is important to distinguish between Prior
+Probabilities I and Prior Probabilities II. The former precede any
+information at all. The latter are simply prior relative to posterior
+probabilities in probability kinematics. They may themselves be
+posterior probabilities with respect to an earlier instance of
+probability kinematics. One of Jaynes' projects, the project of
+objectivity for Prior Probabilities I, has failed. 
+
+The case for objectivity in probability kinematics, where prior
+probabilities are of type II, is different. Again, interpretations of
+the evidence and how it is to be cast in terms of formal constraints
+may vary. Once we agree on a prior distribution (type II), however,
+and on a set of formal constraints representing our evidence, (L) in
+conjunction with (M) claims that posterior probabilities follow
+mechanically. Just as is the case in deductive logic, we may come to a
+tentative and voluntary agreement on an interpretation, a set of
+rules and presuppositions, and then go part of the way together.
+
+(M) requires that we do so in accordance with information theory and a
+commitment to keep the entropy maximal, if constraints are synchronic,
+and the cross-entropy minimal, if they are diachronic. This
+corresponds to the simple intuition that we ought not to gain
+information where the additional information is not warranted by the
+evidence. Some want to drive a wedge between the synchronic rule to
+keep the entropy maximal (\textsc{maxent}) and the diachronic rule to
+keep the cross-entropy minimal (\emph{Infomin}). 
+
+Here is a brief excursion to dispel this worry. Consider a bag with
+blue, red, and green tokens. You know that (C1) at least 50\% of the
+tokens are blue. Then you learn that (C2) at most 20\% of the tokens
+are red. The synchronic norm \textsc{maxent}, on the one hand, ignores
+the diachronic dimension and prescribes the probability distribution
+which has the maximum entropy and obeys both (C1) and (C2). The
+three-dimensional vector containing the probabilities for blue, red,
+and green is $(\frac{1}{2},\frac{1}{5},\frac{3}{10})$. \emph{Infomin},
+on the other hand, processes (C1) and (C2) sequentially, taking in its
+second step $(\frac{1}{2},\frac{1}{4},\frac{1}{4})$ as its prior
+probability distribution and then diachronically updating to
+$(\frac{8}{15},\frac{1}{5},\frac{4}{15})$.
+
+The information provided in a problem calling for \textsc{maxent} and
+the information provided in a problem calling for \emph{Infomin} is
+different, as temporal relations and their implications for dependence
+between variables clearly matter. In the above case, we might have
+relevantly received information (C2) before (C1) (\qnull{before} may
+be understood logically rather than temporally) so that \emph{Infomin}
+updates in its last step $(\frac{2}{5},\frac{1}{5},\frac{2}{5})$ to
+$(\frac{1}{2},\frac{1}{6},\frac{1}{3})$. Even if (C1) and (C2) are
+received in a definite order, the problem may be phrased in a way that
+indicates independence between the two constraints. In this case,
+\textsc{maxent} is the appropriate norm to use. \emph{Infomin} does
+not assume such independence and therefore processes the two pieces of
+information separately. Disagreement arises when observations are
+interpreted differently, not because \textsc{maxent} and
+\emph{Infomin} are inconsistent with each other. In the following I
+will assume that \textsc{maxent} and \emph{Infomin} are compatible and
+part of the toolkit at the disposal of (M), the principle of maximum
+entropy.
+
+While I have emphasized so far that (L) is a weaker claim compared to
+what Jaynes may have claimed (perhaps contrasting a Laplacean realism
+of sorts with Jaynes' Laplacean idealism), (L) is a stronger claim
+than what some Bayesians are prepared to accept. Classically,
+Bayesians were committed to determinate prior probabilities, but in
+recent time this commitment has softened. There are now Bayesians who
+contend that rational agents typically lack determinate prior
+subjective probabilities and that their opinions are characterized by
+imprecise credal states in response to unspecific and equivocal
+evidence. Laplacean realism is weaker than Laplacean idealism, but
+stronger than Bayesianism, if Bayesianism now includes this kind of
+softening.
+
+The debate over the usefulness of imprecision or indeterminacy in the
+credal states of a rational agent is lively (see especially the work
+of Isaac Levi, Peter Walley, and James Joyce). I do not know of
+anyone, however, who defends (M) and does not at the same time reject
+imprecision or indeterminacy both in prior probabilities and in
+posterior probabilities (the two can sometimes come apart). Advocates
+of (M) can be flexible about indeterminacy with respect to the
+interpretation of evidence and observation, but once constraints are
+formally articulated and prior probabilities assigned (the latter
+process is always possible and determinate because (M) is committed to
+a subjectivist interpretation of probabilities which emphasizes that
+probabilities represent the uncertainty of the agent, not
+distributions or frequencies in the outside world), the principle of
+maximum entropy delivers unique and determinate posterior
+probabilities.
+
+It may very well appear reasonable to a Laplacean (and a fortiori, to
+an advocate of (M)) that two agents hold different prior probability
+distributions (for example prior probabilities of type I), but a
+Laplacean fails to see how a set of non-unique probabilities succeeds
+in representing the uncertainty of one agent. Imagine a weather
+forecaster saying that there is a forty to fifty percent chance of
+rain tomorrow---what precisely is that supposed to mean? There is not
+an urn of nature with forty to fifty rainy days out of one hundred,
+where the forecaster is trying to guess at the correct number. The
+determinate subjective probability is already a measure of uncertainty
+and does not need to be dilated to a higher level of uncertainty. If
+it were a question of an urn (for example, Ellsberg's paradox with 30
+red balls and 70 balls that are either green or blue), then the
+Laplacean would assign a subjective prior probability to all possible
+states of the urn, ranging from 0 green balls to 70 green balls, and
+these subjective prior probabilities would be perfectly determinate
+and sum to 1. This is not more than handwaving in defence of
+determinacy, but the larger point is that determinacy is a defensible
+position and that all advocates of (M) take it. This will be important
+in a moment. 
+
+So, I wonder if I should use the following strategy. Don't do any of
+this handwaving here, although some of it may be useful elsewhere.
+Another situation to address is dependencies. Sometimes determinate
+probabilities seem to suggest that two variables are independent when
+there is no reason to assume that they are. What you could do in this
+paper is more like this:
+
+Define a position (L) which basically agrees with Thomas Augustin's
+(1) and (2). Add to this (3), using entropy, and you get (M). Because
+(1) is constituent of (M), not-(1) cannot be used to undermine (M). It
+doesn't matter, then, if one agrees or disagrees with indeterminacy,
+for Wagner's argument to go through one must first find someone who
+holds not-(1) and (3) (unlikely), and even if one succeeds, one has
+only shown that that one person's views are inconsistent.
+
+% While I appreciate the equivocality of evidence, I would separate the
+% disambiguation of the evidence in articulating formal constraints from
+% bringing to bear a helpful formalism to probability updating which
+% requires numerically precise priors. When we apply mathematics to
+% daily life, we do this by measuring imprecisely and then processing
+% the disambiguated measurements using calculus. 
+% One particularly strong advocate of imprecise credal states is James
+% Joyce (see \scite{8}{joyce05}{156f}), with the unfortunate consequence
+% that the updating strategies that Joyce proposes for these credal
+% states are impotent.
+
+% No amount of evidence can modify the imprecise credal state, because
+% each member of the set of credal states that an agent accepts has a
+% successor with respect to updating that is also a member of these
+% credal states and that is consistent with its predecessor and the
+% evidence. Although the feeling is that the imprecise credal state is
+% narrowed by evidence towards more precision, set theory clearly
+% indicates that the credal state remains static, no matter what the
+% evidence is, unless we introduce a higher-level distribution over
+% these sets---but then the same problems arise on the higher level.
+
+Returning for now to the issue of updating on conditionals, Wagner's
+method and his plausible intuition (W) provide an interesting
+generalization of Jeffrey conditioning, but contrary to Wagner's
+claims they do nothing to vitiate Laplacean realism or (M). Some
+advocates of (M) may find Laplacean realism too weak in its claims,
+but none think it is too strong. Once (L) is assumed, however,
+Wagner's diagnosis of disagreement between (W) and (M) fails.
+Moreover, (M) and (L) together produce a formalism which seamlessly
+generalizes Wagner conditioning. A welcome side-effect of reinstating
+harmony between (M) and (W) is that this formalism provides an inverse
+procedure to Vladim{\'\i}r Majern{\'\i}k's method of finding marginals
+based on given conditional probabilities (see
+\scite{7}{majernik00}{}).
+
+\section{Wagner's Natural Generalization of Jeffrey Conditioning}
+\label{NatGen}
+
+Wagner claims that he has found a relatively common case of
+probability kinematics in which (M) delivers the wrong result so that
+we must develop an ad hoc generalization of Jeffrey conditioning. This
+is best explained by using Wagner's example, the \emph{Linguist}
+problem.
+
+\begin{quotex}
+  You encounter the native of a certain foreign country and wonder
+  whether he is a Catholic northerner ($\theta_{1}$), a Catholic
+  southerner ($\theta_{2}$), a Protestant northerner ($\theta_{3}$),
+  or a Protestant southerner ($\theta_{4}$). Your prior probability
+  $p$ over these possibilities (based, say, on population statistics
+  and the judgment that it is reasonable to regard this individual as
+  a random representative of his country) is given by
+  $p(\theta_{1})=0.2,p(\theta_{2})=0.3,p(\theta_{3})=0.4,\mbox{ and
+  }p(\theta_{4})=0.1$. The individual now utters a phrase in his
+  native tongue which, due to the aural similarity of the phrases in
+  question, might be a traditional Catholic piety ($\omega_{1}$), an
+  epithet uncomplimentary to Protestants ($\omega_{2}$), an innocuous
+  southern regionalism ($\omega_{3}$), or a slang expression used
+  throughout the country in question ($\omega_{4}$). After reflecting
+  on the matter you assign subjective probabilities
+  $u(\omega_{1})=0.4,u(\omega_{2})=0.3,u(\omega_{3})=0.2,\mbox{ and
+  }u(\omega_{4})=0.1$ to these alternatives. In the light of this new
+  evidence how should you revise $p$? (See \scite{8}{wagner92}{252}
+  and \scite{8}{spohn12}{197}.)
+\end{quotex}
+
+Let
+$\Theta=\{\theta_{i}:i=1,\ldots,4\},\Omega=\{\omega_{i}:i=1,\ldots,4\}$.
+Let $\Gamma:\Omega\rightarrow{}2^{\Theta}-\{\emptyset\}$ be the
+function which maps $\omega$ to $\Gamma(\omega)$, the narrowest event
+in $\Theta$ entailed by the outcome $\omega\in\Omega$. Here are two
+definitions that take advantage of the apparatus established by Arthur
+Dempster (see \scite{7}{dempster67}{}). We will need $m$ and $b$ to
+articulate Wagner's (W) solution for \emph{Linguist} type problems.
+
+\begin{equation}
+  \mbox{For all }E\subseteq{}\Theta, m(E)=u(\{\omega\in\Omega:\Gamma(\omega)=E\})\label{eq:mof}.
+\end{equation}
+
+\begin{equation}
+  \mbox{For all }E\subseteq{}\Theta, b(E)=\sum_{H\subseteq{}E}m(H)=u(\{\omega\in\Omega:\Gamma(\omega)\subseteq{}E\})\label{eq:bof}.
+\end{equation}
+
+Let $Q$ be the posterior joint probability measure on
+$\Theta\times\Omega$, and $Q_{\Theta}$ the marginalization of $Q$ to
+$\Theta$, $Q_{\Omega}$ the marginalization of $Q$ to $\Omega$.
+% (often,
+% we will write lower case $p$ or $q$ for the marginal probabilities
+% without spelling out the margin to which they refer; we will write
+% upper case $P$ and $Q$ for the joint probabilities). 
+Wagner plausibly suggests that $Q$ is compatible with $u$ and $\Gamma$
+if and only if
+
+\begin{equation}
+  \label{eq:entail}
+  \mbox{for all }\theta\in\Theta\mbox{ and for all
+  }\omega\in\Omega,\theta\notin\Gamma(\omega)\mbox{ implies that }Q(\theta,\omega)=0
+\end{equation}
+
+and
+
+\begin{equation}
+  \label{eq:marg}
+  Q_{\Omega}=u.
+\end{equation}
+
+The two conditions (\ref{eq:entail}) and (\ref{eq:marg}), however, are
+not sufficient to identify a \qeins{uniquely acceptable revision of a
+  prior} \scite{2}{wagner92}{250}. Wagner's proposal includes a third
+condition, which extends Jeffrey's rule to the situation at hand. We
+will call it (W). To articulate the condition, we need an additional
+formal apparatus. For all $E\subseteq{}\Theta$, let
+$E_{\bigstar}=\{\omega\in\Omega:\Gamma(\omega)=E\}$, so that
+$m(E)=u(E_{\bigstar})$. For all $A\subseteq\Theta$ and all
+$B\subseteq\Omega$, let $\mbox{``A''}=A\times\Omega$ and
+$\mbox{``B''}=\Theta\times{}B$, so that
+$Q(\mbox{``A''})=Q_{\Theta}(A)$ for all $A\subseteq\Theta$ and
+$Q(\mbox{``B''})=Q_{\Omega}(B)$ for all $B\subseteq\Omega$. Let also
+$\mathcal{E}=\{E\subseteq\Theta:m(E)>0\}$ be the family of evidentiary
+focal elements.
+
+According to Wagner only those $Q$ satisfying the condition
+
+\begin{equation}
+  \label{eq:wagn}
+  \mbox{for all }A\subseteq\Theta\mbox{ and for all }E\in\mathcal{E},Q(\mbox{``A''}|\mbox{``E$_{\bigstar}$''})=p(A|E)
+\end{equation}
+
+are eligible candidates for updated joint probabilities in
+\emph{Linguist} type problems. 
+% Other joint probability distributions
+% would use information not provided in the problem or discount
+% information that is provided in the problem (especially the
+% conditionals). 
+To adopt (\ref{eq:wagn}), says Wagner, is to make sure
+that the total impact of the occurrence of the event $E_{\bigstar}$ is
+to preclude the occurrence of any outcome $\theta\notin{}E$, and that,
+within $E$, $p$ remains operative in the assessment of relative
+uncertainties (see \scite{8}{wagner92}{250}). While conditions
+(\ref{eq:entail}), (\ref{eq:marg}) and (\ref{eq:wagn}) may admit an
+infinite number of joint probability distributions on
+$\Theta\times\Omega$, their marginalizations to $\Theta$ are identical
+and give us the desired posterior probability, expressible by the
+formula
+
+\begin{equation}
+  \label{eq:qofa}
+  q(A)=\sum_{E\in\mathcal{E}}m(E)p(A|E).
+\end{equation}
+
+So far we are in agreement with Wagner, although a Laplacean approach,
+combined with (M), gives us exactly the same results, as we will show
+below, and moreover easily generalizes over both Jeffrey conditioning
+and Wagner conditioning.
+% Wagner's paper is a paradigmatic example for the \qnull{anti-Bayesian
+%   ad hockeries} addressed in E.T. Jaynes' (see
+% \scite{8}{jaynes98}{143}). In Wagner's case, however, the motivation
+% of the anti-Bayesian (over which Jaynes despairs) is on the surface:
+% Wagner is mistaken about the correct application of (M),
+% and so he considers the ad hockery necessary to come to an acceptable
+% result, which his incorrect application of the (M) clearly
+% does not provide.
+Wagner's scathing verdict about (M) towards the end of his article is
+not really a verdict about (M) in the Laplacean tradition, where most
+(if not all) of its advocates are at home, but about the curious
+conjunction of (M) with a non-Laplacean Bayesianism that renounces any
+commitment to determinate priors on specified partitions of the event
+space:
+
+\begin{quotex}
+  Students of maximum entropy approaches to probability revision may
+  [\ldots] wonder if the probability measure defined by our formula
+  (\ref{eq:qofa}) similarly minimizes [the Kullback-Leibler
+  information number] $D_{\textsc{kl}}(q,p)$ over all probability
+  measures $q$ bounded below by $b$. The answer is negative [\ldots]
+  convinced by Skyrms, among others, that \textsc{maxent} is not a
+  tenable updating rule, we are undisturbed by this fact. Indeed, we
+  take it as additional evidence against \textsc{maxent} that
+  (\ref{eq:qofa}), firmly grounded on [\ldots] a considered judgment
+  that (\ref{eq:wagn}) holds, might violate \textsc{maxent} [\ldots]
+  the fact that Jeffrey's rule coincides with \textsc{maxent} is
+  simply a misleading fluke, put in its proper perspective by the
+  natural generalization of Jeffrey conditioning described in
+  this paper. [References to formulas and notation modified.]
+  \scite{3}{wagner92}{255}
+\end{quotex}
+
+In the next section, we will contrast what Wagner considers to be the
+solution of (M) for this problem, \qnull{Wagner's (M) solution,} and
+Wagner's solution presented in this section, \qnull{Wagner's (W)
+  solution,} and show, in much greater detail than Wagner does, why
+Wagner's (M) solution misrepresents (M).
+
+\section{Wagner's (M) Solution}
+\label{WagnersMSolution}
+
+Wagner's (M) solution assumes the constraint that $b$ must act as a
+lower bound for the posterior probability. Consider
+$E_{12}=\{\theta_{1}\vee\theta_{2}\}$. Because both $\omega_{1}$ and
+$\omega_{2}$ entail $E_{12}$, according to (\ref{eq:bof}),
+$b(E_{12})=0.70$. It makes sense to consider it a constraint that the
+posterior probability for $E_{12}$ must be at least $b(E_{12})$. Then
+we choose from all probability distributions fulfilling the constraint
+the one which is closest to the prior probability distribution, using
+the Kullback-Leibler divergence.
+
+Wagner applies this idea to the marginal probability distribution on
+$\Theta$. He does not provide the numbers, but refers to simpler
+examples to make his point that (M) does not generally agree with his
+solution. To aid the discussion, I want to populate Wagner's claim for
+the \emph{Linguist} problem with numbers. Using proposition 1.29 in
+Dimitri Bertsekas' book \emph{Constrained Optimization and Lagrange
+  Multiplier Methods} (see \scite{8}{bertsekas82}{71}) and some
+non-trivial calculations, Wagner's (M) solution for the
+\emph{Linguist} problem (indexed $Q_{wm}$) is
+
+\begin{equation}
+  \label{eq:p13}
+  \tilde{\beta}=(Q_{wm}(\theta_{1})=0.30,Q_{wm}(\theta_{2})=0.45,Q_{wm}(\theta_{3})=0.10,Q_{wm}(\theta_{4})=0.15)
+\end{equation}
+
+% \begin{tabular}{|l|r|r|r|r|r|}\hline
+% $Q_{w/m}$ & $\theta_{1}$ & $\theta_{2}$ & $\theta_{3}$ & $\theta_{4}$ & $Q_{\Omega}$ \\ \hline
+% $\omega_{1}$ & ? & ? & 0.00 & 0.00 & $0.40$ \\ \hline 
+% $\omega_{2}$ & ? & ? & 0.00 & 0.00 & $0.30$ \\ \hline 
+% $\omega_{3}$ & 0.00 & ? & 0.00 & ? & $0.20$ \\ \hline 
+% $\omega_{4}$ & ? & ? & 0.10 & ? & $0.10$ \\ \hline 
+% $\omega_{5}$ & 0.00 & 0.00 & 0.00 & 0.00 & $0.00$ \\ \hline 
+% $Q_{\Theta}$ & 0.30 & 0.45 & 0.10 & 0.15 & 1.00 \\ \hline
+% \end{tabular}
+
+% \begin{tabular}{|l|r|r|r|r|r|}\hline
+%   $Q_{w/m}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $Q_{\Theta}$ \\ \hline
+% $\theta_{1}$ & ? & ? & 0.00 & ? & 0.30 \\ \hline
+% $\theta_{2}$ & ? & ? & ? & ? & 0.45 \\ \hline
+% $\theta_{3}$ & 0.00 & 0.00 & 0.00 & 0.10 & 0.10 \\ \hline
+% $\theta_{4}$ & 0.00 & 0.00 & ? & ? & 0.15 \\ \hline
+% $Q_{\Omega}$ & 0.40 & 0.30 & 0.20 & 0.10 & 1.00\\ \hline
+% \end{tabular}
+
+The cross-entropy between $\tilde{\beta}$ and the prior
+
+\begin{equation}
+  \label{eq:p14}
+  \beta=(P(\theta_{1})=0.20,P(\theta_{2})=0.30,P(\theta_{3})=0.40,P(\theta_{4})=0.10)
+\end{equation}
+
+is indeed significantly smaller than the cross-entropy between
+Wagner's (W) solution 
+
+\begin{equation}
+  \label{eq:p15}
+  \hat{\beta}=((Q(\theta_{1})=0.30,Q(\theta_{2})=0.60,Q(\theta_{3})=0.04,Q(\theta_{4})=0.06))
+\end{equation}
+
+and the prior $\beta$ ($0.0823$ compared to $0.4148$). For the
+cross-entropy, we use the Kullback-Leibler Divergence
+
+\begin{equation}
+  \label{eq:kl}
+  D_{\textsc{kl}}(q,p)=\sum{}q(\theta_{i})\log_{2}\frac{q(\theta_{i})}{p(\theta_{i})}.
+\end{equation}
+
+From the perspective of an (M) advocate, there are only two
+explanations for this difference in cross-entropy. Either Wagner's (W)
+solution illegitimately uses information not contained in the problem,
+or Wagner's (M) solution has failed to include information that is
+contained in the problem. I will simplify the \emph{Linguist} problem
+in order to show that the latter is the case.
+
+\begin{quotex}
+  The \emph{Simplified Linguist Problem.} Imagine the native is either
+  Protestant or Catholic (50:50). Further imagine that the utterance
+  of the native either entails that the native is a Protestant (60\%)
+  or provides no information about the religious affiliation of the
+  native (40\%).
+\end{quotex}
+
+Using (\ref{eq:qofa}), the posterior probability distribution is 80:20
+(Wagner's (W) solution and, surely, the correct solution). Using $b$
+as a lower bound and (M), Wagner's (M) solution for this radically
+simplified problem is 60:40, clearly a more entropic solution than
+Wagner's (W) solution. The problem, as we will show, is that Wagner's
+(M) solution does not take into account (L), which an (M) advocate
+would naturally accept.
+
+_0]‚é; ‹±Î^wj¦1?J'^ÑÂ ù°™Á¶ÑŒdWÆ§ahuØl„qQÃLn3?L½Ú1äæÕ[È‘<Ê©¸ ¿êõ6êUî~½êyĞll„ª®­¡£R®ÿ©Ñª¶:ğ-¸YÛny*0>3M·á8¸A‰{Ì-œ­¶ßêíjc=X«Ô<Ü¥¨·š¸NLôê-àg««5 z &Í*º€ZítcG2€¢©@ˆ6ê¶àŒø“mü‹NwÃZ-§İêdó¶šk¸í\Egt•2<ƒâ*@TÃ•5ËóÕÏ©Ï5;´Ps€¹Vm\@¬ÔCÂmlµ@pÖ›gúSÿ‘]4¯ª6k•Z³]Á0‘Zà÷j8m7¹q°Ş±ªÆûSññÖWC§§›­šWiµ:Ş~>HsøéŠÛ¬áêRñjh6ˆÖ;¡QqAfWĞ°çfàÙ5€EĞ«À)pgGQwåïñèà‘¹orôtşP†L};eg”º{BA¿/I2}H·íêÂÊó4Ó{R®6»‹ †¦Å›=‘Ø¾	Nr\]¶tW1±Kù-Müœ“\¸6‹¿Àª²BĞ´Ÿ¥4ÖC'_Rl‘¶\~#M÷äy Cvy|Ao]Ğaùåaz]İ‰“©Tª{İ‘‡Er÷dú?óM<_RuÓo˜ïamef4BïÍ
+ŠaqÓ¯¦(â®H’Ldú6€X¹V
+ãƒ‘HŒyô]¢+¶élQryS¾6LƒôNg2İCÃ=ë‡Sİ©Ñ7Kšê«fØ²_sÄË©X×Ñtª¿GÿĞÖA¦·'¹õ­’*MPäæy×‘åüPbÏ.‰êÂíêJlìÛ8šÎŒníNßõÀ7…å‡btïeEá9hdƒ*åõòÔ ¿_PtÁÔĞkÛõ±šÚî"‰Á)Ëp$×—ïd’¥òä4#W”5Í¶TjirpºÄLÃ½\–-êEQfGwåÂ…ŞxŒØ¸ıÁ[vŒf6íØ¾~Û®oøòÊ™ÍÉX„Ğ‰dr`xÑşt¡0®;Õ}OAãÙ²ÂYìW©dï™üRaáªkğ2ËAÇÈ¾şMÃ;Öoß´~÷¶‘Í£»¹QäŠŸ¤ˆî_Ëœ&ó'%V,s i‰û3IÓ/–ÉR”Éa2qç/›eV`¯ôEâ÷‰Šb”ŞÈĞ]±.†bvíÜ{o&FoœùÜA†ÈüÏ“wT¹|4C¤^ætß·}ÓEëz–Øˆì: ü­=T|OÎ0$Ë4Ø©}tjäh74›ÿ9E¥ß6,0Ãˆ–k8æô`‚¹gn²mX†Q|ƒazÎzqn:M3T__fäî;ÿşj†¡ï\Ñt™_x!“æn<N$3¿²‚ÌJ¢ äN~·¯¯'A£ebrø†¨i/¨¸gj|öÜúx<¥©}†îûèé$Ù}Q0u~z7“z¸hÚ¶6Ûßİıì’-IìIš}úù§ÿõêı¯îãµ‡}ãİ¢m,ÜÍĞ[æLCÂ   DÃÕ°êøå‹é¾£6öp¶3+'=ÇşšiB3¼gª[½ìæ÷CøôpÂMİ†(äÄ…_<dŒµ:æ™X4ãÚzXmaoXÍàø–°Õn ‰n„­ï`¬c­âº~Í
+pÊs€{y `s¾€†ıÛ_ÿşÛ·ïÏš^r)€µÿ?¤M™1Rp³zgVîY |á!Â×jè4CôJ "‰6dµĞÊŠo51>×+­ÎAjZÍ ‰*Ğ¶†¤¯·Á¯éSbpšcaÊn-t¬ŠoŸ«tLÌT¥ÅÑ­‹v'RØ12Ok´Ñú«â› µ±X$²‹»Ğ°? ˆ¾\ÒVMå@¼úm¸mhiì¨ÀW@ïÂ—,Ûòdua7Ó{EVyUU¥…Ç“‰7/‘/
+¹"',/O³ S,]”¹Òâôä‡›’]¢ÿ‚`ª¹õdÏ	×¼ñ¿ÉØĞUÕµ°?Ğ,íL¥ñÔyTªôÆÄå‚ eHÓOäaş×l»´;F¾¸ÄÍì ãï-«–
+X(mÍôSıçŠFyb8Ş{X¶ËÖ-}e;M|Î¦WcvñĞƒ{†{“1j×uWğ`ºuÛÒl­|zˆÉ\”# Ndªw\Ğùf<5Æ®"‰†r¬‡™ãÊ¥³ƒ±ŞÓœb(˜,.Ín¤’Ÿˆ¶r³‡ ^¼5±0^*sÅ¹ìÜœÀYN^YŠ1ßñ ç0ŞÃEú¥›¶jÈ¦øk7Ñ=fZÍ~OG6]ãUìé’„±4‘8"ªÂÄzšŞ{hbîÆ•é¥•ë×¯–³yN7%ßñ­ZˆekòéŠ™G,.j*§‹œ,ò¥ÓIŠx± ¹Öâ(ÁüÌÊ‚rPŞLOjXåß‡âÌé"w&í¹JÎ±‘Ô-ì ïTWº!vı9vıúÕùìüù©?N\¹4ÏÊø’ğ@%Efß¦IzûÏWüóÇÉÓ:ıÉÀÖ3 tyvK,öZ¦;hqÿ[‡a2%›Sdíæ Áœpy×qòwÆ‰}y\·³mıJ&Şsªlš/ĞÑH|hï›ÿxçôÕË§?MÄúOñ SO“ô¿0°NÇJ½Šã8ÒY ¶©·OıÑ±'Şúàû¯^¤»"=g]æŞeˆş[¢aX¡c*¦irÀWõÙaŠ|.ëX®ï6:^ˆNÔ=UÜ¬ûA£fÀ m4°Ñ}Fª^X¯˜İÅ¦ocï;º·øÆ¨J›	š€h]‡ÒÀğDÏu4-˜;Ö˜‰ğ‡°â¯ÂO·:û˜@Xjn£ÌÊs«•Ğ•dUî,Z¹RõÖêµ‰`½j6š@2WQ×›Ã‚Z»î·°Ywm­¶º†‘˜Hîb!Jµâ®Qñ1@£U]Å([†Md‹XÜ
+Qáb°ë5C8D}¾³	 UG7d`ª€!néÀÈGÏ§j®7ŒjMı&™şYÓBô°6ë¸? ]k4Úpz7h86±jRM©aı	ğÛ ÕğWá+õÚÿÜ§ÑÛûä@×7šÏQñĞ$±p…‹> %ğ·°baVØtb”*\n€ıjÀ¾}±ë´ÛÍ†ïY!Œ8´X Şï«Ğt >q¾˜ØÄş%¼¡o{‚&îŸb'ö±û¯Nv%¿âeUT‹ŸQÑäeD’Â«‘ØÀ)É¥Å!"ºiº47‹½2QuÃ)+²ÜC—xñP„LıŠİ ç¤ëHæÙå²Äû `MÀU×Ø‹é(± ˆKÿŒÓ{®p†l[¢´²™"·-©ÜÒ‘I$wŞ{ÿ¡ïú*£î+˜ŠÂ•¿Šw1OOİ""ıÇ9ÑpuUÏğ,ISË“İñJQÔt{êÑ.‚d˜¾Ç¾zåÔ®Dï»R*—®Œ€ züÆÅ­äÉÇ/s†î)£T4õÕ?9pàØÑc=üÙW×ftIï˜’hßÅ^êD˜·:{áæØÏçûí×?,– LÔ–E¸üÑD,ú÷…’š?šŠw8ñíÉëW®Ÿüö·ß¿?4¶˜‹ÏÑÔğIEg€Tå€š®°ìä M?Â¡ï`¨Â¥¸.M™ÊÊ"ÖºÊôVšÜ¸(——¶3djLî¡áò·6‘ôè"Çÿ”Š%÷óº¡È¢$ªS9Au:¾şvùÒÄÕK7oœ<99vîìNníNŞOõ÷Ü÷Õ—|wøÌV¨ç¤ÒÒ©¾TúÙ%IdU—Ù¤˜ş“Ra~ùÉnºû¢\|˜Î‹?ş÷È•‹7oœš?;vu:Ç–…åg’Têv°Lre©T,	VÅ°?vÌû%NÒDîæTrÛ-+	%K¼ŞO§ŞÌ	’|½½“Ûyàû?oLÍİÜI3n”Eí·İıÄ¶®éÂ‰4‘ÕL\B×„³nzf 8jğ¹±±s–•q‰¸Ìş“¤O•Y&`ĞÓO%ÈŞ“fh†£VÛ1gjKŒÙ3ºC°0òOÑLæl‘ı&“&£ƒ|qæËù¹3éD÷†e^3löÏ¡Xâ‰ñcÉ½yA•ìêó+ììéãïßİKıˆö¾—3á^•Š¬mqª¦ÆÔ£{¿zñ|váúsğzÁ‘¤Ã©Ş}Y˜¬ÍùíÑô+.ˆ÷·’Lúı¥e®,ŠåÒìâJVM]XÚNÆw.ÈZİ(Çµ*¦<Wù©»÷"@g€²ÇN­fÅ“ıª¯CƒánUlà³‰e.U¿nÙ&šyGÂŒJÃªùMøšm»~3j+ÖZ¦@lDdÛ«`ÆG»İ®ùhİåvÊG¾Ù’µ Ÿ«¾…ÎPF`ø.ÖO¹:ù»(®F `AÃoÔÄÛnû¿Ûÿv[×:êƒ9İÙü?Ç?PÕ&1mF…|è.Õ@“dôPA7½f©p¿x".8ú«XnWkÚ@o«W4[ØÒÂ¶øÙòÛp@€V\ıó\£jR·ª5¸|=À.DÆªV5Åáx&Ì€£úÌ†íSv7«¸vÚl€ÆÆ5<SN ¬k^RE»@İhÓ]Ïo8v ¸V±ª@ô¬—„;¯’å…&ü§VõıFÅñWö¤ºÿ44è ^¾èN<8!z®éš¾fªÙ–7%¿ôû,Ls¥ñ÷zI"ı£¬É áRß–±>Ãs§ã›³Ø-ây¦\¸Ÿ&>,ö]*¾éŠ¯²gØš8ùØëgy­ğC2ó"kšjúÜ¹?[Èı'E]‘ú HãÏ3t^,«ËÃÉî2Œ!C3àígºÿµ ª¶¸r­(«j±xeì“¾hdô*&‚{ªTÆƒ#¨Ê¹&uPÛr»üïD¬÷Gñê¾(éeÈ†x&Ã¬ŸU}ˆéE£R3øèã*öXÉ²ïŒ%vÍrRAÇ–+%¸}–69”b¾Wë@ä:FØÌò [¶şgš¦É›Š¡êe ï$v*'N‰CËŠœİMÛ¦DCÕ4Ãä ½(²’òßÄYÏ²,şÁ=ôí<Fbª€ß¶)ËeAø¡è—[œåQ2ò\¦4ÇÒ•ëPÄcËÕäßéHò|6w©'–>È£Âô€…ë¥‰½œ ñï%Ö%.9N,—‹J‰-æYÑ5mÙ4,Ó^:÷$?’-òSe¡4'q¹óÃñXßáÎ¼ø\"ñrÙ6-İQİ…MñÔÁ²ëËwFÉGÊŠ%]L3©ã¬áÔ:dïeÈ]s¦]i¥_ˆ¥>mñ»>2–zçü|)»¨X¥Ò~šÊœÇÃí¥é×x èú6ŸıœŠQŸÎ¬ *ÙâJ6mWŒÀ¦rîñX4y´ †B•›;{u|Á4r÷ÑÄ9Ç÷LßEK`·*ÑêÓ*W_õêAÔsTü YÃ2Ğõ./4\¬Çkµpñ†&Ğ:˜uVmvZz;º²
+´Ğ<X­5l\£‚®V‡_|¬\kà*ZĞl´Ã&èÁÖªÓÀ´¡ÆZ€;Ç^è¨*œ×¼êpàT@c°Q	¦[AKdà3-j­5AO‚„«UÖkÕµv±Ë‡ïh4 Rµ«˜4¹¡Ö2æ»õfÙ(Ìµvm›<àÀípU³]iW*õU? Æë ­A“sˆb?¯[È- ¹Vh×kÖtú;Ãeì`Kœé9*0¿Z«¹
+R¶¾fcP:æ$ßèKg~»±ºÚò0GkVĞ+«Õp³m+áÎ`‡Àúàã~‚‰ü.5Ä/<4ÁÇDa,~ÛPƒùÁk5ªÍöj€ÚÀ‰1©ÖIúğ|t9t°—Îwı&¶´ª~M6 »º®YÇ»IúƒÌíÑİåÜÓ]dæ—}ºwL•€ú”ÿÉ¬ë½Î‚Ît)½#Ç`,OÜÕEn›ãg6Å™‘?DÉ¶58\;·Ä)+_tê'Q€ÀèÚñ•|‘õSå5Y± ,]W»ØO<˜]ç‹³o%}`H…*qù—˜ÄÆyC˜x3AÅ‡>::3?¹°ÈÏŸH‘ÌÃ%L\äN¥IfßùÃLŒÚ¶¨¨Ù–Tà}ÈÒ3ÛãñYEÅoŠèÛşí§Go®dsüÔ¾hWï™ÏÍí½ƒè=Ç-Ø»ƒş°à*[x€$ºç³¹å••üÊôÒÂÜ+¨’Éz€†ïéÊl?ğ£/g—V+–ËåRnyNyƒï‹‘{ó’­ªÜ•Qšz¤dZò©nâöW'ò³K|W@æ.8EÓö“4ók³@Œ4ËúúüT1wuf^Ëš–d¹êÿŒ l]Öİå/™HïÑ±TÓæî%Ûg¹üx">ü‡\d ~²µru{ŠŞ‘•–N÷Óéç–2'r%¸é‚´b‰º„´ûÔÊR9_æÙb¶4?Ÿ_bEî0Í™ÿ÷ÂÂÒÒÒÊı‘ú]ù+[z{ÉË˜nê‹ûİ}ÇEŞšI/?éNP÷Ì,-²ğAŠÀT
+¹e¨îÊËq2ıeËãgRaš‘ù"0s£,ŸNÇR÷²¦-•”Kë)zë, ´©)üToœ¸wòŸşx<õÀ•kãJYå©LjtŠWËTêí²%º†®
+g7Ñ‰G$Ó6]G1\ÛÓ1Ô,ÏV=TÿŞDbÇbå…ã^ëíıp© ±¾í°vÆûwLJš„v`jh|â”„ÉôD^uíª¦•§FÈXïo?wC›¾¼^(J¼Äï‰2ÛWDÍæ¤Ù‡ÌC¾N1‰;—-Qµ½Röúù¼0WX:p3MÆ;–Ê2L˜ådAÔå3½4€ğÅàá¼TZx=K]QU[ŸH1æÓÖnîŒ§ÿÎ^E>š¡˜ç³¼né%I‚03_”CGÉï!“÷Ì4€€
+BN¸æùo¸òOC½¿é
+z49€º0#XÙ´]§“³öRNÅ­‚ÌBÁg±xİ\ Y
+Gk{r—è‰ (Ş Ø«À/UÓªtº‰	pVÀvQ[=
+x_¨W,UWá‚ƒ)Vˆ­am“±>Ï³„êüß:;¼ÑÛÉ÷'e· 4zö¡8àÓAÓ³àWÏk€fvT´pÍõêj`ª	k¡W_…	ôB'¥m£1° ˜d«	2çŸ*Fƒ¢³DûÚ0[Äõ±œ“Aë‰ òšnà˜¾ü >.c4LÛ­.oŞ2íÖm<(¦w-`¸¢Q˜‡û¾¼Úñkšé¢C@9¡ã4€
+úFáB_èZFÅ6L•Ñ‡¬Š)ÄÎÒP´ÿ2"ÇòËïtg/*Vàè’$-~¾ïİqÍáÿ{ÿà9]²M[™ı…&‡®*¦ßDü)90{ºüá¹{‹ãZJa+M®šüÁt,ó+Œ(àô¬´ğr2¹iEÏèéŞUÒ,@x£x'ÓıjQ”¥éä·+: ­Ë©ÆÊ÷‰ø¶eÕ¶nĞÃu»b™¦£-ìa¨Wò†~ëù÷×æt‹©^ø.ERŸ(Aİ6½ª«˜Ìí¦2ÿMœ5TIQÊ+1tÏ”ÀkÒù4ÓAW`"ÒtşB75x—%ö&¾áRI·\O“J¿¤"Ôşe]/<Ÿ$’çsHUMxŸûöóã¢¥jã#	æ,ïª¦©¡Š©û@ĞĞJO>Úv¤Lá|&2p,CîB/™<–7<îµ8¼ÂÉ¢	W%*ìò/G.³2R/Ã7LOwDÛ¯'£İÿ¹%*¶n‰²dØŠ$ò‡â]ô9Ã²ÛHòşÙ ‹ªu“ÌSK®;C1ò÷²<ÿ`<şÀÍ²ƒ»cÆÊq*ñ~^fËg’]Ô›YÑ›/¨Jîç·N•óéÜ'½¢—ehzı8 ğlè‚¾°¿$Ÿ×ÇÊnŠ&ö%×SŠ[æÁ‚Gö>\†¬Êt/ÍüîÒ•Ğ*ßGŞ±ïæÿ8ºz­›L~ÏÊå—˜hìËINT|U’µ‰ít$=¦8øE>V´}W³@€ ´•nì¥cése³îx’3¼ÃDlÃœ^,|™Š$ãHaVá~îëßôqIšÚ@¥^Í²ğàUáúÏ×jÀ©€®`ß<îqbqF­\¯¦¨~Ş}$š¡n50¸Òìp`ëh¸õº×XójÍÇÕj›°Øì˜£WĞf ì¤€`Ú#¼g@.kíµêÑ:&—U==À¥w@?3¬{&ÚFw¼é€¥ùÀë«- .¬_¶áqE>›¡×j/Ğ+%\­Ãl¶@·$M¬Î4 1£İÂ¶Õ¾µ+Íš£Ô0GÃ:àãVZízcÀ &Õ
+:Á´Û­ü(†~£àô½Î^à–¯}L'>·¬°†=Ï `2·öj ÓgÍ«`Ü$èÅÅ­İïFˆ·êMF>8pD´hm„X/Â]œ-`tÍï(®qúØ T­al¥ wîÊÔ±	 ÎğO; -4óC‡mà‰Fkß\[Ğ‘1hÁ³qMÌZÂ4&ß­7¥¢©ÇcÄ›šVü5ÙE¿2JwNêŠ£ÉÒ·12yTP<Ä2öµh¬ç'ÄÍÂ^†Ş9Å-½M‘ôÇ%EàTU o@¿Qr¶lºç×âò1’> ¬”¡^º6DÅÊÂ„aÀá4‰×{¸à9IáeNb_£#=¿q¬më,¨2:<Ç¥AâsjQWe¹x8AP{€­üüé’Lü»”Ur0v©`12¯i‹›É­‹l¹”}$èç®—¦9hÏÊø¶Õw5ÏI—zˆøÈ\Y.`bÑá£ÈAî»(I=pk©hahå™_Ş86Ç9–ì˜!Ö¥[–šÿ‰ ˜G§E¥ŒÁ`Špí—ßÏÎˆÿIïáßF™vşK÷ş¾ïî·$V$K–í8NOH#’Ğ{Ù¥m€¥÷Ğa YZÒ{÷¦®é½kÔlßóhwbYÍÌ{sæ}s,eju"²vôXODc”LGº°™Y–Ù7£ˆ8%7Sùú§+7şL¸x±V™EE.Ÿ[—Êl¾ØgwŒJuGì:ï]×»3šè?L;¿¢ïJ¦‡.prík6‘¾ûfMSEÀ?şu&İÍóÇSlî‰r¹V•$mÇ°5ÃTÅ¹;¢‘'‹Å|©"Õüùıçb©ğw†a?Ÿš‡n­Oü2g2ÿ)ŠÕsôLêJU—xO«Ì|’NåÊø‡¿'bCç+“§z£ìÊ3ùò4ÏW…réúÏï}5Â×*…}l"õaU,H@»
+0”i{‹×+Çzã½wWE"‚ví•JU–$¹pmMß_ÊWVÇØ¡7®Ï•¥b­&Ï_‰¯•j¥ïÒLò³² ˜2 şD.>øpIÒ¨ïGsmO05IWCà3éÍã¸ÀÌ¹™C Ï+Î@”kŠQıa€I­·5İÑ~n@á‹?[Ÿ-‰²¤ËÅ?éÑkMfc¹#3ó|Iãk\şŸ™h|í¼BşSße‰}Ï¤ã©O«* ˜?ğáÎÜCs‚„vìì?Ø(óH¾¬sºH†ébù³T"vß¨$T«b)_üuI¤I¼aLnfzä|IÑ/1éGó¦îjãÛSÌŠ‹‚aêÀFmôÀ®w?ºJw±¹á«5‹l³¼†MOòšĞ4µ+«û¿„Û@±Fk¡á6-bXû]+}ÂP»¾ ”hµ[6ÀºKòd,6³áP5¥¶ÑˆGc¾–Kê½Ié4¨k€Sò“ošJHNUDvhg¦î€ù¦C‘öDÂ`¼K®UÒª'…ÙlTÿç¯ÿÏ_o]Ö³<ıÉˆAİ¾éºF+èP;ÙBù†ôíôšøÀ³BÚv;´ßRoÖ èTo,,4†ıßn›º¸Û­¦×mênà…İ‚aÑ¤rÛi ìÈ5 jÉÛÊtÛ4ÕÑŞ&Âz¨ÛîÔ‡…nGáˆ™5±îö
+*Ô(_P„‰é9`¡ |ºáQKkãpM×ÓdSó¡Å@w=ƒº«©%Ğoá+˜
+ŠTCeÔ@›ºÏ×Õ”…¹©ş/ujÒ
+…Cı}ÙgÏ”LM1¹ZñÇ\Œ}¶ªåïÏÄ¶^‘tS5eî\?“ı¢ÛOïãP;,¯t ÅÍJ¸ëMßÒf¶2±×j–0¾.ÎìªJbÍŠ?õÆÏšøU"½e†AÂ‚Ø•ˆü3_›¿¾–I<vU à„jñ0Şö’¡–ÇV³é£¼ïJ†m¨—ngØçÊ¶zvEš}p^´L‰ÊE,Í÷Ë¢•¾m*Å`ô1ìİã¢&«båÄT4{YUuíReŠ®iØŠ ÉÆWÜ?¿2Áì½¡Å*]º+‹½4iµ_¢·=<É‰ªg[zmòí$»â4ŠÑå¾xr¿¤hªíXc›”kÇz9ÊÏÙXê¸dÉÏÆ.(Õš¢ê2w4ÃÆ¿“m[ø9Íö¾<U¢ãä•Êµ—3ıhãù6îN…<%gş½t¤gàë<_TÕ¢¡—¸Â‰û"‘ØÓ%QQÇÖÇ#·Ÿ«ò†.Lì½-ÂŞW”yM:×ëıQÒ¤ÒË“ïhªf¨µ‰§#ûYÅÒå›«"±u78Í±­”
+fÓëÃı‚ks¦é…gX&övâWÖÒ,MáNob™Õ#5Ü$7·'"–%à2¾çÈ&&óAÕ‘ÕüClrOs´I áO¤DFá®xÏº	Õ#¹d\ÊF2‡%«üX"’9T”%UÕdn¸ŸfOê²Q~!»«¤¨–©{¾¡¹,g7ÌÓı¨ÓHŞòÚ“L¤÷sÙÔ¯¥£ñ½74M2][çJ.Ï¼‘—.EÒ+ºã‘OeÛ&·"ŸBÚìF@No /„õ†åµ\Ë5ë4f4Ècİ©c¢Î¬7Ï_ ù¬Ys6Á@Á°–ÂVÛ£Î	jˆ 1|Š	ë:Ô^½¹]Ûn“Á8ŠÕµ"ü†Ef ‹®æÙ¦Ş44Úz’ß\ [–îSÃÿ6ÇÕm,]²İë„nR[½µÔ	5ğ
+iF¬İ 'oÍvgi‰ZùÚí ´¯E^Í-J
+¦}ßp¡AÿJ†KİÔ´…&è!4&uvhç˜, ÈØ¦Ù´ $n&c!õ÷Ùì~_ºEöP$/A·¼®…~³ëÓ±_iêÎÔ;Ğ,Ô_í.àL4”î¸EÓn˜íøœ®5b½é-†^Ğ\ê4şÕìf@C¹ÔãÛ	‚ì\l¸P¨­æ’£X”zDIHÀŸîLH ¨¦ÎB×´0ĞêÛm‚}zİ²±¢]$W-MG#;"æëZ»<°lÙªlOìé¼ Ù¢ÁèÉœ®©¶i~ùÉX´ÿ˜¦KÊÈTÄÕòü§L‚¹gJT‘k6§"ì¿j•l,ñ½¨i¯”çÎ¬‰fádĞN·t@…m˜ÜÕ¶çùù®³¹÷ÌÀE‘ü$¹¼#–^;ÊWŞ‰-cºÂƒ8eiæÀ.&Él/C–ÈÜÍÁsÿ†hlõé*mÁê4ÃD®f)æìv&òğu¡”½{y,¹nfŠt¥8òi:İ6Z,Ö®¬Æ6N	RõÂæxŒİ}½âÈå#ƒ‘HòûùšX“ÄÒ\åÀ0;øà„ïÚ¦kÊü±ˆØdÍ	ùüøó¹ÌĞC3jebc$¾ê¢j)nş‹><_kù—1vİ¯ ,ª ñS'ŸNgW?Ãq×VE˜Ôåâ¬ Ôø³Åb©;gW£Ì¶©ª¦Z²l™u…Â£4UÙ“`Ò¿Éñîšs·Ço>Íqå“9–É¼9Q¬”E1?yh8Ï¼ÍKÜy6Ü3^$.(äeUæECóSÏ&b™§Oß(T+®6wj[ªÿ‰|ùïñXúëÉŠP˜ËWo^ŞZÎd~«”®åÒ½›QU8`¯0õ"›È,¹|_:=]¬\İÄß¾>7]$¾4úi*sÇÕZqö1†ù¼$(biZ°CQxSáUÍ,ícr'KÜ\~j#›X9‚+§KÂÌ‰ŞhúÙ’dMÇ£kò\M¬ğ³?nMÇë&­øËPèªxº)HÄŸ,ÎãäÚ†*lI ù²`K
+8¦øûP6yg^ÒmJ,âÆ¶°‘ş/çe_¯hÅçX6½‹Ó 65z€&:Òøêdtà…)^V¥Â•çY¦§ÿHAb¢+–Š”’/ü˜LES[f@UE[›Hô³qfİeYQl½úëP6ı•7%A&ßcâñÕ×I×P¨]Ë·Õêl$ñÒ¤Šo)óÕ‹#ÉågdKU®¬`R»kÀUùÆÆtêq¡¬•{âlò‰KE^U»tG<7øà…mLrí´	ÒE>ÆAË§ P•VNØªEm|øh_ĞŒfàêJĞ¡ñXhqp’ĞÛiPì"Ä&íbø„&~
+~d‡mrĞjtZÀê®M›+mrLmÓ¹S$‘·Y„İœZ~'ôèYYèÓ<ƒåº¹„Q`”°•¶Â¦ò·¿üÏßn½å¶Û>›3IĞ¶Ã–éÒªm¶\xßÖ-z Y»í|zºØ¢|ÍF³Õñ­n~RĞ¡Ö=`<¥CNÌ8zˆcLv¨ÉsÀÔµÂX%Àáíh_6 ç…iR_ÅUÒ°êxm£åw›€|×¾¾fç¬NÆ- Ö†í-‚RÇ4Y¢„ûÄsÃF3j¦oĞÈŒcë€Lº]Ë«7uGîAhâ„˜–šEnë¶kOíÈ%‹`!–gê÷¤2}¾VV”Ò•ÿ¬‹ÆzTUşE¬×/W5M©ßÃ²«NÍ+Êì6y÷ME7]Y=ÀF!|U[ƒâ¸G¢Ñ§ Šû™øÚßæ„9¥6qd=s[ÿ	NÖ?ÎÄWı1*
+²Ì]İÇFÿ‰_âöe˜Ü§×‹µñëGÖ³±ä·In®I¦>¯8ªé6M©øtœy¢hÖK÷$ãıD‘ãŠ×?ìcVŸã×ñ-³‰;ÃRæÖ¦¢«ÏÏ
+åJñøö ëˆª(ÂÙ¡å‰?dË6È>ôL?“í“åÉUL4÷2 E¦_Ì2ÑØİs’)•ßÁ’~åJ•“ŒriìıT,±Šâ!f†q<]ÓuÿóÒÚÖÉ­î|ša¾™•5N•Nd¢Éß8‡äÉÂd.Á~!×$,#&Õ÷é¥<W-rÅÑ·ûãÌĞ¨¬9A–ai¶kØ–„J”MD†Ş¾<Ï‰‚Î•«…ëÇIFoe^)©¦:÷Hr9óáH­TËßêMÆ™”4ñX&–ş£Â‹gr±øÀçs5ğò+ÿJ-_ÎŞŸç$-ÿA2–şfJ®RßÌéõ‰tö7	¼
+TSQñæú,ÛûgÙŒÀ«›*EeÏíŒ3ìÇeÓ¦_OÆŸ$ûhÍñ¥©LìG^Å©m=±MäÛw­/É’!±LË÷&ãƒ×4,ŞÀ±æVÄÓïËFé™hŒyşjMÏÅ£[™e±Ìi[Wk»ÙäÖiY£î˜Pµ÷éj6àSš«aÕ>ÀAÜ5)…GbËÒÿ·8EãËgv¤£¹SµÚ=¨ûWEÁ¤ S’©O×uš#t'èx65q€Ì8!¸$ø˜ß4ƒ®X\¤p
+ 7È%›Ÿº5éÑ—ëÓÓ}G£))›ÂmÚÔZÄ¢ÈÒ¯åä¿Da­¥f|üêv·ëdÔ9uøÑ¨ähÓB‘©YÙéúoÖ»-ÔÜh¿ÓlRÏ
+”n½Y4I@|¨g·– -Šë&÷»®UKHnîâ ®³ØÛ`~ä¥Ò¡–Šø]ì,6–ÈvºÑ8\"+ipx1lê–âM}ãÓLî[Îo4Z†cÙøRM_Å)
+m
+‡¬7ôxÑs-áÊªäç
+‹.¥úõv‡¦ f×š†›Ağü¥…¶í7 à‰Â6(	“6\êäp³°„Ëš­Ğ3$ß BÅÃAT†½Ğ»íşºÍÅ€¶ûƒvèPøÄ™ñ²ÑÍvw|f¡é¾mèušq—NöÇ—÷Fãƒg8
+l‰’ëXb¨ÊZùÍ$“9©Û Ş‰ŠÊ$EEßÌ,[sI¨œ\ÇÄNÏ–°¾©/R±øª³¥êA6–ı…S-U”«ÜáL*óPAtLU×¡v\Ó¶<åÊp4¶ıfÅ0mİ(¼™JôŸñs”õò;ÑÄúëbõËÃ¬>QÄMZ­ÏoŒõ0‰óZ¢¢Ï®c"éh"½cNà5#K,Á%¿ÙVÇ×Ç–­½^KS2Ë“oŒÏª¢*_ø<×‰¬>Y*ä/mK³[Fy^ü2µ,ıwEàËÓ¯Æzâ»ONË¢.ŒÿyGœa.ªš¥jª˜ª­
+Ê™“|àÜL¹¦*üÄşQ6qÈÒøñuöö›Š¬Ë•s«’‘{o@¦{"‰/Wøª\›šøhK”I,U§ß‹Äb»NO
+J~öıl‚<ÈWn‚Üw£Xåµka™´y$—>ˆ1ÙÃªG™âäªxdxl®\œx€M³ƒß\“­L¼7Á.ï¿"(ÖYœŒ]¥ªf’o(—qÃOôGb©''&ùŠ„ªÊär_ÏO¾Ÿ§¿¹Q+Í''®ı+¾<OïŸÑ*‡S™=3 åŠX‘æcS+ÌqÂÜ=1¶ïdµ<ó4›X–ÛwâšXãæ.}±‰¥Ÿ™ŸªM?ˆöi…½4àç*§¢^•Ïæ˜Ş—ò@i}du:½~~‚Ø¶
+gâÑ»çdñâP’Í¾;:_ÎÏgş¸/ÁÄ’Ã7$£úc/“~"¯È†dŠÂÅDâÉŠ¬@;xÓ5¡"–eÃ“tI=ÓŸbw uÜ5qêÍ“ÚuªÆK³lb{ûÿ]Õ\²Ş2TTO"·¸;L};2'N_üzE"Îd(p7·2)æ…“3¥âÄØÈÛ’‘hÏÚk\1/êbé16ÖÇ¬T)ÆIÊ0½÷]/ˆ8ug7³LvÛd¥J˜ÉlÆ0ç÷¥#±•?q|±šŸüõ©C¾æ†î«†ÙìC‚ë[Úõ{ûÉYÎ0ù73“{áì/ÕfÆşc2+.Êš<{'›º»JB2›ÚsÃ&y ¸ÚCgyÿDî>.5ÅømêD“4°B’$l„K °*6#Ã&Ö;°#$Kf‡”(„Íl“şõ ã f7XZ$÷æĞ}mRkN‡Œ‰!sË·ğ§¶<…Ìñq|>‘#Ï^r\t¿›oæ›Õpä¿ü¿ûÛ_ÿºì¶è+S2ŞÜtÁ˜šäb`“O=j¾¡@@×£Ê8^İ£´&æ5È£¥Õ„Šµ@¨@™(¾¨Av½eÒk›í6=š4(·EæÀ{zÂ@O0=:şz‹&}§ãÔ¦i‡.À¿cYİ¢ÕjR?ŒíéSÛ‡OÈ]Eî…¾FuÄph.ĞöSò‹è0…™Ø¶á1ƒ„[6ïû8`'¨†6`¬^wlÓQku¯m™ºáy$<½0?œ<#ùÓªãœM<•Œõm¼ÿ•ßNıpOº/Â>XP-m$‹¯[ıê©+ç_znK<õ&¹DU÷$¹-—­ö]:¶ægù&½gş®Xêé<Äæ•İÉôàSgûí£¡X4¹õ*ÈÍ‘T<µõĞ$çú
+ÿÚı±‡ò¾Wî\‘L?üëùç¾» “«Ö|óÊÚHöG¤–·z7›| ¤Öô£i&–}õôK'~ùG_"½íÄäô¼¤i v4Ú¡š’ô
+tüC_ºpéóuşÓº„ş|.ûU3tP?N¥QZ4ÿFpğÄ—§íÛÂöÆnc÷–,]ÓNå€äëœ=÷ó3Ùhòå’¨)Ó›ØÄ7%^Ö\'Àòt@şLòÉ3ù“Y&²åÈT¹ª•Nd"ıÇD¼‡¥éÂ¥Û›ä9é÷6Â~jüæ…Ÿ>NÇoK¿-ê¾B4Ûö­n?¯¤ç¯3‘èšçŸ¾<9~áÏıëÙhOdùŠ£‚dê¥?"‘Ş7ß<õûşU=ÑåË×ÎV¹rm8Æ*‹\ñX<–{éÈÜC÷'–E–3{ó²nˆç³L»óâ¯g¯Ş;Ø‰­ŸµmÍrlÙş>o™R%>£ÁNÓ0kŸ§ãìÓ†æÎİÁ$ßà\Ë0T«6¾-•Ú[@éÊ?‹¬ã-sb€aÿè†¬Jñ¡XlKjŸÚµfzâ/s:ÿ#
+JßcÇoŞ˜?yè‘~²‡H—»|Û4¢Û8Cºáššul€e‡ş”À!ô(×TşèîÉ¨èÚÈ`4–¹oÿüøõK¬Ç{‘jsëY&õù•‚î8øÀñŠMQ- ZÔèºåv §lê˜pÛjl= ;'÷¥`! rlÃ¥~/VÜ"m3‚ËP´¢ï4BËkİ„´Yo4=êSYÂz£ÊY:´éà£[-».6 N,G'W¿¥6I=]j»à¶uÇ°İ†×\l5Û”ãİvœN«Ó°AqÂFÇk7îR½³h»Ğ®îfi»CšÑıiuZàs cK¤~›õ:ş}o	GİZhã›íîo¸¸´ĞÀÈB`¡½ĞQd…º4áĞ\µeÒäà¿Éäœ@ÍXg¸Ğ‚>—rÀCãÆúøSX'¤.¾9¡mÎPoÓ¯/Ú^ƒFpÉ—4´MÕÀ¤M1Â„^–Gt°î4(T=pÈÒet2ÇÒ)±×¥vz^äk–zVÓ8¶qõlœwN¡H,0K©[m·‡‹{Q¹¹=rkä¶eC×%Y®=Yö×ÈÀ©B¹"	ŠğÃd~©˜4†lT^e™ÜÉ’¤émfhBQç÷¥bÑÏŸŸıl],Á¾9/T%éÏ%'Ğ)oòl4v×t3\UW€Æe˜Âµ–¹3¯‰ºb¨…¦÷ÚˆÄ‡/Öª3Ë–§úõÚôüÈÅO7Eâ±HlóçØA˜z=ŞÓÓsKê3YQëu]QuW%K.MPeyzÛ²ûÑÈliú&¶<÷şÈÔØøõ_LÇo‰Ä†I|íÌp4µ½¨Z¢6y_"²lÛù
+§Ë'ú—ÇbÛŞ9}ôÒô™WÄ{ØÜÊ‚läCo°ÅÂËÉh4¾æÕã—Æ.şöao:Â®ãÔ™s˜ÄğošVb1~ÿ¬$IsG–Çâ›^9x|üÔgÿÈ$ãìbm¶vyMbybËgW/:úæŠXOjã%U¼¹’e2O¾>ÎUußÇWMšäŞ•HömË‘d{b#Ëİ¨ñRá·,“Hdv|;:òÇ[kØ“{xÒ–ÕËÙHlğ³ãW
+šÍË’Ê?’i*ÈÛ20‘wÎMûùáL„Iì¾Pÿ)ÍFúßîä™ÏmMÄPğÏK3—V¦²wq3è®^™û(Î}4+“»ãÑş“5;?ÃIÙòïsıl MüÆkÒ<pæÃyIUƒšt ™š2\9·2Êdûıd¾VØÈ°+/…

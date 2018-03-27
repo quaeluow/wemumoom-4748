@@ -1,0 +1,4 @@
+map C-c to CAPSLOCK
+find a vi equivalent of my C-p in emacs
+autocomplete of words
+

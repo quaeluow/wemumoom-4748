@@ -1,0 +1,27 @@
+Against this, a rule like cross-entropy seems extremely
+attractive.  It provides a single 6enerd recipe w_ic_
+can be _ec_anically applied to a huge space af up-
+dates.  Even families of rules, such as van Fraassen
+proposes, are not so bad= atter o_e _as cbose_ a rule
+(usualJy by selecti_g a si_gle real-valued para_eter
+[U_nh 1995]), the rest is a_ain mechanicd, general,
+and determi_ate. Furtber_ore, all tbese rules work i_
+t_e original space S, vit_aut requiring expansian, and
+so may be more practical in a computational sense.
+
+Since all we da in t_is. paper is a_dme nne particular
+proble_, we _ust be careful in _aking ge_erd state
+me_ts o_ t_e basis of our results. _evert_eless, tbey
+da s__ ta suppart t_e clȧi_ t_at sa_eti_ei, , the only
+"right'' way to update, especidly in an inco_pletely
+speci_ed situation, is to think very carefully 6bout the
+reaJ _ature and origin of t_e infor_ation we receive,
+a_d then (try ta7 do whatever is necessary to _nd a
+suitable lar6er space i_ wbic_ we can co_dition.  If
+t_is daesn_ lead ta canclusive results, per_aps tbis is
+because we do not undergtand tbe i_for_ation well
+enoug_ to update with it.  However much we might
+wisb far ane, a generaIIy satisfactary _ech_ical rule
+such as cross-entropy, wbich saves us all tbis questian-
+ing and warh, probably does not exist.
+

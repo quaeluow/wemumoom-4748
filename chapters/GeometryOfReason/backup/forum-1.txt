@@ -1,0 +1,13 @@
+I have made an interesting observation that I can't explain to myself. Think about a prior probability P and a posterior probability Q. They are defined on an event space W with only three elements: w1, w2, and w3 (the number of elements won't matter as long as it's finite). The Kullback-Leibler divergence measures how far these probability distributions are apart, i.e. how much information it took to from P to Q. If P(w1)=p1 etc. then
+
+KLD(Q,P)=q1*log(q1/p1)+q2*log(q2/p2)+q3*log(q3/p3)
+
+The KLD is not symmetric, so if P and Q switch roles (Q is now the prior and P the posterior), the divergence will be different. If you think of P and Q as points on a simplex (all points in R3 with r1+r2+r3=1 with rj>0; the simplex in R3 looks like an equilateral triangle), the KLD does NOT define a metric topology on this simplex, because KLD(Q,P) is in general not equal to KLD(P,Q).
+
+My original intuition was that the way this asymmetry works is that as you go from the centre to the periphery of the equilateral triangle (i.e. the entropy of the probability distribution decreases), less information is necessary compared to the other way around going from the periphery to the centre, so
+
+H(P)>H(Q) implies that KLD(Q,P)<KLD(P,Q)
+
+Note that the prior is the second argument for KLD -- that's a bit counterintuitive.
+
+In any case, my intuition is wrong. Let P (the prior) be fixed. Then you can partition the simplex into those points Q for which KLD(Q,P)<KLD(P,Q) (colour them red) and those for which KLD(Q,P)>KLD(P,Q) (colour them blue). The partitions are pretty and far from trivial. How could you defend this in terms of intuitions about probability distributions? Is there any way to explain, without recourse to information theory, why going from P to Q1 is harder than going from Q1 to P; while it is easier going from P to Q2 than going from Q2 to P?

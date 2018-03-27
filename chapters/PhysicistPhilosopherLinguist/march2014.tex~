@@ -1,0 +1,1134 @@
+\documentclass[11pt]{article}
+\usepackage{october}
+\hyphenation{Hal-pern}
+
+% This article http://tinyurl.com/ly2szc6
+% Wagner's article http://tinyurl.com/pgaflyw 
+
+% For BJPS
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+\begin{document}
+% For BJPS
+% \raggedright
+% \doublespacing
+
+\title{A Natural Generalization of Jeffrey Conditioning}
+% Conditioning on Conditonals ?
+\author{Stefan Lukits}
+
+\date{}
+
+% \maketitle
+
+% \doublespacing
+
+\begin{abstract} 
+  {\noindent}When we come to know a conditional, we cannot
+  straightforwardly apply Jeffrey conditioning to gain an updated
+  probability distribution. Carl Wagner has proposed a natural
+  generalization of Jeffrey conditioning to accommodate this case
+  (Wagner conditioning). The generalization rests on an ad hoc but
+  plausible intuition. Wagner shows how the principle of maximum
+  entropy disagrees with this intuition, thus casting further doubt on
+  the principle of maximum entropy as a valid updating mechanism that
+  generalizes Jeffrey conditioning.
+
+  This article presents a natural generalization of Wagner
+  conditioning (therefore also a natural generalization of Jeffrey
+  conditioning) which is derived from the principle of maximum entropy
+  and implied by it. The principle of maximum entropy does therefore
+  not only not disagree with Wagner's plausible intuition, it
+  seamlessly and elegantly generalizes it (just as it seamlessly and
+  elegantly generalizes standard conditioning and Jeffrey
+  conditioning). Wagner's inconcsistency result between the principle
+  of maximum entropy and his plausible intuition rests on Wagner's
+  rejection of (L), the Laplacean Principle. The article explains (L)
+  and why all advocates of the principle of maximum entropy accept it.
+  The principle of maximum entropy is only inconsistent with Wagner's
+  plausible intuition if we do not assume (L). Blablabla.
+
+  % This article demonstrates that Wagner's application of the principle
+  % of maximum entropy is incorrect and that a correct application
+  % agrees with his intuition. It presents a formal proof that the
+  % principle of maximum entropy seamlessly and elegantly generalizes
+  % not only standard conditioning and Jeffrey conditioning (as is
+  % well-documented in the literature) but also Wagner's generalization.
+\end{abstract}
+
+\section{Introduction}
+\label{Introduction}
+
+There are problems of probability update which cannot be addressed
+effectively by means of standard conditioning or Jeffrey conditioning.
+Usually, the evidence (or observation, or new information) arises in
+the form of an event (standard conditioning) or the redistribution of
+probabilities over a complete partition of events (Jeffrey
+conditioning). Sometimes the evidence arises in the form of a
+constraint which falls into neither of the above categories. Bas van
+Fraassen's \emph{Judy Benjamin} problem and E.T. Jaynes'
+\emph{Brandeis Dice} problem are two examples. 
+
+To solve these cases, Jaynes suggests the principle of maximum
+entropy, which extends the idea of optimal information processing
+(which standard conditioning and Jeffrey conditioning obey) to a
+larger class of constraints. He originally developed the principle of
+maximum entropy as a synchronic norm (call this synchronic norm
+\textsc{maxent}), where constraints are coordinated with
+non-informative prior probabilities to result in a probability
+distribution or density whose entropy is maximal (using Shannon's
+information entropy) but which at the same time obeys all the
+constraints.
+
+Soon after Jaynes, however, P.M. Williams and Bas van Fraassen (see
+\scite{7}{williams80}{} and \scite{7}{fraassen81}{}) applied the
+principle of maximum entropy to problems of probability update where
+the word \qnull{prior} is used comparatively and refers to a
+probability distribution which precedes new information and therefore
+the posterior probability distribution; it is not used superlatively
+and does not refer to a probability distribution which precedes any
+information at all or has ambitions to be non-informative. Here we are
+concerned with what Richard Jeffrey terms \qnull{probability
+  kinematics,} the rules or guidelines when moving from a given prior
+probability distribution to a posterior probability distribution in
+the wake of new information (call this diachronic norm
+\emph{Infomin}). The Kullback-Leibler divergence is used to extend the
+Shannon entropy from \textsc{maxent} to \emph{Infomin}.
+
+Sometimes the case is made that \textsc{maxent} and \emph{Infomin} are
+two different norms prescribing different probability distributions in
+certain cases. Consider a bag with blue, green, and red tokens. You
+know that (C1) at least 50\% of the tokens are blue. Then you learn
+that (C2) at most 20\% of the tokens are red. The synchronic norm
+\textsc{maxent}, on the one hand, ignores the diachronic
+dimension and prescribes the probability distribution which has the
+maximum entropy and obeys both (C1) and (C2). The three-dimensional
+vector containing the probabilities for blue, green, and red is
+$(\frac{1}{2},\frac{1}{5},\frac{3}{10})$. \emph{Infomin}, on the other
+hand, takes as its prior probability distribution
+$(\frac{1}{2},\frac{1}{4},\frac{1}{4})$ and then diachronically updates
+to $(\frac{8}{15},\frac{1}{5},\frac{4}{15})$. 
+
+While it is helpful to distinguish between synchronic and diachronic
+norms, one cannot drive a wedge between \textsc{maxent} and
+\emph{Infomin}. The information provided in a problem calling for
+\textsc{maxent} and the information provided in a problem calling for
+\emph{Infomin} is different, as temporal relations and their
+implications for dependence between variables clearly matter. In the
+above case, we might have relevantly received information (C2) before
+(C1) (and \qnull{before} may be understood logically rather than
+temporally) so that \emph{Infomin} updates
+$(\frac{1}{2},\frac{1}{4},\frac{1}{4})$ to
+$(\frac{1}{2},\frac{1}{6},\frac{1}{3})$. Even if (C1) and (C2) are
+received in a definite order, the problem may be phrased in a way that
+indicates independence between the two constraints. In this case,
+\textsc{maxent} is the appropriate norm to use. \emph{Infomin}
+correctly does not assume such independence and therefore processes
+the two pieces of information separately. For the rest of the article,
+we will therefore assume that \emph{Infomin} is merely a proper
+extension of \textsc{maxent} to probability kinematics and refer to
+the principle under debate (which we will define in more detail
+further below) as the \textsc{pme} (the principle of maximum entropy),
+with a synchronic norm called \textsc{maxent} and a diachronic norm
+called \emph{Infomin} which are consistent with each other.
+
+What is at stake is whether information provides the right kind of
+currency to address updating problems. While this position had a
+strong advocate in E.T. Jaynes and is still prevalent in statistical
+physics, almost all formal epistemologists, including Bayesians,
+reject the notion that we can use information and its entropy to give
+us objective updating methods. While this article addresses a specific
+criticism of the \textsc{pme} and does not address this question in a
+systematic manner, it seeks to contribute to a revival of interest in
+information as currency for epistemological problems and to redefine
+objectivism in probability updating (weakening it where it needs to be
+weakened) so that it can regain some of its former respectability
+among formal epistemologists.
+
+While the \textsc{pme} initially attracted attention and was confirmed
+especially by the work of Shore and Johnston (the \textsc{pme} uniquely
+solves probability update problems provided one signs on to relatively
+intuitive axioms, see \scite{7}{shorejohnson80}{}), there were vexing
+counterexamples. Although there is formal proof that the \textsc{pme}
+generalizes standard conditioning and Jeffrey conditioning, there are
+problems where standard conditioning and Jeffrey conditioning do not
+apply. The consensus emerged in the 1980s that the \textsc{pme} was a
+helpful algorithm for these problems, but not a generally valid rule
+of probability update. There are dissenting voices to this day, mostly
+among physicists, but the consensus has been strong enough to be
+incorporated in important textbooks.
+
+\begin{itemize}
+\item Brian Skyrms states, \qeins{\textsc{maxent} is not a generally
+    valid updating rule} \scite{2}{skyrms87updating}{237}, based
+  primarily on the counterexample provided by Abner Shimony (for
+  example in \scite{7}{friedmanshimony71}{},
+  \scite{7}{diasshimony81}{}, and \scite{7}{shimony85}{}). Skyrms
+  makes this view known in several articles (see also
+  \scite{7}{skyrms85}{} and \scite{7}{skyrms87dynamic}{}). In his
+  textbook \emph{The Dynamics of Rational Deliberation}
+  (\scite{10}{skyrms90}{}), there is a section on probability
+  kinematics, but no reference to the \textsc{pme}.
+\item Joseph Halpern argues in his textbook \emph{Reasoning About
+    Uncertainty} (\scite{10}{halpern03}{}) that the \textsc{pme} is a
+  promising candidate which delivers unique updated probability
+  distributions, but there is counterintuitive behaviour in one
+  specific case, the \emph{Judy Benjamin} case (see \scite{8}{halpern03}{110,
+    119}). Therefore, the \textsc{pme} is a valuable tool that should
+  be used with care and not be applied across the board (see
+  \scite{8}{grovehalpern97}{110}).
+\item In his textbook about ranking functions, called \emph{The Laws
+    of Belief} (\scite{10}{spohn12}{}), Wolfgang Spohn admiringly
+  refers to Wagner's \qeins{generalization of Jeffrey
+    conditionalization} \scite{2}{spohn12}{41} and shows how well it
+  accords with his own conditions for the dynamics of belief in terms
+  of ranking functions (see \scite{8}{spohn12}{196ff}). Spohn cites
+  Jeffrey's \emph{Linguist} problem at length and points out that
+  the \textsc{pme}, another generalization of Jeffrey conditioning, is
+  not compatible with Wagner's (and, we are led to conclude, also not
+  compatible with Spohn's theory of ranking functions).
+\end{itemize}
+
+We will consider the above three counterexamples to be the main
+arguments against the \textsc{pme} in practice (there are also more
+theoretical objections, such as Skyrms' claim that the \textsc{pme} is
+not an inductive rule but rather a rule for supposing; or the widely
+shared non-Bayesian view, for example by Spohn and Halpern, that
+numerical probabilities are even formally not always the most helpful
+way to represent beliefs; or incompatibilities between epistemic
+entrenchment and the \textsc{pme}---all of these and more would need to
+be addressed for a systematic defence of the \textsc{pme} against its
+competitors). Here is a fourth example from a textbook, however, which
+underlines the influence that the three counterexamples above have had
+in the literature.
+
+\begin{itemize}
+\item Without citing or engaging any one of the counterexamples, David
+  MacKay writes in his textbook \emph{Information Theory, Inference,
+    and Learning Algorithms} (\scite{10}{mackay03}{}), \qeins{maximum
+    entropy is also sometimes proposed as a method for solving
+    inference problems [\ldots] I think it is a bad idea to use
+    maximum entropy in this way; it can give very silly answers}
+  \scite{2}{mackay03}{308}.
+\end{itemize}
+
+Against the tide of scholarly consensus, I maintain that
+the \textsc{pme} is defensible across all counterexamples and survives
+as a unifying normative principle in probability update based on a
+very simple intuition: that one should not illegitimately gain
+information where the evidence does not provide it, and one should not
+refuse to incorporate available information in updated beliefs. In
+this paper, I have set myself the task of responding to Wagner's
+\emph{Linguist} counterexample.\tbd{Insert Chomsky analogy from
+  Sudelbuch p. 909}
+
+To set the stage, I need to put a disclaimer on the modifier
+\qnull{objective} in objective updating. I do not mean that every
+rational agent should arrive at the same credences given the same
+evidence. I also do not mean that rational agents should have one a
+priori probability distribution which then becomes empirically
+informed by observations so that her credences change purely by
+application of objective updating methods (such as standard
+conditioning) and the agent never really changes her mind. None of
+these views are tenable and have become discredited as, let us call
+it, Laplacian idealism.
+
+What I am defending is not objectivism, but the logical element of
+probability theory which John Maynard Keynes first proposed and which
+among Bayesians has been largely replaced by subjectivism of one sort
+or another. The logical element provides rules about which probability
+distributions are acceptable to rational agents and how to proceed
+from one probability distribution to another, given certain kinds of
+evidence (other kinds of evidence may have to be dealt with in other
+ways). It does not claim that everybody should arrive at the same
+distribution (in as much as they claim to be rational), partly because
+there is no initial point at which two rational agents must agree.
+Just as is the case in deductive logic, we may come to a tentative and
+voluntary agreement on a set of rules and presuppositions and then go
+part of the way together.
+
+I would call this view Laplacian realism and characterize it as
+follows: 
+
+\begin{enumerate}[(L1)]
+\item There are logical rules which govern the probability
+  distributions and the probability updates of rational agents which
+  are intimately connected to information theory (Kolmogorov's axioms,
+  standard conditioning, Jeffrey conditioning, \textsc{maxent},
+  \emph{Infomin}).
+\item Rational agents have some latitude in how they interpret
+  evidence (especially with respect to assessing the independence
+  relation of variables, for example when distinguishing between using
+  synchronic or diachronic norms or when assessing epistemic
+  entrenchments)---once the evidence is interpreted to yield formal
+  constraints, however, the rational agent updates according to the
+  logical rules outlined above, using all the available information
+  without inappropriately using information that is not available
+  (i.e.\ the rational agent keeps her distribution at maximum entropy
+  given the available information)
+\item Once an event space is specified, a rational agent assigns
+  determinate probabilities to the events under consideration.
+\end{enumerate}
+
+The last condition is what we will use to show that the \textsc{pme},
+rather than delivering the wrong results given Wagner's intuitions,
+elegantly generalizes Jeffrey conditioning and Wagner conditioning to
+boot. (L3), of course, is not uncontroversial. It corresponds to
+Bayesians' traditional commitment to prior probabilities, but there
+are many Bayesians now who advocate Bayesianism with a more human face
+(Jeffrey's expression) and contend that even rational agents typically
+lack determinate prior subjective probabilities and that their
+opinions are characterized by imprecise credal states in response to
+unspecific and equivocal evidence.
+
+While I appreciate the equivocality of evidence, I would separate the
+disambiguation of the evidence in articulating formal constraints from
+bringing to bear a helpful formalism to probability update which
+requires numerically precise priors. When we apply mathematics to
+daily life, we do this all the time by measuring imprecisely and then
+processing the disambiguated measurements using calculus. One
+particularly strong advocate of imprecise credal states is James Joyce
+(see \scite{8}{joyce05}{156f}), with the unfortunate consequence that
+the updating strategies that Joyce proposes for these credal states
+are impotent. No amount of evidence can modify the imprecise credal
+state, because each member of the set of credal states that an agent
+accepts has a successor (with respect to updating) that is also a
+member of these credal states and that is consistent with its
+predecessor and the evidence. Although the feeling is that the
+imprecise credal state is narrowed by evidence towards more precision,
+set theory clearly indicates that the credal state remains static, no
+matter what the evidence is.\tbd{Maybe put this formally in an
+  appendix.}
+
+We could pursue this in more detail, but in the service of returning
+to the natural generalization of Jeffrey conditioning, let me make
+clear that Laplacian realism, as opposed to Laplacian idealism, is
+entirely comfortable with retrospection (prior probabilities are only
+fixed after the relevant event space has been identified, so that for
+example Newton did not need to have a prior probability for Einstein's
+theory in order to have a posterior probability for his theory of
+gravity); and with subjectivity in selecting prior probabilities when
+constraints both synchronically and diachronically have not yet been
+meaningfully established (so that we escape the paradoxes of Bertrand
+and von Mises, at the expense of objectivism about credences, rather
+than updating under formally estabished constraints, which would
+suspiciously recall Laplace's Demon in any case). Laplacian realism,
+however, makes the traditional assumption that prior probabilities are
+determinate, and not imprecise, once the event space is specified.
+
+When these assumptions are granted, Wagner's attack against
+the \textsc{pme} is revealed to be an attack against advocates of
+the \textsc{pme} who violate the assumptions rather than the intuition
+that Wagner fields against the \textsc{pme}. Because advocates of
+the \textsc{pme} tend to be at least Laplacian realists (if not
+trending towards Laplacian idealism), Wagner's point is misplaced and,
+like Joyce, he should really be arguing for imprecise and
+indeterminate priors. The intuition that Wagner mentions with respect
+to the \emph{Linguist} counterexample is one that almost everybody
+will share, but nobody has to violate it just because they accept
+the \textsc{pme}, as Wagner asserts.
+
+\section{Wagner's Natural Generalization of Jeffrey Conditioning}
+\label{NatGen}
+
+Wagner claims that he has found a relatively common case of
+probability update in which the \textsc{pme} delivers the wrong result
+so that we must develop an ad hoc generalization of Jeffrey
+conditioning. This is best explained by example. Wagner refers to
+Richard Jeffrey's \emph{Linguist} problem (see
+\scite{7}{jeffrey90}{}).
+
+\begin{quotex}
+  \emph{The Linguist Problem.} You encounter the native of a certain
+  foreign country and wonder whether he is a Catholic northerner
+  ($\theta_{1}$), a Catholic southerner ($\theta_{2}$), a Protestant
+  northerner ($\theta_{3}$), or a Protestant southerner
+  ($\theta_{4}$). Your prior probability $p$ over these possibilities
+  (based, say, on population statistics and the judgment that it is
+  reasonable to regard this individual as a random representative of
+  his country) is given by
+  $p(\theta_{1})=0.2,p(\theta_{2})=0.3,p(\theta_{3})=0.4,\mbox{ and
+  }p(\theta_{4})=0.1$. The individual now utters a phrase in his
+  native tongue which, due to the aural similarity of the phrases in
+  question, might be a traditional Catholic piety ($\omega_{1}$), an
+  epithet uncomplimentary to Protestants ($\omega_{2}$), an innocuous
+  southern regionalism ($\omega_{3}$), or a slang expression used
+  throughout the country in question ($\omega_{4}$). After reflecting
+  on the matter you assign subjective probabilities
+  $u(\omega_{1})=0.4,u(\omega_{2})=0.3,u(\omega_{3})=0.2,\mbox{ and
+  }u(\omega_{4})=0.1$ to these alternatives. In the light of this new
+  evidence how should you revise $p$? (see \scite{8}{wagner92}{252}
+  and \scite{8}{spohn12}{197})
+\end{quotex}
+
+Let $\Theta=\{\theta_{i}:i=1,\ldots,4\},\Omega=\{\omega_{i}:i=1,\ldots,4\}$.
+Let $\Gamma:\Omega\rightarrow{}2^{\Theta}-\{\emptyset\}$ be the function
+which maps $\omega$ to $\Gamma(\omega)$, the narrowest event in
+$\Theta$ entailed by the outcome $\omega\in\Omega$. Here are two
+definitions that take advantage of the apparatus established by Arthur
+Dempster (see \scite{7}{dempster67}{}). We will need $m$ and $b$ to
+articulate Wagner's ad hoc solution for \emph{Linguist} type problems.
+
+\begin{equation}
+  \mbox{For all }E\subseteq{}\Theta, m(E)=u(\{\omega\in\Omega:\Gamma(\omega)=E\})\label{eq:mof}.
+\end{equation}
+
+\begin{equation}
+  \mbox{For all }E\subseteq{}\Theta, b(E)=\sum_{H\subseteq{}E}m(H)=u(\{\omega\in\Omega:\Gamma(\omega)\subseteq{}E\})\label{eq:bof}.
+\end{equation}
+
+Let $Q$ be the posterior joint probability measure on
+$\Theta\times\Omega$, and $Q_{\Theta}$ the marginalization of $Q$ to
+$\Theta$, $Q_{\Omega}$ the marginalization of $Q$ to $\Omega$ (often,
+we will write lower case $p$ or $q$ for the marginal probabilities
+without spelling out the margin to which they refer; we will write
+upper case $P$ and $Q$ for the joint probabilities). Wagner plausibly
+suggests that $Q$ is compatible with $u$ and $\Gamma$ if and only if
+
+\begin{equation}
+  \label{eq:entail}
+  \mbox{for all }\theta\in\Theta\mbox{ and for all
+  }\omega\in\Omega,\theta\notin\Gamma(\omega)\mbox{ implies that }Q(\theta,\omega)=0
+\end{equation}
+
+and
+
+\begin{equation}
+  \label{eq:marg}
+  Q_{\Omega}=u.
+\end{equation}
+
+The two conditions (\ref{eq:entail}) and (\ref{eq:marg}), however, are
+not sufficient to identify a \qeins{uniquely acceptable revision of a
+  prior} \scite{2}{wagner92}{250}. Wagner's proposal includes a third
+condition, which extends Jeffrey's rule to the situation at hand. To
+articulate the condition, we need an additional formal apparatus. For
+all $E\subseteq{}\Theta$, let
+$E_{\bigstar}=\{\omega\in\Omega:\Gamma(\omega)=E\}$, so that
+$m(E)=u(E_{\bigstar})$. For all $A\subseteq\Theta$ and all
+$B\subseteq\Omega$, let $\mbox{``A''}=A\times\Omega$ and
+$\mbox{``B''}=\Theta\times{}B$, so that
+$Q(\mbox{``A''})=Q_{\Theta}(A)$ for all $A\subseteq\Theta$ and
+$Q(\mbox{``B''})=Q_{\Omega}(B)$ for all $B\subseteq\Omega$. Let also
+$\mathcal{E}=\{E\subseteq\Theta:m(E)>0\}$ be the family of evidentiary
+focal elements.
+
+According to Wagner only those $Q$ satisfying the condition
+
+\begin{equation}
+  \label{eq:wagn}
+  \mbox{for all }A\subseteq\Theta\mbox{ and for all }E\in\mathcal{E},Q(\mbox{``A''}|\mbox{``E$_{\bigstar}$''})=p(A|E)
+\end{equation}
+
+are eligible candidates for updated joint probabilities in
+\emph{Linguist} type problems. Other joint probability distributions
+would use information not provided in the problem or discount
+information that is provided in the problem (especially the
+conditionals). To adopt (\ref{eq:wagn}), says Wagner, is to make sure
+that the total impact of the occurrence of the event $E_{\bigstar}$ is
+to preclude the occurrence of any outcome $\theta\notin{}E$, and that,
+within $E$, $p$ remains operative in the assessment of relative
+uncertainties (see \scite{8}{wagner92}{250}). While conditions
+(\ref{eq:entail}), (\ref{eq:marg}) and (\ref{eq:wagn}) may admit an
+infinite number of joint probability distributions on
+$\Theta\times\Omega$, their marginalizations to $\Theta$ are identical
+and give us the desired posterior probability, expressible by the
+formula
+
+\begin{equation}
+  \label{eq:qofa}
+  q(A)=\sum_{E\in\mathcal{E}}m(E)p(A|E).
+\end{equation}
+
+So far we are in agreement with Wagner, although a Laplacian approach,
+combined with the \textsc{pme}, gives us exactly the same results, as
+we will show below, and moreover easily generalizes over both Jeffrey
+conditioning and Wagner's method.
+% Wagner's paper is a paradigmatic example for the \qnull{anti-Bayesian
+%   ad hockeries} addressed in E.T. Jaynes' (see
+% \scite{8}{jaynes98}{143}). In Wagner's case, however, the motivation
+% of the anti-Bayesian (over which Jaynes despairs) is on the surface:
+% Wagner is mistaken about the correct application of the \textsc{pme},
+% and so he considers the ad hockery necessary to come to an acceptable
+% result, which his incorrect application of the \textsc{pme} clearly
+% does not provide.
+Wagner's scathing verdict about the \textsc{pme} towards the end of his
+article is not really a verdict about the \textsc{pme} in the Laplacian
+tradition, where most (if not all) of its advocates are at home, but
+about the curious conjunction of the \textsc{pme} with a humanly faced
+Bayesianism that renounces any commitment to determinate priors on
+specified partitions of the event space:
+
+\begin{quotex}
+  Students of maximum entropy approaches to probability revision may
+  [\ldots] wonder if the probability measure defined by our formula
+  (\ref{eq:qofa}) similarly minimizes [the Kullback-Leibler
+  information number] $D_{\textsc{kl}}(q,p)$ over all probability
+  measures $q$ bounded below by $b$. The answer is negative [\ldots]
+  convinced by Skyrms, among others, that \textsc{maxent} is not a
+  tenable updating rule, we are undisturbed by this fact. Indeed, we
+  take it as additional evidence against \textsc{maxent} that
+  (\ref{eq:qofa}), firmly grounded on [\ldots] a considered judgment
+  that (\ref{eq:wagn}) holds, might violate \textsc{maxent} [\ldots]
+  the fact that Jeffrey's rule coincides with \textsc{maxent} is
+  simply a misleading fluke, put in its proper perspective by the
+  natural generalization of Jeffrey conditioning described in
+  this paper. [References to formulas and notation modified.]
+  \scite{3}{wagner92}{255}
+\end{quotex}
+
+Here is what we will do to demonstrate that Wagner's conclusions are
+off-target. First, we will focus on \emph{Linguist} and show that
+Wagner's solution is plausible. Then we will introduce what Wagner
+considers to be the solution of the \textsc{pme} for this problem and
+show, in much greater detail than Wagner does, why this result is
+implausible, assuming (L3). 
+% Next, we will uncover the fundamental mistake that Wagner makes in his
+% application of the \textsc{pme}. In summary, Wagner forgets that
+% advocates of the \textsc{pme} are Bayesians and do not buy into
+% Wagner's apparently non-Bayesian convictions. Non-Bayesian assumptions
+% and the \textsc{pme} result in counterintuitive conclusions. Once the
+% non-Bayesian assumptions are replaced by Bayesian assumptions (for
+% example, that probabilities represent the uncertainty of those who
+% hold them and not objective probabilities out there in the world), not
+% only do the conclusions become plausible, they also (luckily for
+% Wagner and, by extension, for Spohn's theory of ranking functions)
+% agree with Wagner's solution. Hence, the patchwork solution is
+% unnecessary and only provides intuitive support for the \textsc{pme}.
+We will top off our considerations with a more general theorem which
+seamlessly incorporates Wagner's \qeins{natural generalization of
+  Jeffrey conditionalization} \scite{2}{wagner92}{250} into
+\textsc{pme} Laplacian orthodoxy. As I have defined Laplacian
+commitments, not all Laplacians are advocates of the \textsc{pme}, in
+fact most of them are probably not; however, all or nearly all
+advocates of the \textsc{pme} are Laplacians. Not all Bayesians are
+Laplacians, especially not those who advocate for imprecise prior
+credal states; however, all Laplacians are Bayesians. Wagner's
+criticism only affects non-Laplacian Bayesians who also advocate
+the \textsc{pme}.
+
+\section{The Linguist}
+\label{TheLinguist}
+
+According to Wagner (thus the index $w$ in $P_{w}$), the prior
+probabilities for \emph{Linguist} are as follows (we will refer to
+this table later on as table $\clubsuit$):
+
+[shouldn't the Wagner constraint zeroes already be in here? -- big
+problem: $\varrho$ is not justifiable]
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|r|r|}\hline
+$P_{w}$ & $\theta_{1}$ & $\theta_{2}$ & $\theta_{3}$ & $\theta_{4}$ & $P_{\Omega}$ \\ \hline
+$\omega_{1}$ & ? & ? & ? & ? & $0.4\varrho$ \\ \hline 
+$\omega_{2}$ & ? & ? & ? & ? & $0.3\varrho$ \\ \hline 
+$\omega_{3}$ & ? & ? & ? & ? & $0.2\varrho$ \\ \hline 
+$\omega_{4}$ & ? & ? & ? & ? & $0.1\varrho$ \\ \hline 
+$\omega_{5}$ & ? & ? & ? & ? & $1-\varrho$ \\ \hline 
+$P_{\Theta}$ & 0.20 & 0.30 & 0.40 & 0.10 & 1.00 \\ \hline
+\end{tabular}
+% \begin{tabular}{|l|r|r|r|r|r|r|}\hline
+% $P_{w}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $\omega_{x}$ & $P_{\Theta}$ \\ \hline
+% $\theta_{1}$ & ? & ? & ? & ? & ? & 0.20 \\ \hline
+% $\theta_{2}$ & ? & ? & ? & ? & ? & 0.30 \\ \hline
+% $\theta_{3}$ & ? & ? & ? & ? & ? & 0.40 \\ \hline
+% $\theta_{4}$ & ? & ? & ? & ? & ? & 0.10 \\ \hline
+% $P_{\Omega}$ & $0.4p_{x}$ & $0.3p_{x}$ & $0.2p_{x}$ & $0.1p_{x}$ & $1-p_{x}$ & 1.00\\ \hline
+% \end{tabular}
+
+\medskip
+
+The cells in the middle of the table represent the joint probability
+function on $\Omega\times\Theta$. $\omega_{5}$ is the negation of the
+disjunction of $\omega_{i}$, $i=1,\ldots,4$, as in advance we do not
+know what the native is going to say. We are assuming that
+$\varrho=1-P_{\Omega}(\omega_{5})\neq{}0$, as logically possible
+events should have non-zero probabilities, minute as they may be. In
+Wagner's diction, we are not possessed of the joint probability
+measure on $\omega\times\theta$ (thus the question marks), only of the
+marginal probabilities. Applied to his later interpretation of what
+the \textsc{pme} would say about the \emph{Linguist} problem, this
+means that the advocate of the \textsc{pme} subject to Wagner's
+criticism violates (L3).
+
+Wagner's posterior probabilities $Q_{w}$ (in contrast to
+the \textsc{pme}'s posterior probabilities $Q_{m}$ later on) for
+\emph{Linguist} are as follows:
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|r|r|}\hline
+$Q_{w}$ & $\theta_{1}$ & $\theta_{2}$ & $\theta_{3}$ & $\theta_{4}$ & $Q_{\Omega}$ \\ \hline
+$\omega_{1}$ & ? & ? & 0.00 & 0.00 & $0.40$ \\ \hline 
+$\omega_{2}$ & ? & ? & 0.00 & 0.00 & $0.30$ \\ \hline 
+$\omega_{3}$ & 0.00 & ? & 0.00 & ? & $0.20$ \\ \hline 
+$\omega_{4}$ & ? & ? & 0.04 & ? & $0.10$ \\ \hline 
+$\omega_{5}$ & 0.00 & 0.00 & 0.00 & 0.00 & $0.00$ \\ \hline 
+$Q_{\Theta}$ & 0.30 & 0.60 & 0.04 & 0.06 & 1.00 \\ \hline
+\end{tabular}
+
+% \begin{tabular}{|l|r|r|r|r|r|r|}\hline
+% $Q_{w}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $\omega_{x}$ & $Q_{\Theta}$ \\ \hline
+% $\theta_{1}$ & ? & ? & 0.00 & ? & 0.00 & 0.30 \\ \hline
+% $\theta_{2}$ & ? & ? & ? & ? & 0.00 & 0.60 \\ \hline
+% $\theta_{3}$ & 0.00 & 0.00 & 0.00 & 0.04 & 0.00 & 0.04 \\ \hline
+% $\theta_{4}$ & 0.00 & 0.00 & ? & ? & 0.00 & 0.06 \\ \hline
+% $Q_{\Omega}$ & $0.4$ & $0.3$ & $0.2$ & $0.1$ & $0.00$ & 1.00\\ \hline
+% \end{tabular}
+
+% \begin{tabular}{|l|r|r|r|r|r|}\hline
+%   $Q_{w}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $Q_{\Theta}$ \\ \hline
+% $\theta_{1}$ & ? & ? & 0.00 & ? & 0.30 \\ \hline
+% $\theta_{2}$ & ? & ? & ? & ? & 0.60 \\ \hline
+% $\theta_{3}$ & 0.00 & 0.00 & 0.00 & 0.04 & 0.04 \\ \hline
+% $\theta_{4}$ & 0.00 & 0.00 & ? & ? & 0.06 \\ \hline
+% $Q_{\Omega}$ & 0.40 & 0.30 & 0.20 & 0.10 & 1.00\\ \hline
+% \end{tabular}
+
+\medskip
+
+(\ref{eq:entail}) dictates the zero joint probabilities,
+(\ref{eq:marg}) dictates the marginal probabilities in the last
+column, and (\ref{eq:qofa}) dictates the marginal probabilities in
+the last row. The posterior probability that the native
+encountered by the linguist is a northerner, for example, is 34\%.
+
+To solve this problem from the perspective of the \textsc{pme}, Wagner
+assumes that the constraint is that $b$ must act as a lower bound for
+the posterior probability. Consider
+$E_{12}=\{\theta_{1}\vee\theta_{2}\}$. Because both $\omega_{1}$ and
+$\omega_{2}$ entail $E_{12}$, according to (\ref{eq:bof}),
+$b(E_{12})=0.70$. It makes sense to consider it a constraint that the
+posterior probability for $E_{12}$ must be at least $b(E_{12})$. Then
+we choose from all probability distributions fulfilling the constraint
+the one which is closest to the prior probability distribution, using
+the Kullback-Leibler divergence.
+
+Wagner applies this idea to the marginal probability distribution on
+$\Theta$. He does not provide the numbers, but refers to simpler
+examples to make his point that the \textsc{pme} does not generally
+agree with his solution. To aid the discussion, I want to populate
+Wagner's claim for the \emph{Linguist} problem with numbers. Using
+proposition 1.29 in Dimitri Bertsekas' book \emph{Constrained
+  Optimization and Lagrange Multiplier Methods} (see
+\scite{8}{bertsekas82}{71}) and some non-trivial calculations, the
+\textsc{pme} solution for \emph{Linguist}, given Wagner's
+assumptions (indexed $Q_{w/m}$) is
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|r|r|}\hline
+$Q_{w/m}$ & $\theta_{1}$ & $\theta_{2}$ & $\theta_{3}$ & $\theta_{4}$ & $Q_{\Omega}$ \\ \hline
+$\omega_{1}$ & ? & ? & 0.00 & 0.00 & $0.40$ \\ \hline 
+$\omega_{2}$ & ? & ? & 0.00 & 0.00 & $0.30$ \\ \hline 
+$\omega_{3}$ & 0.00 & ? & 0.00 & ? & $0.20$ \\ \hline 
+$\omega_{4}$ & ? & ? & 0.10 & ? & $0.10$ \\ \hline 
+$\omega_{5}$ & 0.00 & 0.00 & 0.00 & 0.00 & $0.00$ \\ \hline 
+$Q_{\Theta}$ & 0.30 & 0.45 & 0.10 & 0.15 & 1.00 \\ \hline
+\end{tabular}
+
+% \begin{tabular}{|l|r|r|r|r|r|}\hline
+%   $Q_{w/m}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $Q_{\Theta}$ \\ \hline
+% $\theta_{1}$ & ? & ? & 0.00 & ? & 0.30 \\ \hline
+% $\theta_{2}$ & ? & ? & ? & ? & 0.45 \\ \hline
+% $\theta_{3}$ & 0.00 & 0.00 & 0.00 & 0.10 & 0.10 \\ \hline
+% $\theta_{4}$ & 0.00 & 0.00 & ? & ? & 0.15 \\ \hline
+% $Q_{\Omega}$ & 0.40 & 0.30 & 0.20 & 0.10 & 1.00\\ \hline
+% \end{tabular}
+
+\medskip
+
+$D_{\textsc{kl}}(Q_{w/m},P)\approx{}0.0823$ is indeed significantly
+smaller than $D_{\textsc{kl}}(Q_{w},P)\approx{}0.4148$. In both cases,
+$Q_{w/m}$ and $Q_{w}$ are first marginalized to $\Theta$ in order to
+calculate the Kullback-Leibler Divergence
+
+\begin{equation}
+  \label{eq:kl}
+  D_{\textsc{kl}}(q,p)=\sum_{i=1}^{4}q(\theta_{i})\log_{2}\frac{q(\theta_{i})}{p(\theta_{i})}.
+\end{equation}
+
+From the perspective of a the \textsc{pme} advocate, there are only two
+explanations for this difference in cross-entropy. Either Wagner's
+solution illegitimately uses information not contained in the problem,
+or Wagner's \textsc{pme} solution has failed to include information
+that is contained in the problem. I will radically simplify
+\emph{Linguist} in order to show that the latter is the case.
+
+\begin{quotex}
+  \emph{The Simplified Linguist Problem.} Imagine the native is either
+  Protestant or Catholic (50:50). Further imagine that the utterance
+  of the native either entails that the native is a Protestant (60\%)
+  or provides no information about the religious affiliation of the
+  native (40\%).
+\end{quotex}
+
+Using (\ref{eq:qofa}), the posterior probability distribution is 80:20
+(Wagner's solution and, surely, the correct solution). Using $b$ as a
+lower bound and the \textsc{pme}, Wagner's \textsc{pme} solution for
+this radically simplified problem is 60:40, clearly a more entropic
+solution than Wagner's. The problem, as we will show, is that Wagner's
+\textsc{pme} solution does not take into account (L3), which a
+\textsc{pme} advocate would naturally accept.
+
+For a Laplacian, the prior joint probability distribution on
+$\Theta\times\Omega$ is not left unspecified for the calculation of
+the posteriors. Before the native makes the utterance, the event space
+is unspecified with respect to $\Omega$. After the utterance, however,
+the event space is defined and populated by prior probabilities
+according to (L1)-(L3). That this happens retrospectively is not a
+problem: Bayes' theorem is used retrospectively all the time, for
+example when the anomalous precession of Mercury's perihelion,
+discovered in the mid-1800s, was used to confirm Albert Einstein's
+General Theory of Relativity in 1915. Ariel Caticha and Adom Giffin
+appeal to Bayesians on the basis of Bayes' theorem to embrace what I
+have called Laplacianism:
+
+% It represents the subjective priors or the lack of
+% information on part of the agent who holds these probabilities.
+% Whether it is the former or the latter is a matter of considerable
+% debate among \qnull{subjectivist} and \qnull{objectivist} Bayesians
+% (for example, Bruno de Finetti and E.T. Jaynes), both of which,
+% confusingly, are adherents of interpreting probabilities as subjective
+% probabilities.
+
+% This debate aside, all Bayesians agree that well-defined events have
+% prior probabilities. Advocates of the \textsc{pme}, who form a strict
+% subset of the set of all Bayesians, do not only believe (as Bayesians
+% do and non-Bayesians do not) that the prior joint probability
+% distribution is numerically populated in accordance with basic
+% probability axioms; they also believe that the prior joint probability
+% distribution is numerically populated with the probabilities that have
+% the highest entropy compatible with the available information (in our
+% case, the marginal probability distributions).
+
+\begin{quotex}
+  Bayes theorem requires that $P(\omega,\theta)$ be defined and that
+  assertions such as \qzwei{$\omega$ \emph{and} $\theta$} be
+  meaningful; the relevant space is neither $\Omega$ nor $\Theta$ but
+  the product $\Omega\times\Theta$ [notation modified]
+  \scite{3}{catichagiffin06}{9}
+\end{quotex}
+
+Following (L3) we shall populate $P_{m}$ in agreement with (L1),
+which is a perfect task for \textsc{maxent}, as updating $P_{m}$ to
+$Q_{m}$ in agreement with (L1) will be a perfect task for
+\emph{Infomin}. In accordance with (L2) it seems clear that this is
+how we should interpret the problem.
+
+Let $\omega_{j},j=1,\ldots,m$, and $\theta_{i},i=1,\ldots,n$, be
+finite partitions of the event space with the joint prior probability
+matrix $(p_{ij})$. Some of the elements of $(p_{ij})$ will be zero in
+accordance with (\ref{eq:entail}), but never a whole row or a whole
+column. Let $K_{\omega}\subseteq{}\{1,\ldots,m\}$ and
+$K_{\theta}\subseteq{}\{1,\ldots,n\}$ be such that $p_{ij}=0$ for
+$(i,j)\in{}K_{\omega}\times{}K_{\theta}$. We are now looking for the
+matrix $(p_{ij})$ which obeys the following constraints and of all
+such matrices has the highest Shannon entropy, if the elements of the
+matrix are interpreted as a probability distribution:
+
+\begin{equation}
+  \label{eq:ce1}
+\mbox{For all }i=1,\ldots,m\mbox{ it is true that }\sum_{j=1}^{n}p_{ij}=P(\omega_{i})
+\end{equation}
+
+\begin{equation}
+  \label{eq:ce2}
+\mbox{For all }j=1,\ldots,n\mbox{ it is true that }\sum_{i=1}^{m}p_{ij}=P(\theta_{j})
+\end{equation}
+
+\begin{equation}
+  \label{eq:ce3}
+\mbox{For all }(i,j)\in{}K_{\omega}\times{}K_{\theta}\mbox{ it is true that }p_{ij}=0
+\end{equation}
+
+$P(\theta_{j})$ is known for all $j=1,\ldots,n$. $P(\omega_{i})$ is
+known for all $j=i,\ldots,m$ as dependent on $\varrho$ (see
+table $\clubsuit$).
+
+Advocates of the \textsc{pme}, who are objectivist Bayesians, think
+that determining these probabilities is not solely a matter of
+consistency with probability axioms. If the marginal probabilities are
+available, then the joint distribution is equal to the product of the
+marginal distributions
+
+\begin{equation}
+  \label{eq:prod}
+P(\theta_{i},\omega_{j})=p(\theta_{i})p(\omega_{j})\mbox{ for all
+}i=1,\ldots,n\mbox{ and }j=1,\ldots,m
+\end{equation}
+
+to achieve maximum entropy (for a proof, see exercise 12.4 in
+\scite{8}{coverthomas06}{421}).
+
+Therefore, the prior probability table for \emph{Linguist}, from a
+Laplacian's perspective, looks as follows:
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|r|r|}\hline
+  $P_{m}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $Q_{\Theta}$ \\ \hline
+$\theta_{1}$ & 0.08 & 0.06 & 0.04 & 0.02 & 0.20 \\ \hline
+$\theta_{2}$ & 0.12 & 0.09 & 0.06 & 0.03 & 0.30 \\ \hline
+$\theta_{3}$ & 0.16 & 0.12 & 0.08 & 0.04 & 0.40 \\ \hline
+$\theta_{4}$ & 0.04 & 0.03 & 0.02 & 0.01 & 0.10 \\ \hline
+$Q_{\Omega}$ & 0.40 & 0.30 & 0.20 & 0.10 & 1.00\\ \hline
+\end{tabular}
+
+\medskip
+
+Given the constraints (\ref{eq:entail}) and (\ref{eq:marg}) and a
+formal result provided in the next section, the \textsc{pme}
+solution minimizing the cross-entropy to this prior probability
+distribution is
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|r|r|}\hline
+  $Q_{m}$ & $\omega_{1}$ & $\omega_{2}$ & $\omega_{3}$ & $\omega_{4}$ & $Q_{\Theta}$ \\ \hline
+$\theta_{1}$ & 0.16 & 0.12 & 0.00 & 0.02 & 0.30 \\ \hline
+$\theta_{2}$ & 0.24 & 0.18 & 0.15 & 0.03 & 0.60 \\ \hline
+$\theta_{3}$ & 0.00 & 0.00 & 0.00 & 0.04 & 0.04 \\ \hline
+$\theta_{4}$ & 0.00 & 0.00 & 0.05 & 0.01 & 0.06 \\ \hline
+$Q_{\Omega}$ & 0.40 & 0.30 & 0.20 & 0.10 & 1.00\\ \hline
+\end{tabular}
+
+\medskip
+
+$Q_{m}$ agrees with $Q_{w}$ in the marginalization to $\Theta$ (the
+last column). Consequently, the \textsc{pme} delivers a reasonable
+solution conforming to the ad hoc intuitive condition imposed by
+Wagner. The solution that Wagner foists on the \textsc{pme} is simply a
+victim of coarsening at random (see \scite{7}{gruenwaldhalpern03}{},
+who show how coarsening at random is responsible for misguided
+intuitions in the \emph{Monty Hall} and the \emph{Three Prisoners}
+problem). Just as the misguided interpretation of the \emph{Monty
+  Hall} problem operates on a coarsening of the event space, Wagner's
+\textsc{pme} solution operates on a coarsening of the event space,
+which then fails to process the totality of the information provided
+in the wording of the problem. Wagner's \textsc{pme} solution uses
+a probability distribution that is unnecessarily coarse---a more
+finely grained prior probability distribution delivers the right
+results.
+
+The calculations for \emph{Linguist} are awkward, because the
+$4\times{}4$ joint probability matrix is too large to deal with on the
+back of a napkin (and handling constraints on upper and lower
+probabilities using Wagner's faulty assumptions is much more
+complicated than handling constraints on joint probability
+distributions as shown in the next section). Using my simplified
+linguist problem above (where we only need to attend to a $2\times{}2$
+matrix) makes the point just as beautifully, and again the
+\textsc{pme} solution concurs both with Wagner's condition and with
+our intuitions: the posterior probability that the native is a
+Protestant is 80\% versus a 20\% probability that he or she is a
+Catholic. 
+
+Here are the relevant tables for the simplified linguist problem
+($\theta'_{1}$ means that the native is Catholic; $\theta'_{2}$ that
+the native is Protestant; $\omega'_{1}$ means that the native's
+utterance excludes the possibility that the native is Catholic;
+$\omega'_{2}$ means that the native's utterance provides no
+information about the native's religious affiliation). As before,
+$P_{w}$ is Wagner's prior probability distribution (with lacunae),
+$Q_{w}$ his posterior probability distribution. $Q_{w/m}$ is Wagner's
+(faulty) interpretation of the \textsc{pme}, based on $P_{w}$. $P_{m}$
+and $Q_{m}$ are the correct versions of applying the \textsc{pme} to
+the simplified linguist problem. The prior probability distributions
+are prior in the sense that they are prior to the information about
+what the two utterances entail.
+
+\medskip
+
+\begin{tabular}{|l|r|r|r|c|l|r|r|r|}\hline
+$P_{w}$ & $\omega'_{1}$ & $\omega'_{2}$ & $P_{\Theta'}$ & \cellcolor[gray]{0.9} & $Q_{w}$ & $\omega'_{1}$ & $\omega'_{2}$ & $Q_{\Theta'}$ \\ \hline
+$\theta'_{1}$ & ? & ? & 0.50 & \cellcolor[gray]{0.9} & $\theta'_{1}$ & 0.60 & 0.20 & 0.80 \\ \hline
+$\theta'_{2}$ & ? & ? & 0.50 & \cellcolor[gray]{0.9} & $\theta'_{2}$ & 0.00 & 0.20 & 0.20 \\ \hline
+$P_{\Omega'}$ & 0.60 & 0.40 & 1.00 & \cellcolor[gray]{0.9} & $Q_{\Omega'}$ & 0.60 & 0.40 & 1.00\\ \hline
+\cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} \\ \hline
+\cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & $Q_{w/m}$ & $\omega'_{1}$ & $\omega'_{2}$ & $Q_{\Theta'}$ \\ \hline
+\cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & $\theta'_{1}$ & 0.60 & 0.00 & 0.60 \\ \hline
+\cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & $\theta'_{2}$ & 0.00 & 0.40 & 0.40 \\ \hline
+\cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & $Q_{\Omega'}$ & 0.60 & 0.40 & 1.00\\ \hline
+\cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} & \cellcolor[gray]{0.9} \\ \hline
+$P_{m}$ & $\omega'_{1}$ & $\omega'_{2}$ & $P_{\Theta'}$ & \cellcolor[gray]{0.9} & $Q_{m}$ & $\omega'_{1}$ & $\omega'_{2}$ & $Q_{\Theta'}$ \\ \hline
+$\theta'_{1}$ & 0.30 & 0.20 & 0.50 & \cellcolor[gray]{0.9} & $\theta'_{1}$ & 0.60 & 0.20 & 0.80 \\ \hline
+$\theta'_{2}$ & 0.30 & 0.20 & 0.50 & \cellcolor[gray]{0.9} & $\theta'_{2}$ & 0.00 & 0.20 & 0.20 \\ \hline
+$P_{\Omega'}$ & 0.60 & 0.40 & 1.00& \cellcolor[gray]{0.9} & $Q_{\Omega'}$ & 0.60 & 0.40 & 1.00\\ \hline
+\end{tabular}
+
+\medskip
+
+As in \emph{Linguist}, $Q_{w}$ and $Q_{m}$ agree on the solution of
+the simplified linguist problem where $Q_{w}$ has specified
+probabilities, especially in the margins where all of $Q_{w}$'s
+probabilities are specified in both problems.
+
+\section{The PME is the Natural Generalization of Jeffrey Conditioning}
+\label{maxjeff}
+
+We will show, using Lagrange multipliers, that the \textsc{pme}
+conforms to the intuition voiced by Wagner that the prior probability
+distribution remains operative in the assessment of relative
+uncertainties with respect to the consequents of observed
+conditionals. Wagner denies that the \textsc{pme} conforms to this
+intuition, thus disparaging the \textsc{pme}, but we have shown in the
+previous section that Wagner's judgment relies on an interpretation of
+the \textsc{pme} in terms of non-Bayesian assumptions, which is
+nonsensical as the \textsc{pme} is a more specific version of
+Baysianism.
+
+We will show that the \textsc{pme} conforms to the intuitions behind
+standard conditioning; then that it conforms to the intuitions behind
+Jeffrey conditioning; and finally that it conforms to Wagner's ad hoc
+\qnull{natural generalization of Jeffrey conditioning.} Throughout, to
+make formalities comprehensible for non-mathematical folk, we will
+refer to finite (and therefore discrete) probability distributions.
+For countable and continuous probability distributions, the reasoning
+is largely analogous (for a mathematically rigorous introduction to
+continuous entropy see \scite{8}{guiasu77}{16ff}; for an example of
+how to do a proof of this section for continuous probability densities
+see \scite{8}{catichagiffin06}{11}; for a proof that the stationary
+points of the Lagrange function are indeed the desired extrema see
+\scite{8}{zubarev96}{55} and \scite{8}{coverthomas06}{410}; for the
+pioneer of the method applied in this section see
+\scite{8}{jaynes79}{241ff}).
+
+\medskip
+
+{\noindent}\emph{Standard Conditioning}
+
+\medskip
+
+{\noindent}Let $y_{i}$ (all $y_{i}\neq{}0$) be a finite prior
+probability distribution summing to $1$, $i\in{}I$. Let $x_{i}$ be the
+posterior probability distribution derived from standard conditioning
+with $x_{i}=0$ for all $i\in{}I'$ and $x_{i}\neq{}0$ for all
+$i\in{}I''$, $I'\cup{}I''=I$. $I'$ and $I''$ specify the standard
+event observation. Standard conditioning requires that
+
+\begin{equation}
+  \label{eq:sc}
+  x_{i}=\frac{y_{i}}{\sum_{k\in{}I''}y_{k}}.
+\end{equation}
+
+To solve this problem using the \textsc{pme}, we want to minimize the
+cross-entropy with the constraint that the non-zero $x_{i}$ sum to
+$1$. The Lagrange function is (writing in vector form
+$x=(x_{i})_{i\in{}I''}$)
+
+\begin{equation}
+  \label{eq:sclag}
+  \Lambda(x,\lambda)=\sum_{i\in{}I''}x_{i}\ln\frac{x_{i}}{y_{i}}+\lambda\left(1-\sum_{i\in{}I''}x_{i}\right).
+\end{equation}
+
+Differentiating the Lagrange function with respect to $x_{i}$ and
+setting the result to zero gives us
+
+\begin{equation}
+  \label{eq:sc1}
+  x_{i}=y_{i}e^{\lambda-1}
+\end{equation}
+
+with $\lambda$ normalized to
+
+\begin{equation}
+  \label{eq:sc2}
+  \lambda=-1+\ln{}\sum_{i\in{}I''}y_{i}.
+\end{equation}
+
+(\ref{eq:sc}) follows immediately. The \textsc{pme} and standard
+conditioning are consistent with each other.
+
+\medskip
+
+{\noindent}\emph{Jeffrey Conditioning}
+
+\medskip
+
+{\noindent}Let $\theta_{i},i=1,\ldots,n$ and
+$\omega_{j},j=1,\ldots,m$ be finite partitions of the event space with
+the joint prior probability matrix $(y_{ij})$ (all $y_{ij}\neq{}0$).
+Let $x_{ij}$ be the posterior probability distribution derived from
+Jeffrey conditioning with 
+
+\begin{equation}
+  \label{eq:jc1}
+  \sum_{i=1}^{n}x_{ij}=\alpha_{j}\mbox{ for all }j=1,\ldots,m
+\end{equation}
+
+where the $\alpha_{j}\neq{}0, \sum\alpha_{j}=1$ are the observed
+redistribution of the marginal probability for $\omega_{j}$. Jeffrey
+conditioning requires that for all $i=1,\ldots,n$
+
+\begin{equation}
+  \label{eq:jc2}
+  q(\theta_{i})=\sum_{j=1}^{m}p(\theta_{i}|\omega_{j})q(\omega_{j})=\sum_{j=1}^{m}\frac{y_{ij}}{p(\omega_{j})}q(\omega_{j})
+\end{equation}
+
+where $p$ and $q$ are the marginal probabilities for
+$(\theta_{i})_{i=1,\ldots,n}$ and $(\omega_{j})_{j=1,\ldots,m}$, prior
+and posterior respectively (just as $P$ and $Q$ are the joint
+probabilities on $\Theta\times\Omega$), for example
+$\alpha_{j}=q(\omega_{j})$, $P(\theta_{i},\omega_{j})=y_{ij}$ and
+
+\begin{equation}
+  \label{eq:jc3}
+  q(\theta_{i})=\sum_{j=1}^{m}x_{ij}.
+\end{equation}
+
+Using the \textsc{pme} to get the posterior distribution $(x_{ij})$,
+the Lagrange function is (writing in vector form
+$\lambda=(\lambda_{1},\ldots,\lambda_{m})$ and
+$x=(x_{11},\ldots,x_{n1},\ldots,x_{nm})$)
+
+\begin{equation}
+  \label{eq:jclag}
+  \Lambda(x,\lambda)=\sum_{i=1}^{n}\sum_{j=1}^{m}x_{ij}\ln\frac{x_{ij}}{y_{ij}}+\sum_{j=1}^{m}\lambda_{j}\left(\alpha_{j}-\sum_{i=1}^{n}x_{ij}\right).
+\end{equation}
+
+Consequently,
+
+\begin{equation}
+  \label{eq:jc4}
+  x_{ij}=y_{ij}e^{\lambda_{j}-1}
+\end{equation}
+
+with the Lagrangian parameters $\lambda_{j}$ normalized by
+
+\begin{equation}
+  \label{eq:jc5}
+  \sum_{i=1}^{n}y_{ij}e^{\lambda_{j}-1}=\alpha_{j}
+\end{equation}
+
+(\ref{eq:jc2}) follows immediately. The \textsc{pme} and Jeffrey
+conditioning are consistent with each other.
+
+\medskip
+
+{\noindent}\emph{Wagner Conditioning}
+
+\medskip
+
+{\noindent}Let $\theta_{i},i=1,\ldots,n$ and
+$\omega_{j},j=1,\ldots,m$ be finite partitions of the event space. Let
+the joint prior probability matrix be $(y_{ij})$ and the joint
+posterior probability matrix be $(x_{ij})$. The elements of this
+matrix may be unknown or may have to be inferred from one's state of
+ignorance or uncertainty or may be chosen any other way according to
+basic probability axioms and your favourite interpretation of
+probability. The marginal probabilities are
+$p(\theta_{i}),p(\omega_{j}),q(\theta_{i}),q(\omega_{j})$ so that, for
+example,
+
+\begin{equation}
+  \label{eq:wc1}
+  p(\theta_{i})=\sum_{j=1}^{m}y_{ij}
+\end{equation}
+
+if the pertinent $y_{ij}$ exist. According to (\ref{eq:qofa}), Wagner
+conditioning determines the posterior marginal probability to be
+
+\begin{equation}
+  \label{eq:wc2}
+    q(\theta_{i})=\sum_{E\in\mathcal{E}}m(E)p(\theta_{i}|E)\mbox{ for
+      all }i=1,\ldots,n
+\end{equation}
+
+given the conditions in (\ref{eq:entail}) and (\ref{eq:marg}).
+(\ref{eq:entail}) means for $Q$ that depending on the observed
+conditionals there is a partition of the indices
+$\{1,\ldots,n\}\times\{1,\ldots,m\}$ into sets $K'$ and $K''$ such
+that $Q(\theta_{i},\omega_{j})=0$ (i.e.\ $x_{ij}=0$) for
+$(i,j)\in{}K'$ and $Q(\theta_{i},\omega_{j})\neq{}0$ (i.e.\
+$x_{ij}\neq{}0$) for $(i,j)\in{}K''$.
+
+We want to show that the \textsc{pme} comes to the same conclusion as
+Wagner conditioning, provided that the probability matrices
+$(y_{ij}),(x_{ij})$ are fully quantified---to which we commit
+ourselves since the \textsc{pme} only makes sense in a Bayesian
+framework. Because the matrices are fully quantified, we rewrite
+(\ref{eq:wc2}) as
+
+\begin{equation}
+  \label{eq:wc3}
+  q(\theta_{i})=p(\theta_{i})\sum_{j=1}^{m}\frac{\sum_{k=1}^{n}y_{kj}}{\sum_{r=1}^{n\circledast{}j}p(\theta_{r})}
+\end{equation}
+
+where for $j=1,\ldots,m$
+
+\begin{equation}
+  \label{eq:dast}
+  \sum_{r=1}^{n\circledast{}j}p(\theta_{r})=\sum_{r=1,(r,j)\in{}K''}^{n}p(\theta_{r})
+\end{equation}
+
+Note that for all $i,k=1,\ldots,n$ and $j=1,\ldots,m$
+
+\begin{equation}
+  \label{eq:wc4}
+  \frac{y_{ij}}{y_{kj}}=\frac{p(\theta_{i})}{p(\theta_{k})}
+\end{equation}
+
+because of (\ref{eq:prod}). The Lagrange function is, given the
+above-mentioned constraints,
+
+\begin{equation}
+  \label{eq:wclag}
+  \Lambda(x,\lambda)=\sum_{i=1}^{n}\sum_{j=1}^{m\circledast{}i}x_{ij}\ln{}x_{ij}+\sum_{j=1}^{m}\lambda_{j}\left(\sum_{i=1}^{n}y_{ij}-\sum_{i=1}^{n\circledast{}j}x_{ij}\right)
+\end{equation}
+
+Differentiating $\Lambda$ with respect to $x_{ij}$ gives us for $(i,j)\in{}K''$
+
+\begin{equation}
+  \label{eq:wc5}
+  x_{ij}=y_{ij}e^{\lambda_{j}-1}
+\end{equation}
+
+with the Lagrangian parameters $\lambda_{j}$ normalized such that
+
+\begin{equation}
+  \label{eq:wc6}
+  \mu_{j}=e^{\lambda_{j}-1}=\frac{\sum_{i=1}^{n}y_{ij}}{\sum_{i=1}^{n\circledast{}j}y_{ij}}.
+\end{equation}
+
+The $\mu_{j}$ provide a simple (and correct) way to arrive at
+the \textsc{pme} solutions for these types of problems, compared to the
+complicated (and incorrect) way in which Wagner arrives at
+the \textsc{pme} solutions. Comparing the correct \textsc{pme}
+solution gained with the help of Lagrangian multipliers
+
+\begin{equation}
+  \label{eq:wc7}
+  q(\theta_{i})=\sum_{j=1}^{m}\mu_{j}y_{ij}
+\end{equation}
+
+to Wagner's solution in (\ref{eq:wc3}) it is clear that they agree if
+and only if
+
+\begin{equation}
+  \label{eq:wc8}
+  \frac{y_{ij}}{y_{kj}}=\frac{p(\theta_{i})}{p(\theta_{k})}
+\end{equation}
+
+which is (\ref{eq:wc4}). The \textsc{pme} and Wagner conditioning are
+consistent with each other.
+
+This could not have been any easier, given that the proofs with
+respect to standard conditioning and Jeffrey conditioning are readily
+available in the literature. The \textsc{pme}, when it is not
+adulterated by viewing probabilities as properties of the external
+world rather than representations of uncertainty in the agents who
+entertain them, seamlessly and elegantly handles the observation of
+conditionals.
+
+\section{References}
+\label{References}
+
+% \nocite{*} 
+% \bibliographystyle{stefan-2010-08-28}
+\bibliographystyle{ChicagoReedweb}
+\bibliography{bib-0861}
+
+\end{document} 

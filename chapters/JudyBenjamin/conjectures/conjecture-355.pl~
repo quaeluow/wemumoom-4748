@@ -1,0 +1,39 @@
+use Math::BigInt;
+sub Factorial
+{
+    ($choosen)=@_;
+    $BIGn=Math::BigInt->new($choosen);
+    $BIGnfac=$BIGn->copy();
+    $BIGnfac->bfac();
+    return "$BIGnfac";
+}
+
+sub Choose
+{
+    ($choosen,$choosek)=@_;
+    $BIGn=Math::BigInt->new($choosen);
+    $BIGk=Math::BigInt->new($choosek);
+    $BIGnoverk=$BIGn->copy();
+    $BIGmult=$BIGk->copy();
+    $BIGmult->bfac();
+    $BIGnoverk->bfac();
+    $BIGnminusk=$BIGn->copy();
+    $BIGnminusk->bsub($BIGk);
+    $BIGnminusk->bfac();
+    $BIGmult->bmul($BIGnminusk);
+    $BIGnoverk->bdiv($BIGmult);
+    return "$BIGnoverk";
+}
+
+$smin=1;
+$smax=100;
+open(output,">./conjecture-355.htm");
+print output "<html><head><title>Conjecture 355</title></head><body><table border=5><tr><td><tt></tt></td>";
+for ($i1=$smin;$i1<=$smax;++$i1)
+{
+    print output "<tr><td><tt>$i1</tt></td>";
+    $Fsum=sprintf("%.4f",$sum);
+    print output "<td><tt>$Fsum</tt></td></tr>";
+}
+    print output "</table></body></html>";
+close(output);

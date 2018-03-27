@@ -1,0 +1,359 @@
+% What exactly is Linda's evidence differential compared to
+% Betsy -- the analytic expression may help.
+
+\documentclass[11pt]{article}
+\usepackage{october}
+% For BJPS
+% \hyphenpenalty=10000
+% \hbadness=10000
+
+\begin{document}
+% For BJPS
+% \raggedright
+% \doublespacing
+
+\title{Sharp Credences and Prevision Betting}
+\author{Stefan Lukits}
+\date{}
+\maketitle
+
+\begin{abstract} 
+  {\noindent}TBA.
+\end{abstract}
+
+\section{Introduction}
+\label{Introduction}
+
+I am adding a reason (D) that is poorly documented in the literature:
+The Boolean rational agent may systematically do better accepting bets
+than the agent who on principle rejects instates. Walley conducted an
+experiment in which Boolean participants did significantly better than
+Laplacean participants, betting on soccer games played in the Soccer
+World Cup 1982 in Spain (see \scite{7}{walley91}{}, Appendix I). I
+replicated the experiment using two computer players with rudimentary
+artificial intelligence and made them specify betting parameters
+(previsions) for games played in the Soccer World Cup 2014 in Brazil.
+I used the Poisson distribution (which is an excellent predictor for
+the outcome of soccer matches) and the FIFA ranking to simulate
+millions of counterfactual World Cup results and their associated
+bets, using Walley's evaluation method. The Boolean player had a
+slight but systematic advantage. In section TBA, I will provide an
+explanation and show how it undermines any support the experiment
+might give to the Boolean position.
+
+\section{Evidence Differentials and Cushioning Credences}
+\label{WalleysWorldCupWoes}
+
+I want to proceed to the intriguing issue of who does better in
+betting situations: instates or sharp credences. I have given away the
+answer already in the introduction: instates do better. It is
+surprising that, except for a rudimentary allusion to this in Walley's
+book, no Boolean has caught on to this yet. After I found out that
+agents with instates do better betting on soccer games, I let Betsy
+and Linda play a more basic betting game. An $n$-sided die is rolled
+(by the computer). The die is fair, unbeknownst to the players. Their
+bets are randomly and uniformly drawn from the simplex for which the
+probabilities attributed to the $n$ results add up to 1. Betsy also
+surrounds her credences with an imprecision uniformly drawn from the
+interval $(0,y)$. I used Walley's pay off scheme (see
+\scite{8}{walley91}{632}) to settle the bets.
+
+Here is an example: let $n=2$, so the die is a fair \textit{coin}.
+Betsy's and Linda's bets are randomly and uniformly drawn from the
+line segment from $(0,1)$ to $(1,0)$ (these are two-dimensional
+Cartesian coordinates), the two-dimensional simplex (for higher $n$,
+the simplex is a pentatope generalized for $n$ dimensions with side
+length $2^{1/2}$). The previsions (limits at which bets are accepted)
+may be $(0.21,0.79)$ for Linda and $(0.35\pm{}0.11,0.65\pm{}0.11)$ for
+Betsy, where the indeterminacy $\pm{}0.11$ is also randomly and
+uniformly drawn from the imprecision interval $(0,y)\subseteq(0,1)$.
+The first bet is on $H$, and Linda is willing to pay $22.5$ cents for
+it, while Betsy is willing to pay $77.5$ cents against it. The second
+bet is on $T$ (if $n>2$, there will not be the same symmetry as in the
+\textit{coin} case between the two bets), for which Betsy is willing
+to pay $77.5$ cents, and against which Linda is willing to pay $22.5$
+cents. Each bet pays \$1 if successful. Often, Linda's credal state
+will overlap with Betsy's sharp credence so that there will not be a
+bet.\fcut{7}
+
+The computer simulation clearly shows that Linda does better than
+Betsy in the long run. A defence of sharp credences for rational
+agents needs to have an explanation for this. We will call it partial
+belief cushioning, which is based on an evidence differential between
+the bettors.
+
+In many decision-making contexts, we do not have the luxury of calling
+off the bet. We have to decide one way or another. This is a problem
+for instates, as Booleans have to find a way to decide without
+receiving instructions from the credal state. Booleans have addressed
+this point extensively (see for example \scite{8}{joyce10}{311ff}; for
+an opponent's view of this see \scite{8}{elga10}{6ff}). The problem
+for sharp credences arises when bets are noncompulsory, for then the
+data above suggest that agents holding instates systematically do
+better. Often, decision making happens as betting vis-{\`a}-vis
+uninformed nature or opponents which are at least as uninformed as the
+rational agent. Sometimes, however, bets are offered by better
+informed or potentially better informed bookies. In this case, even an
+agent with sharp credences must cushion her credences and is better
+off by rejecting bets that look attractive in terms of her partial
+beliefs.
+
+If an agent does not cushion her partial beliefs (whether they are
+sharp or indeterminate), she will incur a loss in the long run. Since
+cushioning is permitted in Walley's experimental setup (the bets are
+noncompulsory), Laplacean agents should also have access to it and
+then no longer do worse than Boolean agents. One may ask what sharp
+credences do if they just end up being cushioned anyway and do not
+provide sufficient information to decide on rational bets. The answer
+is that sharp credences are sufficient where betting (or decision
+making more generally) is compulsory; the cushioning only supplies the
+information from the evidence inasmuch as betting is noncompulsory and
+so again properly distinguishes semantic categories. This task is much
+harder for Booleans, although I do not claim that it is
+insurmountable: instates can provide a coherent approach to compulsory
+betting. What they cannot do, once cushioning is introduced, is
+outperform sharp credences in noncompulsory betting situations.
+
+Here are a few examples: even if I have little evidence on which to
+base my opinion, someone may force me to either buy Coca Cola shares
+or short them, and so I have to have a share price $p$ in mind that I
+consider fair. I will buy Coca Cola shares for less than $p$, and
+short them for more than $p$, if forced to do one or the other. This
+does not mean that it is now reasonable for me to go (not forced by
+anyone) and buy Coca Cola shares for $p$. It may not even be
+reasonable to go (not forced by anyone) and buy Coca Cola share for
+$p-\delta$ with $\delta{}>0$.
+
+It may in fact be quite unreasonable, since there are many players who
+have much better evidence than I do and will exploit my ignorance. I
+suspect that most lay investors in the stock market make this mistake:
+even though they buy and sell stock at prices that seem reasonable to
+them, professional investors are much better and faster at exploiting
+arbitrage opportunities and more subtle regularities. If indices rise,
+lay investors will make a little less than their professional
+counterparts; and when they fall, lay investors lose a lot more. In
+sum, unless there is sustained growth and everybody wins, lay
+investors lose in the long term.
+
+A case in point is the U.S. Commodity Futures Trading Commission's
+crackdown on the online prediction market Intrade. Intrade offered
+fair bets for or against events of public significance, such as
+election results or other events which had clear yes-or-no outcomes.
+Even though the bets were all fair and Intrade only received a small
+commission on all bets, and even though Intrade's predictions were
+remarkably accurate, the potential for professional arbitrageurs was
+too great and the CFTC shut Intrade down (see
+\texttt{https://www.intrade.com}).
+
+Cushioning does not stand in the way of holding a sharp credence, even
+if the evidence is dim. The evidence determines for a rational agent
+the partial beliefs over possible states of the world operating in the
+background. The better the evidence, the more pointed the
+distributions of these partial beliefs will be and the more willing
+the rational agent will be to enter a bet, if betting is
+noncompulsory. The mathematical decision rule will be based on the
+underlying distribution of the partial beliefs, not only on the sharp
+credence. As we have stated before, a sharp credence is not a
+sufficient statistic for decision making, inference, or betting
+behaviour; and neither is an instate.
+
+The rational agent with a sharp credence has resources at her disposal
+to use just as much differentiation with respect to accepting and
+rejecting bets as the agent with instates. Often (if she is able to
+and especially if the bets are offered to her by a better-informed
+agent), she will reject both of two complementary bets, even when they
+are fair. On the one hand, any advantage that the agent with an
+instate has over her can be counteracted based on her distribution
+over partial beliefs that she has with respect to all possibilities.
+On the other hand, the agent with instates suffers under both
+conceptual and practical problems that put her at a real disadvantage
+in terms of understanding the sources and consequences of her
+knowledge and her uncertainties.
+
+\section{Other Text}
+\label{OtherText}
+
+I replicated the experiment using two computer players, Betsy and
+Linda, with rudimentary artificial intelligence and made them specify
+betting parameters (previsions) for games played in the Soccer World
+Cup 2014 in Brazil. I used the Poisson distribution (which is an
+excellent predictor for the outcome of soccer matches) and the FIFA
+ranking to simulate millions of counterfactual World Cup results and
+their associated bets, using Walley's evaluation method. Betsy, who
+used upper and lower previsions, had a slight but systematic advantage
+over Linda, who used linear previsions. Betsy's expected gain for a
+whole tournament was approximately \$2 (very little compared to the
+stakes, as one can see by considering the standard deviation of
+approximately \$46 for this expected gain, i.e. 67\% of Betsy's
+overall gain from a tournament was between -\$44 and +\$48). The
+surprising fact that she did consistently better than Linda remains in
+need of explanation. In section \ref{WalleysWorldCupWoes}, I will
+provide an explanation and show how it can support rejecting instates
+for rational agents, counter-intuitive as that may sound.
+
+^^^
+
+Here is a table of the results. Each result is based on
+100,000 die rolls. The second column shows the mean gain for Linda,
+the third column shows the standard deviation, the fourth column shows
+the percentage of bets which are called off. The table is for $y=1$.
+
+\begin{tabular}{|l|r|r|r|}
+  \hline
+  $n=2$ & 0.14 & 18.8 & 25.2 \\ \hline
+  $n=3$ & -1.67 & 13.7 & 39.1 \\ \hline
+  $n=4$ & -1.73 & 10.4 & 48.1 \\ \hline
+  $n=5$ & -1.39 & 8.2 & 54.5 \\ \hline
+  $n=6$ & -1.22 & 6.6 & 59.1 \\ \hline
+  $n=7$ & -1.01 & 5.5 & 62.8 \\ \hline
+\end{tabular}
+
+Here are the results if Betsy is not as generous with her
+indeterminacy, $y=0.3$ (note that fewer bets are called off). The
+second column still shows Linda's mean gain.
+
+\begin{tabular}{|l|r|r|r|}
+  \hline
+  $n=2$ & 5.82 & 28.0 & 0.0 \\ \hline
+  $n=3$ & -0.55 & 21.8 & 0.0 \\ \hline
+  $n=4$ & -2.32 & 17.0 & 0.0 \\ \hline
+  $n=5$ & -2.89 & 13.7 & 0.4 \\ \hline
+  $n=6$ & -2.74 & 11.3 & 1.4 \\ \hline
+  $n=7$ & -2.52 & 9.6 & 3.2 \\ \hline
+\end{tabular}
+
+We should get similar results if we do this analytically instead of
+using computer simulation. I will pursue this further for the final
+version of the paper. The math is not complicated, but unwieldy. The
+following expression yields the expected gain for Linda:
+
+\begin{eqnarray}
+  \label{eq:s3}
+  EX =
+  \frac{p_{x}}{n}\left(\sum_{j=0}^{n-1}\int_{0}^{1}\int_{0}^{x}\int_{0}^{x-y}\sum_{k=0}^{n-1}g(x,y,s,k,j)\,ds\,d\upsilon(y)\,d\xi(x)\right)+
+  \notag \\
+  \frac{p_{y}}{n}\left(\sum_{j=0}^{n-1}\int_{0}^{1}\int_{0}^{1}\int_{0}^{y-s}\sum_{k=0}^{n-1}g(x,y,s,k,j)\,d\xi(x)\,d\upsilon(y)\,ds\right)
+\end{eqnarray}
+
+where $p_{x}$ and $p_{y}$ are the respective probabilities that $X$
+and $Y$ win a bet and $g$ is $X$'s gain given $X$'s credence $x$ and
+$Y$'s credal state $y\pm{}s$ on roll $j$, given result $k$. $\xi(x)$
+and $\upsilon(y)$ are the distributions of the credences given our
+method of simplex point picking (for these distributions, one must use
+the Cayley-Menger Determinant to find out the volume of generalized
+pentatopes involved).
+
+^^^
+
+One potential Boolean claim is that agents who use instates do better
+than Laplaceans when they bet on the truth of events for which they
+have varying degrees of evidence. Walley gives an example where a
+Laplacean does much worse at predicting Soccer World Cup games than
+Boolean peers who use upper and lower previsions (see
+\scite{7}{walley91}{}, appendix I). Upper and lower previsions are
+instates for which it is rational to accept or reject bets if they
+fall within the margin of indeterminacy.
+
+First I will show on a much more general level how Walley's claims are
+justified in practice (bettors using upper and lower previsions do on
+average better than bettors using linear previsions, i.e.\ sharp
+credences). Then I will explain why this is the case, how a Laplacean
+can protect herself against this disadvantage by drawing proper
+distinctions between credence and evidence, and how indeterminacy
+emerges as the loser when the contest is about clarity in one's
+semantics.
+
+For our purposes, we accept Walley's theory of upper and lower
+previsions, which is motivated by coherence on the one hand and
+avoidance of sure loss on the other hand. Upper and lower previsions
+have a behavioural interpretation as maximum buying prices and minimum
+selling prices for gambles. If the agent's lower prevision is $1/3$
+and the upper prevision $2/3$, she would accept a bet paying \$1 if
+$H$ for thirty cents and reject such a bet for seventy cents, but if
+the price of the bet is between one and two thirds of a dollar it
+would be rational for her to either accept or reject the bet. Walley
+conducted an experiment with 17 participants, who had various levels
+of understanding Bayesian theory, asking them for upper and lower
+probabilities entering into bets about the games played in the Soccer
+World Cup 1982 in Spain. One of the participants, a \qeins{dogmatic
+Bayesian lecturer} (see \scite{8}{walley91}{633}), only used single
+sharp subjective probabilities, while the others used intervals. The
+dogmatic Bayesian lecturer finished a distant last when the bets were
+evaluated. Walley admits that this result may have been due to the
+lecturer's eccentric assessments (for the game between the Soviet
+Union and Brazil, for example, his distribution between a Win, a Draw,
+and a Loss was 10-80-10).
+
+I replicated the experiment using two computer players, Betsy and
+Linda, with rudimentary artificial intelligence and made them specify
+betting parameters (previsions) for games played in the Soccer World
+Cup 2014 in Brazil. I used the Poisson distribution (which is an
+excellent predictor for the outcome of soccer matches) and the FIFA
+ranking to simulate millions of counterfactual World Cup results and
+their associated bets, using Walley's evaluation method. Betsy, who
+used upper and lower previsions, had a slight but systematic advantage
+over Linda, who used linear previsions. Betsy's expected gain for a
+whole tournament was approximately \$2 (very little compared to the
+stakes, as one can see by considering the standard deviation of
+approximately \$46 for this expected gain, i.e. 67\% of Betsy's
+overall gain from a tournament was between -\$44 and +\$48). The
+surprising fact that she did consistently better than Linda remains in
+need of explanation. In section \ref{WalleysWorldCupWoes}, I will
+provide an explanation and show how it can support rejecting instates
+for rational agents, counter-intuitive as that may sound.
+
+Here is a table of the results. Each result is based on
+100,000 die rolls. The second column shows the mean gain for Linda,
+the third column shows the standard deviation, the fourth column shows
+the percentage of bets which are called off. The table is for $y=1$.
+
+\begin{tabular}{|l|r|r|r|}
+  \hline
+  $n=2$ & 0.14 & 18.8 & 25.2 \\ \hline
+  $n=3$ & -1.67 & 13.7 & 39.1 \\ \hline
+  $n=4$ & -1.73 & 10.4 & 48.1 \\ \hline
+  $n=5$ & -1.39 & 8.2 & 54.5 \\ \hline
+  $n=6$ & -1.22 & 6.6 & 59.1 \\ \hline
+  $n=7$ & -1.01 & 5.5 & 62.8 \\ \hline
+\end{tabular}
+
+Here are the results if Betsy is not as generous with her
+indeterminacy, $y=0.3$ (note that fewer bets are called off). The
+second column still shows Linda's mean gain.
+
+\begin{tabular}{|l|r|r|r|}
+  \hline
+  $n=2$ & 5.82 & 28.0 & 0.0 \\ \hline
+  $n=3$ & -0.55 & 21.8 & 0.0 \\ \hline
+  $n=4$ & -2.32 & 17.0 & 0.0 \\ \hline
+  $n=5$ & -2.89 & 13.7 & 0.4 \\ \hline
+  $n=6$ & -2.74 & 11.3 & 1.4 \\ \hline
+  $n=7$ & -2.52 & 9.6 & 3.2 \\ \hline
+\end{tabular}
+
+We should get similar results if we do this analytically instead of
+using computer simulation. I will pursue this further for the final
+version of the paper. The math is not complicated, but unwieldy. The
+following expression yields the expected gain for Linda:
+
+\begin{eqnarray}
+  \label{eq:s3}
+  EX =
+  \frac{p_{x}}{n}\left(\sum_{j=0}^{n-1}\int_{0}^{1}\int_{0}^{x}\int_{0}^{x-y}\sum_{k=0}^{n-1}g(x,y,s,k,j)\,ds\,d\upsilon(y)\,d\xi(x)\right)+
+  \notag \\
+  \frac{p_{y}}{n}\left(\sum_{j=0}^{n-1}\int_{0}^{1}\int_{0}^{1}\int_{0}^{y-s}\sum_{k=0}^{n-1}g(x,y,s,k,j)\,d\xi(x)\,d\upsilon(y)\,ds\right)
+\end{eqnarray}
+
+where $p_{x}$ and $p_{y}$ are the respective probabilities that $X$
+and $Y$ win a bet and $g$ is $X$'s gain given $X$'s credence $x$ and
+$Y$'s credal state $y\pm{}s$ on roll $j$, given result $k$. $\xi(x)$
+and $\upsilon(y)$ are the distributions of the credences given our
+method of simplex point picking (for these distributions, one must use
+the Cayley-Menger Determinant to find out the volume of generalized
+pentatopes involved).
+
+% \nocite{*} 
+\bibliographystyle{ChicagoReedweb} 
+\bibliography{bib-6858}
+
+\end{document} 

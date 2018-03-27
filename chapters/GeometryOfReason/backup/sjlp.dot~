@@ -1,0 +1,22 @@
+digraph g {
+concentrate=true;
+ratio=compress;
+ordering=out;
+
+a1->b1;
+a2->b1;
+b1->c1;
+b1->c2;
+c1->d1;
+c2->d2;
+c2->d3;
+
+a1 [label="local inaccuracy",shape="box",style="filled",fillcolor="darkseagreen1"];
+a2 [label="global inaccuracy",shape="box",style="filled",fillcolor="darkseagreen1"];
+b1 [label="Brier score",style="filled",fillcolor="burlywood1"];
+c1 [label="standard type updating scenario",shape="box",style="filled",fillcolor="chartreuse1"];
+c2 [label="Jeffrey type updating scenario",shape="box",style="filled",fillcolor="chartreuse1"];
+d1 [label="standard conditioning\n(Bayes)",style="filled",fillcolor="burlywood1"];
+d2 [label="Jeffrey conditioning\n(Jeffrey)",style="filled",fillcolor="burlywood1"];
+d3 [label="LP conditioning\n(Leitgeb and Pettigrew)",style="filled",fillcolor="burlywood1"];
+}

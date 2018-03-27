@@ -1,0 +1,800 @@
+ @article{forstersober94,
+     jstor_articletype = {research-article},
+     title = {How to Tell When Simpler, More Unified, or Less Ad Hoc Theories Will Provide More Accurate Predictions},
+     author = {Forster, Malcolm and Sober, Elliott},
+     journal = {The British Journal for the Philosophy of Science},
+     jstor_issuetitle = {},
+     volume = {45},
+     number = {1},
+     jstor_formatteddate = {Mar., 1994},
+     pages = {pp. 1-35},
+     url = {http://www.jstor.org/stable/687960},
+     ISSN = {00070882},
+     abstract = {Traditional analyses of the curve fitting problem maintain that the data do not indicate what form the fitted curve should take. Rather, this issue is said to be settled by prior probabilities, by simplicity, or by a bacgkround theory. In this paper, we describe a result due to Akaike [1973], which shows how the data can underwrite an inference concerning the curve's form based on an estimate of how predictively accurate it will be. We argue that this approach throws light on the theoretical virtues of parsimoniousness, unification, and non ad hocness, on the dispute about Bayesianism, and on empiricism and scientific realism.},
+     language = {English},
+     year = {1994},
+     publisher = {Oxford University Press on behalf of The British Society for the Philosophy of Science},
+     pdfconv = {1994__Forster_Sober__How_to_Tell_When_Simpler.pdf}
+    }
+
+@incollection{teller76,
+   author = {Teller, Paul},
+   title = {Conditionalization, Observation, and Change of Preference},
+   booktitle = {Foundations of Probability Theory, Statistical Inference, and Statistical Theories of Science},
+   publisher = {D. Reidel},
+   address = {Dordrecht},
+   year = {1976}
+}
+
+@phdthesis{giffin08,
+    abstract = {In this thesis we start by providing some detail regarding how we arrived at our present understanding of probabilities and how we manipulate them - the product and addition rules by Cox. We also discuss the modern view of entropy and how it relates to known entropies such as the thermodynamic entropy and the information entropy. Next, we show that Skilling's method of induction leads us to a unique general theory of inductive inference, the ME method and precisely how it is that other entropies such as those of Renyi or Tsallis are ruled out for problems of inference. We then explore the compatibility of Bayes and ME updating. We show that ME is capable of producing every aspect of orthodox Bayesian inference and proves the complete compatibility of Bayesian and entropy methods. The realization that the ME method incorporates Bayes' rule as a special case allows us to go beyond Bayes' rule and to process both data and expected value constraints simultaneously. We discuss the general problem of non-commuting constraints, when they should be processed sequentially and when simultaneously. The generic "canonical" form of the posterior distribution for the problem of simultaneous updating with data and moments is obtained. This is a major achievement since it shows that ME is not only capable of processing information in the form of constraints, like MaxEnt and information in the form of data, as in Bayes' Theorem, but also can process both forms simultaneously, which Bayes and MaxEnt cannot do alone. Finally, we illustrate some potential applications for this new method by applying ME to potential problems of interest.},
+    author = {Giffin, Adom},
+    title = {Maximum Entropy: The Universal Method for Inference},
+    school = {University at Albany, State University of New York},
+    type = {{PhD} Dissertation},
+    address = {Department of Physics},
+    year = {2008},
+    pdfconv = {2008__Giffin_Adom__Maximum_Entropy_The_Universal_Method_for_Inference.pdf}
+}
+
+@inproceedings{catichagiffin06,
+    abstract = {We show that Skilling's method of induction leads to a unique general theory of inductive inference, the method of Maximum relative Entropy (ME). The main tool for updating probabilities is the logarithmic relative entropy; other entropies such as those of Renyi or Tsallis are ruled out. We also show that Bayes updating is a special case of ME updating and thus, that the two are completely compatible.},
+    author = {Caticha, Ariel and Giffin, Adom},
+    title = {Updating Probabilities},
+    booktitle = {MaxEnt 2006, the 26th International Workshop on Bayesian Inference and Maximum Entropy Methods},
+    pdfconv = {2006__Caticha_Giffin__Updating_Probabilities.pdf},
+    year = {2006}
+}
+
+@incollection{vandevenschouten10,
+    abstract = {In this paper the principle of minimum relative entropy (PMRE) is proposed as a fundamental principle and idea that can be used in the field of AGI. It is shown to have a very strong mathematical foundation, that it is even more fundamental then Bayes rule or MaxEnt alone and that it can be related to neuroscience. Hierarchical structures, hierarchies in timescales and learning and generating sequences of sequences are some of the aspects that Friston (Fri09) described by using his free-energy principle. These are aspects of cognitive architectures that are in agreement with the foundations of hierarchical memory prediction frameworks (GH09). The PMRE is very similar and often equivalent to Friston's free-energy principle (Fri09), however for actions and the de nitions of surprise there is a di erence. It is proposed to use relative entropy as the standard definition of surprise. Experiments have shown that this is currently the best indicator of human surprise(IB09). The learning rate or interestingness can be de ned as the rate of decrease of relative entropy, so curiosity can then be implemented as looking for situations with the highest learning rate.},
+    author = {van de Ven, Antoine and Schouten, Ben A.M.},
+    booktitle = {Advances in Intelligent Systems Research},
+    address = {Amsterdam},
+    title = {A Minimum Relative Entropy Principle for AGI},
+    publisher = {Atlantis Press},
+    url = {http://agi-conf.org/2010/wp-content/uploads/2009/06/paper_65.pdf},
+    year = {2010}
+}
+
+@book{jones79,
+  author =	"Jones, D. S.",
+  title =	"Elementary Information Theory",
+  publisher =	"Clarendon",
+  year = 	"1979",
+  address =	"Oxford"
+}
+
+@book{kampe63,
+  author =	"Kamp{\'e} de F{\'e}riet, J.",
+  title =	"Th{\'e}orie de l'Information. Principe du Maximum de l'Entropie et ses Applications {\`a} la Statistique et {\`a} la M{\'e}canique",
+  publisher =	"Publications du Laborataire de Calcul de la Facult{\'e} des Sciences de l'Universit{\'e} de Lille",
+  year = 	"1963",
+  address =	"Lille"
+}
+
+@book{feller57,
+  author =	"Feller, William",
+  title =	"An Introduction to Probability Theory and Its Applications",
+  publisher =	"Wiley",
+  year = 	"1957",
+  address =	"New York"
+}
+
+@book{williamson00,
+    abstract = {Knowledge and Its Limits presents a systematic new conception of knowledge as a fundamental kind of mental state sensitive to the knower's environment. It makes a major contribution to the debate between externalist ad internalist philosophies of mind, and breaks radically with the epistemological tradition of analysing knowledge in terms of true belief. The theory casts light on a wide variety of philosophical issues: the problem of scepticism, the nature of evidence, probability and assertion, the dispute between realism and anti-realism and the paradox of the surprise examination. Williamson relates the new conception to structural limits on knowledge which imply that what can be known never exhausts what is true. The arguments are illustrated by rigorous models based on epistemic logic and probability theory. The result is a new way of doing epistemology for the twenty-first century.},
+    address = {Oxford},
+    author = {Williamson, Timothy},
+    citeulike-article-id = {7369763},
+    citeulike-linkout-0 = {http://www.worldcat.org/isbn/9780198250432},
+    citeulike-linkout-1 = {http://books.google.com/books?vid=ISBN9780198250432},
+    citeulike-linkout-2 = {http://www.amazon.com/gp/search?keywords=9780198250432\&index=books\&linkCode=qs},
+    citeulike-linkout-3 = {http://www.librarything.com/isbn/9780198250432},
+    citeulike-linkout-4 = {http://www.worldcat.org/oclc/43919781},
+    isbn = {9780198250432},
+    keywords = {epistemology},
+    posted-at = {2010-06-30 15:29:42},
+    priority = {2},
+    publisher = {Oxford University Press},
+    title = {Knowledge and Its Limits},
+    url = {http://www.worldcat.org/isbn/9780198250432},
+    year = {2000}
+}
+
+@book{bertrand88,
+  author =	"Bertrand, Joseph Louis Fran{\c{c}}ois",
+  title =	"Calcul des probabilit{\'e}s",
+  publisher =	"Gauthiers-Villars",
+  year = 	"1888",
+  address =	"Paris"
+}
+
+@book{kolmogorov50,
+  author =	"Kolmogorov, A. N.",
+  title =	"Foundations of the Theory of Probability",
+  publisher =	"Chelsea Publishing",
+  year = 	"1950",
+  address =	"New York"
+}
+
+@book{khinchin57,
+  author =	"Khinchin, A. I.",
+  title =	"Mathematical Foundations of Information Theory",
+  publisher =	"Dover Publications",
+  year = 	"1957",
+  address =	"New York"
+}
+
+@book{loeve55,
+  author =	"Lo{\`e}ve, Michel",
+  title =	"Probability Theory",
+  publisher =	"Van Nostrand",
+  year = 	"1955",
+  address =	"Princeton, NJ"
+}
+
+@book{guiasu77,
+  author =	"Guia{\c{s}}u, Silviu",
+  title =	"Information Theory with Application",
+  publisher =	"McGraw-Hill",
+  year = 	"1977",
+  address =	"New York"
+}
+
+@book{fadeev57,
+  author =	"Fadeev, D.",
+  title =	"Zum Begriff der Entropie eines endlichen Wahrscheinlichkeitsschemas",
+  publisher =	"Deutscher Verlag der Wissenschaften",
+  year = 	"1957",
+  address =	"Berlin"
+}
+
+@book{mackay02,
+  author =	"MacKay, D. J. C.",
+  title =	"Information Theory, Inference, and Learning Algorithms",
+  publisher =	"Cambridge University",
+  year = 	"2002",
+  address =	"Cambridge"
+}
+
+@article{kolmogorov68,
+    abstract = {Logical basis for information theory as well as probability theory is proposed, based on computing complexity.},
+    author = {Kolmogorov, A. N.},
+    booktitle = {Information Theory, IEEE Transactions on},
+    citeulike-article-id = {2641577},
+    citeulike-linkout-0 = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1054210},
+    day = {06},
+    journal = {Information Theory, IEEE Transactions on},
+    keywords = {information, probability, theory},
+    month = {January},
+    number = {5},
+    pages = {662--664},
+    posted-at = {2008-04-08 14:13:40},
+    priority = {2},
+    title = {Logical Basis for Information Theory and Probability Theory},
+    url = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1054210},
+    volume = {14},
+    year = {1968}
+}
+
+@article{zhulu04,
+    abstract = {In Bayesian statistics, the choice of the prior distribution is often controversial.  Different
+rules for selecting priors have been suggested in the literature, which, sometimes, produce
+priors that are difficult for the students to understand intuitively.  In this article, we use a
+simple heuristic to illustrate to the students the rather counter-intuitive fact that flat priors
+are not necessarily non-informative; and non-informative priors are not necessarily flat.},
+    author = {Zhu, Mu and Lu, Arthur Y.},
+    journal = {Journal of Statistics Education},
+    keywords = {Beta Distribution; Conjugate priors; Maximum likelihood estimation; Posterior mean},
+    number = {2},
+    pages = {1--10},
+    title = {The Counter-Intuitive Non-Informative Prior for the Bernoulli Family},
+    url = {http://www.amstat.org/publications/jse/v12n2/zhu.pdf},
+    volume = {12},
+    year = {2004}
+}
+
+@article{hjorland07,
+    abstract = {This article contrasts Bates' understanding of information as an observer-independent phenomenon with an understanding of information as situational, put forward by, among others, Bateson, Yovits, Spang-Hanssen, Brier, Buckland, Goguen, and Hj{\o}rland. The conflict between objective and subjective ways of understanding information corresponds to the conflict between an understanding of information as a thing or a substance versus an understanding of it as a sign. It is a fundamental distinction that involves a whole theory of knowledge, and it has roots back to different metaphors applied in Shannon's information theory. It is argued that a subject-dependent/situation specific understanding of information is best suited to fulfill the needs in information science and that it is urgent for us to base Information Science (IS; or Library and Information Science, LIS) on this alternative theoretical frame.},
+    address = {Royal School of Library and Information Science, 6 Birketinger, DK-2300, Copenhagen S, Denmark},
+    author = {Hj{\o}rland, Birger},
+    citeulike-article-id = {2334394},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1002/asi.20620},
+    citeulike-linkout-1 = {http://www3.interscience.wiley.com/cgi-bin/abstract/114278626/ABSTRACT},
+    doi = {10.1002/asi.20620},
+    issn = {15322882},
+    journal = {Journal of the American Society for Information Science and Technology},
+    keywords = {information, theory},
+    month = {August},
+    number = {10},
+    pages = {1448--1456},
+    posted-at = {2008-02-05 11:17:09},
+    priority = {0},
+    title = {Information: Objective or subjective/situational?},
+    url = {http://dx.doi.org/10.1002/asi.20620},
+    volume = {58},
+    year = {2007}
+}
+
+@article{chaitin74,
+    abstract = {This paper attempts to describe, in nontechnical language, some of the concepts and methods of one school of thought regarding computational complexity. It applies the viewpoint of information theory to computers. This will first lead us to a definition of the degree of randomness of individual binary strings, and then to an information-theoretic version of G\&\#246;del's theorem on the limitations of the axiomatic method. Finally, we will examine in the light of these ideas the scientific method and yon Neumann's views on the basic conceptual problems of biology.},
+    author = {Chaitin, G.},
+    citeulike-article-id = {449316},
+    citeulike-linkout-0 = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1055172},
+    journal = {Information Theory, IEEE Transactions on},
+    keywords = {computation, information},
+    number = {1},
+    pages = {10--15},
+    posted-at = {2005-12-24 06:22:30},
+    priority = {2},
+    title = {Information-theoretic computation complexity},
+    url = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1055172},
+    volume = {20},
+    year = {1974}
+}
+
+@article{clarkebarron90,
+    abstract = {In the absence of knowledge of the true density function, Bayesian models take the joint density function for a sequence of <e1>n</e1> random variables to be an average of densities with respect to a prior. The authors examine the relative entropy distance <e1>D</e1><sub>n</sub> between the true density and the Bayesian density and show that the asymptotic distance is (<e1>d</e1>/2)(log <e1>n</e1>)+<e1>c</e1>, where <e1>d</e1> is the dimension of the parameter vector. Therefore, the relative entropy rate <e1>D</e1><sub>n</sub>/<e1>n</e1> converges to zero at rate (log <e1>n</e1>)/<e1>n</e1>. The constant <e1>c</e1>, which the authors explicitly identify, depends only on the prior density function and the Fisher information matrix evaluated at the true parameter value. Consequences are given for density estimation, universal data compression, composite hypothesis testing, and stock-market portfolio selection},
+    author = {Clarke, B. S. and Barron, A. R.},
+    citeulike-article-id = {1363527},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1109/18.54897},
+    citeulike-linkout-1 = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=54897},
+    doi = {10.1109/18.54897},
+    journal = {Information Theory, IEEE Transactions on},
+    keywords = {asymptotics, bayesian, information},
+    number = {3},
+    pages = {453--471},
+    posted-at = {2009-02-11 19:26:41},
+    priority = {0},
+    title = {Information-theoretic asymptotics of Bayes methods},
+    url = {http://dx.doi.org/10.1109/18.54897},
+    volume = {36},
+    year = {1990}
+}
+
+@article{grunwald00,
+    author = {Grunwald, Peter},
+    title = {Model Selection Based on Minimum Description Length},
+    year = {2000},
+    journal = {Journal of Mathematical Psychology},
+    pages = {133--152},
+    volume = {44}
+}
+
+@article{ingardenurbanik62,
+    author = {Ingarden, R. S. and Urbanik, K.},
+    title = {Information Without Probability},
+    year = {1962},
+    journal = {Colloquium Mathematicum},
+    pages = {131--150},
+    volume = {9}
+}
+
+@article{yang95,
+    author = {Yang, Y.},
+    title = {Invariance of the Reference Prior under Reparametrization},
+    year = {1995},
+    journal = {Test},
+    pages = {83--94},
+    volume = {4},
+    number = {1}
+}
+
+@article{ingardenkossakowski71,
+    author = {Ingarden, R. S. and Kossakowski, A.},
+    title = {Poisson Probability Distribution and Information Thermodynamics},
+    year = {1971},
+    journal = {Bulletin of the Polish Academy of Sciences Mathematics Astronomy Physics},
+    pages = {83--86},
+    volume = {19}
+}
+
+@article{ingarden06,
+    author = {Ingarden, R. S.},
+    title = {Information Theory and Thermodynamics of Light Part I Foundations of Information Theory},
+    year = {2006},
+    journal = {Fortschritte der Physik},
+    pages = {567--594},
+    volume = {12}
+}
+
+@article{wallaceboulton68,
+    author = {Wallace, C. S. and Boulton, D. M.},
+    title = {An Information Measure for Classification},
+    year = {1968},
+    journal = {Computer Journal},
+    pages = {185--194},
+    volume = {11},
+    number = {2}
+}
+
+@article{kampe67,
+    author = {Kamp{\'e} de F{\'e}riet, J. and Forte, B.},
+    title = {Information et probabilit{\'e}},
+    year = {1967},
+    journal = {Comptes rendus de l'Acad{\'e}mie des sciences},
+    pages = {110--114},
+    volume = {A 265}
+}
+
+@article{solomonoff64,
+    author = {Solomonoff, Ray},
+    title = {A Formal Theory of Inductive Inference},
+    year = {1964},
+    journal = {Information and Control},
+    pages = {1--22},
+    volume = {7},
+    number = {1}
+}
+
+@article{rissanen78,
+    abstract = {The number of digits it takes to write
+    down an observed sequence x1 ... xN of a time series
+    depends on the model with its parameters that one
+    assumes to have generated the observed data.
+    Accordingly, by finding the model which minimizes
+    the description length one obtains estimates of both
+    the integer-valued structure parameters and the
+    real-valued system parameters.},
+    keywords = {Modeling; parameter estimation; identification; statistics; stochastic systems},
+    author = {Rissanen, J.},
+    title = {Modeling by Shortest Data Description},
+    year = {1968},
+    journal = {Automatica},
+    pages = {465--471},
+    volume = {14},
+    issue = {5}
+}
+
+@article{bozdogan00,
+    abstract = {In this paper we briefly study the basic idea of Akaike's (1973) information criterion (AIC). Then, we present some recent developments on a new entropic or  information complexity  (ICOMP) criterion of Bozdogan (1988a, 1988b, 1990, 1994d, 1996, 1998a, 1998b) for model selection. A rationale for ICOMP as a model selection criterion is that it combines a badness-of-fit term (such as minus twice the maximum log likelihood) with a measure of complexity of a model differently than AIC, or its variants, by taking into account the interdependencies of the parameter estimates as well as the dependencies of the model residuals. We operationalize the general form of ICOMP based on the quantification of the concept of overall model complexity in terms of the estimated  inverse-Fisher information matrix . This approach results in an approximation to the sum of two  Kullback–Leibler distances . Using the correlational form of the complexity, we further provide yet another form of ICOMP to take into account the interdependencies (i.e.,  correlations ) among the parameter estimates of the model. Later, we illustrate the practical utility and the importance of this new model selection criterion by providing several real as well as Monte Carlo simulation examples and compare its performance against AIC, or its variants.},
+    address = {The University of Tennessee},
+    author = {Bozdogan, H.},
+    citeulike-article-id = {376152},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1006/jmps.1999.1277},
+    citeulike-linkout-1 = {http://linkinghub.elsevier.com/retrieve/pii/S0022-2496(99)91277-4},
+    citeulike-linkout-2 = {http://view.ncbi.nlm.nih.gov/pubmed/10733858},
+    citeulike-linkout-3 = {http://www.hubmed.org/display.cgi?uids=10733858},
+    doi = {10.1006/jmps.1999.1277},
+    issn = {00222496},
+    journal = {Journal of Mathematical Psychology},
+    keywords = {ill, regularization},
+    month = {March},
+    number = {1},
+    pages = {62--91},
+    posted-at = {2005-11-02 01:26:39},
+    priority = {2},
+    title = {Akaike's Information Criterion and Recent Developments in Information Complexity},
+    url = {http://dx.doi.org/10.1006/jmps.1999.1277},
+    volume = {44},
+    year = {2000}
+}
+
+@article{akaike74,
+    abstract = {The history of the development of statistical hypothesis testing in time series analysis is reviewed briefly and it is pointed out that the hypothesis testing procedure is not adequately defined as the procedure for statistical model identification. The classical maximum likelihood estimation procedure is reviewed and a new estimate minimum information theoretical criterion (AIC) estimate (MAICE) which is designed for the purpose of statistical identification is introduced. When there are several competing models the MAICE is defined by the model and the maximum likelihood estimates of the parameters which give the minimum of AIC defined by AIC = (-2)log-(maximum likelihood) + 2(number of independently adjusted parameters within the model). MAICE provides a versatile procedure for statistical model identification which is free from the ambiguities inherent in the application of conventional hypothesis testing procedure. The practical utility of MAICE in time series analysis is demonstrated with some numerical examples.},
+    author = {Akaike, H.},
+    citeulike-article-id = {849862},
+    citeulike-linkout-0 = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1100705},
+    day = {06},
+    journal = {Automatic Control, IEEE Transactions on},
+    keywords = {aic, model, selection, statistical},
+    month = {January},
+    number = {6},
+    pages = {716--723},
+    posted-at = {2006-09-19 17:26:06},
+    priority = {5},
+    title = {A new look at the statistical model identification},
+    url = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1100705},
+    volume = {19},
+    year = {1974}
+}
+
+@article{jaynes57,
+    abstract = {Information theory provides a constructive criterion for setting up probability distributions on the basis of partial knowledge, and leads to a type of statistical inference which is called the maximum-entropy estimate. It is the least biased estimate possible on the given information; i.e., it is maximally noncommittal with regard to missing information. If one considers statistical mechanics as a form of statistical inference rather than as a physical theory, it is found that the usual computational rules, starting with the determination of the partition function, are an immediate consequence of the maximum-entropy principle. In the resulting "subjective statistical mechanics," the usual rules are thus justified independently of any physical argument, and in particular independently of experimental verification; whether or not the results agree with experiment, they still represent the best estimates that could have been made on the basis of the information available. It is concluded that statistical mechanics need not be regarded as a physical theory dependent for its validity on the truth of additional assumptions not contained in the laws of mechanics (such as ergodicity, metric transitivity, equal  a priori  probabilities, etc.). Furthermore, it is possible to maintain a sharp distinction between its physical and statistical aspects. The former consists only of the correct enumeration of the states of a system and their properties; the latter is a straightforward example of statistical inference.},
+    author = {Jaynes, E. T.},
+    citeulike-article-id = {695031},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1103/PhysRev.106.620},
+    citeulike-linkout-1 = {http://link.aps.org/abstract/PR/v106/i4/p620},
+    citeulike-linkout-2 = {http://link.aps.org/pdf/PR/v106/i4/p620},
+    day = {15},
+    doi = {10.1103/PhysRev.106.620},
+    journal = {Physical Review Online Archive (Prola)},
+    keywords = {jaynes},
+    month = {May},
+    number = {4},
+    pages = {620--630},
+    posted-at = {2006-06-13 17:27:48},
+    priority = {0},
+    publisher = {American Physical Society},
+    title = {Information Theory and Statistical Mechanics},
+    url = {http://dx.doi.org/10.1103/PhysRev.106.620},
+    volume = {106},
+    year = {1957}
+}
+
+@book{kullback59,
+    abstract = {{<div>Highly useful text studies the logarithmic measures of information and their application to testing statistical hypotheses. Topics include introduction and definition of measures of information, their relationship to Fisher's information measure and sufficiency, fundamental inequalities of information theory, much more. Numerous worked examples and problems. References. Glossary. Appendix. 1968 2nd, revised edition.<br></div>}},
+    author = {Kullback, Solomon},
+    citeulike-article-id = {2795610},
+    citeulike-linkout-0 = {http://www.amazon.ca/exec/obidos/redirect?tag=citeulike09-20\&amp;path=ASIN/0486696847},
+    citeulike-linkout-1 = {http://www.amazon.de/exec/obidos/redirect?tag=citeulike01-21\&amp;path=ASIN/0486696847},
+    citeulike-linkout-2 = {http://www.amazon.fr/exec/obidos/redirect?tag=citeulike06-21\&amp;path=ASIN/0486696847},
+    citeulike-linkout-3 = {http://www.amazon.jp/exec/obidos/ASIN/0486696847},
+    citeulike-linkout-4 = {http://www.amazon.co.uk/exec/obidos/ASIN/0486696847/citeulike00-21},
+    citeulike-linkout-5 = {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20\&path=ASIN/0486696847},
+    citeulike-linkout-6 = {http://www.worldcat.org/isbn/0486696847},
+    citeulike-linkout-7 = {http://books.google.com/books?vid=ISBN0486696847},
+    citeulike-linkout-8 = {http://www.amazon.com/gp/search?keywords=0486696847\&index=books\&linkCode=qs},
+    citeulike-linkout-9 = {http://www.librarything.com/isbn/0486696847},
+    comment = {p.26 local KL = quadratic form with Fisher's Information matrix p.89 (76) error of optimal hypothesis test in terms of KL divergence},
+    day = {07},
+    howpublished = {Paperback},
+    isbn = {0486696847},
+    keywords = {book, information-theory, statistics},
+    month = {July},
+    posted-at = {2010-08-11 23:31:47},
+    priority = {2},
+    publisher = {Dover Publications},
+    title = {Information Theory and Statistics},
+    url = {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20\&path=ASIN/0486696847},
+    year = {1959}
+}
+
+@article{wallacedowe99,
+    abstract = {The notion of algorithmic complexity was developed by Kolmogorov (1965) and Chaitin (1966) independently of one another and  of Solomonoff's notion (1964) of algorithmic probability.  Given a Turing machine T, the (prefix) algorithmic complexity of a string S is the length of the shortest input to T which would cause T to output S and stop. The Solomonoff probability of S given T is the probability that a random binary string of 0s and 1s will result in T producing an output having S as a prefix. We attempt to establish a parallel between a restricted (two-part) version of the Kolmogorov model and the minimum message length approach to statistical inference and machine learning of Wallace and Boulton (1968), in which an  explanation'  of a data string is modelled as a two-part message, the first part stating a general hypothesis about the data and the second encoding details of the data not implied by the hypothesis.  Solomonoff's model is tailored to prediction rather than inference in that it considers not just the most likely explanation, but  it also gives weights to all explanations depending upon their posterior probability. However, as the amount of data increases, we typically expect the most likely explanation to have a dominant weighting in the prediction. 10.1093/comjnl/42.4.270},
+    author = {Wallace, C. S. and Dowe, D. L.},
+    citeulike-article-id = {2283840},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1093/comjnl/42.4.270},
+    citeulike-linkout-1 = {http://comjnl.oxfordjournals.org/cgi/content/abstract/42/4/270},
+    day = {1},
+    doi = {10.1093/comjnl/42.4.270},
+    journal = {The Computer Journal},
+    keywords = {complexity, kolmogorov},
+    month = {April},
+    number = {4},
+    pages = {270--283},
+    posted-at = {2008-01-24 09:04:40},
+    priority = {4},
+    title = {Minimum Message Length and Kolmogorov Complexity},
+    url = {http://dx.doi.org/10.1093/comjnl/42.4.270},
+    volume = {42},
+    year = {1999}
+}
+
+@article{bernardo79,
+    abstract = {A procedure is proposed to derive reference posterior distributions which approximately describe the inferential content of the data without incorporating any other information. More explicitly, operational priors, derived from information-theoretical considerations, are used to obtain reference posteriors which may be expected to approximate the posteriors which would have been obtained with the use of proper priors describing vague initial states of knowledge. The results obtained unify and generalize some previous work and seem to overcome criticisms to which this has been subject.},
+    author = {Bernardo, Jose M.},
+    citeulike-article-id = {2531560},
+    citeulike-linkout-0 = {http://dx.doi.org/10.2307/2985028},
+    citeulike-linkout-1 = {http://www.jstor.org/stable/2985028},
+    doi = {10.2307/2985028},
+    issn = {00359246},
+    journal = {Journal of the Royal Statistical Society. Series B.},
+    keywords = {cp2},
+    number = {2},
+    pages = {113--147},
+    posted-at = {2008-03-14 10:37:49},
+    priority = {2},
+    publisher = {Blackwell Publishing for the Royal Statistical Society},
+    title = {Reference Posterior Distributions for Bayesian Inference},
+    url = {http://dx.doi.org/10.2307/2985028},
+    volume = {41},
+    year = {1979}
+}
+
+@article{turing37,
+    abstract = {10.1112/plms/s2-42.1.230},
+    author = {Turing, A. M.},
+    citeulike-article-id = {6421788},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1112/plms/s2-42.1.230},
+    day = {1},
+    doi = {10.1112/plms/s2-42.1.230},
+    journal = {Proc. London Math. Soc.},
+    keywords = {computability, turing},
+    month = {January},
+    number = {1},
+    pages = {230--265},
+    posted-at = {2010-03-18 15:43:37},
+    priority = {2},
+    title = {On Computable Numbers, with an Application to the Entscheidungsproblem},
+    url = {http://dx.doi.org/10.1112/plms/s2-42.1.230},
+    volume = {s2-42},
+    year = {1937}
+}
+
+@inproceedings{goguen97,
+    abstract = {: We seek to take some initial steps towards a theory of information that is
+    adequate for understanding and designing systems that process information, i.e., information
+    systems in a broad sense. Formal representations of information are needed
+    in designing, using and maintaining such systems, especially when they are computer
+    based. However, it is also necessary to take account of social context, including how
+    information is produced and used, not merely how it is represented; that is, we
+    ...},
+    author = {Goguen, Joseph A.},
+    title = {Towards a Social, Ethical Theory of Information},
+    editor = {Bowker, Geoffrey},
+    booktitle = {Social Science Research, Technical Systems, and Cooperative Work: Beyond the Great Divide},
+    pages = {27--56},
+    citeulike-article-id = {1643058},
+    citeulike-linkout-0 = {http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.51.7576},
+    keywords = {formalization, formalization-hypothesis, information-theory},
+    posted-at = {2007-09-11 02:00:30},
+    publisher = {Erlbaum},
+    priority = {2},
+    url = {http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.51.7576},
+    year = {1997}
+}
+
+@article{kolmogorov68a,
+    author = {Kolmogorov, A. N.},
+    citeulike-article-id = {5173601},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1080/00207166808803030},
+    doi = {10.1080/00207166808803030},
+    journal = {International Journal of Computer Mathematics},
+    keywords = {contribution, information, theory},
+    number = {1},
+    pages = {157--168},
+    posted-at = {2009-07-16 03:08:02},
+    priority = {2},
+    publisher = {Taylor \& Francis},
+    title = {Three Approaches to the Quantitative Definition of Information},
+    url = {http://dx.doi.org/10.1080/00207166808803030},
+    volume = {2},
+    year = {1968}
+}
+
+@article{gettier63,
+    author = {Gettier, Edmund L.},
+    citeulike-article-id = {2453583},
+    citeulike-linkout-0 = {http://www.jstor.org/stable/3326922},
+    journal = {Analysis},
+    keywords = {belief, epistemology, knowledge},
+    number = {6},
+    pages = {121--123},
+    posted-at = {2009-03-20 03:53:33},
+    priority = {0},
+    title = {Is Justified True Belief Knowledge?},
+    url = {http://www.jstor.org/stable/3326922},
+    volume = {23},
+    year = {1963}
+}
+
+@article{chaitin66,
+    address = {New York, NY, USA},
+    author = {Chaitin, G. J.},
+    citeulike-article-id = {225317},
+    citeulike-linkout-0 = {http://portal.acm.org/citation.cfm?id=321356.321363},
+    citeulike-linkout-1 = {http://dx.doi.org/10.1145/321356.321363},
+    doi = {10.1145/321356.321363},
+    issn = {0004-5411},
+    journal = {J. ACM},
+    keywords = {phy250, sta232c},
+    month = {October},
+    number = {4},
+    pages = {547--569},
+    posted-at = {2005-06-11 06:40:06},
+    priority = {2},
+    publisher = {ACM Press},
+    title = {On the Length of Programs for Computing Finite Binary Sequences},
+    url = {http://dx.doi.org/10.1145/321356.321363},
+    volume = {13},
+    year = {1966}
+}
+
+@article{dowegardneroppy07,
+author = {Dowe, David L. and Gardner, Steve and Oppy, Graham}, 
+title = {{Bayes not Bust! Why Simplicity is no Problem for Bayesians}}, 
+volume = {58}, 
+number = {4}, 
+pages = {709-754}, 
+year = {2007}, 
+doi = {10.1093/bjps/axm033}, 
+abstract ={The advent of formal definitions of the simplicity of a theory has important implications for model selection. But what is the best way to define simplicity? Forster and Sober ([1994]) advocate the use of Akaike's Information Criterion (AIC), a non-Bayesian formalisation of the notion of simplicity. This forms an important part of their wider attack on Bayesianism in the philosophy of science. We defend a Bayesian alternative: the simplicity of a theory is to be characterised in terms of Wallace's Minimum Message Length (MML). We show that AIC is inadequate for many statistical problems where MML performs well. Whereas MML is always defined, AIC can be undefined. Whereas MML is not known ever to be statistically inconsistent, AIC can be. Even when defined and consistent, AIC performs worse than MML on small sample sizes. MML is statistically invariant under 1-to-1 re-parametrisation, thus avoiding a common criticism of Bayesian approaches. We also show that MML provides answers to many of Forster's objections to Bayesianism. Hence an important part of the attack on Bayesianism fails.
+IntroductionThe Curve Fitting Problem2.1 Curves and families of curves2.2 Noise2.3 The method of Maximum Likelihood2.4 ML and over-fittingAkaike's Information Criterion (AIC)The Predictive Accuracy FrameworkThe Minimum Message Length (MML) Principle5.1 The Strict MML estimator5.2 An example: The binomial distribution5.3 Properties of the SMML estimator5.3.1  Bayesianism5.3.2  Language invariance5.3.3Generality5.3.4  Consistency and efficiency5.4 Similarity to false oracles5.5 Approximations to SMMLCriticisms of AIC6.1 Problems with ML6.1.1  Small sample bias in a Gaussian distribution6.1.2  The von Mises circular and von Mises—Fisher spherical distributions6.1.3  The Neyman–Scott problem6.1.4  Neyman–Scott, predictive accuracy and minimum expected KL distance6.2 Other problems with AIC6.2.1  Univariate polynomial regression6.2.2  Autoregressive econometric time series6.2.3  Multivariate second-order polynomial model selection6.2.4  Gap or no gap: a clustering-like problem for AIC6.3 Conclusions from the comparison of MML and AICMeeting Forster's objections to Bayesianism7.1 The sub-family problem7.2 The problem of approximation, or, which framework for statistics?Conclusion
+Details of the derivation of the Strict MML estimatorMML, AIC and the Gap vs. No Gap ProblemB.1 Expected size of the largest gapB.2 Performance of AIC on the gap vs. no gap problemB.3 Performance of MML in the gap vs. no gap problem
+}, 
+URL = {http://bjps.oxfordjournals.org/content/58/4/709.abstract}, 
+eprint = {http://bjps.oxfordjournals.org/content/58/4/709.full.pdf+html}, 
+journal = {The British Journal for the Philosophy of Science}
+}
+
+@article{shannon48,
+    abstract = {Note: OCR errors may be found in this Reference List extracted from the full text article.  ACM has opted to expose the complete List rather than only correct and linked references.},
+    address = {New York, NY, USA},
+    author = {Shannon, C. E.},
+    citeulike-article-id = {364378},
+    citeulike-linkout-0 = {http://portal.acm.org/citation.cfm?id=584093},
+    citeulike-linkout-1 = {http://dx.doi.org/10.1145/584091.584093},
+    doi = {10.1145/584091.584093},
+    issn = {1559-1662},
+    journal = {The Bell System Technical Journal},
+    keywords = {channel-capacity, shannon},
+    month = {January},
+    number = {1},
+    pages = {379--423, 623--656},
+    posted-at = {2006-08-16 00:26:41},
+    priority = {2},
+    publisher = {ACM},
+    title = {A Mathematical Theory of Communication},
+    url = {http://dx.doi.org/10.1145/584091.584093},
+    volume = {27},
+    year = {1948}
+}
+
+@book{mingvitanyi97,
+    abstract = {{"The book is outstanding and admirable in many respects. ... is  necessary reading for all kinds of readers from undergraduate students  to top authorities in the field." Journal of Symbolic Logic  Written by two experts in the field, this is the only comprehensive  and unified treatment of the central ideas and their applications of  Kolmogorov complexity. the book presents a thorough treatment of the  subject with a wide range of illsutrative applications. Such  applications include the randomeness of finite objects or infinite  sequences, Martin-Loef tests for randomness, information theory,  computationla learning theory, the complexity of algorithms, and the  thermodynamics of computing.  It will be ideal for advanced undergraduate students, graduate  students, and researchers in computer science, mathematics, cognitive  sciences, philosophy, artificial intelligence, statistics, and  physics. the book is self-contained in that it contains the basic  requirements from mathematics and computer science. Included are also  numerous problem sets, comments, source references, and himnts to  solutions of problems.  In this new edition the authors have added new material on circuit  theory, distributed algorithms, data compression, and other topics.}},
+    author = {Li, Ming and Vitanyi, Paul},
+    citeulike-article-id = {312832},
+    citeulike-linkout-0 = {http://www.amazon.ca/exec/obidos/redirect?tag=citeulike09-20\&amp;path=ASIN/0387948686},
+    citeulike-linkout-1 = {http://www.amazon.de/exec/obidos/redirect?tag=citeulike01-21\&amp;path=ASIN/0387948686},
+    citeulike-linkout-2 = {http://www.amazon.fr/exec/obidos/redirect?tag=citeulike06-21\&amp;path=ASIN/0387948686},
+    citeulike-linkout-3 = {http://www.amazon.co.uk/exec/obidos/ASIN/0387948686/citeulike00-21},
+    citeulike-linkout-4 = {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20\&path=ASIN/0387948686},
+    citeulike-linkout-5 = {http://www.worldcat.org/isbn/0387948686},
+    citeulike-linkout-6 = {http://books.google.com/books?vid=ISBN0387948686},
+    citeulike-linkout-7 = {http://www.amazon.com/gp/search?keywords=0387948686\&index=books\&linkCode=qs},
+    citeulike-linkout-8 = {http://www.librarything.com/isbn/0387948686},
+    day = {27},
+    howpublished = {Hardcover},
+    isbn = {0387948686},
+    month = {February},
+    posted-at = {2005-09-08 03:25:45},
+    priority = {2},
+    publisher = {Springer},
+    title = {An Introduction to Kolmogorov Complexity and Its Applications (Texts in Computer Science)},
+    url = {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20\&path=ASIN/0387948686},
+    year = {1997}
+}
+
+@book{shimony93,
+    abstract = {Abner Shimony is one of the most eminent of present-day philosophers of science, whose work has exerted a profound influence in both the philosophy and physics communities. This two-volume collection of his essays written over a period of forty years explores the interrelations between science and philosophy. Shimony regards the knowing subject as an entity in nature whose faculties must be studied from the points of view of evolutionary biology and empirical psychology. He maintains that the twentieth century is one of the great ages of metaphysics, given the deep implications of quantum mechanics, relativity theory, and molecular biology. Nevertheless he rejects the thesis that mentality is entirely explicable in physical terms and argues that mind has a fundamental place in nature. Though distinguishing between values and scientifically established facts, Shimony holds that the sense of wonder cultivated by the natural sciences is one of the noblest of human values. The first volume, Scientific Method and Epistemology, deals with the dialectic of subject and object, epistemic probability, induction and scientific theories, perception and conception, and fact and values. The focus of the second volume, Natural Science and Metaphysics, is on quantum mechanical measurement and nonlocality, parts and wholes, time, and mind and matter. The volumes will be of great interest to a broad range of philosophers of science as well as those who teach epistemology and metaphysics. The collection will also be read by philosophically-minded natural scientists, especially physicists.},
+    author = {Shimony, Abner},
+    citeulike-article-id = {1020901},
+    citeulike-linkout-0 = {http://www.amazon.ca/exec/obidos/redirect?tag=citeulike09-20\&amp;path=ASIN/0521373522},
+    citeulike-linkout-1 = {http://www.amazon.fr/exec/obidos/redirect?tag=citeulike06-21\&amp;path=ASIN/0521373522},
+    citeulike-linkout-2 = {http://www.amazon.co.uk/exec/obidos/ASIN/0521373522/citeulike00-21},
+    citeulike-linkout-3 = {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20\&path=ASIN/0521373522},
+    citeulike-linkout-4 = {http://www.worldcat.org/isbn/0521373522},
+    citeulike-linkout-5 = {http://books.google.com/books?vid=ISBN0521373522},
+    citeulike-linkout-6 = {http://www.amazon.com/gp/search?keywords=0521373522\&index=books\&linkCode=qs},
+    citeulike-linkout-7 = {http://www.librarything.com/isbn/0521373522},
+    day = {26},
+    howpublished = {Hardcover},
+    isbn = {0521373522},
+    keywords = {naturalism},
+    month = {February},
+    posted-at = {2006-12-31 14:41:33},
+    priority = {4},
+    publisher = {Cambridge University Press},
+    title = {The Search for a Naturalistic World View},
+    url = {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20\&path=ASIN/0521373522},
+    year = {1993}
+}
+
+@article{raatikainen98,
+    author = {Raatikainen, Panu},
+    citeulike-article-id = {1877803},
+    comment = {Les conclusions qu'on tire d'ordinaire de ce th\'{e}or\`{e}me, dont Chaitin lui-m\^{e}me, reposent sur une confusion entre l'information s\'{e}mantique et syntaxique, entre l'usage et la mention.},
+    journal = {Journal of Philosophical Logic},
+    keywords = {complexity},
+    pages = {569--586},
+    posted-at = {2007-11-07 15:00:14},
+    priority = {0},
+    title = {On Interpreting Chaitin's Incompleteness Theorem},
+    volume = {27},
+    year = {1998}
+}
+
+@book{torkel05,
+    author = {Franz{\'e}n, Torkel},
+    citeulike-article-id = {2356565},
+    citeulike-linkout-0 = {http://www.amazon.ca/exec/obidos/redirect?tag=citeulike09-20\&amp;path=ASIN/1568812388},
+    citeulike-linkout-1 = {http://www.amazon.de/exec/obidos/redirect?tag=citeulike01-21\&amp;path=ASIN/1568812388},
+    citeulike-linkout-2 = {http://www.amazon.fr/exec/obidos/redirect?tag=citeulike06-21\&amp;path=ASIN/1568812388},
+    citeulike-linkout-3 = {http://www.amazon.co.uk/exec/obidos/ASIN/1568812388/citeulike00-21},
+    citeulike-linkout-4 = {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20\&path=ASIN/1568812388},
+    citeulike-linkout-5 = {http://www.worldcat.org/isbn/1568812388},
+    citeulike-linkout-6 = {http://books.google.com/books?vid=ISBN1568812388},
+    citeulike-linkout-7 = {http://www.amazon.com/gp/search?keywords=1568812388\&index=books\&linkCode=qs},
+    citeulike-linkout-8 = {http://www.librarything.com/isbn/1568812388},
+    day = {25},
+    howpublished = {Paperback},
+    isbn = {1568812388},
+    keywords = {logic, model-theory, proof-theory},
+    month = {May},
+    posted-at = {2009-08-15 14:22:22},
+    priority = {0},
+    publisher = {A K Peters, Ltd.},
+    title = {G\"{o}del's Theorem: An Incomplete Guide to Its Use and Abuse},
+    url = {http://www.amazon.com/exec/obidos/redirect?tag=citeulike07-20\&path=ASIN/1568812388},
+    year = {2005}
+}
+
+@article{cristofaro04,
+    title = "On the foundations of likelihood principle",
+    journal = "Journal of Statistical Planning and Inference",
+    volume = "126",
+    number = "2",
+    pages = "401 - 411",
+    year = "2004",
+    note = "",
+    issn = "0378-3758",
+    doi = "DOI: 10.1016/j.jspi.2003.08.011",
+    url = "http://www.sciencedirect.com/science/article/B6V0M-49V19CC-1/2/6231d46b7368703718f2c38effaf159d",
+    author = "Rodolfo de Cristofaro",
+    keywords = "Bayes theorem",
+    keywords = "Jeffreys' rule",
+    keywords = "Likelihood principle",
+    keywords = "Prior probabilities",
+    keywords = "Randomization",
+    keywords = "Stopping rule"
+}
+
+@article{lindley56,
+    abstract = {A measure is introduced of the information provided by an experiment. The measure is derived from the work of Shannon [10] and involves the knowledge prior to performing the experiment, expressed through a prior probability distribution over the parameter space. The measure is used to compare some pairs of experiments without reference to prior distributions; this method of comparison is contrasted with the methods discussed by Blackwell. Finally, the measure is applied to provide a solution to some problems of experimental design, where the object of experimentation is not to reach decisions but rather to gain knowledge about the world.},
+    author = {Lindley, D. V.},
+    citeulike-article-id = {6157406},
+    citeulike-linkout-0 = {http://dx.doi.org/10.2307/2237191},
+    citeulike-linkout-1 = {http://www.jstor.org/stable/2237191},
+    doi = {10.2307/2237191},
+    issn = {00034851},
+    journal = {The Annals of Mathematical Statistics},
+    keywords = {bayesian, experiment, experimental-design, information, knowledge, measure, prior, science},
+    number = {4},
+    pages = {986--1005},
+    posted-at = {2010-01-30 00:11:13},
+    priority = {2},
+    publisher = {Institute of Mathematical Statistics},
+    title = {On a Measure of the Information Provided by an Experiment},
+    url = {http://dx.doi.org/10.2307/2237191},
+    volume = {27},
+    year = {1956}
+}
+
+@article{chomsky56,
+    abstract = {We investigate several conceptions of linguistic structure to determine whether or not they can provide simple and "revealing" grammars that generate all of the sentences of English and only these. We find that no finite-state Markov process that produces symbols with transition from state to state can serve as an English grammar. Furthermore, the particular subclass of such processes that produce<tex>n</tex>-order statistical approximations to English do not come closer, with increasing<tex>n</tex>, to matching the output of an English grammar. We formalize-the notions of "phrase structure" and show that this gives us a method for describing language which is essentially more powerful, though still representable as a rather elementary type of finite-state process. Nevertheless, it is successful only when limited to a small subset of simple sentences. We study the formal properties of a set of grammatical transformations that carry sentences with phrase structure into new sentences with derived phrase structure, showing that transformational grammars are processes of the same elementary type as phrase-structure grammars; that the grammar of English is materially simplified if phrase structure description is limited to a kernel of simple sentences from which all other sentences are constructed by repeated transformations; and that this view of linguistic structure gives a certain insight into the use and understanding of language.},
+    author = {Chomsky, N.},
+    citeulike-article-id = {158531},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1109/TIT.1956.1056813},
+    citeulike-linkout-1 = {http://ieeexplore.ieee.org/xpls/abs\_all.jsp?arnumber=1056813},
+    day = {06},
+    doi = {10.1109/TIT.1956.1056813},
+    journal = {Information Theory, IRE Transactions on},
+    keywords = {language, linguistics},
+    month = {January},
+    number = {3},
+    pages = {113--124},
+    posted-at = {2007-06-22 01:37:41},
+    priority = {2},
+    title = {Three Models for the Description of Language},
+    url = {http://dx.doi.org/10.1109/TIT.1956.1056813},
+    volume = {2},
+    pdfconv = {1956__Chomsky_Noam__Three_Models_for_the_Description_of_Language.pdf},
+    year = {1956}
+}
+
+@article{friston10,
+    abstract = {A free-energy principle has been proposed recently that accounts for action, perception and learning. This Review looks at some key brain theories in the biological (for example, neural Darwinism) and physical (for example, information theory and optimal control theory) sciences from the free-energy perspective. Crucially, one key theme runs through each of these theories — optimization. Furthermore, if we look closely at what is optimized, the same quantity keeps emerging, namely value (expected reward, expected utility) or its complement, surprise (prediction error, expected cost). This is the quantity that is optimized under the free-energy principle, which suggests that several global brain theories might be unified within a free-energy framework.},
+    author = {Friston, Karl},
+    citeulike-article-id = {6569490},
+    citeulike-linkout-0 = {http://dx.doi.org/10.1038/nrn2787},
+    citeulike-linkout-1 = {http://dx.doi.org/10.1038/nrn2787},
+    citeulike-linkout-2 = {http://view.ncbi.nlm.nih.gov/pubmed/20068583},
+    citeulike-linkout-3 = {http://www.hubmed.org/display.cgi?uids=20068583},
+    day = {13},
+    doi = {10.1038/nrn2787},
+    issn = {1471-003X},
+    journal = {Nature Reviews Neuroscience},
+    keywords = {brain},
+    month = {January},
+    number = {2},
+    pages = {127--138},
+    posted-at = {2010-01-21 16:54:24},
+    priority = {2},
+    publisher = {Nature Publishing Group},
+    title = {The free-energy principle: a unified brain theory?},
+    url = {http://dx.doi.org/10.1038/nrn2787},
+    volume = {11},
+    year = {2010}
+}
+

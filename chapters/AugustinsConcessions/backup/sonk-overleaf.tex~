@@ -1,0 +1,1770 @@
+%\title{IEEE for journals template with bibtex example files included}
+%% bare_jrnl.tex
+%% V1.4
+%% 2012/12/27
+%% by Michael Shell
+%% see http://www.michaelshell.org/
+%% for current contact information.
+%%
+%% This is a skeleton file demonstrating the use of IEEEtran.cls
+%% (requires IEEEtran.cls version 1.8 or later) with an IEEE journal paper.
+%%
+%% Support sites:
+%% http://www.michaelshell.org/tex/ieeetran/
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/IEEEtran/
+%% and
+%% http://www.ieee.org/
+
+
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% The testflow support page is at:
+% http://www.michaelshell.org/tex/testflow/
+
+
+%%*************************************************************************
+%% Legal Notice:
+%% This code is offered as-is without any warranty either expressed or
+%% implied; without even the implied warranty of MERCHANTABILITY or
+%% FITNESS FOR A PARTICULAR PURPOSE! 
+%% User assumes all risk.
+%% In no event shall IEEE or any contributor to this code be liable for
+%% any damages or losses, including, but not limited to, incidental,
+%% consequential, or any other damages, resulting from the use or misuse
+%% of any information contained here.
+%%
+%% All comments are the opinions of their respective authors and are not
+%% necessarily endorsed by the IEEE.
+%%
+%% This work is distributed under the LaTeX Project Public License (LPPL)
+%% ( http://www.latex-project.org/ ) version 1.3, and may be freely used,
+%% distributed and modified. A copy of the LPPL, version 1.3, is included
+%% in the base LaTeX documentation of all distributions of LaTeX released
+%% 2003/12/01 or later.
+%% Retain all contribution notices and credits.
+%% ** Modified files should be clearly indicated as such, including  **
+%% ** renaming them and changing author support contact information. **
+%%
+%% File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
+%%                    bare_conf.tex, bare_jrnl.tex, bare_jrnl_compsoc.tex,
+%%                    bare_jrnl_transmag.tex
+%%*************************************************************************
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print - the typesetting of the document will not typically be
+% affected with changes in paper size (but the bottom and side margins will).
+% Use the testflow package mentioned above to verify correct handling of
+% both paper sizes by the user's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+\documentclass[journal]{IEEEtran}
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[journal]{../sty/IEEEtran}
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+
+% *** MISC UTILITY PACKAGES ***
+%
+%\usepackage{ifpdf}
+% Heiko Oberdiek's ifpdf.sty is very useful if you need conditional
+% compilation based on whether the output is pdf or dvi.
+% usage:
+% \ifpdf
+%   % pdf code
+% \else
+%   % dvi code
+% \fi
+% The latest version of ifpdf.sty can be obtained from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/oberdiek/
+% Also, note that IEEEtran.cls V1.7 and later provides a builtin
+% \ifCLASSINFOpdf conditional that works the same way.
+% When switching from latex to pdflatex and vice-versa, the compiler may
+% have to be run twice to clear warning/error messages.
+
+
+
+
+
+
+% *** CITATION PACKAGES ***
+%
+\usepackage{cite}
+% cite.sty was written by Donald Arseneau
+% V1.6 and later of IEEEtran pre-defines the format of the cite.sty package
+% \cite{} output to follow that of IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 4.0 (2003-05-27) and later if using hyperref.sty. cite.sty does
+% not currently provide for hyperlinked citations.
+% The latest version can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/cite/
+% The documentation is contained in the cite.sty file itself.
+
+
+
+
+
+
+% *** GRAPHICS RELATED PACKAGES ***
+%
+\ifCLASSINFOpdf
+  % \usepackage[pdftex]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../pdf/}{../jpeg/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.pdf,.jpeg,.png}
+\else
+  % or other class option (dvipsone, dvipdf, if not using dvips). graphicx
+  % will default to the driver specified in the system graphics.cfg if no
+  % driver is specified.
+  % \usepackage[dvips]{graphicx}
+  % declare the path(s) where your graphic files are
+  % \graphicspath{{../eps/}}
+  % and their extensions so you won't have to specify these with
+  % every instance of \includegraphics
+  % \DeclareGraphicsExtensions{.eps}
+\fi
+% graphicx was written by David Carlisle and Sebastian Rahtz. It is
+% required if you want graphics, photos, etc. graphicx.sty is already
+% installed on most LaTeX systems. The latest version and documentation
+% can be obtained at: 
+% http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+% Another good source of documentation is "Using Imported Graphics in
+% LaTeX2e" by Keith Reckdahl which can be found at:
+% http://www.ctan.org/tex-archive/info/epslatex/
+%
+% latex, and pdflatex in dvi mode, support graphics in encapsulated
+% postscript (.eps) format. pdflatex in pdf mode supports graphics
+% in .pdf, .jpeg, .png and .mps (metapost) formats. Users should ensure
+% that all non-photo figures use a vector format (.eps, .pdf, .mps) and
+% not a bitmapped formats (.jpeg, .png). IEEE frowns on bitmapped formats
+% which can result in "jaggedy"/blurry rendering of lines and letters as
+% well as large increases in file sizes.
+%
+% You can find documentation about the pdfTeX application at:
+% http://www.tug.org/applications/pdftex
+
+
+
+
+
+% *** MATH PACKAGES ***
+%
+%\usepackage[cmex10]{amsmath}
+% A popular package from the American Mathematical Society that provides
+% many useful and powerful commands for dealing with mathematics. If using
+% it, be sure to load this package with the cmex10 option to ensure that
+% only type 1 fonts will utilized at all point sizes. Without this option,
+% it is possible that some math symbols, particularly those within
+% footnotes, will be rendered in bitmap form which will result in a
+% document that can not be IEEE Xplore compliant!
+%
+% Also, note that the amsmath package sets \interdisplaylinepenalty to 10000
+% thus preventing page breaks from occurring within multiline equations. Use:
+%\interdisplaylinepenalty=2500
+% after loading amsmath to restore such page breaks as IEEEtran.cls normally
+% does. amsmath.sty is already installed on most LaTeX systems. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+
+
+% *** SPECIALIZED LIST PACKAGES ***
+%
+%\usepackage{algorithmic}
+% algorithmic.sty was written by Peter Williams and Rogerio Brito.
+% This package provides an algorithmic environment fo describing algorithms.
+% You can use the algorithmic environment in-text or within a figure
+% environment to provide for a floating algorithm. Do NOT use the algorithm
+% floating environment provided by algorithm.sty (by the same authors) or
+% algorithm2e.sty (by Christophe Fiorio) as IEEE does not use dedicated
+% algorithm float types and packages that provide these will not provide
+% correct IEEE style captions. The latest version and documentation of
+% algorithmic.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithms/
+% There is also a support site at:
+% http://algorithms.berlios.de/index.html
+% Also of interest may be the (relatively newer and more customizable)
+% algorithmicx.sty package by Szasz Janos:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/algorithmicx/
+
+
+
+
+% *** ALIGNMENT PACKAGES ***
+%
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty patches and improves
+% the standard LaTeX2e array and tabular environments to provide better
+% appearance and additional user controls. As the default LaTeX2e table
+% generation code is lacking to the point of almost being broken with
+% respect to the quality of the end results, all users are strongly
+% advised to use an enhanced (at the very least that provided by array.sty)
+% set of table tools. array.sty is already installed on most systems. The
+% latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+
+% IEEEtran contains the IEEEeqnarray family of commands that can be used to
+% generate multiline equations as well as matrices, tables, etc., of high
+% quality.
+
+
+
+
+% *** SUBFIGURE PACKAGES ***
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a larger sans serif font
+% than the serif footnote size font used in traditional IEEE formatting
+% and thus the need to invoke different subfig.sty package options depending
+% on whether compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/subfig/
+
+
+
+
+% *** FLOAT PACKAGES ***
+%
+%\usepackage{fixltx2e}
+% fixltx2e, the successor to the earlier fix2col.sty, was written by
+% Frank Mittelbach and David Carlisle. This package corrects a few problems
+% in the LaTeX2e kernel, the most notable of which is that in current
+% LaTeX2e releases, the ordering of single and double column floats is not
+% guaranteed to be preserved. Thus, an unpatched LaTeX2e can allow a
+% single column figure to be placed prior to an earlier double column
+% figure. The latest version and documentation can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/base/
+
+
+%\usepackage{stfloats}
+% stfloats.sty was written by Sigitas Tolusis. This package gives LaTeX2e
+% the ability to do double column floats at the bottom of the page as well
+% as the top. (e.g., "\begin{figure*}[!b]" is not normally possible in
+% LaTeX2e). It also provides a command:
+%\fnbelowfloat
+% to enable the placement of footnotes below bottom floats (the standard
+% LaTeX2e kernel puts them above bottom floats). This is an invasive package
+% which rewrites many portions of the LaTeX2e float routines. It may not work
+% with other packages that modify the LaTeX2e float routines. The latest
+% version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/sttools/
+% Do not use the stfloats baselinefloat ability as IEEE does not allow
+% \baselineskip to stretch. Authors submitting work to the IEEE should note
+% that IEEE rarely uses double column equations and that authors should try
+% to avoid such use. Do not be tempted to use the cuted.sty or midfloat.sty
+% packages (also by Sigitas Tolusis) as IEEE does not format its papers in
+% such ways.
+% Do not attempt to use stfloats with fixltx2e as they are incompatible.
+% Instead, use Morten Hogholm'a dblfloatfix which combines the features
+% of both fixltx2e and stfloats:
+%
+% \usepackage{dblfloatfix}
+% The latest version can be found at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/dblfloatfix/
+
+
+
+
+%\ifCLASSOPTIONcaptionsoff
+%  \usepackage[nomarkers]{endfloat}
+% \let\MYoriglatexcaption\caption
+% \renewcommand{\caption}[2][\relax]{\MYoriglatexcaption[#2]{#2}}
+%\fi
+% endfloat.sty was written by James Darrell McCauley, Jeff Goldberg and 
+% Axel Sommerfeldt. This package may be useful when used in conjunction with 
+% IEEEtran.cls'  captionsoff option. Some IEEE journals/societies require that
+% submissions have lists of figures/tables at the end of the paper and that
+% figures/tables without any captions are placed on a page by themselves at
+% the end of the document. If needed, the draftcls IEEEtran class option or
+% \CLASSINPUTbaselinestretch interface can be used to increase the line
+% spacing as well. Be sure and use the nomarkers option of endfloat to
+% prevent endfloat from "marking" where the figures would have been placed
+% in the text. The two hack lines of code above are a slight modification of
+% that suggested by in the endfloat docs (section 8.4.1) to ensure that
+% the full captions always appear in the list of figures/tables - even if
+% the user used the short optional argument of \caption[]{}.
+% IEEE papers do not typically make use of \caption[]'s optional argument,
+% so this should not be an issue. A similar trick can be used to disable
+% captions of packages such as subfig.sty that lack options to turn off
+% the subcaptions:
+% For subfig.sty:
+% \let\MYorigsubfloat\subfloat
+% \renewcommand{\subfloat}[2][\relax]{\MYorigsubfloat[]{#2}}
+% However, the above trick will not work if both optional arguments of
+% the \subfloat command are used. Furthermore, there needs to be a
+% description of each subfigure *somewhere* and endfloat does not add
+% subfigure captions to its list of figures. Thus, the best approach is to
+% avoid the use of subfigure captions (many IEEE journals avoid them anyway)
+% and instead reference/explain all the subfigures within the main caption.
+% The latest version of endfloat.sty and its documentation can obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/endfloat/
+%
+% The IEEEtran \ifCLASSOPTIONcaptionsoff conditional can also be used
+% later in the document, say, to conditionally put the References on a 
+% page by themselves.
+
+
+
+
+% *** PDF, URL AND HYPERLINK PACKAGES ***
+%
+%\usepackage{url}
+% url.sty was written by Donald Arseneau. It provides better support for
+% handling and breaking URLs. url.sty is already installed on most LaTeX
+% systems. The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/url/
+% Basically, \url{my_url_here}.
+
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+% (Unless specifically asked to do so by the journal or conference you plan
+% to submit to, of course. )
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+%%% BEG OCTOBER
+% \setlength{\marginparwidth}{1.2in}
+% \let\oldmarginpar\marginpar
+% \renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+% {\raggedright\footnotesize #1}}
+
+% \frenchspacing % no extra space at the end of a sentence
+
+% \setlength{\parskip}{.1in}
+% \raggedright
+% \raggedbottom
+% \setlength{\parindent}{.2in}
+% \setlength{\parindent}{0in}
+
+% \pagestyle{empty}
+
+% 	PACKAGES
+\usepackage[small,bf]{caption}
+% \let\bcode\textbgreek
+% \usepackage[bgreek,english]{babel}
+\usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+\usepackage[table]{xcolor}
+\definecolor{lightgray}{gray}{0.9}
+% \usepackage{german}
+% \usepackage{hebtex}
+\usepackage{graphicx}
+% \usepackage[german]{babel}
+% \usepackage{endnotes}
+% \let\footnote=\endnote
+% \usepackage{rotating}
+\usepackage{enumerate}
+% \usepackage{titlesec}
+% \titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\doxnotep}[0]{doxastic}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+\newcommand{\fcut}[1]{}
+\newcommand{\bcut}[1]{}
+\newcommand{\tbd}[1]{$^{\mbox{\textsc{tbd}}}$}
+\newcommand{\nias}{\noindent} % no indent after new section
+\newcommand{\nial}{\noindent} % no indent after equation, list, or whatever
+
+\newif\ifNumericalOrYear
+\NumericalOrYeartrue
+\NumericalOrYearfalse
+\ifNumericalOrYear
+\usepackage[numbers,colon]{natbib}
+\else
+\usepackage[round,colon]{natbib}
+\fi
+\newif\ifPageP
+\PagePtrue
+\PagePfalse
+\ifPageP
+\newcommand{\PageP}{p.~}
+\else
+\newcommand{\PageP}{}
+\fi
+
+\newcommand{\fixref}[3]{}
+\newcommand{\scite}[3]{\ifnum#1=1\ifNumericalOrYear\citep{#2}\else\citeyearpar{#2}\fi\else
+\ifnum#1=2\ifNumericalOrYear\citep[#3]{#2}\else\citep[{\PageP}#3]{#2}\fi\else
+% \ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+% you may want to use the next line as a template for the others as well <2014-08-29 Fri>
+\ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else(\citeauthor{#2}, \citeyear{#2}, {\PageP}#3.)\fi\else
+\ifnum#1=4\ifNumericalOrYear\citet{#2}\else\citet{#2}\fi\else
+\ifnum#1=5\ifNumericalOrYear(\citet{#2})\else\citep{#2}\fi\else
+\ifnum#1=6\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=7\ifNumericalOrYear\citep{#2}\else\citealp{#2}\fi\else
+\ifnum#1=8\ifNumericalOrYear\citep[#3]{#2}\else\citealp[{\PageP}#3]{#2}\fi\else
+\ifnum#1=9\ifNumericalOrYear\citep[#3]{#2}\else{}loc.\ cit., {\PageP}#3\fi\else
+\ifnum#1=10\ifNumericalOrYear\citep{#2}\else\citeyear{#2}\fi\else
+\textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
+%%% END OCTOBER
+
+\begin{document}
+%
+% paper title
+% can use linebreaks \\ within to get better formatting as desired
+% Do not put math or special symbols in the title.
+\title{Semantics of Not Knowing}
+%
+%
+% author names and IEEE memberships
+% note positions of commas and nonbreaking spaces ( ~ ) LaTeX will not break
+% a structure at a ~ so this keeps an author's name from being broken across
+% two lines.
+% use \thanks{} to gain access to the first footnote area
+% a separate \thanks must be used for each paragraph as LaTeX2e's \thanks
+% was not built to handle multiple paragraphs
+%
+
+\author{Stefan~Lukits}% <-this % stops a space
+% \thanks{M. Shell is with the Department
+% of Electrical and Computer Engineering, Georgia Institute of Technology, Atlanta,
+% GA, 30332 USA e-mail: (see http://www.michaelshell.org/contact.html).}% <-this % stops a space
+% \thanks{J. Doe and J. Doe are with Anonymous University.}% <-this % stops a space
+% \thanks{Manuscript received April 19, 2005; revised December 27, 2012.}}
+
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+\markboth{For Submission}%
+% {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for Journals}
+% The only time the second header will appear is for the odd numbered pages
+% after the title page when using the twoside option.
+% 
+% *** Note that you probably will NOT want to include the author's ***
+% *** name in the headers of peer review papers.                   ***
+% You can use \ifCLASSOPTIONpeerreview for conditional compilation here if
+% you desire.
+
+
+
+
+% If you want to put a publisher's ID mark on the page you can do it like
+% this:
+%\IEEEpubid{0000--0000/00\$00.00~\copyright~2012 IEEE}
+% Remember, if you use this you must call \IEEEpubidadjcol in the second
+% column for its text to clear the IEEEpubid mark.
+
+
+
+% use for special paper notices
+%\IEEEspecialpapernotice{(Invited Paper)}
+
+
+
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\begin{abstract}
+  Many Bayesian epistemologists now accept
+  that it is not necessary for a rational agent to hold sharp
+  credences. There are various compelling formal theories how such a
+  non-traditional view of credences can accommodate decision making
+  and updating. They are motivated by a common complaint: that sharp
+  credences can fail to represent incomplete evidence and exaggerate
+  the information contained in it. I show that the critical response
+  of those who want to maintain the traditional view with only sharp
+  credences is insufficient. Their criticism, however, opens the door
+  to semantic questions which make indeterminate credences vulnerable
+  on a deeper level. This paper uses both conceptual arguments and
+  hands-on examples to demonstrate that rational agents always have
+  sharp credences. Moreover, it is articulated and substantiated that
+  agents with indeterminate credal states make long term gains betting
+  against agents with sharp credences. This on the surface
+  inconvenient fact can be explained and does not favour indeterminate
+  credences over sharp credences.\tbd{rewrite abstract}
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+% \begin{IEEEkeywords}
+% IEEEtran, journal, \LaTeX, paper, template.
+% \end{IEEEkeywords}
+
+
+
+
+
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \ifCLASSOPTIONpeerreview
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+% \fi
+%
+% For peerreview papers, this IEEEtran command inserts a page break and
+% creates the second title. It will be ignored for other modes.
+% \IEEEpeerreviewmaketitle
+
+\section{Introduction}
+\label{Introduction}
+
+Traditionally, Bayesians have maintained that a rational agent, when
+holding a credence, holds a sharp credence. It has recently become
+popular to drop the requirement for credence functions to be sharp.
+There are now Bayesians who permit a rational agent to hold
+indeterminate credal states (from now on instates) based on incomplete
+or ambiguous evidence. I will refer to Bayesians who continue to
+adhere to the classical theory of sharp credences for rational agents
+as \qnull{Laplaceans} (e.g.\ Adam Elga and Roger White). I will refer
+to Bayesians who do not believe that a rational agent's credences are
+sharp as \qnull{Booleans} (e.g.\ Peter Walley and James
+Joyce).\fcut{1}
+
+There is some terminological confusion around the adjectives
+\qnull{imprecise,} \qnull{indeterminate,} and \qnull{mushy} credences.
+In the following, I will exclusively refer to indeterminate credences
+or credal states (abbreviated \qnull{instates}) and mean by them a set
+of sharp credence functions (which some Booleans require to be convex)
+which it may be rational for an agent to hold within an otherwise
+orthodox Bayesian framework.\bcut{1}
+
+There is a sense in which, by linking knowledge of chances to its
+reflection in credences, Booleans seek to reconcile traditional
+knowledge epistemology concerned with full belief and formal
+epistemology concerned with partial belief. There are other more
+recent reconciliation projects (see Spohn, 2012; and Moss, 2013). If
+my paper is correct then the Boolean approach will not contribute to
+this reconciliation because it mixes full belief and partial belief
+metaphors in ways that are problematic.\tbd{rephrase}\fcut{2}\bcut{2}
+
+The main complaint of this paper is that instates represent in one
+credence both degree of belief and properties of the evidence.
+Instates thus incorporate both {\doxnotep} and evidential features of
+the credal state. Representing multiple features of a state is not per
+se a bad thing when we fix the terms of a theory, in this case the
+terms of our theory about beliefs. In colour theory, the term
+\qnull{red} represents both a phenomenological quality and a
+neighbourhood on the visible light spectrum. When we say one thing is
+more red than another thing, we effectively describe a relation based
+on both phenomenological and physical properties.
+
+My examples and conceptual arguments show that instates, in spite of
+how plausible they initially sound in representing credal states, fail
+to give us a coherent terminology in our theory about beliefs. It
+turns out that we want to separate the {\doxnotep} and evidential
+components, just as the scientific mineralogist wants to separate
+jadeite and nephrite instead of lumping them together under the single
+concept of \qnull{jade.} 
+
+When we first hear of the advantages of instates, two of them sound
+particularly compelling.
+
+\begin{itemize}
+\item [\textsc{range}] Instates represent the possibility range for objective
+  chances.
+\item [\textsc{incomp}] Instates represent incompleteness or ambiguity of the
+  evidence.\bcut{3}
+\end{itemize}
+
+Let a \textit{coin} be a Bernoulli generator that produces successes
+and failures with probability $p$ for success, labeled $H$, and $1-p$
+for failure, labeled $T$. Physical coins may serve as examples, if we
+are willing to set aside that most of them are approximately fair.
+
+\addtocounter{expls}{1}
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} Range.} You
+  have two Bernoulli Generators, \textit{coin}$_{a}$ and
+  \textit{coin}$_{b}$. You have a database of \textit{coin}$_{a}$
+  results and conclude on excellent evidence that \textit{coin}$_{a}$
+  is fair. You have no evidence about the bias of \textit{coin}$_{b}$.
+  As a Boolean, you assume a sharp credence of $\{0.5\}$ for success
+  on the next toss of \textit{coin}$_{a}$ and an indeterminate credal
+  state of $[0,1]$ for success on the next toss of
+  \textit{coin}$_{b}$. You feel bad for your Laplacean colleague who
+  cannot distinguish between the two cases and who must assign a sharp
+  credence of $\{0.5\}$ for success on the next toss of both
+  \textit{coin}$_{a}$ and \textit{coin}$_{b}$.
+\end{quotex}
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} Incomp.} You
+  have a Bernoulli Generator, \textit{coin}$_{c}$. A graduate student
+  has submitted \textit{coin}$_{c}$ to countless experiments and
+  emailed you the resulting bias, but failed to include whether the
+  bias of $2/3$ was in favour of $H$ or in favour of $T$. As a
+  Boolean, you assume an indeterminate credal state of $[1/3,2/3]$ (or
+  $\{1/3,2/3\}$) for success on the next toss of \textit{coin}$_{c}$.
+  You feel bad for your Laplacean colleague who must assign a sharp
+  credence of $\{0.5\}$ for success on the next toss of
+  \textit{coin}$_{c}$ and who concurrently knows that her credence
+  gets the bias wrong.
+\end{quotex}
+
+Here are a few concise statements by Booleans:
+
+\begin{quotex}
+  [A] refusal to make a determinate probability judgment does not
+  derive from a lack of clarity about one's credal state. To the
+  contrary, it may derive from a very clear and cool judgment that on
+  the basis of the available evidence, making a numerically
+  determinate judgment would be unwarranted and arbitrary.
+  \scite{3}{levi85}{395}
+\end{quotex}
+
+\begin{quotex}
+  If there is little evidence concerning [a claim,] then beliefs about
+  [that claim] should be indeterminate, and probability models
+  imprecise, to reflect the lack of information. We regard this as the
+  most important source of imprecision. \scite{3}{walley91}{212--213}
+\end{quotex}
+
+\begin{quotex}
+  Imprecise probabilities and related concepts [{\ldots}] provide a
+  powerful language which is able to reflect the partial nature of the
+  knowledge suitably and to express the amount of ambiguity
+  adequately. \scite{3}{augustin03}{34}
+\end{quotex}
+
+\begin{quotex}
+  As sophisticated Bayesians like Isaac Levi (1980), Richard Jeffrey
+  (1983), Mark Kaplan (1996), have long recognized, the proper
+  response to symmetrically ambiguous or incomplete evidence is not to
+  assign probabilities symmetrically, but to refrain from assigning
+  precise probabilities at all. Indefiniteness in the evidence is
+  reflected not in the values of any single credence function, but in
+  the spread of values across the family of all credence functions
+  that the evidence does not exclude. This is why modern Bayesians
+  represent credal states using sets of credence functions. It is not
+  just that sharp degrees of belief are psychologically unrealistic
+  (though they are). Imprecise credences have a clear epistemological
+  motivation: they are the proper response to unspecific evidence.
+  \scite{3}{joyce05}{170f}
+\end{quotex}\fcut{4}
+
+Consider the following reasons that motivate Booleans to permit
+instates for rational agents:
+
+\begin{enumerate}[(A)]
+\item The greatest emphasis motivating indeterminacy rests on
+  \textsc{range} and \textsc{incomp}.
+\item The preference structure of a rational agent may be incomplete
+  so that representation theorems do not yield single probability
+  measures to represent such incomplete structures.
+\item There are more technical and paper-specific reasons, such as
+  Thomas Augustin's attempt to mediate between the minimax pessimism
+  of objectivists and the Bayesian optimism of subjectivists using
+  interval probability (see \scite{8}{augustin03}{35f}); Alan
+  H{\'a}jek and Michael Smithson's belief that there may be
+  objectively indeterminate chances in the physical world (see
+  \scite{8}{hajeksmithson12}{33}); and Jake Chandler's claim that
+  \qeins{the sharp model is at odds with a trio of plausible
+    propositions regarding agnosticism} \scite{2}{chandler14}{4}.
+\end{enumerate}
+
+This paper mostly addresses (A), while taking (B) seriously as well
+and pointing towards solutions for it. I am leaving (C) to more
+specific responses to the issues presented in the cited articles. I am
+adding a reason (D) that is poorly documented in the literature: The
+Boolean rational agent may systematically do better accepting bets
+than the agent who on principle rejects instates.  Walley conducted an
+experiment in which Boolean participants did significantly better than
+Laplacean participants, betting on soccer games played in the Soccer
+World Cup 1982 in Spain (see \scite{7}{walley91}{}, Appendix I). I
+replicated the experiment using two computer players with rudimentary
+artificial intelligence and made them specify betting parameters
+(previsions) for games played in the Soccer World Cup 2014 in Brazil.
+I used the Poisson distribution (which is an excellent predictor for
+the outcome of soccer matches) and the FIFA ranking to simulate
+millions of counterfactual World Cup results and their associated
+bets, using Walley's evaluation method.  The Boolean player had a
+slight but systematic advantage. In section \ref{WalleysWorldCupWoes},
+I will provide an explanation and show how it undermines any support
+the experiment might give to the Boolean position.\fcut{5}
+
+There is also a problem for Booleans:
+
+\begin{itemize}
+\item [\textsc{dilation}] Instates are vulnerable to dilation.
+\end{itemize}
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} Dilation.}
+  You have two Bernoulli Generators, \textit{coin}$_{d}$ and
+  \textit{coin}$_{e}$. You have excellent evidence that
+  \textit{coin}$_{d}$ is fair and no evidence about the bias of
+  \textit{coin}$_{e}$. Furthermore, the two generators are not
+  necessarily independent. Their results could be 100\% correlated or
+  anticorrelated, or the correlation could be anywhere between the two
+  extremes, including independence. You toss \textit{coin}$_{d}$.
+  Without looking at the result, your credence in $H_{d}$
+  (\textit{coin}$_{d}$ coming up heads) is a sharp $0.5$, even if you
+  are a Boolean, because you have excellent evidence for the fairness
+  of \textit{coin}$_{d}$. Then you toss \textit{coin}$_{e}$. This time
+  you look at the result and the moment you learn it, your credence in
+  $H_{d}$ dilates from a sharp $0.5$ to the vacuous credal state
+  covering the whole interval $[0,1]$ (provided that this was your
+  credence in $H_{e}$, as stipulated). Even though you have just
+  received information (the result of \textit{coin}$_{e}$'s toss),
+  your credence in $H_{d}$ dilates.
+\end{quotex}
+
+At first blush, this may not sound like a knock-down argument against
+Booleans (it was investigated in detail in
+\scite{7}{seidenfeldwasserman93}{}), but Roger White was able to use
+it to derive more absurd results from instates.
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} White
+    Chocolates.} Four out of five chocolates in the box have cherry
+  fillings, while the rest have caramel. Picking one at random, what
+  should my credence be that it is cherry-filled? Everyone, including
+  the staunchest [Booleans], seems to agree on the answer $4/5$. Now
+  of course the chocolate I've chosen has many other features, for
+  example this one is circular with a swirl on top. Noticing such
+  features could hardly make a difference to my reasonable credence
+  that it is cherry filled (unless of course I have some information
+  regarding the relation between chocolate shapes and fillings). Often
+  chocolate fillings do correlate with their shapes, but I haven't the
+  faintest clue how they do in this case or any reason to suppose they
+  correlate one way rather than another {\ldots} the further result is
+  that while my credence that the chosen chocolate is cherry-filled
+  should be $4/5$ prior to viewing it, once I see its shape (whatever
+  shape it happens to be) my credence that it is cherry-filled should
+  dilate to become [indeterminate]. But this is just not the way we
+  think about such matters. \scite{3}{white10}{183}
+\end{quotex}
+
+One of the most authoritative Boolean voices is James Joyce. He has
+defended instates against \textsc{dilation}, making two important
+concessions, (J1) and (J2).
+
+\begin{description}
+\item[{\bf (J1)}] Credences do not adequately represent evidence (the
+  same instate can reflect different evidential states).
+\item[{\bf (J2)}] Instates do not reflect knowledge claims about
+  objective chances (White's \emph{Chance Grounding Thesis} is not an
+  appropriate characterization of the Boolean position).
+\end{description}
+
+I agree with Joyce that (J1) and (J2) are both necessary and
+sufficient to resolve \textsc{dilation} for instates. I will go into
+more detail as we move along. I disagree with Joyce what this means
+for an overall recommendation to accept the Boolean rather than the
+Laplacean position. I will show that (J1) and (J2) neutralize both
+\textsc{range} and \textsc{incomp}, the two major motivators to reject
+the Laplacean position.
+
+The problem will be mixed metaphors: the Boolean mixes features that
+ought for reasons to remain separate. Indeterminacy imposes a double
+task on credences (representing both uncertainty and available
+evidence) that they cannot coherently fulfill. I will present several
+examples where this double task stretches instates to the limits of
+plausibility. Joyce's idea that credences can represent balance,
+weight, and specificity of the evidence (in \scite{7}{joyce05}{}) is
+inconsistent with the use of indeterminacy (and Joyce himself, in
+response to \textsc{dilation}, gives the argument why this is the
+case, see \scite{8}{joyce10}{13ff}). 
+
+The Laplacean approach of assigning subjective probabilities to
+partitions of the event space (e.g.\ objective chances) and then
+aggregating them by David Lewis' summation formula into a single
+precise credence function is conceptually tidy and shares many of the
+formal virtues of Boolean theories. If the bad taste about numerical
+precision in a fuzzy and nebulous world lingers, I will point to
+philosophical projects in other domains where the concepts we use are
+sharply bounded, even though our ability to conceive of those sharp
+boundaries or know them is limited (in particular Timothy Williamson's
+account of vagueness and knowledge).
+
+To put it provocatively, this paper defends a $0.5$ sharp credence in
+heads in all three cases: for a coin of whose bias we are completely
+ignorant; for a coin whose fairness is supported by a lot of evidence;
+and even for a coin about whose bias we know that it is either 1/3 or
+2/3 for heads. The credence represents the {\doxnotep} features of the
+credal state and filters out some evidential features, which need to
+be independently represented. If instates could successfully integrate
+the two sets of features, they would be more successful in
+representing the credal state. \textsc{dilation} combined with Joyce's
+two concessions (J1) and (J2) show that they cannot.\bcut{4}\bcut{5}
+
+xxyxx
+
+There\fcut{10} are in the literature two kinds of objections to the
+Boolean position. One is semantic, the other derives unacceptable
+consequences from instates and then urges to give them up in favour of
+sharp credences. A paradigm example for the latter kind is Adam Elga's
+objection, which leads him to the following conclusion:
+\qeins{Perfectly rational agents always have perfectly sharp
+  probabilities} \scite{2}{elga10}{1}.
+
+Elga tries to show that instates are not coherent in the sense that
+they allow bets which will lead to a sure loss (for example, if an
+agent has $0.4$ as a lower prevision and $0.6$ as an upper prevision,
+then her credal state permits a $45$ cent bet on the proposition in
+question, with \$1 being the prize money, and a $56$ cent bet against
+the proposition in question). Joyce addresses Elga's point (see
+\scite{8}{joyce10}{314}) and successfully defends the Boolean
+position.
+
+Roger White, in the meantime, articulates his objections on both
+levels: in terms of semantics and in terms of undesirable consequences
+of instates. Let us abbreviate the former objection as (Anti-CGT) and
+the latter objection as (Anti-DIL). CGT stands for Chance Grounding
+Thesis. It is a semantic claim about instates, and according to White
+it is semantically unacceptable---some of White's objections are
+echoed and re-articulated throughout this paper.
+
+\begin{quotex}
+  \textbf{Chance Grounding Thesis:} Only on the basis of known chances
+  can one legitimately have sharp credences. Otherwise one's spread of
+  credence should cover the range of possible chance hypotheses left
+  open by your evidence. \scite{2}{white10}{174}\tbd{see Chance
+    Grounding Thesis in sonk.org -- maybe go into more detail}
+\end{quotex}
+
+It is not sufficient for the Laplacean, however, to criticize the
+Boolean position on the basis of the CGT, so White's (Anti-CGT)
+argument will not do. This problem is intimately linked to White's
+(Anti-DIL), to which Laplaceans can respond by giving up on the claims
+of the CGT. DIL stands for dilation, which provides the grounds for
+White's objection of the latter kind: not semantic, but drawing out
+undesirable consequences from the Boolean approach. I will describe
+dilation in a moment, but for the argument of this paper it is
+important to understand that Booleans have a line of defence against
+(Anti-DIL), and (Anti-CGT) to boot. They can, as Joyce does in his
+response to White, give up on the CGT. More precisely, they can make
+two concessions, which in honour of Joyce, who makes these
+concessions, I call (J1) and (J2). 
+
+Just as Joyce successfully defends the Boolean position against Elga's
+objection, he successfully defends the Boolean position against
+(Anti-CGT) and (Anti-DIL) by making concessions (J1) and (J2). The
+rest of this paper shows how (J1) and (J2) are necessary to defend the
+Boolean position against White's objections and how they leave 
+Booleans in a situation so semantically vulnerable that their position
+must be rejected anyways, despite their successful defences against
+objections made on the grounds of undesirable consequences. We will
+look at a few hands-on examples where Booleans, given (J1) and (J2),
+under weak assumptions give the wrong answers.
+
+Now we must make good on our promise to explain dilation (using
+\scite{8}{white10}{175ff}) and why Joyce needs (J1) and (J2) in order
+to save the Boolean position from its intuitive appeal.
+
+Usually, we would expect more information to sharpen our credal states
+(see Walley's \qeins{the more information the more precision}
+principle and his response to this problem in
+1991,\fixref{8}{walley91}{207 and 299} 207 and 299). White did not
+discover the phenomenon of dilation (see the detailed study in
+\scite{7}{seidenfeldwasserman93}{}), but he was able to find examples
+where the consequences appear grotesque, especially in his chocolates
+case (see \scite{8}{white10}{183}).\fcut{9}
+
+White's claim is also that dilation contradicts Bas van Fraassen's
+reflection principle (see van Fraassen,
+1984\fixref{7}{vanfraassen84}{}). If you know that soon you will take
+a dilated doxastic attitude towards a proposition without loss of
+information and no surprising information coming in, you can just as
+well assume the dilated doxastic attitude now, which is clearly
+counter-intuitive (see \scite{8}{white10}{178}).
+
+Joyce does an admirable job showing both that (J1) and (J2) address
+White's dilation problem and that they are necessary in order to avoid
+White's counter-intuitive results (see \scite{8}{joyce10}{13ff}). Joyce
+rejects the CGT on the grounds that it would make learning impossible
+(see \scite{8}{joyce10}{7f}); and he rejects the notion that identical
+instates encode identical beliefs by giving a simple example:
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} Three-Sided
+    Die.} Suppose $\mathcal{C}$ and $\mathcal{C}^{*}$ are defined on a
+  partition $\{X,Y,Z\}$ corresponding to the result of a roll of a
+  three sided-die. Let $\mathcal{C}$ contain all credence functions
+  defined on $\{X,Y,Z\}$ such that $\mathbf{c}(Z)\geq{}1/2$, and let
+  $\mathcal{C}^{*}$ be the subset of $\mathcal{C}$ whose members also
+  satisfy $\mathbf{c}(X)=\mathbf{c}(Y)$. \scite{3}{joyce10}{12}
+\end{quotex}
+
+$\mathcal{C}$ and $\mathcal{C}^{*}$ generate the same instates, but
+they surely differ in the beliefs that they encode, as
+$\mathcal{C}^{*}$ regards $X$ and $Y$ as equiprobable, whereas
+$\mathcal{C}$ does not. To say that dilation is a problem for the
+Boolean position presupposes that instates encode beliefs, since if
+they do not it becomes clear why the correlation between the two coin
+tosses is evidentially relevant to $H_{a}$ in Example 1. If instates
+encoded the evidential basis for a belief, however, there could be no
+weights attached to the various credence functions represented by the
+instate based on the evidence. All \qnull{committee members,} as Joyce
+quite helpfully calls them in illustrating how instates work by
+committee rather than one single credence function, would be equally
+enfranchised, which would inhibit learning and either introduce
+regress problems on the non-trivial (neither $0$ nor $1$) margins of
+the indeterminate intervals or render all instates vacuous.
+
+Therefore, the Boolean position cannot be upheld without concessions
+(J1) and (J2). Joyce, for example, clearly rejects the CGT and
+underlines how \qnull{committee members} can be discriminately
+enfranchised by a \qeins{directionality of the spread} (see
+\scite{8}{joyce10}{318}), which clarifies that instates, as little as
+sharp credences, adequately represent the evidence supporting the
+partial belief. Joyce gives a nice formal description of this, but I
+want to show by example how dilation is unproblematic (and therefore
+agree with Joyce that instates cannot encode beliefs).\fcut{11}
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} Dilating
+    Urns.} You draw one ball from an urn with 200 balls (100 red, 100
+  black) and receive the information that the urn actually had two
+  chambers, one with 99 red balls and 1 black ball, the other with 1
+  red ball and 99 black balls.
+\end{quotex}
+
+Dilation from a sharp credence of $\{0.5\}$ to an instate of
+$\{0.01,0.99\}$ or $[0.01,0.99]$ (depending on whether convexity is
+required) is unproblematic, although the example already prefigures
+that there is something odd about the Boolean semantic approach. The
+example licences a 99:1 bet for one of the colours (if the instate is
+interpreted as upper and lower previsions), but this is a problem that
+arises out of Boolean semantics without dilation, which we will
+address again in Example 8.
+
+Booleans have the resources to extract themselves from the problem of
+dilation, but only at the cost of making Joyce's semantic concessions
+(J1) and (J2) which we will use against them. These semantic
+concessions are inescapable, not only on account of dilation. If one
+were to be committed to the principle of regularity, that all states
+of the world considered possible have positive probability (for a
+defence see \scite{7}{edwardsetal63}{}); and to the solution of Henry
+Kyburg's lottery paradox, that what is rationally accepted should have
+probability 1 (for a defence of this principle see
+\scite{7}{douvenwilliamson06}{}); and the CGT, that one's spread of
+credence should cover the range of possible chance hypotheses left
+open by the evidence (implied by much of Boolean literature); then
+one's instate would always be vacuous. Booleans must deny at least one
+of the premises to avoid the conclusion (Joyce denies the CGT).
+
+A sharp credence constrains partial beliefs in objective chances by
+Lewis' summation formula (which we will provide in the next section).
+No objective chance is excluded by it (principle of regularity) and
+any updating will merely change the partial beliefs, but no full
+beliefs. Instates, on the other hand, by giving ranges of acceptable
+objective chances suggest that there is a full belief that the
+objective chance does not lie outside what is indicated by the
+instate. A Boolean can avoid this situation by accepting Joyce's
+concession (J2).
+
+Here is a brief example to illustrate the difference between Laplacean
+semantics of partial beliefs based on the principle of regularity and
+Boolean semantics which introduce an obscure grey zone between partial
+beliefs and full belief, update and revision, traditional epistemology
+and formal epistemology.
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} Bavarian
+    King.} Matthias Perth, an Austrian civil servant, observes the
+  Bavarian king at the Congress of Vienna in 1815 and writes in his
+  diary that the king \qeins{appears to be a man between 45 and 47
+    years old} (see \texttt{http://www.das-perth-projekt.at}).
+\end{quotex}
+
+If Perth then learns that the king was 49 years old, he must revise,
+not just update, his earlier judgment. The appropriate formal
+instrument is belief revision, not probability update, requiring a
+substantial reconciliation project between formal and traditional
+epistemology operating in the background. I do not see this project
+articulated in the Boolean literature (for an example of such a
+project see \scite{7}{spohn12}{}, especially chapter 10). Sarah Moss
+also undertakes it and assumes the Boolean approach (see
+\scite{7}{moss13}{}), but I fail to see how the Boolean approach is
+essential to her reconciliation or how her reconciliation gives
+independent arguments for the Boolean approach. If Perth had wanted to
+express a sharp credence, he would have said, \qeins{my best guess is
+  that the king is 46 years old,} and the information that the king
+was 49 would have triggered the appropriate update, without any
+revision of full beliefs.
+
+In summary, I return to White's objections (Anti-CGT) and (Anti-DIL)
+which, as they stand, fail because the CGT is not a necessary
+ingredient of the Boolean position; and dilation for indeterminate
+credences is in principle not any more surprising than a piece of
+information that increases the Shannon entropy of a sharp credence
+(see Example 4). It is true for both sharp and indeterminate credences
+that information can make us less certain about things, and it is true
+for both sharp and indeterminate credences that they do not encode the
+evidence. 
+
+Once Booleans have brought their house in order to accommodate White's
+objection using concessions (J1) and (J2), they open the door to
+semantic problems. We finally get to inquire what kind of coherence
+there is in defending indeterminacy when it neither fulfills the
+promise of adequately representing evidence nor the promise of
+reconciling traditional full belief \qnull{knowledge} epistemology and
+Bayesian partial belief epistemology as outlined in the CGT, but only
+adds another hierarchical layer of uncertainty to a numerical quantity
+(a sharp credence) whose job it already is to represent uncertainty,
+thus unnecessarily introducing regress problems. We will turn to these
+semantic considerations now, show how they display the virtues of
+sharp credences in responding to the forceful motivations for instates
+while making those instates look semantically otiose. Then we will
+show in the last section how sharp credences have an elegant solution
+for being outperformed by instates in betting scenarios, and there we
+will rest our case.
+
+\section{Semantics of Partial Belief}
+\label{SemanticsOfPartialBelief}
+
+Instates are suggestive of a measurement that represents numerically
+the mass of an object and then also make claims about its density.
+With sharp credences, the semantic roles of evidence, information, and
+uncertainty are appropriately differentiated. Rational decision
+making, inference, and betting behaviour are based on sharp credences
+together with the evidence that is at its foundation. Information
+represents evidence, and sharp credences represent uncertainty.
+Measurement is in any case a misleading analogy for credences.
+Measurements come with imprecision estimates to account for
+inaccuracy. Credences, however, are not measurements, especially not
+of objective chances. They represent uncertainty. They are more like
+logical truth values than they are like measurements.
+
+It is a slippery affair to determine what evidence is,
+which I will leave to others. My claim is that a rational agent is
+someone who can distill information from evidence which places
+numerically precise constraints on relatively prior probability
+distributions, which then can be updated to form posterior probability
+distributions and the credences associated with them. Note that
+relatively prior probability distributions are not ignorance priors or
+non-informative priors, which I would call absolutely prior
+probability distributions. I have no answers where absolutely prior
+probability distributions come from, how they are justified, or in
+what sense they are objective. I am not concerned whether all rational
+agents, if they have the same evidence, should arrive at the same
+credal states; or even if they should all update a given relatively
+prior credal state to the same posterior credal state, if they have
+the same evidence. Sometimes there may be different ways to translate
+or interpret evidence into information.
+
+It is important not to confuse the claim that it is reasonable to hold
+both $X$ and $Y$ with the claim that it is reasonable to hold either
+$X$ (without $Y$) or $Y$ (without $X$). It is the reasonableness of
+holding $X$ and $Y$ concurrently that is controversial, not the
+reasonableness of holding $Y$ (without holding $X$) when it is
+reasonable to hold $X$. We will later talk about anti-luminosity, the
+fact that a rational agent may not be able to distinguish
+psychologically between a $54.9$ cent bet on an event and a $45.1$ bet
+on its negation, when her sharp credence is $0.55$. She must reject
+one of them not to incur sure loss, so proponents of indeterminacy
+suggest that she choose one of them freely without being constrained
+by her credal state or reject both of them. I claim that a sharp
+credence will make a recommendation between the two so that only one
+of the bets is rational given her particular credence, but that does
+not mean that another sharp credence which would give a different
+recommendation may not also be rational for her to have.
+
+I am sympathetic to the viewpoint that once a rational agent has a
+relatively prior credal state and has formalized her evidence in terms
+of information, then the probability distributions forming her
+posterior credal state should be unique. Joyce, with his
+\qnull{committee member} approach, shows how this kind of updating can
+be done for instates (see \scite{8}{joyce10}{288}; also
+\scite{8}{bradleysteele13}{6}).
+
+On the one hand (the Laplacean approach), you can have partial beliefs
+about how a parameter is distributed and then use Lewis' summation
+formula (see \scite{8}{lewis81}{266f}) to integrate over them and
+condense them to a sharp credence. Walley comments on this
+\qeins{reduction} in his section on Bayesian second order
+probabilities (see \scite{8}{walley91}{258f}), but he mistakenly
+represents the Laplacean approach as a second order approach, as if
+the probability distributions that are summarized by Lewis' formula
+are of the same kind as the resulting credences. They are not. They
+refer to partitions of the event space, sometimes corresponding to
+objective chances, and represent the subjective probabilities that are
+associated with them. The credence, by contrast, is a quantity
+representing partial belief and assisting in the making of decisions
+and inferences. It is the Boolean approach which has elements of a
+second order approach and thus makes itself vulnerable to regress
+problems by adding another dimension of uncertainty to a parameter
+(the credence) which already represents uncertainty.
+
+On the other hand (the Boolean approach), you can try to represent
+your uncertainty about the distribution of the parameter by an
+instate. I want to show that the Laplacean approach can be aligned
+with the forceful motivations we listed in the previous section to
+introduce instates, as long as we do not require that a sharp credence
+represent the evidence as well as the agent's state of uncertainty. We
+have learned that this requirement can be reduced ad absurdum even for
+instates, see (J1) and (J2).
+
+One of Joyce's complaints is that a sharp credence of $0.5$ for a
+\textit{coin} contains too much information if there is little or no
+evidence that the \textit{coin} is fair. This complaint, of course, is
+only effective if the indeterminacy of the credence is anticorrelated
+to the amount of information in the evidence. In (J1), however, Joyce
+admits that instates cannot represent the evidence without violating
+the reflection principle due to White's dilation problem. He is quite
+clear that the same instate can represent different evidential
+scenarios (see, for example, \scite{8}{joyce10}{302}). (J1) may not be
+sufficient to defend against the information argument, but Walley's
+and Joyce's claim that instates are less informative than sharp
+credences (see \scite{8}{walley91}{34}; and \scite{8}{joyce10}{311}
+for examples, but this attitude is passim) has no foundation in
+information theory. To compare instates and sharp credences
+informationally, we would need a non-additive set function obeying
+Shannon's axioms for information. This is a non-trivial task. I have
+not succeeded solving it (nor do I need to carry the Booleans' water),
+but I am not convinced that it will result in an information measure
+which assigns, for instance, more information to a sharp credence such
+as $\{0.5\}$ than to an instate such as $\{x|1/3\leq{}x\leq{}2/3\}$.
+
+Returning to (J1) and the problem of inadequate representation,
+Augustin recognizes this long before Joyce, with specific reference to
+instates: \qeins{The imprecise posterior does no longer contain all
+  the relevant information to produce optimal decisions. Inference and
+  decision do not coincide any more} \scite{2}{augustin03}{41} (see
+also an example for inadequate representation of evidence by instates
+in \scite{8}{bradleysteele13}{16}). At best, instates fare no better
+than sharp credences, at worst they unhelpfully mimic saying something
+about the evidence that is much better said elsewhere.
+
+Not only can we align sharp credences with the motivations to
+introduce instates, we can also show that instates perform worse
+semantically because they mix evidential and {\doxnotep} metaphors in
+deleterious ways. Sharp credences have one task: to represent
+epistemic uncertainty and serve as a tool for updating, inference, and
+decision making. They cannot fulfill this task without continued
+reference to the evidence which operates in the background. To use an
+analogy, credences are not sufficient statistics with respect to
+updating, inference, and decision making. What is remarkable about
+Joyce's response to White's dilation problem is that Joyce recognizes
+that instates are not sufficient statistics either. But this means
+that they fail at the double task which has been imposed on them: to
+represent both epistemic uncertainty and the evidence.
+
+In the following, I will provide a few examples where it becomes clear
+that instates have difficulty representing uncertainty because they
+are tangled in a double task which they cannot fulfill.
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} Aggregating
+    Expert Opinion.} You have no information whether it will rain
+  tomorrow ($R$) or not except the predictions of two weather
+  forecasters. One of them forecasts 0.3 on channel GPY, the other 0.6
+  on channel QCT. You consider the QCT forecaster to be significantly
+  more reliable, based on past experience.
+\end{quotex}
+
+An instate corresponding to this situation may be $[0.3,0.6]$ (see
+\scite{8}{walley91}{214}), but it will have a difficult time
+representing the difference in reliability of the experts. We could
+try $[0.2,0.8]$ (since the greater reliability of QCT suggests that
+the chance of rain tomorrow is higher rather than lower) or
+$[0.1,0.7]$ (since the greater reliability of QCT suggests that its
+estimate is more precise), but it remains obscure what the criteria
+might be.
+
+A sharp credence of $P(R)=0.53$, for example, does the right thing.
+Such a credence says nothing about any beliefs that the objective
+chance is restricted to a subset of the unit interval, but it
+accurately reflects the degree of uncertainty that the rational agent
+has over the various possibilities. Beliefs about objective chances
+make little sense in many situations where we have credences, since it
+is doubtful even in the case of rain tomorrow that there is an urn of
+nature from which balls are drawn. What is really at play is a complex
+interaction between epistemic states (for example, experts evaluating
+meteorological data) and the evidence which influences them.
+
+A sharp credence is often associated with probability distributions
+over chances, while an instate puts chances in sets where they all
+have an equal voice. This may also be at the bottom of Susanna
+Rinard's objection (see \scite{8}{white10}{184}) that Joyce's
+committee members are all equally enfranchised and so it is not clear
+how extremists among them could not always be replaced by even greater
+extremists even after updating on evidence which should serve to
+consolidate indeterminacy. Joyce has a satisfactory response to this
+objection (see \scite{8}{joyce10}{291}), but I do not see how the
+response addresses the problem of aggregating expert opinion without
+the kind of summation that Laplaceans find unobjectionable, even
+though information is lost and can only be recouped by going back to
+the evidence. More generally, the two levels for sharp credences,
+representation of uncertainty and distributions over partitions,
+tidily differentiate between the {\doxnotep} and the evidential
+dimension; instates, on the other hand, just add another level of
+uncertainty on top of the uncertainty that is already expressed in the
+partial belief and thus do not make the appropriate semantic
+distinctions.
+
+As we will see in the next example, it is an advantage of sharp
+credences that they do not exclude objective chances, even extreme
+ones, because they are fully committed to partial belief and do not
+suggest, as indeterminate credences do, that there is full belief
+knowledge that the objective chance is a member of a proper subset of
+the possibilities.
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} Precise
+    Credences.} Your sharp credence for rain tomorrow, based on the
+  expert opinion of channel GPY and channel QCT (you have no other
+  information) is $0.53$. Is it reasonable, considering how little
+  evidence you have, to reject the belief that the chance of rain
+  tomorrow is $0.52$ or $0.54$; or to prefer a $52.9$ cent bet on rain
+  to a $47.1$ cent bet on no rain?
+\end{quotex}
+
+The first question is confused, but in instructive ways (a display of
+this confusion is found in \scite{8}{hajeksmithson12}{38f}, and their
+doctor and time of the day analogy). A sharp credence rejects no
+hypothesis about objective chances (unlike an instate, unless (J2) is
+firmly in place). It often has a subjective probability distribution
+operating in the background, over which it integrates to yield the
+sharp credence (it would do likewise in H{\'a}jek and Smithson's
+example for the prognosis of the doctor or the time of the day,
+without any problems). This subjective probability
+distribution may look like this:
+
+\begin{tabular}{|lcr|}
+  \hline
+  $P(\pi(R)=0.00)$ & = & $0.0001$ \\ \hline
+  $P(\pi(R)=0.01)$ & = & $0.0003$ \\ \hline
+  $P(\pi(R)=0.02)$ & = & $0.0007$ \\ \hline
+  $\ldots$ & & $\ldots$ \\ \hline
+  $P(\pi(R)=0.30)$ & = & $0.0015$ \\ \hline
+  $P(\pi(R)=0.31)$ & = & $0.0016$ \\ \hline
+  $\ldots$ & & $\ldots$ \\ \hline
+  $P(\pi(R)=0.52)$ & = & $0.031$ \\ \hline
+  $P(\pi(R)=0.53)$ & = & $0.032$ \\ \hline
+  $P(\pi(R)=0.54)$ & = & $0.030$ \\ \hline
+  $\ldots$ & & $\ldots$ \\ \hline
+\end{tabular}
+
+It is condensed by Lewis' summation formula to a sharp credence,
+without being reduced to it:
+
+\begin{equation}
+  \label{eq:s2}
+  C(R)=\int_{0}^{1}\zeta{}P(\pi(R)=\zeta)\,d\zeta\mbox{ }
+\end{equation}
+
+Lewis' 1981 paper \qeins{A Subjectivist's Guide to Objective Chance}
+addresses the question what the relationship between $\pi$, $P$, and
+$C$ is. The point is that we have properly separated the semantic
+dimensions and that the Laplacean approach is not a second order
+probability approach. The partial belief epistemology deals with sharp
+credences and how they represent uncertainty and serve as a tool in
+inference, updating, and decision making; while Lewis' Humean
+speculations and his interpretation of the principal principle cover
+the relationship between subjective probabilities and objective
+chance.
+
+Instates, by contrast, mix these semantic dimensions so that in the
+end we get a muddle where a superficial reading of indeterminacy
+suddenly follows a converse principal principle of sorts, namely that
+objective chances are constrained by the factivity of a rational
+agent's credence when this credence is knowledge (Lewis actually talks
+about such a converse, but in completely different and
+epistemologically more intelligible terms, see
+\scite{8}{lewis81}{289}). Sharp credences are more, not less,
+permissive with respect to objective chances operating externally
+(compared to the internal belief state of the agent, which the
+credence reflects). By the principle of regularity and in keeping with
+statistical practice, all objective chances as possible states of the
+world are given positive subjective probabilities, even though they
+may be very small. Instates, on the other hand, mix partial belief
+epistemology with full belief epistemology and presumably exclude
+objective chances which lie outside the credal state from
+consideration because they are fully known not to hold (see
+\scite{8}{levi81}{540}, \qeins{inference derives credal probability
+  from knowledge of the chances of possible outcomes}).
+
+The second question is also instructive: why would we prefer a $52.9$
+cent bet on rain to a $47.1$ cent bet on no rain, given that we do not
+possess the power of descrimination between these two bets? The answer
+to this question ties in with the issue of incomplete preference
+structure referred to above as motiviation (B) for instates.
+
+\begin{quotex}
+  It hardly seems a requirement of rationality that belief be precise
+  (and preferences complete); surely imprecise belief (and
+  corresponding incomplete preferences) are at least rationally
+  permissible. \scite{3}{bradleysteele13}{2}
+\end{quotex}
+
+In personal communication, Yang Liu at Columbia University posed this
+problem to me more forcefully: the development of representation
+theorems beginning with Frank Ramsey (followed by increasingly more
+compelling representation theorems in \scite{7}{savage54}{}; and
+\scite{7}{jeffrey65}{}; and numerous other variants in contemporary
+literature) puts the horse before the cart and bases probability and
+utility functions of an agent on her preferences, not the other way
+around. Once completeness as an axiom for the preferences of an agent
+is jettisoned, indeterminacy follows automatically. Indeterminacy may
+thus be a natural consequence of the proper way to think about
+credences in terms of the preferences that they represent.
+
+In response, preferences may very well logically and psychologically
+precede an agent's probability and utility functions, but that does
+not mean that we cannot inform the axioms we use for a rational
+agent's preferences by undesirable consequences downstream.
+Completeness may sound like an unreasonable imposition at the outset,
+but if incompleteness has unwelcome semantic consequences for
+credences, it is not illegitimate to revisit the issue. Timothy
+Williamson goes through this exercise with vague concepts, showing
+that all upstream logical solutions to the problem fail and that it
+has to be solved downstream with an epistemic solution (see
+\scite{7}{williamson96}{}). Vague concepts, like sharp credences, are
+sharply bounded, but not in a way that is luminous to the agent (for
+anti-luminosity see chapter 4 in \scite{7}{williamson00}{}).
+Anti-luminosity answers the original question: the rational agent
+prefers the $52.9$ cent bet on rain to a $47.1$ cent bet on no rain
+based on her sharp credence without being in a position to have this
+preference necessarily or have it based on physical or psychological
+ability (for the analogous claim about knowledge see
+\scite{8}{williamson00}{95}).
+
+In a way, advocates of indeterminacy have solved this problem for us.
+There is strong agreement among most of them that the issue of
+determinacy for credences is not an issue of elicitation (sometimes
+the term \qnull{indeterminacy} is used instead of \qnull{imprecision}
+to underline this difference; see \scite{8}{levi85}{395}). The appeal
+of preferences is that we can elicit them more easily than assessments
+of probability and utility functions. The indeterminacy issue has been
+raised to the probability level (or moved downstream) by indeterminacy
+advocates themselves who feel justifiably uncomfortable with an
+interpretation of their theory in behaviourist terms. So it shall be
+solved there, and this paper makes an appeal to reject indeterminacy
+on this level. The solution then has to be carried upstream (or
+lowered to the logically more basic level of preferences), where we
+recognize that completeness for preferences is after all a desirable
+axiom for rationality. Isaac Levi agrees with me on this point: when
+he talks about indeterminacy, it proceeds from the level of
+probability judgment to preferences, not the other way around (see
+\scite{8}{levi81}{533}).
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1}
+    Monkey-Filled Urns.} E.T. Jaynes describes an experiment with
+  monkeys filling an urn randomly with balls from another urn, for
+  which sampling provides no information and so makes updating vacuous
+  (see \scite{8}{jaynesbretthorst03}{160}). Here is a variant of this
+  experiment for which a sharp credence provides a more compelling
+  result than the associated instate: Let urn $A$ contain 4 balls, two
+  red and two black. A monkey randomly fills urn $B$ from urn $A$ with
+  two balls. We draw from urn $B$.
+\end{quotex}
+
+The sharp credence of drawing a red ball is $0.5$, following Lewis'
+summation formula for the different combinations of balls in urn $B$.
+This solution is more intuitive in terms of further inference,
+decision making, and betting behaviour than a credal state of
+$\{0,1/2,1\}$ or $[0,1]$ (depending on the convexity requirement),
+since this instate would licence an exorbitant bet in favour of one
+colour, for example one that costs \$9,999 and pays \$10,000 if red is
+drawn and nothing if black is drawn.
+
+To make this example more vivid consider a Hand Urn, where you draw by
+hand from an urn with 100 balls, 50 red balls and 50 black balls. When
+your hand retreats from the urn, does it not contain either a red ball
+or a black ball and so serve itself as an urn, from which in a sense
+you draw a ball? Your hand contains one ball, either red or black, and
+the indeterminate credal state that it is one or the other should be
+$[0,1]$. This contradicts our intuition that our credence should be a
+sharp $0.5$. As is the case with the White Chocolate example, instates
+appear to be highly contingent on a problem's mode of representation,
+more so than intuition allows.
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} Three
+    Prisoners.} Prisoner $X_{1}$ knows that two out of three prisoners
+  ($X_{1},X_{2},X_{3}$) will be executed and one of them pardoned. He
+  asks the warden of the prison to tell him the name of another
+  prisoner who will be executed, hoping to gain knowledge about his
+  own fate. When the warden tells him that $X_{3}$ will be executed,
+  $X_{1}$ erroneously updates his probability of pardon from $1/3$ to
+  $1/2$, since either $X_{1}$ or $X_{2}$ will be spared.
+\end{quotex}
+
+Walley maintains that for the Monty Hall problem and the Three
+Prisoners problem, the probabilities of a rational agent should dilate
+rather than settle on the commonly accepted solutions. For the Three
+Prisoners problem, there is a compelling case for standard
+conditioning and the result that the credence for prisoner $X_{1}$ to
+have been pardoned ought to be unchanged after the update (see
+\scite{8}{lukits14}{1421f}). Walley's dilated solution would give
+prisoner $X_{1}$ hope on the doubtful possibility (and unfounded
+assumption) that the warden might prefer to provide $X_{3}$'s (rather
+than $X_{2}$'s) name in case prisoner $X_{1}$ was pardoned.
+
+This example brings an interesting issue to the forefront. Sharp
+credences often reflect independence of variables where such
+independence is unwarranted. Booleans (more specifically, detractors
+of the principle of indifference or the principle of maximum entropy,
+principles which are used to generate sharp credences for rational
+agents) tend to point this out gleefully. They prefer to dilate over
+the possible dependence relationships (independence included). White's
+dilation problem is an instance of this. The fallacy in the argument
+for instates, illustrated by the Three Prisoners problem, is that the
+probabilistic independence of sharp credences does not imply
+independence of variables (only the converse is correct), but only
+that it is unknown whether there is dependence, and if yes, whether it
+is correlation or inverse correlation.
+
+In the Three Prisoners problem, there is no evidence about the degree
+or the direction of the dependence, and so prisoner $X_{1}$ should
+take no comfort in the information that she receives. The prisoner's
+probabilities will reflect probabilistic independence, but make no
+claims about causal independence. Walley has unkind things to say
+about sharp credences and their ability to respond to evidence (for
+example that their \qeins{inferences rarely conform to evidence}, see
+\scite{8}{walley91}{396}), but in this case it appears to me that they
+outperform the Boolean approach.
+
+\begin{quotex}
+  \textbf{Example \arabic{expls}: \addtocounter{expls}{1} Wagner's
+    Linguist.} A linguist hears the utterance of a native and
+  concludes that the native cannot be part of certain population
+  groups, depending on what the utterance means. The linguist is
+  uncertain between some options about the meaning of the utterance.
+  (For full details see \scite{8}{wagner92}{252}; and
+  \scite{8}{spohn12}{197}.)
+\end{quotex}
+
+The mathematician Carl Wagner proposed a natural generalization of
+Jeffrey Conditioning for his Linguist example (see
+\scite{7}{wagner92}{}). Since the principle of maximum entropy is
+already a generalization of Jeffrey Conditioning, the question
+naturally arises whether the two generalizations agree. Wagner makes
+the case that they do not agree and deduces that the principle of
+maximum entropy is sometimes an inappropriate updating mechanism, in
+line with many earlier criticisms of the principle of maximum entropy
+(see van Fraassen,\fixref{7}{fraassen81}{} 1981;
+\scite{7}{shimony85}{}; \scite{7}{skyrms87updating}{}; and, later on,
+\scite{7}{grovehalpern97}{}). What is interesting about this case is
+that Wagner uses instates for his deduction, so that even if you agree
+with his natural generalization of Jeffrey Conditioning (which I find
+plausible), the inconsistency with the principle of maximum entropy
+can only be inferred assuming instates. Wagner is unaware of this, and
+I am showing in another paper (in process) how on the assumption of
+sharp credences Wagner's generalization of Jeffrey conditioning
+accords with the principle of maximum entropy.
+
+This will not convince Booleans, since they are already unlikely to
+believe in the general applicability of the principle of maximum
+entropy (just as Wagner's argument is unlikely to convince a proponent
+of the principle of maximum entropy, since they have a tendency to
+reject instates). The battle lines are clearly drawn. Wagner's
+argument, instead of undermining the principle of maximum entropy,
+just shows that instates are as wedded to rejecting the claims of the
+principle of maximum entropy as the principle of maximum entropy is
+wedded to sharp credences (these marriages are only unilaterally
+monogamous, however, as it is perfectly coherent to reject both the
+principle of maximum entropy and the Boolean position; or to reject
+both the Laplacean position and instates). 
+
+Endorsement of instates, however, implies that there are situations of
+probability update in which the posterior probability distribution is
+more informative than it might be in terms of information theory.
+Indeterminate credences violate the relatively natural intuition that
+we should not gain information from evidence when a less informative
+updated probability will do the job of responding to the evidence.
+This is not a strong argument in favour of sharp credences. The
+principle of maximum of entropy has received a thorough bashing in the
+last forty years. I consider it to be much easier to convince someone
+to reject instates on independent (semantic) grounds than to convince
+them to give the principle of maximum entropy a second chance. But the
+section on semantics comes to an end here, and we want to proceed to
+the intriguing issue of who does better in betting situations:
+instates or sharp credences.
+
+\section{Evidence Differentials and Cushioning Credences}
+\label{WalleysWorldCupWoes}
+
+I have given away the answer already in the introduction: instates do
+better. It is surprising that, except for a rudimentary allusion to
+this in Walley's book, no Boolean has caught on to this yet. After I
+found out that agents with instates do better betting on soccer games,
+I let Betsy and Linda play a more basic betting game. An $n$-sided die
+is rolled (by the computer). The die is fair, unbeknownst to the
+players. Their bets are randomly and uniformly drawn from the simplex
+for which the probabilities attributed to the $n$ results add up to 1.
+Betsy also surrounds her credences with an imprecision uniformly drawn
+from the interval $(0,y)$. I used Walley's pay off scheme (see
+\scite{8}{walley91}{632}) to settle the bets.
+
+Here is an example: let $n=2$, so the die is a fair \textit{coin}.
+Betsy's and Linda's bets are randomly and uniformly drawn from the
+line segment from $(0,1)$ to $(1,0)$ (these are two-dimensional
+Cartesian coordinates), the two-dimensional simplex (for higher $n$,
+the simplex is a pentatope generalized for $n$ dimensions with side
+length $2^{1/2}$). The previsions (limits at which bets are accepted)
+may be $(0.21,0.79)$ for Linda and $(0.35\pm{}0.11,0.65\pm{}0.11)$ for
+Betsy, where the indeterminacy $\pm{}0.11$ is also randomly and
+uniformly drawn from the imprecision interval $(0,y)\subseteq(0,1)$.
+The first bet is on $H$, and Linda is willing to pay $22.5$ cents for
+it, while Betsy is willing to pay $77.5$ cents against it. The second
+bet is on $T$ (if $n>2$, there will not be the same symmetry as in the
+\textit{coin} case between the two bets), for which Betsy is willing
+to pay $77.5$ cents, and against which Linda is willing to pay $22.5$
+cents. Each bet pays \$1 if successful. Often, Linda's credal state
+will overlap with Betsy's sharp credence so that there will not be a
+bet.\fcut{7}
+
+The computer simulation clearly shows that Linda does better than
+Betsy in the long run. A defence of sharp credences for rational
+agents needs to have an explanation for this. We will call it partial
+belief cushioning, which is based on an evidence differential between
+the bettors.
+
+In many decision-making contexts, we do not have the luxury of calling
+off the bet. We have to decide one way or another. This is a problem
+for instates, as Booleans have to find a way to decide without
+receiving instructions from the credal state. Booleans have addressed
+this point extensively (see for example \scite{8}{joyce10}{311ff}; for
+an opponent's view of this see \scite{8}{elga10}{6ff}). The problem
+for sharp credences arises when bets are noncompulsory, for then the
+data above suggest that agents holding instates systematically do
+better. Often, decision making happens as betting vis-{\`a}-vis
+uninformed nature or opponents which are at least as uninformed as the
+rational agent. Sometimes, however, bets are offered by better
+informed or potentially better informed bookies. In this case, even an
+agent with sharp credences must cushion her credences and is better
+off by rejecting bets that look attractive in terms of her partial
+beliefs.
+
+If an agent does not cushion her partial beliefs (whether they are
+sharp or indeterminate), she will incur a loss in the long run. Since
+cushioning is permitted in Walley's experimental setup (the bets are
+noncompulsory), Laplacean agents should also have access to it and
+then no longer do worse than Boolean agents. One may ask what sharp
+credences do if they just end up being cushioned anyway and do not
+provide sufficient information to decide on rational bets. The answer
+is that sharp credences are sufficient where betting (or decision
+making more generally) is compulsory; the cushioning only supplies the
+information from the evidence inasmuch as betting is noncompulsory and
+so again properly distinguishes semantic categories. This task is much
+harder for Booleans, although I do not claim that it is
+insurmountable: instates can provide a coherent approach to compulsory
+betting. What they cannot do, once cushioning is introduced, is
+outperform sharp credences in noncompulsory betting situations.
+
+Here are a few examples: even if I have little evidence on which to
+base my opinion, someone may force me to either buy Coca Cola shares
+or short them, and so I have to have a share price $p$ in mind that I
+consider fair. I will buy Coca Cola shares for less than $p$, and
+short them for more than $p$, if forced to do one or the other. This
+does not mean that it is now reasonable for me to go (not forced by
+anyone) and buy Coca Cola shares for $p$. It may not even be
+reasonable to go (not forced by anyone) and buy Coca Cola share for
+$p-\delta$ with $\delta{}>0$.
+
+It may in fact be quite unreasonable, since there are many players who
+have much better evidence than I do and will exploit my ignorance. I
+suspect that most lay investors in the stock market make this mistake:
+even though they buy and sell stock at prices that seem reasonable to
+them, professional investors are much better and faster at exploiting
+arbitrage opportunities and more subtle regularities. If indices rise,
+lay investors will make a little less than their professional
+counterparts; and when they fall, lay investors lose a lot more. In
+sum, unless there is sustained growth and everybody wins, lay
+investors lose in the long term.
+
+A case in point is the U.S. Commodity Futures Trading Commission's
+crackdown on the online prediction market Intrade. Intrade offered
+fair bets for or against events of public significance, such as
+election results or other events which had clear yes-or-no outcomes.
+Even though the bets were all fair and Intrade only received a small
+commission on all bets, and even though Intrade's predictions were
+remarkably accurate, the potential for professional arbitrageurs was
+too great and the CFTC shut Intrade down (see
+\texttt{https://www.intrade.com}).
+
+Cushioning does not stand in the way of holding a sharp credence, even
+if the evidence is dim. The evidence determines for a rational agent
+the partial beliefs over possible states of the world operating in the
+background. The better the evidence, the more pointed the
+distributions of these partial beliefs will be and the more willing
+the rational agent will be to enter a bet, if betting is
+noncompulsory. The mathematical decision rule will be based on the
+underlying distribution of the partial beliefs, not only on the sharp
+credence. As we have stated before, the sharp credence is not a
+sufficient statistic for decision making, inference, or betting
+behaviour; and neither is an instate.
+
+The rational agent with a sharp credence has resources at her disposal
+to use just as much differentiation with respect to accepting and
+rejecting bets as the agent with instates. Often (if she is able to
+and especially if the bets are offered to her by a better-informed
+agent), she will reject both of two complementary bets, even when they
+are fair. On the one hand, any advantage that the agent with an
+instate has over her can be counteracted based on her distribution
+over partial beliefs that she has with respect to all possibilities.
+On the other hand, the agent with instates suffers from a semantic
+mixing of metaphors between evidential and {\doxnotep} dimensions that
+puts her at a real disadvantage in terms of understanding the sources
+and consequences of her knowledge and her uncertainties.
+
+\section{Conclusion}
+The conclusion goes here.
+
+% if have a single appendix:
+%\appendix[Proof of the Zonklar Equations]
+% or
+%\appendix  % for no appendix heading
+% do not use \section anymore after \appendix, only \section*
+% is possibly needed
+
+% use appendices with more than one appendix
+% then use \section to start each appendix
+% you must declare a \section before using any
+% \subsection or using \label (\appendices by itself
+% starts a section numbered zero.)
+%
+
+% \appendices
+% \section{Proof of the First Zonklar Equation}
+% Appendix one text goes here.
+
+% you can choose not to have a title for an appendix
+% if you want by leaving the argument blank
+% \section{}
+% Appendix two text goes here.
+
+
+% use section* for acknowledgement
+% \section*{Acknowledgment}
+
+
+% The authors would like to thank...
+% \cite{IEEEhowto:IEEEtranpage}
+
+% Can use something like this to put references on a page
+% by themselves when using endfloat and the captionsoff option.
+% \ifCLASSOPTIONcaptionsoff
+%   \newpage
+% \fi
+
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+\bibliography{bibtex/bib/IEEEabrv.bib,bibtex/bib/bib-7293.bib}{}
+\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+%\begin{thebibliography}{1}
+
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+%
+%\end{thebibliography}
+
+% biography section
+% 
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could create
+% your own custom macro containing the \includegraphics command to make things
+% simpler here.)
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
+% or if you just want to reserve a space for a photo:
+
+\begin{IEEEbiography}{Michael Shell}
+Biography text here.
+\end{IEEEbiography}
+
+% insert where needed to balance the two columns on the last page with
+% biographies
+%\newpage
+
+% You can push biographies down or up by placing
+% a \vfill before or after them. The appropriate
+% use of \vfill depends on what kind of text is
+% on the last page and whether or not the columns
+% are being equalized.
+
+%\vfill
+
+% Can be used to pull up biographies so that the bottom of the last one
+% is flush with the other column.
+%\enlargethispage{-5in}
+
+
+
+% that's all folks
+\end{document}

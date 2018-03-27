@@ -1,0 +1,88 @@
+Source:
+http://www.aworldofsoccer.com/top_tournaments/world_cup_statistics.htm
+(world cup history)
+
+http://www.fifa.com/worldcup/statistics/teams/goal-scored.html
+(brazil)
+
+helpful for poisson:
+http://www.prosoccer.eu/betting-theory/poisson-distribution-football/
+
+in R:
+
+dpois(6,1.83)
+0.008367874
+probability that a team scores 6 when expected score is 1.83
+http://stat.ethz.ch/R-manual/R-patched/library/stats/html/Poisson.html
+
+in perl:
+http://search.cpan.org/~callahan/Math-CDF-0.1/CDF.pm
+
+
+
+(+ 0.2935568
+0.1604136
+0.2686045
+0.1638487
+0.0749608
+0.02743565
+0.008367874)
+
+Games played: 772
+
+Games D: 173 (22.41%)
+
+Games W or L: 599
+
+Goals scored: 2208
+
+Goals per match: 2.86
+
+Soccer goals are Poisson distributed:
+http://annabet.com/blog/soccer-goal-probabilities-poisson-vs-actual-distribution/
+
+
+
+(/ 2208 772.0)
+
+(/ 173.0 772)
+
+(/ (+ 
+1241
+955
+930
+520
+1229
+1496
+1098
+397
+1492
+1091
+850
+604
+986
+911
+1056
+1330
+1216
+901
+1202
+637
+1606
+917
+563
+664
+1724
+1148
+989
+642
+1401
+872
+501
+897
+) 32.0)
+
+average fifa points: 1002.0625
+
+(/ (+ 1241 955) 2.0)
+1098.0

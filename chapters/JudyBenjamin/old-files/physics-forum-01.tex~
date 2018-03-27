@@ -1,0 +1,16 @@
+According to the de Moivre Laplace theorem
+
+[tex]\binom{n}{k}p^{k}q^{n-k}\approx\frac{1}{\sqrt{2\pi{}npq}}e^{-\frac{(k-np)^{2}}{2npq}}[/tex]
+
+For [tex]p=q=\frac{1}{2}[/tex] this translates nicely into an
+approximation for the binomial distribution by the normal distribution
+(the [tex]+\frac{1}{2}[/tex] is a continuity correction):
+
+[tex]\binom{n}{k}\approx{}2^{n}N(\frac{n}{2},\frac{n}{4})(k)[/tex]
+
+and therefore
+
+[tex]\sum_{i=0}^{m}\binom{n}{k}\approx{}2^{n}\int_{-\infty}^{m+\frac{1}{2}}N(\frac{n}{2},\frac{n}{4})(x)dx[/tex]
+
+
+

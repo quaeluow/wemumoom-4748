@@ -1,0 +1,256 @@
+This thesis defends two claims: (1) the partial beliefs that a
+rational agent entertains are formally expressed by sharp credences;
+and (2) when a rational agent updates these partial beliefs in the
+light of new evidence, the norms used are based on or in agreement
+with information theory. A Bayesian framework for partial beliefs is
+assumed throughout. I will not explicitly argue for this framework,
+although the overall integrity of my claims hopefully serves to
+support the Bayesian approach to epistemology, especially the rules
+governing belief change. 
+
+Some say that the Bayesian approach conflicts with information theory.
+I will show that there is no such conflict. The account that I defend
+is a specific version of Bayesian epistemology. The major task of this
+thesis is therefore to convince a Bayesian that a consistent
+application of the principles and intuitions leading to the Bayesian
+approach will lead to the acceptance of norms which are based on or in
+agreement with information theory.
+
+If an agent's belief state is representable by a probability
+distribution (or density), then Bayesians advocate for guidelines for
+changing it in the light of new evidence. Richard Jeffrey calls the
+investigation of these guidelines \qnull{probability kinematics} (see
+\scite{7}{jeffrey65}{}). Standard conditioning is the updating
+procedure considered by Bayesians to be objective and generally valid.
+The $\mid$ operator (probabilistic conditioning) provides a unique
+posterior probability distribution (or density) which accords with
+both basic probability axioms and intuitions about desired properties
+of updated probabilities.
+
+Although almost all the claims, examples, and formal methods presented
+in the following pertain to discrete and finite probability
+distributions, there are usually equivalent things to be said for
+distributions over infinite event spaces and for continuous
+probability densities. Sometimes this requires some mathematical
+manoeuvering (as is the case for the Shannon entropy), sometimes it
+requires no more than substitution of an integral sign for a sum sign.
+I will exclusively refer to probability distributions, but many of the
+claims can be extended to suit the continuous or infinite case.
+
+Bayesian probability kinematics requires a prior probability
+distribution to precede any meaningful evaluation of evidence and
+considers standard conditioning to be mandatory for a rational agent
+when she forms her posterior probabilities, just in case her evidence
+is expressible in a form which makes standard conditioning an option.
+There are various situations, such as the \emph{Judy Benjamin} problem
+or the \emph{Brandeis Dice} problem, in which standard conditioning
+does not appear to be an option (although some make the case that it
+is, so this point needs to be established independently). Therefore
+the question arises whether there is room for a more general updating
+method, whose justification will entail a justification of standard
+conditioning, but not be entailed by it.
+
+E.T. Jaynes has suggested a unified updating procedure which
+generalizes standard conditioning called the principle of maximum
+entropy, or the \textsc{pme} for short. The \textsc{pme} additionally
+to Bayesian probability kinematics uses information theory to develop
+updating methods which keep the entropy of probability distributions
+high (in the synchronic case) and their cross-entropy low (in the
+diachronic case). The \textsc{pme} is based on a subjective
+interpretation of probabilities, where probabilities represent the
+degree of uncertainty, or the lack of information, of the agent
+holding these probabilities. In this interpretation, probabilities do
+not represent frequencies or objective probabilities, although there
+are models of how subjective probabilities relate to them.
+
+Most Bayesians reject the notion that the \textsc{pme} enjoys the same
+level of justification as standard conditioning and maintain that
+there are cases in which it delivers results which a rational agent
+should not, or is not required to, accept. Note that we distinguish
+between separate problems: on the one hand, there may be objective
+methods of determining probabilities prior to any evidence or
+observation (call these \qnull{absolutely} prior probabilities), for
+example from some type of principle of indifference; on the other
+hand, there may be objective methods of determining posterior
+probabilities from given prior probabilities (which themselves could
+be posterior probabilities in a previous instance of updating, call
+these \qnull{relatively} prior probabilities) in case standard
+conditioning does not apply. Another way to distinguish between
+absolutely prior distributions and relatively prior distributions is
+to use Arnold Zellner's \qnull{antedata} and \qnull{postdata}
+nomenclature (see \scite{7}{zellner88}{}). My work is concerned with a
+logic of belief change, not with objectivism or convergence, although
+the \textsc{pme} has been used to defend objectivism, notably by
+Jaynes himself.
+
+Formal epistemologists widely concur that the \textsc{pme} is beset
+with too many conceptual problems and counterexamples to yield a
+generally valid objective updating procedure. Against the tide of this
+agreement, my work establishes that considering the tests that have
+been applied to it the \textsc{pme} as the only candidate for a
+generally valid, objective updating procedure is also a successful
+candidate. Both the conceptual problems and the counterexamples are
+surmountable for advocates of the \textsc{pme}, as I will show in
+great detail.
+
+Many of the portrayals of the \textsc{pme}'s failings are flawed and
+motivated by a desire to demonstrate that the labour of the
+epistemologist in interpreting probability kinematics on a
+case-by-case basis is indispensable. This \qnull{full employment
+  theorem} of probability kinematics (which has a formally proven
+equivalent in computer science) is widely promulgated by textbooks and
+passed on to students as expert consensus. By contrast, the
+\textsc{pme} combines a powerful and simple idea (update your
+probabilities in accordance with constraints revealed by the evidence
+without gaining more information than necessary) with a sophisticated
+formal theory which confirms that the powerful and simple idea
+reliably works.
+
+Although the role of the \textsc{pme} in probability kinematics as a
+whole will be the scope of my work, I will pay particular attention to
+a problem which has stymied its acceptance by epistemologists:
+updating or conditioning on conditionals. Two counterexamples, Bas van
+Fraasen's \emph{Judy Benjamin} and Carl Wagner's \emph{Linguist}
+problem, are specifically based on updating given an observation
+expressed as a conditional and on the \textsc{pme}'s alleged failure
+to update on such observations in keeping with strong intuitions.
+
+The \textsc{pme} also faces much of its conceptual criticism on the
+same issue with respect to \qnull{epistemic entrenchment.} Epistemic
+entrenchment updates on conditionals by assuming a second tier of
+commitment to propositions beneath the primary tier of quantitative
+degrees of uncertainty of belief such as probabilities (or ranks). For
+example, if I am confident that a coin is fair my epistemic
+entrenchment that the probability of heads on the next toss is $1/2$
+is much more pronounced (and resilient to countervailing evidence)
+than the epistemic entrenchment in the same belief if I have no
+information or confidence about the bias of the coin. The \textsc{pme}
+conceptualizes this second tier differently and is consequently at
+odds with the voluminous recent literature on epistemic entrenchment.
+A large part of my task is to address and defend the \textsc{pme}'s
+performance with respect to conditionals, both conceptually and with a
+view to threatening counterexamples.
+
+One issue that comes to the forefront when addressing update on
+conditionals is whether a rational agent has sharp credences. The
+rejection of indeterminate credal states used to be Bayesian dogma,
+but the last few years have seen a substantial amount of work by
+Bayesians who defend and require indeterminate credal states for
+rational agents. I will show, using Wagner's counterexample to the
+\textsc{pme}, that it is indeed inconsistent to embrace both the
+\textsc{pme} and an affirmative attitude towards indeterminate credal
+states for rational agents. Wagner's counterexample only works because
+he implicitly assumes indeterminacy. For many contemporary Bayesians
+who accept indeterminacy Wagner's argument is sound, even though it is
+enthymematic. A defence of the \textsc{pme} must include an
+independent argument against indeterminacy, which I will provide in
+chapter \ref{sonk}.
+
+In summary, my thesis is that the principle of maximum entropy
+(\textsc{pme}) is defensible against all counterexamples and
+conceptual issues raised so far as a generally valid objective
+updating method in probability kinematics. The \textsc{pme} operates
+on the basis of an astonishingly simple principle: when updating your
+probabilities, waste no useful information and do not gain information
+unless the evidence compels you to gain it (see
+\scite{8}{jaynes88}{280}, \scite{8}{fraassenetal86}{376}, and
+\scite{8}{zellner88}{278}). The astonishingly simple principle comes
+with its own formal apparatus (not unlike probability theory itself):
+Shannon's information entropy, the Kullback-Leibler divergence, the
+use of Lagrange multipliers, and the sometimes intricate, sometimes
+straightforward relationship between information and probability.
+
+Once the counterexamples are out of the way, the more serious
+conceptual issues loom. On the one hand, there are powerful conceptual
+arguments affirming the special status of the \textsc{pme}. Shore and
+Johnston, who use the axiomatic strategy of Cox's theorem in
+probability kinematics, show that relatively intuitive axioms only
+leave us with the \textsc{pme} to the exclusion of all other objective
+updating methods. Van Fraassen, R.I.G. Hughes, and Gilbert Harman's
+MUD method, for example, or their maximum transition probability
+method from quantum mechanics both fulfill their five requirements
+(see van Fraassen et al., \scite{10}{fraassenetal86}{}), but do not
+fulfill Shore and Johnston's axioms. Neither does Uffink's more
+general class of inference rules, which maximize the so-called
+R{\'e}nyi entropies, but Uffink argues that Shore and Johnston's
+axioms rest on unreasonably strong assumptions (see
+\scite{7}{uffink95}{}). Caticha and Giffin counter that Skilling's
+method of induction (see \scite{7}{skilling88}{}) and Jaynes'
+empirical results in statistical mechanics and thermodynamics imply
+the uniqueness of Shannon's information entropy over rival entropies.
+
+The \textsc{pme} seamlessly generalizes standard conditioning and
+Jeffrey's rule where they are applicable (see
+\scite{7}{catichagiffin06}{}). It underlies the entropy concentration
+phenomenon described in Jaynes' standard work \emph{Probability
+  Theory: the Logic of Science}, which also contains a sustained
+conceptual defence of the \textsc{pme} and its underlying logical
+interpretation of probabilities. Entropy concentration refers to the
+unique property of the \textsc{pme} solution to have other
+distributions which obey the affine constraint cluster around it. When
+used to make predictions whose quality is measured by a logarithmic
+score function, posterior probabilities provided by the \textsc{pme}
+result in minimax optimal decisions (see \scite{7}{topsoe79}{};
+\scite{7}{walley91}{}; \scite{7}{grunwald00a}{}) so that by a
+logarithmic scoring rule these posterior probabilities are in some
+sense optimal.
+
+Jeff Paris has investigated different belief functions (probabilities,
+Dempster-Shafer, and truth-functional, see \scite{7}{paris06}{}) from
+a mathematical perspective and come to the conclusion that given
+certain assumptions about the constraints that experience normally
+imposes (we will have to examine their relationship to the affine
+constraints assumed by the \textsc{pme}), if a belief function is a
+probability function, only minimum cross entropy belief revision
+satisfies a host of desiderata (continuity, equivalence, irrelevant
+information, open-mindedness, renaming, obstinacy, relativization, and
+independence) while competitors fail on multiple counts (see
+\scite{7}{parisvencovska90}{}).
+
+On the other hand the belief revision literature has in the last
+twenty years mostly turned its attention to the AGM paradigm (named
+after Carlos Alchourr{\'o}n, Peter G{\"a}rdenfors, and David
+Makinson), which operates on the basis of fallible beliefs and their
+logical relationships. These are really at this point two different
+epistemic dimensions (to use Henry Kyburg's expression): the one where
+doxastic states are cashed out in terms of fallible beliefs which move
+in and out of belief sets; the other the dimension of probabilities
+where \qnull{beliefs} are vague labels for a more deeply rooted,
+graded notion of uncertainty.
+
+Jeffrey with his radical probabilism pursues a project of
+epistemological monism (see \scite{7}{jeffrey65}{}) which would reduce
+beliefs to probabilities, while Spohn and Maher seek reconciliation
+between the two dimensions, showing how fallible full beliefs are
+epistemologically necessary and how the formal structure of the two
+dimensions reveals many shared features so that in the end they have
+more in common than what separates them (see \scite{8}{spohn12}{201}
+and \scite{7}{maher93}{}).
+
+My claim is that the \textsc{pme} does not accept two levels of
+epistemic commitment: the static and the dynamic. AGM belief revision
+theory, Spohn's ranking functions, and epistemic entrenchments
+according to Bradley, Douven, and Romeijn suppose that beneath our
+credences (static probabilities), believers entertain a second set of
+dynamic probabilities which are determinative of the kinematics once
+doxastic states are subject to change. This view is inconsistent with
+the \textsc{pme}, and so I hold against it that the \textsc{pme} can
+only understand this second dynamic set of graded commitments as
+information. Entrenchments are evidential, not epistemic. The fact
+that a coin has been tossed a hundred times, so that now we consider
+it to be a fair coin (rather than assigning a 50:50 probability to
+heads and tails because we do not know any better), is information and
+part of our evidence; it is not part of the epistemic state of a
+rational agent, such as a belief or a probability function would be.
+
+Despite the potholes in the historical development of the
+\textsc{pme}, on account of its unifying features, its simple and
+intuitive foundations, and its formal success it deserves more
+attention in the field of belief revision and probability kinematics,
+definitely more attention than the many competing ad hoc methods (such
+as Carl Wagner's) which patch one problem while raising many more
+somewhere else. The \textsc{pme} is the single principle which can
+hold things together over vast stretches of epistemological terrain
+(intuitions, formal consistency, axiomatization, case management) and
+calls into question the scholarly consensus that such a principle is
+not needed.

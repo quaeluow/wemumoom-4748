@@ -1,0 +1,19 @@
+Reviewers' comments:
+
+Reviewer #1: This paper provides an overview of "Euclidean" and
+"information theoretic" approaches to epistemic accuracy. It aims to
+show that neither approach is wholly satisfactory. The former leads to
+an undesirable form of updating, as shown by Leitgeb and Pettigrew.
+The latter does not meet other constraints. While the author provides
+some insight, the paper as a whole is not mature and should not be
+published in Philosophy of Science. The constraints are mostly not
+well motivated and often the results reported in the paper are already
+well known. In addition, the analysis of Leitgeb and Pettigrew's
+account of updating is superficial. Their updating rule is flawed, but
+for other reasons than the ones suggested by the author. They fail to
+see that learning takes place relative to a partition and not the full
+algebra of propositions. Taking this into account in an appropriate
+way would lead to the result that there is no conflict between Brier
+score and Jeffrey conditioning.
+
+http://phos.edmgr.com/l.asp?i=60696&l=3HUV8EWJ
