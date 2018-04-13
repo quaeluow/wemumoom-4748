@@ -1,0 +1,36 @@
+% After the Erkenntnis submission, I went through this version carefully
+% and made further cuts (see sonk.org for the cuts). As of <2016-12-04
+% Sun>, this is again the one and only official version. I will now
+% submit this to Philosophers' Imprint.
+
+% This is the official version. Use it for the dissertation. For
+% publication, however, consider the cuts made in sonk-bjps.tex.
+
+% I guess you can consider the cuts made in sonk-bjps, but now I've made
+% a lot of changes to this file that are not reflected there.
+
+\documentclass[11pt]{article}
+\usepackage{october}
+\usepackage{lineno}
+\usepackage{makecell}
+\usepackage{multirow}
+% \newcommand{\plebeian}[0]{\textsc{anderson}}
+% \newcommand{\aristocratic}[0]{\textsc{augustin}}
+\newcommand{\anderson}[0]{\textit{Bool-A}}
+\newcommand{\augustin}[0]{\textit{Bool-B}}
+% For BJPS
+% \hyphenpenalty=10000
+% \hbadness=10000
+\newcommand{\pubcut}[1]{}
+
+\begin{document}
+\setpagewiselinenumbers
+\modulolinenumbers[5]
+\linenumbers
+% For BJPS
+% \raggedright
+% \doublespacing
+
+This is a test.
+
+\end{document} 

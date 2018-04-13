@@ -1,8 +1,1 @@
-imprecise credences
-indeterminate credal states
-sharp credences
-formal epistemology
-dilation
-partial beliefs
-Bayesian epistemology
-
+imprecise credences; indeterminate credal states; sharp credences; formal epistemology; dilation; partial beliefs; Bayesian epistemology; ; 

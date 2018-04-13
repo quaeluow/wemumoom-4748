@@ -1,0 +1,90 @@
+\setlength{\marginparwidth}{1.2in}
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{\-\oldmarginpar[\raggedleft\footnotesize #1]%
+{\raggedright\footnotesize #1}}
+
+\frenchspacing % no extra space at the end of a sentence
+
+\setlength{\parskip}{.1in}
+% \raggedright
+\raggedbottom
+% \setlength{\parindent}{.2in}
+\setlength{\parindent}{0in}
+
+% \pagestyle{empty}
+
+% 	PACKAGES
+% \usepackage[small,bf]{caption}
+% \let\bcode\textbgreek
+% \usepackage[bgreek,english]{babel}
+% \usepackage{setspace}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[fleqn]{amsmath}
+% \usepackage[table]{xcolor}
+% \definecolor{lightgray}{gray}{0.9}
+% \usepackage{german}
+% \usepackage{hebtex}
+\usepackage{graphicx}
+% \usepackage[german]{babel}
+% \usepackage{endnotes}
+% \let\footnote=\endnote
+% \usepackage{rotating}
+\usepackage{enumerate}
+% \usepackage{titlesec}
+% \titleformat{\section}{\large\bfseries}{\thesection}{1em}{}
+
+\newcommand{\qnull}[1]{`#1'}
+\newcommand{\doxnotep}[0]{doxastic}
+\newcommand{\qeins}[1]{``#1''}
+\newcommand{\qzwei}[1]{`#1'}
+\newcommand{\ecut}[1]{}
+\newcommand{\fcut}[1]{}
+\newcommand{\bcut}[1]{}
+\newcommand{\mcut}[1]{}
+\newcommand{\lcut}[1]{}
+\newcommand{\tbd}[1]{$^{\mbox{\textsc{tbd}}}$}
+\newcommand{\nias}{\noindent} % no indent after new section
+\newcommand{\nial}{\noindent} % no indent after equation, list, or whatever
+\newcounter{expls}
+\setcounter{expls}{0}
+\newcommand{\beispiel}[1]{\refstepcounter{expls}\textbf{Example \arabic{expls}: #1.}}
+
+\newif\ifNumericalOrYear
+\NumericalOrYeartrue
+\NumericalOrYearfalse
+\ifNumericalOrYear
+\usepackage[numbers,colon]{natbib}
+\else
+\usepackage[round,colon]{natbib}
+\fi
+\newif\ifPageP
+\PagePtrue
+\PagePfalse
+\ifPageP
+\newcommand{\PageP}{p.~}
+\else
+\newcommand{\PageP}{}
+\fi
+
+\newcommand{\fixref}[3]{} % This is no longer necessary -- see
+                          % \scite{10}{}{} and \scite{11}{}{}
+\newcommand{\scite}[3]{\ifnum#1=1\ifNumericalOrYear\citep{#2}\else\citeyearpar{#2}\fi\else
+\ifnum#1=2\ifNumericalOrYear(\citet[#3]{#2})\else(\citeauthor{#2}, \citeyear{#2}, {\PageP}#3)\fi\else
+% \ifnum#1=2\ifNumericalOrYear\citep[#3]{#2}\else\citep[{\PageP}#3]{#2}\fi\else
+% \ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+% you may want to use the next line as a template for the others as well <2014-08-29 Fri>
+\ifnum#1=3\ifNumericalOrYear(\citet[#3]{#2})\else(\citeauthor{#2}, \citeyear{#2}, {\PageP}#3.)\fi\else
+\ifnum#1=4\ifNumericalOrYear\citet{#2}\else\citet{#2}\fi\else
+\ifnum#1=5\ifNumericalOrYear(\citet{#2})\else\citep{#2}\fi\else
+\ifnum#1=6\ifNumericalOrYear(\citet[#3]{#2})\else\citep[{\PageP}#3]{#2}\fi\else
+\ifnum#1=7\ifNumericalOrYear\citep{#2}\else\citealp{#2}\fi\else
+\ifnum#1=8\ifNumericalOrYear\citep[#3]{#2}\else\citealp[{\PageP}#3]{#2}\fi\else
+\ifnum#1=9\ifNumericalOrYear\citep[#3]{#2}\else{}loc.\ cit., {\PageP}#3\fi\else
+\ifnum#1=10\ifNumericalOrYear\citet[#3]{#2}\else\citeyear{#2}, {\PageP}#3\fi\else
+\ifnum#1=11\ifNumericalOrYear\citet[#3]{#2}\else\citeyear{#2}\fi\else
+% \ifnum#1=10\ifNumericalOrYear\citep{#2}\else\citeyear{#2}\fi\else
+% \ifnum#1=11\ifNumericalOrYear\citep{#2}\else\citeyear{#2}\fi\else
+\textbf{[invalid scite code]}\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi\fi}
+
+\newenvironment{quotex}{\begin{quote}\begin{footnotesize}}{\end{footnotesize}\end{quote}}
