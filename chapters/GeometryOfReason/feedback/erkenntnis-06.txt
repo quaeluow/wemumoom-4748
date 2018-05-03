@@ -1,0 +1,13 @@
+Reviewer #4: I am happy that the author has responded to my previous comments listed in their response. A couple of mostly niggly points on
++the revised manuscript:
+
+(1) p. 2: Isn't it more an issue of rationality rather than numerical effectiveness? Perhaps delete: "numerically most effectively
++represented".
+(2) p. 5: Perhaps "agree" is better than "aligned" at the bottom. Also, perhaps "The information theorist is the better Bayesian" or
++"information theory is the better Bayesianism" is better shortly after?.
+(3) p. 15: "The conclusion follows." Is it worth restating the conclusion here?
+(4) p. 26: "Unfortunately for Pettigrew..." This was a little confusing. Perhaps rephrase: "Unfortunately for Pettigrew, the Log score also
++has a claim to uniqueness, namely, ..."
+(5) p. 41: "They are roughly aligned..." Perhaps inserting "respectively" somewhere here would help the reader.
+(6) p.62: "degree of confirmation theory". Would simply "confirmation theory" be better?
+(7) p.69: Perhaps replace "classification" for "clarification"?
